@@ -20,6 +20,9 @@ jobs:
         run: |
           pip install jupyter-book
 
+      - name: Install matplotlib
+        run: pip install matplotlib
+
       - name: Build Jupyter Book
         run: |
           jupyter-book build book/
