@@ -22,7 +22,7 @@ jobs:
 
       - name: Build Jupyter Book
         run: |
-          jupyter-book build mybook/
+          jupyter-book build book/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
