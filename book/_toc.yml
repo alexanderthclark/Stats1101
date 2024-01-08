@@ -9,6 +9,7 @@ parts:
   chapters:
     - file: gettingstarted
     - file: experiments
+    - file: observational
     - file: bibliography
 
 - caption: Python (optional)
