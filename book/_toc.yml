@@ -20,3 +20,4 @@ parts:
 - caption: Google Sheets (optional)
   chapters:
     - file: gsheets
+    - file: gregression

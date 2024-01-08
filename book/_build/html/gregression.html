@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to Intro Stats &#8212; Intro Stats</title>
+    <title>Regression &#8212; Intro Stats</title>
   
   
   
@@ -62,10 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'gregression';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="gettingstarted.html" />
+    <link rel="prev" title="Google Sheets" href="gsheets.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,7 +143,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -161,8 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to Intro Stats
                 </a>
             </li>
@@ -182,9 +184,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="histograms.html">Histograms</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gsheets.html">Google Sheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regression</a></li>
 </ul>
 
     </div>
@@ -256,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fgregression.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +288,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/gregression.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,7 +359,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -368,11 +372,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to Intro Stats</h1>
+    <h1>Regression</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-linear-regression">Simple Linear Regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-regression-line">Finding the Regression Line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictions-and-residuals">Predictions and Residuals</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -382,51 +398,41 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-intro-stats">
-<h1>Welcome to Intro Stats<a class="headerlink" href="#welcome-to-intro-stats" title="Permalink to this heading">#</a></h1>
-<p><img alt="Intro Stats" src="_images/stats-wide.png" /></p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>These notes are not entirely self-contained. They should be read in companion with the primary text, <span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, and other readings.</p>
-</div>
-<p>These notes are based primarily on the textbook, <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, following the organization of content and the notation. The textbook and other readings are the real authorities on the material, but these notes can help direct you through what is important for the course. The course largely follows the textbook, but a few chapters are skipped and I add these topics.</p>
-<ol class="arabic simple">
-<li><p>Natural experiments</p></li>
-<li><p>A brief mention of exploratory data analysis</p></li>
-<li><p>Bayes’ Theorem and probability trees</p></li>
-<li><p>Power and false discovery rate</p></li>
-<li><p>Multiple linear regression (if time allows)</p></li>
-</ol>
-<p>Sections marked “Extension” go beyond the book’s treatment of a subject. These sections are meant to help test your comfort with the ideas, either developing a deeper understanding (e.g., Section TKTK) or broadening the context (e.g., Section TKTK).</p>
-<p>The provided exercises supplement the exercises in <span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. Use the textbook exercises to drill the concepts before attempting the exercises here.</p>
-<hr class="docutils" />
-<p>We’ll argue that statistics is <em>not</em> just math, but the imperative from Halmos still applies.</p>
-<p><img alt="How Math Works" src="_images/HowMath.png" /></p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experiments.html#types-of-questions">Types of Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experiments.html#id3">Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="regression">
+<h1>Regression<a class="headerlink" href="#regression" title="Permalink to this heading">#</a></h1>
+<p>Use the <a class="reference external" href="https://support.google.com/docs/answer/3094249?hl=en"><code class="docutils literal notranslate"><span class="pre">LINEST</span></code></a> formula for linear regression.</p>
+<p>Sample usage:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">LINEST(A2:A10,</span> <span class="pre">B2:B10)</span></code> for simple linear regression, predicting A (y) from B (x)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LINEST(A2:A10,</span> <span class="pre">B2:B10,</span> <span class="pre">True,</span> <span class="pre">True)</span></code> for simple linear regression with verbose output for significance testing</p></li>
 </ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="python.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="histograms.html">Histograms</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Google Sheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
-</ul>
-</div>
+<section id="simple-linear-regression">
+<h2>Simple Linear Regression<a class="headerlink" href="#simple-linear-regression" title="Permalink to this heading">#</a></h2>
+<section id="finding-the-regression-line">
+<h3>Finding the Regression Line<a class="headerlink" href="#finding-the-regression-line" title="Permalink to this heading">#</a></h3>
+<p>Suppose, like Galton, we want to predict a son’s height from his father’s height (<span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> p. 170).</p>
+<p>We’re looking for the equation</p>
+<div class="math notranslate nohighlight">
+\[\hat{y} = mx + b,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{y}\)</span> is the predicted father’s height and <span class="math notranslate nohighlight">\(x\)</span> is the son’s height. The data is organized in <a class="reference external" href="https://docs.google.com/spreadsheets/d/1xmuDi3BZev565rt8K1wtNBKGZFwsdzTsjOMIE5G-txA/edit?usp=sharing">this spreadsheet</a>, with Fathers’ heights stored in <code class="docutils literal notranslate"><span class="pre">A2:A1079</span></code> and sons’ in <code class="docutils literal notranslate"><span class="pre">B2:B1079</span></code>.</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">=LINEST(B2:B1079,</span> <span class="pre">A2:A1079)</span></code>, we find</p>
+<div class="math notranslate nohighlight">
+\[\hat{y} = 0.51 \times x + 33.89.\]</div>
+<p>The intercept is always the value furthest to the right in the output. The next value to the left is the slope.</p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-dSyrCQpPp3hBvsROqV7CYEHepTWW_Qzm0aNHoz-10RLqQL5RTV5R98jgv8VGWnccTttBJvkdPbWa/pubhtml?widget=true&amp;headers=false" width="100%" height="300px"></iframe>
+</section>
+<section id="predictions-and-residuals">
+<h3>Predictions and Residuals<a class="headerlink" href="#predictions-and-residuals" title="Permalink to this heading">#</a></h3>
+<p>For a father of height 75.4 (the tallest father in the data), the predicted son’s height is <span class="math notranslate nohighlight">\(\hat{y} = 0.51 \times 75.4 + 33.89 \approx 72.3\)</span>.<a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>In a <a class="reference external" href="https://docs.google.com/spreadsheets/d/1xmuDi3BZev565rt8K1wtNBKGZFwsdzTsjOMIE5G-txA/edit?usp=sharing">separate tab</a>, we calculate the predictions. For the observation in the second row, this is done with <code class="docutils literal notranslate"><span class="pre">=$G$2</span> <span class="pre">+</span> <span class="pre">$F$2*A2</span></code>. <code class="docutils literal notranslate"><span class="pre">G2</span></code> references the intercept from the <code class="docutils literal notranslate"><span class="pre">LINEST</span></code> output and <code class="docutils literal notranslate"><span class="pre">F2</span></code> references the slope. We use absolute referencing, <code class="docutils literal notranslate"><span class="pre">$F$2</span></code> and <code class="docutils literal notranslate"><span class="pre">$G$2</span></code>, for the coefficients so we can copy and paste the formula without the coefficients changing. If the formula is pasted into the cell below, the coefficient references are frozen, but <code class="docutils literal notranslate"><span class="pre">A2</span></code> is replaced by <code class="docutils literal notranslate"><span class="pre">A3</span></code>, giving the prediction for the next observation in row three. These predictions are stored in column <code class="docutils literal notranslate"><span class="pre">C</span></code>.</p>
+<p>Next, residuals (or prediction errors) are calculated with the formula <code class="docutils literal notranslate"><span class="pre">B2</span> <span class="pre">-</span> <span class="pre">C2</span></code> entered in <code class="docutils literal notranslate"><span class="pre">D2</span></code> and then pasted down the rest of column <code class="docutils literal notranslate"><span class="pre">D</span></code>. A useful sanity check is that the average residual should be zero (for the observations used to find the regression line). This helps ensure that no mistakes were made in finding your predictions.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>The actual value found in the spreadsheet is 72.64884635 if the other coefficients are not rounded.</p>
+</aside>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -459,14 +465,14 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="gettingstarted.html"
-       title="next page">
+    <a class="left-prev"
+       href="gsheets.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Getting Started</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Google Sheets</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -474,6 +480,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-linear-regression">Simple Linear Regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-regression-line">Finding the Regression Line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictions-and-residuals">Predictions and Residuals</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
