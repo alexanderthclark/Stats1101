@@ -7,8 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Intro Stats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting Started &#8212; Intro Stats</title>
   
   
   
@@ -61,9 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Index" href="#" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'gettingstarted';</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Experiments" href="experiments.html" />
+    <link rel="prev" title="Welcome to Intro Stats" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,8 +177,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
 
@@ -260,7 +263,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fgettingstarted.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,6 +275,54 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/gettingstarted.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -324,7 +375,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Getting Started</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -338,13 +389,58 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id2" title="David J Hand. Statistics: A very short introduction. Oxford University Press, USA, 2008. URL: https://clio.columbia.edu/catalog/14180088.">Han08</a>]</span>, Chapter 1</p></li>
+<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Preface</p></li>
+</ul>
 </div>
+<p>Statistics refers to both the discipline and values calculated from data. We can define each after we define data. Data is mostly what you think it is, but our definition might be broader than you expect. <strong>Data</strong> are a collection of values and their context. Values does not have to mean numbers. This can include text, images, smells, and audio. If it’s something Google or the NSA might collect, it’s probably data.<a class="footnote-reference brackets" href="#id9" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>Returning to <strong>statistics</strong>, we first examine a few definitions for the discipline.</p>
+<ol class="arabic simple">
+<li><p>“The technology of extracting meaning from data.” (<span id="id4">[<a class="reference internal" href="bibliography.html#id2" title="David J Hand. Statistics: A very short introduction. Oxford University Press, USA, 2008. URL: https://clio.columbia.edu/catalog/14180088.">Han08</a>]</span>)</p></li>
+<li><p>“A way of reasoning and a set of tools that help us understand the world.” (<span id="id5">[<a class="reference internal" href="bibliography.html#id10" title="Richard D De Veaux, Paul F Velleman, and Bock. Stats: Data and Models, 5th Edition. Pearson/Addison Wesley Boston, 2019.">DVVB19</a>]</span>)</p></li>
+<li><p>“The art of making numerical conjectures about puzzling questions.” (<span id="id6">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>)</p></li>
+<li><p>“The discipline that concerns the collection, organization, analysis, and interpretation of data.” (Wikipedia)</p></li>
+</ol>
+<p>The first definition above is presented as a “working definition” and it does well to emphasize a notion of extraction. Our textbook, <span id="id7">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, emphasizes that this is a numerical endeavor. Extracting meaning isn’t just a matter of solving equations, though. Taking a large data set and judging it by its average or anything else we calculated is a reductive exercise, as is any kind of summary, statistical or not. Judging if this oversimplifies what’s in the data or might not be applicable in more general settings requires argument. Indeed, <span id="id8">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span> emphasizes the quantitative endeavor <em>and</em> logical rhetoric, “The purpose of statistics is to organize a useful argument from quantitative evidence, using a form of principled rhetoric.” This is all to say we have to use both parts of our brain going forward and we have to be comfortable with some ambiguity.</p>
+<p>Finally, we can define <strong>statistic</strong> in its second use. A statistic is a calculation made from data. A statistic can be judged by how well it says something useful.</p>
+<p>Consider the following two gambles.</p>
+<ul class="simple">
+<li><p><strong>A.</strong> 100% chance of winning $1 million.</p></li>
+<li><p><strong>B.</strong> 89% chance of winning $1 million, 10% of $5 million, and 1% chance of nothing.</p></li>
+</ul>
+<p>Gamble A earns you $1 million on average and gamble B earns you $1.39 million on average. Gamble B is better according to the average, but no statistician would insist that means Gamble B is better than A. The average, as a statistic, does not communicate relevant information about risk. Someone else might look at these two gambles and decide that the important statistic to compute is the worst-case winnings. Statistics won’t help us decide which gamble is better. But statistics can help sensitize us to what is lost and what judgments are implicit in choosing one statistic over another.</p>
+<p>All of this can be disappointing to someone who is looking for statistics to resolve questions. Some questions can’t be resolved and others might be resolved only slowly. In the 1890s, some of the first reports were published associating smoking with lung cancer. The United States Surgeon General’s Report on Smoking and Health was not published until 1964. This wasn’t a case of averages failing to adequately capture risk like in the above, rather it was that certain standards of evidence needed to be met. Not all types of studies are equally reliable and it comes down to much more than just sample size.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="id9" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p>Data is the plural of datum. That means a grammatically correct sentence would be “These data were analyzed by puppies.”</p>
+</aside>
+</section>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -356,6 +452,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to Intro Stats</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="experiments.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Experiments</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
