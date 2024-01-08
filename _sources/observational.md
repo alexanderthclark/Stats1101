@@ -13,7 +13,7 @@ The first point means we are still making some comparison where the effect of th
 
 In an **observational study**, the researcher does not assign subjects to the compared groups. That means we should not expect the groups to be similar. We could still call one group treatment and one group control, but if we are comparing the health of people who choose to take vitamins to those who choose not to take vitamins, we cannot expect the difference to be attributable to the vitamin.
 
-To avoid overstatement, we might say there is an observed **association** between vitamin-intake and better health instead of making a causal claim. Again, the potential for confounding is what prohibits from making a stronger claim.
+To avoid overstatement, we might say there is an observed **association** between vitamin-intake and better health instead of making a causal claim. Again, the potential for confounding is what prohibits us from making a stronger claim about a causal relationship. 
 
 We can try to make the treatment and control groups more similar by **controlling** for confounders. You can think of this as trying to do by hand what randomization does for free. For example, if vitamin-takers are wealthier, we can compare groups with similar wealth. Comparisons between more homogeneous groups are more reliable.
 
