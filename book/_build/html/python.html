@@ -358,7 +358,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -374,6 +376,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thinking-like-a-programmer">Thinking like a Programmer</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -385,7 +396,41 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="about">
 <h1>About<a class="headerlink" href="#about" title="Permalink to this heading">#</a></h1>
-<p>Hello, world</p>
+<section id="what-is-python">
+<h2>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this heading">#</a></h2>
+<p>Python is a general-purpose programming language. Our purposes are statistical calculations and the occasional graph. We will run code in <a class="reference external" href="https://colab.research.google.com/">Google Colaboratory</a>. This roughly mirrors running Jupyter notebooks on your own machine, but we skip the setup by running everything in the browser. If you master intro stats and become proficient in Python and SQL, there is a six-figure job waiting for you at any number of tech companies. <a class="reference external" href="https://www.reveliolabs.com/news/macro/who-gets-laid-off/">Data scientists are over-represented in layoffs</a>.</p>
+<p>Python is popular because the code is readable. More specifically, “Pythonic” code is readable. Pythonic code not only gets you from point A to B, but it uses Python as it was intended and conforms to the standards of beauty described in <em>The Zen of Python</em> and <a class="reference external" href="https://peps.python.org/pep-0008/">elsewhere</a>.</p>
+<p><strong>The Zen of Python, by Tim Peters</strong></p>
+<p><em>Beautiful is better than ugly.</em><br />
+<em>Explicit is better than implicit.</em><br />
+<em>Simple is better than complex.</em><br />
+<em>Complex is better than complicated.</em><br />
+<em>Flat is better than nested.</em><br />
+<em>Sparse is better than dense.</em><br />
+<em>Readability counts.</em><br />
+<em>Special cases aren’t special enough to break the rules.</em><br />
+<em>Although practicality beats purity.</em><br />
+<em>Errors should never pass silently.</em><br />
+<em>Unless explicitly silenced.</em><br />
+<em>In the face of ambiguity, refuse the temptation to guess.</em><br />
+<em>There should be one—and preferably only one—obvious way to do it.</em><br />
+<em>Although that way may not be obvious at first unless you’re Dutch.</em><br />
+<em>Now is better than never.</em><br />
+<em>Although never is often better than <em>right</em> now.</em><br />
+<em>If the implementation is hard to explain, it’s a bad idea.</em><br />
+<em>If the implementation is easy to explain, it may be a good idea.</em><br />
+<em>Namespaces are one honking great idea—let’s do more of those!</em></p>
+<p>Python can seem endlessly complex. <a class="reference external" href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348">Fluent Python</a> is 1,012 pages. Luckily, we don’t need to aspire to fluency.</p>
+</section>
+<section id="thinking-like-a-programmer">
+<h2>Thinking like a Programmer<a class="headerlink" href="#thinking-like-a-programmer" title="Permalink to this heading">#</a></h2>
+<p>Here’s a joke.</p>
+<blockquote>
+<div><p>A programmer is given orders, “Go to the store and buy a loaf of bread. If they have eggs, buy a dozen.” The programmer returns with 12 loaves of bread.</p>
+</div></blockquote>
+<p>This joke speaks to the importance of logic and literalism in coding. This will be frustrating if you’re the kind of person who says, “I could care less” when you mean you couldn’t care less. Python is your belligerent friend who insists on taking you literally.</p>
+<p>When executing a chunk of code, remember that is executed in order, from the one line to the next, and that any variables have to be defined before you can use them. When using a notebook like in Google Colab, be careful with running different cells out of order or forgetting to run one cell before going on to the next.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -442,6 +487,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thinking-like-a-programmer">Thinking like a Programmer</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
