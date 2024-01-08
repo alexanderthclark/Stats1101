@@ -1,5 +1,8 @@
 # Welcome to Intro Stats
 
+![Intro Stats](images/stats-wide.png)
+
+
 ```{important}
 These notes are not entirely self-contained. They should be read in companion with the primary text, {cite}`freedman2007statistics`, and other readings.
 ```
