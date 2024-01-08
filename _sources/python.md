@@ -2,7 +2,7 @@
 
 ## What is Python?
 
-Python is a general-purpose programming language. Our purposes are statistical calculations and the occasional graph. We will run code in [Google Colaboratory](https://colab.research.google.com/). This roughly mirrors running Jupyter notebooks on your own machine, but we skip the setup by running everything in the browser. If you master intro stats and become proficient in Python and SQL, there is a six-figure job waiting for you at any number of tech companies. [Data scientists are over-represented in layoffs](https://www.reveliolabs.com/news/macro/who-gets-laid-off/).
+Python is a general-purpose programming language. Our purposes are statistical calculations and the occasional graph. We will run code in [Google Colaboratory](https://colab.research.google.com/). This roughly mirrors running Jupyter notebooks on your own machine, but we skip the setup by running everything in the browser. If you master intro stats and become proficient in Python and SQL, there is a six-figure job waiting for you at any number of tech companies. 
 
 Python is popular because the code is readable. More specifically, “Pythonic” code is readable. Pythonic code not only gets you from point A to B, but it uses Python as it was intended and conforms to the standards of beauty described in *The Zen of Python* and [elsewhere](https://peps.python.org/pep-0008/).
 
