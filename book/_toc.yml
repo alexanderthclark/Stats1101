@@ -3,7 +3,19 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: stats
-- file: histograms
-- file: bibliography
+
+parts:
+- caption: Main Text
+  chapters:
+    - file: gettingstarted
+    - file: experiments
+    - file: bibliography
+
+- caption: Python (optional)
+  chapters:
+    - file: python
+    - file: histograms
+
+- caption: Google Sheets (optional)
+  chapters:
+    - file: gsheets
