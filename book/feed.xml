@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Stats1101</title>
+  <link>https://alexanderthclark.github.io/Stats1101/</link>
+  <description>Updates and content</description>
+  <language>en-us</language>
+
+  <!-- Repeat this item block for each update -->
+  <item>
+    <title>Title of Update</title>
+    <link>https://alexanderthclark.github.io/Stats1101/</link>
+    <description>Hello, world</description>
+    <pubDate>01-08-2024</pubDate>
+    <guid>1</guid>
+  </item>
+  <!-- End of item block -->
+
+</channel>
+</rss>
