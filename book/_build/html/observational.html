@@ -191,8 +191,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Google Sheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 
     </div>
@@ -434,6 +438,60 @@ document.write(`
 <li><p>Women are admitted at a higher rate within each major.</p></li>
 </ol>
 <p>The paradox arises if women are more likely to apply to programs with lower admission rates. Suppose there are 120 women and 120 men. There are two majors, A and B, that have their own independent admission standards. In major A, 100% of applicants are admitted. In major B, 20% of applicants are admitted. This is the admission rate for both men and women. Table below demonstrates the paradox when men apply to major A more often.</p>
+<table class="table" id="applicant-table">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Applicants</span><a class="headerlink" href="#applicant-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Major A</p></th>
+<th class="head"><p>Major B</p></th>
+<th class="head"><p>Total</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Men</p></td>
+<td><p>70</p></td>
+<td><p>50</p></td>
+<td><p>120</p></td>
+</tr>
+<tr class="row-odd"><td><p>Women</p></td>
+<td><p>20</p></td>
+<td><p>100</p></td>
+<td><p>120</p></td>
+</tr>
+<tr class="row-even"><td><p>Total</p></td>
+<td><p>90</p></td>
+<td><p>150</p></td>
+<td><p>240</p></td>
+</tr>
+</tbody>
+</table>
+<table class="table" id="admit-table">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Admits</span><a class="headerlink" href="#admit-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Major A</p></th>
+<th class="head"><p>Major B</p></th>
+<th class="head"><p>Total</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Men</p></td>
+<td><p>70</p></td>
+<td><p>10</p></td>
+<td><p>80</p></td>
+</tr>
+<tr class="row-odd"><td><p>Women</p></td>
+<td><p>20</p></td>
+<td><p>20</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-even"><td><p>Total</p></td>
+<td><p>90</p></td>
+<td><p>30</p></td>
+<td><p>120</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Table: Applicants</strong></p>
 <table class="table">
 <thead>

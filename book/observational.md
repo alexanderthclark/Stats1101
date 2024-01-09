@@ -33,21 +33,49 @@ The following is a simplification to help understand this paradox, with these tw
 
 The paradox arises if women are more likely to apply to programs with lower admission rates. Suppose there are 120 women and 120 men. There are two majors, A and B, that have their own independent admission standards. In major A, 100% of applicants are admitted. In major B, 20% of applicants are admitted. This is the admission rate for both men and women. Table below demonstrates the paradox when men apply to major A more often.
 
-**Table: Applicants**
-|        | Major A | Major B | Total |
-|--------|---------|---------|-------|
-| Men    | 70      | 50      | 120   |
-| Women  | 20      | 100     | 120   |
-| Total  | 90      | 150     | 240   |
+```{list-table} Applicants
+:header-rows: 1
+:name: applicant-table
 
+* - 
+  - Major A
+  - Major B
+  - Total
+* - Men
+  - 70
+  - 50
+  - 120
+* - Women
+  - 20
+  - 100
+  - 120
+* - Total
+  - 90
+  - 150
+  - 240
+```
 
-**Table: Admits**
-|        | Major A | Major B | Total |
-|--------|---------|---------|-------|
-| Men    | 70      | 10      | 80    |
-| Women  | 20      | 20      | 40    |
-| Total  | 90      | 30      | 120   |
+```{list-table} Admits
+:header-rows: 1
+:name: admit-table
 
+* - 
+  - Major A
+  - Major B
+  - Total
+* - Men
+  - 70
+  - 10
+  - 80
+* - Women
+  - 20
+  - 20
+  - 40
+* - Total
+  - 90
+  - 30
+  - 120
+```
 
 TKTK scatter plot here
 
