@@ -1,4 +1,4 @@
-# Google Sheets
+# Overview
 
 Google Sheets is excellent for its low scare-factor and its free availability. Microsoft Excel can do a bit more and Python or R can do a lot more. Use Google Sheets if you are someone who needs to manipulate data or make statistical calculations, but not so often that you should suffer the investment required to use languages like Python or R or to learn/pay for other applications. Google Sheets will get you from point A to point B and with only an internet browser. In the context of this class, the only advantage of Excel might be the availability of the Analysis ToolPak plugin (useful for regression analysis). 
 
