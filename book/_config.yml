@@ -31,6 +31,14 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  theme: sphinx_book_theme
+  extra_css: ["_static/custom.css"]
+
 
 launch_buttons:
   colab_url: "https://colab.research.google.com"
+
+sphinx:
+  extra_extensions:
+    - sphinx_exercise
+    - sphinx_togglebutton

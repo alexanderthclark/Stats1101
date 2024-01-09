@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Getting Started &#8212; Intro Stats</title>
+    <title>Solutions &#8212; Intro Stats</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'gettingstarted';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solutions';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Experiments" href="experiments.html" />
-    <link rel="prev" title="Welcome to Intro Stats" href="intro.html" />
+    <link rel="next" title="About" href="python.html" />
+    <link rel="prev" title="Bibliography" href="bibliography.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,8 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting Started</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
 
@@ -181,8 +181,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">Solutions</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -264,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fgettingstarted.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fsolutions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/gettingstarted.md" target="_blank"
+      <li><a href="_sources/solutions.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -378,7 +378,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Getting Started</h1>
+    <h1>Solutions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -388,7 +388,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started"><span class="xref myst">Getting Started</span></a></li>
 </ul>
             </nav>
         </div>
@@ -400,66 +400,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="getting-started">
-<span id="id1"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
-<div class="seealso admonition">
-<p class="admonition-title">Important Readings</p>
-<ul class="simple">
-<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id2" title="David J Hand. Statistics: A very short introduction. Oxford University Press, USA, 2008. URL: https://clio.columbia.edu/catalog/14180088.">Han08</a>]</span>, Chapter 1</p></li>
-<li><p><span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Preface</p></li>
-</ul>
-</div>
-<p>Statistics refers to both the discipline and values calculated from data. We can define each after we define data. Data is mostly what you think it is, but our definition might be broader than you expect. <strong>Data</strong> are a collection of values and their context. Values does not have to mean numbers. This can include text, images, smells, and audio. If it’s something Google or the NSA might collect, it’s probably data.<a class="footnote-reference brackets" href="#id11" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
-<p>Returning to <strong>statistics</strong>, we first examine a few definitions for the discipline.</p>
-<ol class="arabic simple">
-<li><p>“The technology of extracting meaning from data.” (<span id="id5">[<a class="reference internal" href="bibliography.html#id2" title="David J Hand. Statistics: A very short introduction. Oxford University Press, USA, 2008. URL: https://clio.columbia.edu/catalog/14180088.">Han08</a>]</span>)</p></li>
-<li><p>“A way of reasoning and a set of tools that help us understand the world.” (<span id="id6">[<a class="reference internal" href="bibliography.html#id6" title="Richard D De Veaux, Paul F Velleman, and Bock. Stats: Data and Models, 5th Edition. Pearson/Addison Wesley Boston, 2019.">DVVB19</a>]</span>)</p></li>
-<li><p>“The art of making numerical conjectures about puzzling questions.” (<span id="id7">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>)</p></li>
-<li><p>“The discipline that concerns the collection, organization, analysis, and interpretation of data.” (Wikipedia)</p></li>
-</ol>
-<p>The first definition above is presented as a “working definition” and it does well to emphasize a notion of extraction. Our textbook, <span id="id8">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, emphasizes that this is a numerical endeavor. Extracting meaning isn’t just a matter of solving equations, though. Taking a large data set and judging it by its average or anything else we calculated is a reductive exercise, as is any kind of summary, statistical or not. Judging if this oversimplifies what’s in the data or might not be applicable in more general settings requires argument. Indeed, <span id="id9">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span> emphasizes the quantitative endeavor <em>and</em> logical rhetoric, “The purpose of statistics is to organize a useful argument from quantitative evidence, using a form of principled rhetoric.” This is all to say we have to use both parts of our brain going forward and we have to be comfortable with some ambiguity.</p>
-<p>Finally, we can define <strong>statistic</strong> in its second use. A statistic is a calculation made from data. A statistic can be judged by how well it says something useful.</p>
-<p>Consider the following two gambles.</p>
-<ul class="simple">
-<li><p><strong>A.</strong> 100% chance of winning $1 million.</p></li>
-<li><p><strong>B.</strong> 89% chance of winning $1 million, 10% of $5 million, and 1% chance of nothing.</p></li>
-</ul>
-<p>Gamble A earns you $1 million on average and gamble B earns you $1.39 million on average. Gamble B is better according to the average, but no statistician would insist that means Gamble B is better than A. The average, as a statistic, does not communicate relevant information about risk. Someone else might look at these two gambles and decide that the important statistic to compute is the worst-case winnings. Statistics won’t help us decide which gamble is better. But statistics can help sensitize us to what is lost and what judgments are implicit in choosing one statistic over another.</p>
-<p>All of this can be disappointing to someone who is looking for statistics to resolve questions. Some questions can’t be resolved and others might be resolved only slowly. In the 1890s, some of the first reports were published associating smoking with lung cancer. The United States Surgeon General’s Report on Smoking and Health was not published until 1964. This wasn’t a case of averages failing to adequately capture risk like in the above, rather it was that certain standards of evidence needed to be met. Not all types of studies are equally reliable and it comes down to much more than just sample size.</p>
-<section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<p>The <a class="reference external" href="https://docs.google.com/spreadsheets/d/1RiCq9ovd1N_-qnNewD20oaEhnD1VL3qg/edit?usp=sharing&amp;ouid=102598671780190894865&amp;rtpof=true&amp;sd=true">data below</a> come from Spotify. Song popularity is based “in the most part, on the total number of plays the track has had and how recent those plays are.”<a class="footnote-reference brackets" href="#id12" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Artist popularity is derived from song popularities. The following exercises emphasize the inherent ambiguity in finding a good statistic.</p>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQXwJFqZzlWtVTKpchx-2NW3i5RVIu9JIE5gqOyPFcak8cJJjrYHOdsZKpundt11A/pubhtml?widget=true&amp;headers=false" width="100%" height="400px"></iframe>
-<div class="exercise admonition" id="spotpop">
+  <section class="tex2jax_ignore mathjax_ignore" id="solutions">
+<h1>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h1>
+<section id="getting-started">
+<h2><a class="reference internal" href="gettingstarted.html#getting-started"><span class="std std-ref">Getting Started</span></a><a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="solutions-solution-0">
 
-<p class="admonition-title"><span class="caption-number">Exercise 1 </span></p>
-<section id="exercise-content">
-<p>Without using the artist-popularity column, use the data to develop a statistic that can be used to rank the artists on popularity.</p>
+<p class="admonition-title">Solution to<a class="reference internal" href="gettingstarted.html#spotpop"> Exercise 1</a></p>
+<section id="solution-content">
+<p>There’s no single solution. Your solution should account for …</p>
 </section>
 </div>
-<div class="exercise admonition" id="spotcav">
-
-<p class="admonition-title"><span class="caption-number">Exercise 2 </span></p>
-<section id="exercise-content">
-<p>Briefly, what are some important caveats regarding what “popularity” actually means here? Hint: Artists come from different time periods and Garth Brooks’ entire catalog is not on Spotify.</p>
-</section>
-</div>
-<div class="exercise admonition" id="spotone">
-
-<p class="admonition-title"><span class="caption-number">Exercise 3 </span></p>
-<section id="exercise-content">
-<p>Use the data to develop a statistic that can be used to find the biggest one-hit wonder.</p>
-</section>
-</div>
-<hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id11" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">1</a><span class="fn-bracket">]</span></span>
-<p>Data is the plural of datum. That means a grammatically correct sentence would be “These data were analyzed by puppies.”</p>
-</aside>
-<aside class="footnote brackets" id="id12" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">2</a><span class="fn-bracket">]</span></span>
-<p>From <a class="reference external" href="https://developer.spotify.com/documentation/web-api/reference/get-track">Spotify’s documentation</a>.</p>
-</aside>
 </section>
 </section>
 
@@ -494,20 +445,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="bibliography.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to Intro Stats</p>
+        <p class="prev-next-title">Bibliography</p>
       </div>
     </a>
     <a class="right-next"
-       href="experiments.html"
+       href="python.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Experiments</p>
+        <p class="prev-next-title">About</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -526,7 +477,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started"><span class="xref myst">Getting Started</span></a></li>
 </ul>
   </nav></div>
 

@@ -10,7 +10,12 @@ parts:
     - file: gettingstarted
     - file: experiments
     - file: observational
+    - file: thehistogram
     - file: bibliography
+
+- caption: Solutions
+  chapters:
+    - file: solutions
 
 - caption: Python (optional)
   chapters:
@@ -21,3 +26,7 @@ parts:
   chapters:
     - file: gsheets
     - file: gregression
+
+- caption: Other
+  chapters:
+    - file: other

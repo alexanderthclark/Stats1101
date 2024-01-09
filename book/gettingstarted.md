@@ -1,3 +1,4 @@
+(getting_started)=
 # Getting Started
 
 ```{admonition} Important Readings
@@ -33,14 +34,36 @@ All of this can be disappointing to someone who is looking for statistics to res
 
 ## Exercises
 
-The [data below](https://docs.google.com/spreadsheets/d/1RiCq9ovd1N_-qnNewD20oaEhnD1VL3qg/edit?usp=sharing&ouid=102598671780190894865&rtpof=true&sd=true) come from Spotify. Song popularity is based "in the most part, on the total number of plays the track has had and how recent those plays are."[^2] Artist popularity is derived from song popularities.
+The [data below](https://docs.google.com/spreadsheets/d/1RiCq9ovd1N_-qnNewD20oaEhnD1VL3qg/edit?usp=sharing&ouid=102598671780190894865&rtpof=true&sd=true) come from Spotify. Song popularity is based "in the most part, on the total number of plays the track has had and how recent those plays are."[^2] Artist popularity is derived from song popularities. The following exercises emphasize the inherent ambiguity in finding a good statistic.
 
 [^2]: From [Spotify's documentation](https://developer.spotify.com/documentation/web-api/reference/get-track).
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQXwJFqZzlWtVTKpchx-2NW3i5RVIu9JIE5gqOyPFcak8cJJjrYHOdsZKpundt11A/pubhtml?widget=true&amp;headers=false" width="100%" height="400px"></iframe>
 
-1. Without using the artist-popularity column, use the data to develop a statistic that can be used to rank the artists on popularity.
 
-2. Briefly, what are some important caveats regarding what "popularity" actually means here? Hint: Artists come from different time periods and Garth Brooks' entire catalog is not on Spotify. 
+```{exercise-start}
+:label: spotpop
+```
 
-3. Use the data to develop a statistic that can bue used to find the biggest one-hit wonder.
+Without using the artist-popularity column, use the data to develop a statistic that can be used to rank the artists on popularity.
+
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: spotcav
+```
+
+Briefly, what are some important caveats regarding what "popularity" actually means here? Hint: Artists come from different time periods and Garth Brooks' entire catalog is not on Spotify. 
+
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: spotone
+```
+
+Use the data to develop a statistic that can be used to find the biggest one-hit wonder.
+
+```{exercise-end}
+```
