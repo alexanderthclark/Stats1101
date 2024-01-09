@@ -17,11 +17,12 @@ jobs:
           python-version: '3.x'
 
       - name: Install Jupyter Book
-        run: |
-          pip install jupyter-book
+        run: pip install jupyter-book
 
-      - name: Install matplotlib
-        run: pip install matplotlib
+      - name: Install Other Dependencies
+        run: |
+          pip install -r book/requirements.txt
+          pip install sphinx-exercise
 
       - name: Build Jupyter Book
         run: |
