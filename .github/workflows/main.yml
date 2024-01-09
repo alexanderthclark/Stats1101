@@ -21,7 +21,7 @@ jobs:
 
       - name: Install Other Dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r book/requirements.txt
           pip install sphinx-exercise
 
       - name: Build Jupyter Book
