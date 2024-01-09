@@ -358,7 +358,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -374,6 +376,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -392,7 +402,7 @@ document.write(`
 <li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Preface</p></li>
 </ul>
 </div>
-<p>Statistics refers to both the discipline and values calculated from data. We can define each after we define data. Data is mostly what you think it is, but our definition might be broader than you expect. <strong>Data</strong> are a collection of values and their context. Values does not have to mean numbers. This can include text, images, smells, and audio. If it’s something Google or the NSA might collect, it’s probably data.<a class="footnote-reference brackets" href="#id9" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>Statistics refers to both the discipline and values calculated from data. We can define each after we define data. Data is mostly what you think it is, but our definition might be broader than you expect. <strong>Data</strong> are a collection of values and their context. Values does not have to mean numbers. This can include text, images, smells, and audio. If it’s something Google or the NSA might collect, it’s probably data.<a class="footnote-reference brackets" href="#id10" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>Returning to <strong>statistics</strong>, we first examine a few definitions for the discipline.</p>
 <ol class="arabic simple">
 <li><p>“The technology of extracting meaning from data.” (<span id="id4">[<a class="reference internal" href="bibliography.html#id2" title="David J Hand. Statistics: A very short introduction. Oxford University Press, USA, 2008. URL: https://clio.columbia.edu/catalog/14180088.">Han08</a>]</span>)</p></li>
@@ -409,11 +419,25 @@ document.write(`
 </ul>
 <p>Gamble A earns you $1 million on average and gamble B earns you $1.39 million on average. Gamble B is better according to the average, but no statistician would insist that means Gamble B is better than A. The average, as a statistic, does not communicate relevant information about risk. Someone else might look at these two gambles and decide that the important statistic to compute is the worst-case winnings. Statistics won’t help us decide which gamble is better. But statistics can help sensitize us to what is lost and what judgments are implicit in choosing one statistic over another.</p>
 <p>All of this can be disappointing to someone who is looking for statistics to resolve questions. Some questions can’t be resolved and others might be resolved only slowly. In the 1890s, some of the first reports were published associating smoking with lung cancer. The United States Surgeon General’s Report on Smoking and Health was not published until 1964. This wasn’t a case of averages failing to adequately capture risk like in the above, rather it was that certain standards of evidence needed to be met. Not all types of studies are equally reliable and it comes down to much more than just sample size.</p>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<p>The <a class="reference external" href="https://docs.google.com/spreadsheets/d/1RiCq9ovd1N_-qnNewD20oaEhnD1VL3qg/edit?usp=sharing&amp;ouid=102598671780190894865&amp;rtpof=true&amp;sd=true">data below</a> come from Spotify. Song popularity is based “in the most part, on the total number of plays the track has had and how recent those plays are.”<a class="footnote-reference brackets" href="#id11" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Artist popularity is derived from song popularities.</p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQXwJFqZzlWtVTKpchx-2NW3i5RVIu9JIE5gqOyPFcak8cJJjrYHOdsZKpundt11A/pubhtml?widget=true&amp;headers=false" width="100%" height="400px"></iframe>
+<ol class="arabic simple">
+<li><p>Without using the artist-popularity column, use the data to develop a statistic that can be used to rank the artists on popularity.</p></li>
+<li><p>Briefly, what are some important caveats regarding what “popularity” actually means here? Hint: Artists come from different time periods and Garth Brooks’ entire catalog is not on Spotify.</p></li>
+<li><p>Use the data to develop a statistic that can bue used to find the biggest one-hit wonder.</p></li>
+</ol>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id9" role="note">
+<aside class="footnote brackets" id="id10" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
 <p>Data is the plural of datum. That means a grammatically correct sentence would be “These data were analyzed by puppies.”</p>
 </aside>
+<aside class="footnote brackets" id="id11" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">2</a><span class="fn-bracket">]</span></span>
+<p>From <a class="reference external" href="https://developer.spotify.com/documentation/web-api/reference/get-track">Spotify’s documentation</a>.</p>
+</aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -470,6 +494,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

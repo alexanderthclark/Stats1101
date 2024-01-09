@@ -2,7 +2,7 @@
 
 ## What is Python?
 
-Python is a general-purpose programming language. Our purposes are statistical calculations and the occasional graph. We will run code in [Google Colaboratory](https://colab.research.google.com/). This roughly mirrors running Jupyter notebooks on your own machine, but we skip the setup by running everything in the browser. If you master intro stats and become proficient in Python and SQL, there is a six-figure job waiting for you at any number of tech companies. [Data scientists are over-represented in layoffs](https://www.reveliolabs.com/news/macro/who-gets-laid-off/).
+Python is a general-purpose programming language. Our purposes are statistical calculations and the occasional graph. We will run code in [Google Colaboratory](https://colab.research.google.com/). This roughly mirrors running Jupyter notebooks on your own machine, but we skip the setup by running everything in the browser. If you master intro stats and become proficient in Python and SQL, there is a six-figure job waiting for you at any number of tech companies.
 
 Python is popular because the code is readable. More specifically, “Pythonic” code is readable. Pythonic code not only gets you from point A to B, but it uses Python as it was intended and conforms to the standards of beauty described in *The Zen of Python* and [elsewhere](https://peps.python.org/pep-0008/).
 
@@ -39,4 +39,3 @@ Here's a joke.
 This joke speaks to the importance of logic and literalism in coding. This will be frustrating if you're the kind of person who says, "I could care less" when you mean you couldn't care less. Python is your belligerent friend who insists on taking you literally.
 
 When executing a chunk of code, remember that is executed in order, from the one line to the next, and that any variables have to be defined before you can use them. When using a notebook like in Google Colab, be careful with running different cells out of order or forgetting to run one cell before going on to the next. 
-
