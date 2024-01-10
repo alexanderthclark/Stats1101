@@ -11,7 +11,7 @@ You've probably seen **histograms** before. They are used to summarize data by s
 
 ```{figure} images/normal_histogram.svg
 :width: 80%
-:name: fig:normalhist
+:name: normalhist
 
 A histogram showing a symmetric, bell-shaped distribution. 
 ```
@@ -22,7 +22,7 @@ A histogram is made of blocks (or bars). Each block has a predetermined **class 
 
 Table {numref}`hist1` summarizes the data set 0, 0, 1, 1, 2, 5, 10, 10, 10, 10. 
 
-```{list-table}
+```{list-table} Data Frequencies
 :header-rows: 1
 :name: hist1
 
