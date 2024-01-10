@@ -5,19 +5,47 @@
 - {cite}`freedman2007statistics`, Chapter 3
 ```
 
-You've probably seen histograms before. They are used to summarize data by showing the distribution.  
+## Summarizing a Distribution
+
+You've probably seen **histograms** before. They are used to summarize data by showing the distribution. 
 
 ```{figure} images/normal_histogram.svg
 :width: 80%
-:name: fig:normalhist
+:name: normalhist
 
-A typical histogram.
+A histogram showing a symmetric, bell-shaped distribution. 
 ```
+
+{numref}`normalhist` lacks any vertical scale. This is inessential as long as we're only concerned with the *shape* of the data.
+
+A histogram is made of blocks (or bars). Each block has a predetermined **class interval** and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the *area* of the block is proportional to the number of data points in the class interval. 
+
+{numref}`hist1` summarizes the data set 0, 0, 1, 1, 2, 6, 10, 10, 10, 10. 
+
+```{list-table} Data Frequencies
+:header-rows: 1
+:name: hist1
+
+* - Value
+  - Count
+* - 0
+  - 2
+* - 1
+  - 2
+* - 2
+  - 1
+* - 10
+  - 4
+```
+
+This can be translated into any number of slightly different histograms, depending on how the class intervals are chosen. Let's start with intervals of one-unit width, centered at every whole number. 
+
+
+## Variables 
 
 TKTK
 
-
-### Extension: Data Visualization and Exploratory Data Analysis
+## Extension: Data Visualization and Exploratory Data Analysis
 
 The histogram is an important piece of **exploratory data analysis** (EDA). Notably, {cite}`freedman2007statistics` doesn't cover this topic and we won't attempt to cover it other than this brief mention.
 

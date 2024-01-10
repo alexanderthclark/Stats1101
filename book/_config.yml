@@ -3,7 +3,7 @@
 
 title: Intro Stats
 author: Alexander Clark, Columbia University
-logo: images/statLogo.png
+logo: images/statLogo.svg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

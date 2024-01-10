@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/statLogo.png" class="logo__image only-light" alt="Intro Stats - Home"/>
-    <script>document.write(`<img src="_static/statLogo.png" class="logo__image only-dark" alt="Intro Stats - Home"/>`);</script>
+    <img src="_static/statLogo.svg" class="logo__image only-light" alt="Intro Stats - Home"/>
+    <script>document.write(`<img src="_static/statLogo.svg" class="logo__image only-dark" alt="Intro Stats - Home"/>`);</script>
   
   
 </a></div>
@@ -187,7 +187,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="histograms.html">Histograms</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -392,6 +391,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-a-distribution">Summarizing a Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
 </ul>
             </nav>
@@ -412,14 +413,46 @@ document.write(`
 <li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 3</p></li>
 </ul>
 </div>
-<p>You’ve probably seen histograms before. They are used to summarize data by showing the distribution.</p>
-<figure class="align-default" id="fig-normalhist">
+<section id="summarizing-a-distribution">
+<h2>Summarizing a Distribution<a class="headerlink" href="#summarizing-a-distribution" title="Permalink to this heading">#</a></h2>
+<p>You’ve probably seen <strong>histograms</strong> before. They are used to summarize data by showing the distribution.</p>
+<figure class="align-default" id="normalhist">
 <a class="reference internal image-reference" href="_images/normal_histogram.svg"><img alt="_images/normal_histogram.svg" src="_images/normal_histogram.svg" width="80%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">A typical histogram.</span><a class="headerlink" href="#fig-normalhist" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">A histogram showing a symmetric, bell-shaped distribution.</span><a class="headerlink" href="#normalhist" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p><a class="reference internal" href="#normalhist"><span class="std std-numref">Fig. 1</span></a> lacks any vertical scale. This is inessential as long as we’re only concerned with the <em>shape</em> of the data.</p>
+<p>A histogram is made of blocks (or bars). Each block has a predetermined <strong>class interval</strong> and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the <em>area</em> of the block is proportional to the number of data points in the class interval.</p>
+<p><a class="reference internal" href="#hist1"><span class="std std-numref">Table 3</span></a> summarizes the data set 0, 0, 1, 1, 2, 6, 10, 10, 10, 10.</p>
+<table class="table" id="hist1">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Data Frequencies</span><a class="headerlink" href="#hist1" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+<p>This can be translated into any number of slightly different histograms, depending on how the class intervals are chosen. Let’s start with intervals of one-unit width, centered at every whole number.</p>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
 <p>TKTK</p>
+</section>
 <section id="extension-data-visualization-and-exploratory-data-analysis">
 <h2>Extension: Data Visualization and Exploratory Data Analysis<a class="headerlink" href="#extension-data-visualization-and-exploratory-data-analysis" title="Permalink to this heading">#</a></h2>
 <p>The histogram is an important piece of <strong>exploratory data analysis</strong> (EDA). Notably, <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> doesn’t cover this topic and we won’t attempt to cover it other than this brief mention.</p>
@@ -519,6 +552,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-a-distribution">Summarizing a Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
 </ul>
   </nav></div>
