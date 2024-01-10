@@ -77,22 +77,6 @@ The paradox arises if women are more likely to apply to programs with lower admi
   - 120
 ```
 
-**Table: Applicants**
-|        | Major A | Major B | Total |
-|--------|---------|---------|-------|
-| Men    | 70      | 50      | 120   |
-| Women  | 20      | 100     | 120   |
-| Total  | 90      | 150     | 240   |
-
-
-**Table: Admits**
-|        | Major A | Major B | Total |
-|--------|---------|---------|-------|
-| Men    | 70      | 10      | 80    |
-| Women  | 20      | 20      | 40    |
-| Total  | 90      | 30      | 120   |
-
-
 TKTK scatter plot here
 
 ## Extension: Other Potential Worlds

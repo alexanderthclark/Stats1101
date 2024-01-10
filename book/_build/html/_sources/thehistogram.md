@@ -5,6 +5,15 @@
 - {cite}`freedman2007statistics`, Chapter 3
 ```
 
+You've probably seen histograms before. They are used to summarize data by showing the distribution.  
+
+```{figure} images/normal_histogram.svg
+:width: 80%
+:name: fig:normalhist
+
+A typical histogram.
+```
+
 TKTK
 
 
