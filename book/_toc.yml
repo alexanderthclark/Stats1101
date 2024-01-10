@@ -20,7 +20,6 @@ parts:
 - caption: Python (optional)
   chapters:
     - file: python
-    - file: histograms
 
 - caption: Google Sheets (optional)
   chapters:
