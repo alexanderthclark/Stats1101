@@ -16,11 +16,11 @@ You've probably seen **histograms** before. They are used to summarize data by s
 A histogram showing a symmetric, bell-shaped distribution. 
 ```
 
-Figure {numref}`normalhist` lacks any vertical scale. This is inessential as long as we're only concerned with the *shape* of the data.
+{numref}`normalhist` lacks any vertical scale. This is inessential as long as we're only concerned with the *shape* of the data.
 
 A histogram is made of blocks (or bars). Each block has a predetermined **class interval** and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the *area* of the block is proportional to the number of data points in the class interval. 
 
-Table {numref}`hist1` summarizes the data set 0, 0, 1, 1, 2, 5, 10, 10, 10, 10. 
+{numref}`hist1` summarizes the data set 0, 0, 1, 1, 2, 6, 10, 10, 10, 10. 
 
 ```{list-table} Data Frequencies
 :header-rows: 1
@@ -37,6 +37,8 @@ Table {numref}`hist1` summarizes the data set 0, 0, 1, 1, 2, 5, 10, 10, 10, 10.
 * - 10
   - 4
 ```
+
+This can be translated into any number of slightly different histograms, depending on how the class intervals are chosen. Let's start with intervals of one-unit width, centered at every whole number. 
 
 
 ## Variables 
