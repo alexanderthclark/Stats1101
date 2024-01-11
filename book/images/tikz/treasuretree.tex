@@ -1,0 +1,56 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes.geometric}
+\usepackage{amsfonts}
+\begin{document}
+
+
+    \begin{tikzpicture}[->, grow=right, sloped,
+    level 1/.style={sibling distance=2.75cm,},
+    level 2/.style={sibling distance=1.45cm, level distance=3cm},
+    level 3/.style={sibling distance=0.6cm,},
+    level 4/.style={sibling distance=0.4cm,}]
+    \tikzstyle{bag} = [text width=4em, text centered] % Define bag style
+    \tikzstyle{end} = [text width=0em, text centered] % Define end style
+
+    \node[bag] {} % Root node with bag style
+        child {
+            node[bag] {O at i} % Bag node
+                child {
+                    node[end, label=right: {O at i+1}] {} % End node with label
+                    edge from parent
+                    node[above] {} % Label above the edge
+                    node[below] {$1-b$} % Label below the edge
+                }
+                child {
+                    node[end, label=right: {X at i+1}] {} % End node with label
+                    edge from parent
+                    node[above] {$b$} % Label above the edge
+                    node[below] {} % Label below the edge
+                }
+                edge from parent 
+                node[above] {}
+                node[below] {$\frac{3}{5}$} % Label below the edge
+        }
+        child {
+            node[bag] {X at i} % Bag node
+                child {
+                    node[end, label=right: {O at i+1}] {} % End node with label
+                    edge from parent
+                    node[above] {} % Label above the edge
+                    node[below] {$1-a$} % Label below the edge
+                }
+                child {
+                    node[end, label=right: {X at i+1}] {} % End node with label
+                    edge from parent
+                    node[above] {$a$} % Label above the edge
+                    node[below] {} % Label below the edge
+                }
+                edge from parent         
+                node[above] {} % Label above the edge
+                node[below] {$\frac{2}{5}$} % Label below the edge
+        };
+    \end{tikzpicture}
+
+
+\end{document}
