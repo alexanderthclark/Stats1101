@@ -4,7 +4,6 @@
 ```{admonition} Important Readings
 :class: seealso
 - {cite}`hand2008statistics`, Chapter 1
-- {cite}`freedman2007statistics`, Preface
 ```
 
 Statistics refers to both the discipline and values calculated from data. We can define each after we define data. Data is mostly what you think it is, but our definition might be broader than you expect. **Data** are a collection of values and their context. Values does not have to mean numbers. This can include text, images, smells, and audio. If it's something Google or the NSA might collect, it's probably data.[^1]
