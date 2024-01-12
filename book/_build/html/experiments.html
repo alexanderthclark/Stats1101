@@ -177,12 +177,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -191,6 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
@@ -398,6 +396,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-the-gold-standard-and-story-time">Extension: The Gold Standard and Story Time</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -426,7 +425,7 @@ document.write(`
 <p>Before continuing with this chapter and the next, it is helpful to understand that statistics can be used to answer <em>causal</em> questions and to answer <em>non-causal</em> questions. A causal question is one like, “Does this vaccine prevent this disease?” or “Does a ‘no excuses’ charter school produce better learning outcomes?” Non-causal questions might include “Will my business do better if I hire Columbia graduates instead of CUNY graduates?” or “At what age does an artist peak?”</p>
 <p>Causal questions seek to understand the impact of something like a vaccine to understand the impact of an actual intervention where more people are vaccinated as a matter of medical guidance or policy. Similarly, the study of a charter school leads to a causal question because we want to know if we can actually attribute student success to the school and not to pre-existing differences between the students who do and do not attend charter schools.</p>
 <p>A non-causal question might be a matter of mere prediction. Hiring managers will use your Columbia degree as a predictor of your qualifications for a job. They can predict that you will be intelligent and easy to train. The cause of those qualities might be Columbia, but for the purposes of the hiring manager, it doesn’t matter if you possessed these qualities prior to arriving on campus. The true cause could be something not on your resume—perhaps your genetics, the water quality in your hometown, or your formation in preschool. The Columbia degree is only valuable as a signal. It will remain valuable so long as there is no shock that changes the statistical relationship, like if the <a class="reference external" href="https://www.nytimes.com/2022/03/17/us/columbia-university-rank.html">U.S. News scandal</a> were to lower the prestige of the university and thus the quality of students or faculty.</p>
-<p>Other non-causal questions might have merely descriptive purposes. <span id="id2">[<a class="reference internal" href="bibliography.html#id43" title="D.W. Galenson. Old Masters and Young Geniuses: The Two Life Cycles of Artistic Creativity. Princeton University Press, 2006. ISBN 9780691121093. URL: https://clio.columbia.edu/catalog/14140122.">Gal06</a>]</span> studies the life cycles of artists, categorizing artists who tend to peak early versus those who peak later in life. On the surface, this makes no explicit prediction and doesn’t propose a causal theory of creativity. The descriptive statistics might inform further theorizing that might creep into causal or predictive territory, but the statistics are interesting in and of themselves. It tells us something about how creativity can work and challenges a simplistic belief that “artists peak early.”</p>
+<p>Other non-causal questions might have merely descriptive purposes. <span id="id2">[<a class="reference internal" href="bibliography.html#id44" title="D.W. Galenson. Old Masters and Young Geniuses: The Two Life Cycles of Artistic Creativity. Princeton University Press, 2006. ISBN 9780691121093. URL: https://clio.columbia.edu/catalog/14140122.">Gal06</a>]</span> studies the life cycles of artists, categorizing artists who tend to peak early versus those who peak later in life. On the surface, this makes no explicit prediction and doesn’t propose a causal theory of creativity. The descriptive statistics might inform further theorizing that might creep into causal or predictive territory, but the statistics are interesting in and of themselves. It tells us something about how creativity can work and challenges a simplistic belief that “artists peak early.”</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id3">
 <h1>Experiments<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
@@ -441,28 +440,59 @@ document.write(`
 <p>The above describes the basic usefulness of experiments for answering causal questions. An experiment worth running involes a lot more care than “try stuff and see what happens.” We avoid the problem of confounding when using randomized controlled experiments. Still, there’s much more to designing an experiment. For example, the control group might be given a <em>placebo</em>, especially in experiments where the outcome might be based on the self-reports of the participants (e.g. reported level of pain). This is a kind of blinding—the participants are blind to their status in treatment or control. It’s also possible to use <em>double blinding</em>, where someone on the other side, like a doctor evaluating participants, also doesn’t know which participants are in treatment or control. This should produce more reliable evaluations and measurements, where the doctor doesn’t see a treatment effect when it isn’t there.</p>
 <section id="extension-the-gold-standard-and-story-time">
 <h3>Extension: The Gold Standard and Story Time<a class="headerlink" href="#extension-the-gold-standard-and-story-time" title="Permalink to this heading">#</a></h3>
-<p>Experiments are often described as the “gold standard” for causal evidence. Still, we shan’t get too carried away with what we might call story time when it comes to interpreting experiments. <span id="id4">[<a class="reference internal" href="bibliography.html#id36" title="Andrew Gelman. Benefits and limitations of randomized controlled trials: a commentary on deaton and cartwright. Social Science &amp; Medicine (1982), 210:48–49, 2018.">Gel18</a>]</span> cautions, “The social science and medical research literature is full of papers in which a randomized experiment is performed … and then story time begins, and continues, and continues—as if the rigor from the randomized experiment somehow suffuses through the entire analysis.” The folly of story time usually involves selective analysis or overstating the results. For example, a negative effect might be measured in the short-run, but long-run effects can be different, as in the case of a <a class="reference external" href="https://medium.com/&#64;AnalyticsAtMeta/notifications-why-less-is-more-how-facebook-has-been-increasing-both-user-satisfaction-and-app-9463f7325e7d">Facebook notifications experiment</a> showing fewer notifications reduce activity in the short-run but increase activity in the long-run.</p>
-<p><span id="id5">[<a class="reference internal" href="bibliography.html#id33" title="Megan T. Stevenson. Cause, effect, and the structure of the social world. Boston University Law Review, 2023.">Ste23</a>]</span> examines experiments in the criminal legal space, finding that most interventions don’t produce lasting effects or scale up with the expansion of a program (including both tough interventions, like scared straight programs, and supportive ones, like Barack Obama’s “My Brother’s Keeper” initiative). Stevenson notes that social change is hard to engineer, so we might still have to interpret results cautiously in these contexts.</p>
+<p>Experiments are often described as the “gold standard” for causal evidence. Still, we shan’t get too carried away with what we might call story time when it comes to interpreting experiments. <span id="id4">[<a class="reference internal" href="bibliography.html#id37" title="Andrew Gelman. Benefits and limitations of randomized controlled trials: a commentary on deaton and cartwright. Social Science &amp; Medicine (1982), 210:48–49, 2018.">Gel18</a>]</span> cautions, “The social science and medical research literature is full of papers in which a randomized experiment is performed … and then story time begins, and continues, and continues—as if the rigor from the randomized experiment somehow suffuses through the entire analysis.” The folly of story time usually involves selective analysis or overstating the results. For example, a negative effect might be measured in the short-run, but long-run effects can be different, as in the case of a <a class="reference external" href="https://medium.com/&#64;AnalyticsAtMeta/notifications-why-less-is-more-how-facebook-has-been-increasing-both-user-satisfaction-and-app-9463f7325e7d">Facebook notifications experiment</a> showing fewer notifications reduce activity in the short-run but increase activity in the long-run.</p>
+<p><span id="id5">[<a class="reference internal" href="bibliography.html#id34" title="Megan T. Stevenson. Cause, effect, and the structure of the social world. Boston University Law Review, 2023.">Ste23</a>]</span> examines experiments in the criminal legal space, finding that most interventions don’t produce lasting effects or scale up with the expansion of a program (including both tough interventions, like scared straight programs, and supportive ones, like Barack Obama’s “My Brother’s Keeper” initiative). Stevenson notes that social change is hard to engineer, so we might still have to interpret results cautiously in these contexts.</p>
 <p>Moving to hard science, consider the case of James Lind’s investigation of scurvy. <span id="id6">[<a class="reference internal" href="bibliography.html#id4" title="Joshua D Angrist and Jörn-Steffen Pischke. Mastering'metrics: The path from cause to effect. Princeton university press, 2014. URL: https://clio.columbia.edu/catalog/11221502.">AP14</a>]</span> describes Lind’s non-randomized experiment:</p>
 <blockquote>
 <div><p>Scurvy, a debilitating disease caused by vitamin C deficiency, was the scourge of the British Navy. In 1742, James Lind, a surgeon on HMS Salisbury, experimented with a cure for scurvy. Lind chose 12 seamen with scurvy and started them on an identical diet. He then formed six pairs and treated each of the pairs with a different supplement to their daily food ration. One of the additions was an extra two oranges and one lemon (Lind believed an acidic diet might cure scurvy). Though Lind did not use random assignment, and his sample was small by our standards, he was a pioneer in that he chose his 12 study members so they were “as similar as I could have them.” The citrus eaters—Britain’s first limeys—were quickly and incontrovertibly cured, a life-changing empirical finding that emerged from Lind’s data even though his theory was wrong.</p>
 </div></blockquote>
 <p>Despite the lack of randomization, this is a good approach that was ahead of its time. Lind didn’t understand the role of vitamin C, but he got the essential thing right by recommending citrus, but imagine a less disciplined researcher indulging in story time. A bad chain of reasoning might go, (1) citrus is helpful, (2) cider is acidic like citrus, (3) therefore cider is helpful. Luckily, Lind didn’t recommend other acidic foods that lacked vitamin C or otherwise attempt to explain why citrus was helpful.</p>
-<p>Running an experiment and working with data requires scientific integrity that goes beyond not lying. Here’s how Richard Feynman put it in his famous Cargo Cult Science address (<span id="id7">[<a class="reference internal" href="bibliography.html#id42" title="R.P. Feynman and J. Robbins. The Pleasure Of Finding Things Out: The Best Short Works Of Richard Feynman. Helix book. Basic Books, 1999. ISBN 9780738201085. URL: https://clio.columbia.edu/catalog/2450053.">FR99</a>]</span>).<a class="footnote-reference brackets" href="#id11" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>Running an experiment and working with data requires scientific integrity that goes beyond not lying. Here’s how Richard Feynman put it in his famous Cargo Cult Science address (<span id="id7">[<a class="reference internal" href="bibliography.html#id43" title="R.P. Feynman and J. Robbins. The Pleasure Of Finding Things Out: The Best Short Works Of Richard Feynman. Helix book. Basic Books, 1999. ISBN 9780738201085. URL: https://clio.columbia.edu/catalog/2450053.">FR99</a>]</span>).<a class="footnote-reference brackets" href="#id11" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <blockquote>
 <div><p>It’s a kind of scientific integrity, a principle of scientific thought that corresponds to a kind of utter honesty—a kind of leaning over backwards. For example, if you’re doing an experiment, you should report everything that you think might make it invalid—not only what you think is right about it: other causes that could possibly explain your results; and things you thought of that you’ve eliminated by some other experiment, and how they worked—to make sure the other fellow can tell they have been eliminated. Details that could throw doubt on your interpretation must be given, if you know them. You must do the best you can—if you know anything at all wrong, or possibly wrong—to explain it.</p>
 </div></blockquote>
-<p>Finally, don’t forget that we’ll mostly be looking at <em>average</em> effects. <span id="id9">[<a class="reference internal" href="bibliography.html#id35" title="Angus Deaton and Nancy Cartwright. Understanding and misunderstanding randomized controlled trials. Social science &amp; medicine, 210:2–21, 2018.">DC18</a>]</span> sets up this conundrum for the experiment zealot.</p>
+<p>Finally, don’t forget that we’ll mostly be looking at <em>average</em> effects. <span id="id9">[<a class="reference internal" href="bibliography.html#id36" title="Angus Deaton and Nancy Cartwright. Understanding and misunderstanding randomized controlled trials. Social science &amp; medicine, 210:2–21, 2018.">DC18</a>]</span> sets up this conundrum for the experiment zealot.</p>
 <blockquote>
 <div><p>Imagine two schools, St Joseph’s and St. Mary’s, both of which were included in [a randomized controlled experiment] of a classroom innovation. The innovation is successful on average, but should the schools adopt it? Should St Mary’s be influenced by a previous attempt in St Joseph’s that was judged a failure? Many would dismiss this experience as anecdotal and ask how St Joseph’s could have known that it was a failure without benefit of ‘rigorous’ evidence. Yet if St Mary’s is like St Joseph’s, with a similar mix of pupils, a similar curriculum, and similar academic standing, might not St Joseph’s experience be more relevant to what might happen at St Mary’s than is the positive average from the [randomized controlled experiment]? And might it not be a good idea for the teachers and governors of St Mary’s to go to St Joseph’s and find out what happened and why? They may be able to observe the mechanism of the failure, if such it was, and figure out whether the same problems would apply for them, or whether they might be able to adapt the innovation to make it work for them, perhaps even more successfully than the positive average in the [experiment].</p>
 </div></blockquote>
-<p>The next sentence of <span id="id10">[<a class="reference internal" href="bibliography.html#id35" title="Angus Deaton and Nancy Cartwright. Understanding and misunderstanding randomized controlled trials. Social science &amp; medicine, 210:2–21, 2018.">DC18</a>]</span> starts, “Once again, these questions are unlikely to be easily answered in practice.” We have to be comfortable with some ambiguity and tolerate slow progress, as evidence builds and effects are replicated.</p>
+<p>The next sentence of <span id="id10">[<a class="reference internal" href="bibliography.html#id36" title="Angus Deaton and Nancy Cartwright. Understanding and misunderstanding randomized controlled trials. Social science &amp; medicine, 210:2–21, 2018.">DC18</a>]</span> starts, “Once again, these questions are unlikely to be easily answered in practice.” We have to be comfortable with some ambiguity and tolerate slow progress, as evidence builds and effects are replicated.</p>
+</section>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="exp1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4 </span></p>
+<section id="exercise-content">
+<p>In an experiment with a large number of participants, the average income of the treatment group is $100,000 and the average income of the control group is $20,000. Describe what kind of problem this might create if we are studying the effectiveness of an electric toothbrush (treatment) vs a non-electric toothbrush (control).</p>
+</section>
+</div>
+<div class="exercise admonition" id="exp2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 5 </span></p>
+<section id="exercise-content">
+<p>Which of these is best described as a randomized, controlled experiment? Explain why the other choices fail to describe experiments.</p>
+<ul class="simple">
+<li><p>A charter school selects students by lottery due to state law.</p></li>
+<li><p>The Internal Revenue Service randomly audits some taxpayers and not others.</p></li>
+<li><p>A researcher randomly assigns participants to a high-fat or low-fat diet.</p></li>
+</ul>
+</section>
+</div>
+<div class="exercise admonition" id="rand">
+
+<p class="admonition-title"><span class="caption-number">Exercise 6 </span></p>
+<section id="exercise-content">
+<p>The RAND Health Insurance Experiment was used to study the utilization of health care services among people randomly assigned to different health insurance plans. One hypothesis might be that those with more comprehensive coverage overuse medical services because they can do so at no cost. As a simplification, suppose there is one insurance plan covering 100% of costs and one plan with partial coverage. This is a complicated experiment because of the potential for <em>attrition</em>—participants can drop out and be removed from the study. Despite randomization in original assignments, at the end of the study, there was a substantial difference in average number of doctors’ visits in the year before the experiment across the two groups.</p>
+<p>Why is it problematic if one group used health care services more intensively than the other prior to the study?</p>
+<p>Speculate on why a participant might drop out and how this might confound the comparison (there is no single right answer). In your answer, provide a reason for why this would affect the 100% coverage group more or less than the partial coverage group.</p>
+</section>
+</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id11" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">1</a><span class="fn-bracket">]</span></span>
 <p>This is a short address delivered at Caltech’s 1974 commencement. I recommend reading it if you’re interested in science.</p>
 </aside>
-</section>
 </section>
 </section>
 
@@ -536,6 +566,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-the-gold-standard-and-story-time">Extension: The Gold Standard and Story Time</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
 </li>
 </ul>

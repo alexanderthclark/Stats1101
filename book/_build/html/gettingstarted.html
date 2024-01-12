@@ -177,12 +177,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -191,6 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
@@ -409,19 +407,18 @@ document.write(`
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
 <li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id2" title="David J Hand. Statistics: A very short introduction. Oxford University Press, USA, 2008. URL: https://clio.columbia.edu/catalog/14180088.">Han08</a>]</span>, Chapter 1</p></li>
-<li><p><span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Preface</p></li>
 </ul>
 </div>
-<p>Statistics refers to both the discipline and values calculated from data. We can define each after we define data. Data is mostly what you think it is, but our definition might be broader than you expect. <strong>Data</strong> are a collection of values and their context. Values does not have to mean numbers. This can include text, images, smells, and audio. If it’s something Google or the NSA might collect, it’s probably data.<a class="footnote-reference brackets" href="#id11" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
-<p>Returning to <strong>statistics</strong>, we first examine a few definitions for the discipline.</p>
+<p>Statistics refers to both the discipline and values calculated from data. We can define each after we define data. Data is mostly what you think it is, but our definition might be broader than you expect. <strong>Data</strong> are a collection of values and their context. Values does not have to mean numbers. This can include text, images, smells, and audio. If it’s something Google or the NSA might collect, it’s probably data.<a class="footnote-reference brackets" href="#id11" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>Data is good. Everyone likes to say they are “data driven.” The trouble with data is, without any machinery for making sense of it, we’re left with a disorienting jumble of numbers. The discipline of <strong>statistics</strong> helps make that data useful. Below are a few definitions for the discipline.</p>
 <ol class="arabic simple">
-<li><p>“The technology of extracting meaning from data.” (<span id="id5">[<a class="reference internal" href="bibliography.html#id2" title="David J Hand. Statistics: A very short introduction. Oxford University Press, USA, 2008. URL: https://clio.columbia.edu/catalog/14180088.">Han08</a>]</span>)</p></li>
-<li><p>“A way of reasoning and a set of tools that help us understand the world.” (<span id="id6">[<a class="reference internal" href="bibliography.html#id6" title="Richard D De Veaux, Paul F Velleman, and Bock. Stats: Data and Models, 5th Edition. Pearson/Addison Wesley Boston, 2019.">DVVB19</a>]</span>)</p></li>
-<li><p>“The art of making numerical conjectures about puzzling questions.” (<span id="id7">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>)</p></li>
+<li><p>“The technology of extracting meaning from data.” (<span id="id4">[<a class="reference internal" href="bibliography.html#id2" title="David J Hand. Statistics: A very short introduction. Oxford University Press, USA, 2008. URL: https://clio.columbia.edu/catalog/14180088.">Han08</a>]</span>)</p></li>
+<li><p>“A way of reasoning and a set of tools that help us understand the world.” (<span id="id5">[<a class="reference internal" href="bibliography.html#id6" title="Richard D De Veaux, Paul F Velleman, and Bock. Stats: Data and Models, 5th Edition. Pearson/Addison Wesley Boston, 2019.">DVVB19</a>]</span>)</p></li>
+<li><p>“The art of making numerical conjectures about puzzling questions.” (<span id="id6">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>)</p></li>
 <li><p>“The discipline that concerns the collection, organization, analysis, and interpretation of data.” (Wikipedia)</p></li>
 </ol>
-<p>The first definition above is presented as a “working definition” and it does well to emphasize a notion of extraction. Our textbook, <span id="id8">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, emphasizes that this is a numerical endeavor. Extracting meaning isn’t just a matter of solving equations, though. Taking a large data set and judging it by its average or anything else we calculated is a reductive exercise, as is any kind of summary (think of a cable news sound bite). Judging if this oversimplifies what’s in the data or might not be applicable in more general settings requires argument. Indeed, <span id="id9">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span> emphasizes the quantitative endeavor <em>and</em> logical rhetoric, “The purpose of statistics is to organize a useful argument from quantitative evidence, using a form of principled rhetoric.” This is all to say we have to use both parts of our brain going forward and we have to be comfortable with some ambiguity.</p>
-<p>Finally, we can define <strong>statistic</strong> in its second use. A statistic is a calculation made from data. A statistic can be judged by how well it says something useful.</p>
+<p>The first definition above is presented as a “working definition” and it does well to emphasize a notion of extraction. Our textbook, <span id="id7">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, emphasizes that this is a numerical endeavor. Extracting meaning isn’t just a matter of solving equations, though. Taking a large data set and judging it by its average or anything else we calculated is a reductive exercise, as is any kind of summary (e.g. a map simplifies spatial information). Judging if this oversimplifies what’s in the data or might not be applicable in more general settings requires argument. Indeed, <span id="id8">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span> emphasizes the quantitative endeavor <em>and</em> logical rhetoric, “The purpose of statistics is to organize a useful argument from quantitative evidence, using a form of principled rhetoric.” This is all to say we have to use both parts of our brain going forward and we have to be comfortable with some ambiguity.</p>
+<p>Finally, we can define <strong>statistic</strong> in its second use. A statistic is a calculation made from data, and per <span id="id9">[<a class="reference internal" href="bibliography.html#id2" title="David J Hand. Statistics: A very short introduction. Oxford University Press, USA, 2008. URL: https://clio.columbia.edu/catalog/14180088.">Han08</a>]</span>, a “numerical fact or summary.” A statistic can be judged by how well it says something useful.</p>
 <p>Consider the following two gambles.</p>
 <ul class="simple">
 <li><p><strong>A.</strong> 100% chance of winning $1 million.</p></li>
@@ -456,7 +453,7 @@ document.write(`
 </div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id11" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">1</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
 <p>Data is the plural of datum. That means a grammatically correct sentence would be “These data were analyzed by puppies.”</p>
 </aside>
 <aside class="footnote brackets" id="id12" role="note">

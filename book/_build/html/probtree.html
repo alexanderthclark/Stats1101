@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Probability IV &#8212; Intro Stats</title>
+    <title>Probability Trees &#8212; Intro Stats</title>
   
   
   
@@ -67,8 +67,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'probtree';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
-    <link rel="prev" title="The Histogram" href="thehistogram.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,19 +169,15 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Probability IV</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -192,6 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
@@ -382,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Probability IV</h1>
+    <h1>Probability Trees</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -404,13 +399,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="probability-iv">
-<h1>Probability IV<a class="headerlink" href="#probability-iv" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="probability-trees">
+<h1>Probability Trees<a class="headerlink" href="#probability-trees" title="Permalink to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
 <li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id12" title="H. Tijms. Understanding Probability. Cambridge University Press, 2012. ISBN 9781107658561. URL: https://books.google.com/books?id=FjpRJJ65HwIC.">Tij12</a>]</span>, Chapter 6</p></li>
-<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id48" title="Steven Strogatz. Chances are. New York Times, 2010. URL: https://archive.nytimes.com/opinionator.blogs.nytimes.com/2010/04/25/chances-are/.">Str10</a>]</span></p></li>
+<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id49" title="Steven Strogatz. Chances are. New York Times, 2010. URL: https://archive.nytimes.com/opinionator.blogs.nytimes.com/2010/04/25/chances-are/.">Str10</a>]</span></p></li>
 </ul>
 </div>
 <p>In this chapter, we leave the main textbook to learn about probability trees and then Bayes’ Theorem.</p>
@@ -420,7 +415,7 @@ document.write(`
 <figure class="align-default" id="gentree">
 <a class="reference internal image-reference" href="_images/generaltree.svg"><img alt="_images/generaltree.svg" src="_images/generaltree.svg" width="90%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">A probability tree.</span><a class="headerlink" href="#gentree" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">A probability tree.</span><a class="headerlink" href="#gentree" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -456,24 +451,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="thehistogram.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">The Histogram</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="bibliography.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               

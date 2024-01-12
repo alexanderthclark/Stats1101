@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Bibliography" href="bibliography.html" />
-    <link rel="prev" title="Observational Studies" href="observational.html" />
+    <link rel="prev" title="Natural Experiments" href="natural.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,12 +177,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">The Histogram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -191,6 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
@@ -392,7 +390,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-a-distribution">Summarizing a Distribution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
 </ul>
             </nav>
@@ -419,10 +420,10 @@ document.write(`
 <figure class="align-default" id="normalhist">
 <a class="reference internal image-reference" href="_images/normal_histogram.svg"><img alt="_images/normal_histogram.svg" src="_images/normal_histogram.svg" width="80%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">A histogram showing a symmetric, bell-shaped distribution.</span><a class="headerlink" href="#normalhist" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">A histogram showing a symmetric, bell-shaped distribution.</span><a class="headerlink" href="#normalhist" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#normalhist"><span class="std std-numref">Fig. 1</span></a> lacks any vertical scale. This is inessential as long as we’re only concerned with the <em>shape</em> of the data.</p>
+<p><a class="reference internal" href="#normalhist"><span class="std std-numref">Fig. 2</span></a> lacks any vertical scale. This is inessential as long as we’re only concerned with the <em>shape</em> of the data.</p>
 <p>A histogram is made of blocks (or bars). Each block has a predetermined <strong>class interval</strong> and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the <em>area</em> of the block is proportional to the number of data points in the class interval.</p>
 <p><a class="reference internal" href="#hist1"><span class="std std-numref">Table 3</span></a> summarizes the data set 0, 0, 1, 1, 2, 6, 10, 10, 10, 10.</p>
 <table class="table" id="hist1">
@@ -448,42 +449,46 @@ document.write(`
 </tbody>
 </table>
 <p>This can be translated into any number of slightly different histograms, depending on how the class intervals are chosen. Let’s start with intervals of one-unit width, centered at every whole number.</p>
+<p>Histograms reveal the shape of the distribution, and sometimes interesting irregularities.</p>
 </section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
 <p>TKTK</p>
+<section id="controlling-for-a-variable">
+<h3>Controlling for a Variable<a class="headerlink" href="#controlling-for-a-variable" title="Permalink to this heading">#</a></h3>
+</section>
 </section>
 <section id="extension-data-visualization-and-exploratory-data-analysis">
 <h2>Extension: Data Visualization and Exploratory Data Analysis<a class="headerlink" href="#extension-data-visualization-and-exploratory-data-analysis" title="Permalink to this heading">#</a></h2>
 <p>The histogram is an important piece of <strong>exploratory data analysis</strong> (EDA). Notably, <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> doesn’t cover this topic and we won’t attempt to cover it other than this brief mention.</p>
-<p>EDA refers to open-ended exploration of data, usually emphasizes visualization and simple descriptive analysis. John Tukey was a statistician who developed the box plot and other methods for exploratory data analysis. <span id="id3">[<a class="reference internal" href="bibliography.html#id34" title="Andrew Gelman and Aki Vehtari. What are the most important statistical ideas of the past 50 years? Journal of the American Statistical Association, 116(536):2087–2097, 2021.">GV21</a>]</span> names EDA as one of the most important statistical ideas of the past 50 years (emphasis mine):</p>
+<p>EDA refers to open-ended exploration of data, usually emphasizes visualization and simple descriptive analysis. John Tukey was a statistician who developed the box plot and other methods for exploratory data analysis. <span id="id3">[<a class="reference internal" href="bibliography.html#id35" title="Andrew Gelman and Aki Vehtari. What are the most important statistical ideas of the past 50 years? Journal of the American Statistical Association, 116(536):2087–2097, 2021.">GV21</a>]</span> names EDA as one of the most important statistical ideas of the past 50 years (emphasis mine):</p>
 <blockquote>
 <div><p>Following Tukey (1962), the proponents of exploratory data analysis have emphasized the limitations of asymptotic theory and the corresponding benefits of <strong>open-ended exploration and communication</strong> (Cleveland 1985) along with a general view of data science as going beyond statistical theory (Chambers 1993; Donoho 2017). This fits into a view of statistical modeling that is focused more on discovery than on the testing of fixed hypotheses, and as such has been influential not just in the development of specific graphical methods but also in moving the field of statistics away from theorem-proving and toward a more open and, we would say, healthier perspective on the role of learning from data in science. An example in medical statistics is the much-cited article by Bland and Altman (1986) that recommended graphical methods for data comparison in place of correlations and regressions.</p>
 </div></blockquote>
 <p>If you are the kind of person who likes data and graphs more than the mathematical aspects of statistics, you should find this exciting. Beyond the exploratory analysis, there is also a lot of work on effective communication with graphs and tables. Communication is often more <em>explanatory</em> than exploratory. It depends on the needs of your audience.</p>
-<p>Oversimplifying, I would distill works like <span id="id4">[<a class="reference internal" href="bibliography.html#id50" title="Cole Nussbaumer Knaflic. Storytelling with data: A data visualization guide for business professionals. John Wiley &amp; Sons, 2015.">Kna15</a>]</span> and <span id="id5">[<a class="reference internal" href="bibliography.html#id49" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span> into two points.</p>
+<p>Oversimplifying, I would distill works like <span id="id4">[<a class="reference internal" href="bibliography.html#id51" title="Cole Nussbaumer Knaflic. Storytelling with data: A data visualization guide for business professionals. John Wiley &amp; Sons, 2015.">Kna15</a>]</span> and <span id="id5">[<a class="reference internal" href="bibliography.html#id50" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span> into two points.</p>
 <ol class="arabic simple">
 <li><p>Avoid clutter.</p></li>
 <li><p>Use pre-attentive processing.</p></li>
 </ol>
-<p>These are similar ideas, with negative and positive framing. Like in your prose, remove anything distracting. And then, insofar as you are explaining something, actively draw your reader’s attention to the important things. For example, use color thoughtfully. Gray out lines that don’t need individual attention in a line chart. The first figure below does this well and the next figure fails. Figure <a class="reference internal" href="#fig-schwabgray"><span class="std std-numref">Fig. 2</span></a> does this well.</p>
+<p>These are similar ideas, with negative and positive framing. Like in your prose, remove anything distracting. And then, insofar as you are explaining something, actively draw your reader’s attention to the important things. For example, use color thoughtfully. Gray out lines that don’t need individual attention in a line chart. The first figure below does this well and the next figure fails. Figure <a class="reference internal" href="#fig-schwabgray"><span class="std std-numref">Fig. 3</span></a> does this well.</p>
 <figure class="align-default" id="fig-schwabgray">
 <a class="reference internal image-reference" href="_images/schwabishgray.png"><img alt="_images/schwabishgray.png" src="_images/schwabishgray.png" style="width: 410px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">A good example of pre-attentive processing used to highlight a national trend and the trends for states of note. From <span id="id6">[<a class="reference internal" href="bibliography.html#id49" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>, page 151.</span><a class="headerlink" href="#fig-schwabgray" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">A good example of pre-attentive processing used to highlight a national trend and the trends for states of note. From <span id="id6">[<a class="reference internal" href="bibliography.html#id50" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>, page 151.</span><a class="headerlink" href="#fig-schwabgray" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-liaiskills">
 <a class="reference internal image-reference" href="_images/LI_AI_skills.jpeg"><img alt="_images/LI_AI_skills.jpeg" src="_images/LI_AI_skills.jpeg" style="width: 410px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">A bad example from my former colleagues at LinkedIn, showing a lot of clutter and sparking no joy (<a class="reference external" href="https://www.linkedin.com/posts/linkedin_people-worldwide-are-adding-ai-skills-to-activity-7122236926580948992-AqxP?utm_source=share&amp;utm_medium=member_desktop">source</a>).</span><a class="headerlink" href="#fig-liaiskills" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">A bad example from my former colleagues at LinkedIn, showing a lot of clutter and sparking no joy (<a class="reference external" href="https://www.linkedin.com/posts/linkedin_people-worldwide-are-adding-ai-skills-to-activity-7122236926580948992-AqxP?utm_source=share&amp;utm_medium=member_desktop">source</a>).</span><a class="headerlink" href="#fig-liaiskills" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In a scatter plot with many overlapping points, reduce the opacity of points to make it more clear where the majority of the data lies.</p>
 <figure class="align-default" id="fig-sheetsopacity">
 <a class="reference internal image-reference" href="_images/sheetsopacity.png"><img alt="_images/sheetsopacity.png" src="_images/sheetsopacity.png" style="width: 98%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">In <a class="reference external" href="https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing">Google Sheets</a>, use the chart editor to change the opacity of each point in a scatter plot.</span><a class="headerlink" href="#fig-sheetsopacity" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">In <a class="reference external" href="https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing">Google Sheets</a>, use the chart editor to change the opacity of each point in a scatter plot.</span><a class="headerlink" href="#fig-sheetsopacity" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -520,12 +525,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="observational.html"
+       href="natural.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Observational Studies</p>
+        <p class="prev-next-title">Natural Experiments</p>
       </div>
     </a>
     <a class="right-next"
@@ -553,7 +558,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-a-distribution">Summarizing a Distribution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
 </ul>
   </nav></div>

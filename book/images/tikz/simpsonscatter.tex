@@ -1,0 +1,39 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows, positioning, decorations.pathreplacing}
+
+\usepackage{amsfonts}
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=0, xmax=11,
+    ymin=0, ymax=11,
+    xlabel=dosage,
+    ylabel=health outcome,
+    axis lines=middle,
+    minor tick num=0,
+    enlargelimits={abs=0.5},
+    axis line style={latex-latex},
+    ticklabel style={font=\tiny,fill=white},
+    xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+    ylabel style={at={(ticklabel* cs:1)},anchor=south west}
+]
+
+
+% Plot points with X marker
+\addplot[only marks, mark=x, mark size=3.5pt, line width = 2, blue] coordinates {
+    (1,9) (2,9) (3,9)
+};
+
+% Plot points with O marker
+\addplot[only marks, mark=o, mark size=3.2pt, line width = 2, red] coordinates {
+    (8,2) (9,2) (10,2)
+};
+
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

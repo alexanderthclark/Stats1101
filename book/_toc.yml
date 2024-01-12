@@ -10,12 +10,13 @@ parts:
     - file: gettingstarted
     - file: experiments
     - file: observational
+    - file: natural
     - file: thehistogram
     - file: bibliography
 
-- caption: Solutions
-  chapters:
-    - file: solutions
+#- caption: Solutions
+#  chapters:
+#    - file: solutions
 
 - caption: Python (optional)
   chapters:
@@ -24,6 +25,7 @@ parts:
 - caption: Google Sheets (optional)
   chapters:
     - file: gsheets
+    - file: ghistogram
     - file: gregression
 
 - caption: Other

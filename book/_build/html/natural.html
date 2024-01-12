@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to Intro Stats &#8212; Intro Stats</title>
+    <title>Natural Experiments &#8212; Intro Stats</title>
   
   
   
@@ -64,10 +64,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'natural';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="gettingstarted.html" />
+    <link rel="next" title="The Histogram" href="thehistogram.html" />
+    <link rel="prev" title="Observational Studies" href="observational.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -143,7 +144,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -163,20 +164,20 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to Intro Stats
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
@@ -264,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fnatural.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +295,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/natural.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +366,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -376,11 +379,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to Intro Stats</h1>
+    <h1>Natural Experiments</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -390,59 +401,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-intro-stats">
-<h1>Welcome to Intro Stats<a class="headerlink" href="#welcome-to-intro-stats" title="Permalink to this heading">#</a></h1>
-<p><img alt="Intro Stats" src="_images/stats-wide.png" /></p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>These notes are not entirely self-contained. They should be read in companion with the primary text, <span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, and other readings.</p>
-</div>
-<p>These notes are based primarily on the textbook, <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, following the organization of content and the notation. The textbook and other readings are the real authorities on the material, but these notes can help direct you through what is important for the course. The course largely follows the textbook, but a few chapters are skipped and I add these topics.</p>
-<ol class="arabic simple">
-<li><p>Natural experiments</p></li>
-<li><p>A brief mention of exploratory data analysis</p></li>
-<li><p>Bayes’ Theorem and probability trees</p></li>
-<li><p>Power and false discovery rate</p></li>
-<li><p>Multiple linear regression (if time allows)</p></li>
-</ol>
-<p>Sections marked “Extension” go beyond the book’s treatment of a subject. These sections are meant to help test your comfort with the ideas, either developing a deeper understanding (e.g., Section TKTK) or broadening the context (e.g., Section TKTK).</p>
-<p>The provided exercises supplement the exercises in <span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. Use the textbook exercises to drill the concepts before attempting the exercises here.</p>
-<hr class="docutils" />
-<p>We’ll argue that statistics is <em>not</em> just math, but the imperative from Halmos still applies.</p>
-<p><img alt="How Math Works" src="_images/HowMath.png" /></p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experiments.html#types-of-questions">Types of Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experiments.html#id3">Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="natural-experiments">
+<span id="natural-exp"></span><h1>Natural Experiments<a class="headerlink" href="#natural-experiments" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id9" title="Paul Rosenbaum. Observation and experiment: An introduction to causal inference. Harvard University Press, 2017. URL: https://clio.columbia.edu/catalog/15176619.">Ros17</a>]</span>, Chapter 6 pages 100-108</p></li>
 </ul>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="python.html">About</a></li>
-</ul>
+<p>The definition of an experiment specifies that the researcher  manipulates the assignment of treatment and control. This was useful only indirectly so that randomization could be used. A <strong>natural experiment</strong> is an observational study where the assignment is essentially random, though not done by a researcher. A compelling natural experiment is usually more reliable than an observational study that attempts to control for confounders.</p>
+<p>As the name suggests, in a natural experiment, it is nature, broadly defined, who does the randomization. Imagine this policy-relevant comparison: do students who attend a charter school have better educational outcomes than students who don’t? In the absence of randomization, it’s easy to imagine ways this comparison can be confounded. Luckily, some state laws require that charter school seats are allocated by a random lottery. The lottery mechanism wasn’t implemented in concert with researchers—it’s just an instance of nature’s bounty that allows for an unconfounded comparison of students who win the lottery with those who don’t.</p>
+<p>Less obvious examples of natural experiments might not involve actual randomization, but feature assignment of treatment and control that isn’t related to the relevant qualities of the individuals in the population being studied. Fancier names for this include “exogeneity” or “ignorable treatment assignment.” A classic example is the natural experiment analyzed by John Snow <span id="id2">[<a class="reference internal" href="bibliography.html#id10" title="John Snow. On the mode of communication of cholera. John Churchill, 1849.">Sno49</a>]</span>.</p>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="hurricanes">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7 </span></p>
+<section id="exercise-content">
+<p>The result is more or less debunked, but it’s been argued that hurricanes with typically female names are more deadly because of gender bias. The claim is that people don’t take hurricanes with female names as seriously as hurricanes with male names. Suppose we have a data set for all hurricanes that made landfall in the US for the 1900s. For each hurricane, we observe the date of landfall, its name, and the death toll. Each tropical storm is named and the names alternate between male and female over the course of a season. Can this be analyzed as a natural experiment? After some data exploration, you find that there are no male names prior to 1979. Is this a problem?</p>
+</section>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
-</ul>
-</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -475,12 +454,21 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="observational.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Observational Studies</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="gettingstarted.html"
+       href="thehistogram.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Getting Started</p>
+        <p class="prev-next-title">The Histogram</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -490,6 +478,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

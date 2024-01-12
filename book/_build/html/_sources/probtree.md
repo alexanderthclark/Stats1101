@@ -1,4 +1,4 @@
-# Probability IV
+# Probability Trees
 
 ```{admonition} Important Readings
 :class: seealso
