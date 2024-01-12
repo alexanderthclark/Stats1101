@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'python';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -446,6 +448,46 @@ document.write(`
 </div></blockquote>
 <p>This joke speaks to the importance of logic and literalism in coding. This will be frustrating if you’re the kind of person who says, “I could care less” when you mean you couldn’t care less. Python is your belligerent friend who insists on taking you literally.</p>
 <p>When executing a chunk of code, remember that is executed in order, from the one line to the next, and that any variables have to be defined before you can use them. When using a notebook like in Google Colab, be careful with running different cells out of order or forgetting to run one cell before going on to the next.</p>
+<p>Here are a few questions to ask yourself when your code doesn’t work.</p>
+<ol class="arabic simple">
+<li><p>If there’s an error, does the error message say anything useful?</p>
+<ul class="simple">
+<li><p>For example, the error message might tell you a variable is not defined. Check for typos or make sure you actually defined it and ran the appropriate code.</p></li>
+<li><p>If the error message is too complicated to understand, paste it into ChatGPT and ask for an explanation.</p></li>
+</ul>
+</li>
+<li><p>Does the error persist if I start and over and run all code from scratch?</p>
+<ul class="simple">
+<li><p>If you are re-using variable names, you might overwrite something in an unexpected way. This can cause a clash that messes up the code.</p></li>
+<li><p>A “run all” command will also ensure that you didn’t forget to run a cell in a Jupyter or Colab notebook.</p></li>
+</ul>
+</li>
+<li><p>Did I import the right packages?</p>
+<ul class="simple">
+<li><p>If you want to make a graph or work with dataframes, this will require importing a package that offers that functionality.</p></li>
+</ul>
+</li>
+<li><p>Is my code in the correct order?</p>
+<ul class="simple">
+<li><p>The order of execution matters. Make sure your code is executed in the sequence you intend, especially in Jupyter or Colab notebooks where cells can be run in any order.</p></li>
+</ul>
+</li>
+<li><p>Is there something odd about my data types?</p>
+<ul class="simple">
+<li><p>Note that <code class="docutils literal notranslate"><span class="pre">1+1</span></code> will produce <code class="docutils literal notranslate"><span class="pre">2</span></code> but <code class="docutils literal notranslate"><span class="pre">'1'</span> <span class="pre">+</span> <span class="pre">'1'</span></code> will produce <code class="docutils literal notranslate"><span class="pre">'11'</span></code>. The former treats 1 as a number but the second, by using quotes, treats it as plain text, or a string.</p></li>
+</ul>
+</li>
+<li><p>Is there anything wrong with my syntax?</p>
+<ul class="simple">
+<li><p>Recall <code class="docutils literal notranslate"><span class="pre">**</span></code> is used for exponents, so <span class="math notranslate nohighlight">\(2^4\)</span> is written as <code class="docutils literal notranslate"><span class="pre">2**4</span></code>. <code class="docutils literal notranslate"><span class="pre">2^4</span></code> does something else.</p></li>
+</ul>
+</li>
+<li><p>Could the precision of a decimal value change my results?</p>
+<ul class="simple">
+<li><p>Computers can have a hard time storing exact values. You might get 0.00000000001 instead of 0. This usually isn’t a big deal in our applications.</p></li>
+</ul>
+</li>
+</ol>
 </section>
 </section>
 
