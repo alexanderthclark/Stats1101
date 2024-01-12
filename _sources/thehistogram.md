@@ -75,7 +75,7 @@ The alleged fraud in this research was uncovered, in part, because of the use of
 A uniform distribution of miles driven is anomalous because other driving data shows a more bell-shaped distribution.
 ```
 
-Another tip-off comes when reducing the class intervals to be just one-unit wide. This is preposterously narrow if you are only interested in the general shape of a distribution, but it shows something about how people round numbers when reporting them. {numref}`baselinehist` shows rounding in the reported baseline mileage.
+Another tip-off comes when reducing the class intervals to be just one-unit wide. This is preposterously narrow if you are only interested in the general shape of a distribution, but it shows something about how people round numbers when reporting them. Equal class interval widths also means that heights and areas represent the same things, both percentages and crowding. {numref}`baselinehist` shows rounding in the reported baseline mileage.
 
 ```{figure} images/colada98_baseline_hist.svg
 :width: 80%
@@ -105,7 +105,11 @@ This suggests something fishy. Maybe it is the insurance customers who report th
 
 ## Variables 
 
-TKTK
+```{figure} images/tikz/typesofvariables.svg
+:width: 50%
+:name: typestree
+
+```
 
 ### Controlling for a Variable
 
@@ -119,12 +123,14 @@ EDA refers to open-ended exploration of data, usually emphasizes visualization a
 
 If you are the kind of person who likes data and graphs more than the mathematical aspects of statistics, you should find this exciting. Beyond the exploratory analysis, there is also a lot of work on effective communication with graphs and tables. Communication is often more *explanatory* than exploratory. It depends on the needs of your audience.
 
-Oversimplifying, I would distill works like {cite}`knaflic2015storytelling` and {cite}`schwabish2021better` into two points.
+Data visualization principles are a mix of objective and subjective rules. The **area principle** is one of the more objective rules, stating that "each data value should be represented by the same amount of area" ({cite}`destats`). This is why it was the *areas* that represented percentages in a histogram and not necessarily the height. 
+
+Oversimplifying, I would distill the more general, subjective rules from into two points ({cite}`knaflic2015storytelling` and {cite}`schwabish2021better`).
 
 1. Avoid clutter.
 2. Use pre-attentive processing.
 
-These are similar ideas, with negative and positive framing. Like in your prose, remove anything distracting. And then, insofar as you are explaining something, actively draw your reader's attention to the important things. For example, use color thoughtfully. Gray out lines that don't need individual attention in a line chart. The first figure below does this well and the next figure fails. Figure {numref}`fig:schwabgray` does this well.
+These are similar ideas, with negative and positive framing. Like in your prose, remove anything distracting. And then, insofar as you are explaining something, actively draw your reader's attention to the important things. For example, use color thoughtfully. Gray out lines that don't need individual attention in a line chart. The first figure below does this well and the next figure fails. {numref}`fig:schwabgray` does this well and {numref}`fig:liaiskills` fails.
 
 
 ```{figure} images/schwabishgray.png
@@ -149,3 +155,32 @@ In a scatter plot with many overlapping points, reduce the opacity of points to 
 
 In [Google Sheets](https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing), use the chart editor to change the opacity of each point in a scatter plot.
 ```
+
+
+## Exercises
+
+```{exercise-start}
+:label: spotskew
+```
+
+Most artists on Spotify have uploaded fewer than 10 songs, but a small number of artists are very productive with much larger catalogs. Sketch a histogram with exactly three blocks that is consistent with this. 
+
+
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: histmult
+```
+
+Provide two different data sets that could produce the following histogram with a single block.
+
+```{figure} images/oneblockhist.svg
+:width: 70%
+:name: oneblockhist
+
+```
+
+```{exercise-end}
+```
+
