@@ -398,6 +398,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -486,7 +487,7 @@ document.write(`
 <p><span class="caption-number">Fig. 3 </span><span class="caption-text">A uniform distribution of miles driven is anomalous because other driving data shows a more bell-shaped distribution.</span><a class="headerlink" href="#impliedhist" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Another tip-off comes when reducing the class intervals to be just one-unit wide. This is preposterously narrow if you are only interested in the general shape of a distribution, but it shows something about how people round numbers when reporting them. <a class="reference internal" href="#baselinehist"><span class="std std-numref">Fig. 4</span></a> shows rounding in the reported baseline mileage.</p>
+<p>Another tip-off comes when reducing the class intervals to be just one-unit wide. This is preposterously narrow if you are only interested in the general shape of a distribution, but it shows something about how people round numbers when reporting them. Equal class interval widths also means that heights and areas represent the same things, both percentages and crowding. <a class="reference internal" href="#baselinehist"><span class="std std-numref">Fig. 4</span></a> shows rounding in the reported baseline mileage.</p>
 <figure class="align-default" id="baselinehist">
 <a class="reference internal image-reference" href="_images/colada98_baseline_hist.svg"><img alt="_images/colada98_baseline_hist.svg" src="_images/colada98_baseline_hist.svg" width="80%" /></a>
 <figcaption>
@@ -510,7 +511,9 @@ document.write(`
 </section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
-<p>TKTK</p>
+<figure class="align-default" id="typestree">
+<a class="reference internal image-reference" href="_images/typesofvariables.svg"><img alt="_images/typesofvariables.svg" src="_images/typesofvariables.svg" width="50%" /></a>
+</figure>
 <section id="controlling-for-a-variable">
 <h3>Controlling for a Variable<a class="headerlink" href="#controlling-for-a-variable" title="Permalink to this heading">#</a></h3>
 </section>
@@ -523,16 +526,17 @@ document.write(`
 <div><p>Following Tukey (1962), the proponents of exploratory data analysis have emphasized the limitations of asymptotic theory and the corresponding benefits of <strong>open-ended exploration and communication</strong> (Cleveland 1985) along with a general view of data science as going beyond statistical theory (Chambers 1993; Donoho 2017). This fits into a view of statistical modeling that is focused more on discovery than on the testing of fixed hypotheses, and as such has been influential not just in the development of specific graphical methods but also in moving the field of statistics away from theorem-proving and toward a more open and, we would say, healthier perspective on the role of learning from data in science. An example in medical statistics is the much-cited article by Bland and Altman (1986) that recommended graphical methods for data comparison in place of correlations and regressions.</p>
 </div></blockquote>
 <p>If you are the kind of person who likes data and graphs more than the mathematical aspects of statistics, you should find this exciting. Beyond the exploratory analysis, there is also a lot of work on effective communication with graphs and tables. Communication is often more <em>explanatory</em> than exploratory. It depends on the needs of your audience.</p>
-<p>Oversimplifying, I would distill works like <span id="id6">[<a class="reference internal" href="bibliography.html#id53" title="Cole Nussbaumer Knaflic. Storytelling with data: A data visualization guide for business professionals. John Wiley &amp; Sons, 2015.">Kna15</a>]</span> and <span id="id7">[<a class="reference internal" href="bibliography.html#id52" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span> into two points.</p>
+<p>Data visualization principles are a mix of objective and subjective rules. The <strong>area principle</strong> is one of the more objective rules, stating that “each data value should be represented by the same amount of area” (<span id="id6">[<a class="reference internal" href="bibliography.html#id6" title="Richard D De Veaux, Paul F Velleman, and Bock. Stats: Data and Models, 5th Edition. Pearson/Addison Wesley Boston, 2019.">DVVB19</a>]</span>). This is why it was the <em>areas</em> that represented percentages in a histogram and not necessarily the height.</p>
+<p>Oversimplifying, I would distill the more general, subjective rules from into two points (<span id="id7">[<a class="reference internal" href="bibliography.html#id53" title="Cole Nussbaumer Knaflic. Storytelling with data: A data visualization guide for business professionals. John Wiley &amp; Sons, 2015.">Kna15</a>]</span> and <span id="id8">[<a class="reference internal" href="bibliography.html#id52" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>).</p>
 <ol class="arabic simple">
 <li><p>Avoid clutter.</p></li>
 <li><p>Use pre-attentive processing.</p></li>
 </ol>
-<p>These are similar ideas, with negative and positive framing. Like in your prose, remove anything distracting. And then, insofar as you are explaining something, actively draw your reader’s attention to the important things. For example, use color thoughtfully. Gray out lines that don’t need individual attention in a line chart. The first figure below does this well and the next figure fails. Figure <a class="reference internal" href="#fig-schwabgray"><span class="std std-numref">Fig. 6</span></a> does this well.</p>
+<p>These are similar ideas, with negative and positive framing. Like in your prose, remove anything distracting. And then, insofar as you are explaining something, actively draw your reader’s attention to the important things. For example, use color thoughtfully. Gray out lines that don’t need individual attention in a line chart. The first figure below does this well and the next figure fails. <a class="reference internal" href="#fig-schwabgray"><span class="std std-numref">Fig. 6</span></a> does this well and <a class="reference internal" href="#fig-liaiskills"><span class="std std-numref">Fig. 7</span></a> fails.</p>
 <figure class="align-default" id="fig-schwabgray">
 <a class="reference internal image-reference" href="_images/schwabishgray.png"><img alt="_images/schwabishgray.png" src="_images/schwabishgray.png" style="width: 410px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">A good example of pre-attentive processing used to highlight a national trend and the trends for states of note. From <span id="id8">[<a class="reference internal" href="bibliography.html#id52" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>, page 151.</span><a class="headerlink" href="#fig-schwabgray" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">A good example of pre-attentive processing used to highlight a national trend and the trends for states of note. From <span id="id9">[<a class="reference internal" href="bibliography.html#id52" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>, page 151.</span><a class="headerlink" href="#fig-schwabgray" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-liaiskills">
@@ -548,6 +552,26 @@ document.write(`
 <p><span class="caption-number">Fig. 8 </span><span class="caption-text">In <a class="reference external" href="https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing">Google Sheets</a>, use the chart editor to change the opacity of each point in a scatter plot.</span><a class="headerlink" href="#fig-sheetsopacity" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="spotskew">
+
+<p class="admonition-title"><span class="caption-number">Exercise 8 </span></p>
+<section id="exercise-content">
+<p>Most artists on Spotify have uploaded fewer than 10 songs, but a small number of artists are very productive with much larger catalogs. Sketch a histogram with exactly three blocks that is consistent with this.</p>
+</section>
+</div>
+<div class="exercise admonition" id="histmult">
+
+<p class="admonition-title"><span class="caption-number">Exercise 9 </span></p>
+<section id="exercise-content">
+<p>Provide two different data sets that could produce the following histogram with a single block.</p>
+<figure class="align-default" id="oneblockhist">
+<a class="reference internal image-reference" href="_images/oneblockhist.svg"><img alt="_images/oneblockhist.svg" src="_images/oneblockhist.svg" width="70%" /></a>
+</figure>
+</section>
+</div>
 </section>
 </section>
 
@@ -623,6 +647,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 

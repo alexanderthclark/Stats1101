@@ -49,7 +49,14 @@ Here are a few questions to ask yourself when your code doesn't work.
 	* If you are re-using variable names, you might overwrite something in an unexpected way. This can cause a clash that messes up the code.
 	* A "run all" command will also ensure that you didn't forget to run a cell in a Jupyter or Colab notebook.
 3. Did I import the right packages? 
-	* If you want to make a graph or work with dataframes, this will require importing a package that offers that functionality. 
-
+	* If you want to make a graph or work with dataframes, this will require importing a package that offers that functionality.
+4. Is my code in the correct order?
+ 	* The order of execution matters. Make sure your code is executed in the sequence you intend, especially in Jupyter or Colab notebooks where cells can be run in any order.
+ 5. Is there something odd about my data types? 
+ 	* Note that `1+1` will produce `2` but `'1' + '1'` will produce `'11'`. The former treats 1 as a number but the second, by using quotes, treats it as plain text, or a string. 
+ 6. Is there anything wrong with my syntax? 
+ 	* Recall `**` is used for exponents, so $2^4$ is written as `2**4`. `2^4` does something else.
+ 7. Could the precision of a decimal value change my results? 
+ 	* Computers can have a hard time storing exact values. You might get 0.00000000001 instead of 0. This usually isn't a big deal in our applications. 
 
 

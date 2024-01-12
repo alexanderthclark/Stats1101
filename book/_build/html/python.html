@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'python';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -455,6 +457,26 @@ document.write(`
 <li><p>Did I import the right packages?</p>
 <ul class="simple">
 <li><p>If you want to make a graph or work with dataframes, this will require importing a package that offers that functionality.</p></li>
+</ul>
+</li>
+<li><p>Is my code in the correct order?</p>
+<ul class="simple">
+<li><p>The order of execution matters. Make sure your code is executed in the sequence you intend, especially in Jupyter or Colab notebooks where cells can be run in any order.</p></li>
+</ul>
+</li>
+<li><p>Is there something odd about my data types?</p>
+<ul class="simple">
+<li><p>Note that <code class="docutils literal notranslate"><span class="pre">1+1</span></code> will produce <code class="docutils literal notranslate"><span class="pre">2</span></code> but <code class="docutils literal notranslate"><span class="pre">'1'</span> <span class="pre">+</span> <span class="pre">'1'</span></code> will produce <code class="docutils literal notranslate"><span class="pre">'11'</span></code>. The former treats 1 as a number but the second, by using quotes, treats it as plain text, or a string.</p></li>
+</ul>
+</li>
+<li><p>Is there anything wrong with my syntax?</p>
+<ul class="simple">
+<li><p>Recall <code class="docutils literal notranslate"><span class="pre">**</span></code> is used for exponents, so <span class="math notranslate nohighlight">\(2^4\)</span> is written as <code class="docutils literal notranslate"><span class="pre">2**4</span></code>. <code class="docutils literal notranslate"><span class="pre">2^4</span></code> does something else.</p></li>
+</ul>
+</li>
+<li><p>Could the precision of a decimal value change my results?</p>
+<ul class="simple">
+<li><p>Computers can have a hard time storing exact values. You might get 0.00000000001 instead of 0. This usually isn’t a big deal in our applications.</p></li>
 </ul>
 </li>
 </ol>
