@@ -56,3 +56,43 @@ Finally, don't forget that we'll mostly be looking at *average* effects. {cite}`
 > Imagine two schools, St Joseph's and St. Mary's, both of which were included in [a randomized controlled experiment] of a classroom innovation. The innovation is successful on average, but should the schools adopt it? Should St Mary's be influenced by a previous attempt in St Joseph's that was judged a failure? Many would dismiss this experience as anecdotal and ask how St Joseph's could have known that it was a failure without benefit of ‘rigorous’ evidence. Yet if St Mary's is like St Joseph's, with a similar mix of pupils, a similar curriculum, and similar academic standing, might not St Joseph's experience be more relevant to what might happen at St Mary's than is the positive average from the [randomized controlled experiment]? And might it not be a good idea for the teachers and governors of St Mary's to go to St Joseph's and find out what happened and why? They may be able to observe the mechanism of the failure, if such it was, and figure out whether the same problems would apply for them, or whether they might be able to adapt the innovation to make it work for them, perhaps even more successfully than the positive average in the [experiment].
 
 The next sentence of {cite}`deaton2018understanding` starts, "Once again, these questions are unlikely to be easily answered in practice." We have to be comfortable with some ambiguity and tolerate slow progress, as evidence builds and effects are replicated.
+
+## Exercises
+
+```{exercise-start}
+:label: exp1
+```
+
+In an experiment with a large number of participants, the average income of the treatment group is \$100,000 and the average income of the control group is \$20,000. Describe what kind of problem this might create if we are studying the effectiveness of an electric toothbrush (treatment) vs a non-electric toothbrush (control). 
+
+```{exercise-end}
+```
+
+
+```{exercise-start}
+:label: exp2
+```
+
+Which of these is best described as a randomized, controlled experiment? Explain why the other choices fail to describe experiments.
+
+* A charter school selects students by lottery due to state law.
+* The Internal Revenue Service randomly audits some taxpayers and not others.
+* A researcher randomly assigns participants to a high-fat or low-fat diet. 
+
+```{exercise-end}
+```
+
+
+
+```{exercise-start}
+:label: rand
+```
+
+The RAND Health Insurance Experiment was used to study the utilization of health care services among people randomly assigned to different health insurance plans. One hypothesis might be that those with more comprehensive coverage overuse medical services because they can do so at no cost. As a simplification, suppose there is one insurance plan covering 100\% of costs and one plan with partial coverage. This is a complicated experiment because of the potential for *attrition*---participants can drop out and be removed from the study. Despite randomization in original assignments, at the end of the study, there was a substantial difference in average number of doctors' visits in the year before the experiment across the two groups. 
+
+Why is it problematic if one group used health care services more intensively than the other prior to the study? 
+
+Speculate on why a participant might drop out and how this might confound the comparison (there is no single right answer). In your answer, provide a reason for why this would affect the 100\% coverage group more or less than the partial coverage group.
+
+```{exercise-end}
+```

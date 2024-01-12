@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>About &#8212; Intro Stats</title>
+    <title>Natural Experiments &#8212; Intro Stats</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'python';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'natural';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview" href="gsheets.html" />
-    <link rel="prev" title="Bibliography" href="bibliography.html" />
+    <link rel="next" title="The Histogram" href="thehistogram.html" />
+    <link rel="prev" title="Observational Studies" href="observational.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,19 +179,19 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">About</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="python.html">About</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -273,7 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fpython.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fnatural.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -303,7 +303,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/python.md" target="_blank"
+      <li><a href="_sources/natural.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -387,7 +387,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>About</h1>
+    <h1>Natural Experiments</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -397,8 +397,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thinking-like-a-programmer">Thinking like a Programmer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -410,42 +409,26 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="about">
-<h1>About<a class="headerlink" href="#about" title="Permalink to this heading">#</a></h1>
-<section id="what-is-python">
-<h2>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this heading">#</a></h2>
-<p>Python is a general-purpose programming language. Our purposes are statistical calculations and the occasional graph. We will run code in <a class="reference external" href="https://colab.research.google.com/">Google Colaboratory</a>. This roughly mirrors running Jupyter notebooks on your own machine, but we skip the setup by running everything in the browser. If you master intro stats and become proficient in Python and SQL, there is a six-figure job waiting for you at any number of tech companies.</p>
-<p>Python is popular because the code is readable. More specifically, “Pythonic” code is readable. Pythonic code not only gets you from point A to B, but it uses Python as it was intended and conforms to the standards of beauty described in <em>The Zen of Python</em> and <a class="reference external" href="https://peps.python.org/pep-0008/">elsewhere</a>.</p>
-<p><strong>The Zen of Python, by Tim Peters</strong></p>
-<p><em>Beautiful is better than ugly.</em><br />
-<em>Explicit is better than implicit.</em><br />
-<em>Simple is better than complex.</em><br />
-<em>Complex is better than complicated.</em><br />
-<em>Flat is better than nested.</em><br />
-<em>Sparse is better than dense.</em><br />
-<em>Readability counts.</em><br />
-<em>Special cases aren’t special enough to break the rules.</em><br />
-<em>Although practicality beats purity.</em><br />
-<em>Errors should never pass silently.</em><br />
-<em>Unless explicitly silenced.</em><br />
-<em>In the face of ambiguity, refuse the temptation to guess.</em><br />
-<em>There should be one—and preferably only one—obvious way to do it.</em><br />
-<em>Although that way may not be obvious at first unless you’re Dutch.</em><br />
-<em>Now is better than never.</em><br />
-<em>Although never is often better than <em>right</em> now.</em><br />
-<em>If the implementation is hard to explain, it’s a bad idea.</em><br />
-<em>If the implementation is easy to explain, it may be a good idea.</em><br />
-<em>Namespaces are one honking great idea—let’s do more of those!</em></p>
-<p>Python can seem endlessly complex. <a class="reference external" href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348">Fluent Python</a> is 1,012 pages. Luckily, we don’t need to aspire to fluency.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="natural-experiments">
+<span id="natural-exp"></span><h1>Natural Experiments<a class="headerlink" href="#natural-experiments" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id9" title="Paul Rosenbaum. Observation and experiment: An introduction to causal inference. Harvard University Press, 2017. URL: https://clio.columbia.edu/catalog/15176619.">Ros17</a>]</span>, Chapter 6 pages 100-108</p></li>
+</ul>
+</div>
+<p>The definition of an experiment specifies that the researcher  manipulates the assignment of treatment and control. This was useful only indirectly so that randomization could be used. A <strong>natural experiment</strong> is an observational study where the assignment is essentially random, though not done by a researcher. A compelling natural experiment is usually more reliable than an observational study that attempts to control for confounders.</p>
+<p>As the name suggests, in a natural experiment, it is nature, broadly defined, who does the randomization. Imagine this policy-relevant comparison: do students who attend a charter school have better educational outcomes than students who don’t? In the absence of randomization, it’s easy to imagine ways this comparison can be confounded. Luckily, some state laws require that charter school seats are allocated by a random lottery. The lottery mechanism wasn’t implemented in concert with researchers—it’s just an instance of nature’s bounty that allows for an unconfounded comparison of students who win the lottery with those who don’t.</p>
+<p>Less obvious examples of natural experiments might not involve actual randomization, but feature assignment of treatment and control that isn’t related to the relevant qualities of the individuals in the population being studied. Fancier names for this include “exogeneity” or “ignorable treatment assignment.” A classic example is the natural experiment analyzed by John Snow <span id="id2">[<a class="reference internal" href="bibliography.html#id10" title="John Snow. On the mode of communication of cholera. John Churchill, 1849.">Sno49</a>]</span>.</p>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="hurricanes">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7 </span></p>
+<section id="exercise-content">
+<p>The result is more or less debunked, but it’s been argued that hurricanes with typically female names are more deadly because of gender bias. The claim is that people don’t take hurricanes with female names as seriously as hurricanes with male names. Suppose we have a data set for all hurricanes that made landfall in the US for the 1900s. For each hurricane, we observe the date of landfall, its name, and the death toll. Each tropical storm is named and the names alternate between male and female over the course of a season. Can this be analyzed as a natural experiment? After some data exploration, you find that there are no male names prior to 1979. Is this a problem?</p>
 </section>
-<section id="thinking-like-a-programmer">
-<h2>Thinking like a Programmer<a class="headerlink" href="#thinking-like-a-programmer" title="Permalink to this heading">#</a></h2>
-<p>Here’s a joke.</p>
-<blockquote>
-<div><p>A programmer is given orders, “Go to the store and buy a loaf of bread. If they have eggs, buy a dozen.” The programmer returns with 12 loaves of bread.</p>
-</div></blockquote>
-<p>This joke speaks to the importance of logic and literalism in coding. This will be frustrating if you’re the kind of person who says, “I could care less” when you mean you couldn’t care less. Python is your belligerent friend who insists on taking you literally.</p>
-<p>When executing a chunk of code, remember that is executed in order, from the one line to the next, and that any variables have to be defined before you can use them. When using a notebook like in Google Colab, be careful with running different cells out of order or forgetting to run one cell before going on to the next.</p>
+</div>
 </section>
 </section>
 
@@ -480,20 +463,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="bibliography.html"
+       href="observational.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Observational Studies</p>
       </div>
     </a>
     <a class="right-next"
-       href="gsheets.html"
+       href="thehistogram.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Overview</p>
+        <p class="prev-next-title">The Histogram</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -513,8 +496,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thinking-like-a-programmer">Thinking like a Programmer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 
