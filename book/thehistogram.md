@@ -42,6 +42,67 @@ This can be translated into any number of slightly different histograms, dependi
 
 Histograms reveal the shape of the distribution, and sometimes interesting irregularities. 
 
+### Example: Sleuthing out Fraud
+
+{cite}`shu2012signing`, titled "Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end," was retracted in 2021 because of evidence of fraud, uncovered in {cite}`simonsohn_2021`. The retracted research was based on an experiment where customers of an insurance company were asked to report their odemeter readings. Customers signed a statement asserting their honesty, and the statement was either at the top or at the bottom of the form. The presented finding was that it's better to have the statement signed *before* the customer provides the information instead of after. 
+
+Data was collected like in {numref}`drivingdata`. The mileage driven is the difference between the baseline and updated mileage. 
+
+```{list-table} Driving Data
+:header-rows: 1
+:name: drivingdata
+
+   * - Condition
+     - ID
+     - Baseline Mileage
+     - Updated Mileage
+   * - Sign Top
+     - 1
+     - 896
+     - 39198
+   * - Sign Bottom
+     - 2
+     - 21396
+     - 63511
+```
+
+The alleged fraud in this research was uncovered, in part, because of the use of histograms. The first red flag was the **uniform** distribution in the implied miles driven. It's hard to explain why there appears to be a ceiling so that no customers drove more than 50,000 miles or why driving close to zero miles is not more rare. In general, you would expect something closer to a bell curve. 
+
+```{figure} images/colada98_implied_hist.svg
+:width: 80%
+:name: impliedhist
+
+A uniform distribution of miles driven is anomalous because other driving data shows a more bell-shaped distribution.
+```
+
+Another tip-off comes when reducing the class intervals to be just one-unit wide. This is preposterously narrow if you are only interested in the general shape of a distribution, but it shows something about how people round numbers when reporting them. {numref}`baselinehist` shows rounding in the reported baseline mileage.
+
+```{figure} images/colada98_baseline_hist.svg
+:width: 80%
+:name: baselinehist
+
+Spikes in the histogram show that people are more likely to report round numbers at the nearest 1,000. 
+```
+
+Checking the reported updated mileage shows no such rounding. 
+
+
+```{figure} images/colada98_update_hist.svg
+:width: 80%
+:name: updateehist
+
+Spikes in the histogram are not predominant at the nearest 1,000. 
+```
+
+This reveals something interesting. 
+
+1. There is rounding in the baseline mileage.
+2. There is no rounding in the updated mileage. 
+
+This suggests something fishy. Maybe it is the insurance customers who report their own mileage in a fishy way. But why round for the baseline but not the updated? *Or* it reveals something fishy about the researchers, who might have manipulated the updated mileage data. These numbers could have been fabricated with a random number generator, hence the lack of human-like rounding. Given the retraction, most favor the latter hypothesis. 
+
+
+
 ## Variables 
 
 TKTK
