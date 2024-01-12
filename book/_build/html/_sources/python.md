@@ -39,3 +39,17 @@ Here's a joke.
 This joke speaks to the importance of logic and literalism in coding. This will be frustrating if you're the kind of person who says, "I could care less" when you mean you couldn't care less. Python is your belligerent friend who insists on taking you literally.
 
 When executing a chunk of code, remember that is executed in order, from the one line to the next, and that any variables have to be defined before you can use them. When using a notebook like in Google Colab, be careful with running different cells out of order or forgetting to run one cell before going on to the next. 
+
+Here are a few questions to ask yourself when your code doesn't work. 
+
+1. If there's an error, does the error message say anything useful?
+	* For example, the error message might tell you a variable is not defined. Check for typos or make sure you actually defined it and ran the appropriate code.
+	* If the error message is too complicated to understand, paste it into ChatGPT and ask for an explanation.
+2. Does the error persist if I start and over and run all code from scratch? 
+	* If you are re-using variable names, you might overwrite something in an unexpected way. This can cause a clash that messes up the code.
+	* A "run all" command will also ensure that you didn't forget to run a cell in a Jupyter or Colab notebook.
+3. Did I import the right packages? 
+	* If you want to make a graph or work with dataframes, this will require importing a package that offers that functionality. 
+
+
+

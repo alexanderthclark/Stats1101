@@ -84,7 +84,7 @@ Another tip-off comes when reducing the class intervals to be just one-unit wide
 Spikes in the histogram show that people are more likely to report round numbers at the nearest 1,000. 
 ```
 
-Checking the reporteed updated mileage shows no such rounding. 
+Checking the reported updated mileage shows no such rounding. 
 
 
 ```{figure} images/colada98_update_hist.svg
@@ -99,7 +99,7 @@ This reveals something interesting.
 1. There is rounding in the baseline mileage.
 2. There is no rounding in the updated mileage. 
 
-This suggests something fishy either about how people are reporting their own mileage. Why round for the baseline but not the updated? *Or* it reveals something fishy about the researchers, who might have manipulated the updated mileage data. These numbers could have been fabricated with a random number generator, hence the lack of human-like rounding. Given the retraction, most favor the latter hypothesis. 
+This suggests something fishy. Maybe it is the insurance customers who report their own mileage in a fishy way. But why round for the baseline but not the updated? *Or* it reveals something fishy about the researchers, who might have manipulated the updated mileage data. These numbers could have been fabricated with a random number generator, hence the lack of human-like rounding. Given the retraction, most favor the latter hypothesis. 
 
 
 
