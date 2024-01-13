@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Solutions &#8212; Intro Stats</title>
+    <title>StatWrap &#8212; Intro Stats</title>
   
   
   
@@ -64,7 +64,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'solutions';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'statwrap';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -279,7 +281,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fsolutions.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fstatwrap.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +311,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/solutions.md" target="_blank"
+      <li><a href="_sources/statwrap.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -393,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Solutions</h1>
+    <h1>StatWrap</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -403,7 +405,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started"><span class="xref myst">Getting Started</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-statwrap">Using StatWrap</a></li>
 </ul>
             </nav>
         </div>
@@ -415,17 +417,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="solutions">
-<h1>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h1>
-<section id="getting-started">
-<h2><a class="reference internal" href="gettingstarted.html#getting-started"><span class="std std-ref">Getting Started</span></a><a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
-<div class="solution dropdown admonition" id="solutions-solution-0">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="gettingstarted.html#spotpop"> Exercise 1</a></p>
-<section id="solution-content">
-<p>There’s no single solution. Your solution should account for …</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="statwrap">
+<h1>StatWrap<a class="headerlink" href="#statwrap" title="Permalink to this heading">#</a></h1>
+<p>StatWrap is a Python package I’ve written for this course. Find the <a class="reference external" href="https://statwrap.readthedocs.io/en/latest/index.html">documentation here</a>.</p>
+<p>I simplify other packages and use function names that match the conventions of <span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> or Google Sheets to make it easier to switch from the book to coding. Other packages use defaults that might clash with the book (e.g. SD vs <span class="math notranslate nohighlight">\(\text{SD}^{+}\)</span>). Using StatWrap prevents accidentally wading into those complications.</p>
+<p>If you pursue more advanced study of statistics or related fields, you will never use StatWrap again, but it’s a good place to start if you already find coding to be overwhelming enough.</p>
+<section id="using-statwrap">
+<h2>Using StatWrap<a class="headerlink" href="#using-statwrap" title="Permalink to this heading">#</a></h2>
+<p>StatWrap is not installed in Google Colab by default. To install and use statwrap, run this code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!pip install statwrap
+import statwrap
+%use_fpp
+%use_sheets
+</pre></div>
 </div>
+<p>Here’s what the lines above do.</p>
+<ol class="arabic simple">
+<li><p>This install statwrap. This isn’t permanent on Google Colab, so you’ll have to run this for every new session.</p></li>
+<li><p>This imports statwrap.</p></li>
+<li><p>This loads the FPP module, which includes functions likes <code class="docutils literal notranslate"><span class="pre">sd</span></code> to calculate the standard deviation of a list of numbers using the syntax <code class="docutils literal notranslate"><span class="pre">sd(1,2,3)</span></code>. You <em>don’t</em> have to write <code class="docutils literal notranslate"><span class="pre">statwrap.fpp.sd(1,2,3)</span></code> if you run this line.</p></li>
+<li><p>Like the third line, this loads the Google Sheets module. This module includes functions like <code class="docutils literal notranslate"><span class="pre">stdevp</span></code> to match the <code class="docutils literal notranslate"><span class="pre">STDEVP</span></code> function in Google Sheets and Excel.</p></li>
+</ol>
 </section>
 </section>
 
@@ -475,7 +487,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started"><span class="xref myst">Getting Started</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-statwrap">Using StatWrap</a></li>
 </ul>
   </nav></div>
 
