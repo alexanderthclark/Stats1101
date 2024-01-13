@@ -102,7 +102,6 @@ This reveals something interesting.
 This suggests something fishy. Maybe it is the insurance customers who report their own mileage in a fishy way. But why round for the baseline but not the updated? *Or* it reveals something fishy about the researchers, who might have manipulated the updated mileage data. These numbers could have been fabricated with a random number generator, hence the lack of human-like rounding. Given the retraction, most favor the latter hypothesis. 
 
 
-
 ## Variables 
 
 ```{figure} images/tikz/typesofvariables.svg

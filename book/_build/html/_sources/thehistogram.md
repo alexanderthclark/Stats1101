@@ -40,7 +40,7 @@ A histogram is made of blocks (or bars). Each block has a predetermined **class 
 
 This can be translated into any number of slightly different histograms, depending on how the class intervals are chosen. Let's start with intervals of one-unit width, centered at every whole number. 
 
-Histograms reveal the shape of the distribution, and sometimes interesting irregularities. 
+Histograms reveal the shape of the distribution, and sometimes interesting irregularities, like in {cite}`freedman2007statistics` Review Exercise 11 and in the following example.
 
 ### Example: Sleuthing out Fraud
 
@@ -100,7 +100,6 @@ This reveals something interesting.
 2. There is no rounding in the updated mileage. 
 
 This suggests something fishy. Maybe it is the insurance customers who report their own mileage in a fishy way. But why round for the baseline but not the updated? *Or* it reveals something fishy about the researchers, who might have manipulated the updated mileage data. These numbers could have been fabricated with a random number generator, hence the lack of human-like rounding. Given the retraction, most favor the latter hypothesis. 
-
 
 
 ## Variables 

@@ -1,15 +1,10 @@
+(observational_studies)=
 # Observational Studies
 
 ```{admonition} Important Readings
 :class: seealso
 - {cite}`freedman2007statistics`, Chapter 2
 ```
-
-William Cochran describes two defining characteristics for observational studies {cite}`cochran1965planning`:
-1. "The objective is to elucidate cause-and-effect relationships."
-2. "It is not feasible to use controlled experimentation."
-
-The first point means we are still making some comparison where the effect of the treatment is of interest. The second explains why observational studies are used, despite not being as reliable as a well-designed experiment. Cochran was a member of the panel that wrote the 1964 US Surgeon General's report on smoking and health, so he likely had in mind the impossibility of any lab or government forcing certain people to smoke others not to smoke. Some experiments can't be run for ethical reasons and others are prohibitively expensive. The RAND health insurance experiment (from {numref}`rand`) cost about \$400 million in 2023 dollars, meaning it's unlikely something similar will be done again.
 
 In an **observational study**, the researcher does not assign subjects to the compared groups. That means we should not expect the groups to be similar. We could still call one group treatment and one group control, but if we are comparing the health of people who choose to take vitamins to those who choose not to take vitamins, we cannot expect the difference to be attributable to the vitamin.
 
@@ -18,6 +13,12 @@ To avoid overstatement, we might say there is an observed **association** betwee
 We can try to make the treatment and control groups more similar by **controlling** for confounders. You can think of this as trying to do by hand what randomization does for free. For example, if vitamin-takers are wealthier, we can compare subsets with similar wealth. Comparisons between more homogeneous groups are more reliable.
 
 Controlling is not a panacea because you can never know if you've controlled for everything important. This isn't hyperbole, unconfoundness is not a testable thing. Income is important, but you shouldn't expect that adjustment to make an observational study as reliable as a randomized controlled experiment. As {cite}`freedman2007statistics` states, "finding the weak points is more an art than a science." It's easy to imagine vitamin-takers being rich and then richer people being healthier. However, what makes one rich person take a vitamin and one not take a vitamin? It doesn't seem right to regard that choice as essentially random. The vitamin-taker might be more interested in health, so they could be healthier already. This would make it look the vitamin is effective when it is not. Or, the vitamin-taker might be trying to improve areas where they know their health is lacking. Someone who only eats cookies might take a vitamin to round their diet. This would make it look like the vitamin is counter-productive. See also the examples in {cite}`freedman2007statistics` Chapter 2.3.
+
+William Cochran describes two characteristics for certain types of observational studies {cite}`cochran1965planning`:
+1. "The objective is to elucidate cause-and-effect relationships."
+2. "It is not feasible to use controlled experimentation."
+
+Neither of the two points above are *defining* features of observational studies, but they explain why observational studies are used, despite not being as reliable as a well-designed experiment. The first point means we are still making some comparison where the effect of the treatment is of interest. Second, Cochran was a member of the panel that wrote the 1964 US Surgeon General's report on smoking and health, so he likely had in mind the impossibility of any lab or government forcing certain people to smoke others not to smoke. Some experiments can't be run for ethical reasons and others are prohibitively expensive. The RAND health insurance experiment (from {numref}`rand`) cost about \$400 million in 2023 dollars, meaning it's unlikely something similar will be funded again.
 
 ## Simpson's Paradox
 
