@@ -12,6 +12,11 @@ parts:
     - file: observational
     - file: natural
     - file: thehistogram
+    - file: centerspread
+    - file: normal
+    - file: correlation
+    - file: regression
+    - file: probability1
     - file: bibliography
 
 #- caption: Solutions
@@ -23,6 +28,7 @@ parts:
     - file: python
     - file: pycalculator
     - file: pylibs
+    - file: statwrap0
 
 - caption: Google Sheets (optional)
   chapters:
