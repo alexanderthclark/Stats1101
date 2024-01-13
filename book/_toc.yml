@@ -21,6 +21,7 @@ parts:
 - caption: Python (optional)
   chapters:
     - file: python
+    - file: pycalculator
 
 - caption: Google Sheets (optional)
   chapters:
