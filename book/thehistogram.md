@@ -40,7 +40,7 @@ A histogram is made of blocks (or bars). Each block has a predetermined **class 
 
 This can be translated into any number of slightly different histograms, depending on how the class intervals are chosen. Let's start with intervals of one-unit width, centered at every whole number. 
 
-Histograms reveal the shape of the distribution, and sometimes interesting irregularities. 
+Histograms reveal the shape of the distribution, and sometimes interesting irregularities, like in {cite}`freedman2007statistics` Review Exercise 11 and in the following example.
 
 ### Example: Sleuthing out Fraud
 
