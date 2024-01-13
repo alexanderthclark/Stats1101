@@ -12,7 +12,7 @@ These notes are based primarily on the textbook, {cite}`freedman2007statistics`,
 1. Natural experiments
 2. A brief mention of exploratory data analysis
 3. Bayes' Theorem and probability trees
-4. Power and false discovery rate
+4. Power
 5. Multiple linear regression (if time allows)
 
 Sections marked "Extension" go beyond the book's treatment of a subject. These sections are meant to help test your comfort with the ideas, either developing a deeper understanding (e.g., Section TKTK) or broadening the context (e.g., Section TKTK).
