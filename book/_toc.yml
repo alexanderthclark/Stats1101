@@ -36,6 +36,10 @@ parts:
     - file: ghistogram
     - file: gregression
 
+- caption: R (optional)
+  chapters:
+    - file: Rbasics
+
 - caption: Other
   chapters:
     - file: other
