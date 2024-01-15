@@ -158,7 +158,6 @@ Unfortunately, this lesson was a learned only after a mistake was discovered in 
 
 The gray blocks are unusual for containing negative or very high values compared to the rest of the data. These blocks contain flag values. 
 ```
-dd
 
 The above is a cautionary tale and highlights the necessity of dealing with missing values or coaxing an answer out of the respondents. We'll discuss surveys in Chapter 19, but it's worth noting here that the structure of a variable can impact the quality of a study. Netflix switched from a 1-5 stars scale for ratings to a thumbs up/thumbs down scale. This led to a [200% increase in users rating titles](https://www.businessinsider.com/why-netflix-replaced-its-5-star-rating-system-2017-4). 
 

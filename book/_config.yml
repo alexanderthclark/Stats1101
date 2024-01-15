@@ -33,6 +33,7 @@ html:
   use_repository_button: true
   theme: sphinx_book_theme
   extra_css: ["_static/custom.css"]
+  favicon: ./_static/norm_favicon.ico
 
 
 launch_buttons:
