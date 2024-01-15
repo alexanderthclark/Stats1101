@@ -416,9 +416,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-real-data-and-real-people">Working with Real Data and Real People</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
@@ -533,45 +534,65 @@ document.write(`
 </section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
+<p>In the previous example, we were working with a specific <strong>variable</strong>, vehicle mileages. A variable is a characteristic recorded for each individual in a study. In a spreadsheet, the individuals usually correspond to rows and the variables are stored in the columns. Mileage is a <strong>quantitative</strong> variable. Something like the car color would be <strong>qualitative</strong> (also called categorical). Qualitative variables describe or categorize something and quantitative variables measure something, usually including units. Quantitative variables necessarily involve numbers, but a number doesn’t automatically qualify a variable as quantitative. For example, postal codes are qualitative despite the use of numbers. I grew up in 40422 and now I have an office in the measly zip code of 10027, but subtracting them to find I’ve regressed by 30,395 doesn’t mean anything. In other words, there’s no quantitative content in the numbers. A postal code is qualitative.</p>
 <figure class="align-default" id="typestree">
-<a class="reference internal image-reference" href="_images/typesofvariables.svg"><img alt="_images/typesofvariables.svg" src="_images/typesofvariables.svg" width="50%" /></a>
+<a class="reference internal image-reference" href="_images/typesofvariables.svg"><img alt="_images/typesofvariables.svg" src="_images/typesofvariables.svg" width="68%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Variable taxonomy</span><a class="headerlink" href="#typestree" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
-<section id="controlling-for-a-variable">
-<h3>Controlling for a Variable<a class="headerlink" href="#controlling-for-a-variable" title="Permalink to this heading">#</a></h3>
+<p>Quantitative variables can be subdivided into discrete and continuous variables. For a continuous variable, you’ll always be able to find another value between two other values. The quantities don’t come in discrete steps. You could fill a beaker with 1 ounce of water, 2 ounces of water, or any arbitrary amount between 1 and 2 ounces. Water can be measured continuoustly. For a discrete variable, each value has a next highest or next lowest value. Family size is discrete because there are no possibilities between 3 and 4. The lines can be blurry, either because of convention or limits of measurement precision. Ice cream could be measured continuously, just like water. A shop might charge by weight, but it’s more likely you’ll order by the scoop and they’ll shoo you away if you ask for 1.7777777 scoops or if you complain that you asked for 2 scoops and they gave you 1.99999999998. This tension between continuous and discrete will be familiar to anyone who has agonized over a stingy serving of chicken when dining at Chipotle Mexican Grill.</p>
+<section id="working-with-real-data-and-real-people">
+<h3>Working with Real Data and Real People<a class="headerlink" href="#working-with-real-data-and-real-people" title="Permalink to this heading">#</a></h3>
+<p>Real world data is messy and sometimes inelegantly organized. The 1996-1997 National Organizations Survey (<span id="id5">[<a class="reference internal" href="bibliography.html#id55" title="Arne L Kalleberg, David Knoke, and Peter V Marsden. National Organizations Survey (NOS), 1996-1997. Inter-university Consortium for Political and Social Research Ann Arbor, MI, 2001.">KKM01</a>]</span>) records data on US work establishments, including demographics and revenue among other variables. Revenue is a quantitative variable, but responding establishments could also refuse to answer, respond that they don’t know, or choose “not applicable.” Perhaps because of technical limitations, all responses are still recorded as numbers. The “Not applicable” response is recorded as -999. “Don’t know” is recorded as 88,888,888,888 and “refused to answer” is recorded as 99,999,999,999. These are special <em>flag values</em> that aren’t meant to be interpreted as dollar amounts like the other values for the variable. Anyone deriving a statistic using the variable would have to remove these observations in their calculations.</p>
+<p>The lesson is to inspect your data and any accompanying documentation. The survey codebook explains these flag values. Preliminary data inspection and a histogram can also help a researcher discover impossible negative values or strange clumps at large values like 99,999,999,999.</p>
+<p>Unfortunately, this lesson was a learned only after a mistake was discovered in <span id="id6">[<a class="reference internal" href="bibliography.html#id34" title="Cedric Herring. Does diversity pay?: race, gender, and the business case for diversity. American sociological review, 74(2):208–224, 2009.">Her09</a>]</span>. Herring found that more diverse businesses recorded higher revenue in an observational study, arguing for the business case for racial and gender diversity. <span id="id7">[<a class="reference internal" href="bibliography.html#id36" title="Dragana Stojmenovska, Thijs Bol, and Thomas Leopold. Does diversity pay? a replication of herring (2009). American Sociological Review, 82(4):857–867, 2017.">SBL17</a>]</span> found the mistakes in the calculations and argued for no effect on the basis of other statistical details. This necessitated the follow-up <span id="id8">[<a class="reference internal" href="bibliography.html#id35" title="Cedric Herring. Is diversity still a good thing? American Sociological Review, 82(4):868–877, 2017.">Her17</a>]</span>, which argued in support of the original hypothesis with an updated analysis.</p>
+<p>The above is a cautionary tale and highlights the necessity of dealing with missing values or coaxing an answer out of the respondents. We’ll discuss surveys in Chapter 19, but it’s worth noting here that the structure of a variable can impact the quality of a study. Netflix switched from a 1-5 stars scale for ratings to a thumbs up/thumbs down scale. This led to a <a class="reference external" href="https://www.businessinsider.com/why-netflix-replaced-its-5-star-rating-system-2017-4">200% increase in users rating titles</a>.</p>
 </section>
+</section>
+<section id="controlling-for-a-variable">
+<h2>Controlling for a Variable<a class="headerlink" href="#controlling-for-a-variable" title="Permalink to this heading">#</a></h2>
+<p>Recall a confounder is a variable that can distort the comparion of two groups. In an observational study, it’s a good idea to compare the distributions for confounders between your treatment and control group.</p>
+<p>When a potential confounder is quantitative,</p>
+<figure class="align-default" id="speedingrace">
+<a class="reference internal image-reference" href="_images/histogram_goncalves_mello.png"><img alt="_images/histogram_goncalves_mello.png" src="_images/histogram_goncalves_mello.png" style="width: 62%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">A histogram …</span><a class="headerlink" href="#speedingrace" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="extension-data-visualization-and-exploratory-data-analysis">
 <h2>Extension: Data Visualization and Exploratory Data Analysis<a class="headerlink" href="#extension-data-visualization-and-exploratory-data-analysis" title="Permalink to this heading">#</a></h2>
-<p>The histogram is an important piece of <strong>exploratory data analysis</strong> (EDA). Notably, <span id="id5">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> doesn’t cover this topic and we won’t attempt to cover it other than this brief mention.</p>
-<p>EDA refers to open-ended exploration of data, usually emphasizes visualization and simple descriptive analysis. John Tukey was a statistician who developed the box plot and other methods for exploratory data analysis. <span id="id6">[<a class="reference internal" href="bibliography.html#id38" title="Andrew Gelman and Aki Vehtari. What are the most important statistical ideas of the past 50 years? Journal of the American Statistical Association, 116(536):2087–2097, 2021.">GV21</a>]</span> names EDA as one of the most important statistical ideas of the past 50 years (emphasis mine):</p>
+<p>The histogram is an important piece of <strong>exploratory data analysis</strong> (EDA). Notably, <span id="id9">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> doesn’t cover this topic and we won’t attempt to cover it other than this brief mention.</p>
+<p>EDA refers to open-ended exploration of data, usually emphasizes visualization and simple descriptive analysis. John Tukey was a statistician who developed the box plot and other methods for exploratory data analysis. <span id="id10">[<a class="reference internal" href="bibliography.html#id38" title="Andrew Gelman and Aki Vehtari. What are the most important statistical ideas of the past 50 years? Journal of the American Statistical Association, 116(536):2087–2097, 2021.">GV21</a>]</span> names EDA as one of the most important statistical ideas of the past 50 years (emphasis mine):</p>
 <blockquote>
 <div><p>Following Tukey (1962), the proponents of exploratory data analysis have emphasized the limitations of asymptotic theory and the corresponding benefits of <strong>open-ended exploration and communication</strong> (Cleveland 1985) along with a general view of data science as going beyond statistical theory (Chambers 1993; Donoho 2017). This fits into a view of statistical modeling that is focused more on discovery than on the testing of fixed hypotheses, and as such has been influential not just in the development of specific graphical methods but also in moving the field of statistics away from theorem-proving and toward a more open and, we would say, healthier perspective on the role of learning from data in science. An example in medical statistics is the much-cited article by Bland and Altman (1986) that recommended graphical methods for data comparison in place of correlations and regressions.</p>
 </div></blockquote>
 <p>If you are the kind of person who likes data and graphs more than the mathematical aspects of statistics, you should find this exciting. Beyond the exploratory analysis, there is also a lot of work on effective communication with graphs and tables. Communication is often more <em>explanatory</em> than exploratory. It depends on the needs of your audience.</p>
-<p>Data visualization principles are a mix of objective and subjective rules. The <strong>area principle</strong> is one of the more objective rules, stating that “each data value should be represented by the same amount of area” (<span id="id7">[<a class="reference internal" href="bibliography.html#id6" title="Richard D De Veaux, Paul F Velleman, and Bock. Stats: Data and Models, 5th Edition. Pearson/Addison Wesley Boston, 2019.">DVVB19</a>]</span>). This is why it was the <em>areas</em> that represented percentages in a histogram and not necessarily the height.</p>
-<p>Oversimplifying, I would distill the more general, subjective rules from into two points (<span id="id8">[<a class="reference internal" href="bibliography.html#id54" title="Cole Nussbaumer Knaflic. Storytelling with data: A data visualization guide for business professionals. John Wiley &amp; Sons, 2015.">Kna15</a>]</span> and <span id="id9">[<a class="reference internal" href="bibliography.html#id53" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>).</p>
+<p>Data visualization principles are a mix of objective and subjective rules. The <strong>area principle</strong> is one of the more objective rules, stating that “each data value should be represented by the same amount of area” (<span id="id11">[<a class="reference internal" href="bibliography.html#id6" title="Richard D De Veaux, Paul F Velleman, and Bock. Stats: Data and Models, 5th Edition. Pearson/Addison Wesley Boston, 2019.">DVVB19</a>]</span>). This is why it was the <em>areas</em> that represented percentages in a histogram and not necessarily the height.</p>
+<p>Oversimplifying, I would distill the more general, subjective rules from into two points (<span id="id12">[<a class="reference internal" href="bibliography.html#id54" title="Cole Nussbaumer Knaflic. Storytelling with data: A data visualization guide for business professionals. John Wiley &amp; Sons, 2015.">Kna15</a>]</span> and <span id="id13">[<a class="reference internal" href="bibliography.html#id53" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>).</p>
 <ol class="arabic simple">
 <li><p>Avoid clutter.</p></li>
 <li><p>Use pre-attentive processing.</p></li>
 </ol>
-<p>These are similar ideas, with negative and positive framing. Like in your prose, remove anything distracting. And then, insofar as you are explaining something, actively draw your reader’s attention to the important things. For example, use color thoughtfully. Gray out lines that don’t need individual attention in a line chart. The first figure below does this well and the next figure fails. <a class="reference internal" href="#fig-schwabgray"><span class="std std-numref">Fig. 6</span></a> does this well and <a class="reference internal" href="#fig-liaiskills"><span class="std std-numref">Fig. 7</span></a> fails.</p>
+<p>These are similar ideas, with negative and positive framing. Like in your prose, remove anything distracting. And then, insofar as you are explaining something, actively draw your reader’s attention to the important things. For example, use color thoughtfully. Gray out lines that don’t need individual attention in a line chart. The first figure below does this well and the next figure fails. <a class="reference internal" href="#fig-schwabgray"><span class="std std-numref">Fig. 8</span></a> does this well and <a class="reference internal" href="#fig-liaiskills"><span class="std std-numref">Fig. 9</span></a> fails.</p>
 <figure class="align-default" id="fig-schwabgray">
 <a class="reference internal image-reference" href="_images/schwabishgray.png"><img alt="_images/schwabishgray.png" src="_images/schwabishgray.png" style="width: 410px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">A good example of pre-attentive processing used to highlight a national trend and the trends for states of note. From <span id="id10">[<a class="reference internal" href="bibliography.html#id53" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>, page 151.</span><a class="headerlink" href="#fig-schwabgray" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">A good example of pre-attentive processing used to highlight a national trend and the trends for states of note. From <span id="id14">[<a class="reference internal" href="bibliography.html#id53" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>, page 151.</span><a class="headerlink" href="#fig-schwabgray" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-liaiskills">
 <a class="reference internal image-reference" href="_images/LI_AI_skills.jpeg"><img alt="_images/LI_AI_skills.jpeg" src="_images/LI_AI_skills.jpeg" style="width: 410px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">A bad example from my former colleagues at LinkedIn, showing a lot of clutter and sparking no joy (<a class="reference external" href="https://www.linkedin.com/posts/linkedin_people-worldwide-are-adding-ai-skills-to-activity-7122236926580948992-AqxP?utm_source=share&amp;utm_medium=member_desktop">source</a>).</span><a class="headerlink" href="#fig-liaiskills" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">A bad example from my former colleagues at LinkedIn, showing a lot of clutter and sparking no joy (<a class="reference external" href="https://www.linkedin.com/posts/linkedin_people-worldwide-are-adding-ai-skills-to-activity-7122236926580948992-AqxP?utm_source=share&amp;utm_medium=member_desktop">source</a>).</span><a class="headerlink" href="#fig-liaiskills" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In a scatter plot with many overlapping points, reduce the opacity of points to make it more clear where the majority of the data lies.</p>
 <figure class="align-default" id="fig-sheetsopacity">
 <a class="reference internal image-reference" href="_images/sheetsopacity.png"><img alt="_images/sheetsopacity.png" src="_images/sheetsopacity.png" style="width: 98%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">In <a class="reference external" href="https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing">Google Sheets</a>, use the chart editor to change the opacity of each point in a scatter plot.</span><a class="headerlink" href="#fig-sheetsopacity" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">In <a class="reference external" href="https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing">Google Sheets</a>, use the chart editor to change the opacity of each point in a scatter plot.</span><a class="headerlink" href="#fig-sheetsopacity" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -592,6 +613,19 @@ document.write(`
 <figure class="align-default" id="oneblockhist">
 <a class="reference internal image-reference" href="_images/oneblockhist.svg"><img alt="_images/oneblockhist.svg" src="_images/oneblockhist.svg" width="70%" /></a>
 </figure>
+</section>
+</div>
+<div class="exercise admonition" id="qualquant">
+
+<p class="admonition-title"><span class="caption-number">Exercise 12 </span></p>
+<section id="exercise-content">
+<p>Classify each of the following variables as qualitative or quantitative.</p>
+<ul class="simple">
+<li><p>car color</p></li>
+<li><p>number of cars owned</p></li>
+<li><p>number of red cars owned</p></li>
+<li><p>saturation of car color</p></li>
+</ul>
 </section>
 </div>
 </section>
@@ -666,9 +700,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-real-data-and-real-people">Working with Real Data and Real People</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
