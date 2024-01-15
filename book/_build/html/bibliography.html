@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Overview" href="python.html" />
-    <link rel="prev" title="The Histogram" href="thehistogram.html" />
+    <link rel="prev" title="Probability" href="probability1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,6 +179,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normal.html">The Normal Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="correlation.html">Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probability1.html">Probability</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
@@ -186,6 +191,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -452,6 +458,18 @@ document.write(`
 <span class="label"><span class="fn-bracket">[</span>Han08<span class="fn-bracket">]</span></span>
 <p>David J Hand. <em>Statistics: A very short introduction</em>. Oxford University Press, USA, 2008. URL: <a class="reference external" href="https://clio.columbia.edu/catalog/14180088">https://clio.columbia.edu/catalog/14180088</a>.</p>
 </div>
+<div class="citation" id="id34" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Her09<span class="fn-bracket">]</span></span>
+<p>Cedric Herring. Does diversity pay?: race, gender, and the business case for diversity. <em>American sociological review</em>, 74(2):208–224, 2009.</p>
+</div>
+<div class="citation" id="id35" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Her17<span class="fn-bracket">]</span></span>
+<p>Cedric Herring. Is diversity still a good thing? <em>American Sociological Review</em>, 82(4):868–877, 2017.</p>
+</div>
+<div class="citation" id="id55" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KKM01<span class="fn-bracket">]</span></span>
+<p>Arne L Kalleberg, David Knoke, and Peter V Marsden. <em>National Organizations Survey (NOS), 1996-1997</em>. Inter-university Consortium for Political and Social Research Ann Arbor, MI, 2001.</p>
+</div>
 <div class="citation" id="id54" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Kna15<span class="fn-bracket">]</span></span>
 <p>Cole Nussbaumer Knaflic. <em>Storytelling with data: A data visualization guide for business professionals</em>. John Wiley &amp; Sons, 2015.</p>
@@ -479,6 +497,10 @@ document.write(`
 <div class="citation" id="id37" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Ste23<span class="fn-bracket">]</span></span>
 <p>Megan T. Stevenson. Cause, effect, and the structure of the social world. <em>Boston University Law Review</em>, 2023.</p>
+</div>
+<div class="citation" id="id36" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SBL17<span class="fn-bracket">]</span></span>
+<p>Dragana Stojmenovska, Thijs Bol, and Thomas Leopold. Does diversity pay? a replication of herring (2009). <em>American Sociological Review</em>, 82(4):857–867, 2017.</p>
 </div>
 <div class="citation" id="id52" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Str10<span class="fn-bracket">]</span></span>
@@ -523,12 +545,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="thehistogram.html"
+       href="probability1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">The Histogram</p>
+        <p class="prev-next-title">Probability</p>
       </div>
     </a>
     <a class="right-next"

@@ -8,3 +8,5 @@ Data/DataColada98/.ipynb_checkpoints/MileageDistributions-checkpoint.ipynb
 book/.ipynb_checkpoints/pycalculator-checkpoint.ipynb
 book/.ipynb_checkpoints/pylibs-checkpoint.ipynb
 book/.ipynb_checkpoints/statwrap0-checkpoint.ipynb
+*.log
+*.aux

@@ -104,13 +104,45 @@ This suggests something fishy. Maybe it is the insurance customers who report th
 
 ## Variables 
 
+In the previous example, we were working with a specific **variable**, vehicle mileages. A variable is a characteristic recorded for each individual in a study. In a spreadsheet, the individuals usually correspond to rows and the variables are stored in the columns. Mileage is a **quantitative** variable. Something like the car color would be **qualitative** (also called categorical). Qualitative variables describe or categorize something and quantitative variables measure something, usually including units. Quantitative variables necessarily involve numbers, but a number doesn't automatically qualify a variable as quantitative. For example, postal codes are qualitative despite the use of numbers. I grew up in 40422 and now I have an office in the measly zip code of 10027, but subtracting them to find I've regressed by 30,395 doesn't mean anything. In other words, there's no quantitative content in the numbers. A postal code is qualitative. 
+
+
 ```{figure} images/tikz/typesofvariables.svg
-:width: 50%
+:width: 68%
 :name: typestree
 
+Variable taxonomy
 ```
 
-### Controlling for a Variable
+
+Quantitative variables can be subdivided into discrete and continuous variables. For a continuous variable, you'll always be able to find another value between two other values. The quantities don't come in discrete steps. You could fill a beaker with 1 ounce of water, 2 ounces of water, or any arbitrary amount between 1 and 2 ounces. Water can be measured continuoustly. For a discrete variable, each value has a next highest or next lowest value. Family size is discrete because there are no possibilities between 3 and 4. The lines can be blurry, either because of convention or limits of measurement precision. Ice cream could be measured continuously, just like water. A shop might charge by weight, but it's more likely you'll order by the scoop and they'll shoo you away if you ask for 1.7777777 scoops or if you complain that you asked for 2 scoops and they gave you 1.99999999998. This tension between continuous and discrete will be familiar to anyone who has agonized over a stingy serving of chicken when dining at Chipotle Mexican Grill. 
+
+### Working with Real Data and Real People
+
+Real world data is messy and sometimes inelegantly organized. The 1996-1997 National Organizations Survey ({cite}`kalleberg2001national`) records data on US work establishments, including demographics and revenue among other variables. Revenue is a quantitative variable, but responding establishments could also refuse to answer, respond that they don't know, or choose "not applicable." Perhaps because of technical limitations, all responses are still recorded as numbers. The "Not applicable" response is recorded as -999. "Don't know" is recorded as 88,888,888,888 and "refused to answer" is recorded as 99,999,999,999. These are special *flag values* that aren't meant to be interpreted as dollar amounts like the other values for the variable. Anyone deriving a statistic using the variable would have to remove these observations in their calculations. 
+
+The lesson is to inspect your data and any accompanying documentation. The survey codebook explains these flag values. Preliminary data inspection and a histogram can also help a researcher discover impossible negative values or strange clumps at large values like 99,999,999,999.
+
+Unfortunately, this lesson was a learned only after a mistake was discovered in {cite}`herring2009does`. Herring found that more diverse businesses recorded higher revenue in an observational study, arguing for the business case for racial and gender diversity. {cite}`stojmenovska2017does` found the mistakes in the calculations and argued for no effect on the basis of other statistical details. This necessitated the follow-up {cite}`herring2017diversity`, which argued in support of the original hypothesis with an updated analysis. 
+
+The above is a cautionary tale and highlights the necessity of dealing with missing values or coaxing an answer out of the respondents. We'll discuss surveys in Chapter 19, but it's worth noting here that the structure of a variable can impact the quality of a study. Netflix switched from a 1-5 stars scale for ratings to a thumbs up/thumbs down scale. This led to a [200% increase in users rating titles](https://www.businessinsider.com/why-netflix-replaced-its-5-star-rating-system-2017-4). 
+
+
+## Controlling for a Variable
+
+
+Recall a confounder is a variable that can distort the comparion of two groups. In an observational study, it's a good idea to compare the distributions for confounders between your treatment and control group.  
+
+When a potential confounder is quantitative, 
+
+
+
+```{figure} images/histogram_goncalves_mello.png
+:width: 62%
+:name: speedingrace
+
+A histogram ...
+```
 
 ## Extension: Data Visualization and Exploratory Data Analysis
 
@@ -182,4 +214,20 @@ Provide two different data sets that could produce the following histogram with 
 
 ```{exercise-end}
 ```
+
+```{exercise-start}
+:label: qualquant
+```
+
+Classify each of the following variables as qualitative or quantitative.
+
+* car color
+* number of cars owned
+* number of red cars owned
+* saturation of car color
+
+
+```{exercise-end}
+```
+
 
