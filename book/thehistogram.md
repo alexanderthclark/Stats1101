@@ -7,7 +7,7 @@
 
 ## Summarizing a Distribution
 
-You've probably seen **histograms** before. They are used to summarize data by showing the distribution. 
+You've probably seen **histograms** before. They are used to summarize data by showing the distribution. Suppose we collect data on how much television people watch. 
 
 ```{figure} images/normal_histogram.svg
 :width: 80%
@@ -16,29 +16,56 @@ You've probably seen **histograms** before. They are used to summarize data by s
 A histogram showing a symmetric, bell-shaped distribution. 
 ```
 
-{numref}`normalhist` lacks any vertical scale. This is inessential as long as we're only concerned with the *shape* of the data.
+{numref}`normalhist` lacks any vertical scale. This is inessential as long as we're only concerned with the *shape* of the data. The shape can be described without any specific jargon, but common terms are *bell-shaped*, *symmetric* and *skewed*. The *tails* represent the extreme regions. 
 
-A histogram is made of blocks (or bars). Each block has a predetermined **class interval** and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the *area* of the block is proportional to the number of data points in the class interval. 
 
-{numref}`hist1` summarizes the data set 0, 0, 1, 1, 2, 6, 10, 10, 10, 10. 
+```{figure} images/skewed_histograms.svg
+:width: 87%
+:name: skewedhist
+
+Two skewed histograms. The left panel features on a long left tail and the right panel features a long right tail. 
+```
+
+A histogram is made of blocks (or bars). Each block has a predetermined **class interval** and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the *area* of the block is proportional to the number of data points in the class interval. If a vertical scale is supplied, the areas will sum to 100% (or 1, depending on what software you use). This corresponds to a **density** scale. 
+
+Suppose we observed incomes \$0, \$10, \$10, \$20, \$20, \$20, \$30, and \$216. This approximates the level of income inequality in South Africa.[^1]
+
+[^1]: The approximation is based on the Gini coefficient matching South Africa's, as recorded by the [World Bank](https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true). {numref}`sarand` summarizes the data set.   
 
 ```{list-table} Data Frequencies
 :header-rows: 1
-:name: hist1
+:name: sarand
 
 * - Value
   - Count
+  - Percentage (%)
 * - 0
-  - 2
-* - 1
-  - 2
-* - 2
   - 1
+  - 12.5
 * - 10
-  - 4
+  - 2
+  - 25
+* - 20
+  - 3
+  - 37.5
+* - 30
+  - 1
+  - 12.5
+* - 216
+  - 1
+  - 12.5
 ```
 
-This can be translated into any number of slightly different histograms, depending on how the class intervals are chosen. Let's start with intervals of one-unit width, centered at every whole number. 
+{numref}`incomehist` plots histograms with different class intervals. The top panel is the most natural to draw, with one-unit-wide class intervals. It's typical to use wider intervals. The other panels increase the widths, thus changing the $y$-axis. 
+
+```{figure} images/income_histograms.svg
+:width: 80%
+:name: incomehist
+
+All three histograms show the same data. The blocks have areas 12.5%, 25%, 37.5%, 12.5%, and 12.5% in each histogram.
+```
+
+The **height** of a block represents crowding, not an actual percentage. The last block of the bottom panel of {numref}`incomehist`, spanning from 35 to 221, is short because there's just one data point in that wide interval. 
 
 Histograms reveal the shape of the distribution, and sometimes interesting irregularities, like in {cite}`freedman2007statistics` Review Exercise 11 and in the following example.
 
