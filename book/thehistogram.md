@@ -132,7 +132,6 @@ The above is a cautionary tale and highlights the necessity of dealing with miss
 
 
 
-
 ## Extension: Data Visualization and Exploratory Data Analysis
 
 The histogram is an important piece of **exploratory data analysis** (EDA). Notably, {cite}`freedman2007statistics` doesn't cover this topic and we won't attempt to cover it other than this brief mention.

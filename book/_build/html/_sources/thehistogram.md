@@ -131,18 +131,6 @@ The above is a cautionary tale and highlights the necessity of dealing with miss
 ## Controlling for a Variable
 
 
-Recall a confounder is a variable that can distort the comparion of two groups. In an observational study, it's a good idea to compare the distributions for confounders between your treatment and control group.  
-
-When a potential confounder is quantitative, 
-
-
-
-```{figure} images/histogram_goncalves_mello.png
-:width: 62%
-:name: speedingrace
-
-Figure 2 from {cite}`goncalves2021few`.
-```
 
 ## Extension: Data Visualization and Exploratory Data Analysis
 
