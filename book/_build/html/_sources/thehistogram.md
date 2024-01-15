@@ -141,7 +141,7 @@ When a potential confounder is quantitative,
 :width: 62%
 :name: speedingrace
 
-A histogram ...
+Figure 2 from {cite}`goncalves2021few`.
 ```
 
 ## Extension: Data Visualization and Exploratory Data Analysis
