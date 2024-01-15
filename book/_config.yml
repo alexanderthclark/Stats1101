@@ -36,9 +36,15 @@ html:
 
 
 launch_buttons:
+  binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
+  thebe                  : true
 
 sphinx:
   extra_extensions:
     - sphinx_exercise
     - sphinx_togglebutton
+
+thebe:
+  repository_url: "https://github.com/alexanderthclark/Stats1101"
+  branch: main
