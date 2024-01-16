@@ -12,7 +12,7 @@ parts:
     - file: observational
     - file: natural
     - file: thehistogram
-    #- file: centerspread
+    - file: centerspread
     #- file: normal
     #- file: correlation
     #- file: regression
