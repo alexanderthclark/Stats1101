@@ -33,5 +33,21 @@ The heavier, orange line marks the average. The white line marks the median.
 
 ```
 
+While the median will split a histogram so that there is equal area on either side, the histogram balances when supported at the average. Imagine balancing either of the histograms in {numref}`mean_median_skew` at the median. The histogram would tip toward the long tail because of the leverage exerted by the extreme values. 
+
 
 ## The Standard Deviation
+
+### Preamble: Root Mean Square
+
+The **root mean square** size of a list is the (1) square *root* of the (2) *mean*, aka average, of the (3) *square*d entries. This says something about the size of a list.[^1]
+
+[^1]: The rms formula is similar to the formula for Euclidean distance, from the origin to the list of numbers as a single point in a coordinate system. The Euclidean distance also measures a kind of size, but without averaging. 
+
+$$ \text{root mean square size of a list} = \sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2} $$
+
+The r.m.s. doesn't change if you change the sign on any of the numbers. It says something about the typical absolute size of a number in the list. The average of the absolute values would also do that, but as {cite}`freedman2007statistics` says, "it fits in better with the algebra [statisticians] have to do."
+
+### The Standard Deviation
+
+The standard deviation (SD) is a measure of spread in a list of numbers. 
