@@ -209,6 +209,9 @@ In a scatter plot with many overlapping points, reduce the opacity of points to 
 In [Google Sheets](https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing), use the chart editor to change the opacity of each point in a scatter plot.
 ```
 
+## Interactive
+
+Use [this Google Colab form](https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing) to create a histogram and adjust the class intervals. No coding is required.
 
 ## Exercises
 
