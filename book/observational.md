@@ -192,7 +192,13 @@ The observed difference in group averages will be \$50,000, but this isn't a cau
 
 If you compare yourself to happier tourists in Italy, there are many ways that comparison can be confounded. It doesn't have to be Italy that's making those people happier. In the "Romano Tours" SNL skit, Adam Sandler plays the role of a salesman for tours to Italy. He doesn't use the language of statistics, but he is essentially telling his listeners to be careful about inferring certain causal effects from promotional materials or from observing other people's experience. Trying to temper expectations after encountering disappointed customers in the past, he is honest about the limitations of a vacation as a treatment. He is describing something similar to the examples above. 
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TbwlC2B-BIg?si=1H_VIitPD65JDHJr" style="display: block; margin: auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position: relative; width: 75%; overflow: hidden; margin: auto; padding-top: 42.1875%;">
+    <iframe src="https://www.youtube-nocookie.com/embed/TbwlC2B-BIg?si=1H_VIitPD65JDHJr" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+    </iframe>
+</div>
 
 Which of these quotes highlights a kind of confounding more similar to that in {numref}`posignal`? Which is more similar to {numref}`pohet`?
 
