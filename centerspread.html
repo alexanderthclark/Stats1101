@@ -411,7 +411,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average">The Average</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The Standard Deviation</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -454,9 +458,26 @@ Median vs Average<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The heavier, orange line marks the average. The white line marks the median.</p>
 </div>
-</details></section>
+</details><p>While the median will split a histogram so that there is equal area on either side, the histogram balances when supported at the average. Imagine balancing either of the histograms in <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 14</span></a> at the median. The histogram would tip toward the long tail because of the leverage exerted by the extreme values.</p>
+</section>
 <section id="the-standard-deviation">
 <h2>The Standard Deviation<a class="headerlink" href="#the-standard-deviation" title="Permalink to this heading">#</a></h2>
+<section id="preamble-root-mean-square">
+<h3>Preamble: Root Mean Square<a class="headerlink" href="#preamble-root-mean-square" title="Permalink to this heading">#</a></h3>
+<p>The <strong>root mean square</strong> size of a list is the (1) square <em>root</em> of the (2) <em>mean</em>, aka average, of the (3) <em>square</em>d entries. This says something about the size of a list.<a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="math notranslate nohighlight">
+\[ \text{root mean square size of a list} = \sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2} \]</div>
+<p>The r.m.s. doesn’t change if you change the sign on any of the numbers. It says something about the typical absolute size of a number in the list. The average of the absolute values would also do that, but as <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> says, “it fits in better with the algebra [statisticians] have to do.”</p>
+</section>
+<section id="id3">
+<h3>The Standard Deviation<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>The standard deviation (SD) is a measure of spread in a list of numbers.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>The rms formula is similar to the formula for Euclidean distance, from the origin to the list of numbers as a single point in a coordinate system. The Euclidean distance also measures a kind of size, but without averaging.</p>
+</aside>
+</section>
 </section>
 </section>
 
@@ -525,7 +546,11 @@ Median vs Average<div class="sd-summary-down docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average">The Average</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The Standard Deviation</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
