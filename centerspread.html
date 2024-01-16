@@ -64,10 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'centerspread';</script>
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="The Histogram" href="thehistogram.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,7 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
@@ -186,6 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Center and Spread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
@@ -420,10 +425,36 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="center-and-spread">
 <h1>Center and Spread<a class="headerlink" href="#center-and-spread" title="Permalink to this heading">#</a></h1>
-<p>TKTK</p>
+<p>Previously, we summarized data with a histogram. Visual representations sometimes lack simplicity or precision, so now we describe a distribution with just two numbers. The average describes the center of the data and the standard deviation describes its spread. Alternatives for center and spread include median and interquartile range, respectively.</p>
 <section id="the-average">
 <h2>The Average<a class="headerlink" href="#the-average" title="Permalink to this heading">#</a></h2>
-</section>
+<p>The <strong>average</strong> of a list of <span class="math notranslate nohighlight">\(n\)</span> numbers is their sum, divided by <span class="math notranslate nohighlight">\(n\)</span>. Typical notation for an average is <span class="math notranslate nohighlight">\(\bar{x}\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span>. If you prefer,</p>
+<div class="math notranslate nohighlight">
+\[\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i.\]</div>
+<p>The <strong>median</strong> is the number in the middle of an ordered list of numbers. If there’s an even number of numbers, average the middle two numbers. The median is less affected by extreme values. If I have a list of numbers 1, 2 and 3, then the average and the median are both 2.</p>
+<figure class="align-default" id="mean-median-sym">
+<a class="reference internal image-reference" href="_images/hist_with_mean_median.svg"><img alt="_images/hist_with_mean_median.svg" src="_images/hist_with_mean_median.svg" width="87%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">The average and median are similar for a symmetric distribution.</span><a class="headerlink" href="#mean-median-sym" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If we extend the list to include 94, then the average increases to 25 and the median increases to just 2.5. Is 25 or 2.5 more representative of 1, 2, 3, 94? It depends on how you might use the statistic. The median is often preferred in cases like these to avoid the influence of an extreme value. <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 14</span></a> shows two skewed distributions with vertical line for the average and the median. Which line marks the average and which line marks the median?</p>
+<figure class="align-default" id="mean-median-skew">
+<a class="reference internal image-reference" href="_images/skewed_hist_mean_median.svg"><img alt="_images/skewed_hist_mean_median.svg" src="_images/skewed_hist_mean_median.svg" width="87%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Which line is the average? The median?</span><a class="headerlink" href="#mean-median-skew" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Median vs Average<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The heavier, orange line marks the average. The white line marks the median.</p>
+</div>
+</details></section>
 <section id="the-standard-deviation">
 <h2>The Standard Deviation<a class="headerlink" href="#the-standard-deviation" title="Permalink to this heading">#</a></h2>
 </section>
@@ -459,6 +490,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="thehistogram.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Histogram</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bibliography.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
