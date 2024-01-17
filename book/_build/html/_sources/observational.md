@@ -103,15 +103,16 @@ Imagine that Alice and Bob both got the flu shot and both get the flu. Alice is 
      - Believed Effect of Shot (treatment)
    * - Alice
      - -1
-     - -2
-     - +1
+     - -2?
+     - +1?
    * - Bob
      - -1
-     - -1
-     - 0
+     - -1?
+     - 0?
 ```
 
-The individual effects are based on the difference between the two potential outcomes. We can't observe it because we don't observe the "No Shot" column, but Alice believes the effect was positive, and Bob believes it was zero. A table like this is helpful in describing two ways observational studies can be misleading. 
+The individual effects are based on the difference between the two potential outcomes. We can't observe it because we don't observe the "No Shot" column, but Alice believes the effect was positive, and Bob believes it was zero. A table like this is helpful in describing two ways observational studies can be misleading.
+
 
 ### College and Earnings
 
@@ -187,6 +188,8 @@ Second, it can be that people who choose to go to college get more out of colleg
 ```
 
 The observed difference in group averages will be \$50,000, but this isn't a causal effect that we should expect to apply to those not choosing to attend college. With a randomized experiment, the effect would be cut in half. The non-graduate group would average \$30,000 and the average graduate salary would be \$55,000. At the population level, the average benefit of college is +\$25,000.
+
+In both of these examples, we could point out ways an observational study would overestimate the effect of college on earnings *if* the tables accurately described the counterfactuals. 
 
 ### Vacations to Italy
 

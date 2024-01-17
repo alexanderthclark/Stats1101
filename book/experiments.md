@@ -29,6 +29,7 @@ The clip below speaks to the importance of having a control group. Lisa Simpson 
     </iframe>
 </div>
 
+<br>
 
 Of course, we shouldn't imagine a control group. We must actually observe a control group. Returning to the vitamin example, can we use the method of comparison to measure the effect of the vitamin once we have a group taking the vitamin and another not taking the vitamin? Not yet. It is important that the control and treatment groups are similar in every other relevant way. With no other dissimilarities, the difference in health outcomes can be fully attributed to the vitamin. A study where individuals themselves choose if they take a vitamin is less reliable. People who *choose* to take vitamins are going to be systematically different than those who choose not to take a vitamin. One, they'll be able to afford vitamins. Two, they'll be interested in their own health, so their baseline health or other behaviors might be different than the control group.
 
