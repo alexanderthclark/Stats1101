@@ -89,16 +89,6 @@ The overall trend is negative even though the trend is flat within each subset.
 
 ## Extension: Other Potential Worlds
 
-In the clip below, Lisa Simpson sells a "tiger-repelling rock" to her father. She is able to do this by appealing to Homer's false belief that the presence of the rock is why he's not suffered any tiger attacks. Homer reasons that *if* the rock weren't there, then the world would be different. It's an exercise in counterfactual reasoning, however poorly done by Homer. 
-
-<div style="position: relative; width: 75%; overflow: hidden; margin: auto; padding-top: 42.1875%;">
-    <iframe src="https://www.youtube-nocookie.com/embed/fm2W0sq9ddU?si=wJnc2V42JxHZaTkZ" 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-    </iframe>
-</div>
-
 In this section, we imagine ways observational studies can be confounded and make it concrete by writing down potential, or counterfactual outcomes. We show that differences in group averages can be misleading because (1) groups can be different to begin with, or (2) groups can respond to a treatment differently.
 
 Imagine that Alice and Bob both got the flu shot and both get the flu. Alice is happy she got the shot nonetheless, believing she would be a lot more sick if not for the flu shot. Bob believes the shot did nothing but line the pockets of big pharma and that he'd be no worse off if he didn't get the shot. Both are thinking about a counterfactual when they think about *if* they didn't get the flu shot. If their health can be quantified, we might write this down like in the following table:
@@ -198,6 +188,8 @@ Second, it can be that people who choose to go to college get more out of colleg
 ```
 
 The observed difference in group averages will be \$50,000, but this isn't a causal effect that we should expect to apply to those not choosing to attend college. With a randomized experiment, the effect would be cut in half. The non-graduate group would average \$30,000 and the average graduate salary would be \$55,000. At the population level, the average benefit of college is +\$25,000.
+
+In both of these examples, we could point out ways an observational study would overestimate the effect of college on earnings *if* the tables accurately described the counterfactuals. 
 
 ### Vacations to Italy
 
