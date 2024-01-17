@@ -69,6 +69,10 @@ The **height** of a block represents crowding, not an actual percentage. The las
 
 Histograms reveal the shape of the distribution, and sometimes interesting irregularities, like in {cite}`freedman2007statistics` Review Exercise 11 and in the following example.
 
+### Interactive
+
+Use [this Google Colab form](https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing) to create a histogram and adjust the class intervals. No coding is required.
+
 ### Example: Sleuthing out Fraud
 
 {cite}`shu2012signing`, titled "Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end," was retracted in 2021 because of evidence of fraud, uncovered in {cite}`simonsohn_2021`. The retracted research was based on an experiment where customers of an insurance company were asked to report their odemeter readings. Customers signed a statement asserting their honesty, and the statement was either at the top or at the bottom of the form. The presented finding was that it's better to have the statement signed *before* the customer provides the information instead of after. 
@@ -209,9 +213,6 @@ In a scatter plot with many overlapping points, reduce the opacity of points to 
 In [Google Sheets](https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing), use the chart editor to change the opacity of each point in a scatter plot.
 ```
 
-## Interactive
-
-Use [this Google Colab form](https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing) to create a histogram and adjust the class intervals. No coding is required.
 
 ## Exercises
 
