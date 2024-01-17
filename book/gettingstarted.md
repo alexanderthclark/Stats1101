@@ -6,7 +6,7 @@
 - {cite}`hand2008statistics`, Chapter 1
 ```
 
-Statistics refers to both the discipline and values calculated from data. We can define each after we define data. Data is mostly what you think it is, but our definition might be broader than you expect. **Data** are a collection of values and their context. Values does not have to mean numbers. This can include text, images, smells, and audio. If it's something Google or the NSA might collect, it's probably data.[^1]
+Statistics refers to both the discipline and values calculated from data. We can define each after we define data. Data is mostly what you think it is, but our definition might be broader than you expect. **Data** are a collection of values and their context. Context is why a good data set comes with documentation. Context includes things like what was measured and how the collection was done. Values does not have to mean numbers. This can include text, images, smells, and audio. If it's something Google or the NSA might collect, it's probably data.[^1]
 
 [^1]: Data is the plural of datum. That means a grammatically correct sentence would be "These data were analyzed by puppies."
 
