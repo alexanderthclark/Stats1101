@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
@@ -40,9 +40,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -82,7 +82,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -122,20 +121,15 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -444,7 +438,7 @@ document.write(`
 <p>Before continuing with this chapter and the next, it is helpful to understand that statistics can be used to answer <em>causal</em> questions and to answer <em>non-causal</em> questions. A causal question is one like, “Does this vaccine prevent this disease?” or “Does a ‘no excuses’ charter school produce better learning outcomes?” Non-causal questions might include “Will my business do better if I hire Columbia graduates instead of CUNY graduates?” or “At what age does an artist peak?”</p>
 <p>Causal questions seek to understand the impact of something like a vaccine to understand the impact of an actual intervention where more people are vaccinated as a matter of medical guidance or policy. Similarly, the study of a charter school leads to a causal question because we want to know if we can actually attribute student success to the school and not to pre-existing differences between the students who do and do not attend charter schools.</p>
 <p>A non-causal question might be a matter of mere prediction. Hiring managers will use your Columbia degree as a predictor of your qualifications for a job. They can predict that you will be intelligent and easy to train. The cause of those qualities might be Columbia, but for the purposes of the hiring manager, it doesn’t matter if you possessed these qualities prior to arriving on campus. The true cause could be something not on your resume—perhaps your genetics, the water quality in your hometown, or your formation in preschool. The Columbia degree is only valuable as a signal. It will remain valuable so long as there is no shock that changes the statistical relationship, like if the <a class="reference external" href="https://www.nytimes.com/2022/03/17/us/columbia-university-rank.html">U.S. News scandal</a> were to lower the prestige of the university and thus the quality of students or faculty.</p>
-<p>Other non-causal questions might have merely descriptive purposes. <span id="id2">[<a class="reference internal" href="bibliography.html#id47" title="D.W. Galenson. Old Masters and Young Geniuses: The Two Life Cycles of Artistic Creativity. Princeton University Press, 2006. ISBN 9780691121093. URL: https://clio.columbia.edu/catalog/14140122.">Gal06</a>]</span> studies the life cycles of artists, categorizing artists who tend to peak early versus those who peak later in life. On the surface, this makes no explicit prediction and doesn’t propose a causal theory of creativity. The descriptive statistics might inform further theorizing that might creep into causal or predictive territory, but the statistics are interesting in and of themselves. It tells us something about how creativity can work and challenges a simplistic belief that “artists peak early.”</p>
+<p>And there are many other types of non-causal questions. Some have merely descriptive purposes, for example. It’s fun to marvel at stats that describe Michael Jordan’s basketball career or Shakespeare’s influence. <span id="id2">[<a class="reference internal" href="bibliography.html#id47" title="D.W. Galenson. Old Masters and Young Geniuses: The Two Life Cycles of Artistic Creativity. Princeton University Press, 2006. ISBN 9780691121093. URL: https://clio.columbia.edu/catalog/14140122.">Gal06</a>]</span> studies the life cycles of artists, categorizing artists who tend to peak early versus those who peak later in life. On the surface, this makes no explicit prediction and doesn’t propose a causal theory of creativity. The descriptive statistics might inform further theorizing that might creep into causal or predictive territory, but the statistics are interesting in and of themselves. It tells us something about how creativity can work and challenges a simplistic belief that “artists peak early.”</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id3">
 <h1>Experiments<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
@@ -647,8 +641,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
