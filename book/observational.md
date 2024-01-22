@@ -217,3 +217,16 @@ The second is closer to the example in {numref}`pohet`. Only certain types of pe
 
 ```
 
+
+## Exercises
+
+```{exercise-start}
+:label: medprog
+```
+
+(From {cite}`may1972social`) A journal commented editorially that "age-specific death rates from breast cancer have remained constant for 35 years. This constancy indicates that no significant advances in methods of treatment of breast cancer have been made." Age-specific death rates are obtained by dividing the number of deaths by the number of women in a specified age group. An example of "constancy" would be if 13 out of every 1000 fatalities among women between the ages of 35 and 45 resulted from breast cancer in the years 1940, 1945, 1950, 1955, 1960, 1965, and 1970. Discuss whether, and to what extent, the constancy in age-specific death rates does plausibly indicate that indeed no significant advances in methods of treating this malady have occurred. Could the factual premise be true and the inference false? How? 
+
+```{exercise-end}
+```
+
+
