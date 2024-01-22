@@ -12,7 +12,7 @@ To avoid overstatement, we might say there is an observed **association** betwee
 
 We can try to make the treatment and control groups more similar by **controlling** for confounders. You can think of this as trying to do by hand what randomization does for free. For example, if vitamin-takers are wealthier, we can compare subsets with similar wealth. Comparisons between more homogeneous groups are more reliable.
 
-Controlling is not a panacea because you can never know if you've controlled for everything important. This isn't hyperbole, unconfoundness is not a testable thing. Income is important, but you shouldn't expect that adjustment to make an observational study as reliable as a randomized controlled experiment. As {cite}`freedman2007statistics` states, "finding the weak points is more an art than a science." It's easy to imagine vitamin-takers being rich and then richer people being healthier. However, what makes one rich person take a vitamin and one not take a vitamin? It doesn't seem right to regard that choice as essentially random. The vitamin-taker might be more interested in health, so they could be healthier already. This would make it look the vitamin is effective when it is not. Or, the vitamin-taker might be trying to improve areas where they know their health is lacking. Someone who only eats cookies might take a vitamin to round their diet. This would make it look like the vitamin is counter-productive. See also the examples in {cite}`freedman2007statistics` Chapter 2.3.
+Controlling is not a panacea because you can never know if you've controlled for everything important. This isn't hyperbole, unconfoundness is not a testable thing. Income is important, but you shouldn't expect that adjustment to make an observational study as reliable as a randomized controlled experiment. As {cite}`freedman2007statistics` states, "finding the weak points is more an art than a science." It's easy to imagine vitamin-takers being rich and then richer people being healthier. However, what makes one rich person take a vitamin and one not take a vitamin? It doesn't seem right to regard that choice as essentially random. The vitamin-taker might be more interested in health, so they could be healthier already. This would make it look the vitamin is effective when it is not. Or, the vitamin-taker might be trying to improve areas where they know their health is lacking. Someone who only eats cookies might take a vitamin to round their diet. This would make it look like the vitamin is counter-productive. See also the examples in {cite}`freedman2007statistics` Chapter 2.3. Practice being the gadfly who proposes a confounder that isn't controlled for. 
 
 William Cochran describes two characteristics for certain types of observational studies {cite}`cochran1965planning`:
 1. "The objective is to elucidate cause-and-effect relationships."
@@ -216,4 +216,17 @@ The first is similar to the example in {numref}`posignal`, where expectations mi
 The second is closer to the example in {numref}`pohet`. Only certain types of people will respond favorably to the treatment. You can imagine two equally happy people at the Riviera, but only one will feel comfortable enough to have their happiness increase. 
 
 ```
+
+
+## Exercises
+
+```{exercise-start}
+:label: medprog
+```
+
+(From {cite}`may1972social`) A journal commented editorially that "age-specific death rates from breast cancer have remained constant for 35 years. This constancy indicates that no significant advances in methods of treatment of breast cancer have been made." Age-specific death rates are obtained by dividing the number of deaths by the number of women in a specified age group. An example of "constancy" would be if 13 out of every 1000 fatalities among women between the ages of 35 and 45 resulted from breast cancer in the years 1940, 1945, 1950, 1955, 1960, 1965, and 1970. Discuss whether, and to what extent, the constancy in age-specific death rates does plausibly indicate that indeed no significant advances in methods of treating this malady have occurred. Could the factual premise be true and the inference false? How? 
+
+```{exercise-end}
+```
+
 

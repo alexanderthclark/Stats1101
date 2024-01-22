@@ -16,7 +16,9 @@ You've probably seen **histograms** before. They are used to summarize data by s
 A histogram showing a symmetric, bell-shaped distribution. 
 ```
 
-{numref}`normalhist` lacks any vertical scale. This is inessential as long as we're only concerned with the *shape* of the data. The shape can be described without any specific jargon, but common terms are *bell-shaped*, *symmetric* and *skewed*. The *tails* represent the extreme regions. 
+{numref}`normalhist` lacks any vertical scale. This is inessential as long as we're only concerned with the *shape* of the data. The shape can be described without any specific jargon, but common terms are *bell-shaped*, *symmetric* and *skewed*. The *tails* represent the extreme regions. Bell-shaped distributions are common for traits like height. For other things, like fame, you should expect skew. There is no one as tall as Taylor Swift is famous.[^1]
+
+[^1]: Credit to Nick Huntington-Klein who wrote, "[nobody is as tall as Bradley Cooper is successful](https://nickchk.substack.com/p/what-should-school-teach-teenagers)."
 
 
 ```{figure} images/skewed_histograms.svg
@@ -28,9 +30,9 @@ Two skewed histograms. The left panel features on a long left tail and the right
 
 A histogram is made of blocks (or bars). Each block has a predetermined **class interval** and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the *area* of the block is proportional to the number of data points in the class interval. If a vertical scale is supplied, the areas will sum to 100% (or 1, depending on what software you use). This corresponds to a **density** scale. 
 
-Suppose we observed incomes \$0, \$10, \$10, \$20, \$20, \$20, \$30, and \$216. This approximates the level of income inequality in South Africa.[^1]
+Suppose we observed incomes \$0, \$10, \$10, \$20, \$20, \$20, \$30, and \$216. This approximates the level of income inequality in South Africa.[^2]
 
-[^1]: The approximation is based on the Gini coefficient matching South Africa's, as recorded by the [World Bank](https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true). {numref}`sarand` summarizes the data set.   
+[^2]: The approximation is based on the Gini coefficient matching South Africa's, as recorded by the [World Bank](https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true). {numref}`sarand` summarizes the data set.   
 
 ```{list-table} Data Frequencies
 :header-rows: 1
