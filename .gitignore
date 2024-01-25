@@ -12,3 +12,6 @@ book/.ipynb_checkpoints/statwrap0-checkpoint.ipynb
 *.aux
 book/.ipynb_checkpoints/Rbasics-checkpoint.ipynb
 Data/NOS/.ipynb_checkpoints/NOS-checkpoint.ipynb
+Data/Artists/.ipynb_checkpoints/Artists-checkpoint.ipynb
+Data/covid/.ipynb_checkpoints/StateAgeDemographics-checkpoint.ipynb
+Data/covid/HET_age_and_state_data.csv
