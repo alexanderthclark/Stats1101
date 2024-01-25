@@ -86,11 +86,11 @@ $$\frac{13}{1000} = \frac{1000 \times 0.1 \times r}{1000\times 0.1 \times r + 10
 
 This is an experiment because it features a researcher who is deliberately varying a joke. The defining feature of an experiment is the researcher's control of assignment to treatment. 
 
-Researcher: comedian
-Control: first joke version
-Treatment: second joke version
-Control group: first joke audience
-Treatment group: second joke audience
+Researcher: comedian <br>
+Control: first joke version <br>
+Treatment: second joke version <br>
+Control group: first joke audience <br>
+Treatment group: second joke audience <br>
 
 The fails to be a conclusive experiment because the measurement is done imprecisely (audience reaction), the control and treatment groups are not determined randomly, and double blinding is impossible. These weaknesses are not to be confused for the features of an observational study.
 
