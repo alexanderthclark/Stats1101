@@ -98,3 +98,15 @@ The fails to be a conclusive experiment because the measurement is done imprecis
 ```{solution-end}
 ```
 
+## [Natural Experiments](natural_exp)
+
+```{solution-start} 
+:class: earlyclass
+```
+
+This can be used as a natural experiment. Because we are interested in the effect of an early morning class, we can call those in the 8am class the treatment group and the control group refers to the students in the 1pm section. "Nature" randomizes the assignment of students and the randomization is not undone because no students will switch to a different section under the assumption that all students prefer the later section. 
+
+If not all students prefer the 1pm section, this becomes less compelling as a natural experiment. Students will sort according to their own preferences. Assignment is no longer random and there could be confounding. The preference for an 8am class could be related to studiousness, other classes the students are taking, etc. 
+
+```{solution-end}
+```
