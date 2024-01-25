@@ -23,7 +23,7 @@ So maybe you should just average the top four songs for each artist. But if one 
 ```{solution-end}
 ```
 
-## Experiments
+## [Experiments](experiments)
 
 
 ```{solution-start} exp1
@@ -44,7 +44,7 @@ Only the last choice fits the definition of an experiment. The first features as
 ```{solution-end}
 ```
 
-## Observational Studies
+## [Observational Studies](observational_studies)
 
 ```{solution-start} medprog
 :class: dropdown
