@@ -407,7 +407,7 @@ In considering something like a covid-mortality rate across states, it is import
 <table id="T_366bb">
   <thead>
     <tr>
-      <th class="index_name level0" >state_name</th>
+      <th class="index_name level0" >State</th>
       <th id="T_366bb_level0_col0" class="col_heading level0 col0" >Maine</th>
       <th id="T_366bb_level0_col1" class="col_heading level0 col1" >Vermont</th>
       <th id="T_366bb_level0_col2" class="col_heading level0 col2" >Alaska</th>
@@ -415,7 +415,7 @@ In considering something like a covid-mortality rate across states, it is import
       <th id="T_366bb_level0_col4" class="col_heading level0 col4" >District of Columbia</th>
     </tr>
     <tr>
-      <th class="index_name level0" >age</th>
+      <th class="index_name level0" >Age</th>
       <th class="blank col0" >&nbsp;</th>
       <th class="blank col1" >&nbsp;</th>
       <th class="blank col2" >&nbsp;</th>
