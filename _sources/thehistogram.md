@@ -16,7 +16,7 @@ You've probably seen **histograms** before. They are used to summarize data by s
 A histogram showing a symmetric, bell-shaped distribution. 
 ```
 
-{numref}`normalhist` lacks any vertical scale. This is inessential as long as we're only concerned with the *shape* of the data. The shape can be described without any specific jargon, but common terms are *bell-shaped*, *symmetric* and *skewed*. The *tails* represent the extreme regions. Bell-shaped distributions are common for traits like height. For other things, like fame, you should expect skew. The right tail for the distribution of heights only does so far, but the right tail for the distribution of fame will be very long. There is no one as tall as Taylor Swift is famous.[^1]
+{numref}`normalhist` lacks any vertical scale. This is inessential as long as we're only concerned with the *shape* of the data. The shape can be described without any specific jargon, but common terms are *bell-shaped*, *symmetric* and *skewed*. The *tails* represent the extreme regions. Bell-shaped distributions are common for traits like height. For other things, like fame, you should expect skew. The right tail for the distribution of heights only goes so far, but the right tail for the distribution of fame will be very long, with a few exceptionally famous people. There is no one as tall as Taylor Swift is famous.[^1]
 
 [^1]: Credit to Nick Huntington-Klein who wrote, "[nobody is as tall as Bradley Cooper is successful](https://nickchk.substack.com/p/what-should-school-teach-teenagers)." But I still don't know who Bradley Cooper is and I lack a growth mindset in this domain.
 
@@ -148,11 +148,14 @@ Variable taxonomy
 ```
 
 
-Quantitative variables can be subdivided into discrete and continuous variables. For a continuous variable, you'll always be able to find another value between two other values. The quantities don't come in discrete steps. You could fill a beaker with 1 ounce of water, 2 ounces of water, or any arbitrary amount between 1 and 2 ounces. Water can be measured continuoustly. For a discrete variable, each value has a next highest or next lowest value. Family size is discrete because there are no possibilities between 3 and 4. The lines can be blurry, either because of convention or limits of measurement precision. Ice cream could be measured continuously, just like water. A shop might charge by weight, but it's more likely you'll order by the scoop and they'll shoo you away if you ask for 1.7777777 scoops or if you complain that you asked for 2 scoops and they gave you 1.99999999998. This tension between continuous and discrete will be familiar to anyone who has agonized over a stingy serving of chicken when dining at Chipotle Mexican Grill. 
+Quantitative variables can be subdivided into discrete and continuous variables. For a continuous variable, you'll always be able to find another value between two other values. The quantities don't come in discrete steps. You could fill a beaker with 1 ounce of water, 2 ounces of water, or any arbitrary amount between 1 and 2 ounces. Water can be measured continuoustly. For a discrete variable, each value has a next highest or next lowest value. Family size is discrete because there are no possibilities between 3 and 4. The lines can be blurry, either because of convention or limits of measurement precision. Ice cream could be measured continuously, just like water. A shop might charge by weight, but it's more likely you'll order by the scoop and they'll shoo you away if you ask for 1.7777777 scoops or if you complain that you asked for 2 scoops and they gave you 1.99999999998. This tension between continuous and discrete will be familiar to anyone who has agonized over a stingy serving of chicken when dining at Chipotle Mexican Grill.
 
-### Working with Real Data and Real People
+Developing this taxonomy is a bit of a detour, but it helps provide the vocabulary for discussing whether or not endpoints are included in the class intervals for a contiuous variable. Ultimately, it's up to the investigator. 
 
-Real world data is messy and sometimes inelegantly organized. The 1996-1997 National Organizations Survey ({cite}`kalleberg2001national`) records data on US work establishments, including demographics and revenue among other variables. Revenue is a quantitative variable, but responding establishments could also refuse to answer, respond that they don't know, or choose "not applicable." Perhaps because of technical limitations, all responses are still recorded as numbers. The "Not applicable" response is recorded as -999. "Don't know" is recorded as 88,888,888,888 and "refused to answer" is recorded as 99,999,999,999. These are special *flag values* that aren't meant to be interpreted as dollar amounts like the other values for the variable. Anyone deriving a statistic using the variable would have to remove these observations in their calculations. 
+
+### Working with Real Data
+
+Real world data is messy and sometimes inelegantly organized. The 1996-1997 National Organizations Survey ({cite}`kalleberg2001national`) records data on US work establishments, including demographics and revenue among other variables. Revenue is a quantitative variable, but responding establishments could also refuse to answer, respond that they don't know, or choose "not applicable." Perhaps because of technical limitations, all responses are still recorded as numbers. The "Not applicable" response is recorded as -999. "Don't know" is recorded as 88,888,888,888 and "refused to answer" is recorded as 99,999,999,999. These are special *flag values* that aren't meant to be interpreted as dollar amounts like the other values for the otherwise quantiative variable. Anyone deriving a statistic using the variable would have to remove these observations in their calculations. 
 
 The lesson is to inspect your data and any accompanying documentation. The survey codebook explains these flag values. Preliminary data inspection and a histogram can also help a researcher discover impossible negative values or strange clumps at large values like 99,999,999,999.
 
@@ -168,7 +171,341 @@ The gray blocks are unusual for containing negative or very high values compared
 The above is a cautionary tale and highlights the necessity of dealing with missing values or coaxing an answer out of the respondents. We'll discuss surveys in Chapter 19, but it's worth noting here that the structure of a variable can impact the quality of a study. Netflix switched from a 1-5 stars scale for ratings to a thumbs up/thumbs down scale. This led to a [200% increase in users rating titles](https://www.businessinsider.com/why-netflix-replaced-its-5-star-rating-system-2017-4). 
 
 
+
 ## Controlling for a Variable
+
+Chapter 3.5 works through an example showing the distribution of blood pressure levels for users and non-users of an oral contraceptive. Overlaying the histograms is useful when comparing only populations from the same age group, suggesting that the pill affects blood pressure. We can also split histograms for merely descriptive purposes. Below, we show the distribution of the age at which 50 important paintings were completed for both Picasso and Cezanne. After splitting by the qualitative varaible, artist name, we see that Picasso peaked earlier. 
+
+```{figure} images/picasso_and_cezanne_combined.svg
+:width: 60%
+:name: picasso_cez_combined
+
+```
+
+```{figure} images/picasso_and_cezanne.svg
+:width: 60%
+:name: picasso_cez
+
+Picasso peaked earlier than Cezanne.
+```
+
+
+## Cross-Tabulation
+
+Cross-tabs show a distribution much like a histogram, but in table form. This can be useful when you'd otherwise have a cluttered graph with many overlayed histograms. 
+
+In considering something like a covid-mortality rate across states, it is important to remember that states are demographically different. Age is one of the more important variables to adjust for. Below, each column contains the same information you'd find in the histogram for a specific state's age distribution. The background gradient helps make the difference in cell values more apparent. For example, Alaska and Utah are younger than Vermont. 
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+/* General Styling for the Table */
+#T_366bb {
+  border-collapse: separate;
+  border-spacing: 2px;
+  width: 100%;
+}
+
+/* Styling for Table Headers */
+#T_366bb th {
+  background-color: #f0f0f0;
+  color: #000000;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Styling for Table Data Cells */
+#T_366bb td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Your Specific Cell Background Colors */
+#T_366bb_row0_col0 { background-color: #fdd9b5; color: #000000; }
+#T_366bb_row0_col1 { background-color: #fddab6; color: #000000; }
+#T_366bb_row0_col2 { background-color: #fdc794; color: #000000; }
+#T_366bb_row0_col3 { background-color: #fdbb81; color: #000000; }
+#T_366bb_row0_col4 { background-color: #fdd5ab; color: #000000; }
+#T_366bb_row1_col0 { background-color: #fdd5ab; color: #000000; }
+#T_366bb_row1_col1 { background-color: #fdd2a6; color: #000000; }
+#T_366bb_row1_col2 { background-color: #fdcfa0; color: #000000; }
+#T_366bb_row1_col3 { background-color: #fdbe84; color: #000000; }
+#T_366bb_row1_col4 { background-color: #fddbb8; color: #000000; }
+#T_366bb_row2_col0 { background-color: #fdd4aa; color: #000000; }
+#T_366bb_row2_col1 { background-color: #fdce9e; color: #000000; }
+#T_366bb_row2_col2 { background-color: #fdc088; color: #000000; }
+#T_366bb_row2_col3 { background-color: #fdc088; color: #000000; }
+#T_366bb_row2_col4 { background-color: #fdac67; color: #000000; }
+#T_366bb_row3_col0 { background-color: #fdd5ab; color: #000000; }
+#T_366bb_row3_col1 { background-color: #fdd5ab; color: #000000; }
+#T_366bb_row3_col2 { background-color: #fdc692; color: #000000; }
+#T_366bb_row3_col3 { background-color: #fdc692; color: #000000; }
+#T_366bb_row3_col4 { background-color: #fda965; color: #000000; }
+#T_366bb_row4_col0 { background-color: #fdd2a6; color: #000000; }
+#T_366bb_row4_col1 { background-color: #fdd3a9; color: #000000; }
+#T_366bb_row4_col2 { background-color: #fdd4aa; color: #000000; }
+#T_366bb_row4_col3 { background-color: #fdd4aa; color: #000000; }
+#T_366bb_row4_col4 { background-color: #fdd3a9; color: #000000; }
+#T_366bb_row5_col0 { background-color: #fdc28b; color: #000000; }
+#T_366bb_row5_col1 { background-color: #fdc590; color: #000000; }
+#T_366bb_row5_col2 { background-color: #fdcfa0; color: #000000; }
+#T_366bb_row5_col3 { background-color: #fddbb8; color: #000000; }
+#T_366bb_row5_col4 { background-color: #fddbb8; color: #000000; }
+#T_366bb_row6_col0 { background-color: #fdc692; color: #000000; }
+#T_366bb_row6_col1 { background-color: #fdc895; color: #000000; }
+#T_366bb_row6_col2 { background-color: #fdd7b1; color: #000000; }
+#T_366bb_row6_col3 { background-color: #fedfc0; color: #000000; }
+#T_366bb_row6_col4 { background-color: #fedebd; color: #000000; }
+#T_366bb_row7_col0 { background-color: #fedfc0; color: #000000; }
+#T_366bb_row7_col1 { background-color: #fee0c3; color: #000000; }
+#T_366bb_row7_col2 { background-color: #feead6; color: #000000; }
+#T_366bb_row7_col3 { background-color: #feead6; color: #000000; }
+#T_366bb_row7_col4 { background-color: #fee9d4; color: #000000; }
+#T_366bb_row8_col0 { background-color: #feead5; color: #000000; }
+#T_366bb_row8_col1 { background-color: #feebd8; color: #000000; }
+#T_366bb_row8_col2 { background-color: #fff0e2; color: #000000; }
+#T_366bb_row8_col3 { background-color: #ffefe0; color: #000000; }
+#T_366bb_row8_col4 { background-color: #ffeedd; color: #000000; }
+#T_366bb_row9_col0 { background-color: white; color: #000000; }
+#T_366bb_row9_col1 { background-color: white; color: #000000; }
+#T_366bb_row9_col2 { background-color: white; color: #000000; }
+#T_366bb_row9_col3 { background-color: white; color: #000000; }
+#T_366bb_row9_col4 { background-color: white; color: #000000; }
+</style>
+</head>
+</html>
+
+
+<style type="text/css">
+#T_366bb_row0_col0 {
+  background-color: #fdd9b5;
+  color: #000000;
+}
+#T_366bb_row0_col1 {
+  background-color: #fddab6;
+  color: #000000;
+}
+#T_366bb_row0_col2, #T_366bb_row3_col3 {
+  background-color: #fdc794;
+  color: #000000;
+}
+#T_366bb_row0_col3 {
+  background-color: #fdbb81;
+  color: #000000;
+}
+#T_366bb_row0_col4, #T_366bb_row1_col0, #T_366bb_row3_col0, #T_366bb_row3_col1 {
+  background-color: #fdd5ab;
+  color: #000000;
+}
+#T_366bb_row1_col1, #T_366bb_row4_col0 {
+  background-color: #fdd2a6;
+  color: #000000;
+}
+#T_366bb_row1_col2, #T_366bb_row5_col2 {
+  background-color: #fdcfa0;
+  color: #000000;
+}
+#T_366bb_row1_col3 {
+  background-color: #fdbe84;
+  color: #000000;
+}
+#T_366bb_row1_col4, #T_366bb_row5_col3 {
+  background-color: #fddbb8;
+  color: #000000;
+}
+#T_366bb_row2_col0, #T_366bb_row4_col2, #T_366bb_row4_col3 {
+  background-color: #fdd4aa;
+  color: #000000;
+}
+#T_366bb_row2_col1 {
+  background-color: #fdce9e;
+  color: #000000;
+}
+#T_366bb_row2_col2, #T_366bb_row2_col3 {
+  background-color: #fdc088;
+  color: #000000;
+}
+#T_366bb_row2_col4 {
+  background-color: #fdac67;
+  color: #000000;
+}
+#T_366bb_row3_col2, #T_366bb_row6_col0 {
+  background-color: #fdc692;
+  color: #000000;
+}
+#T_366bb_row3_col4 {
+  background-color: #fda965;
+  color: #000000;
+}
+#T_366bb_row4_col1, #T_366bb_row4_col4 {
+  background-color: #fdd3a9;
+  color: #000000;
+}
+#T_366bb_row5_col0 {
+  background-color: #fdc28b;
+  color: #000000;
+}
+#T_366bb_row5_col1 {
+  background-color: #fdc590;
+  color: #000000;
+}
+#T_366bb_row5_col4, #T_366bb_row6_col2 {
+  background-color: #fdd7b1;
+  color: #000000;
+}
+#T_366bb_row6_col1 {
+  background-color: #fdc895;
+  color: #000000;
+}
+#T_366bb_row6_col3, #T_366bb_row7_col0 {
+  background-color: #fedfc0;
+  color: #000000;
+}
+#T_366bb_row6_col4 {
+  background-color: #fedebd;
+  color: #000000;
+}
+#T_366bb_row7_col1 {
+  background-color: #fee0c3;
+  color: #000000;
+}
+#T_366bb_row7_col2, #T_366bb_row7_col3 {
+  background-color: #feead6;
+  color: #000000;
+}
+#T_366bb_row7_col4 {
+  background-color: #fee9d4;
+  color: #000000;
+}
+#T_366bb_row8_col0 {
+  background-color: #feead5;
+  color: #000000;
+}
+#T_366bb_row8_col1 {
+  background-color: #feebd8;
+  color: #000000;
+}
+#T_366bb_row8_col2 {
+  background-color: #fff0e2;
+  color: #000000;
+}
+#T_366bb_row8_col3 {
+  background-color: #ffefe0;
+  color: #000000;
+}
+#T_366bb_row8_col4 {
+  background-color: #ffeedd;
+  color: #000000;
+}
+#T_366bb_row9_col0, #T_366bb_row9_col1, #T_366bb_row9_col2, #T_366bb_row9_col3, #T_366bb_row9_col4 {
+  background-color: white;
+}
+</style>
+<table id="T_366bb">
+  <thead>
+    <tr>
+      <th class="index_name level0" >state_name</th>
+      <th id="T_366bb_level0_col0" class="col_heading level0 col0" >Maine</th>
+      <th id="T_366bb_level0_col1" class="col_heading level0 col1" >Vermont</th>
+      <th id="T_366bb_level0_col2" class="col_heading level0 col2" >Alaska</th>
+      <th id="T_366bb_level0_col3" class="col_heading level0 col3" >Utah</th>
+      <th id="T_366bb_level0_col4" class="col_heading level0 col4" >District of Columbia</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >age</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_366bb_level0_row0" class="row_heading level0 row0" >0-9</th>
+      <td id="T_366bb_row0_col0" class="data row0 col0" >10%</td>
+      <td id="T_366bb_row0_col1" class="data row0 col1" >10%</td>
+      <td id="T_366bb_row0_col2" class="data row0 col2" >14%</td>
+      <td id="T_366bb_row0_col3" class="data row0 col3" >17%</td>
+      <td id="T_366bb_row0_col4" class="data row0 col4" >11%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row1" class="row_heading level0 row1" >10-19</th>
+      <td id="T_366bb_row1_col0" class="data row1 col0" >11%</td>
+      <td id="T_366bb_row1_col1" class="data row1 col1" >12%</td>
+      <td id="T_366bb_row1_col2" class="data row1 col2" >13%</td>
+      <td id="T_366bb_row1_col3" class="data row1 col3" >16%</td>
+      <td id="T_366bb_row1_col4" class="data row1 col4" >10%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row2" class="row_heading level0 row2" >20-29</th>
+      <td id="T_366bb_row2_col0" class="data row2 col0" >12%</td>
+      <td id="T_366bb_row2_col1" class="data row2 col1" >13%</td>
+      <td id="T_366bb_row2_col2" class="data row2 col2" >16%</td>
+      <td id="T_366bb_row2_col3" class="data row2 col3" >16%</td>
+      <td id="T_366bb_row2_col4" class="data row2 col4" >20%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row3" class="row_heading level0 row3" >30-39</th>
+      <td id="T_366bb_row3_col0" class="data row3 col0" >12%</td>
+      <td id="T_366bb_row3_col1" class="data row3 col1" >12%</td>
+      <td id="T_366bb_row3_col2" class="data row3 col2" >15%</td>
+      <td id="T_366bb_row3_col3" class="data row3 col3" >14%</td>
+      <td id="T_366bb_row3_col4" class="data row3 col4" >20%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row4" class="row_heading level0 row4" >40-49</th>
+      <td id="T_366bb_row4_col0" class="data row4 col0" >12%</td>
+      <td id="T_366bb_row4_col1" class="data row4 col1" >12%</td>
+      <td id="T_366bb_row4_col2" class="data row4 col2" >12%</td>
+      <td id="T_366bb_row4_col3" class="data row4 col3" >12%</td>
+      <td id="T_366bb_row4_col4" class="data row4 col4" >12%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row5" class="row_heading level0 row5" >50-59</th>
+      <td id="T_366bb_row5_col0" class="data row5 col0" >15%</td>
+      <td id="T_366bb_row5_col1" class="data row5 col1" >15%</td>
+      <td id="T_366bb_row5_col2" class="data row5 col2" >13%</td>
+      <td id="T_366bb_row5_col3" class="data row5 col3" >10%</td>
+      <td id="T_366bb_row5_col4" class="data row5 col4" >11%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row6" class="row_heading level0 row6" >60-69</th>
+      <td id="T_366bb_row6_col0" class="data row6 col0" >15%</td>
+      <td id="T_366bb_row6_col1" class="data row6 col1" >14%</td>
+      <td id="T_366bb_row6_col2" class="data row6 col2" >11%</td>
+      <td id="T_366bb_row6_col3" class="data row6 col3" >8%</td>
+      <td id="T_366bb_row6_col4" class="data row6 col4" >9%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row7" class="row_heading level0 row7" >70-79</th>
+      <td id="T_366bb_row7_col0" class="data row7 col0" >8%</td>
+      <td id="T_366bb_row7_col1" class="data row7 col1" >8%</td>
+      <td id="T_366bb_row7_col2" class="data row7 col2" >5%</td>
+      <td id="T_366bb_row7_col3" class="data row7 col3" >5%</td>
+      <td id="T_366bb_row7_col4" class="data row7 col4" >5%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row8" class="row_heading level0 row8" >80+</th>
+      <td id="T_366bb_row8_col0" class="data row8 col0" >5%</td>
+      <td id="T_366bb_row8_col1" class="data row8 col1" >4%</td>
+      <td id="T_366bb_row8_col2" class="data row8 col2" >2%</td>
+      <td id="T_366bb_row8_col3" class="data row8 col3" >2%</td>
+      <td id="T_366bb_row8_col4" class="data row8 col4" >3%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row9" class="row_heading level0 row9" >Total</th>
+      <td id="T_366bb_row9_col0" class="data row9 col0" >100%</td>
+      <td id="T_366bb_row9_col1" class="data row9 col1" >100%</td>
+      <td id="T_366bb_row9_col2" class="data row9 col2" >100%</td>
+      <td id="T_366bb_row9_col3" class="data row9 col3" >100%</td>
+      <td id="T_366bb_row9_col4" class="data row9 col4" >100%</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
