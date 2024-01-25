@@ -233,7 +233,7 @@ The second is closer to the example in {numref}`pohet`. Only certain types of pe
 :label: comedian
 ```
 
-A standup comedian is trying to improve a joke. Over the course of ten sets, he tells ten different versions. He gauges the audience reaction and decides to use the version that got the loudest laugh from the crowd. Is this an experiment or is this an observational study? 
+A standup comedian is trying to improve a joke. Over the course of two sets, he tells two different versions. He gauges the audience reaction and decides to use the version that got the loudest laugh from the crowd. Is this an experiment or is this an observational study? 
 
 ```{exercise-end}
 ```
