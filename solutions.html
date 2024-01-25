@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Solutions &#8212; Intro Stats</title>
+    <title>Selected Solutions &#8212; Intro Stats</title>
   
   
   
@@ -70,6 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Other" href="other.html" />
+    <link rel="prev" title="Overview" href="Rbasics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -130,8 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -207,7 +207,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Selected Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 
@@ -394,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Solutions</h1>
+    <h1>Selected Solutions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -405,6 +406,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started"><span class="xref myst">Getting Started</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiments">Experiments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observational-studies">Observational Studies</a></li>
 </ul>
             </nav>
         </div>
@@ -416,28 +419,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="solutions">
-<h1>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="selected-solutions">
+<h1>Selected Solutions<a class="headerlink" href="#selected-solutions" title="Permalink to this heading">#</a></h1>
 <section id="getting-started">
 <h2><a class="reference internal" href="gettingstarted.html#getting-started"><span class="std std-ref">Getting Started</span></a><a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-0">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="gettingstarted.html#spotpop"> Exercise 1</a></p>
 <section id="solution-content">
-<p>There’s no single solution…</p>
+<p>There are many possible answers. A good answer has to pay attention to the <strong>context</strong> of the data, in order to make fair comparisons or include appropriate caveats.</p>
+<p>Suppose you decide to average the song popularities for each artist. It’s important to acknowledge that</p>
+<ol class="arabic simple">
+<li><p>Not all artists have the same number of songs in this data set.</p></li>
+<li><p>The songs included are from the artist’s “top songs” as determined by Spotify, which generally means their most popular songs.</p></li>
+<li><p>Artists with <em>more</em> songs in the data are at a disadvantage because the marginal songs will be less popular than the others.</p></li>
+</ol>
+<p>So maybe you should just average the top four songs for each artist. But if one artist has only released 20 songs and another has released 100 songs, maybe that’s not fair. Nothing will be perfect.</p>
 </section>
 </div>
+</section>
+<section id="experiments">
+<h2>Experiments<a class="headerlink" href="#experiments" title="Permalink to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-1">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="experiments.html#exp1"> Exercise 4</a></p>
+<section id="solution-content">
+<p>The difference in average incomes indicates that our comparison will be confounded. The treatment group has more money, so they will likely have other resources that contribute to their dental health other than the electric toothbrush.</p>
+</section>
+</div>
+<div class="solution dropdown admonition" id="solutions-solution-2">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="experiments.html#exp2"> Exercise 5</a></p>
+<section id="solution-content">
+<p>Only the last choice fits the definition of an experiment. The first features assignment to treatment that is understood, but it is not done by the researcher. The second also lacks a researcher component.</p>
+</section>
+</div>
+</section>
+<section id="observational-studies">
+<h2>Observational Studies<a class="headerlink" href="#observational-studies" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="solutions-solution-3">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="observational.html#medprog"> Exercise 7</a></p>
 <section id="solution-content">
-<p>The data might be valid, but the inference can be false. There are too many other factors to account for to conclude that the treatments have not improved. The historical comparison does not ensure that breast cancer is detected at the same stage, for example. There can also be the effect of other diseases, the treatments for which improve at the same rate. Note also the different kinds of rates that are relevant. The provided data focuses on deaths only, but not what percentage of people who get cancer ultimately die.</p>
-<p>Here is a toy, quantitative illustration.</p>
+<p>The data might be valid, but the inference can be false. There are too many other factors to account for to conclude that the treatments have not improved. The historical comparison does not ensure that breast cancer is detected at the same stage, for example. There can also be the effect of other diseases, the treatments for which can also improve. Note also the different kinds of rates that are relevant. The provided data focuses on deaths only, but not what percentage of people who get cancer ultimately die.</p>
+<p>The above is a sufficient answer. Here is a toy, quantitative illustration.</p>
 <p>Suppose women in this age group only die from breast cancer or in a car crash. In more recent time periods, cancer treatment is effective so that only 1% of cases result in death. Before that, 10% of cases resulted in death. There are also advances in car safety. 100% of car crashes used to result in death and now just 10%. The death rate improves 10x in both cases.</p>
 <p>Suppose that car crashes and cancer occur at the same rate over time.</p>
 <p>Before: If 1000 women get into a car crash and another 1000 get cancer, there are 1000 deaths from crashes and 100 deaths from cancer. That means 100 of 1100 deaths (1/11) are from cancer.</p>
 <p>Now: If 1000 women get into a car crash, 100 die. 1000 get cancer and 10 die. This means that 10 of 110 deaths (1/11) are from cancer. The rate is the same!</p>
-<p>This doesn’t give the same 13 out of 1000 deaths rate, but it illustrates the point simply. To find a 13 of 1000 deaths to be due to cancer, we can solve for an initial death rate from cancer, <span class="math notranslate nohighlight">\(r\)</span>, continuing to assume 1000 occurrences and a death rate of 1 (100%) for crashes:</p>
+<p>This doesn’t give the same 13 out of 1000 deaths rate from the question, but it illustrates the point simply. To find a 13 of 1000 deaths to be due to cancer, we can solve for an initial death rate from cancer, <span class="math notranslate nohighlight">\(r\)</span>, continuing to assume 1000 occurrences and a death rate of 1 (100%) for crashes:</p>
 <div class="math notranslate nohighlight">
 \[\frac{13}{1000} = \frac{1000 \times r}{1000\times r + 1000\times 1}.\]</div>
 <p>Simplifying,</p>
@@ -448,6 +478,19 @@ $<span class="math notranslate nohighlight">\(13000r + 13000 = 1000000r\)</span>
 and \)</span>r = \frac{13}{987}$, or about 1.3%. Then, let the improved cancer treatment will result in a death from cancer 0.13% of the time. If cars become safer, resulting in a death rate of 10%, then we still have 13 of 1000 deaths being from cancer,</p>
 <div class="math notranslate nohighlight">
 \[\frac{13}{1000} = \frac{1000 \times 0.1 \times r}{1000\times 0.1 \times r + 1000\times 0.1}.\]</div>
+</section>
+</div>
+<div class="solution dropdown admonition" id="solutions-solution-4">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="observational.html#comedian"> Exercise 8</a></p>
+<section id="solution-content">
+<p>This is an experiment because it features a researcher who is deliberately varying a joke. The defining feature of an experiment is the researcher’s control of assignment to treatment.</p>
+<p>Researcher: comedian
+Control: first joke version
+Treatment: second joke version
+Control group: first joke audience
+Treatment group: second joke audience</p>
+<p>The fails to be a conclusive experiment because the measurement is done imprecisely (audience reaction), the control and treatment groups are not determined randomly, and double blinding is impossible. These weaknesses are not to be confused for the features of an observational study.</p>
 </section>
 </div>
 </section>
@@ -483,6 +526,24 @@ and \)</span>r = \frac{13}{987}$, or about 1.3%. Then, let the improved cancer t
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Rbasics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Overview</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="other.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Other</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -500,6 +561,8 @@ and \)</span>r = \frac{13}{987}$, or about 1.3%. Then, let the improved cancer t
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started"><span class="xref myst">Getting Started</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiments">Experiments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observational-studies">Observational Studies</a></li>
 </ul>
   </nav></div>
 
