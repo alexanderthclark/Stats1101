@@ -1,3 +1,4 @@
+(experiments)=
 # Experiments
 
 ```{admonition} Important Readings
