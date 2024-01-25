@@ -42,4 +42,5 @@ parts:
 
 - caption: Other
   chapters:
+    - file: solutions
     - file: other
