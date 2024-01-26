@@ -1,0 +1,86 @@
+\usepackage{pgf,tikz}
+\usetikzlibrary{automata, positioning}
+\usepackage{pas-tableur} % spreadsheet-like tables
+
+
+% random 
+\usepackage{graphicx} % for images
+\usepackage{xcolor} % for text colors
+\usepackage{hyperref} % hyperlinking
+\usepackage{csquotes} % display quotes
+\usepackage[T1]{fontenc} % Nicer default font (+ math font) than Computer Modern for most use cases
+\usepackage{booktabs}  % table support for pandoc > 1.12.2, toprule etc
+\usepackage{adjustbox} % Used to constrain images to a maximum size 
+%\usepackage[marginparsep=0.4mm]{geometry} % Used to adjust the document margins
+\usepackage{amsmath} % Equations
+\usepackage{amssymb} % Equations
+\usepackage{comment} % block comments
+\usepackage{fontawesome} % emoji stuff
+%\usepackage{marginnote} % for pyfile command
+\usepackage{makeidx} % for index
+\usepackage{caption}
+\usepackage{colortbl}
+\usepackage{float}
+
+
+
+%%%% pas-tableur modifications
+\definecolor{orangeSelect}{cmyk}{0,.25,1, 0.0}
+\definecolor{orangeLine}{cmyk}{0,.25,1, .5}
+
+% Modifying pas-tableur
+% comments translated by chatgpt
+\newcommand*\multiSelect[2]
+	{%
+		%==> Filling the selected cells with a semi-transparent blue color
+		\fill[orangeSelect,opacity=0.25] ($(cell#1.north west)+(0.25pt,-0.25pt)$) rectangle ($(cell#2.south east)+(-0.25pt,0.25pt)$);%
+		% Drawing a thick border around the first selected cell
+		\draw[thick, dashed, orangeLine] (cell#1.north west) rectangle (cell#2.south east);%
+		% Drawing a small black rectangle in the bottom-right corner of the second selected cell
+		%\fill[black] ($(cell#2.south east)+(-0.5pt,0.5pt)$) rectangle +(3pt,-3pt);%
+		%
+		%==> Coloring the "column" headers
+		%	
+		%\StrChar{#1}{1}[\str@start] % for example, "G"
+		%\StrChar{#2}{1}[\str@end]   % for example, "L"
+		%\StrBetween{\col@names}{\str@start}{\str@end}[\str@col] % returns for example "HIJK"
+		%\edef\str@col{\str@start\str@col%\str@end} % becomes "GHIJKL"
+		%\StrLen{\str@col}[\nb@columns] % number of "column" headers to color
+		%\foreach \i in {1,...,\nb@columns}
+		%{%
+		%	\StrChar{\str@col}{\i}[\name]%
+		%	\pastableur@colorcell{\name}{1}
+		%	\node at (\name) {\helvbx\name};%
+		%}%
+		%	
+		%==> Coloring the "row" headers
+		%	
+		%\StrGobbleLeft{#1}{2}[\first@num]%
+		%\StrGobbleLeft{#2}{2}[\second@num]%
+		%\foreach \i in {\first@num,...,%%\second@num}
+		%{%
+		%	\pastableur@colorcell{numline\i}{0}
+		%	\node[celhead,minimum width=\numline@width,minimum height=\line@height] at (numline\i) {\helvbx\i};%
+		%}%
+	}% end of \multiSelec
+
+\newcommand*\cellEntry[3]{\selecCell{#1}{#2}\celtxt[l,color=red]{#1}{#2}{#3}
+}
+
+\newcommand*\selectCell[2]
+	{%
+		%==> Row Header	
+		%
+		\%pastableur@colorcell{numline#2}{0}
+		%\node[celhead,minimum width=\numline@width,minimum height=\line@height] at (numline#2) {\helvbx#2};%
+		%	
+		%==> Column Header
+		%
+		%\pastableur@colorcell{#1}{1}
+		%\node at (#1) {\helvbx#1};%
+		%
+		%==> Cell cell#1-#2
+		%	
+		\draw[very thick] (cell#1-#2.south west) rectangle (cell#1-#2.north east);%
+		\fill[black] ($(cell#1-#2.south east)+(-1pt,1pt)$) rectangle +(3pt,-3pt);%
+	} % end of \selecCell

@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{sheets}
+
+\begin{document}
+
+\begin{tikzpicture}
+\tableur[1]{A,B}
+\celtxt[r]{A}{1}{2}
+%\celtxt[align=left,color=red]{B}{1}{=2}
+\celtxt[l,color=red]{B}{1}{=A1 + 2}
+\end{tikzpicture} $\rightarrow$  Press enter $\rightarrow$ \begin{tikzpicture}
+\tableur[1]{A,B}
+\celtxt[r]{A}{1}{2}
+\celtxt{B}{1}{4}
+\end{tikzpicture}
+
+\end{document}

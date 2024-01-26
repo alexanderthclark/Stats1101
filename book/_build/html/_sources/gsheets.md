@@ -10,7 +10,15 @@ Arithmetic can be done as you would expect, as long as you enter `=` and then th
 
 ### Cell References: `A1` and `Sheet1!A1`
 
-You can reference the value of another cell using its column and row coordinate. For example, `A1` refers to the value in column A, row 1. If you would like to reference the value in another sheet named `Sheet1` (another tab in the same workbook), you can do that with the syntax `=Sheet1!A1`. 
+You can reference the value of another cell using its column and row coordinate. For example, `A1` refers to the value in column A, row 1. 
+
+```{figure} images/tikz/sheetsFormula.svg
+:width: 90%
+:name: sheetsformula
+
+```
+
+If you would like to reference the value in another sheet named `Sheet1` (another tab in the same workbook), you can do that with the syntax `=Sheet1!A1`. 
 
 ### Cell Ranges: `A1:A2`, `A:A` and `A1:B2`
 
@@ -23,6 +31,13 @@ You can select a range of cells with the mouse or by specifying a range of cell 
 
 Selecting a range of cells will be useful later when we use formulas. Note, if you use the reference `=A1:B2` by itself, as shown below, you will get back an error because the 2x2 range cannot be inserted into a single cell.
 
+
+```{figure} images/tikz/sheetsRange.svg
+:width: 67%
+:name: sheetsrange
+
+```
+
 ### Copying and Pasting Cell References (`$A$1` vs `A1`)
 
 To leverage the power of Sheets, you should be copying and pasting your references and formulas as much as possible. There are three types of references that behave differently when copying and pasting. A plain `=A1` reference:
@@ -31,6 +46,20 @@ To leverage the power of Sheets, you should be copying and pasting your referenc
 2. `=A$1`, mixed referencing where the column is relative
 3. `=$A1`, mixed referencing where the row is relative
 4. `=$A$1`, absolute referencing
+
+```{figure} images/tikz/sheetsRelativeCol.svg
+:width: 100%
+:name: sheetsAbsoluteRow
+
+Absolute Row referencing.
+```
+
+```{figure} images/tikz/sheetsRelativeRow.svg
+:width: 100%
+:name: sheetsAbsoluteCol
+
+Absolute Column referencing.
+```
 
 ## Formulas
 

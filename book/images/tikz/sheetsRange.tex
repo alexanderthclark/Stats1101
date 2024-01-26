@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{sheets}
+
+\begin{document}
+
+\begin{tikzpicture}
+\tableur[2]{A,B,C}
+\celtxt[r]{A}{1}{2}
+%\celtxt[align=left,color=red]{B}{1}{=2}
+\multiSelect{A-1}{B-2}
+%\selecCell{C}{1}
+%\celtxt[l,color=red]{C}{1}{=A1:B2}
+\cellEntry{C}{1}{=A1:B2}
+\end{tikzpicture} 
+
+\end{document}
