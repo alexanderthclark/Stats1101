@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Income &#8212; Intro Stats</title>
+    <title>The Histogram &#8212; Intro Stats</title>
   
   
   
@@ -67,6 +67,8 @@ const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'thehistogram';</script>
     <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -195,10 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Income</a></li>
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Histogram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
@@ -272,73 +271,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/thehistogram.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/thehistogram.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onColab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -394,7 +326,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/thehistogram.ipynb" target="_blank"
+      <li><a href="_sources/thehistogram.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -404,7 +336,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -478,7 +410,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Income</h1>
+    <h1>The Histogram</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -488,12 +420,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Income</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heights-and-crowding">Heights and Crowding</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-variables">Controlling for Variables</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercies">Exercies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-a-distribution">Summarizing a Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-sleuthing-out-fraud">Example: Sleuthing out Fraud</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-real-data">Working with Real Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-tabulation">Cross-Tabulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
             </nav>
         </div>
     </div>
@@ -504,414 +444,559 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-histogram">
+<h1>The Histogram<a class="headerlink" href="#the-histogram" title="Link to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 3</p></li>
+</ul>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yticks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-    
-    <span class="k">if</span> <span class="n">ylabel</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency (Absolute)&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Minutes of TV Watched&quot;</span><span class="p">)</span>
-    <span class="c1">#ax.set_title(&quot;&quot;)</span>
-    
-    <span class="k">if</span> <span class="n">yticks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">yticks</span><span class="p">)</span>
-    
-    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;images/&#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;.svg&quot;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.svg&#39;</span><span class="p">,</span> 
-                   <span class="n">transparent</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                    <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;svg&#39;</span><span class="p">,</span>
-                    <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    
-<span class="n">style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;bins&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-        <span class="s2">&quot;ec&quot;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">2000</span>
-
-<span class="n">ndata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="n">n</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span> <span class="mi">20</span> <span class="o">*</span> <span class="p">(</span><span class="n">ndata</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">ndata</span><span class="p">)),</span> <span class="o">**</span><span class="n">style</span><span class="p">)</span>
-<span class="n">clean</span><span class="p">(</span><span class="s1">&#39;normal_histogram&#39;</span><span class="p">,</span> <span class="n">yticks</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="c1">#ax.set_yticks([])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/10550b6875a5a52280532027b01e688595a9295b0957299c962f1c0766f6b121.png" src="_images/10550b6875a5a52280532027b01e688595a9295b0957299c962f1c0766f6b121.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mf">1.2</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">sharey</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="o">/</span><span class="n">k</span><span class="p">,</span><span class="mi">3</span><span class="o">/</span><span class="n">k</span><span class="p">))</span>
-
-<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">edata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="n">n</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="mi">44</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">edata</span><span class="p">,</span> <span class="o">**</span><span class="n">style</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C2&#39;</span><span class="p">)</span>
-<span class="n">y_ticks</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_yticks</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">y_ticks</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">{:.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_ticks</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Minutes of TV Watched&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
-
-<span class="c1">#clean(&#39;longright&#39;)</span>
-
-<span class="c1"># Right panel</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="o">-</span><span class="n">edata</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">edata</span><span class="p">),</span> <span class="o">**</span><span class="n">style</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C4&#39;</span><span class="p">)</span>
-<span class="n">y_ticks</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_yticks</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">y_ticks</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">{:.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_ticks</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Minutes of TV Watched&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Skewed Distributions&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;images/skewed_histograms.svg&quot;</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;svg&#39;</span><span class="p">,</span> <span class="n">transparent</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/6385a9241c7dc17f7470e215f6c565a3e9cec6dfba979fcff3cee13033288ab4.png" src="_images/6385a9241c7dc17f7470e215f6c565a3e9cec6dfba979fcff3cee13033288ab4.png" />
-</div>
-</div>
-<section class="tex2jax_ignore mathjax_ignore" id="income">
-<h1>Income<a class="headerlink" href="#income" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">incomes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">216</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-                       <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mf">4.5</span><span class="p">))</span>
-
-<span class="n">sty</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ec&quot;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-      <span class="s2">&quot;zorder&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
-
-<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">,</span> <span class="mf">19.5</span><span class="p">,</span> <span class="mf">20.5</span><span class="p">,</span> <span class="mf">29.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mf">215.5</span><span class="p">,</span> <span class="mf">216.6</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">incomes</span><span class="p">,</span> <span class="o">**</span><span class="n">sty</span><span class="p">,</span>
-       <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-       <span class="n">bins</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="n">e</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="n">e</span><span class="p">,</span> <span class="mi">20</span> <span class="o">+</span> <span class="n">e</span><span class="p">,</span> <span class="mi">30</span><span class="o">+</span><span class="n">e</span><span class="p">,</span>  <span class="mi">216</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">216</span><span class="o">+</span><span class="mi">5</span>
-<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">216</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">216</span><span class="o">+</span><span class="mi">5</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">incomes</span><span class="p">,</span> <span class="o">**</span><span class="n">sty</span><span class="p">,</span>
-       <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-       <span class="n">bins</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="n">e</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="n">e</span><span class="p">,</span> <span class="mi">20</span> <span class="o">+</span> <span class="n">e</span><span class="p">,</span> <span class="mi">30</span><span class="o">+</span><span class="n">e</span><span class="p">,</span> <span class="mi">216</span><span class="o">+</span><span class="mi">5</span>
-<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">216</span><span class="o">+</span><span class="mi">5</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">incomes</span><span class="p">,</span> <span class="o">**</span><span class="n">sty</span><span class="p">,</span>
-       <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-       <span class="n">bins</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="c1"># yticks</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.425</span><span class="p">)</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.125</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.375</span><span class="p">])</span>
-    
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.0425</span><span class="p">)</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.0125</span><span class="p">,</span> <span class="mf">.025</span><span class="p">,</span> <span class="mf">.0375</span><span class="p">])</span>
- 
-<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.0425</span><span class="p">)</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.0125</span><span class="p">,</span> <span class="mf">.025</span><span class="p">,</span> <span class="mf">.0375</span><span class="p">])</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Income ($)&quot;</span><span class="p">)</span>
-<span class="c1">#axs[3].set_ylim(0, .0425)</span>
-<span class="c1">#axs[3].set_yticks([0, .0125, .025, .0375])</span>
- 
-    
-<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axs</span><span class="p">:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">216</span><span class="p">]</span> <span class="p">)</span>
-    <span class="c1">#ax.set_yticks([0,1,2,3,4,5])</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
-    <span class="n">y_ticks</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_yticks</span><span class="p">()</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">y_ticks</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_ticks</span><span class="p">])</span>
-    
-
-
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Income Histograms&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;images/income_histograms.svg&quot;</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;svg&#39;</span><span class="p">,</span> <span class="n">transparent</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">14</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">incomes</span><span class="p">,</span> <span class="o">**</span><span class="n">sty</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>        <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>        <span class="n">bins</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="n">e</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="n">e</span><span class="p">,</span> <span class="mi">20</span> <span class="o">+</span> <span class="n">e</span><span class="p">,</span> <span class="mi">30</span><span class="o">+</span><span class="n">e</span><span class="p">,</span>  <span class="mi">216</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">216</span><span class="o">+</span><span class="mi">5</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">216</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">216</span><span class="o">+</span><span class="mi">5</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">incomes</span><span class="p">,</span> <span class="o">**</span><span class="n">sty</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>        <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>        <span class="n">bins</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;e&#39; is not defined
-</pre></div>
-</div>
-<img alt="_images/0709abfdf572e42aab2efd7ef0eb973c032dd67068dc3b3831ee104cb62355ce.png" src="_images/0709abfdf572e42aab2efd7ef0eb973c032dd67068dc3b3831ee104cb62355ce.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plt.hist(incomes)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="heights-and-crowding">
-<h1>Heights and Crowding<a class="headerlink" href="#heights-and-crowding" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">70</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">d</span><span class="p">,</span>
-       <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-       <span class="n">ec</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0.08333333, 0.        , 0.        , 0.02777778, 0.        ,
-        0.        , 0.02777778, 0.        , 0.        , 0.02777778]),
- array([10., 16., 22., 28., 34., 40., 46., 52., 58., 64., 70.]),
- &lt;BarContainer object of 10 artists&gt;)
-</pre></div>
-</div>
-<img alt="_images/c631cdc78d36d17937b2a8df88e96b33b770dd677db5c8d22f808a65e9ab1fbc.png" src="_images/c631cdc78d36d17937b2a8df88e96b33b770dd677db5c8d22f808a65e9ab1fbc.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">style2</span> <span class="o">=</span> <span class="n">style</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">style2</span><span class="p">[</span><span class="s1">&#39;bins&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">style2</span><span class="p">,</span>
-       <span class="n">zorder</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">clean</span><span class="p">(</span><span class="n">yticks</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/473c38f2e54a33f54204456beaf7ccec17a454b655a1ab07d7b6c85b9f5e5642.png" src="_images/473c38f2e54a33f54204456beaf7ccec17a454b655a1ab07d7b6c85b9f5e5642.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">style2</span> <span class="o">=</span> <span class="n">style</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">style2</span><span class="p">[</span><span class="s1">&#39;bins&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">,</span>  <span class="mf">1.5</span><span class="p">,</span>  <span class="mf">2.5</span><span class="p">,</span>  <span class="mf">3.5</span><span class="p">,</span>  <span class="mf">4.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">]</span> 
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">style2</span><span class="p">,</span>
-       <span class="n">zorder</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-       <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">clean</span><span class="p">(</span><span class="n">ylabel</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/b51e779b754b80749f18d04f75a5ff627e7b523f8bf3a929542c9bbd79e6e72c.png" src="_images/b51e779b754b80749f18d04f75a5ff627e7b523f8bf3a929542c9bbd79e6e72c.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">style2</span> <span class="o">=</span> <span class="n">style</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">style2</span><span class="p">[</span><span class="s1">&#39;bins&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">,</span>  <span class="mf">1.5</span><span class="p">,</span>  <span class="mf">2.5</span><span class="p">,</span>  <span class="mf">3.5</span><span class="p">,</span>  <span class="mf">4.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">]</span> 
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">style2</span><span class="p">,</span>
-       <span class="n">zorder</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-       <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">clean</span><span class="p">(</span><span class="n">yticks</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/fbbb3e766a0c75d1d0b5c28c2b3eb8b9c246bfa34bc2ef1039a03c2f30ab524d.png" src="_images/fbbb3e766a0c75d1d0b5c28c2b3eb8b9c246bfa34bc2ef1039a03c2f30ab524d.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># Sample data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-
-<span class="c1"># Create histogram with density=True</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Get current y-ticks</span>
-<span class="n">y_ticks</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">get_yticks</span><span class="p">()</span>
-
-<span class="c1"># Set new y-ticks (convert density to percentage)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">y_ticks</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">{:.0f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_ticks</span><span class="p">])</span>
-
-<span class="c1"># Set labels and title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Percentage&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram in Percentage&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/c128b0d79ea4360d9c7ab4ce17df1cf8a2eeb20641ddb568325a4c11a19d39ef.png" src="_images/c128b0d79ea4360d9c7ab4ce17df1cf8a2eeb20641ddb568325a4c11a19d39ef.png" />
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="controlling-for-variables">
-<h1>Controlling for Variables<a class="headerlink" href="#controlling-for-variables" title="Link to this heading">#</a></h1>
-<p>Recall a confounder is a variable that can distort the comparion of two groups. In an observational study, it’s a good idea to compare the distributions for confounders between your treatment and control group.</p>
-<p>When a potential confounder is quantitative, this can be done by overlaying the histograms.</p>
-<figure class="align-default" id="speedingrace">
-<a class="reference internal image-reference" href="_images/histogram_goncalves_mello.png"><img alt="_images/histogram_goncalves_mello.png" src="_images/histogram_goncalves_mello.png" style="width: 66%;" /></a>
+<section id="summarizing-a-distribution">
+<h2>Summarizing a Distribution<a class="headerlink" href="#summarizing-a-distribution" title="Link to this heading">#</a></h2>
+<p>You’ve probably seen <strong>histograms</strong> before. They are used to summarize data by showing the distribution. Suppose we collect data on how much television people watch.</p>
+<figure class="align-default" id="normalhist">
+<a class="reference internal image-reference" href="_images/normal_histogram.svg"><img alt="_images/normal_histogram.svg" src="_images/normal_histogram.svg" width="80%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Figure 2 from <span id="id1">[<a class="reference internal" href="bibliography.html#id45" title="Felipe Goncalves and Steven Mello. A few bad apples? racial bias in policing. American Economic Review, 111(5):1406–1441, 2021.">GM21</a>]</span>.</span><a class="headerlink" href="#speedingrace" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">A histogram showing a symmetric, bell-shaped distribution.</span><a class="headerlink" href="#normalhist" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">d</span><span class="p">,</span>
-        <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span>
-        <span class="n">histtype</span> <span class="o">=</span> <span class="s1">&#39;step&#39;</span><span class="p">,</span>
-        <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dotted&#39;</span><span class="p">,</span>
-        <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="mf">.3</span><span class="p">,</span>
-        <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span>
-        <span class="n">histtype</span> <span class="o">=</span> <span class="s1">&#39;step&#39;</span><span class="p">,</span>
-        <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span>
-        <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0.01981578, 0.09907891, 0.15852626, 0.27742096, 0.25760518,
-        0.49539457, 0.31705253, 0.15852626, 0.15852626, 0.03963157]),
- array([-2.40833931, -1.90369107, -1.39904284, -0.8943946 , -0.38974636,
-         0.11490188,  0.61955012,  1.12419836,  1.6288466 ,  2.13349484,
-         2.63814308]),
- [&lt;matplotlib.patches.Polygon at 0x1221d9750&gt;])
-</pre></div>
-</div>
-<img alt="_images/12ff9cb41db108c397e547a4a52474d671478bc712fbdcd4366fe38bac41bdd2.png" src="_images/12ff9cb41db108c397e547a4a52474d671478bc712fbdcd4366fe38bac41bdd2.png" />
-</div>
-</div>
+<p><a class="reference internal" href="#normalhist"><span class="std std-numref">Fig. 2</span></a> lacks any vertical scale. This is inessential as long as we’re only concerned with the <em>shape</em> of the data. The shape can be described without any specific jargon, but common terms are <em>bell-shaped</em>, <em>symmetric</em> and <em>skewed</em>. The <em>tails</em> represent the extreme regions. Bell-shaped distributions are common for traits like height. For other things, like fame, you should expect skew. The right tail for the distribution of heights only goes so far, but the right tail for the distribution of fame will be very long, with a few exceptionally famous people. There is no one as tall as Taylor Swift is famous.<a class="footnote-reference brackets" href="#id17" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<figure class="align-default" id="skewedhist">
+<a class="reference internal image-reference" href="_images/skewed_histograms.svg"><img alt="_images/skewed_histograms.svg" src="_images/skewed_histograms.svg" width="87%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Two skewed histograms. The left panel features on a long left tail and the right panel features a long right tail.</span><a class="headerlink" href="#skewedhist" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A histogram is made of blocks (or bars). Each block has a predetermined <strong>class interval</strong> and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the <em>area</em> of the block is proportional to the number of data points in the class interval. If a vertical scale is supplied, the areas will sum to 100% (or 1, depending on what software you use). This corresponds to a <strong>density</strong> scale.</p>
+<p>Suppose we observed incomes $0, $10, $10, $20, $20, $20, $30, and $216. This approximates the level of income inequality in South Africa.<a class="footnote-reference brackets" href="#id18" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="reference internal" href="#sarand"><span class="std std-numref">Table 6</span></a> summarizes the data set.</p>
+<table class="table" id="sarand">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Data Frequencies</span><a class="headerlink" href="#sarand" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Count</p></th>
+<th class="head"><p>Percentage (%)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>12.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>2</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>3</p></td>
+<td><p>37.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>1</p></td>
+<td><p>12.5</p></td>
+</tr>
+<tr class="row-even"><td><p>216</p></td>
+<td><p>1</p></td>
+<td><p>12.5</p></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference internal" href="#incomehist"><span class="std std-numref">Fig. 4</span></a> plots histograms with different class intervals. The top panel is the most natural to draw, with one-unit-wide class intervals. It’s typical to use wider intervals. The other panels increase the widths, thus changing the <span class="math notranslate nohighlight">\(y\)</span>-axis.</p>
+<figure class="align-default" id="incomehist">
+<a class="reference internal image-reference" href="_images/income_histograms.svg"><img alt="_images/income_histograms.svg" src="_images/income_histograms.svg" width="80%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">All three histograms show the same data. The blocks have areas 12.5%, 25%, 37.5%, 12.5%, and 12.5% in each histogram.</span><a class="headerlink" href="#incomehist" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The <strong>height</strong> of a block represents crowding, not an actual percentage. The last block of the bottom panel of <a class="reference internal" href="#incomehist"><span class="std std-numref">Fig. 4</span></a>, spanning from 35 to 221, is short because there’s just one data point in that wide interval.</p>
+<p>Histograms reveal the shape of the distribution, and sometimes interesting irregularities, like in <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> Review Exercise 11 and in the following example.</p>
+<section id="example-sleuthing-out-fraud">
+<h3>Example: Sleuthing out Fraud<a class="headerlink" href="#example-sleuthing-out-fraud" title="Link to this heading">#</a></h3>
+<p><span id="id5">[<a class="reference internal" href="bibliography.html#id33" title="Lisa L Shu, Nina Mazar, Francesca Gino, Dan Ariely, and Max H Bazerman. Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end. Proceedings of the National Academy of Sciences, 109(38):15197–15200, 2012.">SMG+12</a>]</span>, titled “Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end,” was retracted in 2021 because of evidence of fraud, uncovered in <span id="id6">[<a class="reference internal" href="bibliography.html#id34" title="Uri Simonsohn, Leif D. Nelson, and Joe Simmons. 98: evidence of fraud in an influential field experiment about dishonesty. Data Colada, 2021. URL: https://datacolada.org/98.">SNS21</a>]</span>. The retracted research was based on an experiment where customers of an insurance company were asked to report their odemeter readings. Customers signed a statement asserting their honesty, and the statement was either at the top or at the bottom of the form. The presented finding was that it’s better to have the statement signed <em>before</em> the customer provides the information instead of after.</p>
+<p>Data was collected like in <a class="reference internal" href="#drivingdata"><span class="std std-numref">Table 7</span></a>. The mileage driven is the difference between the baseline and updated mileage.</p>
+<table class="table" id="drivingdata">
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Driving Data</span><a class="headerlink" href="#drivingdata" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Condition</p></th>
+<th class="head"><p>ID</p></th>
+<th class="head"><p>Baseline Mileage</p></th>
+<th class="head"><p>Updated Mileage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Sign Top</p></td>
+<td><p>1</p></td>
+<td><p>896</p></td>
+<td><p>39198</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sign Bottom</p></td>
+<td><p>2</p></td>
+<td><p>21396</p></td>
+<td><p>63511</p></td>
+</tr>
+</tbody>
+</table>
+<p>The alleged fraud in this research was uncovered, in part, because of the use of histograms. The first red flag was the <strong>uniform</strong> distribution in the implied miles driven. It’s hard to explain why there appears to be a ceiling so that no customers drove more than 50,000 miles or why driving close to zero miles is not more rare. In general, you would expect something closer to a bell curve.</p>
+<figure class="align-default" id="impliedhist">
+<a class="reference internal image-reference" href="_images/colada98_implied_hist.svg"><img alt="_images/colada98_implied_hist.svg" src="_images/colada98_implied_hist.svg" width="80%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">A uniform distribution of miles driven is anomalous because other driving data shows a more bell-shaped distribution.</span><a class="headerlink" href="#impliedhist" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Another tip-off comes when reducing the class intervals to be just one-unit wide. This is preposterously narrow if you are only interested in the general shape of a distribution, but it shows something about how people round numbers when reporting them. Equal class interval widths also means that heights and areas represent the same things, both percentages and crowding. <a class="reference internal" href="#baselinehist"><span class="std std-numref">Fig. 6</span></a> shows rounding in the reported baseline mileage.</p>
+<figure class="align-default" id="baselinehist">
+<a class="reference internal image-reference" href="_images/colada98_baseline_hist.svg"><img alt="_images/colada98_baseline_hist.svg" src="_images/colada98_baseline_hist.svg" width="80%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Spikes in the histogram show that people are more likely to report round numbers at the nearest 1,000.</span><a class="headerlink" href="#baselinehist" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Checking the reported updated mileage shows no such rounding.</p>
+<figure class="align-default" id="updateehist">
+<a class="reference internal image-reference" href="_images/colada98_update_hist.svg"><img alt="_images/colada98_update_hist.svg" src="_images/colada98_update_hist.svg" width="80%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Spikes in the histogram are not predominant at the nearest 1,000.</span><a class="headerlink" href="#updateehist" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This reveals something interesting.</p>
+<ol class="arabic simple">
+<li><p>There is rounding in the baseline mileage.</p></li>
+<li><p>There is no rounding in the updated mileage.</p></li>
+</ol>
+<p>This suggests something fishy. Maybe it is the insurance customers who report their own mileage in a fishy way. But why round for the baseline but not the updated? <em>Or</em> it reveals something fishy about the researchers, who might have manipulated the updated mileage data. These numbers could have been fabricated with a random number generator, hence the lack of human-like rounding. Given the retraction, most favor the latter hypothesis.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercies">
-<h1>Exercies<a class="headerlink" href="#exercies" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
+<section id="interactive">
+<h3>Interactive<a class="headerlink" href="#interactive" title="Link to this heading">#</a></h3>
+<p>Use <a class="reference external" href="https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing">this Google Colab form</a> to create a histogram and adjust the class intervals. No coding is required.</p>
+</section>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
+<p>In the previous example, we were working with a specific <strong>variable</strong>, vehicle mileages. A variable is a characteristic recorded for each individual in a study. In a spreadsheet, the individuals usually correspond to rows and the variables are stored in the columns. Mileage is a <strong>quantitative</strong> variable. Something like the car color would be <strong>qualitative</strong> (also called categorical). Qualitative variables describe or categorize something and quantitative variables measure something, usually including units. Quantitative variables necessarily involve numbers, but a number doesn’t automatically qualify a variable as quantitative. For example, postal codes are qualitative despite the use of numbers. I grew up in 40422 and now I have an office in the measly zip code of 10027, but subtracting them to find I’ve regressed by 30,395 doesn’t mean anything. In other words, there’s no quantitative content in the numbers. A postal code is qualitative.</p>
+<figure class="align-default" id="typestree">
+<a class="reference internal image-reference" href="_images/typesofvariables.svg"><img alt="_images/typesofvariables.svg" src="_images/typesofvariables.svg" width="68%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Variable taxonomy</span><a class="headerlink" href="#typestree" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Quantitative variables can be subdivided into discrete and continuous variables. For a continuous variable, you’ll always be able to find another value between two other values. The quantities don’t come in discrete steps. You could fill a beaker with 1 ounce of water, 2 ounces of water, or any arbitrary amount between 1 and 2 ounces. Water can be measured continuoustly. For a discrete variable, each value has a next highest or next lowest value. Family size is discrete because there are no possibilities between 3 and 4. The lines can be blurry, either because of convention or limits of measurement precision. Ice cream could be measured continuously, just like water. A shop might charge by weight, but it’s more likely you’ll order by the scoop and they’ll shoo you away if you ask for 1.7777777 scoops or if you complain that you asked for 2 scoops and they gave you 1.99999999998. This tension between continuous and discrete will be familiar to anyone who has agonized over a stingy serving of chicken when dining at Chipotle Mexican Grill.</p>
+<p>Developing this taxonomy is a bit of a detour, but it helps provide the vocabulary for discussing whether or not endpoints are included in the class intervals for a contiuous variable. Ultimately, it’s up to the investigator.</p>
+<section id="working-with-real-data">
+<h3>Working with Real Data<a class="headerlink" href="#working-with-real-data" title="Link to this heading">#</a></h3>
+<p>Real world data is messy and sometimes inelegantly organized. The 1996-1997 National Organizations Survey (<span id="id7">[<a class="reference internal" href="bibliography.html#id56" title="Arne L Kalleberg, David Knoke, and Peter V Marsden. National Organizations Survey (NOS), 1996-1997. Inter-university Consortium for Political and Social Research Ann Arbor, MI, 2001.">KKM01</a>]</span>) records data on US work establishments, including demographics and revenue among other variables. Revenue is a quantitative variable, but responding establishments could also refuse to answer, respond that they don’t know, or choose “not applicable.” Perhaps because of technical limitations, all responses are still recorded as numbers. The “Not applicable” response is recorded as -999. “Don’t know” is recorded as 88,888,888,888 and “refused to answer” is recorded as 99,999,999,999. These are special <em>flag values</em> that aren’t meant to be interpreted as dollar amounts like the other values for the otherwise quantiative variable. Anyone deriving a statistic using the variable would have to remove these observations in their calculations.</p>
+<p>The lesson is to inspect your data and any accompanying documentation. The survey codebook explains these flag values. Preliminary data inspection and a histogram can also help a researcher discover impossible negative values or strange clumps at large values like 99,999,999,999.</p>
+<p>Unfortunately, this lesson was a learned only after a mistake was discovered in <span id="id8">[<a class="reference internal" href="bibliography.html#id35" title="Cedric Herring. Does diversity pay?: race, gender, and the business case for diversity. American sociological review, 74(2):208–224, 2009.">Her09</a>]</span>. Herring found that more diverse businesses recorded higher revenue in an observational study, arguing for the business case for racial and gender diversity. <span id="id9">[<a class="reference internal" href="bibliography.html#id37" title="Dragana Stojmenovska, Thijs Bol, and Thomas Leopold. Does diversity pay? a replication of herring (2009). American Sociological Review, 82(4):857–867, 2017.">SBL17</a>]</span> found the mistakes in the calculations and argued for no effect on the basis of other statistical details. This necessitated the follow-up <span id="id10">[<a class="reference internal" href="bibliography.html#id36" title="Cedric Herring. Is diversity still a good thing? American Sociological Review, 82(4):868–877, 2017.">Her17</a>]</span>, which argued in support of the original hypothesis with an updated analysis.</p>
+<figure class="align-default" id="noshist">
+<a class="reference internal image-reference" href="_images/nos_histogram.svg"><img alt="_images/nos_histogram.svg" src="_images/nos_histogram.svg" width="72%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">The gray blocks are unusual for containing negative or very high values compared to the rest of the data. These blocks contain flag values.</span><a class="headerlink" href="#noshist" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The above is a cautionary tale and highlights the necessity of dealing with missing values or coaxing an answer out of the respondents. We’ll discuss surveys in Chapter 19, but it’s worth noting here that the structure of a variable can impact the quality of a study. Netflix switched from a 1-5 stars scale for ratings to a thumbs up/thumbs down scale. This led to a <a class="reference external" href="https://www.businessinsider.com/why-netflix-replaced-its-5-star-rating-system-2017-4">200% increase in users rating titles</a>.</p>
+</section>
+</section>
+<section id="controlling-for-a-variable">
+<h2>Controlling for a Variable<a class="headerlink" href="#controlling-for-a-variable" title="Link to this heading">#</a></h2>
+<p>Chapter 3.5 works through an example showing the distribution of blood pressure levels for users and non-users of an oral contraceptive. Overlaying the histograms is useful when comparing only populations from the same age group, suggesting that the pill affects blood pressure.</p>
+<p>We can also split histograms for merely descriptive purposes. Below, we show the distribution of the age at which 50 important paintings were completed for both Picasso and Cezanne. After splitting by the qualitative varaible, artist name, we see that Picasso peaked earlier.</p>
+<figure class="align-default" id="picasso-cez-combined">
+<a class="reference internal image-reference" href="_images/picasso_and_cezanne_combined.svg"><img alt="_images/picasso_and_cezanne_combined.svg" src="_images/picasso_and_cezanne_combined.svg" width="65%" /></a>
+</figure>
+<figure class="align-default" id="picasso-cez">
+<a class="reference internal image-reference" href="_images/picasso_and_cezanne.svg"><img alt="_images/picasso_and_cezanne.svg" src="_images/picasso_and_cezanne.svg" width="65%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Picasso peaked earlier than Cezanne.</span><a class="headerlink" href="#picasso-cez" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="cross-tabulation">
+<h2>Cross-Tabulation<a class="headerlink" href="#cross-tabulation" title="Link to this heading">#</a></h2>
+<p>Cross-tabs show a distribution much like a histogram, but in table form. This can be useful when you’d otherwise have a cluttered graph with many overlayed histograms.</p>
+<p>In considering something like a covid-mortality rate across states, it is important to remember that states are demographically different. Age is one of the more important variables to adjust for. Below, each column contains the same information you’d find in the histogram for a specific state’s age distribution. The background gradient helps make the difference in cell values more apparent. For example, Alaska and Utah are younger than Vermont.</p>
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+/* General Styling for the Table */
+#T_366bb {
+  border-collapse: separate;
+  border-spacing: 2px;
+  width: 100%;
+}
+<p>/* Styling for Table Headers */
+#T_366bb th {
+background-color: #f0f0f0;
+color: #000000;
+padding: 8px;
+border: 1px solid #ccc;
+text-align: center;
+}</p>
+<p>/* Styling for Table Data Cells */
+#T_366bb td {
+padding: 8px;
+border: 1px solid #ccc;
+text-align: center;
+}</p>
+<p>/* Your Specific Cell Background Colors */
+#T_366bb_row0_col0 { background-color: #fdd9b5; color: #000000; }
+#T_366bb_row0_col1 { background-color: #fddab6; color: #000000; }
+#T_366bb_row0_col2 { background-color: #fdc794; color: #000000; }
+#T_366bb_row0_col3 { background-color: #fdbb81; color: #000000; }
+#T_366bb_row0_col4 { background-color: #fdd5ab; color: #000000; }
+#T_366bb_row1_col0 { background-color: #fdd5ab; color: #000000; }
+#T_366bb_row1_col1 { background-color: #fdd2a6; color: #000000; }
+#T_366bb_row1_col2 { background-color: #fdcfa0; color: #000000; }
+#T_366bb_row1_col3 { background-color: #fdbe84; color: #000000; }
+#T_366bb_row1_col4 { background-color: #fddbb8; color: #000000; }
+#T_366bb_row2_col0 { background-color: #fdd4aa; color: #000000; }
+#T_366bb_row2_col1 { background-color: #fdce9e; color: #000000; }
+#T_366bb_row2_col2 { background-color: #fdc088; color: #000000; }
+#T_366bb_row2_col3 { background-color: #fdc088; color: #000000; }
+#T_366bb_row2_col4 { background-color: #fdac67; color: #000000; }
+#T_366bb_row3_col0 { background-color: #fdd5ab; color: #000000; }
+#T_366bb_row3_col1 { background-color: #fdd5ab; color: #000000; }
+#T_366bb_row3_col2 { background-color: #fdc692; color: #000000; }
+#T_366bb_row3_col3 { background-color: #fdc692; color: #000000; }
+#T_366bb_row3_col4 { background-color: #fda965; color: #000000; }
+#T_366bb_row4_col0 { background-color: #fdd2a6; color: #000000; }
+#T_366bb_row4_col1 { background-color: #fdd3a9; color: #000000; }
+#T_366bb_row4_col2 { background-color: #fdd4aa; color: #000000; }
+#T_366bb_row4_col3 { background-color: #fdd4aa; color: #000000; }
+#T_366bb_row4_col4 { background-color: #fdd3a9; color: #000000; }
+#T_366bb_row5_col0 { background-color: #fdc28b; color: #000000; }
+#T_366bb_row5_col1 { background-color: #fdc590; color: #000000; }
+#T_366bb_row5_col2 { background-color: #fdcfa0; color: #000000; }
+#T_366bb_row5_col3 { background-color: #fddbb8; color: #000000; }
+#T_366bb_row5_col4 { background-color: #fddbb8; color: #000000; }
+#T_366bb_row6_col0 { background-color: #fdc692; color: #000000; }
+#T_366bb_row6_col1 { background-color: #fdc895; color: #000000; }
+#T_366bb_row6_col2 { background-color: #fdd7b1; color: #000000; }
+#T_366bb_row6_col3 { background-color: #fedfc0; color: #000000; }
+#T_366bb_row6_col4 { background-color: #fedebd; color: #000000; }
+#T_366bb_row7_col0 { background-color: #fedfc0; color: #000000; }
+#T_366bb_row7_col1 { background-color: #fee0c3; color: #000000; }
+#T_366bb_row7_col2 { background-color: #feead6; color: #000000; }
+#T_366bb_row7_col3 { background-color: #feead6; color: #000000; }
+#T_366bb_row7_col4 { background-color: #fee9d4; color: #000000; }
+#T_366bb_row8_col0 { background-color: #feead5; color: #000000; }
+#T_366bb_row8_col1 { background-color: #feebd8; color: #000000; }
+#T_366bb_row8_col2 { background-color: #fff0e2; color: #000000; }
+#T_366bb_row8_col3 { background-color: #ffefe0; color: #000000; }
+#T_366bb_row8_col4 { background-color: #ffeedd; color: #000000; }
+#T_366bb_row9_col0 { background-color: white; color: #000000; }
+#T_366bb_row9_col1 { background-color: white; color: #000000; }
+#T_366bb_row9_col2 { background-color: white; color: #000000; }
+#T_366bb_row9_col3 { background-color: white; color: #000000; }
+#T_366bb_row9_col4 { background-color: white; color: #000000; }
+</style></p>
+</head>
+</html>
+<style type="text/css">
+#T_366bb_row0_col0 {
+  background-color: #fdd9b5;
+  color: #000000;
+}
+#T_366bb_row0_col1 {
+  background-color: #fddab6;
+  color: #000000;
+}
+#T_366bb_row0_col2, #T_366bb_row3_col3 {
+  background-color: #fdc794;
+  color: #000000;
+}
+#T_366bb_row0_col3 {
+  background-color: #fdbb81;
+  color: #000000;
+}
+#T_366bb_row0_col4, #T_366bb_row1_col0, #T_366bb_row3_col0, #T_366bb_row3_col1 {
+  background-color: #fdd5ab;
+  color: #000000;
+}
+#T_366bb_row1_col1, #T_366bb_row4_col0 {
+  background-color: #fdd2a6;
+  color: #000000;
+}
+#T_366bb_row1_col2, #T_366bb_row5_col2 {
+  background-color: #fdcfa0;
+  color: #000000;
+}
+#T_366bb_row1_col3 {
+  background-color: #fdbe84;
+  color: #000000;
+}
+#T_366bb_row1_col4, #T_366bb_row5_col3 {
+  background-color: #fddbb8;
+  color: #000000;
+}
+#T_366bb_row2_col0, #T_366bb_row4_col2, #T_366bb_row4_col3 {
+  background-color: #fdd4aa;
+  color: #000000;
+}
+#T_366bb_row2_col1 {
+  background-color: #fdce9e;
+  color: #000000;
+}
+#T_366bb_row2_col2, #T_366bb_row2_col3 {
+  background-color: #fdc088;
+  color: #000000;
+}
+#T_366bb_row2_col4 {
+  background-color: #fdac67;
+  color: #000000;
+}
+#T_366bb_row3_col2, #T_366bb_row6_col0 {
+  background-color: #fdc692;
+  color: #000000;
+}
+#T_366bb_row3_col4 {
+  background-color: #fda965;
+  color: #000000;
+}
+#T_366bb_row4_col1, #T_366bb_row4_col4 {
+  background-color: #fdd3a9;
+  color: #000000;
+}
+#T_366bb_row5_col0 {
+  background-color: #fdc28b;
+  color: #000000;
+}
+#T_366bb_row5_col1 {
+  background-color: #fdc590;
+  color: #000000;
+}
+#T_366bb_row5_col4, #T_366bb_row6_col2 {
+  background-color: #fdd7b1;
+  color: #000000;
+}
+#T_366bb_row6_col1 {
+  background-color: #fdc895;
+  color: #000000;
+}
+#T_366bb_row6_col3, #T_366bb_row7_col0 {
+  background-color: #fedfc0;
+  color: #000000;
+}
+#T_366bb_row6_col4 {
+  background-color: #fedebd;
+  color: #000000;
+}
+#T_366bb_row7_col1 {
+  background-color: #fee0c3;
+  color: #000000;
+}
+#T_366bb_row7_col2, #T_366bb_row7_col3 {
+  background-color: #feead6;
+  color: #000000;
+}
+#T_366bb_row7_col4 {
+  background-color: #fee9d4;
+  color: #000000;
+}
+#T_366bb_row8_col0 {
+  background-color: #feead5;
+  color: #000000;
+}
+#T_366bb_row8_col1 {
+  background-color: #feebd8;
+  color: #000000;
+}
+#T_366bb_row8_col2 {
+  background-color: #fff0e2;
+  color: #000000;
+}
+#T_366bb_row8_col3 {
+  background-color: #ffefe0;
+  color: #000000;
+}
+#T_366bb_row8_col4 {
+  background-color: #ffeedd;
+  color: #000000;
+}
+#T_366bb_row9_col0, #T_366bb_row9_col1, #T_366bb_row9_col2, #T_366bb_row9_col3, #T_366bb_row9_col4 {
+  background-color: white;
+}
+</style>
+<table id="T_366bb">
+  <thead>
+    <tr>
+      <th class="index_name level0" >State</th>
+      <th id="T_366bb_level0_col0" class="col_heading level0 col0" >Maine</th>
+      <th id="T_366bb_level0_col1" class="col_heading level0 col1" >Vermont</th>
+      <th id="T_366bb_level0_col2" class="col_heading level0 col2" >Alaska</th>
+      <th id="T_366bb_level0_col3" class="col_heading level0 col3" >Utah</th>
+      <th id="T_366bb_level0_col4" class="col_heading level0 col4" >District of Columbia</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Age</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_366bb_level0_row0" class="row_heading level0 row0" >0-9</th>
+      <td id="T_366bb_row0_col0" class="data row0 col0" >10%</td>
+      <td id="T_366bb_row0_col1" class="data row0 col1" >10%</td>
+      <td id="T_366bb_row0_col2" class="data row0 col2" >14%</td>
+      <td id="T_366bb_row0_col3" class="data row0 col3" >17%</td>
+      <td id="T_366bb_row0_col4" class="data row0 col4" >11%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row1" class="row_heading level0 row1" >10-19</th>
+      <td id="T_366bb_row1_col0" class="data row1 col0" >11%</td>
+      <td id="T_366bb_row1_col1" class="data row1 col1" >12%</td>
+      <td id="T_366bb_row1_col2" class="data row1 col2" >13%</td>
+      <td id="T_366bb_row1_col3" class="data row1 col3" >16%</td>
+      <td id="T_366bb_row1_col4" class="data row1 col4" >10%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row2" class="row_heading level0 row2" >20-29</th>
+      <td id="T_366bb_row2_col0" class="data row2 col0" >12%</td>
+      <td id="T_366bb_row2_col1" class="data row2 col1" >13%</td>
+      <td id="T_366bb_row2_col2" class="data row2 col2" >16%</td>
+      <td id="T_366bb_row2_col3" class="data row2 col3" >16%</td>
+      <td id="T_366bb_row2_col4" class="data row2 col4" >20%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row3" class="row_heading level0 row3" >30-39</th>
+      <td id="T_366bb_row3_col0" class="data row3 col0" >12%</td>
+      <td id="T_366bb_row3_col1" class="data row3 col1" >12%</td>
+      <td id="T_366bb_row3_col2" class="data row3 col2" >15%</td>
+      <td id="T_366bb_row3_col3" class="data row3 col3" >14%</td>
+      <td id="T_366bb_row3_col4" class="data row3 col4" >20%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row4" class="row_heading level0 row4" >40-49</th>
+      <td id="T_366bb_row4_col0" class="data row4 col0" >12%</td>
+      <td id="T_366bb_row4_col1" class="data row4 col1" >12%</td>
+      <td id="T_366bb_row4_col2" class="data row4 col2" >12%</td>
+      <td id="T_366bb_row4_col3" class="data row4 col3" >12%</td>
+      <td id="T_366bb_row4_col4" class="data row4 col4" >12%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row5" class="row_heading level0 row5" >50-59</th>
+      <td id="T_366bb_row5_col0" class="data row5 col0" >15%</td>
+      <td id="T_366bb_row5_col1" class="data row5 col1" >15%</td>
+      <td id="T_366bb_row5_col2" class="data row5 col2" >13%</td>
+      <td id="T_366bb_row5_col3" class="data row5 col3" >10%</td>
+      <td id="T_366bb_row5_col4" class="data row5 col4" >11%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row6" class="row_heading level0 row6" >60-69</th>
+      <td id="T_366bb_row6_col0" class="data row6 col0" >15%</td>
+      <td id="T_366bb_row6_col1" class="data row6 col1" >14%</td>
+      <td id="T_366bb_row6_col2" class="data row6 col2" >11%</td>
+      <td id="T_366bb_row6_col3" class="data row6 col3" >8%</td>
+      <td id="T_366bb_row6_col4" class="data row6 col4" >9%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row7" class="row_heading level0 row7" >70-79</th>
+      <td id="T_366bb_row7_col0" class="data row7 col0" >8%</td>
+      <td id="T_366bb_row7_col1" class="data row7 col1" >8%</td>
+      <td id="T_366bb_row7_col2" class="data row7 col2" >5%</td>
+      <td id="T_366bb_row7_col3" class="data row7 col3" >5%</td>
+      <td id="T_366bb_row7_col4" class="data row7 col4" >5%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row8" class="row_heading level0 row8" >80+</th>
+      <td id="T_366bb_row8_col0" class="data row8 col0" >5%</td>
+      <td id="T_366bb_row8_col1" class="data row8 col1" >4%</td>
+      <td id="T_366bb_row8_col2" class="data row8 col2" >2%</td>
+      <td id="T_366bb_row8_col3" class="data row8 col3" >2%</td>
+      <td id="T_366bb_row8_col4" class="data row8 col4" >3%</td>
+    </tr>
+    <tr>
+      <th id="T_366bb_level0_row9" class="row_heading level0 row9" >Total</th>
+      <td id="T_366bb_row9_col0" class="data row9 col0" >100%</td>
+      <td id="T_366bb_row9_col1" class="data row9 col1" >100%</td>
+      <td id="T_366bb_row9_col2" class="data row9 col2" >100%</td>
+      <td id="T_366bb_row9_col3" class="data row9 col3" >100%</td>
+      <td id="T_366bb_row9_col4" class="data row9 col4" >100%</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section id="extension-data-visualization-and-exploratory-data-analysis">
+<h2>Extension: Data Visualization and Exploratory Data Analysis<a class="headerlink" href="#extension-data-visualization-and-exploratory-data-analysis" title="Link to this heading">#</a></h2>
+<p>The histogram is an important piece of <strong>exploratory data analysis</strong> (EDA). Notably, <span id="id11">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> doesn’t cover this topic and we won’t attempt to cover it other than this brief mention.</p>
+<p>EDA refers to open-ended exploration of data, usually emphasizes visualization and simple descriptive analysis. John Tukey was a statistician who developed the box plot and other methods for exploratory data analysis. <span id="id12">[<a class="reference internal" href="bibliography.html#id39" title="Andrew Gelman and Aki Vehtari. What are the most important statistical ideas of the past 50 years? Journal of the American Statistical Association, 116(536):2087–2097, 2021.">GV21</a>]</span> names EDA as one of the most important statistical ideas of the past 50 years (emphasis mine):</p>
+<blockquote>
+<div><p>Following Tukey (1962), the proponents of exploratory data analysis have emphasized the limitations of asymptotic theory and the corresponding benefits of <strong>open-ended exploration and communication</strong> (Cleveland 1985) along with a general view of data science as going beyond statistical theory (Chambers 1993; Donoho 2017). This fits into a view of statistical modeling that is focused more on discovery than on the testing of fixed hypotheses, and as such has been influential not just in the development of specific graphical methods but also in moving the field of statistics away from theorem-proving and toward a more open and, we would say, healthier perspective on the role of learning from data in science. An example in medical statistics is the much-cited article by Bland and Altman (1986) that recommended graphical methods for data comparison in place of correlations and regressions.</p>
+</div></blockquote>
+<p>If you are the kind of person who likes data and graphs more than the mathematical aspects of statistics, you should find this exciting. Beyond the exploratory analysis, there is also a lot of work on effective communication with graphs and tables. Communication is often more <em>explanatory</em> than exploratory. It depends on the needs of your audience.</p>
+<p>Data visualization principles are a mix of objective and subjective rules. The <strong>area principle</strong> is one of the more objective rules, stating that “each data value should be represented by the same amount of area” (<span id="id13">[<a class="reference internal" href="bibliography.html#id6" title="Richard D De Veaux, Paul F Velleman, and Bock. Stats: Data and Models, 5th Edition. Pearson/Addison Wesley Boston, 2019.">DVVB19</a>]</span>). This is why it was the <em>areas</em> that represented percentages in a histogram and not necessarily the height.</p>
+<p>Oversimplifying, I would distill the more general, subjective rules from into two points (<span id="id14">[<a class="reference internal" href="bibliography.html#id55" title="Cole Nussbaumer Knaflic. Storytelling with data: A data visualization guide for business professionals. John Wiley &amp; Sons, 2015.">Kna15</a>]</span> and <span id="id15">[<a class="reference internal" href="bibliography.html#id54" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>).</p>
+<ol class="arabic simple">
+<li><p>Avoid clutter.</p></li>
+<li><p>Use pre-attentive processing.</p></li>
+</ol>
+<p>These are similar ideas, with negative and positive framing. Like in your prose, remove anything distracting. And then, insofar as you are explaining something, actively draw your reader’s attention to the important things. For example, use color thoughtfully. Gray out lines that don’t need individual attention in a line chart. The first figure below does this well and the next figure fails. <a class="reference internal" href="#fig-schwabgray"><span class="std std-numref">Fig. 11</span></a> does this well and <a class="reference internal" href="#fig-liaiskills"><span class="std std-numref">Fig. 12</span></a> fails.</p>
+<figure class="align-default" id="fig-schwabgray">
+<a class="reference internal image-reference" href="_images/schwabishgray.png"><img alt="_images/schwabishgray.png" src="_images/schwabishgray.png" style="width: 410px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">A good example of pre-attentive processing used to highlight a national trend and the trends for states of note. From <span id="id16">[<a class="reference internal" href="bibliography.html#id54" title="Jonathan Schwabish. Better data visualizations: A guide for scholars, researchers, and wonks. Columbia University Press, 2021. URL: https://clio.columbia.edu/catalog/15473733.">Sch21</a>]</span>, page 151.</span><a class="headerlink" href="#fig-schwabgray" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-liaiskills">
+<a class="reference internal image-reference" href="_images/LI_AI_skills.jpeg"><img alt="_images/LI_AI_skills.jpeg" src="_images/LI_AI_skills.jpeg" style="width: 410px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">A bad example from my former colleagues at LinkedIn, showing a lot of clutter and sparking no joy (<a class="reference external" href="https://www.linkedin.com/posts/linkedin_people-worldwide-are-adding-ai-skills-to-activity-7122236926580948992-AqxP?utm_source=share&amp;amp;utm_medium=member_desktop">source</a>).</span><a class="headerlink" href="#fig-liaiskills" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In a scatter plot with many overlapping points, reduce the opacity of points to make it more clear where the majority of the data lies.</p>
+<figure class="align-default" id="fig-sheetsopacity">
+<a class="reference internal image-reference" href="_images/sheetsopacity.png"><img alt="_images/sheetsopacity.png" src="_images/sheetsopacity.png" style="width: 98%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">In <a class="reference external" href="https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing">Google Sheets</a>, use the chart editor to change the opacity of each point in a scatter plot.</span><a class="headerlink" href="#fig-sheetsopacity" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
+<div class="exercise admonition" id="spotskew">
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<p class="admonition-title"><span class="caption-number">Exercise 12 </span></p>
+<section id="exercise-content">
+<p>Most artists on Spotify have uploaded fewer than 10 songs, but a small number of artists are very productive with much larger catalogs. Sketch a histogram with exactly three blocks that is consistent with this.</p>
+</section>
+</div>
+<div class="exercise admonition" id="histmult">
 
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">d</span><span class="p">,</span>
-        <span class="n">ec</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-        <span class="n">fc</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span>
-        <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-       <span class="n">bins</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span>
-       <span class="n">zorder</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<p class="admonition-title"><span class="caption-number">Exercise 13 </span></p>
+<section id="exercise-content">
+<p>Provide two different data sets that could produce the following histogram with a single block.</p>
+<figure class="align-default" id="oneblockhist">
+<a class="reference internal image-reference" href="_images/oneblockhist.svg"><img alt="_images/oneblockhist.svg" src="_images/oneblockhist.svg" width="70%" /></a>
+</figure>
+</section>
+</div>
+<div class="exercise admonition" id="qualquant">
 
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-<span class="c1">#ax.set_yticks([])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">yticks</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_yticks</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;# Houses Owned&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;images/oneblockhist.svg&quot;</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;svg&#39;</span><span class="p">,</span> <span class="n">transparent</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
+<p class="admonition-title"><span class="caption-number">Exercise 14 </span></p>
+<section id="exercise-content">
+<p>Classify each of the following variables as qualitative or quantitative.</p>
+<ul class="simple">
+<li><p>car color</p></li>
+<li><p>number of cars owned</p></li>
+<li><p>number of red cars owned</p></li>
+<li><p>saturation of car color</p></li>
+</ul>
+</section>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7558/239119586.py:16: UserWarning: FixedFormatter should only be used together with FixedLocator
-  ax.set_yticklabels(range(0,26, 5))
-</pre></div>
-</div>
-<img alt="_images/1671dc4f9f26b0b26df4b347e9a244812df0a8cd86fc3d44da4a210646d07976.png" src="_images/1671dc4f9f26b0b26df4b347e9a244812df0a8cd86fc3d44da4a210646d07976.png" />
-</div>
-</div>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id17" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Credit to Nick Huntington-Klein who wrote, “<a class="reference external" href="https://nickchk.substack.com/p/what-should-school-teach-teenagers">nobody is as tall as Bradley Cooper is successful</a>.” But I still don’t know who Bradley Cooper is and I lack a growth mindset in this domain.</p>
+</aside>
+<aside class="footnote brackets" id="id18" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>The approximation is based on the Gini coefficient matching South Africa’s, as recorded by the <a class="reference external" href="https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true">World Bank</a>.</p>
+</aside>
+</aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -978,12 +1063,20 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Income</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heights-and-crowding">Heights and Crowding</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-variables">Controlling for Variables</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercies">Exercies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-a-distribution">Summarizing a Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-sleuthing-out-fraud">Example: Sleuthing out Fraud</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-real-data">Working with Real Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-tabulation">Cross-Tabulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
   </nav></div>
 
 </div></div>
