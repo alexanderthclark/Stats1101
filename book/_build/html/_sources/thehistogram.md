@@ -30,9 +30,9 @@ Two skewed histograms. The left panel features on a long left tail and the right
 
 A histogram is made of blocks (or bars). Each block has a predetermined **class interval** and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the *area* of the block is proportional to the number of data points in the class interval. If a vertical scale is supplied, the areas will sum to 100% (or 1, depending on what software you use). This corresponds to a **density** scale. 
 
-Suppose we observed incomes \$0, \$10, \$10, \$20, \$20, \$20, \$30, and \$216. This approximates the level of income inequality in South Africa.[^2]
+Suppose we observed incomes \$0, \$10, \$10, \$20, \$20, \$20, \$30, and \$216. This approximates the level of income inequality in South Africa.[^2] {numref}`sarand` summarizes the data set.  
 
-[^2]: The approximation is based on the Gini coefficient matching South Africa's, as recorded by the [World Bank](https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true). {numref}`sarand` summarizes the data set.   
+[^2]: The approximation is based on the Gini coefficient matching South Africa's, as recorded by the [World Bank](https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true). 
 
 ```{list-table} Data Frequencies
 :header-rows: 1
@@ -71,9 +71,6 @@ The **height** of a block represents crowding, not an actual percentage. The las
 
 Histograms reveal the shape of the distribution, and sometimes interesting irregularities, like in {cite}`freedman2007statistics` Review Exercise 11 and in the following example.
 
-### Interactive
-
-Use [this Google Colab form](https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing) to create a histogram and adjust the class intervals. No coding is required.
 
 ### Example: Sleuthing out Fraud
 
@@ -134,6 +131,10 @@ This reveals something interesting.
 
 This suggests something fishy. Maybe it is the insurance customers who report their own mileage in a fishy way. But why round for the baseline but not the updated? *Or* it reveals something fishy about the researchers, who might have manipulated the updated mileage data. These numbers could have been fabricated with a random number generator, hence the lack of human-like rounding. Given the retraction, most favor the latter hypothesis. 
 
+### Interactive
+
+Use [this Google Colab form](https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing) to create a histogram and adjust the class intervals. No coding is required.
+
 
 ## Variables 
 
@@ -192,7 +193,9 @@ Picasso peaked earlier than Cezanne.
 
 ## Cross-Tabulation
 
-### new
+Cross-tabs show a distribution much like a histogram, but in table form. This can be useful when you'd otherwise have a cluttered graph with many overlayed histograms. 
+
+In considering something like a covid-mortality rate across states, it is important to remember that states are demographically different. Age is one of the more important variables to adjust for. Below, each column contains the same information you'd find in the histogram for a specific state's age distribution. The background gradient helps make the difference in cell values more apparent. For example, Alaska and Utah are younger than Vermont. 
 
 <!DOCTYPE html>
 <html>
@@ -275,10 +278,6 @@ Picasso peaked earlier than Cezanne.
 </style>
 </head>
 </html>
-
-Cross-tabs show a distribution much like a histogram, but in table form. This can be useful when you'd otherwise have a cluttered graph with many overlayed histograms. 
-
-In considering something like a covid-mortality rate across states, it is important to remember that states are demographically different. Age is one of the more important variables to adjust for. Below, each column contains the same information you'd find in the histogram for a specific state's age distribution. The background gradient helps make the difference in cell values more apparent. For example, Alaska and Utah are younger than Vermont. 
 
 
 <style type="text/css">
@@ -409,7 +408,7 @@ In considering something like a covid-mortality rate across states, it is import
 <table id="T_366bb">
   <thead>
     <tr>
-      <th class="index_name level0" >state_name</th>
+      <th class="index_name level0" >State</th>
       <th id="T_366bb_level0_col0" class="col_heading level0 col0" >Maine</th>
       <th id="T_366bb_level0_col1" class="col_heading level0 col1" >Vermont</th>
       <th id="T_366bb_level0_col2" class="col_heading level0 col2" >Alaska</th>
@@ -417,7 +416,7 @@ In considering something like a covid-mortality rate across states, it is import
       <th id="T_366bb_level0_col4" class="col_heading level0 col4" >District of Columbia</th>
     </tr>
     <tr>
-      <th class="index_name level0" >age</th>
+      <th class="index_name level0" >Age</th>
       <th class="blank col0" >&nbsp;</th>
       <th class="blank col1" >&nbsp;</th>
       <th class="blank col2" >&nbsp;</th>
@@ -508,12 +507,6 @@ In considering something like a covid-mortality rate across states, it is import
     </tr>
   </tbody>
 </table>
-
-
-
-### test
-
-
 
 
 

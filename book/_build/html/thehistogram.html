@@ -404,8 +404,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-a-distribution">Summarizing a Distribution</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-sleuthing-out-fraud">Example: Sleuthing out Fraud</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
@@ -413,11 +413,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-tabulation">Cross-Tabulation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new">new</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test">test</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-tabulation">Cross-Tabulation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
@@ -456,7 +452,7 @@ document.write(`
 </figcaption>
 </figure>
 <p>A histogram is made of blocks (or bars). Each block has a predetermined <strong>class interval</strong> and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the <em>area</em> of the block is proportional to the number of data points in the class interval. If a vertical scale is supplied, the areas will sum to 100% (or 1, depending on what software you use). This corresponds to a <strong>density</strong> scale.</p>
-<p>Suppose we observed incomes $0, $10, $10, $20, $20, $20, $30, and $216. This approximates the level of income inequality in South Africa.<a class="footnote-reference brackets" href="#id18" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<p>Suppose we observed incomes $0, $10, $10, $20, $20, $20, $30, and $216. This approximates the level of income inequality in South Africa.<a class="footnote-reference brackets" href="#id18" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="reference internal" href="#sarand"><span class="std std-numref">Table 6</span></a> summarizes the data set.</p>
 <table class="table" id="sarand">
 <caption><span class="caption-number">Table 6 </span><span class="caption-text">Data Frequencies</span><a class="headerlink" href="#sarand" title="Permalink to this table">#</a></caption>
 <thead>
@@ -497,10 +493,6 @@ document.write(`
 </figure>
 <p>The <strong>height</strong> of a block represents crowding, not an actual percentage. The last block of the bottom panel of <a class="reference internal" href="#incomehist"><span class="std std-numref">Fig. 4</span></a>, spanning from 35 to 221, is short because there’s just one data point in that wide interval.</p>
 <p>Histograms reveal the shape of the distribution, and sometimes interesting irregularities, like in <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> Review Exercise 11 and in the following example.</p>
-<section id="interactive">
-<h3>Interactive<a class="headerlink" href="#interactive" title="Permalink to this heading">#</a></h3>
-<p>Use <a class="reference external" href="https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing">this Google Colab form</a> to create a histogram and adjust the class intervals. No coding is required.</p>
-</section>
 <section id="example-sleuthing-out-fraud">
 <h3>Example: Sleuthing out Fraud<a class="headerlink" href="#example-sleuthing-out-fraud" title="Permalink to this heading">#</a></h3>
 <p><span id="id5">[<a class="reference internal" href="bibliography.html#id33" title="Lisa L Shu, Nina Mazar, Francesca Gino, Dan Ariely, and Max H Bazerman. Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end. Proceedings of the National Academy of Sciences, 109(38):15197–15200, 2012.">SMG+12</a>]</span>, titled “Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end,” was retracted in 2021 because of evidence of fraud, uncovered in <span id="id6">[<a class="reference internal" href="bibliography.html#id34" title="Uri Simonsohn, Leif D. Nelson, and Joe Simmons. 98: evidence of fraud in an influential field experiment about dishonesty. Data Colada, 2021. URL: https://datacolada.org/98.">SNS21</a>]</span>. The retracted research was based on an experiment where customers of an insurance company were asked to report their odemeter readings. Customers signed a statement asserting their honesty, and the statement was either at the top or at the bottom of the form. The presented finding was that it’s better to have the statement signed <em>before</em> the customer provides the information instead of after.</p>
@@ -555,6 +547,10 @@ document.write(`
 </ol>
 <p>This suggests something fishy. Maybe it is the insurance customers who report their own mileage in a fishy way. But why round for the baseline but not the updated? <em>Or</em> it reveals something fishy about the researchers, who might have manipulated the updated mileage data. These numbers could have been fabricated with a random number generator, hence the lack of human-like rounding. Given the retraction, most favor the latter hypothesis.</p>
 </section>
+<section id="interactive">
+<h3>Interactive<a class="headerlink" href="#interactive" title="Permalink to this heading">#</a></h3>
+<p>Use <a class="reference external" href="https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing">this Google Colab form</a> to create a histogram and adjust the class intervals. No coding is required.</p>
+</section>
 </section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
@@ -596,8 +592,8 @@ document.write(`
 </section>
 <section id="cross-tabulation">
 <h2>Cross-Tabulation<a class="headerlink" href="#cross-tabulation" title="Permalink to this heading">#</a></h2>
-<section id="new">
-<h3>new<a class="headerlink" href="#new" title="Permalink to this heading">#</a></h3>
+<p>Cross-tabs show a distribution much like a histogram, but in table form. This can be useful when you’d otherwise have a cluttered graph with many overlayed histograms.</p>
+<p>In considering something like a covid-mortality rate across states, it is important to remember that states are demographically different. Age is one of the more important variables to adjust for. Below, each column contains the same information you’d find in the histogram for a specific state’s age distribution. The background gradient helps make the difference in cell values more apparent. For example, Alaska and Utah are younger than Vermont.</p>
 <!DOCTYPE html>
 <html>
 <head>
@@ -676,8 +672,6 @@ text-align: center;
 </style></p>
 </head>
 </html>
-<p>Cross-tabs show a distribution much like a histogram, but in table form. This can be useful when you’d otherwise have a cluttered graph with many overlayed histograms.</p>
-<p>In considering something like a covid-mortality rate across states, it is important to remember that states are demographically different. Age is one of the more important variables to adjust for. Below, each column contains the same information you’d find in the histogram for a specific state’s age distribution. The background gradient helps make the difference in cell values more apparent. For example, Alaska and Utah are younger than Vermont.</p>
 <style type="text/css">
 #T_366bb_row0_col0 {
   background-color: #fdd9b5;
@@ -806,7 +800,7 @@ text-align: center;
 <table id="T_366bb">
   <thead>
     <tr>
-      <th class="index_name level0" >state_name</th>
+      <th class="index_name level0" >State</th>
       <th id="T_366bb_level0_col0" class="col_heading level0 col0" >Maine</th>
       <th id="T_366bb_level0_col1" class="col_heading level0 col1" >Vermont</th>
       <th id="T_366bb_level0_col2" class="col_heading level0 col2" >Alaska</th>
@@ -814,7 +808,7 @@ text-align: center;
       <th id="T_366bb_level0_col4" class="col_heading level0 col4" >District of Columbia</th>
     </tr>
     <tr>
-      <th class="index_name level0" >age</th>
+      <th class="index_name level0" >Age</th>
       <th class="blank col0" >&nbsp;</th>
       <th class="blank col1" >&nbsp;</th>
       <th class="blank col2" >&nbsp;</th>
@@ -906,10 +900,6 @@ text-align: center;
   </tbody>
 </table>
 </section>
-<section id="test">
-<h3>test<a class="headerlink" href="#test" title="Permalink to this heading">#</a></h3>
-</section>
-</section>
 <section id="extension-data-visualization-and-exploratory-data-analysis">
 <h2>Extension: Data Visualization and Exploratory Data Analysis<a class="headerlink" href="#extension-data-visualization-and-exploratory-data-analysis" title="Permalink to this heading">#</a></h2>
 <p>The histogram is an important piece of <strong>exploratory data analysis</strong> (EDA). Notably, <span id="id11">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> doesn’t cover this topic and we won’t attempt to cover it other than this brief mention.</p>
@@ -984,7 +974,7 @@ text-align: center;
 </aside>
 <aside class="footnote brackets" id="id18" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
-<p>The approximation is based on the Gini coefficient matching South Africa’s, as recorded by the <a class="reference external" href="https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true">World Bank</a>. <a class="reference internal" href="#sarand"><span class="std std-numref">Table 6</span></a> summarizes the data set.</p>
+<p>The approximation is based on the Gini coefficient matching South Africa’s, as recorded by the <a class="reference external" href="https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true">World Bank</a>.</p>
 </aside>
 </section>
 </section>
@@ -1053,8 +1043,8 @@ text-align: center;
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-a-distribution">Summarizing a Distribution</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-sleuthing-out-fraud">Example: Sleuthing out Fraud</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
@@ -1062,11 +1052,7 @@ text-align: center;
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-for-a-variable">Controlling for a Variable</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-tabulation">Cross-Tabulation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new">new</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test">test</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-tabulation">Cross-Tabulation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-data-visualization-and-exploratory-data-analysis">Extension: Data Visualization and Exploratory Data Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
