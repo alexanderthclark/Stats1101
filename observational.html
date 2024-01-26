@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Observational Studies &#8212; Intro Stats</title>
   
@@ -29,45 +28,49 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'observational';</script>
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Natural Experiments" href="natural.html" />
@@ -165,7 +168,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -183,7 +197,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Observational Studies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thehistogram.html">Income</a></li>
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
@@ -193,6 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -427,7 +445,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="observational-studies">
-<span id="id1"></span><h1>Observational Studies<a class="headerlink" href="#observational-studies" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>Observational Studies<a class="headerlink" href="#observational-studies" title="Link to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
@@ -445,10 +463,10 @@ document.write(`
 </ol>
 <p>Neither of the two points above are <em>defining</em> features of observational studies, but they explain why observational studies are used, despite not being as reliable as a well-designed experiment. The first point means we are still making some comparison where the effect of the treatment is of interest. Second, Cochran was a member of the panel that wrote the 1964 US Surgeon General’s report on smoking and health, so he likely had in mind the impossibility of any lab or government forcing certain people to smoke others not to smoke. Some experiments can’t be run for ethical reasons and others are prohibitively expensive. The RAND health insurance experiment (from <a class="reference internal" href="experiments.html#rand"><span class="std std-numref">Exercise 6</span></a>) cost about $400 million in 2023 dollars, meaning it’s unlikely something similar will be funded again.</p>
 <section id="simpson-s-paradox">
-<h2>Simpson’s Paradox<a class="headerlink" href="#simpson-s-paradox" title="Permalink to this heading">#</a></h2>
+<h2>Simpson’s Paradox<a class="headerlink" href="#simpson-s-paradox" title="Link to this heading">#</a></h2>
 <p>Controlling for potential confounders can reverse the associations found in data, underscoring the importance of a controlled analysis. When this happens, it’s said to be an instance of <strong>Simpson’s Paradox</strong>.</p>
 <section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
 <p><span id="id6">[<a class="reference internal" href="bibliography.html#id21" title="P. J. Bickel, E. A. Hammel, and J. W. O'Connell. Sex bias in graduate admissions: data from berkeley. Science, 187(4175):398–404, 1975. URL: http://www.jstor.org/stable/1739581 (visited on 2024-01-03).">BHOConnell75</a>]</span> analyze the case of possible sex bias in graduate admissions at UC Berkeley. Sex can be considered the treatment variable and admission decisions are the outcome. If there is a difference between groups, that might indicate bias. We’ll see what appears to be a paradox. Women have a lower admission rate overall. However, when looking at admission rates for specific majors, there was no bias against women on the whole. <span id="id7">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> run through the data in Chapter 2.4.</p>
 <p>The following is a simplification to help understand this paradox, with these two seemingly clashing facts:</p>
 <ol class="arabic simple">
@@ -457,7 +475,7 @@ document.write(`
 </ol>
 <p>The paradox arises if women are more likely to apply to programs with lower admission rates. Suppose there are 120 women and 120 men. There are two majors, A and B, that have their own independent admission standards. In major A, 100% of applicants are admitted. In major B, 20% of applicants are admitted. This is the admission rate for both men and women. <a class="reference internal" href="#applicant-table"><span class="std std-numref">Table 1</span></a> and <a class="reference internal" href="#admit-table"><span class="std std-numref">Table 2</span></a> below demonstrate the paradox when men apply to major A more often.</p>
 <table class="table" id="applicant-table">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Applicants</span><a class="headerlink" href="#applicant-table" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Applicants</span><a class="headerlink" href="#applicant-table" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>Major A</p></th>
@@ -484,7 +502,7 @@ document.write(`
 </tbody>
 </table>
 <table class="table" id="admit-table">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">Admits</span><a class="headerlink" href="#admit-table" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Admits</span><a class="headerlink" href="#admit-table" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>Major A</p></th>
@@ -514,17 +532,17 @@ document.write(`
 <figure class="align-default" id="simpsonscatter">
 <a class="reference internal image-reference" href="_images/simpsonscatter.svg"><img alt="_images/simpsonscatter.svg" src="_images/simpsonscatter.svg" width="80%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The overall trend is negative even though the trend is flat within each subset.</span><a class="headerlink" href="#simpsonscatter" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The overall trend is negative even though the trend is flat within each subset.</span><a class="headerlink" href="#simpsonscatter" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="extension-other-potential-worlds">
-<h2>Extension: Other Potential Worlds<a class="headerlink" href="#extension-other-potential-worlds" title="Permalink to this heading">#</a></h2>
+<h2>Extension: Other Potential Worlds<a class="headerlink" href="#extension-other-potential-worlds" title="Link to this heading">#</a></h2>
 <p>In this section, we imagine ways observational studies can be confounded and make it concrete by writing down potential, or counterfactual outcomes. We show that differences in group averages can be misleading because (1) groups can be different to begin with, or (2) groups can respond to a treatment differently.</p>
 <p>Imagine that Alice and Bob both got the flu shot and both get the flu. Alice is happy she got the shot nonetheless, believing she would be a lot more sick if not for the flu shot. Bob believes the shot did nothing but line the pockets of big pharma and that he’d be no worse off if he didn’t get the shot. Both are thinking about a counterfactual when they think about <em>if</em> they didn’t get the flu shot. If their health can be quantified, we might write this down like in the following table:</p>
 <table class="table" id="shotbeliefs">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">Health Outcomes According to Alice and Bob’s Beliefs</span><a class="headerlink" href="#shotbeliefs" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Health Outcomes According to Alice and Bob’s Beliefs</span><a class="headerlink" href="#shotbeliefs" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Person</p></th>
 <th class="head"><p>Shot</p></th>
@@ -547,11 +565,11 @@ document.write(`
 </table>
 <p>The individual effects are based on the difference between the two potential outcomes. We can’t observe it because we don’t observe the “No Shot” column, but Alice believes the effect was positive, and Bob believes it was zero. A table like this is helpful in describing two ways observational studies can be misleading.</p>
 <section id="college-and-earnings">
-<h3>College and Earnings<a class="headerlink" href="#college-and-earnings" title="Permalink to this heading">#</a></h3>
+<h3>College and Earnings<a class="headerlink" href="#college-and-earnings" title="Link to this heading">#</a></h3>
 <p>Take the example of college. On my elementary school front door, there was posted a flyer that showed how college graduates earn more money than non-graduates. We were being told that college would make us richer, and reading between the lines, this was implying a causal relationship. This was based on observational data, so let’s describe two ways it can be wrong to infer a causal effect.</p>
 <p>First, it can be that everyone who goes to college has higher earning potential to begin with. The following table shows that college has no effect on earnings because the College and No College columns are the same.</p>
 <table class="table" id="posignal">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">College as a Signal of Ability</span><a class="headerlink" href="#posignal" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">College as a Signal of Ability</span><a class="headerlink" href="#posignal" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Person</p></th>
 <th class="head"><p>College</p></th>
@@ -590,7 +608,7 @@ document.write(`
 <p>In any study, we only observe the last two columns. If we compare group averages, we’ll see that graduates earn $100,000 salaries and non-graduates earn $30,000. But the naive belief that college will increase your earning by an average of $70,000 is wrong. Because of the lack of randomization in education levels, these two groups are not similar. The graduates would have earned more money regardless of their education level.</p>
 <p>Second, it can be that people who choose to go to college get more out of college. That is, graduates and non-graduates might have been the same if none of them attended college, but it is only those choosing to attend who use the time to boost their earning potential.</p>
 <table class="table" id="pohet">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">College Increases Earnings for Certain Individuals</span><a class="headerlink" href="#pohet" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">College Increases Earnings for Certain Individuals</span><a class="headerlink" href="#pohet" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Person</p></th>
 <th class="head"><p>College</p></th>
@@ -630,7 +648,7 @@ document.write(`
 <p>In both of these examples, we could point out ways an observational study would overestimate the effect of college on earnings <em>if</em> the tables accurately described the counterfactuals.</p>
 </section>
 <section id="vacations-to-italy">
-<h3>Vacations to Italy<a class="headerlink" href="#vacations-to-italy" title="Permalink to this heading">#</a></h3>
+<h3>Vacations to Italy<a class="headerlink" href="#vacations-to-italy" title="Link to this heading">#</a></h3>
 <p>If you compare yourself to happier tourists in Italy, there are many ways that comparison can be confounded. It doesn’t have to be Italy that’s making those people happier. In the “Romano Tours” SNL skit, Adam Sandler plays the role of a salesman for tours to Italy. He doesn’t use the language of statistics, but he is essentially telling his listeners to be careful about inferring certain causal effects from promotional materials or from observing other people’s experience. Trying to temper expectations after encountering disappointed customers in the past, he is honest about the limitations of a vacation as a treatment. He is describing something similar to the examples above.</p>
 <div style="position: relative; width: 75%; overflow: hidden; margin: auto; padding-top: 42.1875%;">
     <iframe src="https://www.youtube-nocookie.com/embed/TbwlC2B-BIg?si=1H_VIitPD65JDHJr" 
@@ -657,7 +675,7 @@ Romano Tours<div class="sd-summary-down docutils">
 </details></section>
 </section>
 <section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
 <div class="exercise admonition" id="medprog">
 
 <p class="admonition-title"><span class="caption-number">Exercise 7 </span></p>
@@ -773,7 +791,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

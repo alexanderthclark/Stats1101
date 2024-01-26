@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Center and Spread &#8212; Intro Stats</title>
   
@@ -29,49 +28,53 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'centerspread';</script>
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Bibliography" href="bibliography.html" />
-    <link rel="prev" title="The Histogram" href="thehistogram.html" />
+    <link rel="prev" title="Income" href="thehistogram.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -165,7 +168,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -183,7 +197,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thehistogram.html">Income</a></li>
+
+
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Center and Spread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
@@ -193,6 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -423,10 +441,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="center-and-spread">
-<h1>Center and Spread<a class="headerlink" href="#center-and-spread" title="Permalink to this heading">#</a></h1>
+<h1>Center and Spread<a class="headerlink" href="#center-and-spread" title="Link to this heading">#</a></h1>
 <p>Previously, we summarized data with a histogram. Visual representations sometimes lack simplicity or precision, so now we describe a distribution with just two numbers. The average describes the center of the data and the standard deviation describes its spread. Alternatives for center and spread include median and interquartile range, respectively.</p>
 <section id="the-average">
-<h2>The Average<a class="headerlink" href="#the-average" title="Permalink to this heading">#</a></h2>
+<h2>The Average<a class="headerlink" href="#the-average" title="Link to this heading">#</a></h2>
 <p>The <strong>average</strong> of a list of <span class="math notranslate nohighlight">\(n\)</span> numbers is their sum, divided by <span class="math notranslate nohighlight">\(n\)</span>. Typical notation for an average is <span class="math notranslate nohighlight">\(\bar{x}\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span>. If you prefer,</p>
 <div class="math notranslate nohighlight">
 \[\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i.\]</div>
@@ -434,14 +452,14 @@ document.write(`
 <figure class="align-default" id="mean-median-sym">
 <a class="reference internal image-reference" href="_images/hist_with_mean_median.svg"><img alt="_images/hist_with_mean_median.svg" src="_images/hist_with_mean_median.svg" width="87%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The average and median are similar for a symmetric distribution.</span><a class="headerlink" href="#mean-median-sym" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">The average and median are similar for a symmetric distribution.</span><a class="headerlink" href="#mean-median-sym" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>If we extend the list to include 94, then the average increases to 25 and the median increases to just 2.5. Is 25 or 2.5 more representative of 1, 2, 3, 94? It depends on how you might use the statistic. The median is often preferred in cases like these to avoid the influence of an extreme value. <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 15</span></a> shows two skewed distributions with vertical line for the average and the median. Which line marks the average and which line marks the median?</p>
+<p>If we extend the list to include 94, then the average increases to 25 and the median increases to just 2.5. Is 25 or 2.5 more representative of 1, 2, 3, 94? It depends on how you might use the statistic. The median is often preferred in cases like these to avoid the influence of an extreme value. <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 4</span></a> shows two skewed distributions with vertical line for the average and the median. Which line marks the average and which line marks the median?</p>
 <figure class="align-default" id="mean-median-skew">
 <a class="reference internal image-reference" href="_images/skewed_hist_mean_median.svg"><img alt="_images/skewed_hist_mean_median.svg" src="_images/skewed_hist_mean_median.svg" width="87%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Which line is the average? The median?</span><a class="headerlink" href="#mean-median-skew" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Which line is the average? The median?</span><a class="headerlink" href="#mean-median-skew" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -453,24 +471,26 @@ Median vs Average<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The heavier, orange line marks the average. The white line marks the median.</p>
 </div>
-</details><p>While the median will split a histogram so that there is equal area on either side, the histogram balances when supported at the average. Imagine balancing either of the histograms in <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 15</span></a> at the median. The histogram would tip toward the long tail because of the leverage exerted by the extreme values.</p>
+</details><p>While the median will split a histogram so that there is equal area on either side, the histogram balances when supported at the average. Imagine balancing either of the histograms in <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 4</span></a> at the median. The histogram would tip toward the long tail because of the leverage exerted by the extreme values.</p>
 </section>
 <section id="the-standard-deviation">
-<h2>The Standard Deviation<a class="headerlink" href="#the-standard-deviation" title="Permalink to this heading">#</a></h2>
+<h2>The Standard Deviation<a class="headerlink" href="#the-standard-deviation" title="Link to this heading">#</a></h2>
 <section id="preamble-root-mean-square">
-<h3>Preamble: Root Mean Square<a class="headerlink" href="#preamble-root-mean-square" title="Permalink to this heading">#</a></h3>
+<h3>Preamble: Root Mean Square<a class="headerlink" href="#preamble-root-mean-square" title="Link to this heading">#</a></h3>
 <p>The <strong>root mean square</strong> size of a list is the (1) square <em>root</em> of the (2) <em>mean</em>, aka average, of the (3) <em>square</em>d entries. This says something about the size of a list.<a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[ \text{root mean square size of a list} = \sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2} \]</div>
 <p>The r.m.s. doesn’t change if you change the sign on any of the numbers. It says something about the typical absolute size of a number in the list. The average of the absolute values would also do that, but as <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> says, “it fits in better with the algebra [statisticians] have to do.”</p>
 </section>
 <section id="id3">
-<h3>The Standard Deviation<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>The Standard Deviation<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>The standard deviation (SD) is a measure of spread in a list of numbers.</p>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id4" role="note">
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>The rms formula is similar to the formula for Euclidean distance, from the origin to the list of numbers as a single point in a coordinate system. The Euclidean distance also measures a kind of size, but without averaging.</p>
+</aside>
 </aside>
 </section>
 </section>
@@ -512,7 +532,7 @@ Median vs Average<div class="sd-summary-down docutils">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">The Histogram</p>
+        <p class="prev-next-title">Income</p>
       </div>
     </a>
     <a class="right-next"
@@ -570,7 +590,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
