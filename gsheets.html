@@ -459,7 +459,11 @@ document.write(`
 </section>
 <section id="cell-references-a1-and-sheet1-a1">
 <h3>Cell References: <code class="docutils literal notranslate"><span class="pre">A1</span></code> and <code class="docutils literal notranslate"><span class="pre">Sheet1!A1</span></code><a class="headerlink" href="#cell-references-a1-and-sheet1-a1" title="Link to this heading">#</a></h3>
-<p>You can reference the value of another cell using its column and row coordinate. For example, <code class="docutils literal notranslate"><span class="pre">A1</span></code> refers to the value in column A, row 1. If you would like to reference the value in another sheet named <code class="docutils literal notranslate"><span class="pre">Sheet1</span></code> (another tab in the same workbook), you can do that with the syntax <code class="docutils literal notranslate"><span class="pre">=Sheet1!A1</span></code>.</p>
+<p>You can reference the value of another cell using its column and row coordinate. For example, <code class="docutils literal notranslate"><span class="pre">A1</span></code> refers to the value in column A, row 1.</p>
+<figure class="align-default" id="sheetsformula">
+<a class="reference internal image-reference" href="_images/sheetsFormula.svg"><img alt="_images/sheetsFormula.svg" src="_images/sheetsFormula.svg" width="90%" /></a>
+</figure>
+<p>If you would like to reference the value in another sheet named <code class="docutils literal notranslate"><span class="pre">Sheet1</span></code> (another tab in the same workbook), you can do that with the syntax <code class="docutils literal notranslate"><span class="pre">=Sheet1!A1</span></code>.</p>
 </section>
 <section id="cell-ranges-a1-a2-a-a-and-a1-b2">
 <h3>Cell Ranges: <code class="docutils literal notranslate"><span class="pre">A1:A2</span></code>, <code class="docutils literal notranslate"><span class="pre">A:A</span></code> and <code class="docutils literal notranslate"><span class="pre">A1:B2</span></code><a class="headerlink" href="#cell-ranges-a1-a2-a-a-and-a1-b2" title="Link to this heading">#</a></h3>
@@ -471,6 +475,9 @@ document.write(`
 <li><p>An entire row, <code class="docutils literal notranslate"><span class="pre">1:1</span></code>. This will select the entirety of row 1.</p></li>
 </ol>
 <p>Selecting a range of cells will be useful later when we use formulas. Note, if you use the reference <code class="docutils literal notranslate"><span class="pre">=A1:B2</span></code> by itself, as shown below, you will get back an error because the 2x2 range cannot be inserted into a single cell.</p>
+<figure class="align-default" id="sheetsrange">
+<a class="reference internal image-reference" href="_images/sheetsRange.svg"><img alt="_images/sheetsRange.svg" src="_images/sheetsRange.svg" width="67%" /></a>
+</figure>
 </section>
 <section id="copying-and-pasting-cell-references-a-1-vs-a1">
 <h3>Copying and Pasting Cell References (<code class="docutils literal notranslate"><span class="pre">$A$1</span></code> vs <code class="docutils literal notranslate"><span class="pre">A1</span></code>)<a class="headerlink" href="#copying-and-pasting-cell-references-a-1-vs-a1" title="Link to this heading">#</a></h3>
@@ -481,6 +488,18 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">=$A1</span></code>, mixed referencing where the row is relative</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">=$A$1</span></code>, absolute referencing</p></li>
 </ol>
+<figure class="align-default" id="sheetsabsoluterow">
+<a class="reference internal image-reference" href="_images/sheetsRelativeCol.svg"><img alt="_images/sheetsRelativeCol.svg" src="_images/sheetsRelativeCol.svg" width="100%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Absolute Row referencing.</span><a class="headerlink" href="#sheetsabsoluterow" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="sheetsabsolutecol">
+<a class="reference internal image-reference" href="_images/sheetsRelativeRow.svg"><img alt="_images/sheetsRelativeRow.svg" src="_images/sheetsRelativeRow.svg" width="100%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Absolute Column referencing.</span><a class="headerlink" href="#sheetsabsolutecol" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 <section id="formulas">

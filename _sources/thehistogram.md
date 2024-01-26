@@ -175,16 +175,18 @@ The above is a cautionary tale and highlights the necessity of dealing with miss
 
 ## Controlling for a Variable
 
-Chapter 3.5 works through an example showing the distribution of blood pressure levels for users and non-users of an oral contraceptive. Overlaying the histograms is useful when comparing only populations from the same age group, suggesting that the pill affects blood pressure. We can also split histograms for merely descriptive purposes. Below, we show the distribution of the age at which 50 important paintings were completed for both Picasso and Cezanne. After splitting by the qualitative varaible, artist name, we see that Picasso peaked earlier. 
+Chapter 3.5 works through an example showing the distribution of blood pressure levels for users and non-users of an oral contraceptive. Overlaying the histograms is useful when comparing only populations from the same age group, suggesting that the pill affects blood pressure. 
+
+We can also split histograms for merely descriptive purposes. Below, we show the distribution of the age at which 50 important paintings were completed for both Picasso and Cezanne. After splitting by the qualitative varaible, artist name, we see that Picasso peaked earlier. 
 
 ```{figure} images/picasso_and_cezanne_combined.svg
-:width: 60%
+:width: 65%
 :name: picasso_cez_combined
 
 ```
 
 ```{figure} images/picasso_and_cezanne.svg
-:width: 60%
+:width: 65%
 :name: picasso_cez
 
 Picasso peaked earlier than Cezanne.
