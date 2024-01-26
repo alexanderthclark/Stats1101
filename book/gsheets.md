@@ -43,19 +43,21 @@ Selecting a range of cells will be useful later when we use formulas. Note, if y
 To leverage the power of Sheets, you should be copying and pasting your references and formulas as much as possible. There are three types of references that behave differently when copying and pasting. A plain `=A1` reference:
 
 1. `=A1`, relative referencing
-2. `=A$1`, mixed referencing where the column is relative
-3. `=$A1`, mixed referencing where the row is relative
+2. `=A$1`, mixed referencing where the column is relative and the row is absolute
+3. `=$A1`, mixed referencing where the row is relative and the column is absolute
 4. `=$A$1`, absolute referencing
 
-```{figure} images/tikz/sheetsRelativeCol.svg
-:width: 100%
+```{figure} images/tikz/sheetsAbsoluteRow.svg
+:width: 67%
 :name: sheetsAbsoluteRow
 
 Absolute Row referencing.
 ```
 
-```{figure} images/tikz/sheetsRelativeRow.svg
-:width: 100%
+Rows are numbered and columns are lettered. A dollar sign in front of the number will make the row referencing absolute. Similarly, a dollar sign in front of the letter will make the column referencing absolute. 
+
+```{figure} images/tikz/sheetsAbsoluteColumn.svg
+:width: 67%
 :name: sheetsAbsoluteCol
 
 Absolute Column referencing.
