@@ -30,9 +30,9 @@ Two skewed histograms. The left panel features on a long left tail and the right
 
 A histogram is made of blocks (or bars). Each block has a predetermined **class interval** and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the *area* of the block is proportional to the number of data points in the class interval. If a vertical scale is supplied, the areas will sum to 100% (or 1, depending on what software you use). This corresponds to a **density** scale. 
 
-Suppose we observed incomes \$0, \$10, \$10, \$20, \$20, \$20, \$30, and \$216. This approximates the level of income inequality in South Africa.[^2]
+Suppose we observed incomes \$0, \$10, \$10, \$20, \$20, \$20, \$30, and \$216. This approximates the level of income inequality in South Africa.[^2] {numref}`sarand` summarizes the data set.  
 
-[^2]: The approximation is based on the Gini coefficient matching South Africa's, as recorded by the [World Bank](https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true). {numref}`sarand` summarizes the data set.   
+[^2]: The approximation is based on the Gini coefficient matching South Africa's, as recorded by the [World Bank](https://data.worldbank.org/indicator/SI.POV.GINI/?most_recent_value_desc=true). 
 
 ```{list-table} Data Frequencies
 :header-rows: 1
@@ -71,9 +71,6 @@ The **height** of a block represents crowding, not an actual percentage. The las
 
 Histograms reveal the shape of the distribution, and sometimes interesting irregularities, like in {cite}`freedman2007statistics` Review Exercise 11 and in the following example.
 
-### Interactive
-
-Use [this Google Colab form](https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing) to create a histogram and adjust the class intervals. No coding is required.
 
 ### Example: Sleuthing out Fraud
 
@@ -133,6 +130,10 @@ This reveals something interesting.
 2. There is no rounding in the updated mileage. 
 
 This suggests something fishy. Maybe it is the insurance customers who report their own mileage in a fishy way. But why round for the baseline but not the updated? *Or* it reveals something fishy about the researchers, who might have manipulated the updated mileage data. These numbers could have been fabricated with a random number generator, hence the lack of human-like rounding. Given the retraction, most favor the latter hypothesis. 
+
+### Interactive
+
+Use [this Google Colab form](https://colab.research.google.com/drive/1yaTmtfCi9lJTgy0g7aPzLvSZ6PCVN6fk?usp=sharing) to create a histogram and adjust the class intervals. No coding is required.
 
 
 ## Variables 
