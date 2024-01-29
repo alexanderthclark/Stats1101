@@ -430,6 +430,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -540,13 +541,40 @@ Median vs Average<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}(x_i-\bar{x})^2 }.\]</div>
 <p>This is important to appreciate if you are using random calculators. In Google Sheets, use <code class="docutils literal notranslate"><span class="pre">STDEVP</span></code> for the SD.</p>
+<p>We’ll cover samples, where you observe data for just a subset of a larger population, later in the course. For now, you can imagine everything is the entire population.</p>
 </section>
 <section id="what-the-sd-says">
 <h4>What the SD Says<a class="headerlink" href="#what-the-sd-says" title="Link to this heading">#</a></h4>
 <p>The standard deviation describes the spread in the data, or the typical size of deviations from the average in a list of numbers.</p>
 <p>I like to think of it in terms of a prediction exercise. If your prediction algorithm for a number drawn from the list is “always guess the average,” the SD helps summarize the expected prediction error.</p>
-<p>We keep using the work “typical” in a vague way. The following rule of thumb helps explain what kind of yardstick the SD is.</p>
+<p>We keep using the word “typical” in a vague way. The 68-95 rule is a rule of thumb that helps explain what kind of yardstick the SD is.</p>
 <p><strong>The 68-95 rule</strong> says that roughly 68% of entries in a list are within one SD of the average. About 95% of entries are within two SDs of the average. This is true if the data is normally distributed (Chapter 5).</p>
+</section>
+</section>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
+<div class="exercise admonition" id="sdproperties">
+
+<p class="admonition-title"><span class="caption-number">Exercise 15 </span></p>
+<section id="exercise-content">
+<p>Find the SD for -1, 1. Find the SD for -1, -1, 1, 1. Find the SD for 0, 2. Comment on the similarities between the first list and the other two.</p>
+</section>
+</div>
+<div class="exercise admonition" id="sd_add_avg">
+
+<p class="admonition-title"><span class="caption-number">Exercise 16 </span></p>
+<section id="exercise-content">
+<p>True or False? Extending a list of numbers to include the average will always decrease the standard deviation. Justify your answer.</p>
+</section>
+</div>
+<div class="exercise admonition" id="starnetwork">
+
+<p class="admonition-title"><span class="caption-number">Exercise 17 </span></p>
+<section id="exercise-content">
+<p>Suppose Taylor Swift launches her own social network. Members can follow Taylor Swift and nobody else. As a courtesy, Swift follows everyone back. Can the average number of followers on the network ever exceed two? Will it always be greater than one? Is the distribution skewed or symmetric? Use a calculator to find the SD for the number of followers if the network has 10 members in addition to Taylor Swift. Does the 68-95 rule hold?</p>
+</section>
+</div>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id4" role="doc-footnote">
@@ -554,8 +582,6 @@ Median vs Average<div class="sd-summary-down docutils">
 <p>The rms formula is similar to the formula for Euclidean distance, from the origin to the list of numbers as a single point in a coordinate system. The Euclidean distance also measures a kind of size, but without averaging.</p>
 </aside>
 </aside>
-</section>
-</section>
 </section>
 </section>
 
@@ -633,6 +659,7 @@ Median vs Average<div class="sd-summary-down docutils">
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 

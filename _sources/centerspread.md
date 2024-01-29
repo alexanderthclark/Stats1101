@@ -102,6 +102,7 @@ $$\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}(x_i-\bar{x})^2 }.$$
 
 This is important to appreciate if you are using random calculators. In Google Sheets, use `STDEVP` for the SD. 
 
+We'll cover samples, where you observe data for just a subset of a larger population, later in the course. For now, you can imagine everything is the entire population. 
 
 #### What the SD Says
 
@@ -109,8 +110,40 @@ The standard deviation describes the spread in the data, or the typical size of 
 
 I like to think of it in terms of a prediction exercise. If your prediction algorithm for a number drawn from the list is "always guess the average," the SD helps summarize the expected prediction error.  
 
-We keep using the work "typical" in a vague way. The following rule of thumb helps explain what kind of yardstick the SD is. 
+We keep using the word "typical" in a vague way. The 68-95 rule is a rule of thumb that helps explain what kind of yardstick the SD is. 
 
 **The 68-95 rule** says that roughly 68% of entries in a list are within one SD of the average. About 95% of entries are within two SDs of the average. This is true if the data is normally distributed (Chapter 5). 
 
 
+
+## Exercises 
+
+```{exercise-start}
+:label: sdproperties
+```
+
+Find the SD for -1, 1. Find the SD for -1, -1, 1, 1. Find the SD for 0, 2. Comment on the similarities between the first list and the other two. 
+
+```{exercise-end}
+```
+
+
+```{exercise-start}
+:label: sd_add_avg
+```
+
+True or False? Extending a list of numbers to include the average will always decrease the standard deviation. Justify your answer.
+
+
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: starnetwork
+```
+
+Suppose Taylor Swift launches her own social network. Members can follow Taylor Swift and nobody else. As a courtesy, Swift follows everyone back. Can the average number of followers on the network ever exceed two? Will it always be greater than one? Is the distribution skewed or symmetric? Use a calculator to find the SD for the number of followers if the network has 10 members in addition to Taylor Swift. Does the 68-95 rule hold? 
+
+
+```{exercise-end}
+```
