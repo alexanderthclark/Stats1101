@@ -50,4 +50,52 @@ The r.m.s. doesn't change if you change the sign on any of the numbers. It says 
 
 ### The Standard Deviation
 
-The standard deviation (SD) is a measure of spread in a list of numbers. 
+The **standard deviation (SD)** is a measure of spread in a list of numbers. The spread is in reference to the center, so for a single entry, we talk of the deviation from the average,
+
+$$\text{deviation = entry - average}.$$
+
+
+For a list of numbers, the SD is the root mean square size of each deviation. If the list of numbers is -1 and 1, then we find the SD as follows. 
+
+1. The average is $\frac{-1+1}{2} = 0$.
+2. The deviations are $-1-0$ and $1-0$, or $-1$ and $1$. 
+3. The rms is $\sqrt{ \frac{1}{2}(-1^2 + 1^2) } = \sqrt{1} = 1$.
+
+Make a table if it helps with more complicated examples. Below, we find the SD for the list 1,2,3,4,5. The average is 3. 
+
+```{list-table} Finding the standard deviation
+:header-rows: 1
+:name: sd-table
+
+* - Entry
+  - Deviation
+  - Squared Deviation
+* - 1
+  - 1-3 = -2
+  - 4
+* - 2
+  - 2-3 = -1
+  - 1
+* - 3
+  - 3-3 = 0
+  - 0
+* - 4
+  - 4-3 = 1
+  - 1
+* - 5
+  - 5-3 = 2
+  - 4
+* - *average*
+  - *0*
+  - *2*
+```
+The SD is the square root of the average squared deviation, so SD = $\sqrt{2}$.
+
+#### Population vs Sample, SD vs SD<sup>+</sup>
+
+Our particular calculation for SD is technically the *population standard deviation*, as opposed to the *sample standard deviation*, which we call SD<sup>+</sup>
+. These are calculated slightly differently. SD<sup>+</sup> doesn't use the average squared deviation, dividing by $n-1$ instead of $n$:
+
+$$\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}(x_i-\bar{x})^2 }.$$
+
+This is important to appreciate if you are using random calculators. In Google Sheets, use `STDEVP` for the SD. 

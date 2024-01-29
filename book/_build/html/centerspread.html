@@ -407,7 +407,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average">The Average</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The Standard Deviation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The Standard Deviation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd-sup-sup">Population vs Sample, SD vs SD<sup>+</sup></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -465,12 +468,64 @@ Median vs Average<div class="sd-summary-down docutils">
 </section>
 <section id="id3">
 <h3>The Standard Deviation<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<p>The standard deviation (SD) is a measure of spread in a list of numbers.</p>
+<p>The <strong>standard deviation (SD)</strong> is a measure of spread in a list of numbers. The spread is in reference to the center, so for a single entry, we talk of the deviation from the average,</p>
+<div class="math notranslate nohighlight">
+\[\text{deviation = entry - average}.\]</div>
+<p>For a list of numbers, the SD is the root mean square size of each deviation. If the list of numbers is -1 and 1, then we find the SD as follows.</p>
+<ol class="arabic simple">
+<li><p>The average is <span class="math notranslate nohighlight">\(\frac{-1+1}{2} = 0\)</span>.</p></li>
+<li><p>The deviations are <span class="math notranslate nohighlight">\(-1-0\)</span> and <span class="math notranslate nohighlight">\(1-0\)</span>, or <span class="math notranslate nohighlight">\(-1\)</span> and <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+<li><p>The rms is <span class="math notranslate nohighlight">\(\sqrt{ \frac{1}{2}(-1^2 + 1^2) } = \sqrt{1} = 1\)</span>.</p></li>
+</ol>
+<p>Make a table if it helps with more complicated examples. Below, we find the SD for the list 1,2,3,4,5. The average is 3.</p>
+<table class="table" id="sd-table">
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">Finding the standard deviation</span><a class="headerlink" href="#sd-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Entry</p></th>
+<th class="head"><p>Deviation</p></th>
+<th class="head"><p>Squared Deviation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1-3 = -2</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>2-3 = -1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>3-3 = 0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>4-3 = 1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>5-3 = 2</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>average</em></p></td>
+<td><p><em>0</em></p></td>
+<td><p><em>2</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>The SD is the square root of the average squared deviation, so SD = <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>.</p>
+<section id="population-vs-sample-sd-vs-sd-sup-sup">
+<h4>Population vs Sample, SD vs SD<sup>+</sup><a class="headerlink" href="#population-vs-sample-sd-vs-sd-sup-sup" title="Permalink to this heading">#</a></h4>
+<p>Our particular calculation for SD is technically the <em>population standard deviation</em>, as opposed to the <em>sample standard deviation</em>, which we call SD<sup>+</sup>
+. These are calculated slightly differently. SD<sup>+</sup> doesn’t use the average squared deviation, dividing by <span class="math notranslate nohighlight">\(n-1\)</span> instead of <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}(x_i-\bar{x})^2 }.\]</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id4" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>The rms formula is similar to the formula for Euclidean distance, from the origin to the list of numbers as a single point in a coordinate system. The Euclidean distance also measures a kind of size, but without averaging.</p>
 </aside>
+</section>
 </section>
 </section>
 </section>
@@ -541,7 +596,10 @@ Median vs Average<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average">The Average</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The Standard Deviation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The Standard Deviation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd-sup-sup">Population vs Sample, SD vs SD<sup>+</sup></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
