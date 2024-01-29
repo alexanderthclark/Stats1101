@@ -425,6 +425,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd">Population vs Sample, SD vs SD<sup>+</sup></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-sd-says">What the SD Says</a></li>
 </ul>
 </li>
 </ul>
@@ -480,7 +481,7 @@ Median vs Average<div class="sd-summary-down docutils">
 <p>The <strong>root mean square</strong> size of a list is the (1) square <em>root</em> of the (2) <em>mean</em>, aka average, of the (3) <em>square</em>d entries. This says something about the size of a list.<a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[ \text{root mean square size of a list} = \sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2} \]</div>
-<p>The r.m.s. doesn’t change if you change the sign on any of the numbers. It says something about the typical absolute size of a number in the list. The average of the absolute values would also do that, but as <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> says, “it fits in better with the algebra [statisticians] have to do.”</p>
+<p>The r.m.s. doesn’t change if you change the sign on any of the numbers. It says something about the typical absolute size of a number in the list. The average of the absolute values would also do that, but as <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> says, “it fits in better with the algebra [statisticians] have to do.” Squaring helps us ignore the sign, we average to get some notion of what’s typical, and then we take the square root to return to the original units.</p>
 </section>
 <section id="id3">
 <h3>The Standard Deviation<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
@@ -489,7 +490,7 @@ Median vs Average<div class="sd-summary-down docutils">
 \[\text{deviation = entry - average}.\]</div>
 <p>For a list of numbers, the SD is the root mean square size of each deviation. If the list of numbers is -1 and 1, then we find the SD as follows.</p>
 <ol class="arabic simple">
-<li><p>The average is <span class="math notranslate nohighlight">\(\frac{-1+1}{2} = 0\)</span>.</p></li>
+<li><p>The average of the entries is <span class="math notranslate nohighlight">\(\frac{-1+1}{2} = 0\)</span>.</p></li>
 <li><p>The deviations are <span class="math notranslate nohighlight">\(-1-0\)</span> and <span class="math notranslate nohighlight">\(1-0\)</span>, or <span class="math notranslate nohighlight">\(-1\)</span> and <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
 <li><p>The rms is <span class="math notranslate nohighlight">\(\sqrt{ \frac{1}{2}(-1^2 + 1^2) } = \sqrt{1} = 1\)</span>.</p></li>
 </ol>
@@ -535,8 +536,17 @@ Median vs Average<div class="sd-summary-down docutils">
 <p>Our particular calculation for SD is technically the <em>population standard deviation</em>, as opposed to the <em>sample standard deviation</em>, which we call SD<sup>+</sup>
 . These are calculated slightly differently. SD<sup>+</sup> doesn’t use the average squared deviation, dividing by <span class="math notranslate nohighlight">\(n-1\)</span> instead of <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight">
+\[\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}(x_i-\bar{x})^2 }.\]</div>
+<div class="math notranslate nohighlight">
 \[\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}(x_i-\bar{x})^2 }.\]</div>
 <p>This is important to appreciate if you are using random calculators. In Google Sheets, use <code class="docutils literal notranslate"><span class="pre">STDEVP</span></code> for the SD.</p>
+</section>
+<section id="what-the-sd-says">
+<h4>What the SD Says<a class="headerlink" href="#what-the-sd-says" title="Link to this heading">#</a></h4>
+<p>The standard deviation describes the spread in the data, or the typical size of deviations from the average in a list of numbers.</p>
+<p>I like to think of it in terms of a prediction exercise. If your prediction algorithm for a number drawn from the list is “always guess the average,” the SD helps summarize the expected prediction error.</p>
+<p>We keep using the work “typical” in a vague way. The following rule of thumb helps explain what kind of yardstick the SD is.</p>
+<p><strong>The 68-95 rule</strong> says that roughly 68% of entries in a list are within one SD of the average. About 95% of entries are within two SDs of the average. This is true if the data is normally distributed (Chapter 5).</p>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id4" role="doc-footnote">
@@ -618,6 +628,7 @@ Median vs Average<div class="sd-summary-down docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd">Population vs Sample, SD vs SD<sup>+</sup></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-sd-says">What the SD Says</a></li>
 </ul>
 </li>
 </ul>
