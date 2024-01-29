@@ -521,9 +521,9 @@ Median vs Average<div class="sd-summary-down docutils">
 <p>Our particular calculation for SD is technically the <em>population standard deviation</em>, as opposed to the <em>sample standard deviation</em>, which we call SD<sup>+</sup>
 . These are calculated slightly differently. SD<sup>+</sup> doesn’t use the average squared deviation, dividing by <span class="math notranslate nohighlight">\(n-1\)</span> instead of <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}(x_i-\bar{x})^2 }.\]</div>
+\[\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\bar{x})^2 }.\]</div>
 <div class="math notranslate nohighlight">
-\[\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}(x_i-\bar{x})^2 }.\]</div>
+\[\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}^n(x_i-\bar{x})^2 }.\]</div>
 <p>This is important to appreciate if you are using random calculators. In Google Sheets, use <code class="docutils literal notranslate"><span class="pre">STDEVP</span></code> for the SD.</p>
 <p>We’ll cover samples, where you observe data for just a subset of a larger population, later in the course. For now, you can imagine everything is the entire population.</p>
 </section>
@@ -556,7 +556,7 @@ Median vs Average<div class="sd-summary-down docutils">
 
 <p class="admonition-title"><span class="caption-number">Exercise 17 </span></p>
 <section id="exercise-content">
-<p>Suppose Taylor Swift launches her own social network. Members can follow Taylor Swift and nobody else. As a courtesy, Taylor Swift follows everyone back. Can the average number of followers on the network ever exceed two? Will it always be greater than one? Is the distribution skewed or symmetric? Use a calculator to find the SD for the number of followers if the network has 10 members in addition to Taylor Swift. Does the 68-95 rule hold?</p>
+<p>Suppose Taylor Swift launches her own social network. Members can follow Taylor Swift and nobody else. As a courtesy, Swift follows everyone back. Can the average number of followers on the network ever exceed two? Will it always be greater than one? Is the distribution skewed or symmetric? Use a calculator to find the SD for the number of followers if the network has 10 members in addition to Taylor Swift. Does the 68-95 rule hold?</p>
 </section>
 </div>
 <hr class="footnotes docutils" />

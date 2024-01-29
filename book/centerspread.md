@@ -96,9 +96,9 @@ The SD is the square root of the average squared deviation, so SD = $\sqrt{2}$.
 Our particular calculation for SD is technically the *population standard deviation*, as opposed to the *sample standard deviation*, which we call SD<sup>+</sup>
 . These are calculated slightly differently. SD<sup>+</sup> doesn't use the average squared deviation, dividing by $n-1$ instead of $n$:
 
-$$\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}(x_i-\bar{x})^2 }.$$
+$$\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\bar{x})^2 }.$$
 
-$$\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}(x_i-\bar{x})^2 }.$$
+$$\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}^n(x_i-\bar{x})^2 }.$$
 
 This is important to appreciate if you are using random calculators. In Google Sheets, use `STDEVP` for the SD. 
 
