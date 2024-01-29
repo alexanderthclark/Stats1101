@@ -1,0 +1,11 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\node[circle,draw,fill=yellow,minimum size=1cm] (hub) at (0,0) {8};
+\foreach \a in {0,45,...,315} {
+  \node[circle,draw,fill=white,minimum size=1cm] (spoke-\a) at (\a:2cm) {1};
+  \draw (hub) -- (spoke-\a);
+}
+\end{tikzpicture}
+\end{document}

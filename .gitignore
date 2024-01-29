@@ -17,3 +17,4 @@ Data/covid/.ipynb_checkpoints/StateAgeDemographics-checkpoint.ipynb
 Data/covid/HET_age_and_state_data.csv
 helpers/.ipynb_checkpoints/thehistogramHelper-checkpoint.ipynb
 helpers/.ipynb_checkpoints/centerSpreadHelper-checkpoint.ipynb
+*.gz
