@@ -117,7 +117,7 @@ If not all students prefer the 1pm section, this becomes less compelling as a na
 :class: dropdown
 ```
 
-The SD is equal to 1 for all three lists. The SD doesn't change by duplicating the list or by shifting it. Neither duplicating for shifting the list would change the shape of the histogram either. 
+The SD is equal to 1 for all three lists. The SD doesn't change by duplicating the list or by shifting it. Neither duplicating nor shifting the list would change the shape of the histogram either. 
 
 Here is an [explainer video](https://www.youtube.com/watch?v=8eyg0meH5wo) for the math. 
 
