@@ -1,3 +1,4 @@
+(center_and_spread)=
 # Center and Spread
 
 Previously, we summarized data with a histogram. Visual representations sometimes lack simplicity or precision, so now we describe a distribution with just two numbers. The average describes the center of the data and the standard deviation describes its spread. Alternatives for center and spread include median and interquartile range, respectively. 
@@ -143,6 +144,14 @@ True or False? Extending a list of numbers to include the average will always de
 ```
 
 Suppose Taylor Swift launches her own social network. Members can follow Taylor Swift and nobody else. As a courtesy, Swift follows everyone back. Can the average number of followers on the network ever exceed two? Will it always be greater than one? Is the distribution skewed or symmetric? Use a calculator to find the SD for the number of followers if the network has 10 members in addition to Taylor Swift. Does the 68-95 rule hold? 
+
+
+```{figure} images/tikz/hubspokestrio.svg
+:width: 87%
+:name: tswiftnetwork
+
+An illustration of possible networks. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.
+```
 
 
 ```{exercise-end}

@@ -110,3 +110,16 @@ If not all students prefer the 1pm section, this becomes less compelling as a na
 
 ```{solution-end}
 ```
+
+## [Center and Spread](center_and_spread)
+
+```{solution-start} sdproperties
+:class: dropdown
+```
+
+The SD is equal to 1 for all three lists. The SD doesn't change by duplicating the list or by shifting it. Neither duplicating nor shifting the list would change the shape of the histogram either. 
+
+Here is an [explainer video](https://www.youtube.com/watch?v=8eyg0meH5wo) for the math. 
+
+```{solution-end}
+```
