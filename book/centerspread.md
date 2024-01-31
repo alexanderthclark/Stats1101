@@ -10,9 +10,9 @@ Previously, we summarized data with a histogram. Visual representations sometime
 
 ## The Average
 
-The **average** of a list of $n$ numbers is their sum, divided by $n$. Typical notation for an average is $\bar{x}$ or $\mu$. If you prefer,
+The **average** of a list of $n$ numbers is their sum, divided by $n$. Typical notation for an average is $\bar{x}$ or $\mu$. If you prefer summation notation,
 
-$$\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i.$$
+$$\text{average} = \frac{1}{n} \sum_{i=1}^n x_i.$$
 
 The **median** is the number in the middle of an ordered list of numbers. If there's an even number of numbers, average the middle two numbers. The median is less affected by extreme values. If I have a list of numbers 1, 2 and 3, then the average and the median are both 2. 
 
@@ -102,7 +102,7 @@ The SD is the square root of the average squared deviation, so SD = $\sqrt{2}$.
 Our particular calculation for SD is technically the *population standard deviation*, as opposed to the *sample standard deviation*, which we call SD<sup>+</sup>
 . These are calculated slightly differently. SD<sup>+</sup> doesn't use the average squared deviation, dividing by $n-1$ instead of $n$:
 
-$$\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\bar{x})^2 }.$$
+$$\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\mu)^2 }.$$
 
 $$\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}^n(x_i-\bar{x})^2 }.$$
 
