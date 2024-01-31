@@ -26,12 +26,12 @@ import statwrap
 
 ----- stdout -----
 Collecting statwrap
------ stdout -----
-  Downloading StatWrap-0.2.13-py3-none-any.whl.metadata (2.2 kB)
+  Downloading StatWrap-0.2.14-py3-none-any.whl.metadata (2.2 kB)
 ----- stdout -----
 Collecting pandas (from statwrap)
   Downloading pandas-2.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
 Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.26.3)
+----- stdout -----
 Requirement already satisfied: scipy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.12.0)
 Requirement already satisfied: IPython in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (8.20.0)
 Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (3.8.2)
@@ -44,7 +44,6 @@ Requirement already satisfied: pygments>=2.4.0 in /opt/hostedtoolcache/Python/3.
 Requirement already satisfied: stack-data in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.6.3)
 Requirement already satisfied: traitlets>=5 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (5.14.1)
 Requirement already satisfied: pexpect>4.3 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (4.9.0)
------ stdout -----
 Requirement already satisfied: contourpy>=1.0.1 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (1.2.0)
 Requirement already satisfied: cycler>=0.10 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (0.12.1)
 Requirement already satisfied: fonttools>=4.22.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (4.47.2)
@@ -56,6 +55,7 @@ Requirement already satisfied: python-dateutil>=2.7 in /opt/hostedtoolcache/Pyth
 ----- stdout -----
 Collecting pytz>=2020.1 (from pandas->statwrap)
   Downloading pytz-2023.4-py2.py3-none-any.whl.metadata (22 kB)
+----- stdout -----
 Collecting tzdata>=2022.7 (from pandas->statwrap)
   Downloading tzdata-2023.4-py2.py3-none-any.whl.metadata (1.4 kB)
 ----- stdout -----
@@ -64,30 +64,29 @@ Requirement already satisfied: ptyprocess>=0.5 in /opt/hostedtoolcache/Python/3.
 ----- stdout -----
 Requirement already satisfied: wcwidth in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from prompt-toolkit<3.1.0,>=3.0.41->IPython->statwrap) (0.2.13)
 Requirement already satisfied: six>=1.5 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib->statwrap) (1.16.0)
+----- stdout -----
 Requirement already satisfied: executing>=1.2.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.0.1)
 Requirement already satisfied: asttokens>=2.1.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.4.1)
 Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (0.2.2)
 ----- stdout -----
-Downloading StatWrap-0.2.13-py3-none-any.whl (16 kB)
+Downloading StatWrap-0.2.14-py3-none-any.whl (16 kB)
 Downloading pandas-2.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
-[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/12.7 MB[0m [31m?[0m eta [36m-:--:--[0m
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/12.7 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.2/12.7 MB[0m [31m125.6 MB/s[0m eta [36m0:00:01[0m
 ----- stdout -----
-[2K   [91m━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.8/12.7 MB[0m [31m84.8 MB/s[0m eta [36m0:00:01[0m
+[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━[0m [32m9.9/12.7 MB[0m [31m145.0 MB/s[0m eta [36m0:00:01[0m
 ----- stdout -----
-[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━[0m [32m7.4/12.7 MB[0m [31m108.9 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m12.7/12.7 MB[0m [31m149.7 MB/s[0m eta [36m0:00:01[0m
------ stdout -----
-[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.7/12.7 MB[0m [31m101.7 MB/s[0m eta [36m0:00:00[0m
+[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m12.7/12.7 MB[0m [31m166.4 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.7/12.7 MB[0m [31m109.9 MB/s[0m eta [36m0:00:00[0m
 [?25hDownloading pytz-2023.4-py2.py3-none-any.whl (506 kB)
-[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/506.5 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m506.5/506.5 kB[0m [31m73.6 MB/s[0m eta [36m0:00:00[0m
-[?25hDownloading tzdata-2023.4-py2.py3-none-any.whl (346 kB)
-[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/346.6 kB[0m [31m?[0m eta [36m-:--:--[0m
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/506.5 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m506.5/506.5 kB[0m [31m65.5 MB/s[0m eta [36m0:00:00[0m
+[?25h
 ----- stdout -----
-[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m346.6/346.6 kB[0m [31m65.1 MB/s[0m eta [36m0:00:00[0m
+Downloading tzdata-2023.4-py2.py3-none-any.whl (346 kB)
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/346.6 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m346.6/346.6 kB[0m [31m66.0 MB/s[0m eta [36m0:00:00[0m
 [?25h
 ----- stdout -----
 Installing collected packages: pytz, tzdata, pandas, statwrap
 ----- stdout -----
-Successfully installed pandas-2.2.0 pytz-2023.4 statwrap-0.2.13 tzdata-2023.4
+Successfully installed pandas-2.2.0 pytz-2023.4 statwrap-0.2.14 tzdata-2023.4
 ----- stdout -----
 
 [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m23.2.1[0m[39;49m -> [0m[32;49m23.3.2[0m

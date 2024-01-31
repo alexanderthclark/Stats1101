@@ -453,9 +453,9 @@ document.write(`
 <p>Previously, we summarized data with a histogram. Visual representations sometimes lack simplicity or precision, so now we describe a distribution with just two numbers. The average describes the center of the data and the standard deviation describes its spread. Alternatives for center and spread include median and interquartile range, respectively.</p>
 <section id="the-average">
 <h2>The Average<a class="headerlink" href="#the-average" title="Link to this heading">#</a></h2>
-<p>The <strong>average</strong> of a list of <span class="math notranslate nohighlight">\(n\)</span> numbers is their sum, divided by <span class="math notranslate nohighlight">\(n\)</span>. Typical notation for an average is <span class="math notranslate nohighlight">\(\bar{x}\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span>. If you prefer,</p>
+<p>The <strong>average</strong> of a list of <span class="math notranslate nohighlight">\(n\)</span> numbers is their sum, divided by <span class="math notranslate nohighlight">\(n\)</span>. Typical notation for an average is <span class="math notranslate nohighlight">\(\bar{x}\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span>. If you prefer summation notation,</p>
 <div class="math notranslate nohighlight">
-\[\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i.\]</div>
+\[\text{average} = \frac{1}{n} \sum_{i=1}^n x_i.\]</div>
 <p>The <strong>median</strong> is the number in the middle of an ordered list of numbers. If there’s an even number of numbers, average the middle two numbers. The median is less affected by extreme values. If I have a list of numbers 1, 2 and 3, then the average and the median are both 2.</p>
 <figure class="align-default" id="mean-median-sym">
 <a class="reference internal image-reference" href="_images/hist_with_mean_median.svg"><img alt="_images/hist_with_mean_median.svg" src="_images/hist_with_mean_median.svg" width="87%" /></a>
@@ -543,7 +543,7 @@ Median vs Average<div class="sd-summary-down docutils">
 <p>Our particular calculation for SD is technically the <em>population standard deviation</em>, as opposed to the <em>sample standard deviation</em>, which we call SD<sup>+</sup>
 . These are calculated slightly differently. SD<sup>+</sup> doesn’t use the average squared deviation, dividing by <span class="math notranslate nohighlight">\(n-1\)</span> instead of <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\bar{x})^2 }.\]</div>
+\[\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\mu)^2 }.\]</div>
 <div class="math notranslate nohighlight">
 \[\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}^n(x_i-\bar{x})^2 }.\]</div>
 <p>This is important to appreciate if you are using random calculators. In Google Sheets, use <code class="docutils literal notranslate"><span class="pre">STDEVP</span></code> for the SD.</p>
