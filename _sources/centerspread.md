@@ -144,7 +144,6 @@ True or False? Extending a list of numbers to include the average will always de
 ```{exercise-end}
 ```
 
-<a id="swift"></a>
 ```{exercise-start}
 :label: starnetwork
 ```
@@ -160,8 +159,8 @@ An illustration of possible networks with three, six, and eleven members. The ye
 ```
 
 (a) For a single network, is the distribution of the number of followers skewed or symmetric? <br>
-(b) Can the average number of followers on the network ever exceed two? <br>
-(c) Is the average number of followers always greater than one? <br>
+(b) Is the average number of followers always greater than one? <br>
+(c) Can the average number of followers on the network ever exceed two? <br>
 (d) Use a calculator to find the SD for the number of followers if the network has 13 members including Swift. Does the 68-95 rule hold? What if the network has 1989 members? 
 
 ```{exercise-end}
