@@ -407,7 +407,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average">The Average</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">The Standard Deviation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd-sup-sup">Population vs Sample, SD vs SD<sup>+</sup></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-sd-says">What the SD Says</a></li>
 </ul>
@@ -428,6 +428,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="center-and-spread">
 <span id="id1"></span><h1>Center and Spread<a class="headerlink" href="#center-and-spread" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 4</p></li>
+</ul>
+</div>
 <p>Previously, we summarized data with a histogram. Visual representations sometimes lack simplicity or precision, so now we describe a distribution with just two numbers. The average describes the center of the data and the standard deviation describes its spread. Alternatives for center and spread include median and interquartile range, respectively.</p>
 <section id="the-average">
 <h2>The Average<a class="headerlink" href="#the-average" title="Permalink to this heading">#</a></h2>
@@ -463,13 +469,13 @@ Median vs Average<div class="sd-summary-down docutils">
 <h2>The Standard Deviation<a class="headerlink" href="#the-standard-deviation" title="Permalink to this heading">#</a></h2>
 <section id="preamble-root-mean-square">
 <h3>Preamble: Root Mean Square<a class="headerlink" href="#preamble-root-mean-square" title="Permalink to this heading">#</a></h3>
-<p>The <strong>root mean square</strong> size of a list is the (1) square <em>root</em> of the (2) <em>mean</em>, aka average, of the (3) <em>square</em>d entries. This says something about the size of a list.<a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>The <strong>root mean square</strong> size of a list is the (1) square <em>root</em> of the (2) <em>mean</em>, aka average, of the (3) <em>square</em>d entries. This says something about the size of a list.<a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[ \text{root mean square size of a list} = \sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2} \]</div>
-<p>The r.m.s. doesn’t change if you change the sign on any of the numbers. It says something about the typical absolute size of a number in the list. The average of the absolute values would also do that, but as <span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> says, “it fits in better with the algebra [statisticians] have to do.” Squaring helps us ignore the sign, we average to get some notion of what’s typical, and then we take the square root to return to the original units.</p>
+<p>The r.m.s. doesn’t change if you change the sign on any of the numbers. It says something about the typical absolute size of a number in the list. The average of the absolute values would also do that, but as <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> says, “it fits in better with the algebra [statisticians] have to do.” Squaring helps us ignore the sign, we average to get some notion of what’s typical, and then we take the square root to return to the original units.</p>
 </section>
-<section id="id4">
-<h3>The Standard Deviation<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h3>The Standard Deviation<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>The <strong>standard deviation (SD)</strong> is a measure of spread in a list of numbers. The spread is in reference to the center, so for a single entry, we talk of the deviation from the average,</p>
 <div class="math notranslate nohighlight">
 \[\text{deviation = entry - average}.\]</div>
@@ -552,22 +558,27 @@ Median vs Average<div class="sd-summary-down docutils">
 <p>True or False? Extending a list of numbers to include the average will always decrease the standard deviation. Justify your answer.</p>
 </section>
 </div>
+<p><a id="swift"></a></p>
 <div class="exercise admonition" id="starnetwork">
 
 <p class="admonition-title"><span class="caption-number">Exercise 17 </span></p>
 <section id="exercise-content">
-<p>Suppose Taylor Swift launches her own social network. Members follow Taylor Swift and nobody else. As a courtesy, Swift follows everyone back. Can the average number of followers on the network ever exceed two? Will it always be greater than one? Is the distribution skewed or symmetric? Use a calculator to find the SD for the number of followers if the network has 10 members in addition to Taylor Swift (11 total). Does the 68-95 rule hold?</p>
+<p>Suppose Taylor Swift launches her own social network. Members follow Taylor Swift and nobody else. As a courtesy, Swift follows everyone back.</p>
 <figure class="align-default" id="tswiftnetwork">
 <a class="reference internal image-reference" href="_images/hubspokestrio.svg"><img alt="_images/hubspokestrio.svg" src="_images/hubspokestrio.svg" width="87%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">An illustration of possible networks. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.</span><a class="headerlink" href="#tswiftnetwork" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">An illustration of possible networks with three, six, and eleven members. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.</span><a class="headerlink" href="#tswiftnetwork" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>(a) Is the distribution of the number of followers skewed or symmetric? <br>
+(b) Can the average number of followers on the network ever exceed two? <br>
+(c) Is the average number of followers always be greater than one? <br>
+(d) Use a calculator to find the SD for the number of followers if the network has 13 members including Swift. Does the 68-95 rule hold? What if the network has 1989 members?</p>
 </section>
 </div>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id5" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id6" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
 <p>The rms formula is similar to the formula for Euclidean distance, from the origin to the list of numbers as a single point in a coordinate system. The Euclidean distance also measures a kind of size, but without averaging.</p>
 </aside>
 </section>
@@ -639,7 +650,7 @@ Median vs Average<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average">The Average</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">The Standard Deviation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd-sup-sup">Population vs Sample, SD vs SD<sup>+</sup></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-sd-says">What the SD Says</a></li>
 </ul>

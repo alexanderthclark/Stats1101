@@ -144,20 +144,25 @@ True or False? Extending a list of numbers to include the average will always de
 ```{exercise-end}
 ```
 
+<a id="swift"></a>
 ```{exercise-start}
 :label: starnetwork
 ```
 
-Suppose Taylor Swift launches her own social network. Members follow Taylor Swift and nobody else. As a courtesy, Swift follows everyone back. Can the average number of followers on the network ever exceed two? Will it always be greater than one? Is the distribution skewed or symmetric? Use a calculator to find the SD for the number of followers if the network has 10 members in addition to Taylor Swift (11 total). Does the 68-95 rule hold? 
+Suppose Taylor Swift launches her own social network. Members follow Taylor Swift and nobody else. As a courtesy, Swift follows everyone back. 
 
 
 ```{figure} images/tikz/hubspokestrio.svg
 :width: 87%
 :name: tswiftnetwork
 
-An illustration of possible networks. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.
+An illustration of possible networks with three, six, and eleven members. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.
 ```
 
+(a) For a single network, is the distribution of the number of followers skewed or symmetric? <br>
+(b) Can the average number of followers on the network ever exceed two? <br>
+(c) Is the average number of followers always greater than one? <br>
+(d) Use a calculator to find the SD for the number of followers if the network has 13 members including Swift. Does the 68-95 rule hold? What if the network has 1989 members? 
 
 ```{exercise-end}
 ```
