@@ -18,3 +18,4 @@ Data/covid/HET_age_and_state_data.csv
 helpers/.ipynb_checkpoints/thehistogramHelper-checkpoint.ipynb
 helpers/.ipynb_checkpoints/centerSpreadHelper-checkpoint.ipynb
 *.gz
+Data/ATUS/.ipynb_checkpoints/ATUS-activity-summary-checkpoint.ipynb
