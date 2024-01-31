@@ -1,6 +1,11 @@
 (center_and_spread)=
 # Center and Spread
 
+```{admonition} Important Readings
+:class: seealso
+- {cite}`freedman2007statistics`, Chapter 4
+```
+
 Previously, we summarized data with a histogram. Visual representations sometimes lack simplicity or precision, so now we describe a distribution with just two numbers. The average describes the center of the data and the standard deviation describes its spread. Alternatives for center and spread include median and interquartile range, respectively. 
 
 ## The Average
