@@ -15,7 +15,7 @@ These notes are based primarily on the textbook, {cite}`freedman2007statistics`,
 4. Power
 5. Multiple linear regression (if time allows)
 
-Sections marked "Extension" go beyond the book's treatment of a subject. These sections are meant to help test your comfort with the ideas, either developing a deeper understanding (e.g., Section TKTK) or broadening the context (e.g., Section TKTK).
+Sections marked "Extension" go beyond the book's treatment of a subject. These sections are meant to help test your comfort with the ideas, either developing a deeper understanding or broadening the context.
 
 The provided exercises supplement the exercises in {cite}`freedman2007statistics`. Use the textbook exercises to drill the concepts before attempting the exercises here.
 
