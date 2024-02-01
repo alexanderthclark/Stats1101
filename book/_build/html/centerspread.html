@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="next" title="Normal Distribution" href="normal.html" />
     <link rel="prev" title="The Histogram" href="thehistogram.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,6 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Center and Spread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normal.html">Normal Distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
@@ -437,9 +438,9 @@ document.write(`
 <p>Previously, we summarized data with a histogram. Visual representations sometimes lack simplicity or precision, so now we describe a distribution with just two numbers. The average describes the center of the data and the standard deviation describes its spread. Alternatives for center and spread include median and interquartile range, respectively.</p>
 <section id="the-average">
 <h2>The Average<a class="headerlink" href="#the-average" title="Permalink to this heading">#</a></h2>
-<p>The <strong>average</strong> of a list of <span class="math notranslate nohighlight">\(n\)</span> numbers is their sum, divided by <span class="math notranslate nohighlight">\(n\)</span>. Typical notation for an average is <span class="math notranslate nohighlight">\(\bar{x}\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span>. If you prefer,</p>
+<p>The <strong>average</strong> of a list of <span class="math notranslate nohighlight">\(n\)</span> numbers is their sum, divided by <span class="math notranslate nohighlight">\(n\)</span>. Typical notation for an average is <span class="math notranslate nohighlight">\(\bar{x}\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span>. If you prefer summation notation,</p>
 <div class="math notranslate nohighlight">
-\[\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i.\]</div>
+\[\text{average} = \frac{1}{n} \sum_{i=1}^n x_i.\]</div>
 <p>The <strong>median</strong> is the number in the middle of an ordered list of numbers. If there’s an even number of numbers, average the middle two numbers. The median is less affected by extreme values. If I have a list of numbers 1, 2 and 3, then the average and the median are both 2.</p>
 <figure class="align-default" id="mean-median-sym">
 <a class="reference internal image-reference" href="_images/hist_with_mean_median.svg"><img alt="_images/hist_with_mean_median.svg" src="_images/hist_with_mean_median.svg" width="87%" /></a>
@@ -527,7 +528,7 @@ Median vs Average<div class="sd-summary-down docutils">
 <p>Our particular calculation for SD is technically the <em>population standard deviation</em>, as opposed to the <em>sample standard deviation</em>, which we call SD<sup>+</sup>
 . These are calculated slightly differently. SD<sup>+</sup> doesn’t use the average squared deviation, dividing by <span class="math notranslate nohighlight">\(n-1\)</span> instead of <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\bar{x})^2 }.\]</div>
+\[\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\mu)^2 }.\]</div>
 <div class="math notranslate nohighlight">
 \[\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}^n(x_i-\bar{x})^2 }.\]</div>
 <p>This is important to appreciate if you are using random calculators. In Google Sheets, use <code class="docutils literal notranslate"><span class="pre">STDEVP</span></code> for the SD.</p>
@@ -558,7 +559,6 @@ Median vs Average<div class="sd-summary-down docutils">
 <p>True or False? Extending a list of numbers to include the average will always decrease the standard deviation. Justify your answer.</p>
 </section>
 </div>
-<p><a id="swift"></a></p>
 <div class="exercise admonition" id="starnetwork">
 
 <p class="admonition-title"><span class="caption-number">Exercise 17 </span></p>
@@ -570,9 +570,9 @@ Median vs Average<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 16 </span><span class="caption-text">An illustration of possible networks with three, six, and eleven members. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.</span><a class="headerlink" href="#tswiftnetwork" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>(a) Is the distribution of the number of followers skewed or symmetric? <br>
-(b) Can the average number of followers on the network ever exceed two? <br>
-(c) Is the average number of followers always be greater than one? <br>
+<p>(a) For a single network, is the distribution of the number of followers skewed or symmetric? <br>
+(b) Is the average number of followers always greater than one? <br>
+(c) Can the average number of followers on the network ever exceed two? <br>
 (d) Use a calculator to find the SD for the number of followers if the network has 13 members including Swift. Does the 68-95 rule hold? What if the network has 1989 members?</p>
 </section>
 </div>
@@ -624,11 +624,11 @@ Median vs Average<div class="sd-summary-down docutils">
       </div>
     </a>
     <a class="right-next"
-       href="bibliography.html"
+       href="normal.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Normal Distribution</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

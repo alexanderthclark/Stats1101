@@ -1,5 +1,6 @@
 jupyter-book
 matplotlib
+bokeh
 numpy
-spicy
+scipy
 rpy2

@@ -10,9 +10,9 @@ Previously, we summarized data with a histogram. Visual representations sometime
 
 ## The Average
 
-The **average** of a list of $n$ numbers is their sum, divided by $n$. Typical notation for an average is $\bar{x}$ or $\mu$. If you prefer,
+The **average** of a list of $n$ numbers is their sum, divided by $n$. Typical notation for an average is $\bar{x}$ or $\mu$. If you prefer summation notation,
 
-$$\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i.$$
+$$\text{average} = \frac{1}{n} \sum_{i=1}^n x_i.$$
 
 The **median** is the number in the middle of an ordered list of numbers. If there's an even number of numbers, average the middle two numbers. The median is less affected by extreme values. If I have a list of numbers 1, 2 and 3, then the average and the median are both 2. 
 
@@ -102,7 +102,7 @@ The SD is the square root of the average squared deviation, so SD = $\sqrt{2}$.
 Our particular calculation for SD is technically the *population standard deviation*, as opposed to the *sample standard deviation*, which we call SD<sup>+</sup>
 . These are calculated slightly differently. SD<sup>+</sup> doesn't use the average squared deviation, dividing by $n-1$ instead of $n$:
 
-$$\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\bar{x})^2 }.$$
+$$\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\mu)^2 }.$$
 
 $$\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}^n(x_i-\bar{x})^2 }.$$
 
@@ -144,7 +144,6 @@ True or False? Extending a list of numbers to include the average will always de
 ```{exercise-end}
 ```
 
-<a id="swift"></a>
 ```{exercise-start}
 :label: starnetwork
 ```
@@ -159,9 +158,9 @@ Suppose Taylor Swift launches her own social network. Members follow Taylor Swif
 An illustration of possible networks with three, six, and eleven members. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.
 ```
 
-(a) Is the distribution of the number of followers skewed or symmetric? <br>
-(b) Can the average number of followers on the network ever exceed two? <br>
-(c) Is the average number of followers always be greater than one? <br>
+(a) For a single network, is the distribution of the number of followers skewed or symmetric? <br>
+(b) Is the average number of followers always greater than one? <br>
+(c) Can the average number of followers on the network ever exceed two? <br>
 (d) Use a calculator to find the SD for the number of followers if the network has 13 members including Swift. Does the 68-95 rule hold? What if the network has 1989 members? 
 
 ```{exercise-end}
