@@ -1,7 +1,8 @@
-# The Normal Distribution
+(normal)=
+# Normal Distribution
 
-TKTK
+```{admonition} Important Readings
+:class: seealso
+- {cite}`freedman2007statistics`, Chapter 6
+```
 
-## The Normal Curve
-
-## Tables
