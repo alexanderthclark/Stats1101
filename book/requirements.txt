@@ -4,3 +4,5 @@ bokeh
 numpy
 scipy
 rpy2
+ipywidgets
+IPython
