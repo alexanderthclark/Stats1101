@@ -42,7 +42,7 @@ The variable on the $x$-axis is thought of as the **independent variable** and t
 For each of these two pairs, which variable would you choose as the independent variable? 
 
 1. Hours of sleep and test performance on the following day
-2. Welfare spending and poverty
+2. Public assistance (like welfare) and poverty
 3. Attractiveness and income
 
 
@@ -52,9 +52,11 @@ Sleep should be the independent variable, especially given the temporal preceden
 
 ```
 
-```{dropdown} Welfare spending and poverty 
+```{dropdown} Public assistance and poverty 
 
-Either choice is justified, or maybe neither is justified if you are too insistent. Statistician Udny Yule considered spending on public assistance as the independent variable and poverty as the dependent variable in his "investigation into the causes of changes in pauperism in England" ({cite}`yule1899investigation`). This makes sense if you insist that assistance only increases dependence on help. But it's obviously wrong if assistance can help break cycles of poverty. 
+Either choice is justified. First, let's consider public assistance as the independent variable. You don't have to be taking a stance on there being a positive or negative relationship. Statistician Udny Yule considered spending on public assistance as the independent variable and poverty as the dependent variable in his "investigation into the causes of changes in pauperism in England," finding a positive relationship ({cite}`yule1899investigation`). This is the association you would expect if you believe that assistance promotes dependency and increases poverty. Public assistance might also break cycles of poverty, leading to a negative relationship. This can still be compatible with Yule's data if you recognize that it's important to consider the other direction. 
+
+Societies that experience more poverty might spend more on public assistance. Given that spending responds to poverty levels, it can also be appropriate to consider poverty as the independent variable.  
 
 ```
 
