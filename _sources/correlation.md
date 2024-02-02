@@ -54,7 +54,7 @@ Sleep should be the independent variable, especially given the temporal preceden
 
 ```{dropdown} Welfare spending and poverty 
 
-Either choice is justified, or maybe neither is justified if you are too insistent. Statistician Udny Yule considered spending on public assistance as the independent variable and poverty as the dependent variable in his "investigation into the causes of changes in pauperism in England" ({cite}`yule1899investigation`). This makes sense if you insist that assistance only increases their dependence on help. But it's obviously wrong if assistance can help break cycles of poverty. 
+Either choice is justified, or maybe neither is justified if you are too insistent. Statistician Udny Yule considered spending on public assistance as the independent variable and poverty as the dependent variable in his "investigation into the causes of changes in pauperism in England" ({cite}`yule1899investigation`). This makes sense if you insist that assistance only increases dependence on help. But it's obviously wrong if assistance can help break cycles of poverty. 
 
 ```
 
