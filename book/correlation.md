@@ -54,7 +54,6 @@ Sleep should be the independent variable, especially given the temporal preceden
 
 ```{dropdown} Public assistance and poverty 
 
-Either choice is justified, or maybe neither is justified if you are too insistent. Societies with higher poverty rates might respond by increasing public assistance or you could argue that public assistance only increases dependence on help, causing more poverty. This would lead to choosing public assistance as the independent variable. Statistician Udny Yule considered spending on public assistance as the independent variable and poverty as the dependent variable in his "investigation into the causes of changes in pauperism in England," finding a positive relationship ({cite}`yule1899investigation`). But the other direction is important if assistance can help break cycles of poverty. 
 
 ```
 
