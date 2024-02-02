@@ -13,7 +13,7 @@ parts:
     - file: natural
     - file: thehistogram
     - file: centerspread
-    #- file: normal
+    - file: normal
     #- file: correlation
     #- file: regression
     #- file: probability1

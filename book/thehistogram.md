@@ -1,3 +1,4 @@
+(the_histogram)=
 # The Histogram
 
 ```{admonition} Important Readings
