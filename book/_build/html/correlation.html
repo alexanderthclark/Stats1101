@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'correlation';</script>
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -179,6 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normal.html">Normal Distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
@@ -377,7 +380,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -393,6 +398,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-coefficient">Correlation Coefficient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#causation">Causation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -403,7 +420,95 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="correlation">
-<h1>Correlation<a class="headerlink" href="#correlation" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>Correlation<a class="headerlink" href="#correlation" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapters 8 and 9</p></li>
+</ul>
+</div>
+<section id="scatter-plots">
+<h2>Scatter Plots<a class="headerlink" href="#scatter-plots" title="Permalink to this heading">#</a></h2>
+<p>The relationship between two quantitative variables can be explored in a scatter plot.
+You need data that is paired, like in the father and son data below. Each <span class="math notranslate nohighlight">\(x,y\)</span> pair is plotted and you might notice a trend from the shape of the scatter of points.</p>
+<table class="table" id="id5">
+<caption><span class="caption-text">Father and Son Height Data</span><a class="headerlink" href="#id5" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Father’s Height (inches)</p></th>
+<th class="head"><p>Son’s Height (inches)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>65.0</p></td>
+<td><p>59.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>63.3</p></td>
+<td><p>63.2</p></td>
+</tr>
+<tr class="row-even"><td><p>65.0</p></td>
+<td><p>63.3</p></td>
+</tr>
+</tbody>
+</table>
+<p>The relationship is called an <strong>association</strong>. When the scatter of points slopes upward, that shows a positive association. If the scatter slopes downward, that shows a negative association. A strong association indicates that one variable can be used to predict the others.</p>
+<figure class="align-default" id="fathersonscatter">
+<a class="reference internal image-reference" href="_images/fathersonscatter.svg"><img alt="_images/fathersonscatter.svg" src="_images/fathersonscatter.svg" width="90%" /></a>
+<figcaption>
+<p><span class="caption-text">There is a positive association between a father’s height and his son’s height. The orange points are for the three pairs shown in the table above.</span><a class="headerlink" href="#fathersonscatter" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The variable on the <span class="math notranslate nohighlight">\(x\)</span>-axis is thought of as the <strong>independent variable</strong> and the <span class="math notranslate nohighlight">\(y\)</span>-axis variable is the <strong>dependent variable</strong>. This language suggests that the <span class="math notranslate nohighlight">\(x\)</span> variable is the one influencing the <span class="math notranslate nohighlight">\(y\)</span>, as if there’s a direction of causality being hypothesized. In this class, we have learned to be cautious in claiming causality. Go ahead and choose one variable as the independent variable and the other as the dependent without too much angst or hesitation. Just be ready to be humbled if you ultimately find the there is no causal relationship or if you get the direction backwards.</p>
+<p>For each of these two pairs, which variable would you choose as the independent variable?</p>
+<ol class="arabic simple">
+<li><p>Hours of sleep and test performance on the following day</p></li>
+<li><p>Welfare spending and poverty</p></li>
+<li><p>Attractiveness and income</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Sleep and test performance<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Sleep should be the independent variable, especially given the temporal precedence.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Welfare spending and poverty <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Either choice is justified, or maybe neither is justified if you are too insistent. Statistician Udny Yule considered spending on public assistance as the independent variable and poverty as the dependent variable in his “investigation into the causes of changes in pauperism in England” (<span id="id3">[<a class="reference internal" href="bibliography.html#id34" title="G Udny Yule. An investigation into the causes of changes in pauperism in england, chiefly during the last two intercensal decades (part i.). Journal of the Royal Statistical Society, 62(2):249–295, 1899.">Yul99</a>]</span>). This makes sense if you insist that assistance only increases their dependence on help. But it’s obviously wrong if assistance can help break cycles of poverty.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Attractiveness and income<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Either choice is justified. <span id="id4">[<a class="reference internal" href="bibliography.html#id31" title="Ellis P Monk Jr, Michael H Esposito, and Hedwig Lee. Beholding inequality: race, gender, and returns to physical attractiveness in the united states. American Journal of Sociology, 127(1):194–241, 2021.">MJEL21</a>]</span> considers attractiveness as the independent variable and earnings as the dependent variable in examining the “returns to physical attractiveness.” However, as the figure below suggests, the effect can go both ways.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/TomBradyIsHandsome.png"><img alt="_images/TomBradyIsHandsome.png" src="_images/TomBradyIsHandsome.png" style="width: 61%;" /></a>
+</figure>
+</div>
+</details></section>
+<section id="correlation-coefficient">
+<h2>Correlation Coefficient<a class="headerlink" href="#correlation-coefficient" title="Permalink to this heading">#</a></h2>
+<p>The correlation coefficient is a measure of linear association, or clustering around a line.
+The coefficient falls between -1 and 1.</p>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="causation">
+<h2>Causation<a class="headerlink" href="#causation" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -442,6 +547,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-coefficient">Correlation Coefficient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#causation">Causation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
