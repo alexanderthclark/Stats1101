@@ -34,6 +34,7 @@ html:
   theme: sphinx_book_theme
   extra_css: ["_static/custom.css"]
   favicon: ./_static/norm_favicon.ico
+  google_analytics_id: G-32DRGZQWDG
 
 
 launch_buttons:

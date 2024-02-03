@@ -16,6 +16,17 @@ A non-causal question might be a matter of mere prediction. Hiring managers will
 
 And there are many other types of non-causal questions. Some have merely descriptive purposes, for example. It's fun to marvel at stats that describe Michael Jordan's basketball career or Shakespeare's influence. {cite}`galenson2006old` studies the life cycles of artists, categorizing artists who tend to peak early versus those who peak later in life. On the surface, this makes no explicit prediction and doesn't propose a causal theory of creativity. The descriptive statistics might inform further theorizing that might creep into causal or predictive territory, but the statistics are interesting in and of themselves. It tells us something about how creativity can work and challenges a simplistic belief that "artists peak early."
 
+## Types of Evidence
+
+For answering any questions, evidence can be more or less reliable. Practitioners often speak of a hiearchy of evidence. A simple hierarchy for our purposes is the following (based on {cite}`kohavi2020trustworthy`). We'll discuss 2-4 over the next three sections. 
+
+1. Systematic reviews of randomized controlled experiments (e.g. replications and meta-analysis)
+2. Randomized controlled experiments
+3. Non-randomized experiments and natural experiments
+4. Observational studies
+5. Case studies, anecdotes, opinion (from both experts and the New York Post comments section)
+
+
 # Experiments
 
 Suppose we want to know if a vitamin improves a measurable health outcome. Making progress on this question requires the **method of comparison**. The vitamin can be considered a **treatment** and those who take the vitamin are considered treated or in the **treatment group**. Their health will be compared to the health of those in a **control group**. People in the control group take nothing or perhaps some alternative.
@@ -33,7 +44,7 @@ The clip below speaks to the importance of having a control group. Lisa Simpson 
 <br>
 
 
-Of course, we shouldn't imagine a control group. We must actually observe a control group. A control group helps us answer the "but-for test." This is used in courtrooms, posing the question, ``But for the defendant's actions, would the harm have occurred?'' In the vitamin example, but for the the vitamin, would health have improved? 
+Of course, we shouldn't imagine a control group. We must actually observe a control group. A control group helps us answer the "but-for test." This is used in courtrooms, posing the question, "But for the defendant's actions, would the harm have occurred?" In the vitamin example, but for the the vitamin, would health have improved? 
 
 Can we use the method of comparison to measure the effect of the vitamin once we have a group taking the vitamin and another not taking the vitamin? Not yet. It is important that the control and treatment groups are similar in every other relevant way. With no other dissimilarities, the difference in health outcomes can be fully attributed to the vitamin. A study where individuals themselves choose if they take a vitamin is less reliable. People who *choose* to take vitamins are going to be systematically different than those who choose not to take a vitamin. One, they'll be able to afford vitamins. Two, they'll be interested in their own health, so their baseline health or other behaviors might be different than the control group.
 
