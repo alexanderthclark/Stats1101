@@ -141,7 +141,7 @@ A score of 1400 is two SDs above the mean for either school.
 
 School A can maintain a higher admission rate even if the admission rate is above 50% for school B. 
 
-Again, let A have an average of 1000 with an SD of 1. Let school B have an average of 1200 and an SD of 100. Put the admission cutoff at 900. This will exclude essentially 0% of students in school A. This will exlcude those 3 SD below the average at school B, or about 0.15%.
+Let A have an average of 1000 with an SD of 1. Let school B have an average of 1200 and an SD of 100. Put the admission cutoff at 900. This will exclude essentially 0% of students in school A (100 SD below the average). This will exlcude those 3 SD below the average at school B, or about 0.15%.
 
 ```{solution-end}
 ```

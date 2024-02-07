@@ -29,15 +29,15 @@ Collecting statwrap
 ----- stdout -----
   Downloading StatWrap-0.2.14-py3-none-any.whl.metadata (2.2 kB)
 Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (2.2.0)
------ stdout -----
 Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.26.4)
 Requirement already satisfied: scipy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.12.0)
 Requirement already satisfied: IPython in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (8.21.0)
-Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (3.8.2)
 ----- stdout -----
+Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (3.8.2)
 Requirement already satisfied: decorator in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (5.1.1)
 Requirement already satisfied: jedi>=0.16 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.19.1)
 Requirement already satisfied: matplotlib-inline in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.1.6)
+----- stdout -----
 Requirement already satisfied: prompt-toolkit<3.1.0,>=3.0.41 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (3.0.43)
 Requirement already satisfied: pygments>=2.4.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (2.17.2)
 Requirement already satisfied: stack-data in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.6.3)
@@ -57,8 +57,8 @@ Requirement already satisfied: tzdata>=2022.7 in /opt/hostedtoolcache/Python/3.1
 ----- stdout -----
 Requirement already satisfied: parso<0.9.0,>=0.8.3 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from jedi>=0.16->IPython->statwrap) (0.8.3)
 Requirement already satisfied: ptyprocess>=0.5 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from pexpect>4.3->IPython->statwrap) (0.7.0)
------ stdout -----
 Requirement already satisfied: wcwidth in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from prompt-toolkit<3.1.0,>=3.0.41->IPython->statwrap) (0.2.13)
+----- stdout -----
 Requirement already satisfied: six>=1.5 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib->statwrap) (1.16.0)
 Requirement already satisfied: executing>=1.2.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.0.1)
 Requirement already satisfied: asttokens>=2.1.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.4.1)
@@ -71,7 +71,7 @@ Installing collected packages: statwrap
 Successfully installed statwrap-0.2.14
 ----- stdout -----
 
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m23.2.1[0m[39;49m -> [0m[32;49m24.0[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m23.3.2[0m[39;49m -> [0m[32;49m24.0[0m
 [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
 ----- stderr -----
 /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/statwrap/fpp.py:227: SyntaxWarning: invalid escape sequence '\m'
