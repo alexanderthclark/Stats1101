@@ -1,14 +1,15 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Regression &#8212; Intro Stats</title>
+    <title>Linear Regression with StatWrap &#8212; Intro Stats</title>
   
   
   
@@ -18,43 +19,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -62,24 +65,20 @@
                 gtag('js', new Date());
                 gtag('config', 'G-32DRGZQWDG');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-32DRGZQWDG');
-            </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'gregression';</script>
-    <link rel="icon" href="_static/norm_favicon.ico"/>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'statwrapregression';</script>
+    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview" href="Rbasics.html" />
-    <link rel="prev" title="Histograms" href="ghistogram.html" />
+    <link rel="next" title="Overview" href="gsheets.html" />
+    <link rel="prev" title="StatWrap" href="statwrap0.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -89,9 +88,10 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -132,14 +132,11 @@
 </form></div>
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -173,18 +170,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -209,19 +195,18 @@
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Linear Regression with StatWrap</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">R (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -279,6 +264,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/statwrapregression.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/statwrapregression.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -304,7 +356,7 @@
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fgregression.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fstatwrapregression.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -334,7 +386,7 @@
       
       
       
-      <li><a href="_sources/gregression.md" target="_blank"
+      <li><a href="_sources/statwrapregression.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -344,7 +396,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -418,7 +470,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Regression</h1>
+    <h1>Linear Regression with StatWrap</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -428,11 +480,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-linear-regression">Simple Linear Regression</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-regression-line">Finding the Regression Line</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictions-and-residuals">Predictions and Residuals</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
 </ul>
             </nav>
         </div>
@@ -442,44 +491,95 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="regression">
-<h1>Regression<a class="headerlink" href="#regression" title="Link to this heading">#</a></h1>
-<p>Use the <a class="reference external" href="https://support.google.com/docs/answer/3094249?hl=en"><code class="docutils literal notranslate"><span class="pre">LINEST</span></code></a> formula for linear regression.</p>
-<p>Sample usage:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">LINEST(A2:A10,</span> <span class="pre">B2:B10)</span></code> for simple linear regression, predicting A (y) from B (x)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">LINEST(A2:A10,</span> <span class="pre">B2:B10,</span> <span class="pre">True,</span> <span class="pre">True)</span></code> for simple linear regression with verbose output for significance testing</p></li>
-</ul>
-<section id="simple-linear-regression">
-<h2>Simple Linear Regression<a class="headerlink" href="#simple-linear-regression" title="Link to this heading">#</a></h2>
-<section id="finding-the-regression-line">
-<h3>Finding the Regression Line<a class="headerlink" href="#finding-the-regression-line" title="Link to this heading">#</a></h3>
-<p>Suppose, like Galton, we want to predict a son’s height from his father’s height (<span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> p. 170).</p>
-<p>We’re looking for the equation</p>
-<div class="math notranslate nohighlight">
-\[\hat{y} = mx + b,\]</div>
-<p>where <span class="math notranslate nohighlight">\(\hat{y}\)</span> is the predicted father’s height and <span class="math notranslate nohighlight">\(x\)</span> is the son’s height. The data is organized in <a class="reference external" href="https://docs.google.com/spreadsheets/d/1xmuDi3BZev565rt8K1wtNBKGZFwsdzTsjOMIE5G-txA/edit?usp=sharing">this spreadsheet</a>, with Fathers’ heights stored in <code class="docutils literal notranslate"><span class="pre">A2:A1079</span></code> and sons’ in <code class="docutils literal notranslate"><span class="pre">B2:B1079</span></code>.</p>
-<p>Using <code class="docutils literal notranslate"><span class="pre">=LINEST(B2:B1079,</span> <span class="pre">A2:A1079)</span></code>, we find</p>
-<div class="math notranslate nohighlight">
-\[\hat{y} = 0.51 \times x + 33.89.\]</div>
-<p>The intercept is always the value furthest to the right in the output. The next value to the left is the slope.</p>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-dSyrCQpPp3hBvsROqV7CYEHepTWW_Qzm0aNHoz-10RLqQL5RTV5R98jgv8VGWnccTttBJvkdPbWa/pubhtml?widget=true&amp;headers=false" width="100%" height="300px"></iframe>
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-regression-with-statwrap">
+<h1>Linear Regression with StatWrap<a class="headerlink" href="#linear-regression-with-statwrap" title="Permalink to this heading">#</a></h1>
+<p>This is a series of basic examples for running linear regression with StatWrap. The functions imitate those in Google Sheets/Excel.</p>
+<section id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
+<p>Run the typical three starter lines in a Google Colab (suggested) or Jupyter notebook.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>statwrap
+<span class="kn">import</span> <span class="nn">statwrap</span>
+<span class="o">%</span><span class="k">use_all</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="predictions-and-residuals">
-<h3>Predictions and Residuals<a class="headerlink" href="#predictions-and-residuals" title="Link to this heading">#</a></h3>
-<p>For a father of height 75.4 (the tallest father in the data), the predicted son’s height is <span class="math notranslate nohighlight">\(\hat{y} = 0.51 \times 75.4 + 33.89 \approx 72.3\)</span>.<a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
-<p>In a <a class="reference external" href="https://docs.google.com/spreadsheets/d/1xmuDi3BZev565rt8K1wtNBKGZFwsdzTsjOMIE5G-txA/edit?usp=sharing">separate tab</a>, we calculate the predictions. For the observation in the second row, this is done with <code class="docutils literal notranslate"><span class="pre">=$G$2</span> <span class="pre">+</span> <span class="pre">$F$2*A2</span></code>. <code class="docutils literal notranslate"><span class="pre">G2</span></code> references the intercept from the <code class="docutils literal notranslate"><span class="pre">LINEST</span></code> output and <code class="docutils literal notranslate"><span class="pre">F2</span></code> references the slope. We use absolute referencing, <code class="docutils literal notranslate"><span class="pre">$F$2</span></code> and <code class="docutils literal notranslate"><span class="pre">$G$2</span></code>, for the coefficients so we can copy and paste the formula without the coefficients changing. If the formula is pasted into the cell below, the coefficient references are frozen, but <code class="docutils literal notranslate"><span class="pre">A2</span></code> is replaced by <code class="docutils literal notranslate"><span class="pre">A3</span></code>, giving the prediction for the next observation in row three. These predictions are stored in column <code class="docutils literal notranslate"><span class="pre">C</span></code>.</p>
-<p>Next, residuals (or prediction errors) are calculated with the formula <code class="docutils literal notranslate"><span class="pre">B2</span> <span class="pre">-</span> <span class="pre">C2</span></code> entered in <code class="docutils literal notranslate"><span class="pre">D2</span></code> and then pasted down the rest of column <code class="docutils literal notranslate"><span class="pre">D</span></code>. A useful sanity check is that the average residual should be zero (for the observations used to find the regression line). This helps ensure that no mistakes were made in finding your predictions.</p>
-<hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id3" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>The actual value found in the spreadsheet is 72.64884635 if the other coefficients are not rounded.</p>
-</aside>
-</aside>
-</section>
+<section id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span>
+
+<span class="n">scatter_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlation:&#39;</span><span class="p">,</span> <span class="n">correl</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/e29c2c6deb8314fec34a7496edee96ceada14dd6ba844e52826163730f554f5d.png" src="_images/e29c2c6deb8314fec34a7496edee96ceada14dd6ba844e52826163730f554f5d.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correlation: 0.8999999999999999
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Direct Estimation</span>
+
+<span class="n">regression_line</span> <span class="o">=</span> <span class="n">linest</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">regression_line</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{y} = 3 +9 x_{1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># predict y for x = 1 and x = 2</span>
+
+<span class="n">regression_line</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">regression_line</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12.000000000000009, 21.000000000000007)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use correlation</span>
+
+<span class="n">correlation</span> <span class="o">=</span> <span class="n">correl</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">sd_x</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">sd_y</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">slope</span> <span class="o">=</span> <span class="n">correlation</span> <span class="o">*</span> <span class="n">sd_y</span><span class="o">/</span><span class="n">sd_x</span>
+
+<span class="c1"># y_average = intercept + slope*x_average </span>
+<span class="n">intercept</span> <span class="o">=</span> <span class="n">average</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="n">slope</span><span class="o">*</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;predicted Y = </span><span class="si">{</span><span class="n">intercept</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">slope</span><span class="si">}</span><span class="s1">*X&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>predicted Y = 3.0 + 9.0*X
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -514,16 +614,16 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ghistogram.html"
+       href="statwrap0.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Histograms</p>
+        <p class="prev-next-title">StatWrap</p>
       </div>
     </a>
     <a class="right-next"
-       href="Rbasics.html"
+       href="gsheets.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -540,18 +640,14 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-linear-regression">Simple Linear Regression</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-regression-line">Finding the Regression Line</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictions-and-residuals">Predictions and Residuals</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
 </ul>
   </nav></div>
 
@@ -576,7 +672,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -600,8 +696,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

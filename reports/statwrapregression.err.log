@@ -18,19 +18,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-!pip install statwrap
+!pip install --upgrade statwrap
 import statwrap
-%use_fpp
-%use_sheets
+%use_all
 ------------------
 
 ----- stdout -----
-Collecting statwrap
-  Downloading StatWrap-0.2.14-py3-none-any.whl.metadata (2.2 kB)
+Requirement already satisfied: statwrap in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (0.2.14)
 ----- stdout -----
 Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (2.2.0)
 Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.26.4)
 Requirement already satisfied: scipy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.12.0)
+----- stdout -----
 Requirement already satisfied: IPython in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (8.21.0)
 Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (3.8.2)
 ----- stdout -----
@@ -46,7 +45,6 @@ Requirement already satisfied: contourpy>=1.0.1 in /opt/hostedtoolcache/Python/3
 Requirement already satisfied: cycler>=0.10 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (0.12.1)
 Requirement already satisfied: fonttools>=4.22.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (4.48.1)
 Requirement already satisfied: kiwisolver>=1.3.1 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (1.4.5)
------ stdout -----
 Requirement already satisfied: packaging>=20.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (23.2)
 Requirement already satisfied: pillow>=8 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (10.2.0)
 Requirement already satisfied: pyparsing>=2.3.1 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (3.1.1)
@@ -60,15 +58,9 @@ Requirement already satisfied: ptyprocess>=0.5 in /opt/hostedtoolcache/Python/3.
 ----- stdout -----
 Requirement already satisfied: wcwidth in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from prompt-toolkit<3.1.0,>=3.0.41->IPython->statwrap) (0.2.13)
 Requirement already satisfied: six>=1.5 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib->statwrap) (1.16.0)
------ stdout -----
 Requirement already satisfied: executing>=1.2.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.0.1)
 Requirement already satisfied: asttokens>=2.1.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.4.1)
 Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (0.2.2)
-Downloading StatWrap-0.2.14-py3-none-any.whl (16 kB)
------ stdout -----
-Installing collected packages: statwrap
------ stdout -----
-Successfully installed statwrap-0.2.14
 ----- stdout -----
 
 [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m23.2.1[0m[39;49m -> [0m[32;49m24.0[0m
@@ -85,10 +77,9 @@ Successfully installed statwrap-0.2.14
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
 Cell [0;32mIn[1], line 2[0m
-[1;32m      1[0m get_ipython()[38;5;241m.[39msystem([38;5;124m'[39m[38;5;124mpip install statwrap[39m[38;5;124m'[39m)
+[1;32m      1[0m get_ipython()[38;5;241m.[39msystem([38;5;124m'[39m[38;5;124mpip install --upgrade statwrap[39m[38;5;124m'[39m)
 [0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatwrap[39;00m
-[1;32m      3[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124muse_fpp[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m'[39m)
-[1;32m      4[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124muse_sheets[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m'[39m)
+[1;32m      3[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124muse_all[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m'[39m)
 
 File [0;32m/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/statwrap/__init__.py:3[0m
 [1;32m      1[0m [38;5;28;01mtry[39;00m:

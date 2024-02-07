@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Natural Experiments &#8212; Intro Stats</title>
+    <title>Regression &#8212; Intro Stats</title>
   
   
   
@@ -72,12 +72,14 @@
                 gtag('config', 'G-32DRGZQWDG');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'natural';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'statwrapregression';</script>
     <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="The Histogram" href="thehistogram.html" />
-    <link rel="prev" title="Observational Studies" href="observational.html" />
+    <link rel="next" title="Overview" href="gsheets.html" />
+    <link rel="prev" title="StatWrap" href="statwrap0.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -193,13 +195,13 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Natural Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="normal.html">Normal Distribution</a></li>
@@ -207,13 +209,13 @@
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -277,6 +279,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/statwrapregression.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/statwrapregression.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -302,7 +371,7 @@
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fnatural.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fstatwrapregression.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -332,7 +401,7 @@
       
       
       
-      <li><a href="_sources/natural.md" target="_blank"
+      <li><a href="_sources/statwrapregression.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +411,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -416,7 +485,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Natural Experiments</h1>
+    <h1>Regression</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -426,8 +495,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-read-from-csv">Example 2 - Read from CSV</a></li>
 </ul>
             </nav>
         </div>
@@ -439,60 +509,103 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="natural-experiments">
-<span id="natural-exp"></span><h1>Natural Experiments<a class="headerlink" href="#natural-experiments" title="Link to this heading">#</a></h1>
-<div class="seealso admonition">
-<p class="admonition-title">Important Readings</p>
-<ul class="simple">
-<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id9" title="Paul Rosenbaum. Observation and experiment: An introduction to causal inference. Harvard University Press, 2017. URL: https://clio.columbia.edu/catalog/15176619.">Ros17</a>]</span>, Chapter 6 pages 100-108</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="regression">
+<h1>Regression<a class="headerlink" href="#regression" title="Link to this heading">#</a></h1>
+<p>This is a series of basic examples for running linear regression with StatWrap. It’s more typical to use a package like sklearn or statsmodels for regression, but StatWrap is written to imitate Google Sheets/Excel.</p>
+<section id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
+<p>Run the typical three starter lines in a Google Colab (suggested) or Jupyter notebook.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>statwrap
+<span class="kn">import</span> <span class="nn">statwrap</span>
+<span class="o">%</span><span class="k">use_all</span>
+</pre></div>
 </div>
-<p>In the previous section, we learned to be skeptical of observational studies. In this short section, we add some nuance. There is a kind of observational study, called a natural experiment, that can still offer high quality evidence.</p>
-<p>The definition of an experiment specifies that the researcher manipulates the assignment of treatment and control. This was useful only indirectly so that randomization could be used. A <strong>natural experiment</strong> is an observational study where the assignment is essentially random, though not done by a researcher. A compelling natural experiment is usually more reliable than an observational study that merely attempts to control for confounders.</p>
-<p>As the name suggests, in a natural experiment, it is nature, broadly defined, who does the randomization. Imagine this policy-relevant comparison: do students who attend a charter school have better educational outcomes than students who don’t? In the absence of randomization, it’s easy to imagine ways this comparison can be confounded. Luckily, some state laws require that charter school seats are allocated by a random lottery. The lottery mechanism wasn’t implemented in concert with researchers—it’s just an instance of nature’s bounty that allows for an unconfounded comparison of students who win the lottery with those who don’t.</p>
-<p>Less obvious examples of natural experiments might not involve actual randomization, but feature assignment of treatment and control that isn’t related to the relevant qualities of the individuals in the population being studied. Fancier names for this include “exogeneity” or “ignorable treatment assignment.” A classic example is the natural experiment analyzed by John Snow. Snow studied a cholera outbreak in London and discovered a contaminated water supply was the cause rather than the prevailing theory of bad air.</p>
-<p>Snow compared the customers of two water companies. The Southwark and Vauxhall company served contaminated water and the Lambeth company supplied purer water. What drove the difference was that the Lambeth company had its water intake point above sewage discharges points, but the Southwark and Vauxhall company’s intake point was downstream and therefore contaminated by sewage (<span id="id2">[<a class="reference internal" href="bibliography.html#id25" title="David A Freedman. Statistical models and shoe leather. Sociological methodology, pages 291–313, 1991.">Fre91</a>]</span>). It’s possible that this comparison could be confounded in other ways, but Snow was able to argue this wasn’t plausible in <span id="id3">[<a class="reference internal" href="bibliography.html#id10" title="John Snow. On the mode of communication of cholera. John Churchill, 1849.">Sno49</a>]</span>.</p>
-<blockquote>
-<div><p>In many cases a single house has a supply different from that on either side. Each company supplies both rich and poor, both large houses and small; there is no difference in the condition or occupation of the persons receiving the water of the different companies…As there is no difference whatever either in the houses or the people receiving the supply of the two Water Companies, or in any of the physical conditions with which they are surrounded, it is obvious that no experiment could have been devised which would more thoroughly test the effect of water supply on the progress of Cholera than this, which circumstances placed ready made before the observer. The experiment too, was on the grandest scale. No fewer than three hundred thousand people of both sexes, of every age and occupation, and of every rank and station, from gentlefolks down to the very poor, were divided into two groups without their choice, and, in most cases, without their knowledge; one group being supplied water containing the sewage of London, and amongst it, whatever might have come from the cholera patients, the other group having water quite free from such impurity.</p>
-</div></blockquote>
-<p>Above, Snow identifies the two groups and argues they are identical. The customers don’t differ in status and, in some neighborhoods of focus, both companies supplied water. Then, Snow argues for something like randomization when he says the people were “divided into two groups without their choice, and, in most cases, without their knowledge.” The two groups are those served by the two different companies. If a person’s water company is determined in such a haphazard way, it cannot be related to their own potential to get cholera, and this eliminates confounding.</p>
-<p>Snow’s natural experiment required more argument than natural experiments involving actual randomization for charter school seats. There is a spectrum to how compelling a natural experiment can be. <span id="id4">[<a class="reference internal" href="bibliography.html#id9" title="Paul Rosenbaum. Observation and experiment: An introduction to causal inference. Harvard University Press, 2017. URL: https://clio.columbia.edu/catalog/15176619.">Ros17</a>]</span> is skeptical of comparing two geographic regions with different policies (see pages 104-105), but still grants that the Dutch famine is compelling.</p>
-<section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
-<p>Is this compelling? <span id="id5">[<a class="reference internal" href="bibliography.html#id31" title="Luca Braghieri, Ro’ee Levy, and Alexey Makarin. Social media and mental health. American Economic Review, 112(11):3660–3693, 2022.">BLM22</a>]</span> argues that Facebook had a negative impact on mental health. The analysis is done by “leveraging a unique natural experiment: the staggered introduction of Facebook across US colleges.” Facebook used to be limited to college students, and only certain campuses at first. Because Facebook was available on certain campuses and not others, this allows for a treatment-control comparison.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Facebook and Mental Health<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need more detail on “only certain campuses at first.” If the certain campuses were randomly chosen, then we can proceed with confidence. But the campuses were not random. The rollout started at Harvard and later expansion groups generally included less prestigious schools. Could this cause some confounding? We know that Harvard students have good SAT scores and are otherwise selected to be different from other students. This study was published, indicating that some smart people find this to be a compelling natural experiment and it makes a decent addition to the wider research literature on social media and mental health. Still, those differences in colleges might be relevant to issues of mental health, so skepticism is fair.</p>
 </div>
-</details></section>
-<section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
-<div class="exercise admonition" id="california">
-
-<p class="admonition-title"><span class="caption-number">Exercise 9 </span></p>
-<section id="exercise-content">
-<p>California has higher taxes than South Dakota and South Dakota has had higher GDP growth recently. Is this a natural experiment that can be used to understand the effect of taxes?</p>
+</div>
 </section>
-</div>
-<div class="exercise admonition" id="earlyclass">
+<section id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span>
 
-<p class="admonition-title"><span class="caption-number">Exercise 10 </span></p>
-<section id="exercise-content">
-<p>A university has 200 students who must all take a specific calculus class offered at either 8am or 1pm. Each section is taught by the same instructor and the class size is capped at 100 students. The university randomly assigns students to the two sections. Students can switch sections if they find another student who will trade seats, but assume that all students prefer the 1pm section.</p>
-<p>Can this be used as a natural experiment to study the effect of an early-morning class on learning outcomes? What if not all students prefer the 1pm section?</p>
-</section>
-</div>
-<div class="exercise admonition" id="hurricanes">
+<span class="n">scatter_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 
-<p class="admonition-title"><span class="caption-number">Exercise 11 </span></p>
-<section id="exercise-content">
-<p>The result is more or less debunked, but it’s been argued that hurricanes with typically female names are more deadly because of gender bias. The claim is that people don’t take hurricanes with female names as seriously as hurricanes with male names. Suppose we have a data set for all hurricanes that made landfall in the US for the 1900s. For each hurricane, we observe the date of landfall, its name, and the death toll. Each tropical storm is named and the names alternate between male and female over the course of a season. Can this be analyzed as a natural experiment? After some data exploration, you find that there are no male names prior to 1979. Is this a problem?</p>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlation:&#39;</span><span class="p">,</span> <span class="n">correl</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/e29c2c6deb8314fec34a7496edee96ceada14dd6ba844e52826163730f554f5d.png" src="_images/e29c2c6deb8314fec34a7496edee96ceada14dd6ba844e52826163730f554f5d.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correlation: 0.8999999999999999
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Direct Estimation</span>
+
+<span class="n">regression_line</span> <span class="o">=</span> <span class="n">linest</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">regression_line</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{y} = 3 +9 x_{1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># predict y for x = 1 and x = 2</span>
+
+<span class="n">regression_line</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">regression_line</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12.000000000000009, 21.000000000000007)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use correlation</span>
+
+<span class="n">correlation</span> <span class="o">=</span> <span class="n">correl</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">sd_x</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">sd_y</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">slope</span> <span class="o">=</span> <span class="n">correlation</span> <span class="o">*</span> <span class="n">sd_y</span><span class="o">/</span><span class="n">sd_x</span>
+
+<span class="c1"># y_average = intercept + slope*x_average </span>
+<span class="n">intercept</span> <span class="o">=</span> <span class="n">average</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="n">slope</span><span class="o">*</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;predicted Y = </span><span class="si">{</span><span class="n">intercept</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">slope</span><span class="si">}</span><span class="s1">*X&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>predicted Y = 3.0 + 9.0*X
+</pre></div>
+</div>
+</div>
+</div>
 </section>
+<section id="example-2-read-from-csv">
+<h2>Example 2 - Read from CSV<a class="headerlink" href="#example-2-read-from-csv" title="Link to this heading">#</a></h2>
+<p>Now we import a package called pandas to import data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/alexanderthclark/Stats1101/main/Data/FatherSonHeights/pearson.csv&#39;</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -528,20 +641,20 @@ Facebook and Mental Health<div class="sd-summary-down docutils">
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="observational.html"
+       href="statwrap0.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Observational Studies</p>
+        <p class="prev-next-title">StatWrap</p>
       </div>
     </a>
     <a class="right-next"
-       href="thehistogram.html"
+       href="gsheets.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The Histogram</p>
+        <p class="prev-next-title">Overview</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -561,8 +674,9 @@ Facebook and Mental Health<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-read-from-csv">Example 2 - Read from CSV</a></li>
 </ul>
   </nav></div>
 
