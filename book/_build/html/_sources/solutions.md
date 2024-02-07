@@ -123,3 +123,22 @@ Here is an [explainer video](https://www.youtube.com/watch?v=8eyg0meH5wo) for th
 
 ```{solution-end}
 ```
+
+## [Normal Distribution](normal)
+
+```{solution-start} schoolsnorm
+:class: dropdown
+```
+
+Let one school have an average SAT of 1000 with an SD of 200 and the other have an average of 1200 and an SD of 100. Any cutoff above 1400 will favor the lower average school.
+
+```{figure} images/schoolnormexercise.svg
+:width: 50%
+:name: cumulative_ztable
+
+A score of 1400 is two SDs above the mean for either school. 
+```
+
+```{solution-end}
+```
+
