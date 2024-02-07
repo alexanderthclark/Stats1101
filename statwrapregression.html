@@ -603,7 +603,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/alexanderthclark/Stats1101/main/Data/FatherSonHeights/pearson.csv&#39;</span>
-<span class="c1">#url = &#39;https://raw.githubusercontent.com/alexanderthclark/Stats1101/main/Data/FatherSonHeights/pearson.tsv&#39;</span>
 
 <span class="c1"># load a DataFrame</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
@@ -632,7 +631,6 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>Father</th>
       <th>Son</th>
     </tr>
@@ -640,37 +638,80 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
       <td>65.0</td>
       <td>59.8</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
       <td>63.3</td>
       <td>63.2</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2</td>
       <td>65.0</td>
       <td>63.3</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3</td>
       <td>65.8</td>
       <td>62.8</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>4</td>
       <td>61.1</td>
       <td>64.3</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">father</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Father</span>
+<span class="n">son</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Son</span>
+
+<span class="n">scatter_plot</span><span class="p">(</span><span class="n">father</span><span class="p">,</span> <span class="n">son</span><span class="p">,</span>
+             <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Father&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Son&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span> <span class="c1"># reduce opacity of points</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9d110161cf1c76225ee450fef659af662875f6aa036b180664aa89a0dde00456.png" src="_images/9d110161cf1c76225ee450fef659af662875f6aa036b180664aa89a0dde00456.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg_line</span> <span class="o">=</span> <span class="n">linest</span><span class="p">(</span><span class="n">son</span><span class="p">,</span> <span class="n">father</span><span class="p">)</span> <span class="c1"># y then x</span>
+<span class="n">reg_line</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{y} = 33.893 +0.514 x_{1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scatter_plot</span><span class="p">(</span><span class="n">father</span><span class="p">,</span> <span class="n">son</span><span class="p">,</span>
+             <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Father&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Son&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="c1"># reduce opacity of points</span>
+             <span class="n">show</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># tell Python to let us add more stuff to the plot</span>
+
+<span class="c1"># Add regression line using matplotlib</span>
+<span class="n">x_range</span> <span class="o">=</span> <span class="n">son</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">son</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">y_predictions</span> <span class="o">=</span> <span class="n">reg_line</span><span class="p">(</span><span class="n">son</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span> <span class="n">reg_line</span><span class="p">(</span><span class="n">son</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_predictions</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/c9c29395b8f7e8327cf00f85cac18e30e8773c62fb8e43312b52d457fbb9f5ae.png" src="_images/c9c29395b8f7e8327cf00f85cac18e30e8773c62fb8e43312b52d457fbb9f5ae.png" />
+</div>
 </div>
 </section>
 </section>
