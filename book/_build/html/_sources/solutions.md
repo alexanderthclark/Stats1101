@@ -130,7 +130,7 @@ Here is an [explainer video](https://www.youtube.com/watch?v=8eyg0meH5wo) for th
 :class: dropdown
 ```
 
-Let one school have an average SAT of 1000 with an SD of 200 and the other have an average of 1200 and an SD of 100. Any cutoff above 1400 will favor the lower average school.
+Let school A have an average SAT of 1000 with an SD of 200 and the other have an average of 1200 and an SD of 100. Any cutoff above 1400 will favor the lower average school.
 
 ```{figure} images/schoolnormexercise.svg
 :width: 50%
@@ -138,6 +138,10 @@ Let one school have an average SAT of 1000 with an SD of 200 and the other have 
 
 A score of 1400 is two SDs above the mean for either school. 
 ```
+
+School A can maintain a higher admission rate even if the admission rate is above 50% for school B. 
+
+Let A have an average of 1000 with an SD of 1. Let school B have an average of 1200 and an SD of 100. Put the admission cutoff at 900. This will exclude essentially 0% of students in school A (100 SD below the average). This will exlcude those 3 SD below the average at school B, or about 0.15%.
 
 ```{solution-end}
 ```

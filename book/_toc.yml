@@ -29,6 +29,7 @@ parts:
     - file: pycalculator
     - file: pylibs
     - file: statwrap0
+    - file: statwrapregression
 
 - caption: Google Sheets (optional)
   chapters:
