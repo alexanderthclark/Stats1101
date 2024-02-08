@@ -15,7 +15,7 @@ parts:
     - file: centerspread
     - file: normal
     - file: correlation
-    #- file: regression
+    - file: regression
     #- file: probability1
     - file: bibliography
 
