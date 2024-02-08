@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Linear Regression with StatWrap &#8212; Intro Stats</title>
+    <title>Regression &#8212; Intro Stats</title>
   
   
   
@@ -198,9 +198,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Linear Regression with StatWrap</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -470,7 +471,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Linear Regression with StatWrap</h1>
+    <h1>Regression</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -482,6 +483,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-read-from-csv">Example 2 - Read from CSV</a></li>
 </ul>
             </nav>
         </div>
@@ -493,9 +495,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="linear-regression-with-statwrap">
-<h1>Linear Regression with StatWrap<a class="headerlink" href="#linear-regression-with-statwrap" title="Permalink to this heading">#</a></h1>
-<p>This is a series of basic examples for running linear regression with StatWrap. The functions imitate those in Google Sheets/Excel.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="regression">
+<h1>Regression<a class="headerlink" href="#regression" title="Permalink to this heading">#</a></h1>
+<p>This is a series of basic examples for running linear regression with StatWrap. It’s more typical to use a package like sklearn or statsmodels for regression, but StatWrap is written to imitate Google Sheets/Excel.</p>
 <section id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
 <p>Run the typical three starter lines in a Google Colab (suggested) or Jupyter notebook.</p>
@@ -581,6 +583,123 @@ document.write(`
 </div>
 </div>
 </section>
+<section id="example-2-read-from-csv">
+<h2>Example 2 - Read from CSV<a class="headerlink" href="#example-2-read-from-csv" title="Permalink to this heading">#</a></h2>
+<p>Now we use a package called pandas to import data. Pandas does not have to be explicitly imported because of the <code class="docutils literal notranslate"><span class="pre">%use_all</span></code> command we used earlier. Later, we use a package called matplotlib to plot a regression line. Again, matplotlib doesn’t have to be explicitly imported.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/alexanderthclark/Stats1101/main/Data/FatherSonHeights/pearson.csv&#39;</span>
+
+<span class="c1"># load a DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># inspect first five rows</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Father</th>
+      <th>Son</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>65.0</td>
+      <td>59.8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>63.3</td>
+      <td>63.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>65.0</td>
+      <td>63.3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>65.8</td>
+      <td>62.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>61.1</td>
+      <td>64.3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">father</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Father</span>
+<span class="n">son</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Son</span>
+
+<span class="n">scatter_plot</span><span class="p">(</span><span class="n">father</span><span class="p">,</span> <span class="n">son</span><span class="p">,</span>
+             <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Father&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Son&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span> <span class="c1"># reduce opacity of points</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9d110161cf1c76225ee450fef659af662875f6aa036b180664aa89a0dde00456.png" src="_images/9d110161cf1c76225ee450fef659af662875f6aa036b180664aa89a0dde00456.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg_line</span> <span class="o">=</span> <span class="n">linest</span><span class="p">(</span><span class="n">son</span><span class="p">,</span> <span class="n">father</span><span class="p">)</span> <span class="c1"># y then x</span>
+<span class="n">reg_line</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{y} = 33.893 +0.514 x_{1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scatter_plot</span><span class="p">(</span><span class="n">father</span><span class="p">,</span> <span class="n">son</span><span class="p">,</span>
+             <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Father&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Son&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="c1"># reduce opacity of points</span>
+             <span class="n">show</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># tell Python to let us add more stuff to the plot</span>
+
+<span class="c1"># Add regression line using matplotlib</span>
+<span class="n">x_range</span> <span class="o">=</span> <span class="n">father</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">father</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">y_predictions</span> <span class="o">=</span> <span class="n">reg_line</span><span class="p">(</span><span class="n">x_range</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_predictions</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/772f2401d8fe6ed1078c1933939946398b43552d488605338617c8f19ceeb97a.png" src="_images/772f2401d8fe6ed1078c1933939946398b43552d488605338617c8f19ceeb97a.png" />
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -648,6 +767,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-read-from-csv">Example 2 - Read from CSV</a></li>
 </ul>
   </nav></div>
 
