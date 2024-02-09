@@ -61,13 +61,15 @@ Requirement already satisfied: ptyprocess>=0.5 in /opt/hostedtoolcache/Python/3.
 ----- stdout -----
 Requirement already satisfied: wcwidth in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from prompt-toolkit<3.1.0,>=3.0.41->IPython->statwrap) (0.2.13)
 Requirement already satisfied: six>=1.5 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib->statwrap) (1.16.0)
-Requirement already satisfied: executing>=1.2.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.0.1)
 ----- stdout -----
+Requirement already satisfied: executing>=1.2.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.0.1)
 Requirement already satisfied: asttokens>=2.1.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.4.1)
 Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (0.2.2)
+----- stdout -----
 Downloading StatWrap-0.2.14-py3-none-any.whl (16 kB)
 ----- stdout -----
 Installing collected packages: statwrap
+----- stdout -----
 Successfully installed statwrap-0.2.14
 ----- stdout -----
 

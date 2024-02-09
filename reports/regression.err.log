@@ -1,0 +1,90 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/asyncio/base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from bokeh.plotting import figure, show, output_notebook
+from bokeh.models import ColumnDataSource, HoverTool
+
+# Load data
+url = 'https://raw.githubusercontent.com/alexanderthclark/Stats1101/main/Data/Nutrition/nutritional_info.csv'
+df = pd.read_csv(url)
+
+# remove almonds 
+df = df[~df['Food Item'].str.contains("Almond")]
+#df = df[~df['Food Item'].str.contains("Nutty")]
+
+# Adjusting for the flip: now y is 'Protein (g per 100g)' and x is 'Calories (per 100g)'
+X = df[['Calories (per 100g)']].values.reshape(-1, 1)  # Independent variable
+y = df['Protein (g per 100g)']  # Dependent variable
+
+# Linear regression
+model = LinearRegression().fit(X, y)
+df['Predicted'] = model.predict(X)
+df['Residual'] = y - df['Predicted']
+
+# Prepare data for Bokeh
+source = ColumnDataSource(data={
+    'x': df['Calories (per 100g)'],  # This now represents the x-axis values
+    'y': df['Protein (g per 100g)'],  # This now represents the y-axis values
+    'food': df['Food Item'],
+    'predicted': df['Predicted'],
+    'residual': df['Residual']
+})
+
+# Bokeh plot setup with flipped axes
+plot = figure(width=450, height=600, title="Protein vs Calories",
+              x_axis_label="Calories (per 100g)", y_axis_label="Protein (g per 100g)",
+              tools="pan,wheel_zoom,box_zoom,reset,save")
+
+# Scatter plot
+plot.circle('x', 'y', size=10, source=source)
+
+# Regression line
+x_range = np.linspace(df['Calories (per 100g)'].min(), df['Calories (per 100g)'].max(), 100)
+plot.line(x_range, model.coef_[0] * x_range + model.intercept_, color='red')
+
+# Hover tool for displaying food item name and residual
+hover = HoverTool()
+hover.tooltips = [
+    ("Food", "@food"),
+    ("Residual", "@residual{0.00}")
+]
+plot.add_tools(hover)
+
+# Show plot
+output_notebook(hide_banner = True)
+show(plot)
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[2], line 3[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;32m----> 3[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlinear_model[39;00m [38;5;28;01mimport[39;00m LinearRegression
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mbokeh[39;00m[38;5;21;01m.[39;00m[38;5;21;01mplotting[39;00m [38;5;28;01mimport[39;00m figure, show, output_notebook
+[1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mbokeh[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmodels[39;00m [38;5;28;01mimport[39;00m ColumnDataSource, HoverTool
+
+[0;31mModuleNotFoundError[0m: No module named 'sklearn'
+
