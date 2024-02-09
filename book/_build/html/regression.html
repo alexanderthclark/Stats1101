@@ -796,11 +796,11 @@ function(Bokeh) {
 }
 </style>
 </div><div class="output text_html">
-  <div id="e29dd633-43d7-44cd-a9fb-2dceaf602198" data-root-id="p1053" style="display: contents;"></div>
+  <div id="bc1c60fe-969e-44b6-adac-cbb01f01fcd1" data-root-id="p1053" style="display: contents;"></div>
 </div><script type="application/javascript">(function(root) {
   function embed_document(root) {
-  const docs_json = {"a38e24d6-5946-4f00-888f-7371c0776f40":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p1053","attributes":{"children":[{"type":"object","name":"Div","id":"p1049","attributes":{"width":400,"height":100,"text":"Slope: 1.0000<br>Intercept: 0.0000<br>SD of X: 1.4142<br>SD of Y: 1.4142<br>Correlation Coefficient: 1.0000"}},{"type":"object","name":"Figure","id":"p1007","attributes":{"width":450,"height":450,"x_range":{"type":"object","name":"Range1d","id":"p1016","attributes":{"end":6}},"y_range":{"type":"object","name":"Range1d","id":"p1017","attributes":{"end":6}},"x_scale":{"type":"object","name":"LinearScale","id":"p1018"},"y_scale":{"type":"object","name":"LinearScale","id":"p1019"},"title":{"type":"object","name":"Title","id":"p1014"},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1037","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1001","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:data",[{"type":"object","name":"CustomJS","id":"p1050","attributes":{"args":{"type":"map","entries":[["source",{"id":"p1001"}],["line_source",{"type":"object","name":"ColumnDataSource","id":"p1004","attributes":{"selected":{"type":"object","name":"Selection","id":"p1005","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1006"},"data":{"type":"map","entries":[["x",[1,5]],["y",[1.0,5.0]]]}}}],["div",{"id":"p1049"}]]},"code":"\n    const data = source.data;\n    const x = data['x'];\n    const y = data['y'];\n    const n = x.length;\n\n    if (n === 0) {\n        line_source.data = {'x': [], 'y': []};\n        div.text = \"Slope: N/A<br>Intercept: N/A<br>SD of X: N/A<br>SD of Y: N/A<br>Correlation Coefficient: N/A\";\n        return;\n    }\n\n    let sum_x = 0, sum_y = 0, sum_xy = 0, sum_xx = 0, sum_yy = 0;\n    for (let i = 0; i < n; i++) {\n        sum_x += x[i];\n        sum_y += y[i];\n        sum_xy += x[i] * y[i];\n        sum_xx += x[i] * x[i];\n        sum_yy += y[i] * y[i];\n    }\n\n    const mean_x = sum_x / n;\n    const mean_y = sum_y / n;\n    const slope = (sum_xy - n * mean_x * mean_y) / (sum_xx - n * mean_x * mean_x);\n    const intercept = mean_y - slope * mean_x;\n    const sdx = Math.sqrt(sum_xx / n - mean_x * mean_x);\n    const sdy = Math.sqrt(sum_yy / n - mean_y * mean_y);\n    const r = (sum_xy - n * mean_x * mean_y) / (Math.sqrt((sum_xx - n * mean_x * mean_x) * (sum_yy - n * mean_y * mean_y)));\n\n    const reg_x = [Math.min(...x), Math.max(...x)];\n    const reg_y = reg_x.map(x => slope * x + intercept);\n\n    line_source.data = {'x': reg_x, 'y': reg_y};\n    line_source.change.emit();\n\n    div.text = \"Slope: \" + slope.toFixed(4) + \"<br>Intercept: \" + intercept.toFixed(4) +\n               \"<br>SD of X: \" + sdx.toFixed(4) + \"<br>SD of Y: \" + sdy.toFixed(4) +\n               \"<br>Correlation Coefficient: \" + r.toFixed(4);\n"}}]]]},"selected":{"type":"object","name":"Selection","id":"p1002","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["x",[1,2,3,4,5]],["y",[1,2,3,4,5]]]}}},"view":{"type":"object","name":"CDSView","id":"p1038","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1039"}}},"glyph":{"type":"object","name":"Circle","id":"p1034","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":20},"line_color":{"type":"value","value":"deepskyblue"},"line_alpha":{"type":"value","value":0.5},"fill_color":{"type":"value","value":"deepskyblue"},"fill_alpha":{"type":"value","value":0.5},"hatch_color":{"type":"value","value":"deepskyblue"},"hatch_alpha":{"type":"value","value":0.5}}},"nonselection_glyph":{"type":"object","name":"Circle","id":"p1035","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":20},"line_color":{"type":"value","value":"deepskyblue"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"deepskyblue"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"deepskyblue"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Circle","id":"p1036","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":20},"line_color":{"type":"value","value":"deepskyblue"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"deepskyblue"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"deepskyblue"},"hatch_alpha":{"type":"value","value":0.2}}}}},{"type":"object","name":"GlyphRenderer","id":"p1046","attributes":{"data_source":{"id":"p1004"},"view":{"type":"object","name":"CDSView","id":"p1047","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1048"}}},"glyph":{"type":"object","name":"Line","id":"p1043","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_alpha":0.7,"line_width":3}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1044","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_alpha":0.1,"line_width":3}},"muted_glyph":{"type":"object","name":"Line","id":"p1045","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_alpha":0.2,"line_width":3}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1015","attributes":{"tools":[{"type":"object","name":"SaveTool","id":"p1030"},{"type":"object","name":"PointDrawTool","id":"p1051","attributes":{"renderers":[{"id":"p1037"}]}},{"type":"object","name":"HoverTool","id":"p1052","attributes":{"renderers":[{"id":"p1037"}],"tooltips":[["X","@x"],["Y","@y"]]}}],"active_tap":{"id":"p1051"}}},"left":[{"type":"object","name":"LinearAxis","id":"p1025","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1026","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1027"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1028"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1020","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1021","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1022"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1023"}}}],"center":[{"type":"object","name":"Grid","id":"p1024","attributes":{"axis":{"id":"p1020"}}},{"type":"object","name":"Grid","id":"p1029","attributes":{"dimension":1,"axis":{"id":"p1025"}}}]}}]}}]}};
-  const render_items = [{"docid":"a38e24d6-5946-4f00-888f-7371c0776f40","roots":{"p1053":"e29dd633-43d7-44cd-a9fb-2dceaf602198"},"root_ids":["p1053"]}];
+  const docs_json = {"cbb166f7-6597-48da-aaf8-81147590a326":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p1053","attributes":{"children":[{"type":"object","name":"Div","id":"p1049","attributes":{"width":400,"height":100,"text":"Slope: 1.0000<br>Intercept: 0.0000<br>SD of X: 1.4142<br>SD of Y: 1.4142<br>Correlation Coefficient: 1.0000"}},{"type":"object","name":"Figure","id":"p1007","attributes":{"width":450,"height":450,"x_range":{"type":"object","name":"Range1d","id":"p1016","attributes":{"end":6}},"y_range":{"type":"object","name":"Range1d","id":"p1017","attributes":{"end":6}},"x_scale":{"type":"object","name":"LinearScale","id":"p1018"},"y_scale":{"type":"object","name":"LinearScale","id":"p1019"},"title":{"type":"object","name":"Title","id":"p1014"},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1037","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1001","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:data",[{"type":"object","name":"CustomJS","id":"p1050","attributes":{"args":{"type":"map","entries":[["source",{"id":"p1001"}],["line_source",{"type":"object","name":"ColumnDataSource","id":"p1004","attributes":{"selected":{"type":"object","name":"Selection","id":"p1005","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1006"},"data":{"type":"map","entries":[["x",[1,5]],["y",[1.0,5.0]]]}}}],["div",{"id":"p1049"}]]},"code":"\n    const data = source.data;\n    const x = data['x'];\n    const y = data['y'];\n    const n = x.length;\n\n    if (n === 0) {\n        line_source.data = {'x': [], 'y': []};\n        div.text = \"Slope: N/A<br>Intercept: N/A<br>SD of X: N/A<br>SD of Y: N/A<br>Correlation Coefficient: N/A\";\n        return;\n    }\n\n    let sum_x = 0, sum_y = 0, sum_xy = 0, sum_xx = 0, sum_yy = 0;\n    for (let i = 0; i < n; i++) {\n        sum_x += x[i];\n        sum_y += y[i];\n        sum_xy += x[i] * y[i];\n        sum_xx += x[i] * x[i];\n        sum_yy += y[i] * y[i];\n    }\n\n    const mean_x = sum_x / n;\n    const mean_y = sum_y / n;\n    const slope = (sum_xy - n * mean_x * mean_y) / (sum_xx - n * mean_x * mean_x);\n    const intercept = mean_y - slope * mean_x;\n    const sdx = Math.sqrt(sum_xx / n - mean_x * mean_x);\n    const sdy = Math.sqrt(sum_yy / n - mean_y * mean_y);\n    const r = (sum_xy - n * mean_x * mean_y) / (Math.sqrt((sum_xx - n * mean_x * mean_x) * (sum_yy - n * mean_y * mean_y)));\n\n    const reg_x = [Math.min(...x), Math.max(...x)];\n    const reg_y = reg_x.map(x => slope * x + intercept);\n\n    line_source.data = {'x': reg_x, 'y': reg_y};\n    line_source.change.emit();\n\n    div.text = \"Slope: \" + slope.toFixed(4) + \"<br>Intercept: \" + intercept.toFixed(4) +\n               \"<br>SD of X: \" + sdx.toFixed(4) + \"<br>SD of Y: \" + sdy.toFixed(4) +\n               \"<br>Correlation Coefficient: \" + r.toFixed(4);\n"}}]]]},"selected":{"type":"object","name":"Selection","id":"p1002","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["x",[1,2,3,4,5]],["y",[1,2,3,4,5]]]}}},"view":{"type":"object","name":"CDSView","id":"p1038","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1039"}}},"glyph":{"type":"object","name":"Circle","id":"p1034","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":20},"line_color":{"type":"value","value":"deepskyblue"},"line_alpha":{"type":"value","value":0.5},"fill_color":{"type":"value","value":"deepskyblue"},"fill_alpha":{"type":"value","value":0.5},"hatch_color":{"type":"value","value":"deepskyblue"},"hatch_alpha":{"type":"value","value":0.5}}},"nonselection_glyph":{"type":"object","name":"Circle","id":"p1035","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":20},"line_color":{"type":"value","value":"deepskyblue"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"deepskyblue"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"deepskyblue"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Circle","id":"p1036","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":20},"line_color":{"type":"value","value":"deepskyblue"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"deepskyblue"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"deepskyblue"},"hatch_alpha":{"type":"value","value":0.2}}}}},{"type":"object","name":"GlyphRenderer","id":"p1046","attributes":{"data_source":{"id":"p1004"},"view":{"type":"object","name":"CDSView","id":"p1047","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1048"}}},"glyph":{"type":"object","name":"Line","id":"p1043","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_alpha":0.7,"line_width":3}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1044","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_alpha":0.1,"line_width":3}},"muted_glyph":{"type":"object","name":"Line","id":"p1045","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_alpha":0.2,"line_width":3}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1015","attributes":{"tools":[{"type":"object","name":"SaveTool","id":"p1030"},{"type":"object","name":"PointDrawTool","id":"p1051","attributes":{"renderers":[{"id":"p1037"}]}},{"type":"object","name":"HoverTool","id":"p1052","attributes":{"renderers":[{"id":"p1037"}],"tooltips":[["X","@x"],["Y","@y"]]}}],"active_tap":{"id":"p1051"}}},"left":[{"type":"object","name":"LinearAxis","id":"p1025","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1026","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1027"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1028"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1020","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1021","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1022"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1023"}}}],"center":[{"type":"object","name":"Grid","id":"p1024","attributes":{"axis":{"id":"p1020"}}},{"type":"object","name":"Grid","id":"p1029","attributes":{"dimension":1,"axis":{"id":"p1025"}}}]}}]}}]}};
+  const render_items = [{"docid":"cbb166f7-6597-48da-aaf8-81147590a326","roots":{"p1053":"bc1c60fe-969e-44b6-adac-cbb01f01fcd1"},"root_ids":["p1053"]}];
   root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
   }
   if (root.Bokeh !== undefined) {
@@ -831,6 +831,381 @@ function(Bokeh) {
 <p><span class="caption-number">Fig. 29 </span><span class="caption-text">The regression slope and <span class="math notranslate nohighlight">\(r\)</span> are the same if the data is in standard units.</span><a class="headerlink" href="#rawstandardizedcorr" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Food Item&#39;, &#39;Calories (per 100g)&#39;, &#39;Protein (g per 100g)&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">output_notebook</span>
+<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">ColumnDataSource</span><span class="p">,</span> <span class="n">HoverTool</span>
+
+<span class="c1"># Load data</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/alexanderthclark/Stats1101/main/Data/Nutrition/nutritional_info.csv&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># remove almonds </span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Food Item&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Almond&quot;</span><span class="p">)]</span>
+<span class="c1">#df = df[~df[&#39;Food Item&#39;].str.contains(&quot;Nutty&quot;)]</span>
+
+<span class="c1"># Adjusting for the flip: now y is &#39;Protein (g per 100g)&#39; and x is &#39;Calories (per 100g)&#39;</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Calories (per 100g)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Independent variable</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Protein (g per 100g)&#39;</span><span class="p">]</span>  <span class="c1"># Dependent variable</span>
+
+<span class="c1"># Linear regression</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Predicted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Residual&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Predicted&#39;</span><span class="p">]</span>
+
+<span class="c1"># Prepare data for Bokeh</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">ColumnDataSource</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Calories (per 100g)&#39;</span><span class="p">],</span>  <span class="c1"># This now represents the x-axis values</span>
+    <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Protein (g per 100g)&#39;</span><span class="p">],</span>  <span class="c1"># This now represents the y-axis values</span>
+    <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Food Item&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;predicted&#39;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Predicted&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;residual&#39;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Residual&#39;</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Bokeh plot setup with flipped axes</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">450</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Protein vs Calories&quot;</span><span class="p">,</span>
+              <span class="n">x_axis_label</span><span class="o">=</span><span class="s2">&quot;Calories (per 100g)&quot;</span><span class="p">,</span> <span class="n">y_axis_label</span><span class="o">=</span><span class="s2">&quot;Protein (g per 100g)&quot;</span><span class="p">,</span>
+              <span class="n">tools</span><span class="o">=</span><span class="s2">&quot;pan,wheel_zoom,box_zoom,reset,save&quot;</span><span class="p">)</span>
+
+<span class="c1"># Scatter plot</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+
+<span class="c1"># Regression line</span>
+<span class="n">x_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Calories (per 100g)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Calories (per 100g)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">x_range</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+<span class="c1"># Hover tool for displaying food item name and residual</span>
+<span class="n">hover</span> <span class="o">=</span> <span class="n">HoverTool</span><span class="p">()</span>
+<span class="n">hover</span><span class="o">.</span><span class="n">tooltips</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Food&quot;</span><span class="p">,</span> <span class="s2">&quot;@food&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Residual&quot;</span><span class="p">,</span> <span class="s2">&quot;@residual</span><span class="si">{0.00}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">add_tools</span><span class="p">(</span><span class="n">hover</span><span class="p">)</span>
+
+<span class="c1"># Show plot</span>
+<span class="n">output_notebook</span><span class="p">(</span><span class="n">hide_banner</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="n">plot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  const force = true;
+
+  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
+    root._bokeh_onload_callbacks = [];
+    root._bokeh_is_loading = undefined;
+  }
+
+const JS_MIME_TYPE = 'application/javascript';
+  const HTML_MIME_TYPE = 'text/html';
+  const EXEC_MIME_TYPE = 'application/vnd.bokehjs_exec.v0+json';
+  const CLASS_NAME = 'output_bokeh rendered_html';
+
+  /**
+   * Render data to the DOM node
+   */
+  function render(props, node) {
+    const script = document.createElement("script");
+    node.appendChild(script);
+  }
+
+  /**
+   * Handle when an output is cleared or removed
+   */
+  function handleClearOutput(event, handle) {
+    function drop(id) {
+      const view = Bokeh.index.get_by_id(id)
+      if (view != null) {
+        view.model.document.clear()
+        Bokeh.index.delete(view)
+      }
+    }
+
+    const cell = handle.cell;
+
+    const id = cell.output_area._bokeh_element_id;
+    const server_id = cell.output_area._bokeh_server_id;
+
+    // Clean up Bokeh references
+    if (id != null) {
+      drop(id)
+    }
+
+    if (server_id !== undefined) {
+      // Clean up Bokeh references
+      const cmd_clean = "from bokeh.io.state import curstate; print(curstate().uuid_to_server['" + server_id + "'].get_sessions()[0].document.roots[0]._id)";
+      cell.notebook.kernel.execute(cmd_clean, {
+        iopub: {
+          output: function(msg) {
+            const id = msg.content.text.trim()
+            drop(id)
+          }
+        }
+      });
+      // Destroy server and session
+      const cmd_destroy = "import bokeh.io.notebook as ion; ion.destroy_server('" + server_id + "')";
+      cell.notebook.kernel.execute(cmd_destroy);
+    }
+  }
+
+  /**
+   * Handle when a new output is added
+   */
+  function handleAddOutput(event, handle) {
+    const output_area = handle.output_area;
+    const output = handle.output;
+
+    // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
+    if ((output.output_type != "display_data") || (!Object.prototype.hasOwnProperty.call(output.data, EXEC_MIME_TYPE))) {
+      return
+    }
+
+    const toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+
+    if (output.metadata[EXEC_MIME_TYPE]["id"] !== undefined) {
+      toinsert[toinsert.length - 1].firstChild.textContent = output.data[JS_MIME_TYPE];
+      // store reference to embed id on output_area
+      output_area._bokeh_element_id = output.metadata[EXEC_MIME_TYPE]["id"];
+    }
+    if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+      const bk_div = document.createElement("div");
+      bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+      const script_attrs = bk_div.children[0].attributes;
+      for (let i = 0; i < script_attrs.length; i++) {
+        toinsert[toinsert.length - 1].firstChild.setAttribute(script_attrs[i].name, script_attrs[i].value);
+        toinsert[toinsert.length - 1].firstChild.textContent = bk_div.children[0].textContent
+      }
+      // store reference to server id on output_area
+      output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+    }
+  }
+
+  function register_renderer(events, OutputArea) {
+
+    function append_mime(data, metadata, element) {
+      // create a DOM node to render to
+      const toinsert = this.create_output_subarea(
+        metadata,
+        CLASS_NAME,
+        EXEC_MIME_TYPE
+      );
+      this.keyboard_manager.register_events(toinsert);
+      // Render to node
+      const props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+      render(props, toinsert[toinsert.length - 1]);
+      element.append(toinsert);
+      return toinsert
+    }
+
+    /* Handle when an output is cleared or removed */
+    events.on('clear_output.CodeCell', handleClearOutput);
+    events.on('delete.Cell', handleClearOutput);
+
+    /* Handle when a new output is added */
+    events.on('output_added.OutputArea', handleAddOutput);
+
+    /**
+     * Register the mime type and append_mime function with output_area
+     */
+    OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+      /* Is output safe? */
+      safe: true,
+      /* Index of renderer in `output_area.display_order` */
+      index: 0
+    });
+  }
+
+  // register the mime type if in Jupyter Notebook environment and previously unregistered
+  if (root.Jupyter !== undefined) {
+    const events = require('base/js/events');
+    const OutputArea = require('notebook/js/outputarea').OutputArea;
+
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  }
+  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  const NB_LOAD_WARNING = {'data': {'text/html':
+     "<div style='background-color: #fdd'>\n"+
+     "<p>\n"+
+     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
+     "may be due to a slow or bad network connection. Possible fixes:\n"+
+     "</p>\n"+
+     "<ul>\n"+
+     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
+     "<li>use INLINE resources instead, as so:</li>\n"+
+     "</ul>\n"+
+     "<code>\n"+
+     "from bokeh.resources import INLINE\n"+
+     "output_notebook(resources=INLINE)\n"+
+     "</code>\n"+
+     "</div>"}};
+
+  function display_loaded() {
+    const el = document.getElementById(null);
+    if (el != null) {
+      el.textContent = "BokehJS is loading...";
+    }
+    if (root.Bokeh !== undefined) {
+      if (el != null) {
+        el.textContent = "BokehJS " + root.Bokeh.version + " successfully loaded.";
+      }
+    } else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(display_loaded, 100)
+    }
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+
+    root._bokeh_onload_callbacks.push(callback);
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls == null || js_urls.length === 0) {
+      run_callbacks();
+      return null;
+    }
+    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    root._bokeh_is_loading = css_urls.length + js_urls.length;
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+
+    function on_error(url) {
+      console.error("failed to load " + url);
+    }
+
+    for (let i = 0; i < css_urls.length; i++) {
+      const url = css_urls[i];
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }
+
+    for (let i = 0; i < js_urls.length; i++) {
+      const url = js_urls[i];
+      const element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  const js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.3.4.min.js"];
+  const css_urls = [];
+
+  const inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {
+    }
+  ];
+
+  function run_inline_js() {
+    if (root.Bokeh !== undefined || force === true) {
+          for (let i = 0; i < inline_js.length; i++) {
+      inline_js[i].call(root, root.Bokeh);
+    }
+} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    } else if (force !== true) {
+      const cell = $(document.getElementById(null)).parents('.cell').data().cell;
+      cell.output_area.append_execute_result(NB_LOAD_WARNING)
+    }
+  }
+
+  if (root._bokeh_is_loading === 0) {
+    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
+    run_inline_js();
+  } else {
+    load_libs(css_urls, js_urls, function() {
+      console.debug("Bokeh: BokehJS plotting callback run at", now());
+      run_inline_js();
+    });
+  }
+}(window));</script><div class="output text_html">
+  <div id="f550c389-4b43-455a-8b1a-c50e09d03380" data-root-id="p1057" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"5f5f4d07-2c43-4e0a-aa75-4067f414cbd7":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1057","attributes":{"width":450,"x_range":{"type":"object","name":"DataRange1d","id":"p1058"},"y_range":{"type":"object","name":"DataRange1d","id":"p1059"},"x_scale":{"type":"object","name":"LinearScale","id":"p1067"},"y_scale":{"type":"object","name":"LinearScale","id":"p1068"},"title":{"type":"object","name":"Title","id":"p1060","attributes":{"text":"Protein vs Calories"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1095","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1054","attributes":{"selected":{"type":"object","name":"Selection","id":"p1055","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1056"},"data":{"type":"map","entries":[["x",{"type":"ndarray","array":{"type":"bytes","data":"pQAAACIAAACbAAAA0AAAAHQAAAB4AAAAOwAAAPoAAABMAAAARwAAADQAAACSAQAAIwIAAA=="},"shape":[13],"dtype":"int32","order":"little"}],["y",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAP0BmZmZmZmYGQAAAAAAAACpAAAAAAAAANEAAAAAAAAAiQGZmZmZmZhBAAAAAAAAAJEAAAAAAAAA6QAAAAAAAACBAAAAAAAAABEAzMzMzMzPTPwAAAAAAADlAMzMzMzMzIEA="},"shape":[13],"dtype":"float64","order":"little"}],["food",{"type":"ndarray","array":["Chicken Breast","Broccoli","Eggs","Salmon","Lentils","Quinoa","Greek Yogurt","Beef (Lean)","Tofu","Oatmeal","Apples","Cheese (Cheddar)","Nutty Buddy (Little Debbies)"],"shape":[13],"dtype":"object","order":"little"}],["predicted",{"type":"ndarray","array":{"type":"bytes","data":"YKhY21QdKEDelhU8Z9YgQHy+yoofjydA4uK6tdOAKkDuR6HQgmQlQOML2vBknSVAlV94hew5IkBn7A4IGtYsQGSgaY6tKyNAcqsi5pLkIkCqCBXNYNYhQFUBPmjVozJAAuFC8NeqNkA="},"shape":[13],"dtype":"float64","order":"little"}],["residual",{"type":"ndarray","array":{"type":"bytes","data":"0KtTklXxMkCJ+vdEm3kWwCAMqqkDh/M/PDqKlFj+GkBwPwqFFiT7v2CxTXtj1BrAsAZ6qDdh7D+ZE/H35SknQCADTXNsXfm/5FZFzCXJG8AQb3szxzwhwKz6B1+qcBlA0Y5SrXwiLcA="},"shape":[13],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1096","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1097"}}},"glyph":{"type":"object","name":"Circle","id":"p1092","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":10},"line_color":{"type":"value","value":"#1f77b4"},"fill_color":{"type":"value","value":"#1f77b4"}}},"nonselection_glyph":{"type":"object","name":"Circle","id":"p1093","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":10},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.1},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Circle","id":"p1094","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":10},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.2},"hatch_alpha":{"type":"value","value":0.2}}}}},{"type":"object","name":"GlyphRenderer","id":"p1104","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1098","attributes":{"selected":{"type":"object","name":"Selection","id":"p1099","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1100"},"data":{"type":"map","entries":[["x",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAQUAXXXTRRZdDQC666KKLLkZARhdddNHFSEBddNFFF11LQHTRRRdd9E1ARhdddNFFUEDSRRdddJFRQF100UUX3VJA6KKLLrooVEB00UUXXXRVQAAAAAAAwFZAjC666KILWEAXXXTRRVdZQKOLLrroolpALrrooovuW0C66KKLLjpdQEYXXXTRhV5A0UUXXXTRX0Auuuiii45gQHTRRRddNGFAuuiiiy7aYUAAAAAAAIBiQEYXXXTRJWNAjC666KLLY0DRRRdddHFkQBdddNFFF2VAXXTRRRe9ZUCjiy666GJmQOmiiy66CGdALrrooouuZ0B00UUXXVRoQLrooosu+mhAAAAAAACgaUBGF1100UVqQIsuuuii62pA0UUXXXSRa0AXXXTRRTdsQF100UUX3WxAo4suuuiCbUDooosuuihuQC666KKLzm5AdNFFF110b0BddNFFFw1wQAAAAAAAYHBAo4suuuiycEBGF1100QVxQOiiiy66WHFAjC666KKrcUAuuuiii/5xQNFFF110UXJAdNFFF12kckAXXXTRRfdyQLrooosuSnNAXXTRRRedc0AAAAAAAPBzQKOLLrroQnRARhdddNGVdEDpoosuuuh0QIsuuuiiO3VALrrooouOdUDRRRdddOF1QHTRRRddNHZAF1100UWHdkC66KKLLtp2QF100UUXLXdAAAAAAACAd0Cjiy666NJ3QEYXXXTRJXhA6aKLLrp4eECLLrroost4QC666KKLHnlA0UUXXXRxeUB00UUXXcR5QBdddNFFF3pAuuiiiy5qekBddNFFF716QAAAAAAAEHtAo4suuuhie0BGF1100bV7QOiiiy66CHxAiy666KJbfEAuuuiii658QNFFF110AX1AdNFFF11UfUAXXXTRRad9QLrooosu+n1AXXTRRRdNfkAAAAAAAKB+QKOLLrro8n5ARhdddNFFf0Dooosuuph/QIsuuuii639AF1100UUfgEDooosuukiAQLrooosucoBAjC666KKbgEBddNFFF8WAQC666KKL7oBAAAAAAAAYgUA="},"shape":[100],"dtype":"float64","order":"little"}],["y",{"type":"ndarray","array":{"type":"bytes","data":"3pYVPGfWIED+q43OFyAhQB3BBWHIaSFAPNZ983izIUBc6/WFKf0hQHsAbhjaRiJAmxXmqoqQIkC6Kl49O9oiQNk/1s/rIyNA+VROYpxtI0AYasb0TLcjQDh/Pof9ACRAV5S2Ga5KJEB2qS6sXpQkQJa+pj4P3iRAtdMe0b8nJUDU6JZjcHElQPT9DvYguyVAExOHiNEEJkAyKP8agk4mQFI9d60ymCZAclLvP+PhJkCRZ2fSkysnQLB832REdSdA0JFX9/S+J0Dvps+JpQgoQA68RxxWUihALtG/rgacKEBO5jdBt+UoQG37r9NnLylAjBAoZhh5KUCsJaD4yMIpQMs6GIt5DCpA6k+QHSpWKkAKZQiw2p8qQCl6gEKL6SpASI/41DszK0BopHBn7HwrQIi56PmcxitAp85gjE0QLEDG49ge/lksQOb4ULGuoyxABQ7JQ1/tLEAkI0HWDzctQEQ4uWjAgC1AZE0x+3DKLUCDYqmNIRQuQKJ3ISDSXS5AwoyZsoKnLkDgoRFFM/EuQAC3idfjOi9AIMwBapSEL0A+4Xn8RM4vQC/7eMf6CzBAvwW1ENMwMEBPEPFZq1UwQN4aLaODejBAbiVp7FufMED+L6U1NMQwQI064X4M6TBAHUUdyOQNMUCtT1kRvTIxQDxalVqVVzFAzGTRo218MUBcbw3tRaExQOx5STYexjFAe4SFf/bqMUALj8HIzg8yQJuZ/RGnNDJAK6Q5W39ZMkC6rnWkV34yQEq5se0vozJA2cPtNgjIMkBpzimA4OwyQPnYZcm4ETNAieOhEpE2M0AY7t1baVszQKj4GaVBgDNAOANW7hmlM0DIDZI38skzQFcYzoDK7jNA5yIKyqITNEB2LUYTezg0QAY4glxTXTRAlkK+pSuCNEAmTfruA6c0QLVXNjjcyzRARWJygbTwNEDVbK7KjBU1QGV36hNlOjVA9IEmXT1fNUCEjGKmFYQ1QBOXnu/tqDVAo6HaOMbNNUAyrBaCnvI1QMO2Ust2FzZAU8GOFE88NkDiy8pdJ2E2QHHWBqf/hTZAAuFC8NeqNkA="},"shape":[100],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1105","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1106"}}},"glyph":{"type":"object","name":"Line","id":"p1101","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"red"}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1102","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"red","line_alpha":0.1}},"muted_glyph":{"type":"object","name":"Line","id":"p1103","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"red","line_alpha":0.2}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1066","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1079"},{"type":"object","name":"WheelZoomTool","id":"p1080","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1081","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1082","attributes":{"syncable":false,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"ResetTool","id":"p1087"},{"type":"object","name":"SaveTool","id":"p1088"},{"type":"object","name":"HoverTool","id":"p1107","attributes":{"renderers":"auto","tooltips":[["Food","@food"],["Residual","@residual{0.00}"]]}}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1074","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1075","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1076"},"axis_label":"Protein (g per 100g)","major_label_policy":{"type":"object","name":"AllLabels","id":"p1077"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1069","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1070","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1071"},"axis_label":"Calories (per 100g)","major_label_policy":{"type":"object","name":"AllLabels","id":"p1072"}}}],"center":[{"type":"object","name":"Grid","id":"p1073","attributes":{"axis":{"id":"p1069"}}},{"type":"object","name":"Grid","id":"p1078","attributes":{"dimension":1,"axis":{"id":"p1074"}}}]}}]}};
+  const render_items = [{"docid":"5f5f4d07-2c43-4e0a-aa75-4067f414cbd7","roots":{"p1057":"f550c389-4b43-455a-8b1a-c50e09d03380"},"root_ids":["p1057"]}];
+  root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
 </section>
 </section>
 
