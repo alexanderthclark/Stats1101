@@ -6,4 +6,4 @@ scipy
 rpy2
 ipywidgets
 IPython
-sklearn
+scikit-learn

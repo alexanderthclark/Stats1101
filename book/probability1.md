@@ -1,8 +1,8 @@
 # Probability
 
-<script src="/_static/uncertaintext.js" type="module"></script>
+<script src="/Stats1101/_static/uncertaintext.js" type="module"></script>
 <script type="module">
-    import uncertaintext from '/_static/uncertaintext.js';
+    import uncertaintext from '/Stats1101/_static/uncertaintext.js';
     window.onload = function () { uncertaintext(); };
 </script>
 
