@@ -67,6 +67,7 @@ Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.12.1/x
 Downloading StatWrap-0.2.14-py3-none-any.whl (16 kB)
 ----- stdout -----
 Installing collected packages: statwrap
+----- stdout -----
 Successfully installed statwrap-0.2.14
 ----- stdout -----
 
