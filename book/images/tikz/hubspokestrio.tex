@@ -12,14 +12,14 @@
 }
 
 % Middle network with 6 nodes
-\node[fill=yellow,right=4cm of l-hub] (m-hub) {5};
+\node[fill=yellow,right=4cm of l-hub] (m-hub) {6};
 \foreach \a [count=\i] in {0,60,...,300} {
   \node[fill=white] (m-spoke-\i) at ([shift={(\a:1.9cm)}]m-hub) {1};
   \draw (m-hub) -- (m-spoke-\i);
 }
 
 % Right network with 11 nodes
-\node[fill=yellow,right=4cm of m-hub] (r-hub) {10};
+\node[fill=yellow,right=4cm of m-hub] (r-hub) {11};
 \foreach \a [count=\i] in {0,32.727,...,359} {
   \node[fill=white] (r-spoke-\i) at ([shift={(\a:1.9cm)}]r-hub) {1};
   \draw (r-hub) -- (r-spoke-\i);
