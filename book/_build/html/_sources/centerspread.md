@@ -155,7 +155,7 @@ Suppose Taylor Swift launches her own social network. Members follow Taylor Swif
 :width: 87%
 :name: tswiftnetwork
 
-An illustration of possible networks with three, six, and eleven members. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.
+An illustration of possible networks with three, seven, and twelve members. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.
 ```
 
 (a) For a single network, is the distribution of the number of followers skewed or symmetric? <br>
