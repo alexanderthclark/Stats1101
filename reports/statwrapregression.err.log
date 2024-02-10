@@ -28,8 +28,8 @@ Requirement already satisfied: statwrap in /opt/hostedtoolcache/Python/3.12.1/x6
 ----- stdout -----
 Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (2.2.0)
 Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.26.4)
-Requirement already satisfied: scipy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.12.0)
 ----- stdout -----
+Requirement already satisfied: scipy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.12.0)
 Requirement already satisfied: IPython in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (8.21.0)
 Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (3.8.2)
 ----- stdout -----
