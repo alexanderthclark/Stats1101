@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Center and Spread &#8212; Intro Stats</title>
   
@@ -28,33 +29,35 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -62,20 +65,16 @@
                 gtag('js', new Date());
                 gtag('config', 'G-32DRGZQWDG');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-32DRGZQWDG');
-            </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'centerspread';</script>
-    <link rel="icon" href="_static/norm_favicon.ico"/>
+    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Normal Distribution" href="normal.html" />
@@ -173,18 +172,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -433,7 +421,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">The Standard Deviation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd">Population vs Sample, SD vs SD<sup>+</sup></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd-sup-sup">Population vs Sample, SD vs SD<sup>+</sup></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-sd-says">What the SD Says</a></li>
 </ul>
 </li>
@@ -452,7 +440,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="center-and-spread">
-<span id="id1"></span><h1>Center and Spread<a class="headerlink" href="#center-and-spread" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>Center and Spread<a class="headerlink" href="#center-and-spread" title="Permalink to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
@@ -461,7 +449,7 @@ document.write(`
 </div>
 <p>Previously, we summarized data with a histogram. Visual representations sometimes lack simplicity or precision, so now we describe a distribution with just two numbers. The average describes the center of the data and the standard deviation describes its spread. Alternatives for center and spread include median and interquartile range, respectively.</p>
 <section id="the-average">
-<h2>The Average<a class="headerlink" href="#the-average" title="Link to this heading">#</a></h2>
+<h2>The Average<a class="headerlink" href="#the-average" title="Permalink to this heading">#</a></h2>
 <p>The <strong>average</strong> of a list of <span class="math notranslate nohighlight">\(n\)</span> numbers is their sum, divided by <span class="math notranslate nohighlight">\(n\)</span>. Typical notation for an average is <span class="math notranslate nohighlight">\(\bar{x}\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span>. If you prefer summation notation,</p>
 <div class="math notranslate nohighlight">
 \[\text{average} = \frac{1}{n} \sum_{i=1}^n x_i.\]</div>
@@ -469,14 +457,14 @@ document.write(`
 <figure class="align-default" id="mean-median-sym">
 <a class="reference internal image-reference" href="_images/hist_with_mean_median.svg"><img alt="_images/hist_with_mean_median.svg" src="_images/hist_with_mean_median.svg" width="87%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The average and median are similar for a symmetric distribution.</span><a class="headerlink" href="#mean-median-sym" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The average and median are similar for a symmetric distribution.</span><a class="headerlink" href="#mean-median-sym" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If we extend the list to include 94, then the average increases to 25 and the median increases to just 2.5. Is 25 or 2.5 more representative of 1, 2, 3, 94? It depends on how you might use the statistic. The median is often preferred in cases like these to avoid the influence of an extreme value. <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 15</span></a> shows two skewed distributions with vertical line for the average and the median. Which line marks the average and which line marks the median?</p>
 <figure class="align-default" id="mean-median-skew">
 <a class="reference internal image-reference" href="_images/skewed_hist_mean_median.svg"><img alt="_images/skewed_hist_mean_median.svg" src="_images/skewed_hist_mean_median.svg" width="87%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Which line is the average? The median?</span><a class="headerlink" href="#mean-median-skew" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Which line is the average? The median?</span><a class="headerlink" href="#mean-median-skew" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -491,16 +479,16 @@ Median vs Average<div class="sd-summary-down docutils">
 </details><p>While the median will split a histogram so that there is equal area on either side, the histogram balances when supported at the average. Imagine balancing either of the histograms in <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 15</span></a> at the median. The histogram would tip toward the long tail because of the leverage exerted by the extreme values.</p>
 </section>
 <section id="the-standard-deviation">
-<h2>The Standard Deviation<a class="headerlink" href="#the-standard-deviation" title="Link to this heading">#</a></h2>
+<h2>The Standard Deviation<a class="headerlink" href="#the-standard-deviation" title="Permalink to this heading">#</a></h2>
 <section id="preamble-root-mean-square">
-<h3>Preamble: Root Mean Square<a class="headerlink" href="#preamble-root-mean-square" title="Link to this heading">#</a></h3>
+<h3>Preamble: Root Mean Square<a class="headerlink" href="#preamble-root-mean-square" title="Permalink to this heading">#</a></h3>
 <p>The <strong>root mean square</strong> size of a list is the (1) square <em>root</em> of the (2) <em>mean</em>, aka average, of the (3) <em>square</em>d entries. This says something about the size of a list.<a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[ \text{root mean square size of a list} = \sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2} \]</div>
 <p>The r.m.s. doesn’t change if you change the sign on any of the numbers. It says something about the typical absolute size of a number in the list. The average of the absolute values would also do that, but as <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> says, “it fits in better with the algebra [statisticians] have to do.” Squaring helps us ignore the sign, we average to get some notion of what’s typical, and then we take the square root to return to the original units.</p>
 </section>
 <section id="id5">
-<h3>The Standard Deviation<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h3>The Standard Deviation<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>The <strong>standard deviation (SD)</strong> is a measure of spread in a list of numbers. The spread is in reference to the center, so for a single entry, we talk of the deviation from the average,</p>
 <div class="math notranslate nohighlight">
 \[\text{deviation = entry - average}.\]</div>
@@ -512,7 +500,7 @@ Median vs Average<div class="sd-summary-down docutils">
 </ol>
 <p>Make a table if it helps with more complicated examples. Below, we find the SD for the list 1,2,3,4,5. The average is 3.</p>
 <table class="table" id="sd-table">
-<caption><span class="caption-number">Table 8 </span><span class="caption-text">Finding the standard deviation</span><a class="headerlink" href="#sd-table" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">Finding the standard deviation</span><a class="headerlink" href="#sd-table" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Entry</p></th>
 <th class="head"><p>Deviation</p></th>
@@ -547,8 +535,8 @@ Median vs Average<div class="sd-summary-down docutils">
 </tbody>
 </table>
 <p>The SD is the square root of the average squared deviation, so SD = <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>.</p>
-<section id="population-vs-sample-sd-vs-sd">
-<h4>Population vs Sample, SD vs SD<sup>+</sup><a class="headerlink" href="#population-vs-sample-sd-vs-sd" title="Link to this heading">#</a></h4>
+<section id="population-vs-sample-sd-vs-sd-sup-sup">
+<h4>Population vs Sample, SD vs SD<sup>+</sup><a class="headerlink" href="#population-vs-sample-sd-vs-sd-sup-sup" title="Permalink to this heading">#</a></h4>
 <p>Our particular calculation for SD is technically the <em>population standard deviation</em>, as opposed to the <em>sample standard deviation</em>, which we call SD<sup>+</sup>
 . These are calculated slightly differently. SD<sup>+</sup> doesn’t use the average squared deviation, dividing by <span class="math notranslate nohighlight">\(n-1\)</span> instead of <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -559,7 +547,7 @@ Median vs Average<div class="sd-summary-down docutils">
 <p>We’ll cover samples, where you observe data for just a subset of a larger population, later in the course. For now, you can imagine everything is the entire population.</p>
 </section>
 <section id="what-the-sd-says">
-<h4>What the SD Says<a class="headerlink" href="#what-the-sd-says" title="Link to this heading">#</a></h4>
+<h4>What the SD Says<a class="headerlink" href="#what-the-sd-says" title="Permalink to this heading">#</a></h4>
 <p>The standard deviation describes the spread in the data, or the typical size of deviations from the average in a list of numbers.</p>
 <p>I like to think of it in terms of a prediction exercise. If your prediction algorithm for a number drawn from the list is “always guess the average,” the SD helps summarize the expected prediction error.</p>
 <p>We keep using the word “typical” in a vague way. The 68-95 rule is a rule of thumb that helps explain what kind of yardstick the SD is.</p>
@@ -568,7 +556,7 @@ Median vs Average<div class="sd-summary-down docutils">
 </section>
 </section>
 <section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="sdproperties">
 
 <p class="admonition-title"><span class="caption-number">Exercise 15 </span></p>
@@ -591,7 +579,7 @@ Median vs Average<div class="sd-summary-down docutils">
 <figure class="align-default" id="tswiftnetwork">
 <a class="reference internal image-reference" href="_images/hubspokestrio.svg"><img alt="_images/hubspokestrio.svg" src="_images/hubspokestrio.svg" width="87%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">An illustration of possible networks with three, seven, and twelve members. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.</span><a class="headerlink" href="#tswiftnetwork" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">An illustration of possible networks with three, seven, and twelve members. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.</span><a class="headerlink" href="#tswiftnetwork" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>(a) For a single network, is the distribution of the number of followers skewed or symmetric? <br>
@@ -601,11 +589,9 @@ Median vs Average<div class="sd-summary-down docutils">
 </section>
 </div>
 <hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id6" role="doc-footnote">
+<aside class="footnote brackets" id="id6" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
 <p>The rms formula is similar to the formula for Euclidean distance, from the origin to the list of numbers as a single point in a coordinate system. The Euclidean distance also measures a kind of size, but without averaging.</p>
-</aside>
 </aside>
 </section>
 </section>
@@ -678,7 +664,7 @@ Median vs Average<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">The Standard Deviation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd">Population vs Sample, SD vs SD<sup>+</sup></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd-sup-sup">Population vs Sample, SD vs SD<sup>+</sup></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-sd-says">What the SD Says</a></li>
 </ul>
 </li>
@@ -709,7 +695,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

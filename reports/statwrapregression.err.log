@@ -1,20 +1,20 @@
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/nbclient/client.py", line 1314, in execute
+  File "/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+  File "/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
     return loop.run_until_complete(inner)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/asyncio/base_events.py", line 684, in run_until_complete
+  File "/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/asyncio/base_events.py", line 685, in run_until_complete
     return future.result()
            ^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+  File "/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/nbclient/client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+  File "/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/nbclient/client.py", line 1058, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+  File "/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -24,53 +24,50 @@ import statwrap
 ------------------
 
 ----- stdout -----
-Requirement already satisfied: statwrap in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (0.2.14)
+Requirement already satisfied: statwrap in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (0.2.15)
 ----- stdout -----
-Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (2.2.0)
-Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.26.4)
+Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from statwrap) (2.2.0)
 ----- stdout -----
-Requirement already satisfied: scipy in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (1.12.0)
-Requirement already satisfied: IPython in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (8.21.0)
-Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from statwrap) (3.8.2)
+Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from statwrap) (1.26.4)
+Requirement already satisfied: scipy in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from statwrap) (1.12.0)
+Requirement already satisfied: IPython in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from statwrap) (8.21.0)
+Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from statwrap) (3.8.2)
 ----- stdout -----
-Requirement already satisfied: decorator in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (5.1.1)
-Requirement already satisfied: jedi>=0.16 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.19.1)
-Requirement already satisfied: matplotlib-inline in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.1.6)
-Requirement already satisfied: prompt-toolkit<3.1.0,>=3.0.41 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (3.0.43)
-Requirement already satisfied: pygments>=2.4.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (2.17.2)
-Requirement already satisfied: stack-data in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.6.3)
-Requirement already satisfied: traitlets>=5 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (5.14.1)
-Requirement already satisfied: pexpect>4.3 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from IPython->statwrap) (4.9.0)
-Requirement already satisfied: contourpy>=1.0.1 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (1.2.0)
-Requirement already satisfied: cycler>=0.10 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (0.12.1)
-Requirement already satisfied: fonttools>=4.22.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (4.48.1)
-Requirement already satisfied: kiwisolver>=1.3.1 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (1.4.5)
-Requirement already satisfied: packaging>=20.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (23.2)
-Requirement already satisfied: pillow>=8 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (10.2.0)
-Requirement already satisfied: pyparsing>=2.3.1 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (3.1.1)
-Requirement already satisfied: python-dateutil>=2.7 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (2.8.2)
+Requirement already satisfied: decorator in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from IPython->statwrap) (5.1.1)
+Requirement already satisfied: jedi>=0.16 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.19.1)
+Requirement already satisfied: matplotlib-inline in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.1.6)
+Requirement already satisfied: prompt-toolkit<3.1.0,>=3.0.41 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from IPython->statwrap) (3.0.43)
+Requirement already satisfied: pygments>=2.4.0 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from IPython->statwrap) (2.17.2)
+Requirement already satisfied: stack-data in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from IPython->statwrap) (0.6.3)
+Requirement already satisfied: traitlets>=5 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from IPython->statwrap) (5.14.1)
+Requirement already satisfied: pexpect>4.3 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from IPython->statwrap) (4.9.0)
+Requirement already satisfied: contourpy>=1.0.1 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (1.2.0)
+Requirement already satisfied: cycler>=0.10 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (4.48.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (1.4.5)
+Requirement already satisfied: packaging>=20.0 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (23.2)
 ----- stdout -----
-Requirement already satisfied: pytz>=2020.1 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from pandas->statwrap) (2024.1)
-Requirement already satisfied: tzdata>=2022.7 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from pandas->statwrap) (2023.4)
+Requirement already satisfied: pillow>=8 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (10.2.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (3.1.1)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from matplotlib->statwrap) (2.8.2)
 ----- stdout -----
-Requirement already satisfied: parso<0.9.0,>=0.8.3 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from jedi>=0.16->IPython->statwrap) (0.8.3)
-Requirement already satisfied: ptyprocess>=0.5 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from pexpect>4.3->IPython->statwrap) (0.7.0)
+Requirement already satisfied: pytz>=2020.1 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from pandas->statwrap) (2024.1)
+Requirement already satisfied: tzdata>=2022.7 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from pandas->statwrap) (2024.1)
 ----- stdout -----
-Requirement already satisfied: wcwidth in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from prompt-toolkit<3.1.0,>=3.0.41->IPython->statwrap) (0.2.13)
-Requirement already satisfied: six>=1.5 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib->statwrap) (1.16.0)
-Requirement already satisfied: executing>=1.2.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.0.1)
-Requirement already satisfied: asttokens>=2.1.0 in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.4.1)
-Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (0.2.2)
+Requirement already satisfied: parso<0.9.0,>=0.8.3 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from jedi>=0.16->IPython->statwrap) (0.8.3)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from pexpect>4.3->IPython->statwrap) (0.7.0)
 ----- stdout -----
-
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m23.2.1[0m[39;49m -> [0m[32;49m24.0[0m
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
+Requirement already satisfied: wcwidth in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from prompt-toolkit<3.1.0,>=3.0.41->IPython->statwrap) (0.2.13)
+Requirement already satisfied: six>=1.5 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib->statwrap) (1.16.0)
+Requirement already satisfied: executing>=1.2.0 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.0.1)
+Requirement already satisfied: asttokens>=2.1.0 in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (2.4.1)
+Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages (from stack-data->IPython->statwrap) (0.2.2)
 ----- stderr -----
-/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/statwrap/fpp.py:227: SyntaxWarning: invalid escape sequence '\m'
+/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/statwrap/fpp.py:227: SyntaxWarning: invalid escape sequence '\m'
   """
-/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/statwrap/fpp.py:258: SyntaxWarning: invalid escape sequence '\m'
+/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/statwrap/fpp.py:258: SyntaxWarning: invalid escape sequence '\m'
   """
-/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/statwrap/utils.py:159: SyntaxWarning: invalid escape sequence '\l'
+/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/statwrap/utils.py:159: SyntaxWarning: invalid escape sequence '\l'
   """
 ------------------
 
@@ -81,14 +78,14 @@ Cell [0;32mIn[1], line 2[0m
 [0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatwrap[39;00m
 [1;32m      3[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124muse_all[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m'[39m)
 
-File [0;32m/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/statwrap/__init__.py:3[0m
+File [0;32m/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/statwrap/__init__.py:3[0m
 [1;32m      1[0m [38;5;28;01mtry[39;00m:
 [1;32m      2[0m     __IPYTHON__
 [0;32m----> 3[0m     [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m [38;5;28;01mimport[39;00m use_fpp
 [1;32m      4[0m     [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m [38;5;28;01mimport[39;00m use_sheets
 [1;32m      5[0m [38;5;28;01mexcept[39;00m [38;5;167;01mNameError[39;00m:
 
-File [0;32m/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/statwrap/core.py:6[0m
+File [0;32m/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/statwrap/core.py:6[0m
 [1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m [38;5;28;01mimport[39;00m get_ipython
 [1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmagic[39;00m [38;5;28;01mimport[39;00m register_line_magic
 [0;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mstatwrap[39;00m[38;5;21;01m.[39;00m[38;5;21;01mfpp[39;00m [38;5;28;01mimport[39;00m fpp_setup
@@ -96,7 +93,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/
 [1;32m      9[0m [38;5;129m@register_line_magic[39m
 [1;32m     10[0m [38;5;28;01mdef[39;00m [38;5;21muse_fpp[39m(line):
 
-File [0;32m/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/statwrap/fpp.py:8[0m
+File [0;32m/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/statwrap/fpp.py:8[0m
 [1;32m      6[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
 [1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmagic[39;00m [38;5;28;01mimport[39;00m register_line_magic
 [0;32m----> 8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mstatwrap[39;00m[38;5;21;01m.[39;00m[38;5;21;01mutils[39;00m [38;5;28;01mimport[39;00m modify_std, args_to_array, formula
@@ -108,7 +105,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/
 [1;32m     42[0m [38;5;124;03m    array([4, 2, 6])[39;00m
 [1;32m     43[0m [38;5;124;03m    """[39;00m
 
-File [0;32m/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/statwrap/utils.py:10[0m
+File [0;32m/opt/hostedtoolcache/Python/3.12.2/x64/lib/python3.12/site-packages/statwrap/utils.py:10[0m
 [1;32m      8[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatwrap[39;00m[38;5;21;01m.[39;00m[38;5;21;01mfpp[39;00m [38;5;28;01mas[39;00m [38;5;21;01mfpp[39;00m
 [1;32m      9[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
 [0;32m---> 10[0m [38;5;28;01mfrom[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mgraphics[39;00m[38;5;21;01m.[39;00m[38;5;21;01mregressionplots[39;00m [38;5;28;01mimport[39;00m (
