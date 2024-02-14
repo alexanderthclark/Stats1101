@@ -7,3 +7,4 @@ rpy2
 ipywidgets
 IPython
 scikit-learn
+statwrap
