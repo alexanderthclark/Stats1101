@@ -1,5 +1,9 @@
 # Overview
 
+## Should you learn Python? 
+
+Coding is cool, but use Excel/Sheets if you prefer. Python opens doors professionally, and R to a lesser extent, but it's easier to go back and pick up coding later than it is to go back and learn stats. A stinging critique of someone interviewing for a data scientist job is, "This person can open [common machine learning package in Python]." The implication is that person can write some code but they can't do anything creative. The course is mainly about being able to solve problems and form coherent sentences involving statistical ideas. 
+
 ## What is Python?
 
 Python is a general-purpose programming language. Our purposes are statistical calculations and the occasional graph. We will run code in [Google Colaboratory](https://colab.research.google.com/). This roughly mirrors running Jupyter notebooks on your own machine, but we skip the setup by running everything in the browser. If you master intro stats and become proficient in Python and SQL, there is a six-figure job waiting for you at any number of tech companies.
@@ -29,6 +33,7 @@ Python is popular because the code is readable. More specifically, â€œPythonicâ€
 *Namespaces are one honking great idea---let's do more of those!*
 
 Python can seem endlessly complex. [Fluent Python](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348) is 1,012 pages. Luckily, we don't need to aspire to fluency.
+
 
 ## Thinking like a Programmer
 
