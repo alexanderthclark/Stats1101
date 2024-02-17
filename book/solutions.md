@@ -146,3 +146,17 @@ Let A have an average of 1000 with an SD of 1. Let school B have an average of 1
 ```{solution-end}
 ```
 
+## [Correlation](correlation)
+
+## [Regression](regression)
+
+
+```{solution-start} assortMating
+:class: dropdown
+```
+
+Researchers report both correlations and slopes, indicating that both can be interesting. If you want to know the effect size, use a slope. If you want to measure the strength of the relationship in terms of noisy vs perfectly linear, use a correlation coefficient.
+
+
+```{solution-end}
+```
