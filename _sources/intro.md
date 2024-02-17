@@ -26,6 +26,11 @@ We'll argue that statistics is *not* just math, but the imperative from Halmos s
 ![How Math Works](images/HowMath.png)
 
 
+## More about 1101
+
+This is an introductory course in statistics. Students will learn how to interpret and produce statistical analyses, with applications taken from many fields. Major topics include the design of experiments, descriptive statistics, correlation, probability, hypothesis testing, and regression.
+
+The only pre-requisite for this course is that you should be good at high school algebra. I recommend taking the calculus-based intro instead if you want to pursue stats or a related field. 
 
 
 ```{tableofcontents}
