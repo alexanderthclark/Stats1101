@@ -23,6 +23,12 @@ parts:
 #  chapters:
 #    - file: solutions
 
+- caption: Google Sheets (optional)
+  chapters:
+    - file: gsheets
+    - file: ghistogram
+    - file: gregression
+
 - caption: Python (optional)
   chapters:
     - file: python
@@ -30,12 +36,6 @@ parts:
     - file: pylibs
     - file: statwrap0
     - file: statwrapregression
-
-- caption: Google Sheets (optional)
-  chapters:
-    - file: gsheets
-    - file: ghistogram
-    - file: gregression
 
 - caption: R (optional)
   chapters:

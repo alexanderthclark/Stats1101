@@ -192,6 +192,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
@@ -200,12 +206,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">R (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -389,7 +389,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -405,6 +407,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-about-1101">More about 1101</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -434,6 +446,10 @@ document.write(`
 <hr class="docutils" />
 <p>We’ll argue that statistics is <em>not</em> just math, but the imperative from Halmos still applies.</p>
 <p><img alt="How Math Works" src="_images/HowMath.png" /></p>
+<section id="more-about-1101">
+<h2>More about 1101<a class="headerlink" href="#more-about-1101" title="Permalink to this heading">#</a></h2>
+<p>This is an introductory course in statistics. Students will learn how to interpret and produce statistical analyses, with applications taken from many fields. Major topics include the design of experiments, descriptive statistics, correlation, probability, hypothesis testing, and regression.</p>
+<p>The only pre-requisite for this course is that you should be good at high school algebra. I recommend taking the calculus-based intro instead if you want to pursue stats or a related field.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
 <ul>
@@ -452,6 +468,14 @@ document.write(`
 </ul>
 </div>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
@@ -460,14 +484,6 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html#example-catalog">Example Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -485,6 +501,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -532,6 +549,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-about-1101">More about 1101</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
