@@ -191,6 +191,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
@@ -199,12 +205,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">R (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +512,9 @@ document.addEventListener('copy', function(e) {
 <p>
 
 
-You will receive a small data set built from the Current Population Survey. 
-Each row describes a married couple. Review the data documentation for more information on each of the columns.
+You will receive a small data set, called <tt>cps_couples.csv</tt>, built from the Current Population Survey. 
+Each row describes a married couple. The data is already cleaned for you. There are no flag values or rows that need to be dropped.
+Review the condensed data documentation for more information on each of the columns (e.g. an education value of 46 corresponds to a PhD).
 
 <table border="1" class="dataframe">
   <thead>
@@ -562,7 +563,7 @@ This is your proof-of-work, replication file.
 
 <br>
 
-1. Create a scatter diagram that relates a partner 1 column and partner 2 column. Use quantitative variables only.
+1. Create a scatter diagram that relates a partner 1 column and partner 2 column, choosing among quantitative variables only.
 Use these two columns for the following questions. <br>
 2. Find the regression line equation. Let the partner 1 column be the independent variable. <br>
 3. Interpret the regression line in the context of the data: what do the coefficients mean? <br>
