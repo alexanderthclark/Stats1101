@@ -16,6 +16,7 @@ parts:
     - file: normal
     - file: correlation
     - file: regression
+    - file: probability
     #- file: probability1
     - file: bibliography
 
