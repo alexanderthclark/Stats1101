@@ -418,12 +418,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities-and-frequencies">Probabilities and Frequencies</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities">Probabilities</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">Sets</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-models">Box Models</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-draws">Random Draws</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-mulitplication-rule">General Mulitplication Rule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -443,12 +447,12 @@ document.write(`
 <li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 13</p></li>
 </ul>
 </div>
-<section id="probabilities-and-frequencies">
-<h2>Probabilities and Frequencies<a class="headerlink" href="#probabilities-and-frequencies" title="Permalink to this heading">#</a></h2>
+<section id="probabilities">
+<h2>Probabilities<a class="headerlink" href="#probabilities" title="Permalink to this heading">#</a></h2>
 <p>A <strong>probability</strong> of a thing refers to the long-run tendency for that thing to occur.</p>
 <p>First, we have an <em>event</em>: “It rains tomorrow,” which describes possible outcomes from some random process.</p>
 <p>Imagine we repeat the process many times. The proportion of times in which we observe that event to occur is its <strong>probability</strong>. This corresponds to (1) the textbook and (2) a “frequentist” philosophy. There are other philosophies, but it’s not in scope to discuss alternatives.</p>
-<p>A probability is a fraction and the value will be between zero and one. We use notation <span class="math notranslate nohighlight">\(\mathbb{P}(\text{thing})\)</span> to describe the probability of the thing occurring. If <span class="math notranslate nohighlight">\(H\)</span> means a coin toss comes up heads, then</p>
+<p>A probability is a fraction and the value will be between zero and one. We use notation <span class="math notranslate nohighlight">\(\mathbb{P}(\text{thing})\)</span> to describe the probability of the thing occurring. Sometimes we convert this to a percentage and call it a <strong>chance</strong>. If <span class="math notranslate nohighlight">\(H\)</span> means a coin toss comes up heads, then</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(H) = \frac{\# \text{Heads}}{\# \text{Coin Tosses}}.\]</div>
 <p>For a fair coin, this will tend to <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>. For a weighted coin, it can be any value <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(0\leq p \leq 1\)</span>. This can also be represented by a  <strong>box model</strong>, like those in <span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. It’s also useful to represent a collection of outcomes as sets and their probability as an area. <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> doesn’t use sets, but you mind find it natural for some examples.</p>
@@ -490,16 +494,68 @@ document.write(`
 <h3>Random Draws<a class="headerlink" href="#random-draws" title="Permalink to this heading">#</a></h3>
 <p>With a single random draw from a box, the probability of an outcome is the number of tickets labeled with that outcome divided by the total number of tickets. In <a class="reference internal" href="#headstailsweightedbox"><span class="std std-numref">Fig. 36</span></a>, <span class="math notranslate nohighlight">\(\mathbb{P}(H) = \frac{2}{3}\)</span>. If we draw two tickets, it matters what we do with the first ticket we drew. Draws can be done <strong>with replacement</strong> or <strong>without replacement</strong>. Drawing with replacement means you put the ticket back in the box, and you might draw the same ticket again. Drawing without replacement means the ticket is removed from the box and not available to be drawn again.</p>
 <p>If we take two draws with replacement from <a class="reference internal" href="#headstailsbox"><span class="std std-numref">Fig. 35</span></a>, that is akin to two flips of a fair coin (because a coin doesn’t lose its heads side if you already flipped a heads). The possible outcomes are <span class="math notranslate nohighlight">\(HH,HT,TH,TT\)</span>. If we instead take two draws without replacement, the second draw comes from a box with just one ticket remaining. The possible outcomes are <span class="math notranslate nohighlight">\(HT\)</span> or <span class="math notranslate nohighlight">\(TH\)</span>.</p>
-<p><strong>Example:</strong> A carnival game is done according to the rules:</p>
+</section>
+</section>
+<section id="conditional-probability">
+<h2>Conditional Probability<a class="headerlink" href="#conditional-probability" title="Permalink to this heading">#</a></h2>
+<p>A probability like <span class="math notranslate nohighlight">\(\mathbb{P}(\text{bad weather})\)</span> is an unconditional probability. A <strong>conditional probability</strong> gives a probability if we already observed something else. For example, a devoted reader of the Farmers’ Almanac might know the signs of good or bad weather, like the color of the sky. A conditional probability is written <span class="math notranslate nohighlight">\(\mathbb{P}(\text{bad weather} \mid \text{red sky})\)</span>. The conditional probability is found <span class="math notranslate nohighlight">\(\mathbb{P}(\text{bad weather} \mid \text{red sky}) = \frac{ \mathbb{P}(\text{bad weather} \textit{ and } \text{red sky}) }{ \mathbb{P}(\text{red sky })}\)</span>.  More generally, <span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B)\)</span> is the probability of <span class="math notranslate nohighlight">\(A\)</span> conditional on <span class="math notranslate nohighlight">\(B\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(A \mid B) = \frac{ \mathbb{P}(A \textit{ and } B) }{ \mathbb{P}(B)}.\]</div>
+<p>In <a class="reference internal" href="#eventsetab"><span class="std std-numref">Fig. 34</span></a>, <span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B) = 1\)</span> because <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> is just <span class="math notranslate nohighlight">\(B\)</span>. In <a class="reference internal" href="#setsand"><span class="std std-numref">Fig. 37</span></a>, <span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B)\)</span> can’t be eyeballed, but it would be the shaded area divided by the area of <span class="math notranslate nohighlight">\(B\)</span>. Without any conditioning, all of the enclosing box is possible. When we condition on <span class="math notranslate nohighlight">\(B\)</span>, it’s as if we throw away everything that is not <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<figure class="align-default" id="setsand">
+<a class="reference internal image-reference" href="_images/setsAnd.svg"><img alt="_images/setsAnd.svg" src="_images/setsAnd.svg" width="53%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text"><span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> happens where the sets overlap.</span><a class="headerlink" href="#setsand" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In a box model, conditional probabilities involve looking at a modified box.</p>
+<p><strong>Example</strong>. Suppose you’re taking a multiple choice exam. A question asks you to solve for a correlation coefficient but you don’t have time to do the math given some time pressure. If you guess among equally likely choices, you’ll get the right answer with a 20% chance.</p>
+<figure class="align-default" id="boxmultchoice">
+<a class="reference internal image-reference" href="_images/boxMultChoice.svg"><img alt="_images/boxMultChoice.svg" height="35px" src="_images/boxMultChoice.svg" /></a>
+</figure>
+<p>But you find a clue: choice A is <span class="math notranslate nohighlight">\(\sqrt{5}\)</span>. Correlation coefficients can’t be above 1, so A is certainly wrong. You’ve simplified the guessing game to the box model below. If you guess C, you are right with probability <span class="math notranslate nohighlight">\(\mathbb{P}(\text{C} \mid \text{B or C or D or E}) = \frac{1}{4}\)</span>.</p>
+<figure class="align-default" id="boxmultchoicenoa">
+<a class="reference internal image-reference" href="_images/boxMultChoiceNoA.svg"><img alt="_images/boxMultChoiceNoA.svg" height="35px" src="_images/boxMultChoiceNoA.svg" /></a>
+</figure>
+</section>
+<section id="general-mulitplication-rule">
+<h2>General Mulitplication Rule<a class="headerlink" href="#general-mulitplication-rule" title="Permalink to this heading">#</a></h2>
+<p>The <strong>general multiplication rule</strong> is</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(A \textit{ and } B) = \mathbb{P}(A \mid B)\times \mathbb{P}(B).\]</div>
+<p>One thing to note, as suggested by <a class="reference internal" href="#setsand"><span class="std std-numref">Fig. 37</span></a> and <a class="reference internal" href="#eventsetab"><span class="std std-numref">Fig. 34</span></a>, the probability of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> can’t exceed the probability of either <span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>. The formula tells a story: first <span class="math notranslate nohighlight">\(B\)</span> happens with probability <span class="math notranslate nohighlight">\(\mathbb{P}(B)\)</span> and then, once you’re in the world of <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(A\)</span> will happen with probability <span class="math notranslate nohighlight">\(\mathbb{P}(A\mid B)\)</span>. Multiply and you have the unconditional probability of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</section>
+<section id="independence">
+<h2>Independence<a class="headerlink" href="#independence" title="Permalink to this heading">#</a></h2>
+<p>Informally, two things <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are <strong>independent</strong> if knowing that <span class="math notranslate nohighlight">\(B\)</span> occurred doesn’t change your belief that <span class="math notranslate nohighlight">\(A\)</span> might occur. The outcomes of two coin flips are independent, even if the coin is weighted. It would be hard to invent a reason for why heads should be more or less likely after a heads than after a tails. When <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are independent, then conditioning on one does nothing.</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(A \mid B) = \mathbb{P}(A) \;\;\; A,B \text{ independent}\]</div>
+<p><span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are dependent when <span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B) \neq \mathbb{P}(A)\)</span>. Dependence can arise even if there’s no causal relationship or explicit coordination. For example, let <span class="math notranslate nohighlight">\(A\)</span> be the event where Mayor Adams carries an umbrella and let <span class="math notranslate nohighlight">\(B\)</span> be the event where I carry an umbrella. There’s some indirect coordination involved in our behavior:</p>
+<ol class="arabic simple">
+<li><p>We both live in NYC.</p></li>
+<li><p>We both experience and observe the same weather.</p></li>
+<li><p>We carry umbrellas when it rains.</p></li>
+</ol>
+<p>The chance that I carry an umbrella is just the chance it rains. But if we know that Mayor Adams is toting an umbrella, we know it’s raining. The conditional probability that I carry an umbrella given that Mayor Adams is carrying an umbrella is one. Therefore, these are dependent things.</p>
+<p>If Mayor Adams wins the Powerball after guessing the numbers correctly, that is probability independent of whether or not I win the Powerball on the same day. For these to be dependent, it would have to be that our numbers are somehow connected. Maybe if we read the same horoscope and find our lucky numbers there, our wins could be dependent.</p>
+<p>Draws made with replacement are independent. The box never changes, so there is no way the outcome of the first draw can impact sequential draws. Draws made without replacement are dependent because the box changes and it changes depending on the previous outcomes.</p>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="carnival">
+
+<p class="admonition-title"><span class="caption-number">Exercise 26 </span></p>
+<section id="exercise-content">
+<p>A carnival game is done according to the rules:</p>
 <ul class="simple">
-<li><p>Three tickets are drawn from a box with three tickets (<a class="reference internal" href="#box123"><span class="std std-numref">Fig. 37</span></a>).</p></li>
+<li><p>Three tickets are drawn from the box in <a class="reference internal" href="#box123"><span class="std std-numref">Fig. 38</span></a>.</p></li>
 <li><p>A player guesses the outcome prior to any draws being made. They win if they guess what numbers are drawn in the correct order.</p></li>
 <li><p>The player can choose if the draws are done with or without replacement.</p></li>
 </ul>
 <figure class="align-default" id="box123">
 <a class="reference internal image-reference" href="_images/box123.svg"><img alt="_images/box123.svg" height="35px" src="_images/box123.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 37 </span><span class="caption-text">The carnival box.</span><a class="headerlink" href="#box123" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">The carnival box.</span><a class="headerlink" href="#box123" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple">
@@ -509,6 +565,18 @@ document.write(`
 <li><p>A player can pay one cent to change the rules so they can guess the next number after each draw instead of guessing all numbers at the beginning. Is this worth it?</p></li>
 </ol>
 </section>
+</div>
+<div class="exercise admonition" id="linda">
+
+<p class="admonition-title"><span class="caption-number">Exercise 27 </span></p>
+<section id="exercise-content">
+<p>(From <span id="id5">[<a class="reference internal" href="bibliography.html#id27" title="Amos Tversky and Daniel Kahneman. Extensional versus intuitive reasoning: the conjunction fallacy in probability judgment. Psychological review, 90(4):293, 1983.">TK83</a>]</span>) Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations. Which is more probable?</p>
+<ul class="simple">
+<li><p>Linda is a bank teller.</p></li>
+<li><p>Linda is a bank teller and is active in the feminist movement.</p></li>
+</ul>
+</section>
+</div>
 </section>
 </section>
 
@@ -576,12 +644,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities-and-frequencies">Probabilities and Frequencies</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities">Probabilities</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">Sets</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-models">Box Models</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-draws">Random Draws</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-mulitplication-rule">General Mulitplication Rule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 
