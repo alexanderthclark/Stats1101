@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="460.8pt" height="345.6pt" viewBox="0 0 460.8 345.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2024-02-20T19:19:23.570741</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.7.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 460.8 345.6 
+L 460.8 0 
+L 0 0 
+L 0 345.6 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 230.4 301.371429 
+C 264.497541 301.371429 297.203126 287.824332 321.313729 263.713729 
+C 345.424332 239.603126 358.971429 206.897541 358.971429 172.8 
+C 358.971429 138.702459 345.424332 105.996874 321.313729 81.886271 
+C 297.203126 57.775668 264.497541 44.228571 230.4 44.228571 
+C 196.302459 44.228571 163.596874 57.775668 139.486271 81.886271 
+C 115.375668 105.996874 101.828571 138.702459 101.828571 172.8 
+C 101.828571 206.897541 115.375668 239.603126 139.486271 263.713729 
+C 163.596874 287.824332 196.302459 301.371429 230.4 301.371429 
+z
+" clip-path="url(#p707320a815)" style="fill: #cccccc; stroke: #000000; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.542857 333.514286 
+L 423.257143 333.514286 
+L 423.257143 12.085714 
+L 37.542857 12.085714 
+L 37.542857 333.514286 
+z
+" clip-path="url(#p707320a815)" style="fill: none; stroke: #000000; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <!-- $A$ -->
+    <g transform="translate(220.05 181.078125) scale(0.3 -0.3)">
+     <defs>
+      <path id="DejaVuSans-Oblique-41" d="M 2356 4666 
+L 3072 4666 
+L 3938 0 
+L 3278 0 
+L 3084 1197 
+L 984 1197 
+L 325 0 
+L -341 0 
+L 2356 4666 
+z
+M 2584 4044 
+L 1275 1722 
+L 2988 1722 
+L 2584 4044 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#DejaVuSans-Oblique-41" transform="translate(0 0.09375)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p707320a815">
+   <rect x="24.685714" y="10.8" width="411.428571" height="324"/>
+  </clipPath>
+ </defs>
+</svg>
