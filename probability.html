@@ -418,7 +418,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities-and-frequencies">Probabilities and Frequencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities-and-frequencies">Probabilities and Frequencies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">Sets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-models">Box Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-draws">Random Draws</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -446,20 +451,64 @@ document.write(`
 <p>A probability is a fraction and the value will be between zero and one. We use notation <span class="math notranslate nohighlight">\(\mathbb{P}(\text{thing})\)</span> to describe the probability of the thing occurring. If <span class="math notranslate nohighlight">\(H\)</span> means a coin toss comes up heads, then</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(H) = \frac{\# \text{Heads}}{\# \text{Coin Tosses}}.\]</div>
-<p>For a fair coin, this will tend to <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>. For a weighted coin, it can be any value <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(0\leq p \leq 1\)</span>. This can also be represented by a  <strong>box model</strong>, like those in <span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. A box contains labeled tickets that correspond to specific outcomes. With each ticket being drawn with equal chance, a fair coin can be represented with the box below.</p>
+<p>For a fair coin, this will tend to <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>. For a weighted coin, it can be any value <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(0\leq p \leq 1\)</span>. This can also be represented by a  <strong>box model</strong>, like those in <span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. It’s also useful to represent a collection of outcomes as sets and their probability as an area. <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> doesn’t use sets, but you mind find it natural for some examples.</p>
+<section id="sets">
+<h3>Sets<a class="headerlink" href="#sets" title="Permalink to this heading">#</a></h3>
+<p>In the diagram below, the outer box represents all possible things that can occur. Imagine we’re drawing a random number between 0 and 100. A point represents a single outcome, like the number 91 is drawn. A larger set of points represents several possible outcomes. Below, <span class="math notranslate nohighlight">\(A\)</span> might represent a set of outcomes like a number above 50 is drawn.</p>
+<figure class="align-default" id="eventseta">
+<a class="reference internal image-reference" href="_images/eventsetA.svg"><img alt="_images/eventsetA.svg" src="_images/eventsetA.svg" width="40%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text"><span class="math notranslate nohighlight">\(\mathbb{P}(A) = \frac{\text{area } A}{\text{area outer box}}\)</span></span><a class="headerlink" href="#eventseta" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Using set diagrams is especially advantageous once we start talking about multiple collections of outcomes. Let <span class="math notranslate nohighlight">\(B\)</span> represent that a number above 90 is drawn. This is less likely than <span class="math notranslate nohighlight">\(A\)</span>, drawing a number above 50, and <span class="math notranslate nohighlight">\(B\)</span> is a subset of <span class="math notranslate nohighlight">\(A\)</span>. This can be represented below.</p>
+<figure class="align-default" id="eventsetab">
+<a class="reference internal image-reference" href="_images/eventsetAB.svg"><img alt="_images/eventsetAB.svg" src="_images/eventsetAB.svg" width="40%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text"><span class="math notranslate nohighlight">\(A\)</span> is more likely because it has greater area. And because <span class="math notranslate nohighlight">\(B\)</span> is inside <span class="math notranslate nohighlight">\(A\)</span>, if <span class="math notranslate nohighlight">\(B\)</span> occurs then <span class="math notranslate nohighlight">\(A\)</span> occurs. If <span class="math notranslate nohighlight">\(A\)</span> occurs, <span class="math notranslate nohighlight">\(B\)</span> is not guaranteed.</span><a class="headerlink" href="#eventsetab" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="box-models">
+<h3>Box Models<a class="headerlink" href="#box-models" title="Permalink to this heading">#</a></h3>
+<p>A box contains labeled tickets that correspond to specific outcomes. With each ticket being drawn with equal chance, a fair coin can be represented with the box below.</p>
 <figure class="align-default" id="headstailsbox">
 <a class="reference internal image-reference" href="_images/headstailsbox.svg"><img alt="_images/headstailsbox.svg" height="40px" src="_images/headstailsbox.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Fair coin box model representation.</span><a class="headerlink" href="#headstailsbox" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Fair coin box model representation.</span><a class="headerlink" href="#headstailsbox" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For a coin weighted to land heads more often, we simply add more <span class="math notranslate nohighlight">\(H\)</span> tickets to the box.</p>
 <figure class="align-default" id="headstailsweightedbox">
 <a class="reference internal image-reference" href="_images/headstailsweightedbox.svg"><img alt="_images/headstailsweightedbox.svg" height="40px" src="_images/headstailsweightedbox.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">A weighted coin box model representation.</span><a class="headerlink" href="#headstailsweightedbox" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">A weighted coin box model representation.</span><a class="headerlink" href="#headstailsweightedbox" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
+<section id="random-draws">
+<h3>Random Draws<a class="headerlink" href="#random-draws" title="Permalink to this heading">#</a></h3>
+<p>With a single random draw from a box, the probability of an outcome is the number of tickets labeled with that outcome divided by the total number of tickets. In <a class="reference internal" href="#headstailsweightedbox"><span class="std std-numref">Fig. 36</span></a>, <span class="math notranslate nohighlight">\(\mathbb{P}(H) = \frac{2}{3}\)</span>. If we draw two tickets, it matters what we do with the first ticket we drew. Draws can be done <strong>with replacement</strong> or <strong>without replacement</strong>. Drawing with replacement means you put the ticket back in the box, and you might draw the same ticket again. Drawing without replacement means the ticket is removed from the box and not available to be drawn again.</p>
+<p>If we take two draws with replacement from <a class="reference internal" href="#headstailsbox"><span class="std std-numref">Fig. 35</span></a>, that is akin to two flips of a fair coin (because a coin doesn’t lose its heads side if you already flipped a heads). The possible outcomes are <span class="math notranslate nohighlight">\(HH,HT,TH,TT\)</span>. If we instead take two draws without replacement, the second draw comes from a box with just one ticket remaining. The possible outcomes are <span class="math notranslate nohighlight">\(HT\)</span> or <span class="math notranslate nohighlight">\(TH\)</span>.</p>
+<p><strong>Example:</strong> A carnival game is done according to the rules:</p>
+<ul class="simple">
+<li><p>Three tickets are drawn from a box with three tickets (<a class="reference internal" href="#box123"><span class="std std-numref">Fig. 37</span></a>).</p></li>
+<li><p>A player guesses the outcome prior to any draws being made. They win if they guess what numbers are drawn in the correct order.</p></li>
+<li><p>The player can choose if the draws are done with or without replacement.</p></li>
+</ul>
+<figure class="align-default" id="box123">
+<a class="reference internal image-reference" href="_images/box123.svg"><img alt="_images/box123.svg" height="35px" src="_images/box123.svg" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">The carnival box.</span><a class="headerlink" href="#box123" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Anna guesses 111 and requests that each draw is done without replacement. What is the chance Anna wins?</p></li>
+<li><p>Boris guesses 111 and requests that each draw is done with replacement. What is the chance Boris wins?</p></li>
+<li><p>Neither Anna nor Boris have the best strategy. What is the best strategy?</p></li>
+<li><p>A player can pay one cent to change the rules so they can guess the next number after each draw instead of guessing all numbers at the beginning. Is this worth it?</p></li>
+</ol>
+</section>
 </section>
 </section>
 
@@ -527,7 +576,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities-and-frequencies">Probabilities and Frequencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities-and-frequencies">Probabilities and Frequencies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">Sets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-models">Box Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-draws">Random Draws</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
