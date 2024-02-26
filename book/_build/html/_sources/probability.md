@@ -3,7 +3,7 @@
 
 ```{admonition} Important Readings
 :class: seealso
-- {cite}`freedman2007statistics`, Chapter 13
+- {cite}`freedman2007statistics`, Chapter 13, 14
 ```
 
 ## Probabilities 
@@ -113,7 +113,7 @@ name: boxMultChoiceNoA
 
 ```
 
-## General Mulitplication Rule
+## General Mulitplication Rule ($A$ and $B$)
 
 The **general multiplication rule** is 
 
@@ -125,9 +125,9 @@ One thing to note, as suggested by {numref}`setsAnd` and {numref}`eventsetAB`, t
 
 Informally, two things $A$ and $B$ are **independent** if knowing that $B$ occurred doesn't change your belief that $A$ might occur. The outcomes of two coin flips are independent, even if the coin is weighted. It would be hard to invent a reason for why heads should be more or less likely after a heads than after a tails. When $A$ and $B$ are independent, then conditioning on one does nothing. 
 
-$$\mathbb{P}(A \ mid B) = \mathbb{P}(A) \;\;\; A,B \text{ independent}$$
+$$\mathbb{P}(A \mid B) = \mathbb{P}(A) \;\;\; A,B \text{ independent}$$
 
-$A$ and $B$ are dependent when $\mathbb{P}(A \ mid B) \neq \mathbb{P}(A)$. Dependence can arise even if there's no causal relationship or explicit coordination. For example, let $A$ be the event where Mayor Adams carries an umbrella and let $B$ be the event where I carry an umbrella. There's some indirect coordination involved in our behavior: 
+$A$ and $B$ are dependent when $\mathbb{P}(A \mid B) \neq \mathbb{P}(A)$. Dependence can arise even if there's no causal relationship or explicit coordination. For example, let $A$ be the event where Mayor Adams carries an umbrella and let $B$ be the event where I carry an umbrella. There's some indirect coordination involved in our behavior: 
 
 1. We both live in NYC.
 2. We both experience and observe the same weather.
@@ -139,10 +139,89 @@ If Mayor Adams wins the Powerball after guessing the numbers correctly, that is 
 
 Draws made with replacement are independent. The box never changes, so there is no way the outcome of the first draw can impact sequential draws. Draws made without replacement are dependent because the box changes and it changes depending on the previous outcomes. 
 
+## Addition Rule ($A$ or $B$)
+
+**Mututally exclusive** things when they cannot occur together. In a set diagram, the sets will have no overlap. You cannot both eath your cake today and have it for tomorrow. This is actually a special case of dependence. 
+
+When $A$ and $B$ are mutually exclusive, the chance that $A$ or $B$ will occur is the sum of their individual probabilities. This is the **addition rule for mutually exclusive things**. 
+
+$$\mathbb{P}(A \text{ or } B) = \mathbb{P}(A) +  \mathbb{P}(B).$$
+
+If $\mathbb{P}(A) = 0.5$ and $\mathbb{P}(B) = 0.6$, can they be mutually exclusive? 
+
+```{dropdown} Can they be mutually exclusive?
+No, because that would mean $\mathbb{P}(A \text{ or } B) = 1.1$, but probabilities cannot exceed 1. 
+```
+
+When two things are not mutually exclusive, summing the probabilities double counts their overlap. 
+
+## Listing the Ways
+
+Many problems can be solved by a brute force routine: list the ways. 
+
+
+**Example 1**: You flip a fair coin three times. What is the probability of the sequence $HHH$? 
+
+This can be solved by multiplication. The probability is $\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}$. But the brute force method of listing the ways helps show where the denominator comes from: there are eight possible sequences when you flip a coin three times. 
+
+Next, listing the ways is more natural than trying to apply the general multiplication rule in this example of dependence. 
+
+**Example 2**: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by a heads. What is the probability of the sequence $HTH$? 
+
+Take caution. Just because a sequence is one of four possibilities, that sequence won't necessarily have chance 25%. You must be confident that each sequence is equally first. For example, what is the chance of the sequence $HH$ if a coin is weighted to come up heads with chance 90%. The chance is 81%. 
+
+**Example 3**: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by heads or tails with equal chance. Suppose you just flipped a tails. Show the possible sequences are not equally likely. 
+
+
+```{dropdown} Trick coin
+The possible outcomes are $HTH$, $HTT$, $THT$, $TTH$, and $TTT$.
+
+Half of the time, the first flip is $H$. Only two sequences start with $H$. One of the remaining three sequences must also occur with chance 50%. Therefore, the five sequences above cannot be equally likely. 
+```
+
+
+Finally, here's an example involving a conditional probability where listing the ways is one of the best ways to solve the problem. 
+
+**Example 3**: You're hunting for treasure at sea. You don't know North from South, but you have a treasure map indicating:
+
+* Two of five islands on a circle contain treasure. 
+* The two treasure-bearing islands are adjacent. 
+
+```{figure} images/tikz/islandsLabeled.svg
+---
+width: 52%
+name: islandsLabeled
+---
+A treasure map showing two treasure-bearing islands. 
+```
+
+You search an island and find no treasure. Suppose there are two sea currents you can follow:
+
+
+1. A counter-clockwise current that takes you to the next island. 
+2. A random current that takes you to any of the five islands with equal chance (possibly repeating the initial island).
+
+Which strategy is best for maximizing the chance of finding treasure on the next island?   
+```{dropdown} Treasure Hunt 
+
+Listing the ways:
+
+The first island must either be 3, 4, or 5. Following the counter-clockwise current, the next must be either 4, 5, or 1. These contain no treasure, no treasure, and treasure, respectively. That results in a 33% chance of finding treasure on the next island. 
+
+If we follow the random current. Each island is equally likely. Two of the five contain treasure, so there is a 40% chance of finding treasure. It's better to steer into the random current. 
+
+```
 
 
 
 ## Exercises 
+
+```{exercise-start}
+:label: battleship
+```
+Alice is a [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) grandmaster. Her secret is that if she lands a hit on spot B2, she will follow that up with B3 instead of a random spot like E12. Explain why this is a good strategy using the language of independence and dependence.   
+```{exercise-end}
+```
 
 ```{exercise-start}
 :label: carnival
@@ -171,6 +250,18 @@ The carnival box.
 4. A player can pay one cent to change the rules so they can guess the next number after each draw instead of guessing all numbers at the beginning. Is this worth it?
 ```{exercise-end}
 ```
+
+```{exercise-start}
+:label: conditional
+```
+Let $A$ and $B$ be independent. Which of these sums is equal to one? What if they are not independent? 
+
+* $\mathbb{P}(A \mid B) + \mathbb{P}(A \mid \text{not }B)$
+* $\mathbb{P}(A \mid B) + \mathbb{P}(\text{not }A \mid B)$  
+```{exercise-end}
+```
+
+
 
 ```{exercise-start}
 :label: linda 
