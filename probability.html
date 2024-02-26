@@ -425,8 +425,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional Probability</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-mulitplication-rule">General Mulitplication Rule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-mulitplication-rule-a-and-b">General Mulitplication Rule (<span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-rule-a-or-b">Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-the-ways">Listing the Ways</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
@@ -444,7 +446,7 @@ document.write(`
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
-<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 13</p></li>
+<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 13, 14</p></li>
 </ul>
 </div>
 <section id="probabilities">
@@ -518,8 +520,8 @@ document.write(`
 <a class="reference internal image-reference" href="_images/boxMultChoiceNoA.svg"><img alt="_images/boxMultChoiceNoA.svg" height="35px" src="_images/boxMultChoiceNoA.svg" /></a>
 </figure>
 </section>
-<section id="general-mulitplication-rule">
-<h2>General Mulitplication Rule<a class="headerlink" href="#general-mulitplication-rule" title="Permalink to this heading">#</a></h2>
+<section id="general-mulitplication-rule-a-and-b">
+<h2>General Mulitplication Rule (<span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>)<a class="headerlink" href="#general-mulitplication-rule-a-and-b" title="Permalink to this heading">#</a></h2>
 <p>The <strong>general multiplication rule</strong> is</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(A \textit{ and } B) = \mathbb{P}(A \mid B)\times \mathbb{P}(B).\]</div>
@@ -540,22 +542,105 @@ document.write(`
 <p>If Mayor Adams wins the Powerball after guessing the numbers correctly, that is probability independent of whether or not I win the Powerball on the same day. For these to be dependent, it would have to be that our numbers are somehow connected. Maybe if we read the same horoscope and find our lucky numbers there, our wins could be dependent.</p>
 <p>Draws made with replacement are independent. The box never changes, so there is no way the outcome of the first draw can impact sequential draws. Draws made without replacement are dependent because the box changes and it changes depending on the previous outcomes.</p>
 </section>
+<section id="addition-rule-a-or-b">
+<h2>Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)<a class="headerlink" href="#addition-rule-a-or-b" title="Permalink to this heading">#</a></h2>
+<p><strong>Mututally exclusive</strong> things when they cannot occur together. In a set diagram, the sets will have no overlap. You cannot both eath your cake today and have it for tomorrow. This is actually a special case of dependence.</p>
+<p>When <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are mutually exclusive, the chance that <span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span> will occur is the sum of their individual probabilities. This is the <strong>addition rule for mutually exclusive things</strong>.</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(A \text{ or } B) = \mathbb{P}(A) +  \mathbb{P}(B).\]</div>
+<p>If <span class="math notranslate nohighlight">\(\mathbb{P}(A) = 0.5\)</span> and <span class="math notranslate nohighlight">\(\mathbb{P}(B) = 0.6\)</span>, can they be mutually exclusive?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Can they be mutually exclusive?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">No, because that would mean <span class="math notranslate nohighlight">\(\mathbb{P}(A \text{ or } B) = 1.1\)</span>, but probabilities cannot exceed 1.</p>
+</div>
+</details><p>When two things are not mutually exclusive, summing the probabilities double counts their overlap.</p>
+</section>
+<section id="listing-the-ways">
+<h2>Listing the Ways<a class="headerlink" href="#listing-the-ways" title="Permalink to this heading">#</a></h2>
+<p>Many problems can be solved by a brute force routine: list the ways.</p>
+<p><strong>Example 1</strong>: You flip a fair coin three times. What is the probability of the sequence <span class="math notranslate nohighlight">\(HHH\)</span>?</p>
+<p>This can be solved by multiplication. The probability is <span class="math notranslate nohighlight">\(\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}\)</span>. But the brute force method of listing the ways helps show where the denominator comes from: there are eight possible sequences when you flip a coin three times.</p>
+<p>Next, listing the ways is more natural than trying to apply the general multiplication rule in this example of dependence.</p>
+<p><strong>Example 2</strong>: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by a heads. The first flip is equally likely to be heads or tails. What is the probability of the sequence <span class="math notranslate nohighlight">\(HTH\)</span>?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The possible outcomes are <span class="math notranslate nohighlight">\(HTH\)</span>, <span class="math notranslate nohighlight">\(THT\)</span>. The chances are both 50%.</p>
+</div>
+</details><p>Take caution. Just because a sequence is one of four possibilities, that sequence won’t necessarily have chance 25%. You must be confident that each sequence is equally first. For example, what is the chance of the sequence <span class="math notranslate nohighlight">\(HH\)</span> if a coin is weighted to come up heads with chance 90%. The chance is 81%.</p>
+<p><strong>Example 3</strong>: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by heads or tails with equal chance. Suppose you just flipped a tails. Show the possible sequences are not equally likely.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 3<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The possible outcomes are <span class="math notranslate nohighlight">\(HTH\)</span>, <span class="math notranslate nohighlight">\(HTT\)</span>, <span class="math notranslate nohighlight">\(THT\)</span>, <span class="math notranslate nohighlight">\(TTH\)</span>, and <span class="math notranslate nohighlight">\(TTT\)</span>.</p>
+<p class="sd-card-text">Half of the time, the first flip is <span class="math notranslate nohighlight">\(H\)</span>. Only two sequences start with <span class="math notranslate nohighlight">\(H\)</span>. One of the remaining three sequences must also occur with chance 50%. Therefore, the five sequences above cannot be equally likely.</p>
+</div>
+</details><p>Finally, here’s an example involving a conditional probability where listing the ways is one of the best ways to solve the problem.</p>
+<p><strong>Example 3</strong>: You’re hunting for treasure at sea. You don’t know North from South, but you have a treasure map indicating:</p>
+<ul class="simple">
+<li><p>Two of five islands on a circle contain treasure.</p></li>
+<li><p>The two treasure-bearing islands are adjacent.</p></li>
+</ul>
+<figure class="align-default" id="islandslabeled">
+<a class="reference internal image-reference" href="_images/islandsLabeled.svg"><img alt="_images/islandsLabeled.svg" src="_images/islandsLabeled.svg" width="52%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">A treasure map showing two treasure-bearing islands.</span><a class="headerlink" href="#islandslabeled" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You search an island and find no treasure. Suppose there are two sea currents you can follow:</p>
+<ol class="arabic simple">
+<li><p>A counter-clockwise current that takes you to the next island.</p></li>
+<li><p>A random current that takes you to any of the five islands with equal chance (possibly repeating the initial island).</p></li>
+</ol>
+<p>Which strategy is best for maximizing the chance of finding treasure on the next island?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Treasure Hunt <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Listing the ways:</p>
+<p class="sd-card-text">The first island must either be 3, 4, or 5. Following the counter-clockwise current, the next must be either 4, 5, or 1. These contain no treasure, no treasure, and treasure, respectively. That results in a 33% chance of finding treasure on the next island.</p>
+<p class="sd-card-text">If we follow the random current. Each island is equally likely. Two of the five contain treasure, so there is a 40% chance of finding treasure. It’s better to steer into the random current.</p>
+</div>
+</details></section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="carnival">
+<div class="exercise admonition" id="battleship">
 
 <p class="admonition-title"><span class="caption-number">Exercise 26 </span></p>
 <section id="exercise-content">
+<p>Alice is a <a class="reference external" href="https://en.wikipedia.org/wiki/Battleship_(game)">Battleship</a> grandmaster. Her secret is that if she lands a hit on spot B2, she will follow that up with B3 instead of a random spot like E12. Explain why this is a good strategy using the language of independence and dependence.</p>
+</section>
+</div>
+<div class="exercise admonition" id="carnival">
+
+<p class="admonition-title"><span class="caption-number">Exercise 27 </span></p>
+<section id="exercise-content">
 <p>A carnival game is done according to the rules:</p>
 <ul class="simple">
-<li><p>Three tickets are drawn from the box in <a class="reference internal" href="#box123"><span class="std std-numref">Fig. 38</span></a>.</p></li>
+<li><p>Three tickets are drawn from the box in <a class="reference internal" href="#box123"><span class="std std-numref">Fig. 39</span></a>.</p></li>
 <li><p>A player guesses the outcome prior to any draws being made. They win if they guess what numbers are drawn in the correct order.</p></li>
 <li><p>The player can choose if the draws are done with or without replacement.</p></li>
 </ul>
 <figure class="align-default" id="box123">
 <a class="reference internal image-reference" href="_images/box123.svg"><img alt="_images/box123.svg" height="35px" src="_images/box123.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 38 </span><span class="caption-text">The carnival box.</span><a class="headerlink" href="#box123" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">The carnival box.</span><a class="headerlink" href="#box123" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple">
@@ -566,9 +651,20 @@ document.write(`
 </ol>
 </section>
 </div>
+<div class="exercise admonition" id="conditional">
+
+<p class="admonition-title"><span class="caption-number">Exercise 28 </span></p>
+<section id="exercise-content">
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be independent. Which of these sums is equal to one? What if they are not independent?</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B) + \mathbb{P}(A \mid \text{not }B)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B) + \mathbb{P}(\text{not }A \mid B)\)</span></p></li>
+</ul>
+</section>
+</div>
 <div class="exercise admonition" id="linda">
 
-<p class="admonition-title"><span class="caption-number">Exercise 27 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 29 </span></p>
 <section id="exercise-content">
 <p>(From <span id="id5">[<a class="reference internal" href="bibliography.html#id27" title="Amos Tversky and Daniel Kahneman. Extensional versus intuitive reasoning: the conjunction fallacy in probability judgment. Psychological review, 90(4):293, 1983.">TK83</a>]</span>) Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations. Which is more probable?</p>
 <ul class="simple">
@@ -651,8 +747,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional Probability</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-mulitplication-rule">General Mulitplication Rule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-mulitplication-rule-a-and-b">General Mulitplication Rule (<span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-rule-a-or-b">Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-the-ways">Listing the Ways</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
