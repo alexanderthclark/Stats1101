@@ -166,14 +166,18 @@ This can be solved by multiplication. The probability is $\frac{1}{2} \times \fr
 
 Next, listing the ways is more natural than trying to apply the general multiplication rule in this example of dependence. 
 
-**Example 2**: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by a heads. What is the probability of the sequence $HTH$? 
+**Example 2**: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by a heads. The first flip is equally likely to be heads or tails. What is the probability of the sequence $HTH$? 
+
+```{dropdown} Example 2
+The possible outcomes are $HTH$, $THT$. The chances are both 50%. 
+```
 
 Take caution. Just because a sequence is one of four possibilities, that sequence won't necessarily have chance 25%. You must be confident that each sequence is equally first. For example, what is the chance of the sequence $HH$ if a coin is weighted to come up heads with chance 90%. The chance is 81%. 
 
 **Example 3**: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by heads or tails with equal chance. Suppose you just flipped a tails. Show the possible sequences are not equally likely. 
 
 
-```{dropdown} Trick coin
+```{dropdown} Example 3
 The possible outcomes are $HTH$, $HTT$, $THT$, $TTH$, and $TTT$.
 
 Half of the time, the first flip is $H$. Only two sequences start with $H$. One of the remaining three sequences must also occur with chance 50%. Therefore, the five sequences above cannot be equally likely. 
@@ -210,6 +214,35 @@ The first island must either be 3, 4, or 5. Following the counter-clockwise curr
 
 If we follow the random current. Each island is equally likely. Two of the five contain treasure, so there is a 40% chance of finding treasure. It's better to steer into the random current. 
 
+```
+
+## Binomial Formula
+
+Better than listing the ways and then counting is applying (and ideally understanding) a formula.
+
+Take the example of coin flipping. How often will three coin flips come up with just one heads? For a fair coin, this will happen with probability $\frac{3}{8}$. Why? There are eight outcomes of equal chance and three of those outcomes include just one heads. Before, we arrived at knowing there were three ways to get a sequence of one heads and two tails by simply listing the ways. We can instead use the **binomial coefficient**, written $\binom{n}{k}$. 
+
+The binomial coefficient says how many ways you can choose $k$ elements from $n$ choices if the order doesn't matter. 
+
+* How many ways can you get one heads from three coin flips? $n=3, k=1$, $\binom{3}{1}=3$.
+
+* If three people are in the Glee Club and we are choosing one as the president, there are $\binom{3}{1}=3$ three ways to do that. 
+
+* If all three members of the Glee Club want to be co-president (to increase their chance of admission to Columbia), then there is only one way to do that. There is only one way to choose three elements from a group of three, $\binom{3}{3}=1$.
+
+
+These **binomial coefficient** is calculated
+
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}.$$
+
+You can also find it using Pascal's Triangle. The triangle is arranged in horizontal levels corresponding to $n$. Then count over to the $k^\text{th}$ item in the row. Just remember the row starts at $k=0$, because it's possible to flip $k=0$ heads out of $n$ flips.
+
+```{figure} images/tikz/pascaltri.svg
+---
+width: 52%
+name: pascaltri
+---
+Pascal's Triangle
 ```
 
 
