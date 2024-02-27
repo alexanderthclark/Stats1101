@@ -216,6 +216,35 @@ If we follow the random current. Each island is equally likely. Two of the five 
 
 ```
 
+## Binomial Formula
+
+Better than listing the ways and then counting is applying (and ideally understanding) a formula.
+
+Take the example of coin flipping. How often will three coin flips come up with just one heads? For a fair coin, this will happen with probability $\frac{3}{8}$. Why? There are eight outcomes of equal chance and three of those outcomes include just one heads. Before, we arrived at knowing there were three ways to get a sequence of one heads and two tails by simply listing the ways. We can instead use the **binomial coefficient**, written $\binom{n}{k}$. 
+
+The binomial coefficient says how many ways you can choose $k$ elements from $n$ choices if the order doesn't matter. 
+
+* How many ways can you get one heads from three coin flips? $n=3, k=1$, $\binom{3}{1}=3$.
+
+* If three people are in the Glee Club and we are choosing one as the president, there are $\binom{3}{1}=3$ three ways to do that. 
+
+* If all three members of the Glee Club want to be co-president (to increase their chance of admission to Columbia), then there is only one way to do that. There is only one way to choose three elements from a group of three, $\binom{3}{3}=1$.
+
+
+These **binomial coefficient** is calculated
+
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}.$$
+
+You can also find it using Pascal's Triangle. The triangle is arranged in horizontal levels corresponding to $n$. Then count over to the $k^\text{th}$ item in the row. Just remember the row starts at $k=0$, because it's possible to flip $k=0$ heads out of $n$ flips.
+
+```{figure} images/tikz/pascaltri.svg
+---
+width: 52%
+name: pascaltri
+---
+Pascal's Triangle
+```
+
 
 
 ## Exercises 

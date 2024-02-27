@@ -427,6 +427,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-rule-a-or-b">Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-the-ways">Listing the Ways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binomial-formula">Binomial Formula</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
@@ -564,12 +565,21 @@ Can they be mutually exclusive?<div class="sd-summary-down docutils">
 <p><strong>Example 1</strong>: You flip a fair coin three times. What is the probability of the sequence <span class="math notranslate nohighlight">\(HHH\)</span>?</p>
 <p>This can be solved by multiplication. The probability is <span class="math notranslate nohighlight">\(\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}\)</span>. But the brute force method of listing the ways helps show where the denominator comes from: there are eight possible sequences when you flip a coin three times.</p>
 <p>Next, listing the ways is more natural than trying to apply the general multiplication rule in this example of dependence.</p>
-<p><strong>Example 2</strong>: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by a heads. What is the probability of the sequence <span class="math notranslate nohighlight">\(HTH\)</span>?</p>
-<p>Take caution. Just because a sequence is one of four possibilities, that sequence won’t necessarily have chance 25%. You must be confident that each sequence is equally first. For example, what is the chance of the sequence <span class="math notranslate nohighlight">\(HH\)</span> if a coin is weighted to come up heads with chance 90%. The chance is 81%.</p>
+<p><strong>Example 2</strong>: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by a heads. The first flip is equally likely to be heads or tails. What is the probability of the sequence <span class="math notranslate nohighlight">\(HTH\)</span>?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The possible outcomes are <span class="math notranslate nohighlight">\(HTH\)</span>, <span class="math notranslate nohighlight">\(THT\)</span>. The chances are both 50%.</p>
+</div>
+</details><p>Take caution. Just because a sequence is one of four possibilities, that sequence won’t necessarily have chance 25%. You must be confident that each sequence is equally first. For example, what is the chance of the sequence <span class="math notranslate nohighlight">\(HH\)</span> if a coin is weighted to come up heads with chance 90%. The chance is 81%.</p>
 <p><strong>Example 3</strong>: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by heads or tails with equal chance. Suppose you just flipped a tails. Show the possible sequences are not equally likely.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Trick coin<div class="sd-summary-down docutils">
+Example 3<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -607,6 +617,27 @@ Treasure Hunt <div class="sd-summary-down docutils">
 <p class="sd-card-text">If we follow the random current. Each island is equally likely. Two of the five contain treasure, so there is a 40% chance of finding treasure. It’s better to steer into the random current.</p>
 </div>
 </details></section>
+<section id="binomial-formula">
+<h2>Binomial Formula<a class="headerlink" href="#binomial-formula" title="Permalink to this heading">#</a></h2>
+<p>Better than listing the ways and then counting is applying (and ideally understanding) a formula.</p>
+<p>Take the example of coin flipping. How often will three coin flips come up with just one heads? For a fair coin, this will happen with probability <span class="math notranslate nohighlight">\(\frac{3}{8}\)</span>. Why? There are eight outcomes of equal chance and three of those outcomes include just one heads. Before, we arrived at knowing there were three ways to get a sequence of one heads and two tails by simply listing the ways. We can instead use the <strong>binomial coefficient</strong>, written <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span>.</p>
+<p>The binomial coefficient says how many ways you can choose <span class="math notranslate nohighlight">\(k\)</span> elements from <span class="math notranslate nohighlight">\(n\)</span> choices if the order doesn’t matter.</p>
+<ul class="simple">
+<li><p>How many ways can you get one heads from three coin flips? <span class="math notranslate nohighlight">\(n=3, k=1\)</span>, <span class="math notranslate nohighlight">\(\binom{3}{1}=3\)</span>.</p></li>
+<li><p>If three people are in the Glee Club and we are choosing one as the president, there are <span class="math notranslate nohighlight">\(\binom{3}{1}=3\)</span> three ways to do that.</p></li>
+<li><p>If all three members of the Glee Club want to be co-president (to increase their chance of admission to Columbia), then there is only one way to do that. There is only one way to choose three elements from a group of three, <span class="math notranslate nohighlight">\(\binom{3}{3}=1\)</span>.</p></li>
+</ul>
+<p>These <strong>binomial coefficient</strong> is calculated</p>
+<div class="math notranslate nohighlight">
+\[\binom{n}{k} = \frac{n!}{k!(n-k)!}.\]</div>
+<p>You can also find it using Pascal’s Triangle. The triangle is arranged in horizontal levels corresponding to <span class="math notranslate nohighlight">\(n\)</span>. Then count over to the <span class="math notranslate nohighlight">\(k^\text{th}\)</span> item in the row. Just remember the row starts at <span class="math notranslate nohighlight">\(k=0\)</span>, because it’s possible to flip <span class="math notranslate nohighlight">\(k=0\)</span> heads out of <span class="math notranslate nohighlight">\(n\)</span> flips.</p>
+<figure class="align-default" id="pascaltri">
+<a class="reference internal image-reference" href="_images/pascaltri.svg"><img alt="_images/pascaltri.svg" src="_images/pascaltri.svg" width="52%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Pascal’s Triangle</span><a class="headerlink" href="#pascaltri" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="battleship">
@@ -622,14 +653,14 @@ Treasure Hunt <div class="sd-summary-down docutils">
 <section id="exercise-content">
 <p>A carnival game is done according to the rules:</p>
 <ul class="simple">
-<li><p>Three tickets are drawn from the box in <a class="reference internal" href="#box123"><span class="std std-numref">Fig. 39</span></a>.</p></li>
+<li><p>Three tickets are drawn from the box in <a class="reference internal" href="#box123"><span class="std std-numref">Fig. 40</span></a>.</p></li>
 <li><p>A player guesses the outcome prior to any draws being made. They win if they guess what numbers are drawn in the correct order.</p></li>
 <li><p>The player can choose if the draws are done with or without replacement.</p></li>
 </ul>
 <figure class="align-default" id="box123">
 <a class="reference internal image-reference" href="_images/box123.svg"><img alt="_images/box123.svg" height="35px" src="_images/box123.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 39 </span><span class="caption-text">The carnival box.</span><a class="headerlink" href="#box123" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">The carnival box.</span><a class="headerlink" href="#box123" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple">
@@ -739,6 +770,7 @@ Treasure Hunt <div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-rule-a-or-b">Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-the-ways">Listing the Ways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binomial-formula">Binomial Formula</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
