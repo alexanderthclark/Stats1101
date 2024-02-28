@@ -168,6 +168,10 @@ Eddie Montgomery sings that he descends from outlaw and boozers. Translating int
 
 But, strictly speaking, the lyrics are not clear. With enough boozers, it seems likely enough that at least one is an outlaw. If that is the case, these labels are not mutually exclusive and the addition rule does not apply. $\mathbb{P}(\text{outlaw or boozer})$ could be between $\frac{1}{2}$ and 1. 
 
+### Expanding $A$
+
+Another application of the addition rule is in expanding one probability into two. Instead of $\mathbb{P}(A)$, you might prefer to work with the equivalent probability of $\mathbb{P}(A \text{ and }B) + \mathbb{P}(A \text{ and not }B) $. This kind of addition works because $A \text{ and }B$ is mutually exclusive of $A \text{ and not }B$. Try solving {numref}`linda` by expanding the probability that Linda is a bank teller. 
+
 
 
 ## Listing the Ways

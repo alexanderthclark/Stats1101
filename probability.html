@@ -428,7 +428,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional Probability</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mulitplication-rule-a-and-b">Mulitplication Rule (<span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-rule-a-or-b">Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-rule-a-or-b">Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expanding-a">Expanding <span class="math notranslate nohighlight">\(A\)</span></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-the-ways">Listing the Ways</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binomial-formula">Binomial Formula</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#binomial-coefficient-calculator">Binomial Coefficient Calculator</a></li>
@@ -576,6 +579,10 @@ My bloodline made me who I am</p>
 </div></blockquote>
 <p>Eddie Montgomery sings that he descends from outlaw and boozers. Translating into probability, <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw})= \mathbb{P}(\text{boozer}) = \frac{1}{2}\)</span> for Eddie’s ancestors. So what is <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})\)</span>? I read the lyrics as half of the ancestors are outlaws and the <em>other</em> half are boozers. In that case, these labels are mutually exclusive and <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})=1\)</span> and <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw and boozer})=0\)</span>.</p>
 <p>But, strictly speaking, the lyrics are not clear. With enough boozers, it seems likely enough that at least one is an outlaw. If that is the case, these labels are not mutually exclusive and the addition rule does not apply. <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})\)</span> could be between <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> and 1.</p>
+<section id="expanding-a">
+<h3>Expanding <span class="math notranslate nohighlight">\(A\)</span><a class="headerlink" href="#expanding-a" title="Permalink to this heading">#</a></h3>
+<p>Another application of the addition rule is in expanding one probability into two. Instead of <span class="math notranslate nohighlight">\(\mathbb{P}(A)\)</span>, you might prefer to work with the equivalent probability of <span class="math notranslate nohighlight">\(\mathbb{P}(A \text{ and }B) + \mathbb{P}(A \text{ and not }B) \)</span>. This kind of addition works because <span class="math notranslate nohighlight">\(A \text{ and }B\)</span> is mutually exclusive of <span class="math notranslate nohighlight">\(A \text{ and not }B\)</span>. Try solving <a class="reference internal" href="#linda"><span class="std std-numref">Exercise 29</span></a> by expanding the probability that Linda is a bank teller.</p>
+</section>
 </section>
 <section id="listing-the-ways">
 <h2>Listing the Ways<a class="headerlink" href="#listing-the-ways" title="Permalink to this heading">#</a></h2>
@@ -888,7 +895,10 @@ Three or four heads<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional Probability</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mulitplication-rule-a-and-b">Mulitplication Rule (<span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-rule-a-or-b">Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-rule-a-or-b">Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expanding-a">Expanding <span class="math notranslate nohighlight">\(A\)</span></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-the-ways">Listing the Ways</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binomial-formula">Binomial Formula</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#binomial-coefficient-calculator">Binomial Coefficient Calculator</a></li>
