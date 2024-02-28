@@ -3,7 +3,7 @@
 
 ```{admonition} Important Readings
 :class: seealso
-- {cite}`freedman2007statistics`, Chapter 13, 14
+- {cite}`freedman2007statistics`, Chapters 13, 14, 15
 ```
 
 ## Probabilities 
