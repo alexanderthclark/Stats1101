@@ -160,7 +160,7 @@ When two things are not mutually exclusive, summing the probabilities double cou
 > I come from a long line of losers  
 > Half outlaw, half boozer  
 > I was born with a shot glass in my hand  
-> Well, I'm part hippie, a little red neck  
+> Well, I'm part hippie, a little redneck  
 > I'm always a suspect  
 > My bloodline made me who I am  
 
