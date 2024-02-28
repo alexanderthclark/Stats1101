@@ -155,6 +155,19 @@ No, because that would mean $\mathbb{P}(A \text{ or } B) = 1.1$, but probabiliti
 
 When two things are not mutually exclusive, summing the probabilities double counts their overlap. 
 
+**Example**: Let's take a look at these lyrics from the song [*Long Line of Losers*](https://www.youtube.com/watch?v=a9cpkvu0cPY) by Montgomery Gentry. 
+
+> I come from a long line of losers  
+> Half outlaw, half boozer  
+> I was born with a shot glass in my hand  
+> Well, I'm part hippie, a little red neck  
+> I'm always a suspect  
+> My bloodline made me who I am  
+
+Eddie Montgomery sings that he descends from outlaw and boozers. Translating into probability, $\mathbb{P}(\text{outlaw})= \mathbb{P}(\text{boozer}) = \frac{1}{2}$ for Eddie's ancestors. So what is \mathbb{P}(\text{outlaw or boozer})? I read the lyrics as half of the ancestors are outlaws and the *other* half are boozers. In that case, these labels are mutually exclusive and $\mathbb{P}(\text{outlaw or boozer})=1$ and $\mathbb{P}(\text{outlaw and boozer})=0$. But, strictly speaking, the lyrics are not clear. With enough boozers, it seems likely enough that at least one is an outlaw. If that is the case, these labels are not mutually exclusive and the addition rule does not apply. 
+
+
+
 ## Listing the Ways
 
 Many problems can be solved by a brute force routine: list the ways. 
