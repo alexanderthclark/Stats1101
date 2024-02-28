@@ -60,3 +60,25 @@ Bayes' Theorem is used whenever we want to solve for what is on the left side an
 
 **Example**: A medical test gives a false positive 1% of the time and a false negative 0% of the time. The test is for a rare condition. Prior to testing, the probability that a randomly chosen individual has the condition is 0.5%. What is the probability of having the condition, given a positive test?  
 
+First, we write down what we are given. From the false positive information,
+
+$$ \mathbb{P}(\text{positive} | \text{no condition}) = 0.01, \quad \mathbb{P}(\text{negative} | \text{no condition}) = 0.99. $$
+
+From the false negative information, 
+
+$$ \mathbb{P}(\text{negative} | \text{condition}) = 0, \quad \mathbb{P}(\text{positive} | \text{condition}) = 1. $$
+
+And we have a prior probability $\mathbb{P}(\text{condition})= 0.005$
+
+However, none of this tells us the main quantity of interest, $\mathbb{P}(\text{condition} | \text{positive})$. We need Bayes's help.
+
+$$ \mathbb{P}(\text{condition} | \text{positive}) = \frac{\mathbb{P}(\text{positive} | \text{condition}) \mathbb{P}(\text{condition)}}{\mathbb{P}(\text{positive})} $$
+
+We substitute in the numerator and expand the denominator,
+
+$$ \mathbb{P}(\text{condition} | \text{positive}) = \frac{ 1 \times .005} {\mathbb{P}(\text{positive} | \text{condition}) \mathbb{P}(\text{condition}) + \mathbb{P}(\text{positive} | \text{no condition}) \mathbb{P}(\text{no condition})}. $$
+
+Now, we substitute for the denominator,
+
+$$ \mathbb{P}(\text{condition} | \text{positive}) = \frac{.005}{.005 + .00995} \approx \frac{1}{3}. $$
+
