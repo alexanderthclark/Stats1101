@@ -17,7 +17,7 @@ parts:
     - file: correlation
     - file: regression
     - file: probability
-    #- file: probability1
+    - file: bayes
     - file: bibliography
 
 #- caption: Solutions

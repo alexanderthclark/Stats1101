@@ -2,6 +2,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning, shapes.geometric}
 \usepackage{amsfonts}
+\usepackage{amsmath}
 \begin{document}
 
 \begin{tikzpicture}[->, grow=right, sloped,
@@ -22,9 +23,9 @@ level 4/.style={sibling distance=0.4cm,}]
                 node[below] {$\mathbb{P}(B \mid A)$} % Label below the edge
             }
             child {
-                node[end, label=right: {$B^C$}] {} % End node with label
+                node[end, label=right: {$\text{not } B$}] {} % End node with label
                 edge from parent
-                node[above] {$\mathbb{P}(B^C \mid A)$} % Label above the edge
+                node[above] {$\mathbb{P}(\text{not } B \mid A)$} % Label above the edge
                 node[below] {\scalebox{0.6}{$1-\mathbb{P}(B \mid A)$}} % Label below the edge
             }
             edge from parent 
@@ -32,21 +33,21 @@ level 4/.style={sibling distance=0.4cm,}]
             node[below] {$\mathbb{P}(A)$} % Label below the edge
     }
     child {
-        node[bag] {$A^C$} % Bag node
+        node[bag] {$\text{not } A$} % Bag node
             child {
                 node[end, label=right: {$B$}] {} % End node with label
                 edge from parent
                 node[above] {} % Label above the edge
-                node[below] {$\mathbb{P}(B \mid A^C)$} % Label below the edge
+                node[below] {$\mathbb{P}(B \mid \text{not } A)$} % Label below the edge
             }
             child {
-                node[end, label=right: {$B^C$}] {} % End node with label
+                node[end, label=right: {$\text{not } B$}] {} % End node with label
                 edge from parent
-                node[above] {$\mathbb{P}(B^C \mid A^C)$} % Label above the edge
-                node[below] {\scalebox{0.6}{$1-\mathbb{P}(B \mid A^C)$}} % Label below the edge
+                node[above] {$\mathbb{P}(\text{not } B \mid \text{not } A)$} % Label above the edge
+                node[below] {\scalebox{0.6}{$1-\mathbb{P}(B \mid \text{not } A)$}} % Label below the edge
             }
             edge from parent         
-            node[above] {$\mathbb{P}(A^C)$} % Label above the edge
+            node[above] {$\mathbb{P}(\text{not } A)$} % Label above the edge
             node[below] {\scalebox{0.6}{$1-\mathbb{P}(A)$}} % Label below the edge
     };
 \end{tikzpicture}
