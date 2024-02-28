@@ -3,7 +3,7 @@
 
 ```{admonition} Important Readings
 :class: seealso
-- {cite}`tijms2012understanding`, Chapter 6
+- {cite}`tijms2012understanding`, Chapter 6 (my advice is skip to 6.2 if you find the Monty Hall paradox too mind-bending of a place to start)
 - {cite}`strogatz2010chances`
 ```
 

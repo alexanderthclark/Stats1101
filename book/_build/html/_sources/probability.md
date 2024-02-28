@@ -113,7 +113,7 @@ name: boxMultChoiceNoA
 
 ```
 
-## General Mulitplication Rule ($A$ and $B$)
+## Mulitplication Rule ($A$ and $B$)
 
 The **general multiplication rule** is 
 
