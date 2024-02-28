@@ -563,6 +563,17 @@ Can they be mutually exclusive?<div class="sd-summary-down docutils">
 <p class="sd-card-text">No, because that would mean <span class="math notranslate nohighlight">\(\mathbb{P}(A \text{ or } B) = 1.1\)</span>, but probabilities cannot exceed 1.</p>
 </div>
 </details><p>When two things are not mutually exclusive, summing the probabilities double counts their overlap.</p>
+<p><strong>Example</strong>: Let’s take a look at these lyrics from the song <a class="reference external" href="https://www.youtube.com/watch?v=a9cpkvu0cPY"><em>Long Line of Losers</em></a> by Montgomery Gentry.</p>
+<blockquote>
+<div><p>I come from a long line of losers<br />
+Half outlaw, half boozer<br />
+I was born with a shot glass in my hand<br />
+Well, I’m part hippie, a little redneck<br />
+I’m always a suspect<br />
+My bloodline made me who I am</p>
+</div></blockquote>
+<p>Eddie Montgomery sings that he descends from outlaw and boozers. Translating into probability, <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw})= \mathbb{P}(\text{boozer}) = \frac{1}{2}\)</span> for Eddie’s ancestors. So what is <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})\)</span>? I read the lyrics as half of the ancestors are outlaws and the <em>other</em> half are boozers. In that case, these labels are mutually exclusive and <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})=1\)</span> and <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw and boozer})=0\)</span>.</p>
+<p>But, strictly speaking, the lyrics are not clear. With enough boozers, it seems likely enough that at least one is an outlaw. If that is the case, these labels are not mutually exclusive and the addition rule does not apply. <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})\)</span> could be between <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> and 1.</p>
 </section>
 <section id="listing-the-ways">
 <h2>Listing the Ways<a class="headerlink" href="#listing-the-ways" title="Permalink to this heading">#</a></h2>

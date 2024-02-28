@@ -39,4 +39,3 @@ Trees are especially helpful when the probability of a second event (like the le
 
 ## Bayes' Theorem
 
-See {cite}`strogatz2010chances`.
