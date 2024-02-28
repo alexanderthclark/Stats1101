@@ -424,3 +424,16 @@ What is the probability that, of 40 people, no two people share the same birthda
 ```{exercise-end}
 ```
 
+```{exercise-start}
+:label: glee 
+```
+Which of these is not found with a binomial coefficient $\binom{3}{2}$? 
+
+A. The number of ways you can have two co-presidents of a three-person Glee Club? 
+
+A. The number of ways you can have a President/Vice President duo of a three-person Glee Club? 
+
+
+```{exercise-end}
+```
+

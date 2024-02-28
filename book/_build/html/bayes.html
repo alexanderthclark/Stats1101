@@ -460,6 +460,19 @@ document.write(`
 </section>
 <section id="bayes-theorem">
 <h2>Bayes’ Theorem<a class="headerlink" href="#bayes-theorem" title="Permalink to this heading">#</a></h2>
+<p>Bayes’ Theorem (or Bayes’ Rule) rearranges the general multiplication rule.</p>
+<p>We know <span class="math notranslate nohighlight">\(\mathbb{P}(A\text{ and } B) = \mathbb{P}(A \mid B) \mathbb{P}(B)\)</span> and <span class="math notranslate nohighlight">\(\mathbb{P}(A\text{ and } B) = \mathbb{P}(B \mid A) \mathbb{P}(A)\)</span>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(A \mid B) \mathbb{P}(B) = \mathbb{P}(B \mid A) \mathbb{P}(A). \]</div>
+<p>Isolating the conditional probability on the left, we have \textbf{Bayes’ Theorem}, in at least one of its forms.</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(A \mid B) = \frac{\mathbb{P}(B \mid A) \mathbb{P}(A)}{\mathbb{P}(B)}.\]</div>
+<p>Note, we could rewrite this by combining the terms in the numerator or by by expanding the denominator. For the latter, the expansion uses the fact that <span class="math notranslate nohighlight">\(\mathbb{P}(B) = \mathbb{P}(B\text{ and }A) + \mathbb{P}(B\text{ and not }A)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(A \mid B)  = \frac{\mathbb{P}(A\text{ and }B)}{\mathbb{P}(B)} \]</div>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(A \mid B)  = \frac{\mathbb{P}(B \mid A) \mathbb{P}(A)}{\mathbb{P}(B\mid A) \mathbb{P}(A) + \mathbb{P}(B\mid \text{not } A) \mathbb{P}(\text{not }A)} \]</div>
+<p>Bayes’ Theorem is used whenever we want to solve for what is on the left side and what is on the right side is already known (in any of the three expressions above). This is useful, because often you’ll receive conditional probabilities that transpose the more interesting quantity, like in the following example.</p>
 </section>
 </section>
 

@@ -39,3 +39,22 @@ Trees are especially helpful when the probability of a second event (like the le
 
 ## Bayes' Theorem
 
+Bayes' Theorem (or Bayes' Rule) rearranges the general multiplication rule. 
+
+We know $\mathbb{P}(A\text{ and } B) = \mathbb{P}(A \mid B) \mathbb{P}(B)$ and $\mathbb{P}(A\text{ and } B) = \mathbb{P}(B \mid A) \mathbb{P}(A)$. Therefore,
+
+$$\mathbb{P}(A \mid B) \mathbb{P}(B) = \mathbb{P}(B \mid A) \mathbb{P}(A). $$
+
+Isolating the conditional probability on the left, we have \textbf{Bayes' Theorem}, in at least one of its forms.
+
+$$\mathbb{P}(A \mid B) = \frac{\mathbb{P}(B \mid A) \mathbb{P}(A)}{\mathbb{P}(B)}.$$
+
+Note, we could rewrite this by combining the terms in the numerator or by by expanding the denominator. For the latter, the expansion uses the fact that $\mathbb{P}(B) = \mathbb{P}(B\text{ and }A) + \mathbb{P}(B\text{ and not }A)$.
+
+ $$\mathbb{P}(A \mid B)  = \frac{\mathbb{P}(A\text{ and }B)}{\mathbb{P}(B)} $$
+ 
+ $$\mathbb{P}(A \mid B)  = \frac{\mathbb{P}(B \mid A) \mathbb{P}(A)}{\mathbb{P}(B\mid A) \mathbb{P}(A) + \mathbb{P}(B\mid \text{not } A) \mathbb{P}(\text{not }A)} $$
+
+
+Bayes' Theorem is used whenever we want to solve for what is on the left side and what is on the right side is already known (in any of the three expressions above). This is useful, because often you'll receive conditional probabilities that transpose the more interesting quantity, like in the following example. 
+
