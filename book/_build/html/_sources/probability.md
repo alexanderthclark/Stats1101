@@ -296,6 +296,31 @@ function binomialCoefficient(n, k) {
 }
 </script>
 
+<br>
+
+**Example**: (Simplified from [Data Colada 114](https://datacolada.org/114)) It is alleged that the result of a paper is fraudulent. Investigators flag 8 of 101 observations as fishy. An independent firm finds that 8 observations were likely tampered with. If both parties flag the same 8 observations, what is the probability that this would happen by random chance?
+
+```{dropdown} Fraud
+
+$$1 / \binom{101}{8}.$$
+
+The denominator is how many ways the investigators could flag eight observations. The numerator shows there is only one way the investigators could identify the same eight.
+
+```
+
+
+**Harder Example**: (Based on [Data Colada 114](https://datacolada.org/114)) It is alleged that the result of a paper is fraudulent. Investigators flag 8 of 101 observations as fishy. An independent firm finds that 11 observations were likely tampered with. If the original 8 are among the 11, what is the probability that this would happen by random chance?
+
+```{dropdown} Fraud (harder)
+
+This is about one in a billion, 
+
+$$\binom{11}{8} / \binom{101}{8}.$$
+
+The denominator is how many ways the investigators could flag 8 observations. The numerator is how many ways these 8 can be among the 11 found by the firm. 
+
+```
+
 
 ### Binomial Formula
 

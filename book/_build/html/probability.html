@@ -686,7 +686,33 @@ function binomialCoefficient(n, k) {
     return factorial(n) / (factorial(k) * factorial(n - k));
 }
 </script>
-</section>
+<br>
+<p><strong>Example</strong>: (Simplified from <a class="reference external" href="https://datacolada.org/114">Data Colada 114</a>) It is alleged that the result of a paper is fraudulent. Investigators flag 8 of 101 observations as fishy. An independent firm finds that 8 observations were likely tampered with. If both parties flag the same 8 observations, what is the probability that this would happen by random chance?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Fraud<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[1 / \binom{101}{8}.\]</div>
+<p class="sd-card-text">The denominator is how many ways the investigators could flag eight observations. The numerator shows there is only one way the investigators could identify the same eight.</p>
+</div>
+</details><p><strong>Harder Example</strong>: (Based on <a class="reference external" href="https://datacolada.org/114">Data Colada 114</a>) It is alleged that the result of a paper is fraudulent. Investigators flag 8 of 101 observations as fishy. An independent firm finds that 11 observations were likely tampered with. If the original 8 are among the 11, what is the probability that this would happen by random chance?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Fraud (harder)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is about one in a billion,</p>
+<div class="math notranslate nohighlight">
+\[\binom{11}{8} / \binom{101}{8}.\]</div>
+<p class="sd-card-text">The denominator is how many ways the investigators could flag 8 observations. The numerator is how many ways these 8 can be among the 11 found by the firm.</p>
+</div>
+</details></section>
 <section id="id5">
 <h3>Binomial Formula<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>The binomial coefficient is just a preliminary step toward the binomial formula. The <strong>binomial formula</strong> gives the probability that you will flip exactly <span class="math notranslate nohighlight">\(k\)</span> heads in <span class="math notranslate nohighlight">\(n\)</span> independent flips of a coin with a probability <span class="math notranslate nohighlight">\(p\)</span> of a single flip being heads (<span class="math notranslate nohighlight">\(p=0.5\)</span> for a fair coin). The formula is</p>
