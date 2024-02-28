@@ -164,7 +164,9 @@ When two things are not mutually exclusive, summing the probabilities double cou
 > I'm always a suspect  
 > My bloodline made me who I am  
 
-Eddie Montgomery sings that he descends from outlaw and boozers. Translating into probability, $\mathbb{P}(\text{outlaw})= \mathbb{P}(\text{boozer}) = \frac{1}{2}$ for Eddie's ancestors. So what is \mathbb{P}(\text{outlaw or boozer})? I read the lyrics as half of the ancestors are outlaws and the *other* half are boozers. In that case, these labels are mutually exclusive and $\mathbb{P}(\text{outlaw or boozer})=1$ and $\mathbb{P}(\text{outlaw and boozer})=0$. But, strictly speaking, the lyrics are not clear. With enough boozers, it seems likely enough that at least one is an outlaw. If that is the case, these labels are not mutually exclusive and the addition rule does not apply. 
+Eddie Montgomery sings that he descends from outlaw and boozers. Translating into probability, $\mathbb{P}(\text{outlaw})= \mathbb{P}(\text{boozer}) = \frac{1}{2}$ for Eddie's ancestors. So what is $\mathbb{P}(\text{outlaw or boozer})$? I read the lyrics as half of the ancestors are outlaws and the *other* half are boozers. In that case, these labels are mutually exclusive and $\mathbb{P}(\text{outlaw or boozer})=1$ and $\mathbb{P}(\text{outlaw and boozer})=0$. 
+
+But, strictly speaking, the lyrics are not clear. With enough boozers, it seems likely enough that at least one is an outlaw. If that is the case, these labels are not mutually exclusive and the addition rule does not apply. $\mathbb{P}(\text{outlaw or boozer})$ could be between $\frac{1}{2}$ and 1. 
 
 
 
