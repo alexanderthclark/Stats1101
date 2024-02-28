@@ -220,7 +220,7 @@ If we follow the random current. Each island is equally likely. Two of the five 
 
 Better than listing the ways and then counting is applying (and ideally understanding) a formula.
 
-Take the example of coin flipping. How often will three coin flips come up with just one heads? For a fair coin, this will happen with probability $\frac{3}{8}$. Why? There are eight outcomes of equal chance and three of those outcomes include just one heads. Before, we arrived at knowing there were three ways to get a sequence of one heads and two tails by simply listing the ways. We can instead use the **binomial coefficient**, written $\binom{n}{k}$. 
+Take the example of coin flipping. How often will three coin flips come up with just one heads? For a fair coin, this will happen with probability $\frac{3}{8}$. Why? There are eight outcomes of equal chance and three of those outcomes include just one heads. Before, we arrived at knowing there were three ways to get a sequence of one heads and two tails by simply listing the ways. We can instead use the **binomial coefficient**, sometimes written $\binom{n}{k}$. 
 
 The binomial coefficient says how many ways you can choose $k$ elements from $n$ choices if the order doesn't matter. 
 
@@ -245,6 +245,71 @@ name: pascaltri
 Pascal's Triangle
 ```
 
+### Binomial Coefficient Calculator
+
+For large enough values of $n$ and $k$, don't try to be a hero. Just use a calculator. 
+
+<div style="text-align: center;">
+    <label for="nValue">n: </label>
+    <input type="number" id="nValue" name="nValue" value="4" min="0">
+    <label for="kValue">k: </label>
+    <input type="number" id="kValue" name="kValue" value="2" min="0">
+    <button onclick="calculateBinomial()">Calculate</button>
+</div>
+<div id="result" style="text-align: center;"></div>
+
+<script>
+function calculateBinomial() {
+    var n = document.getElementById("nValue").value;
+    var k = document.getElementById("kValue").value;
+    var result = binomialCoefficient(n, k);
+    document.getElementById("result").innerHTML = "Result = " + result; // Removed "C(n, k) =" notation
+}
+
+function factorial(num) {
+    if (num < 0) 
+        return -1;
+    else if (num == 0) 
+        return 1;
+    else {
+        return (num * factorial(num - 1));
+    }
+}
+
+function binomialCoefficient(n, k) {
+    return factorial(n) / (factorial(k) * factorial(n - k));
+}
+</script>
+
+
+### Binomial Formula
+
+The binomial coefficient is just a preliminary step toward the binomial formula. The **binomial formula** gives the probability that you will flip exactly $k$ heads in $n$ independent flips of a coin with a probability $p$ of a single flip being heads ($p=0.5$ for a fair coin). The formula is 
+
+$$ \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}.$$
+
+Think of $p^k (1-p)^{n-k}$ as the probability of a sequence of $k$ heads followed by $n-k$ tails. The binomial coefficient in front then adjusts that probability to allow for all of the other ways to get $k$ heads–$n-k$ tails followed by $k$ heads for example. This only works for coin flips or similar processes where the individual trials are independent and the probability of a heads or some substitutable event of interest is the same from one trial to the next. These trial outcomes are said to be *independent and identically distributed*, or *iid*. 
+
+**Example** 
+A trick coin comes up heads with probability $p = \frac{2}{3}$. Out of four flips, what is the probability of two heads? 
+
+```{dropdown} Two heads
+
+$$ \binom{4}{2} p^2 (1-p)^2 = 6 \cdot \frac{4}{9} \cdot \frac{1}{9} = \frac{24}{81} = \frac{8}{27}$$
+
+```
+
+What is the probability of three or more heads? 
+
+```{dropdown} Three or four heads
+
+Three and four heads are mutually exclusive events, so we can sum probabilities, 
+
+$$ 4 \times p^3 (1-p)^1 +  1 \times p^4$$
+
+$$ 4\cdot \frac{8}{27}\cdot\frac{1}{3} + \frac{16}{81} = \frac{48}{81} = \frac{16}{27}.$$
+
+```
 
 
 ## Exercises 
@@ -295,7 +360,6 @@ Let $A$ and $B$ be independent. Which of these sums is equal to one? What if the
 ```
 
 
-
 ```{exercise-start}
 :label: linda 
 ```
@@ -306,3 +370,13 @@ Let $A$ and $B$ be independent. Which of these sums is equal to one? What if the
 
 ```{exercise-end}
 ```
+
+```{exercise-start}
+:label: bday 
+```
+(Use a calculator) Ignore leap day and assume that all birthdays are equally likely and independent. What is the probability that, of 365 people, nobody is born on June 1st? 
+
+What is the probability that, of 40 people, no two people share the same birthday?
+```{exercise-end}
+```
+
