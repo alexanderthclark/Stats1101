@@ -35,3 +35,7 @@ name: Qwordtree
 ---
 Trees are especially helpful when the probability of a second event (like the letter U) depends on the first event (the previous letter being Q or not Q).
 ```
+
+
+## Bayes' Theorem
+

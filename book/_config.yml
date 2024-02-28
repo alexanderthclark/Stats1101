@@ -46,6 +46,7 @@ sphinx:
   extra_extensions:
     - sphinx_exercise
     - sphinx_togglebutton
+    - sphinxcontrib.bibtex
 
 thebe:
   repository_url: "https://github.com/alexanderthclark/Stats1101"
