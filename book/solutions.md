@@ -148,6 +148,16 @@ Let A have an average of 1000 with an SD of 1. Let school B have an average of 1
 
 ## [Correlation](correlation)
 
+```{solution-start} corrMental
+:class: dropdown
+```
+
+No, the award is not merited because the lack of correlation does not demonstrate that there can be no causal effect. This is a chicken and egg problem like in the case of police funding and crime. 
+
+
+```{solution-end}
+```
+
 ## [Regression](regression)
 
 
@@ -157,6 +167,29 @@ Let A have an average of 1000 with an SD of 1. Let school B have an average of 1
 
 Researchers report both correlations and slopes, indicating that both can be interesting. If you want to know the effect size, use a slope. If you want to measure the strength of the relationship in terms of noisy vs perfectly linear, use a correlation coefficient.
 
+A single row will contain the incomes for two partnered individuals, but an $x,y$ pair must also be *ordered*. There can different ways to decide what the $x$ and $y$ columns are. If the data only contains opposite-sex couples, data can be arranged in $x,y$ pairs for (male, female) or (female, male). The $x,y$ pairs might also be ordered in other ways. One example is (primary earner, secondary earner) or (secondary earner, primary earner). Random ordering is also okay, but you might find a different slope or correlation coefficient and these must be interpreted based on the ordering. 
 
+
+```{solution-end}
+```
+
+## [Probability](probability)
+
+```{solution-start} conditional
+:class: dropdown
+```
+
+$\mathbb{P}(A \mid B) + \mathbb{P}(\text{not }A \mid B)=1$ for any $A,B$.
+
+```{solution-end}
+```
+
+
+```{solution-start} glee
+:class: dropdown
+```
+Binomial coefficients tell you how many ways you can select $k$ items from a list of $n$, but the $k$ items are not ordered. 
+
+The president/VP pair is ordered and the co-preseident pair is not. Only the co-president pairings are counted by $\binom{3}{2}$. There will be twice as many president/VP pairings because (Alice, Bob) and (Bob, Alice) are considered distinct. 
 ```{solution-end}
 ```
