@@ -19,7 +19,7 @@ Less obvious examples of natural experiments might not involve actual randomizat
 Below, Guido Imbens gives a roundabout explanation of natural experiments. 
 
 <div style="position: relative; width: 75%; overflow: hidden; margin: auto; padding-top: 42.1875%;">
-    <iframe src="https://www.youtube-nocookie.com/embed/uKlfqTz4-q4?si=0uTbGp4lLg6cQa_8&amp;start=15 
+    <iframe src="https://www.youtube-nocookie.com/embed/uKlfqTz4-q4?si=0uTbGp4lLg6cQa_8&amp;start=15"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen>
