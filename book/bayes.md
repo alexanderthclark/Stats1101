@@ -45,7 +45,7 @@ We know $\mathbb{P}(A\text{ and } B) = \mathbb{P}(A \mid B) \mathbb{P}(B)$ and $
 
 $$\mathbb{P}(A \mid B) \mathbb{P}(B) = \mathbb{P}(B \mid A) \mathbb{P}(A). $$
 
-Isolating the conditional probability on the left, we have \textbf{Bayes' Theorem}, in at least one of its forms.
+Isolating the conditional probability on the left, we have **Bayes' Theorem**, in at least one of its forms.
 
 $$\mathbb{P}(A \mid B) = \frac{\mathbb{P}(B \mid A) \mathbb{P}(A)}{\mathbb{P}(B)}.$$
 
