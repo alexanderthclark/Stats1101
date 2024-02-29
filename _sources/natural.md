@@ -12,7 +12,24 @@ The definition of an experiment specifies that the researcher manipulates the as
 
 As the name suggests, in a natural experiment, it is nature, broadly defined, who does the randomization. Imagine this policy-relevant comparison: do students who attend a charter school have better educational outcomes than students who don't? In the absence of randomization, it's easy to imagine ways this comparison can be confounded. Luckily, some state laws require that charter school seats are allocated by a random lottery. The lottery mechanism wasn't implemented in concert with researchers---it's just an instance of nature's bounty that allows for an unconfounded comparison of students who win the lottery with those who don't. 
 
-Less obvious examples of natural experiments might not involve actual randomization, but feature assignment of treatment and control that isn't related to the relevant qualities of the individuals in the population being studied. Fancier names for this include "exogeneity" or "ignorable treatment assignment." A classic example is the natural experiment analyzed by John Snow. Snow studied a cholera outbreak in London and discovered a contaminated water supply was the cause rather than the prevailing theory of bad air.
+
+Less obvious examples of natural experiments might not involve actual randomization, but feature assignment of treatment and control that isn't related to the relevant qualities of the individuals in the population being studied. Fancier names for this include "exogeneity" or "ignorable treatment assignment." 
+
+
+Below, Guido Imbens gives a roundabout explanation of natural experiments. 
+
+<div style="position: relative; width: 75%; overflow: hidden; margin: auto; padding-top: 42.1875%;">
+    <iframe src="https://www.youtube-nocookie.com/embed/uKlfqTz4-q4?si=0uTbGp4lLg6cQa_8&amp;start=15"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+    </iframe>
+</div>
+
+<br>
+
+
+A classic example is the natural experiment analyzed by John Snow. Snow studied a cholera outbreak in London and discovered a contaminated water supply was the cause rather than the prevailing theory of bad air.
 
 Snow compared the customers of two water companies. The Southwark and Vauxhall company served contaminated water and the Lambeth company supplied purer water. What drove the difference was that the Lambeth company had its water intake point above sewage discharges points, but the Southwark and Vauxhall company's intake point was downstream and therefore contaminated by sewage ({cite}`freedman1991statistical`). It's possible that this comparison could be confounded in other ways, but Snow was able to argue this wasn't plausible in {cite}`snow1849mode`. 
 
@@ -21,6 +38,8 @@ Snow compared the customers of two water companies. The Southwark and Vauxhall c
 Above, Snow identifies the two groups and argues they are identical. The customers don't differ in status and, in some neighborhoods of focus, both companies supplied water. Then, Snow argues for something like randomization when he says the people were "divided into two groups without their choice, and, in most cases, without their knowledge." The two groups are those served by the two different companies. If a person's water company is determined in such a haphazard way, it cannot be related to their own potential to get cholera, and this eliminates confounding. 
 
 Snow's natural experiment required more argument than natural experiments involving actual randomization for charter school seats. There is a spectrum to how compelling a natural experiment can be. {cite}`rosenbaum2017observation` is skeptical of comparing two geographic regions with different policies (see pages 104-105), but still grants that the Dutch famine is compelling. 
+
+
 
 ### Example
 
