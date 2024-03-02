@@ -25,7 +25,7 @@ name: generaltree
 A generic chance tree.
 ```
 
-And here is something more concrete. For English words of Latin or French origin, the letter Q is always followed by a U. This means if we know that such a word starts with Q, the conditional probability of the second letter being U is <span style="color: #006400;">1</span> (100%). However, if the first letter is not Q, a U isn't very likely. If second letters are drawn randomly for non-Q words, this probability would be <span style="color: #0000CD;">1/26</span>. We'll also assume, for simplicity, that there is a <span style="color: #FFA500;">1/26</span> probability that a word starts with Q.
+Here is something more concrete. For English words of Latin or French origin, the letter Q is always followed by a U. This means if we know that such a word starts with Q, the conditional probability of the second letter being U is <span style="color: #006400;">1</span> (100%). However, if the first letter is not Q, a U isn't very likely. If second letters are drawn randomly for non-Q words, this probability would be <span style="color: #0000CD;">1/26</span>. We'll also assume, for simplicity, that there is a <span style="color: #FFA500;">1/26</span> probability that a word starts with Q.
 
 
 ```{figure} images/tikz/Qwordtree.svg
@@ -36,6 +36,8 @@ name: Qwordtree
 Trees are especially helpful when the probability of a second event (like the letter U) depends on the first event (the previous letter being Q or not Q).
 ```
 
+
+What is the probability that a word starts with Qu? Follow the appropriate path in the probability tree and multiply the probabilities as you go. Above, that is $\frac{1}{26}\times 1 = \frac{1}{26}$. What is the probability of a word starting with a letter othan than Q and the second letter being U? The answer is $\frac{25}{26} \times \frac{1}{26} = \frac{25}{676}$. 
 
 ## Bayes' Theorem
 
@@ -115,3 +117,11 @@ name: bayesTest
 
 
 #### Bayes Theorem with Trees
+
+{numref}`Qwordtree` can help us find the probability that a word starts with $Q$, given that the second letter is $U$. Maybe that's helpful if you're on Wheel of Fortune. 
+
+$$\mathbb{P}(Q \mid \cdot U) = \frac{\mathbb{P}(QU)}{\mathbb{P}(\cdot U)}$$
+
+$\mathbb{P}(\cdot U)$ is found by summing the probability for each of the paths that terminate in $U$. This is $\frac{1}{26} + \frac{25}{676}$. 
+
+$$\mathbb{P}(Q \mid \cdot U) = \frac{\frac{1}{26}}{\frac{1}{26} + \frac{25}{676}} = \frac{26}{51}$$
