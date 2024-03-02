@@ -459,13 +459,14 @@ document.write(`
 <p><span class="caption-number">Fig. 41 </span><span class="caption-text">A generic chance tree.</span><a class="headerlink" href="#generaltree" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>And here is something more concrete. For English words of Latin or French origin, the letter Q is always followed by a U. This means if we know that such a word starts with Q, the conditional probability of the second letter being U is <span style="color: #006400;">1</span> (100%). However, if the first letter is not Q, a U isn’t very likely. If second letters are drawn randomly for non-Q words, this probability would be <span style="color: #0000CD;">1/26</span>. We’ll also assume, for simplicity, that there is a <span style="color: #FFA500;">1/26</span> probability that a word starts with Q.</p>
+<p>Here is something more concrete. For English words of Latin or French origin, the letter Q is always followed by a U. This means if we know that such a word starts with Q, the conditional probability of the second letter being U is <span style="color: #006400;">1</span> (100%). However, if the first letter is not Q, a U isn’t very likely. If second letters are drawn randomly for non-Q words, this probability would be <span style="color: #0000CD;">1/26</span>. We’ll also assume, for simplicity, that there is a <span style="color: #FFA500;">1/26</span> probability that a word starts with Q.</p>
 <figure class="align-default" id="qwordtree">
 <a class="reference internal image-reference" href="_images/Qwordtree.svg"><img alt="_images/Qwordtree.svg" src="_images/Qwordtree.svg" width="80%" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 42 </span><span class="caption-text">Trees are especially helpful when the probability of a second event (like the letter U) depends on the first event (the previous letter being Q or not Q).</span><a class="headerlink" href="#qwordtree" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>What is the probability that a word starts with Qu? Follow the appropriate path in the probability tree and multiply the probabilities as you go. Above, that is <span class="math notranslate nohighlight">\(\frac{1}{26}\times 1 = \frac{1}{26}\)</span>. What is the probability of a word starting with a letter othan than Q and the second letter being U? The answer is <span class="math notranslate nohighlight">\(\frac{25}{26} \times \frac{1}{26} = \frac{25}{676}\)</span>.</p>
 </section>
 <section id="bayes-theorem">
 <h2>Bayes’ Theorem<a class="headerlink" href="#bayes-theorem" title="Permalink to this heading">#</a></h2>
@@ -525,6 +526,12 @@ document.write(`
 </section>
 <section id="bayes-theorem-with-trees">
 <h4>Bayes Theorem with Trees<a class="headerlink" href="#bayes-theorem-with-trees" title="Permalink to this heading">#</a></h4>
+<p><a class="reference internal" href="#qwordtree"><span class="std std-numref">Fig. 42</span></a> can help us find the probability that a word starts with <span class="math notranslate nohighlight">\(Q\)</span>, given that the second letter is <span class="math notranslate nohighlight">\(U\)</span>. Maybe that’s helpful if you’re on Wheel of Fortune.</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(Q \mid \cdot U) = \frac{\mathbb{P}(QU)}{\mathbb{P}(\cdot U)}\]</div>
+<p><span class="math notranslate nohighlight">\(\mathbb{P}(\cdot U)\)</span> is found by summing the probability for each of the paths that terminate in <span class="math notranslate nohighlight">\(U\)</span>. This is <span class="math notranslate nohighlight">\(\frac{1}{26} + \frac{25}{676}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(Q \mid \cdot U) = \frac{\frac{1}{26}}{\frac{1}{26} + \frac{25}{676}} = \frac{26}{51}.\]</div>
 </section>
 </section>
 </section>
