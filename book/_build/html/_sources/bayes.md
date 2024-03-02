@@ -45,7 +45,7 @@ We know $\mathbb{P}(A\text{ and } B) = \mathbb{P}(A \mid B) \mathbb{P}(B)$ and $
 
 $$\mathbb{P}(A \mid B) \mathbb{P}(B) = \mathbb{P}(B \mid A) \mathbb{P}(A). $$
 
-Isolating the conditional probability on the left, we have \textbf{Bayes' Theorem}, in at least one of its forms.
+Isolating the conditional probability on the left, we have **Bayes' Theorem**, in at least one of its forms.
 
 $$\mathbb{P}(A \mid B) = \frac{\mathbb{P}(B \mid A) \mathbb{P}(A)}{\mathbb{P}(B)}.$$
 
@@ -58,7 +58,7 @@ Note, we could rewrite this by combining the terms in the numerator or by by exp
 
 Bayes' Theorem is used whenever we want to solve for what is on the left side and what is on the right side is already known (in any of the three expressions above). This is useful, because often you'll receive conditional probabilities that transpose the more interesting quantity, like in the following example. 
 
-**Example**: A medical test gives a false positive 1% of the time and a false negative 0% of the time. The test is for a rare condition. Prior to testing, the probability that a randomly chosen individual has the condition is 0.5%. What is the probability of having the condition, given a positive test?  
+**Example 1**: A medical test gives a false positive 1% of the time and a false negative 0% of the time. The test is for a rare condition. Prior to testing, the probability that a randomly chosen individual has the condition is 0.5%. What is the probability of having the condition, given a positive test?  
 
 First, we write down what we are given. From the false positive information,
 
@@ -82,3 +82,36 @@ Now, we substitute for the denominator,
 
 $$ \mathbb{P}(\text{condition} | \text{positive}) = \frac{.005}{.005 + .00995} \approx \frac{1}{3}. $$
 
+The result shows that, for a seemingly very accurate test, the posterior probability of having a rare condition given a positive test is still pretty small. 
+
+### Lifting the Fog
+
+Rote application of Bayes Theorem is a recipe for trouble. It's better to use natural frequencies or a probability tree to help organize your thoughts. 
+
+#### Natural Frequencies
+
+{cite}`strogatz2010chances` stresses that the best way to apply Bayes Theorem is to do it implicitly with "natural frequencies." In a study by Gerd Gigerenzer, doctors were asked to solve a probability problem. Some received the cold text below. 
+
+> The probability that one of these women has breast cancer is 0.8 percent.  If a woman has breast cancer, the probability is 90 percent that she will have a positive mammogram.  If a woman does not have breast cancer, the probability is 7 percent that she will still have a positive mammogram.  Imagine a woman who has a positive mammogram.  What is the probability that she actually has breast cancer?
+
+Others received a friendlier formulation. 
+
+> Eight out of every 1,000 women have breast cancer.  Of these 8 women with breast cancer, 7 will have a positive mammogram.  Of the remaining 992 women who don’t have breast cancer, some 70 will still have a positive mammogram.  Imagine a sample of women who have positive mammograms in screening.  How many of these women actually have breast cancer?
+
+The majority got the question wrong in the first, more opaque phrasing. The majority got the question right in the second, when put in terms of natural frequencies. Think of this as a hack. When the world tosses you a messy problem, turn it into a question of natural frequencies. 
+
+**Example 2**: A medical condition is found in 10% of all patients. A medical test gives a false positive with probability $\frac{1}{9}$ and a false negative 0% of the time. What is the probability of having the condition, given a positive test? 
+
+This is similar to Example 1, but we can structure the problem better with natural frequencies. In a population of 100 people, 10 will have the condition and 90 will not. The 10 with the condition will all test positive because there are no false negatives. Of the 90 without the condition, 10 will receive a false positive. There are a total of 20 people with a positive result, but only 10 are true positives. Therefore, the chance of having the condition, given a positive test result, is 50%. 
+
+
+```{figure} images/tikz/bayesTest.svg
+---
+width: 70%
+name: bayesTest
+---
+(Example 2) $\mathbb{P}(\text{condition}\mid \text{positive}) = \frac{1}{2}$. Blue indicates not having the condition and orange indicates having the condition. Figures with a plus sign test positive, with the blue plusses being false positives.
+```
+
+
+#### Bayes Theorem with Trees

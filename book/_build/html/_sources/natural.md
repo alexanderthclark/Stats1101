@@ -16,7 +16,7 @@ As the name suggests, in a natural experiment, it is nature, broadly defined, wh
 Less obvious examples of natural experiments might not involve actual randomization, but feature assignment of treatment and control that isn't related to the relevant qualities of the individuals in the population being studied. Fancier names for this include "exogeneity" or "ignorable treatment assignment." 
 
 
-Below, Guido Imbens gives a roundabout explanation of natural experiments. 
+Below, Guido Imbens gives a roundabout explanation of natural experiments to his children. 
 
 <div style="position: relative; width: 75%; overflow: hidden; margin: auto; padding-top: 42.1875%;">
     <iframe src="https://www.youtube-nocookie.com/embed/uKlfqTz4-q4?si=0uTbGp4lLg6cQa_8&amp;start=15"

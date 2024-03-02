@@ -418,7 +418,14 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chance-trees">Chance Trees</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ Theorem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lifting-the-fog">Lifting the Fog</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-frequencies">Natural Frequencies</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem-with-trees">Bayes Theorem with Trees</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -464,7 +471,7 @@ document.write(`
 <p>We know <span class="math notranslate nohighlight">\(\mathbb{P}(A\text{ and } B) = \mathbb{P}(A \mid B) \mathbb{P}(B)\)</span> and <span class="math notranslate nohighlight">\(\mathbb{P}(A\text{ and } B) = \mathbb{P}(B \mid A) \mathbb{P}(A)\)</span>. Therefore,</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(A \mid B) \mathbb{P}(B) = \mathbb{P}(B \mid A) \mathbb{P}(A). \]</div>
-<p>Isolating the conditional probability on the left, we have \textbf{Bayes’ Theorem}, in at least one of its forms.</p>
+<p>Isolating the conditional probability on the left, we have <strong>Bayes’ Theorem</strong>, in at least one of its forms.</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(A \mid B) = \frac{\mathbb{P}(B \mid A) \mathbb{P}(A)}{\mathbb{P}(B)}.\]</div>
 <p>Note, we could rewrite this by combining the terms in the numerator or by by expanding the denominator. For the latter, the expansion uses the fact that <span class="math notranslate nohighlight">\(\mathbb{P}(B) = \mathbb{P}(B\text{ and }A) + \mathbb{P}(B\text{ and not }A)\)</span>.</p>
@@ -473,7 +480,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(A \mid B)  = \frac{\mathbb{P}(B \mid A) \mathbb{P}(A)}{\mathbb{P}(B\mid A) \mathbb{P}(A) + \mathbb{P}(B\mid \text{not } A) \mathbb{P}(\text{not }A)} \]</div>
 <p>Bayes’ Theorem is used whenever we want to solve for what is on the left side and what is on the right side is already known (in any of the three expressions above). This is useful, because often you’ll receive conditional probabilities that transpose the more interesting quantity, like in the following example.</p>
-<p><strong>Example</strong>: A medical test gives a false positive 1% of the time and a false negative 0% of the time. The test is for a rare condition. Prior to testing, the probability that a randomly chosen individual has the condition is 0.5%. What is the probability of having the condition, given a positive test?</p>
+<p><strong>Example 1</strong>: A medical test gives a false positive 1% of the time and a false negative 0% of the time. The test is for a rare condition. Prior to testing, the probability that a randomly chosen individual has the condition is 0.5%. What is the probability of having the condition, given a positive test?</p>
 <p>First, we write down what we are given. From the false positive information,</p>
 <div class="math notranslate nohighlight">
 \[ \mathbb{P}(\text{positive} | \text{no condition}) = 0.01, \quad \mathbb{P}(\text{negative} | \text{no condition}) = 0.99. \]</div>
@@ -490,6 +497,34 @@ document.write(`
 <p>Now, we substitute for the denominator,</p>
 <div class="math notranslate nohighlight">
 \[ \mathbb{P}(\text{condition} | \text{positive}) = \frac{.005}{.005 + .00995} \approx \frac{1}{3}. \]</div>
+<p>The result shows that, for a seemingly very accurate test, the posterior probability of having a rare condition given a positive test is still pretty small.</p>
+<section id="lifting-the-fog">
+<h3>Lifting the Fog<a class="headerlink" href="#lifting-the-fog" title="Permalink to this heading">#</a></h3>
+<p>Rote application of Bayes Theorem is a recipe for trouble. It’s better to use natural frequencies or a probability tree to help organize your thoughts.</p>
+<section id="natural-frequencies">
+<h4>Natural Frequencies<a class="headerlink" href="#natural-frequencies" title="Permalink to this heading">#</a></h4>
+<p><span id="id3">[<a class="reference internal" href="bibliography.html#id55" title="Steven Strogatz. Chances are. New York Times, 2010. URL: https://archive.nytimes.com/opinionator.blogs.nytimes.com/2010/04/25/chances-are/.">Str10</a>]</span> stresses that the best way to apply Bayes Theorem is to do it implicitly with “natural frequencies.” In a study by Gerd Gigerenzer, doctors were asked to solve a probability problem. Some received the cold text below.</p>
+<blockquote>
+<div><p>The probability that one of these women has breast cancer is 0.8 percent.  If a woman has breast cancer, the probability is 90 percent that she will have a positive mammogram.  If a woman does not have breast cancer, the probability is 7 percent that she will still have a positive mammogram.  Imagine a woman who has a positive mammogram.  What is the probability that she actually has breast cancer?</p>
+</div></blockquote>
+<p>Others received a friendlier formulation.</p>
+<blockquote>
+<div><p>Eight out of every 1,000 women have breast cancer.  Of these 8 women with breast cancer, 7 will have a positive mammogram.  Of the remaining 992 women who don’t have breast cancer, some 70 will still have a positive mammogram.  Imagine a sample of women who have positive mammograms in screening.  How many of these women actually have breast cancer?</p>
+</div></blockquote>
+<p>The majority got the question wrong in the first, more opaque phrasing. The majority got the question right in the second, when put in terms of natural frequencies. Think of this as a hack. When the world tosses you a messy problem, turn it into a question of natural frequencies.</p>
+<p><strong>Example 2</strong>: A medical condition is found in 10% of all patients. A medical test gives a false positive with probability <span class="math notranslate nohighlight">\(\frac{1}{9}\)</span> and a false negative 0% of the time. What is the probability of having the condition, given a positive test?</p>
+<p>This is similar to Example 1, but we can structure the problem better with natural frequencies. In a population of 100 people, 10 will have the condition and 90 will not. The 10 with the condition will all test positive because there are no false negatives. Of the 90 without the condition, 10 will receive a false positive. There are a total of 20 people with a positive result, but only 10 are true positives. Therefore, the chance of having the condition, given a positive test result, is 50%.</p>
+<figure class="align-default" id="bayestest">
+<a class="reference internal image-reference" href="_images/bayesTest.svg"><img alt="_images/bayesTest.svg" src="_images/bayesTest.svg" width="70%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">(Example 2) <span class="math notranslate nohighlight">\(\mathbb{P}(\text{condition}\mid \text{positive}) = \frac{1}{2}\)</span>. Blue indicates not having the condition and orange indicates having the condition. Figures with a plus sign test positive, with the blue plusses being false positives.</span><a class="headerlink" href="#bayestest" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="bayes-theorem-with-trees">
+<h4>Bayes Theorem with Trees<a class="headerlink" href="#bayes-theorem-with-trees" title="Permalink to this heading">#</a></h4>
+</section>
+</section>
 </section>
 </section>
 
@@ -557,7 +592,14 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chance-trees">Chance Trees</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ Theorem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lifting-the-fog">Lifting the Fog</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-frequencies">Natural Frequencies</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem-with-trees">Bayes Theorem with Trees</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

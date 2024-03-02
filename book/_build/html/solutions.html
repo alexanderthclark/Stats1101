@@ -425,6 +425,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-distribution"><span class="xref myst">Normal Distribution</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation"><span class="xref myst">Correlation</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression"><span class="xref myst">Regression</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability"><span class="xref myst">Probability</span></a></li>
 </ul>
             </nav>
         </div>
@@ -534,7 +535,7 @@ Treatment group: second joke audience <br></p>
 </div>
 </section>
 <section id="normal-distribution">
-<h2><a class="reference internal" href="normal0.html#normal"><span class="std std-ref">Normal Distribution</span></a><a class="headerlink" href="#normal-distribution" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="normal.html#normal"><span class="std std-ref">Normal Distribution</span></a><a class="headerlink" href="#normal-distribution" title="Permalink to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-7">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="normal.html#schoolsnorm"> Exercise 20</a></p>
@@ -543,7 +544,7 @@ Treatment group: second joke audience <br></p>
 <figure class="align-default" id="cumulative-ztable">
 <a class="reference internal image-reference" href="_images/schoolnormexercise.svg"><img alt="_images/schoolnormexercise.svg" src="_images/schoolnormexercise.svg" width="50%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 45 </span><span class="caption-text">A score of 1400 is two SDs above the mean for either school.</span><a class="headerlink" href="#cumulative-ztable" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">A score of 1400 is two SDs above the mean for either school.</span><a class="headerlink" href="#cumulative-ztable" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>School A can maintain a higher admission rate even if the admission rate is above 50% for school B.</p>
@@ -552,15 +553,41 @@ Treatment group: second joke audience <br></p>
 </div>
 </section>
 <section id="correlation">
-<h2><a class="reference internal" href="regression.html#correlation"><span class="std std-ref">Correlation</span></a><a class="headerlink" href="#correlation" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="correlation.html#correlation"><span class="std std-ref">Correlation</span></a><a class="headerlink" href="#correlation" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="solutions-solution-8">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="correlation.html#corrMental"> Exercise 22</a></p>
+<section id="solution-content">
+<p>No, the award is not merited because the lack of correlation does not demonstrate that there can be no causal effect. This is a chicken and egg problem like in the case of police funding and crime.</p>
+</section>
+</div>
 </section>
 <section id="regression">
 <h2><a class="reference internal" href="regression.html"><span class="doc std std-doc">Regression</span></a><a class="headerlink" href="#regression" title="Permalink to this heading">#</a></h2>
-<div class="solution dropdown admonition" id="solutions-solution-8">
+<div class="solution dropdown admonition" id="solutions-solution-9">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="regression.html#assortMating"> Exercise 23</a></p>
 <section id="solution-content">
 <p>Researchers report both correlations and slopes, indicating that both can be interesting. If you want to know the effect size, use a slope. If you want to measure the strength of the relationship in terms of noisy vs perfectly linear, use a correlation coefficient.</p>
+<p>A single row will contain the incomes for two partnered individuals, but an <span class="math notranslate nohighlight">\(x,y\)</span> pair must also be <em>ordered</em>. There can different ways to decide what the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> columns are. If the data only contains opposite-sex couples, data can be arranged in <span class="math notranslate nohighlight">\(x,y\)</span> pairs for (male, female) or (female, male). The <span class="math notranslate nohighlight">\(x,y\)</span> pairs might also be ordered in other ways. One example is (primary earner, secondary earner) or (secondary earner, primary earner). Random ordering is also okay, but you might find a different slope or correlation coefficient and these must be interpreted based on the ordering.</p>
+</section>
+</div>
+</section>
+<section id="probability">
+<h2><a class="reference internal" href="probability.html#probability"><span class="std std-ref">Probability</span></a><a class="headerlink" href="#probability" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="solutions-solution-10">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="probability.html#conditional"> Exercise 28</a></p>
+<section id="solution-content">
+<p><span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B) + \mathbb{P}(\text{not }A \mid B)=1\)</span> for any <span class="math notranslate nohighlight">\(A,B\)</span>.</p>
+</section>
+</div>
+<div class="solution dropdown admonition" id="solutions-solution-11">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="probability.html#glee"> Exercise 31</a></p>
+<section id="solution-content">
+<p>Binomial coefficients tell you how many ways you can select <span class="math notranslate nohighlight">\(k\)</span> items from a list of <span class="math notranslate nohighlight">\(n\)</span>, but the <span class="math notranslate nohighlight">\(k\)</span> items are not ordered.</p>
+<p>The president/VP pair is ordered and the co-preseident pair is not. Only the co-president pairings are counted by <span class="math notranslate nohighlight">\(\binom{3}{2}\)</span>. There will be twice as many president/VP pairings because (Alice, Bob) and (Bob, Alice) are considered distinct.</p>
 </section>
 </div>
 </section>
@@ -637,6 +664,7 @@ Treatment group: second joke audience <br></p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-distribution"><span class="xref myst">Normal Distribution</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation"><span class="xref myst">Correlation</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression"><span class="xref myst">Regression</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability"><span class="xref myst">Probability</span></a></li>
 </ul>
   </nav></div>
 
