@@ -333,8 +333,7 @@ $$ \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}.$$
 
 Think of $p^k (1-p)^{n-k}$ as the probability of a sequence of $k$ heads followed by $n-k$ tails. The binomial coefficient in front then adjusts that probability to allow for all of the other ways to get $k$ heads–$n-k$ tails followed by $k$ heads for example. This only works for coin flips or similar processes where the individual trials are independent and the probability of a heads or some substitutable event of interest is the same from one trial to the next. These trial outcomes are said to be *independent and identically distributed*, or *iid*. 
 
-**Example** 
-A trick coin comes up heads with probability $p = \frac{2}{3}$. Out of four flips, what is the probability of two heads? 
+**Example**: A trick coin comes up heads with probability $p = \frac{2}{3}$. Out of four flips, what is the probability of two heads? 
 
 ```{dropdown} Two heads
 
@@ -353,6 +352,7 @@ $$ 4 \times p^3 (1-p)^1 +  1 \times p^4$$
 $$ 4\cdot \frac{8}{27}\cdot\frac{1}{3} + \frac{16}{81} = \frac{48}{81} = \frac{16}{27}.$$
 
 ```
+
 
 
 ## Exercises 
