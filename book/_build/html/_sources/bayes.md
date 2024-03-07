@@ -122,6 +122,107 @@ name: bayesTest
 
 $$\mathbb{P}(Q \mid \cdot U) = \frac{\mathbb{P}(QU)}{\mathbb{P}(\cdot U)}$$
 
-$\mathbb{P}(\cdot U)$ is found by summing the probability for each of the paths that terminate in $U$. This is $\frac{1}{26} + \frac{25}{676}$. 
+$\mathbb{P}(\cdot U)$ is found by summing the probability for each of the paths that terminate in $U$. This is $\frac{1}{26} + \frac{25}{676}$,
 
-$$\mathbb{P}(Q \mid \cdot U) = \frac{\frac{1}{26}}{\frac{1}{26} + \frac{25}{676}} = \frac{26}{51}$$
+$$\mathbb{P}(Q \mid \cdot U) = \frac{\frac{1}{26}}{\frac{1}{26} + \frac{25}{676}} = \frac{26}{51}.$$
+
+
+## Exercises
+
+```{exercise-start}
+:label: boxes
+```
+
+A box contains two tickets, labeled $H$ or $T$. There is a 25% chance the box contains two $H$s. There is a 25% chance the box contains two $T$s. There is a 50% chance the box contains one $H$ and one $T$. 
+
+1. What is the chance of drawing an $H$? 
+
+2. Suppose you draw an $H$. What is the chance that the box contained two $T$s?
+
+3. Suppose you draw an $H$. What is the chance that the box contained two $H$s?
+
+4. After replacing the $H$, what is the chance of selecting another $H$? 
+
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: bayesraredisease
+```
+Consider a rare disease that affects 1 in 10,000 people in a population. A medical test for the disease has a 99% chance of correctly identifying a diseased person (true positive) and a 99% chance of correctly identifying a non-diseased person (true negative).
+
+If a person from this population tests positive for the disease, what is the probability that they actually have the disease?
+
+Given:
+
+$$\mathbb{P}(\text{Disease}) = \frac{1}{10,000}$$
+
+$$\mathbb{P}(\text{No disease}) = 1 - \mathbb{P}(D)$$
+
+$$\mathbb{P}(\text{Positive} | \text{Disease}) = 0.99$$
+
+$$\mathbb{P}(\text{Negative} | \text{No Disease}) = 0.99$$
+```{exercise-end}
+```
+
+
+```{exercise-start}
+:label: hatcoins
+```
+
+You're playing basketball at the park when your team picks up an unknown player. The unknown player is equally likely to be a scrub or a baller. A baller makes 90% of their shots and each shot is independent. A scrub makes 10% of their shots and each shot is independent. 
+
+1. What is the chance an unknown makes their first shot? 
+2. What is the chance that the player makes their second shot if they made their first? 
+3. Are the first and second shot outcomes independent from *your* perspective? 
+
+
+```{exercise-end}
+```
+
+
+```{exercise-start}
+:label: troll
+```
+
+A pilgrim, traveling home, is wandering through a strange land when a troll appears:
+
+> *Woe, to pass, pilgrim choose of these doors two. <br> Which is which, I cannot reveal to you. <br> Home with chance 7 or 73. <br> It depends on your choice and fate's decree. <br> Independent but certainty you lack. <br> Take now two draws before I turn thee back.*
+
+1. What is the probability the pilgrim opens a door that leads home on the first draw?
+
+2. The troll, old in his years, has seen 200 million other pilgrims pass through. Each has chosen a door randomly to start and then the other door second if the first didn't take them home. Finish filling in the table below with the expected counts.
+
+|                   | Door 7 second | Door 73 second | Home after first |
+|-------------------|---------------|----------------|------------------|
+| Door 7 first      | 0 million     |               |                  |
+| Door 73 first     |               | 0 million     | 73 million       |
+
+3. If the first draw does not lead home, what is the probability the pilgrim opened the door that leads home with chance 7%? What is the probability the pilgrim opened the door that leads home with chance 73%?
+
+4. If the first draw does not lead home, should the pilgrim open a different door on the next draw or try the same door again? Or does it not matter?
+
+5. What is the probability that the pilgrim remains in exile?
+
+6. The pilgrim, alarmed by the risk of remaining in exile, bargains with the troll to replace the two doors with one 40% chance door. This averages the chances. Is this wise?
+
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: bayesReview
+```
+
+Suppose that a product is sold on Amazon and it has either high quality ($H$) or low quality ($L$). We observe a single product review, which can either be good or bad. Reviewers can be of two types: fake or truth-teller. A fake reviewer always leaves a positive review, regardless of the product quality. A truth-teller reviewer leaves a positive review when the product is high quality and leaves a negative review if the product is low quality.
+
+Assume $\mathbb{P}(H) = \frac{1}{2}$ and that each type of reviewer is equally likely.
+
+- a.) What is $\mathbb{P}(\text{good review})$?
+- b.) What is $\mathbb{P}(\text{good review} \mid H)$?
+- c.) What is $\mathbb{P}(H \mid \text{good review})$?
+- d.) Draw a probability tree that summarizes the probabilities based on product quality, review type, and reviewer type.
+- e.) Are the events of "high quality product" and "good review" independent or dependent? Explain.
+- f.) Suppose the truth-teller is replaced by a joker who leaves a negative review if the product is high quality and a positive review if the product is low quality. What is $\mathbb{P}(H \mid \text{bad review})$?
+
+```{exercise-end}
+```
