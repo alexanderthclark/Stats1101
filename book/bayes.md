@@ -227,3 +227,17 @@ Assume $\mathbb{P}(H) = \frac{1}{2}$ and that each type of reviewer is equally l
 
 ```{exercise-end}
 ```
+
+```{exercise-start}
+:label: bayesCountry
+```
+
+The [provided spreadsheet](https://docs.google.com/spreadsheets/d/1-edxFvawj8f6vViZKUc3p_H8L2oYmIfjLB062h8ab7A/edit?usp=sharing) includes the lyrics for a few dozen country songs. Find the following.
+
+1. Chance a song mentions "tractor".
+2. Chance a song mentions "truck".
+3. Chance a song mentions "tractor" given that it mentions "truck."
+4. Chance a song mentions "truck" given that it mentions "tractor."
+
+```{exercise-end}
+```

@@ -141,10 +141,11 @@ A box contains two tickets, labeled $H$ or $T$. There is a 25% chance the box co
 
 3. Suppose you draw an $H$. What is the chance that the box contained two $H$s?
 
-4. After replacing the $H$, what is the chance of selecting another $H$? 
+4. You draw and replace an $H$, what is the chance of selecting another $H$? 
 
 ```{exercise-end}
 ```
+
 
 ```{exercise-start}
 :label: bayesraredisease
@@ -223,6 +224,20 @@ Assume $\mathbb{P}(H) = \frac{1}{2}$ and that each type of reviewer is equally l
 - d.) Draw a probability tree that summarizes the probabilities based on product quality, review type, and reviewer type.
 - e.) Are the events of "high quality product" and "good review" independent or dependent? Explain.
 - f.) Suppose the truth-teller is replaced by a joker who leaves a negative review if the product is high quality and a positive review if the product is low quality. What is $\mathbb{P}(H \mid \text{bad review})$?
+
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: bayesCountry
+```
+
+The [provided spreadsheet](https://docs.google.com/spreadsheets/d/1-edxFvawj8f6vViZKUc3p_H8L2oYmIfjLB062h8ab7A/edit?usp=sharing) includes the lyrics for a few dozen country songs. Find the following.
+
+1. Chance a song mentions "tractor".
+2. Chance a song mentions "truck".
+3. Chance a song mentions "tractor" given that it mentions "truck."
+4. Chance a song mentions "truck" given that it mentions "tractor."
 
 ```{exercise-end}
 ```
