@@ -141,10 +141,11 @@ A box contains two tickets, labeled $H$ or $T$. There is a 25% chance the box co
 
 3. Suppose you draw an $H$. What is the chance that the box contained two $H$s?
 
-4. After replacing the $H$, what is the chance of selecting another $H$? 
+4. You draw and replace an $H$, what is the chance of selecting another $H$? 
 
 ```{exercise-end}
 ```
+
 
 ```{exercise-start}
 :label: bayesraredisease

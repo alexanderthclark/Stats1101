@@ -148,6 +148,18 @@ Let A have an average of 1000 with an SD of 1. Let school B have an average of 1
 
 ## [Correlation](correlation)
 
+```{solution-start} corrPairing
+:class: dropdown
+```
+The correlation coefficient is $r=0.5$ for the first two tables. The correlation increases to $r=0.866$ for the last table. 
+
+This is a question about the structure of data. There is an ordered pair $(x,y)$ for each day of the week where $x$ first represents Matt Damon and $y$ represents Wahlberg. In the second table, all $x$ and $y$ values are swapped. In a scatter plot, this would be like changing the $x$ and $y$ axis labels, so the correlation does not change. 
+
+In the third table, there is a more substantive change. The list of values for our $x$ and $y$ variables beyond just relabeling. $(x,y)$ points are ordered pairs and the Wednesday pair is reordered without reordering the Monday and Tuesday points. This creates a visible change in the scatter plot and in the correlation coefficient. 
+
+```{solution-end}
+```
+
 ```{solution-start} corrMental
 :class: dropdown
 ```
