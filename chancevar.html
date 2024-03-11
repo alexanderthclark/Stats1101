@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Center and Spread &#8212; Intro Stats</title>
+    <title>Chance Error &#8212; Intro Stats</title>
   
   
   
@@ -73,12 +73,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'centerspread';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chancevar';</script>
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Normal Distribution" href="normal.html" />
-    <link rel="prev" title="The Histogram" href="thehistogram.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Probability II" href="bayes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,13 +191,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Center and Spread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="normal.html">Normal Distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="correlation.html">Correlation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probability.html">Probability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chancevar.html">Chance Error</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chance Error</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -296,7 +296,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fcenterspread.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fchancevar.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -326,7 +326,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/centerspread.md" target="_blank"
+      <li><a href="_sources/chancevar.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -410,7 +410,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Center and Spread</h1>
+    <h1>Chance Error</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -420,17 +420,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average">The Average</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">The Standard Deviation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd-sup-sup">Population vs Sample, SD vs SD<sup>+</sup></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-sd-says">What the SD Says</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sums-from-boxes">Sums from Boxes</a></li>
 </ul>
             </nav>
         </div>
@@ -442,160 +432,63 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="center-and-spread">
-<span id="id1"></span><h1>Center and Spread<a class="headerlink" href="#center-and-spread" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="chance-error">
+<span id="experiments"></span><h1>Chance Error<a class="headerlink" href="#chance-error" title="Permalink to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
-<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 4</p></li>
+<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 16, 17, 18</p></li>
 </ul>
 </div>
-<p>Previously, we summarized data with a histogram. Visual representations sometimes lack simplicity or precision, so now we describe a distribution with just two numbers. The average describes the center of the data and the standard deviation describes its spread. Alternatives for center and spread include median and interquartile range, respectively.</p>
-<section id="the-average">
-<h2>The Average<a class="headerlink" href="#the-average" title="Permalink to this heading">#</a></h2>
-<p>The <strong>average</strong> of a list of <span class="math notranslate nohighlight">\(n\)</span> numbers is their sum, divided by <span class="math notranslate nohighlight">\(n\)</span>. Typical notation for an average is <span class="math notranslate nohighlight">\(\bar{x}\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span>. If you prefer summation notation,</p>
+<p>While a coin is expected to land heads 50% of the time, a perfect 50/50 balance is unlikely if you flip a coin 100 times. In fact, you’ll get 50 heads with probability <span class="math notranslate nohighlight">\(\binom{100}{50}0.5^{50}0.5^{50} \approx 0.08\)</span>. The difference between the actual outcome and the expectation is called the <strong>chance error</strong>;</p>
 <div class="math notranslate nohighlight">
-\[\text{average} = \frac{1}{n} \sum_{i=1}^n x_i.\]</div>
-<p>The <strong>median</strong> is the number in the middle of an ordered list of numbers. If there’s an even number of numbers, average the middle two numbers. The median is less affected by extreme values. If I have a list of numbers 1, 2 and 3, then the average and the median are both 2.</p>
-<figure class="align-default" id="mean-median-sym">
-<a class="reference internal image-reference" href="_images/hist_with_mean_median.svg"><img alt="_images/hist_with_mean_median.svg" src="_images/hist_with_mean_median.svg" width="87%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The average and median are similar for a symmetric distribution.</span><a class="headerlink" href="#mean-median-sym" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>If we extend the list to include 94, then the average increases to 25 and the median increases to just 2.5. Is 25 or 2.5 more representative of 1, 2, 3, 94? It depends on how you might use the statistic. The median is often preferred in cases like these to avoid the influence of an extreme value. <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 15</span></a> shows two skewed distributions with vertical line for the average and the median. Which line marks the average and which line marks the median?</p>
-<figure class="align-default" id="mean-median-skew">
-<a class="reference internal image-reference" href="_images/skewed_hist_mean_median.svg"><img alt="_images/skewed_hist_mean_median.svg" src="_images/skewed_hist_mean_median.svg" width="87%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Which line is the average? The median?</span><a class="headerlink" href="#mean-median-skew" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+\[\text{number of heads} = \text{half the number of tosses + chance error}.\]</div>
+<p>Chance errors just reflect the noise inherent in a random process. Suppose you flip a fair coin 200 times and it comes up heads just 80 times. Then, the chance error is -20. What is the chance error if you instead got 120 heads out of 200 flips?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Median vs Average<div class="sd-summary-down docutils">
+120/200 Chance Error<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The heavier, orange line marks the average. The white line marks the median.</p>
+<p class="sd-card-text">The chance error is 20.</p>
 </div>
-</details><p>While the median will split a histogram so that there is equal area on either side, the histogram balances when supported at the average. Imagine balancing either of the histograms in <a class="reference internal" href="#mean-median-skew"><span class="std std-numref">Fig. 15</span></a> at the median. The histogram would tip toward the long tail because of the leverage exerted by the extreme values.</p>
-</section>
-<section id="the-standard-deviation">
-<h2>The Standard Deviation<a class="headerlink" href="#the-standard-deviation" title="Permalink to this heading">#</a></h2>
-<section id="preamble-root-mean-square">
-<h3>Preamble: Root Mean Square<a class="headerlink" href="#preamble-root-mean-square" title="Permalink to this heading">#</a></h3>
-<p>The <strong>root mean square</strong> size of a list is the (1) square <em>root</em> of the (2) <em>mean</em>, aka average, of the (3) <em>square</em>d entries. This says something about the size of a list.<a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
-<div class="math notranslate nohighlight">
-\[ \text{root mean square size of a list} = \sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2} \]</div>
-<p>The r.m.s. doesn’t change if you change the sign on any of the numbers. It says something about the typical absolute size of a number in the list. The average of the absolute values would also do that, but as <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> says, “it fits in better with the algebra [statisticians] have to do.” Squaring helps us ignore the sign, we average to get some notion of what’s typical, and then we take the square root to return to the original units.</p>
-</section>
-<section id="id5">
-<h3>The Standard Deviation<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<p>The <strong>standard deviation (SD)</strong> is a measure of spread in a list of numbers. The spread is in reference to the center, so for a single entry, we talk of the deviation from the average,</p>
-<div class="math notranslate nohighlight">
-\[\text{deviation = entry - average}.\]</div>
-<p>For a list of numbers, the SD is the root mean square size of each deviation. If the list of numbers is -1 and 1, then we find the SD as follows.</p>
-<ol class="arabic simple">
-<li><p>The average of the entries is <span class="math notranslate nohighlight">\(\frac{-1+1}{2} = 0\)</span>.</p></li>
-<li><p>The deviations are <span class="math notranslate nohighlight">\(-1-0\)</span> and <span class="math notranslate nohighlight">\(1-0\)</span>, or <span class="math notranslate nohighlight">\(-1\)</span> and <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
-<li><p>The rms is <span class="math notranslate nohighlight">\(\sqrt{ \frac{1}{2}(-1^2 + 1^2) } = \sqrt{1} = 1\)</span>.</p></li>
-</ol>
-<p>Make a table if it helps with more complicated examples. Below, we find the SD for the list 1,2,3,4,5. The average is 3.</p>
-<table class="table" id="sd-table">
-<caption><span class="caption-number">Table 8 </span><span class="caption-text">Finding the standard deviation</span><a class="headerlink" href="#sd-table" title="Permalink to this table">#</a></caption>
-<thead>
-<tr class="row-odd"><th class="head"><p>Entry</p></th>
-<th class="head"><p>Deviation</p></th>
-<th class="head"><p>Squared Deviation</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>1-3 = -2</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>2-3 = -1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>3</p></td>
-<td><p>3-3 = 0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>4</p></td>
-<td><p>4-3 = 1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>5</p></td>
-<td><p>5-3 = 2</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="row-odd"><td><p><em>average</em></p></td>
-<td><p><em>0</em></p></td>
-<td><p><em>2</em></p></td>
-</tr>
-</tbody>
-</table>
-<p>The SD is the square root of the average squared deviation, so SD = <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>.</p>
-<section id="population-vs-sample-sd-vs-sd-sup-sup">
-<h4>Population vs Sample, SD vs SD<sup>+</sup><a class="headerlink" href="#population-vs-sample-sd-vs-sd-sup-sup" title="Permalink to this heading">#</a></h4>
-<p>Our particular calculation for SD is technically the <em>population standard deviation</em>, as opposed to the <em>sample standard deviation</em>, which we call SD<sup>+</sup>
-. These are calculated slightly differently. SD<sup>+</sup> doesn’t use the average squared deviation, dividing by <span class="math notranslate nohighlight">\(n-1\)</span> instead of <span class="math notranslate nohighlight">\(n\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\text{SD} = \sqrt{ \frac{1}{n} \sum_{i=1}^n(x_i-\mu)^2 }.\]</div>
-<div class="math notranslate nohighlight">
-\[\text{SD}^{+} = \sqrt{ \frac{1}{n-1} \sum_{i=1}^n(x_i-\bar{x})^2 }.\]</div>
-<p>This is important to appreciate if you are using random calculators. In Google Sheets, use <code class="docutils literal notranslate"><span class="pre">STDEVP</span></code> for the SD.</p>
-<p>We’ll cover samples, where you observe data for just a subset of a larger population, later in the course. For now, you can imagine everything is the entire population.</p>
-</section>
-<section id="what-the-sd-says">
-<h4>What the SD Says<a class="headerlink" href="#what-the-sd-says" title="Permalink to this heading">#</a></h4>
-<p>The standard deviation describes the spread in the data, or the typical size of deviations from the average in a list of numbers.</p>
-<p>I like to think of it in terms of a prediction exercise. If your prediction algorithm for a number drawn from the list is “always guess the average,” the SD helps summarize the expected prediction error.</p>
-<p>We keep using the word “typical” in a vague way. The 68-95 rule is a rule of thumb that helps explain what kind of yardstick the SD is.</p>
-<p><strong>The 68-95 rule</strong> says that roughly 68% of entries in a list are within one SD of the average. About 95% of entries are within two SDs of the average. This is true if the data is normally distributed (Chapter 5).</p>
-</section>
-</section>
-</section>
-<section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="sdproperties">
-
-<p class="admonition-title"><span class="caption-number">Exercise 15 </span></p>
-<section id="exercise-content">
-<p>Find the SD for -1, 1. Find the SD for -1, -1, 1, 1. Find the SD for 0, 2. Comment on the similarities between the first list and the other two.</p>
-</section>
-</div>
-<div class="exercise admonition" id="sd_add_avg">
-
-<p class="admonition-title"><span class="caption-number">Exercise 16 </span></p>
-<section id="exercise-content">
-<p>True or False? Extending a list of numbers to include the average will always decrease the standard deviation. Justify your answer.</p>
-</section>
-</div>
-<div class="exercise admonition" id="starnetwork">
-
-<p class="admonition-title"><span class="caption-number">Exercise 17 </span></p>
-<section id="exercise-content">
-<p>Suppose Taylor Swift launches her own social network. Members follow Taylor Swift and nobody else. As a courtesy, Swift follows everyone back.</p>
-<figure class="align-default" id="tswiftnetwork">
-<a class="reference internal image-reference" href="_images/hubspokestrio.svg"><img alt="_images/hubspokestrio.svg" src="_images/hubspokestrio.svg" width="87%" /></a>
+</details><p>The <strong>law of averages</strong> says that the chance error will get smaller <em>in percentage terms</em> as the number of trials increases. Suppose you recruited 2000 volunteers. The first 1000 each flip a coin 10 times each. The second 1000 each flip a coin 100 times each. We should expect larger chance errors for the latter group, in absolute terms. After all, some of them might be 60 heads, meaning a chance error of 10. A chance error of 10 is very unlikely for just 10 tosses. However, proportional to the number of tosses, the chance error will go down. 60 heads of 100 tosses is similar to 6 of 10 tosses, yet the former is less likely according to the law of averages.</p>
+<figure class="align-default" id="chanceerrorhist">
+<a class="reference internal image-reference" href="_images/chanceErrorHist.svg"><img alt="_images/chanceErrorHist.svg" src="_images/chanceErrorHist.svg" width="90%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">An illustration of possible networks with three, seven, and twelve members. The yellow circle represents Swift and the other circles represent other members. The labels are the number of followers.</span><a class="headerlink" href="#tswiftnetwork" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">This shows the results from 10 and 100 tosses of a coin, repeated 1000 times each. The histogram for 100 tosses is more spread out in absolute terms. But, in percentage terms, more of the 1000 trials yield close to 50% heads.</span><a class="headerlink" href="#chanceerrorhist" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>(a) For a single network, is the distribution of the number of followers skewed or symmetric? <br>
-(b) Is the average number of followers always greater than one? <br>
-(c) Can the average number of followers on the network ever exceed two? <br>
-(d) Use a calculator to find the SD for the number of followers if the network has 13 members including Swift. Does the 68-95 rule hold? What if the network has 1989 members?</p>
-</section>
+<p>In absolute terms, the chance error will increase, but more slowly than the number of tosses. In fact, if the number of tosses increases 2x, the chance error increases only by a factor of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>. If the number of tosses increases 100x, the chance error increases only by a factor of 10.</p>
+<section id="sums-from-boxes">
+<h2>Sums from Boxes<a class="headerlink" href="#sums-from-boxes" title="Permalink to this heading">#</a></h2>
+<p>To start, our focus is on the sum of <span class="math notranslate nohighlight">\(n\)</span> draws made with replacement from a box. The coin-tossing example above can be thought of as making repeated draws from a box with a 0-1 box. Thus, the number of heads from <span class="math notranslate nohighlight">\(n\)</span> tosses is the sum of <span class="math notranslate nohighlight">\(n\)</span> draws from the 0-1 box.</p>
+<figure class="align-default" id="box01">
+<a class="reference internal image-reference" href="_images/box01.svg"><img alt="_images/box01.svg" src="_images/box01.svg" width="22%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">This is a 0-1 box representing a fair coin flip.</span><a class="headerlink" href="#box01" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>There is chance variability based on the <em>number of draws</em> and the actual chance inherent in a process. Suppose 100 draws are made with replacement from one of the boxes below. You will win $1 if you can guess the sum within 10.</p>
+<figure class="align-default" id="boxsums">
+<a class="reference internal image-reference" href="_images/boxsums.svg"><img alt="_images/boxsums.svg" src="_images/boxsums.svg" width="70%" /></a>
+</figure>
+<p>Which box is the best? Which is the worst?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Boxes i, ii, iii<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">iii is the best and i is the worst</p>
 </div>
-<hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id6" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
-<p>The rms formula is similar to the formula for Euclidean distance, from the origin to the list of numbers as a single point in a coordinate system. The Euclidean distance also measures a kind of size, but without averaging.</p>
-</aside>
+</details><p>In expectation, the sum is 500 for each of the boxes. However, they each have a different SD and this has consequences for the typical chance error for a sum.</p>
+<p>We quantify the typical chance error using the <strong>standard error</strong> (SE). The above demonstrates that this depends on both <span class="math notranslate nohighlight">\(n\)</span> and the SD of the box. The <strong>square root law</strong> makes this precise, stating</p>
+<div class="math notranslate nohighlight">
+\[\text{standard error for sum of draws} = \sqrt{n} \times \text{SD of box}.\]</div>
+<p>TK</p>
 </section>
 </section>
 
@@ -630,20 +523,20 @@ Median vs Average<div class="sd-summary-down docutils">
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="thehistogram.html"
+       href="bayes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">The Histogram</p>
+        <p class="prev-next-title">Probability II</p>
       </div>
     </a>
     <a class="right-next"
-       href="normal.html"
+       href="bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Normal Distribution</p>
+        <p class="prev-next-title">Bibliography</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -663,17 +556,7 @@ Median vs Average<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average">The Average</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-deviation">The Standard Deviation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-root-mean-square">Preamble: Root Mean Square</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">The Standard Deviation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#population-vs-sample-sd-vs-sd-sup-sup">Population vs Sample, SD vs SD<sup>+</sup></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-sd-says">What the SD Says</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sums-from-boxes">Sums from Boxes</a></li>
 </ul>
   </nav></div>
 
