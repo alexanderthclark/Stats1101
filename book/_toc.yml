@@ -18,6 +18,7 @@ parts:
     - file: regression
     - file: probability
     - file: bayes
+    - file: chancevar
     - file: bibliography
 
 #- caption: Solutions
