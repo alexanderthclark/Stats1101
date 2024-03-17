@@ -77,8 +77,6 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
-    <link rel="prev" title="Probability II" href="bayes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -140,6 +138,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
@@ -197,7 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probability.html">Probability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chance Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Error</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -420,7 +420,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sums-from-boxes">Sums from Boxes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sums-from-boxes">Sums from Boxes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxes">0-1 Boxes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-approximation">Normal Approximation</a></li>
 </ul>
             </nav>
         </div>
@@ -433,17 +437,23 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chance-error">
-<span id="experiments"></span><h1>Chance Error<a class="headerlink" href="#chance-error" title="Permalink to this heading">#</a></h1>
+<span id="chance"></span><h1>Chance Error<a class="headerlink" href="#chance-error" title="Permalink to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
 <li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 16, 17, 18</p></li>
 </ul>
 </div>
-<p>While a coin is expected to land heads 50% of the time, a perfect 50/50 balance is unlikely if you flip a coin 100 times. In fact, you’ll get 50 heads with probability <span class="math notranslate nohighlight">\(\binom{100}{50}0.5^{50}0.5^{50} \approx 0.08\)</span>. The difference between the actual outcome and the expectation is called the <strong>chance error</strong>;</p>
+<p>A fair coin is expected to land heads 50% of the time. This is expressed by the probability as a long-run frequency,</p>
 <div class="math notranslate nohighlight">
-\[\text{number of heads} = \text{half the number of tosses + chance error}.\]</div>
-<p>Chance errors just reflect the noise inherent in a random process. Suppose you flip a fair coin 200 times and it comes up heads just 80 times. Then, the chance error is -20. What is the chance error if you instead got 120 heads out of 200 flips?</p>
+\[\mathbb{P}(H) = \frac{ \text{number of heads}} {\text{number of tosses}}.\]</div>
+<p>However a perfect 50/50 balance is unlikely. In fact, if you flip a coin 100 times, you’ll get 50 heads with probability <span class="math notranslate nohighlight">\(\binom{100}{50}0.5^{50}0.5^{50} \approx 0.08\)</span>. The difference between the actual outcome and the expectation is called the <strong>chance error</strong>;</p>
+<div class="math notranslate nohighlight">
+\[\text{number of heads} = \frac{1}{2}\times \text{number of tosses + chance error}.\]</div>
+<p>Chance errors reflect the noise inherent in a random process. In the equation above, the chance error is kind of like an accounting hack, balancing the observed data with the expected. For a general chance process, we write</p>
+<div class="math notranslate nohighlight">
+\[\text{observed} = \text{expected + chance error}.\]</div>
+<p>Chance errors can be positive or negative. Suppose you flip a fair coin 200 times and it comes up heads just 80 times. Then, the chance error is -20. What is the chance error if you instead got 120 heads out of 200 flips?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 120/200 Chance Error<div class="sd-summary-down docutils">
@@ -453,11 +463,11 @@ document.write(`
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The chance error is 20.</p>
 </div>
-</details><p>The <strong>law of averages</strong> says that the chance error will get smaller <em>in percentage terms</em> as the number of trials increases. Suppose you recruited 2000 volunteers. The first 1000 each flip a coin 10 times each. The second 1000 each flip a coin 100 times each. We should expect larger chance errors for the latter group, in absolute terms. After all, some of them might be 60 heads, meaning a chance error of 10. A chance error of 10 is very unlikely for just 10 tosses. However, proportional to the number of tosses, the chance error will go down. 60 heads of 100 tosses is similar to 6 of 10 tosses, yet the former is less likely according to the law of averages.</p>
+</details><p>The <strong>law of averages</strong> says that the chance error will get smaller <em>in percentage terms</em> as the number of trials increases. Suppose you recruited 2000 volunteers. The first 1000 each flip a coin 10 times each. The second 1000 each flip a coin 100 times each. We should expect larger chance errors for the latter group, in absolute terms. After all, some of them might get 60 heads, meaning a chance error of 10. A chance error of 10 is very unlikely for just 10 tosses, requiring all tails. However, proportional to the number of tosses, the chance error will go down with the number of tosses. 60 heads of 100 tosses is similar to 6 of 10 tosses, yet the former is less likely according to the law of averages.</p>
 <figure class="align-default" id="chanceerrorhist">
 <a class="reference internal image-reference" href="_images/chanceErrorHist.svg"><img alt="_images/chanceErrorHist.svg" src="_images/chanceErrorHist.svg" width="90%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 44 </span><span class="caption-text">This shows the results from 10 and 100 tosses of a coin, repeated 1000 times each. The histogram for 100 tosses is more spread out in absolute terms. But, in percentage terms, more of the 1000 trials yield close to 50% heads.</span><a class="headerlink" href="#chanceerrorhist" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">This shows the results from 10 and 100 tosses of a coin, repeated 1000 times each. The histogram for 100 tosses is more spread out in absolute terms. But, in percentage terms, more of the 1000 trials yield close to 50% heads.</span><a class="headerlink" href="#chanceerrorhist" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In absolute terms, the chance error will increase, but more slowly than the number of tosses. In fact, if the number of tosses increases 2x, the chance error increases only by a factor of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>. If the number of tosses increases 100x, the chance error increases only by a factor of 10.</p>
@@ -467,7 +477,7 @@ document.write(`
 <figure class="align-default" id="box01">
 <a class="reference internal image-reference" href="_images/box01.svg"><img alt="_images/box01.svg" src="_images/box01.svg" width="22%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 45 </span><span class="caption-text">This is a 0-1 box representing a fair coin flip.</span><a class="headerlink" href="#box01" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">This is a 0-1 box representing a fair coin flip.</span><a class="headerlink" href="#box01" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>There is chance variability based on the <em>number of draws</em> and the actual chance inherent in a process. Suppose 100 draws are made with replacement from one of the boxes below. You will win $1 if you can guess the sum within 10.</p>
@@ -488,7 +498,59 @@ Boxes i, ii, iii<div class="sd-summary-down docutils">
 <p>We quantify the typical chance error using the <strong>standard error</strong> (SE). The above demonstrates that this depends on both <span class="math notranslate nohighlight">\(n\)</span> and the SD of the box. The <strong>square root law</strong> makes this precise, stating</p>
 <div class="math notranslate nohighlight">
 \[\text{standard error for sum of draws} = \sqrt{n} \times \text{SD of box}.\]</div>
-<p>TK</p>
+<p>The standard deviation applies to a list of numbers and standard errors are for chance processes. It’s worth noting that when your chance process is “draw one ticket from a box,” then the SE is the same as the SD of the box. This can be seen from the above square root law formula, or by returning to the identity</p>
+<div class="math notranslate nohighlight">
+\[\text{observed} = \text{expected} + \text{chance error},\]</div>
+<div class="math notranslate nohighlight">
+\[\text{one draw} = \text{average} + \text{deviation from average}.\]</div>
+<p>The SE describes a typical chance error just as the SD describes a typical deviation from the average for a list of numbers. Like for SD, we expect an observed sum to be more than two SE from the expected sum only rarely.</p>
+<section id="boxes">
+<h3>0-1 Boxes<a class="headerlink" href="#boxes" title="Permalink to this heading">#</a></h3>
+<p>0-1 boxes are focal because they mimic coin flips and many natural questions that can be modeled as coin flips. The <strong>standard deviation for a 0-1 box</strong> is <span class="math notranslate nohighlight">\(\sqrt{p(1-p)}\)</span>, where <span class="math notranslate nohighlight">\(p\)</span> is the proportion of 1s and <span class="math notranslate nohighlight">\(1-p\)</span> is the proportion of 0s in the box. Applying the square root law, the <strong>SE for a 0-1 box</strong> is</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{n} \sqrt{p(1-p)}.\]</div>
+<p><strong>Example</strong>: Ruth and Antonin run an ice cream shop. They know they will have 100 customers today. Each customer orders a scoop of vanilla 50% of the time and otherwise orders a scoop of chocolate. All orders are independent. If they stock 60 scoops of vanilla, are they likely to run out of vanilla ice cream?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+ice cream<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The standard error is found,</p>
+<div class="math notranslate nohighlight">
+\[\text{SE} = \sqrt{100} \times \sqrt{0.5 \times (1-0.5)} = 10 \times \frac{1}{2} = 5.\]</div>
+<p class="sd-card-text">They will run out of vanilla if 61 or more people order vanilla. Compared to an expectation of 50 orders, this requires a chance error of 11 or more. This is rare because 11 is more than two SE from the expectation.</p>
+</div>
+</details><p>The solution above doesn’t quantify the risk of running out of vanilla ice cream. One approach would be to use the binomial formula. They run out of ice cream with probability <span class="math notranslate nohighlight">\(\mathbb{P}(\text{61 or more orders}) = \binom{100}{61}0.5^{61}\cdot0.5^{39} + \cdots + \binom{100}{100}0.5^{100}\cdot0.5^0 \approx 0.018.\)</span><a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Another approach would be to use a normal approximation. Indeed, the 68-95 rule will carry over to SEs under the right conditions.</p>
+</section>
+</section>
+<section id="normal-approximation">
+<h2>Normal Approximation<a class="headerlink" href="#normal-approximation" title="Permalink to this heading">#</a></h2>
+<p>For a large number of draws made with replacement from a box, the chance error will follow a normal curve. The expected chance error is zero and its typical size is the SE. In particular, an observed sum will be within one SE of the expected sum 68% of the time and within two SEs about 95% of the time.</p>
+<p><strong>Example</strong>: One hundred draws are made with replacement from the box below. How likely is the sum to be in the range from 470 to 530?</p>
+<figure class="align-default" id="box24410">
+<a class="reference internal image-reference" href="_images/box24410.svg"><img alt="_images/box24410.svg" src="_images/box24410.svg" width="22%" /></a>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Sum of 100 draws<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The SD of the box is 3 and the average is 5. The expected sum from 100 draws is 500.</p>
+<p class="sd-card-text">The standard error is found,</p>
+<div class="math notranslate nohighlight">
+\[\text{SE} = \sqrt{100} \times 3 = 30.\]</div>
+<p class="sd-card-text">The range 470 to 530 is therefore the expected sum <span class="math notranslate nohighlight">\(\pm\)</span> SE. The sum falls in this range 68% of the time.</p>
+</div>
+</details><p>The normal approximation is justified because of the <strong>central limit theorem</strong>. The central limit theorem states that, when random draws are made replacement from a box, the distribution for the sum of these draws will approximate a normal distribution. This is true even if the contents of the box do not follow a normal curve as long as the number of draws is large.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>This can be calculated in Google Sheets as <code class="docutils literal notranslate"><span class="pre">=1</span> <span class="pre">-</span> <span class="pre">BINOMDIST(60,100,0.5,True)</span></code>, where the second term is the cumulative probability of 0-60 successes from 100 trials where the probability of success is 0.5.</p>
+</aside>
 </section>
 </section>
 
@@ -522,24 +584,6 @@ Boxes i, ii, iii<div class="sd-summary-down docutils">
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="bayes.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Probability II</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="bibliography.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -556,7 +600,11 @@ Boxes i, ii, iii<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sums-from-boxes">Sums from Boxes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sums-from-boxes">Sums from Boxes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxes">0-1 Boxes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-approximation">Normal Approximation</a></li>
 </ul>
   </nav></div>
 
