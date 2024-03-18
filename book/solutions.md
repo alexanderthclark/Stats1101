@@ -288,3 +288,56 @@ It follows that $\mathbb{P}(H_1 \mid H_2)$ is also $\frac{3}{4}$ because the unc
 
 ```{solution-end}
 ```
+
+```{solution-start} bayesraredisease
+:class: dropdown
+```
+
+What are trying to find the probability that someone has the rare disease given a positive test. We'll use a natural frequencies approach to find
+
+$$\mathbb{P}(\text{disease} mid \text{positive}) = \mathbb{P}(\text{positive and disease}) / \mathbb{P}(\text{positive}).$$
+
+In a population of 990,000 people (99$\times$10000), we expect 99 to have the diease. Of those, 99% will test positive. This is 99-.99 = 98.01. We expect 989,901 not to have the disease. Of those, 1% will get a positive result, or 9899.01. Together, 9899.01 + 98.01 = 9997.02 get a positive test result
+
+Thus, the conditional probability is about 98/9997, which is less than 1%. 
+
+```{solution-end}
+```
+
+
+```{solution-start} bballbayes
+:class: dropdown
+```
+
+An unknown player makes their first shot 50% of the time. This is calculated as
+
+$$0.5\times 0.9 + 0.5 \times 0.1.$$ 
+
+Simplifying yields $0.5(0.9 + 0.1) = 0.5$.
+
+
+Suppose there were 200 players. We can expect 100 scrubs and 100 ballers. The ballers make 90 shots and the scrubs make 10. There are 100 makes total.
+
+The probability of a scrub is now $\frac{10}{100}$ and the probability of a baller is now $\frac{90}{100}$. The second shot goes in with probability 
+$$0.9\times 0.9 + 0.1 \times 0.1 = 0.81 + 0.01 = 0.82.$$ 
+
+From the observer's perspective, the first and second shots are not independent. With more shots observed, they are beginning to learn the player's type. In other words, you should be more willing to pass to someone who makes their first show because you should have greater confidence that the second shot will go in. 
+```{solution-end}
+```
+
+
+```{solution-start} bayesCountry
+:class: dropdown
+```
+
+4/63 songs mention tractor and 14/63 mention truck. 
+
+2 of the 14 mentioning truck mention tractor. 
+
+2 of the 4 mentioning tractor mention truck. This can be calculated by simplying inspecting the data or by solve for the first three and then applying Bayes' Theorem.
+
+```{solution-end}
+```
+
+
+
