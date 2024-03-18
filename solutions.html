@@ -428,7 +428,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-distribution"><span class="xref myst">Normal Distribution</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation"><span class="xref myst">Correlation</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression"><span class="xref myst">Regression</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability"><span class="xref myst">Probability</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-i"><span class="xref myst">Probability I</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-ii"><span class="xref myst">Probability II</span></a></li>
 </ul>
             </nav>
         </div>
@@ -585,8 +586,8 @@ Treatment group: second joke audience <br></p>
 </section>
 </div>
 </section>
-<section id="probability">
-<h2><a class="reference internal" href="probability.html#probability"><span class="std std-ref">Probability</span></a><a class="headerlink" href="#probability" title="Permalink to this heading">#</a></h2>
+<section id="probability-i">
+<h2><a class="reference internal" href="probability.html#probability"><span class="std std-ref">Probability I</span></a><a class="headerlink" href="#probability-i" title="Permalink to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-11">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="probability.html#conditional"> Exercise 28</a></p>
@@ -600,6 +601,98 @@ Treatment group: second joke audience <br></p>
 <section id="solution-content">
 <p>Binomial coefficients tell you how many ways you can select <span class="math notranslate nohighlight">\(k\)</span> items from a list of <span class="math notranslate nohighlight">\(n\)</span>, but the <span class="math notranslate nohighlight">\(k\)</span> items are not ordered.</p>
 <p>The president/VP pair is ordered and the co-preseident pair is not. Only the co-president pairings are counted by <span class="math notranslate nohighlight">\(\binom{3}{2}\)</span>. There will be twice as many president/VP pairings because (Alice, Bob) and (Bob, Alice) are considered distinct.</p>
+</section>
+</div>
+</section>
+<section id="probability-ii">
+<h2><a class="reference internal" href="bayes.html#bayes"><span class="std std-ref">Probability II</span></a><a class="headerlink" href="#probability-ii" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="solutions-solution-13">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#boxes"> Exercise 32</a></p>
+<section id="solution-content">
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(\mathbb{P}(H) = 0.5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{P}(\text{box with two Ts} \mid H) = 0\)</span> because the box must have an <span class="math notranslate nohighlight">\(H\)</span> to draw an <span class="math notranslate nohighlight">\(H\)</span>.</p></li>
+<li><div class="math notranslate nohighlight">
+\[\mathbb{P}(\text{box with two Hs} \mid H) = \frac{ \mathbb{P}(H \mid \text{box with two Hs}) \mathbb{P}(\text{box with two Hs})}{\mathbb{P}(H)} \]</div>
+</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[= \frac{1\times 0.25}{0.5} = 0.25\]</div>
+<ol class="arabic simple" start="4">
+<li><p>To find <span class="math notranslate nohighlight">\(\mathbb{P}(\text{H on second draw} \mid \text{H on first draw})\)</span>, the subtlety is that these are not independent. The unconditional probability is <span class="math notranslate nohighlight">\(\mathbb{P}(\text{H on second draw}) = 0.5\)</span>. This allows for the possibility of a box with two <span class="math notranslate nohighlight">\(T\)</span>s. An <span class="math notranslate nohighlight">\(H\)</span> on the first draw reveals that the box does not have two <span class="math notranslate nohighlight">\(T\)</span>s, which will push our probability up. The intuititive answer of 0.5 is therefore <em>wrong</em>. For a similar problem, see also the famously difficult <a class="reference external" href="https://en.wikipedia.org/wiki/Boy_or_girl_paradox">boy girl paradox</a>.</p></li>
+</ol>
+<p><strong>4 - Solution 1</strong>
+The first draw reveals there is an <span class="math notranslate nohighlight">\(H\)</span> in the box. By part 3, we know there is a 0.5 probability the box contains two <span class="math notranslate nohighlight">\(H\)</span>s. The probability of an <span class="math notranslate nohighlight">\(H\)</span> on the second draw is</p>
+<div class="math notranslate nohighlight">
+\[ \underbrace{\frac{1}{2}}_{a} \cdot \overbrace{1}^{b} + \underbrace{\frac{1}{2}}_{c} \cdot \overbrace{\frac{1}{2}}^{b} = \frac{3}{4}.\]</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Probability of … given <span class="math notranslate nohighlight">\(H\)</span> on first draw</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p>box with two <span class="math notranslate nohighlight">\(H\)</span>s</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(b\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(H\)</span> given two two-<span class="math notranslate nohighlight">\(H\)</span> box</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(c\)</span></p></td>
+<td><p>box with one <span class="math notranslate nohighlight">\(H\)</span> and one <span class="math notranslate nohighlight">\(T\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(d\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(H\)</span> given two one-<span class="math notranslate nohighlight">\(H\)</span>-one-<span class="math notranslate nohighlight">\(T\)</span> box</p></td>
+</tr>
+</tbody>
+</table>
+<p>Each ticket is marked <span class="math notranslate nohighlight">\(H\)</span> or <span class="math notranslate nohighlight">\(T\)</span> independently and with equal chance, so <span class="math notranslate nohighlight">\(d\)</span> is <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>.</p>
+<p><strong>4 - Solution 2 (my favorite)</strong></p>
+<p>This solution is remarkably similar to the previous, but with a different interpretation. The first draw reveals there is an <span class="math notranslate nohighlight">\(H\)</span> in the box. Half of the time you will draw the same ticket on your second draw. The other half of the time you draw the other ticket.</p>
+<p>The conditional probability of an <span class="math notranslate nohighlight">\(H\)</span> on the second draw given an <span class="math notranslate nohighlight">\(H\)</span> on the first draw can be expanded as the sum of the probability of <em>the same ticket and <span class="math notranslate nohighlight">\(H\)</span></em> and the probability of <em>a different ticket and <span class="math notranslate nohighlight">\(H\)</span></em>, all conditional on <span class="math notranslate nohighlight">\(H\)</span> on the first draw. The answer is</p>
+<div class="math notranslate nohighlight">
+\[ \underbrace{\frac{1}{2}}_{\alpha} \cdot \overbrace{1}^{\beta} + \underbrace{\frac{1}{2}}_{\gamma} \cdot \overbrace{\frac{1}{2}}^{\delta} = \frac{3}{4}.\]</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Probability of … given <span class="math notranslate nohighlight">\(H\)</span> on first draw</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\alpha\)</span></p></td>
+<td><p>the same ticket is drawn again (an <span class="math notranslate nohighlight">\(H\)</span>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\beta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(H\)</span> given the same ticket is drawn second</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\gamma\)</span></p></td>
+<td><p>drawing the other ticket (which can be <span class="math notranslate nohighlight">\(H\)</span> or <span class="math notranslate nohighlight">\(T\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(H\)</span> given the other ticket is drawn second</p></td>
+</tr>
+</tbody>
+</table>
+<p>Each ticket is marked <span class="math notranslate nohighlight">\(H\)</span> or <span class="math notranslate nohighlight">\(T\)</span> independently and with equal chance, so <span class="math notranslate nohighlight">\(\delta\)</span> is <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>.</p>
+<p><strong>4 - Solution 3 (the worst)</strong></p>
+<p>Now we attempt to solve this by applying Bayes Theorem directly. It’s important to get the notation clear. Let <span class="math notranslate nohighlight">\(H_2\)</span> denote getting an <span class="math notranslate nohighlight">\(H\)</span> on the second draw and <span class="math notranslate nohighlight">\(H_1\)</span> is an <span class="math notranslate nohighlight">\(H\)</span> on the first. We want to find <span class="math notranslate nohighlight">\(\mathbb{P}(H_2 \mid H_1)\)</span>. Bayes Theorem tells us</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(H_2 \mid H_1) = \frac{\mathbb{P}(H_1 \mid H_2) \mathbb{P}(H_2)}{\mathbb{P}(H_1)}.\]</div>
+<p>This doesn’t do much to simplify the problem because <span class="math notranslate nohighlight">\(\mathbb{P}(H_1 \mid H_2)\)</span> is no easier to solve for and we’ll end up repeating calculations from Solution 1 or Solution 2 to find <span class="math notranslate nohighlight">\(\mathbb{P}(H_1 \mid H_2) \mathbb{P}(H_2) = \mathbb{P}(H_2 \text{ and } H_1).\)</span> It’s tempting to write this as <span class="math notranslate nohighlight">\(\mathbb{P}(H_1) \times \mathbb{P}(H_2)\)</span>, but these are dependent events so we can’t. A tree is helpful.</p>
+<p>For a single draw.</p>
+<figure class="align-default" id="htrandomboxtree2">
+<a class="reference internal image-reference" href="_images/HTrandomboxTree.svg"><img alt="_images/HTrandomboxTree.svg" src="_images/HTrandomboxTree.svg" width="70%" /></a>
+</figure>
+<p>For two draws.</p>
+<figure class="align-default" id="htrandomboxtree2draws">
+<a class="reference internal image-reference" href="_images/HTrandomboxTree2Draws.svg"><img alt="_images/HTrandomboxTree2Draws.svg" src="_images/HTrandomboxTree2Draws.svg" width="70%" /></a>
+</figure>
+<p>Therefore the probability of <span class="math notranslate nohighlight">\(H_1\)</span> and <span class="math notranslate nohighlight">\(H_2\)</span> is <span class="math notranslate nohighlight">\(0.5\times 0.25 + 0.25 \times 1 = \frac{3}{8}\)</span>. Plugging this into the formula for <span class="math notranslate nohighlight">\(\mathbb{P}(H_2 \mid H_1)\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{\frac{3}{8}}{\frac{1}{2}} = \frac{3}{4}.\]</div>
+<p>It follows that <span class="math notranslate nohighlight">\(\mathbb{P}(H_1 \mid H_2)\)</span> is also <span class="math notranslate nohighlight">\(\frac{3}{4}\)</span> because the unconditional probabilities of <span class="math notranslate nohighlight">\(H_1\)</span> and <span class="math notranslate nohighlight">\(H_2\)</span> are both <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>.</p>
+<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1xlryzoPWZ05K4SeHVzZHiCC4yQ-XhLVaZChy-gYoWRc/edit?usp=sharing">Here is a Google Sheets simulation</a>.</p>
 </section>
 </div>
 </section>
@@ -677,7 +770,8 @@ Treatment group: second joke audience <br></p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-distribution"><span class="xref myst">Normal Distribution</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation"><span class="xref myst">Correlation</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression"><span class="xref myst">Regression</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability"><span class="xref myst">Probability</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-i"><span class="xref myst">Probability I</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-ii"><span class="xref myst">Probability II</span></a></li>
 </ul>
   </nav></div>
 
