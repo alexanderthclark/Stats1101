@@ -241,3 +241,39 @@ The [provided spreadsheet](https://docs.google.com/spreadsheets/d/1-edxFvawj8f6v
 
 ```{exercise-end}
 ```
+
+```{exercise-start}
+:label: troll2
+```
+
+A pilgrim, traveling home, is wandering through a strange land when a troll appears:
+
+> *Woe, to pass, you must choose of these doors three.<br>
+Each leads home with some probability. <br>
+Chances 0, 50, and 100 less ten.<br>
+Independent but the order I cannot lend.<br>
+Choose traveler, lest in exile you stay.<br>
+Take three draws before I turn thee away.*
+
+1. If the first draw does not lead home, what is the probability the pilgrim opened the door that leads home with chance 0\%? 
+2. If the first draw does not lead home, what is the probability the pilgrim opened the door that leads home with chance 50\%? 
+3. If the first draw does not lead home, what is the probability the pilgrim opened the door that leads home with chance 90\%?
+
+4. If the first draw does not lead home, should the pilgrim open a different door on the next draw or try the same door again? 
+
+5. The troll, now old in his years, has seen 12 million pilgrims pass through. Each has chosen a door randomly to start and then randomly chosen a different door second if the first doesn't take them home. Finish filling in the table below with the expected counts.
+
+|                   | Door 0 second | Door 50 second | Door 90 second   |  Home after first |
+|-------------------|---------------|----------------|------------------|-------------------|
+| Door 0 first      | 0 million     |                |                  | 0 million         |
+| Door 50 first     |               | 0 million      |                  | 2 million         |
+| Door 90 first     |               |                | 0 million        | 3.6 million       |
+
+
+6. If the second draw does not lead home, should the pilgrim open a different door on the next draw? 
+7. What is the probability that the pilgrim remains in exile? 
+8. The pilgrim, alarmed by the risk of remaining in exile, bargains with the troll to replace the 0\% and 90\% chance doors with two 45\% chance doors. Is this wise? 
+9. The pilgrim, alarmed by the risk of remaining in exile, bargains with the troll to replace the 0\% and 90\% chance doors with two 80\% chance doors. Is this wise? 
+
+```{exercise-end}
+```
