@@ -125,3 +125,5 @@ The range 470 to 530 is therefore the expected sum $\pm$ SE. The sum falls in th
 ```
 
 The normal approximation is justified because of the **central limit theorem**. The central limit theorem states that, when random draws are made replacement from a box, the distribution for the sum of these draws will approximate a normal distribution. This is true even if the contents of the box do not follow a normal curve as long as the number of draws is large.
+
+The central limit theorem is a big deal. 

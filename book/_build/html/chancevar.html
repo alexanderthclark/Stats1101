@@ -77,8 +77,6 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
-    <link rel="prev" title="Probability II" href="bayes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,7 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
@@ -195,7 +193,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probability.html">Probability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chance Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Variability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -465,7 +463,7 @@ document.write(`
 <figure class="align-default" id="chanceerrorhist">
 <a class="reference internal image-reference" href="_images/chanceErrorHist.svg"><img alt="_images/chanceErrorHist.svg" src="_images/chanceErrorHist.svg" width="90%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 44 </span><span class="caption-text">This shows the results from 10 and 100 tosses of a coin, repeated 1000 times each. The histogram for 100 tosses is more spread out in absolute terms. But, in percentage terms, more of the 1000 trials yield close to 50% heads.</span><a class="headerlink" href="#chanceerrorhist" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">This shows the results from 10 and 100 tosses of a coin, repeated 1000 times each. The histogram for 100 tosses is more spread out in absolute terms. But, in percentage terms, more of the 1000 trials yield close to 50% heads.</span><a class="headerlink" href="#chanceerrorhist" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In absolute terms, the chance error will increase, but more slowly than the number of tosses. In fact, if the number of tosses increases 2x, the chance error increases only by a factor of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>. If the number of tosses increases 100x, the chance error increases only by a factor of 10.</p>
@@ -475,7 +473,7 @@ document.write(`
 <figure class="align-default" id="box01">
 <a class="reference internal image-reference" href="_images/box01.svg"><img alt="_images/box01.svg" src="_images/box01.svg" width="22%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 45 </span><span class="caption-text">This is a 0-1 box representing a fair coin flip.</span><a class="headerlink" href="#box01" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">This is a 0-1 box representing a fair coin flip.</span><a class="headerlink" href="#box01" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>There is chance variability based on the <em>number of draws</em> and the actual chance inherent in a process. Suppose 100 draws are made with replacement from one of the boxes below. You will win $1 if you can guess the sum within 10.</p>
@@ -544,6 +542,7 @@ Sum of 100 draws<div class="sd-summary-down docutils">
 <p class="sd-card-text">The range 470 to 530 is therefore the expected sum <span class="math notranslate nohighlight">\(\pm\)</span> SE. The sum falls in this range 68% of the time.</p>
 </div>
 </details><p>The normal approximation is justified because of the <strong>central limit theorem</strong>. The central limit theorem states that, when random draws are made replacement from a box, the distribution for the sum of these draws will approximate a normal distribution. This is true even if the contents of the box do not follow a normal curve as long as the number of draws is large.</p>
+<p>The central limit theorem is a big deal.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id3" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -582,24 +581,6 @@ Sum of 100 draws<div class="sd-summary-down docutils">
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="bayes.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Probability II</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="bibliography.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               

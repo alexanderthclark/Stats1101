@@ -185,7 +185,7 @@ A single row will contain the incomes for two partnered individuals, but an $x,y
 ```{solution-end}
 ```
 
-## [Probability](probability)
+## [Probability I](probability)
 
 ```{solution-start} conditional
 :class: dropdown
@@ -203,5 +203,89 @@ $\mathbb{P}(A \mid B) + \mathbb{P}(\text{not }A \mid B)=1$ for any $A,B$.
 Binomial coefficients tell you how many ways you can select $k$ items from a list of $n$, but the $k$ items are not ordered. 
 
 The president/VP pair is ordered and the co-preseident pair is not. Only the co-president pairings are counted by $\binom{3}{2}$. There will be twice as many president/VP pairings because (Alice, Bob) and (Bob, Alice) are considered distinct. 
+```{solution-end}
+```
+
+## [Probability II](bayes)
+
+
+```{solution-start} boxes
+:class: dropdown
+```
+
+1. $\mathbb{P}(H) = 0.5$
+2. $\mathbb{P}(\text{box with two Ts} \mid H) = 0$ because the box must have an $H$ to draw an $H$. 
+3. $$\mathbb{P}(\text{box with two Hs} \mid H) = \frac{ \mathbb{P}(H \mid \text{box with two Hs}) \mathbb{P}(\text{box with two Hs})}{\mathbb{P}(H)} $$
+
+$$= \frac{1\times 0.25}{0.5} = 0.25$$
+
+4. To find $\mathbb{P}(\text{H on second draw} \mid \text{H on first draw})$, the subtlety is that these are not independent. The unconditional probability is $\mathbb{P}(\text{H on second draw}) = 0.5$. This allows for the possibility of a box with two $T$s. An $H$ on the first draw reveals that the box does not have two $T$s, which will push our probability up. The intuititive answer of 0.5 is therefore *wrong*. For a similar problem, see also the famously difficult [boy girl paradox](https://en.wikipedia.org/wiki/Boy_or_girl_paradox).
+
+
+**4 - Solution 1**
+The first draw reveals there is an $H$ in the box. By part 3, we know there is a 0.5 probability the box contains two $H$s. The probability of an $H$ on the second draw is  
+
+
+
+$$ \underbrace{\frac{1}{2}}_{a} \cdot \overbrace{1}^{b} + \underbrace{\frac{1}{2}}_{c} \cdot \overbrace{\frac{1}{2}}^{b} = \frac{3}{4}.$$
+
+
+| Term | Probability of ... given $H$ on first draw               |
+|------|----------------------------------------------------------|
+| $a$  | box with two $H$s                                        |
+| $b$  | $H$ given two two-$H$ box                                |
+| $c$  | box with one $H$ and one $T$                             |
+| $d$  | $H$ given two one-$H$-one-$T$ box                        | 
+
+Each ticket is marked $H$ or $T$ independently and with equal chance, so $d$ is $\frac{1}{2}$. 
+
+
+**4 - Solution 2 (my favorite)**
+
+This solution is remarkably similar to the previous, but with a different interpretation. The first draw reveals there is an $H$ in the box. Half of the time you will draw the same ticket on your second draw. The other half of the time you draw the other ticket. 
+
+The conditional probability of an $H$ on the second draw given an $H$ on the first draw can be expanded as the sum of the probability of *the same ticket and $H$* and the probability of *a different ticket and $H$*, all conditional on $H$ on the first draw. The answer is
+
+$$ \underbrace{\frac{1}{2}}_{\alpha} \cdot \overbrace{1}^{\beta} + \underbrace{\frac{1}{2}}_{\gamma} \cdot \overbrace{\frac{1}{2}}^{\delta} = \frac{3}{4}.$$
+
+| Term     | Probability of ... given $H$ on first draw             |
+|----------|--------------------------------------------------------|
+| $\alpha$ | the same ticket is drawn again (an $H$).               |
+| $\beta$  | $H$ given the same ticket is drawn second              |
+| $\gamma$ | drawing the other ticket (which can be $H$ or $T$)     |
+| $\delta$ | $H$ given the other ticket is drawn second             |
+
+
+Each ticket is marked $H$ or $T$ independently and with equal chance, so $\delta$ is $\frac{1}{2}$. 
+
+**4 - Solution 3 (the worst)**
+
+Now we attempt to solve this by applying Bayes Theorem directly. It's important to get the notation clear. Let $H_2$ denote getting an $H$ on the second draw and $H_1$ is an $H$ on the first. We want to find $\mathbb{P}(H_2 \mid H_1)$. Bayes Theorem tells us
+
+$$\mathbb{P}(H_2 \mid H_1) = \frac{\mathbb{P}(H_1 \mid H_2) \mathbb{P}(H_2)}{\mathbb{P}(H_1)}.$$
+
+This doesn't do much to simplify the problem because $\mathbb{P}(H_1 \mid H_2)$ is no easier to solve for and we'll end up repeating calculations from Solution 1 or Solution 2 to find $\mathbb{P}(H_1 \mid H_2) \mathbb{P}(H_2) = \mathbb{P}(H_2 \text{ and } H_1).$ It's tempting to write this as $\mathbb{P}(H_1) \times \mathbb{P}(H_2)$, but these are dependent events so we can't. A tree is helpful. 
+
+For a single draw. 
+```{figure} images/tikz/HTrandomboxTree.svg
+:width: 70%
+:name: HTrandomboxTree2
+```
+
+For two draws. 
+```{figure} images/tikz/HTrandomboxTree2Draws.svg
+:width: 70%
+:name: HTrandomboxTree2Draws
+```
+
+Therefore the probability of $H_1$ and $H_2$ is $0.5\times 0.25 + 0.25 \times 1 = \frac{3}{8}$. Plugging this into the formula for $\mathbb{P}(H_2 \mid H_1)$, we get 
+
+$$\dfrac{\frac{3}{8}}{\frac{1}{2}} = \frac{3}{4}.$$ 
+
+It follows that $\mathbb{P}(H_1 \mid H_2)$ is also $\frac{3}{4}$ because the unconditional probabilities of $H_1$ and $H_2$ are both $\frac{1}{2}$.
+
+[Here is a Google Sheets simulation](https://docs.google.com/spreadsheets/d/1xlryzoPWZ05K4SeHVzZHiCC4yQ-XhLVaZChy-gYoWRc/edit?usp=sharing).
+
+
 ```{solution-end}
 ```

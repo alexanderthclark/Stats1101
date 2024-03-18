@@ -1,0 +1,72 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes.geometric}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\begin{document}
+
+
+\begin{tikzpicture}[->, grow=right, sloped,
+level 1/.style={sibling distance=3.4cm, level distance=4cm},
+level 2/.style={sibling distance=1.8cm, level distance=4cm},
+level 3/.style={sibling distance=0.6cm,},
+level 4/.style={sibling distance=0.4cm,}]
+\tikzstyle{bag} = [text width=3em, text centered] % Define bag style
+\tikzstyle{end} = [text width=0em, text centered] % Define end style
+
+\node[bag] {} % Root node with bag style
+    child {
+        node[bag] {two-H box} % Bag node
+            child {
+                node[end, label=right: {$HH$}] {} % End node with label
+                edge from parent
+                node[above] {} % Label above the edge
+                node[below] {1} % Label below the edge
+            }
+            child {
+                node[end, label=right: {not $HH$}] {} % End node with label
+                edge from parent
+                node[above] {0} % Label above the edge
+            }
+            edge from parent 
+            node[above] {}
+            node[below] {0.25} % Label below the edge
+    }
+    child {
+        node[bag] {one-H box} % Bag node
+            child {
+                node[end, label=right: {$HH$}] {} % End node with label
+                edge from parent
+                node[above] {} % Label above the edge
+                node[below] {0.25} % Label below the edge
+            }
+            child {
+                node[end, label=right: {not $HH$}] {} % End node with label
+                edge from parent
+                node[above] {0.75} % Label above the edge
+            }
+            edge from parent         
+            node[above] {0.5} % Label above the edge
+            node[below] {} % No label below the edge
+    }
+    child {
+        node[bag] {zero-H box} % Bag node
+            child {
+                node[end, label=right: {$HH$}] {} % End node with label
+                edge from parent
+                node[above] {} % Label above the edge
+                node[below] {0} % Label below the edge
+            }
+            child {
+                node[end, label=right: {not $HH$}] {} % End node with label
+                edge from parent
+                node[above] {1} % Label above the edge
+               % node[below] {\scalebox{0.6}{$1-\mathbb{P}(H \mid C)$}} % Label below the edge
+            }
+            edge from parent         
+            node[above] {0.25} % Label above the edge
+            node[below] {} % No label below the edge
+    };
+\end{tikzpicture}
+
+\end{document}
