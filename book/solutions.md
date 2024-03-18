@@ -226,7 +226,6 @@ $$= \frac{1\times 0.25}{0.5} = 0.25$$
 The first draw reveals there is an $H$ in the box. By part 3, we know there is a 0.5 probability the box contains two $H$s. The probability of an $H$ on the second draw is  
 
 
-
 $$ \underbrace{\frac{1}{2}}_{a} \cdot \overbrace{1}^{b} + \underbrace{\frac{1}{2}}_{c} \cdot \overbrace{\frac{1}{2}}^{b} = \frac{3}{4}.$$
 
 
@@ -242,7 +241,7 @@ Each ticket is marked $H$ or $T$ independently and with equal chance, so $d$ is 
 
 **4 - Solution 2 (my favorite)**
 
-This solution is remarkably similar to the previous, but with a different interpretation. The first draw reveals there is an $H$ in the box. Half of the time you will draw the same ticket on your second draw. The other half of the time you draw the other ticket. 
+This solution is remarkably similar to the previous, but with a different interpretation. The first draw reveals there is an $H$ in the box. Half of the time you will draw the same exact ticket on your second draw. This always gives an $H$, but you can also get an $H$ by drawing the other ticket. The other half of the time you draw the other ticket. The other ticket is an $H$ half the time.
 
 The conditional probability of an $H$ on the second draw given an $H$ on the first draw can be expanded as the sum of the probability of *the same ticket and $H$* and the probability of *a different ticket and $H$*, all conditional on $H$ on the first draw. The answer is
 
