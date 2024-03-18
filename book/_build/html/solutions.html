@@ -647,8 +647,8 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </table>
 <p>Each ticket is marked <span class="math notranslate nohighlight">\(H\)</span> or <span class="math notranslate nohighlight">\(T\)</span> independently and with equal chance, so <span class="math notranslate nohighlight">\(d\)</span> is <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>.</p>
 <p><strong>4 - Solution 2 (my favorite)</strong></p>
-<p>This solution is remarkably similar to the previous, but with a different interpretation. The first draw reveals there is an <span class="math notranslate nohighlight">\(H\)</span> in the box. Half of the time you will draw the same ticket on your second draw. The other half of the time you draw the other ticket.</p>
-<p>The conditional probability of an <span class="math notranslate nohighlight">\(H\)</span> on the second draw given an <span class="math notranslate nohighlight">\(H\)</span> on the first draw can be expanded as the sum of the probability of <em>the same ticket and <span class="math notranslate nohighlight">\(H\)</span></em> and the probability of <em>a different ticket and <span class="math notranslate nohighlight">\(H\)</span></em>, all conditional on <span class="math notranslate nohighlight">\(H\)</span> on the first draw. This is</p>
+<p>This solution is remarkably similar to the previous, but with a different interpretation. The first draw reveals there is an <span class="math notranslate nohighlight">\(H\)</span> in the box. Half of the time you will draw the same exact ticket on your second draw. This always gives an <span class="math notranslate nohighlight">\(H\)</span>, but you can also get an <span class="math notranslate nohighlight">\(H\)</span> by drawing the other ticket. The other half of the time you draw the other ticket. The other ticket is an <span class="math notranslate nohighlight">\(H\)</span> half the time.</p>
+<p>The conditional probability of an <span class="math notranslate nohighlight">\(H\)</span> on the second draw given an <span class="math notranslate nohighlight">\(H\)</span> on the first draw can be expanded as the sum of the probability of <em>the same ticket and <span class="math notranslate nohighlight">\(H\)</span></em> and the probability of <em>a different ticket and <span class="math notranslate nohighlight">\(H\)</span></em>, all conditional on <span class="math notranslate nohighlight">\(H\)</span> on the first draw. The answer is</p>
 <div class="math notranslate nohighlight">
 \[ \underbrace{\frac{1}{2}}_{\alpha} \cdot \overbrace{1}^{\beta} + \underbrace{\frac{1}{2}}_{\gamma} \cdot \overbrace{\frac{1}{2}}^{\delta} = \frac{3}{4}.\]</div>
 <table class="table">
@@ -659,16 +659,16 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </thead>
 <tbody>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\alpha\)</span></p></td>
-<td><p>the same ticket (an <span class="math notranslate nohighlight">\(H\)</span>).</p></td>
+<td><p>the same ticket is drawn again (an <span class="math notranslate nohighlight">\(H\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\beta\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(H\)</span> given the same ticket.</p></td>
+<td><p><span class="math notranslate nohighlight">\(H\)</span> given the same ticket is drawn second</p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\gamma\)</span></p></td>
 <td><p>drawing the other ticket (which can be <span class="math notranslate nohighlight">\(H\)</span> or <span class="math notranslate nohighlight">\(T\)</span>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\delta\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(H\)</span> given the other ticket</p></td>
+<td><p><span class="math notranslate nohighlight">\(H\)</span> given the other ticket is drawn second</p></td>
 </tr>
 </tbody>
 </table>
@@ -691,6 +691,60 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 \[\dfrac{\frac{3}{8}}{\frac{1}{2}} = \frac{3}{4}.\]</div>
 <p>It follows that <span class="math notranslate nohighlight">\(\mathbb{P}(H_1 \mid H_2)\)</span> is also <span class="math notranslate nohighlight">\(\frac{3}{4}\)</span> because the unconditional probabilities of <span class="math notranslate nohighlight">\(H_1\)</span> and <span class="math notranslate nohighlight">\(H_2\)</span> are both <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>.</p>
 <p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1xlryzoPWZ05K4SeHVzZHiCC4yQ-XhLVaZChy-gYoWRc/edit?usp=sharing">Here is a Google Sheets simulation</a>.</p>
+</section>
+</div>
+<div class="solution dropdown admonition" id="solutions-solution-14">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesraredisease"> Exercise 33</a></p>
+<section id="solution-content">
+<p>What are trying to find the probability that someone has the rare disease given a positive test. We’ll use a natural frequencies approach to find</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(\text{disease} mid \text{positive}) = \mathbb{P}(\text{positive and disease}) / \mathbb{P}(\text{positive}).\]</div>
+<p>In a population of 990,000 people (99<span class="math notranslate nohighlight">\(\times\)</span>10000), we expect 99 to have the diease. Of those, 99% will test positive. This is 99-.99 = 98.01. We expect 989,901 not to have the disease. Of those, 1% will get a positive result, or 9899.01. Together, 9899.01 + 98.01 = 9997.02 get a positive test result</p>
+<p>Thus, the conditional probability is about 98/9997, which is less than 1%.</p>
+</section>
+</div>
+<div class="solution dropdown admonition" id="solutions-solution-15">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bballbayes"> Exercise 34</a></p>
+<section id="solution-content">
+<p>An unknown player makes their first shot 50% of the time. This is calculated as</p>
+<div class="math notranslate nohighlight">
+\[0.5\times 0.9 + 0.5 \times 0.1.\]</div>
+<p>Simplifying yields <span class="math notranslate nohighlight">\(0.5(0.9 + 0.1) = 0.5\)</span>.</p>
+<p>Suppose there were 200 players. We can expect 100 scrubs and 100 ballers. The ballers make 90 shots and the scrubs make 10. There are 100 makes total.</p>
+<p>The probability of a scrub is now <span class="math notranslate nohighlight">\(\frac{10}{100}\)</span> and the probability of a baller is now <span class="math notranslate nohighlight">\(\frac{90}{100}\)</span>. The second shot goes in with probability
+$<span class="math notranslate nohighlight">\(0.9\times 0.9 + 0.1 \times 0.1 = 0.81 + 0.01 = 0.82.\)</span>$</p>
+<p>From the observer’s perspective, the first and second shots are not independent. With more shots observed, they are beginning to learn the player’s type. In other words, you should be more willing to pass to someone who makes their first shot because you should have greater confidence that the second shot will go in.</p>
+</section>
+</div>
+<div class="solution dropdown admonition" id="solutions-solution-16">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesReview"> Exercise 36</a></p>
+<section id="solution-content">
+<p><span class="math notranslate nohighlight">\(\mathbb{P}(\text{good review}) = 0.75\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbb{P}(\text{good review} \mid H) = 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(H \mid \text{good review}) = \frac{\mathbb{P}(\text{good review}\mid H)\mathbb{P}(H)}{\mathbb{P}(\text{good review})}\]</div>
+<div class="math notranslate nohighlight">
+\[ = \frac{1 \times 0.5}{.75} = \frac{2}{3}.\]</div>
+<p>The probability tree is shown below.</p>
+<figure class="align-default" id="productreviewtree">
+<a class="reference internal image-reference" href="_images/productreviewtree.svg"><img alt="_images/productreviewtree.svg" src="_images/productreviewtree.svg" width="70%" /></a>
+</figure>
+<p>These events are dependent because <span class="math notranslate nohighlight">\(\mathbb{P}(H \mid \text{good review}) \neq \mathbb{P}(H)\)</span>.</p>
+<p>If the truth-teller is replaced by a joker, then <span class="math notranslate nohighlight">\(\mathbb{P}(H \mid \text{bad review}) = 1\)</span>. The fake reviewer always leaves a positive reviewer, so the probability is the same as <span class="math notranslate nohighlight">\(\mathbb{P}(H \mid \text{joker and bad review})\)</span> and the joker only leaves a bad review if the product is of good quality.</p>
+</section>
+</div>
+<div class="solution dropdown admonition" id="solutions-solution-17">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesCountry"> Exercise 37</a></p>
+<section id="solution-content">
+<p>4/63 songs mention tractor and 14/63 mention truck.</p>
+<p>2 of the 14 mentioning truck mention tractor.</p>
+<p>2 of the 4 mentioning tractor mention truck. This can be calculated by simplying inspecting the data or by solve for the first three and then applying Bayes’ Theorem.</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}(\text{truck}\mid \text{tractor}) = \frac{ \mathbb{P}(\text{tractor}\mid \text{truck}) \mathbb{P}(\text{truck})} {\mathbb{P}(\text{tractor}) }  = \frac{ \frac{2}{14} \times \frac{14}{63} }{\frac{4}{63}} = \frac{2}{4}.\]</div>
 </section>
 </div>
 </section>

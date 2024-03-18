@@ -326,6 +326,33 @@ From the observer's perspective, the first and second shots are not independent.
 ```
 
 
+```{solution-start} bayesReview
+:class: dropdown
+```
+
+$\mathbb{P}(\text{good review}) = 0.75$
+
+$\mathbb{P}(\text{good review} \mid H) = 1$ 
+
+$$\mathbb{P}(H \mid \text{good review}) = \frac{\mathbb{P}(\text{good review}\mid H)\mathbb{P}(H)}{\mathbb{P}(\text{good review})}$$
+
+$$ = \frac{1 \times 0.5}{.75} = \frac{2}{3}.$$
+
+The probability tree is shown below.
+
+```{figure} images/tikz/productreviewtree.svg
+:width: 70%
+:name: productreviewtree
+```
+
+These events are dependent because $\mathbb{P}(H \mid \text{good review}) \neq \mathbb{P}(H)$.
+
+If the truth-teller is replaced by a joker, then $\mathbb{P}(H \mid \text{bad review}) = 1$. The fake reviewer always leaves a positive reviewer, so the probability is the same as $\mathbb{P}(H \mid \text{joker and bad review})$ and the joker only leaves a bad review if the product is of good quality.
+
+```{solution-end}
+```
+
+
 ```{solution-start} bayesCountry
 :class: dropdown
 ```
@@ -335,6 +362,9 @@ From the observer's perspective, the first and second shots are not independent.
 2 of the 14 mentioning truck mention tractor. 
 
 2 of the 4 mentioning tractor mention truck. This can be calculated by simplying inspecting the data or by solve for the first three and then applying Bayes' Theorem.
+
+
+$$\mathbb{P}(\text{truck}\mid \text{tractor}) = \frac{ \mathbb{P}(\text{tractor}\mid \text{truck}) \mathbb{P}(\text{truck})} {\mathbb{P}(\text{tractor}) }  = \frac{ \frac{2}{14} \times \frac{14}{63} }{\frac{4}{63}} = \frac{2}{4}.$$
 
 ```{solution-end}
 ```

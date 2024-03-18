@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes.geometric}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\begin{document}
+
+\begin{tikzpicture}[grow= right, level distance=1.5cm,
+  level 1/.style={sibling distance=9cm, level distance=3.5cm},
+  level 2/.style={sibling distance=5cm, level distance=3.5cm},
+  level 3/.style={sibling distance=2.3cm, level distance=3.5cm}]
+  \node {}
+    child {node {low quality}
+      child {node {fake}
+        child {node {positive} edge from parent node[above] {1}}
+        child {node {negative} edge from parent node[above] {0}}
+      edge from parent node[above] {0.5}
+      }
+      child {node {truth-teller}
+        child {node {positive} edge from parent node[above] {0}}
+        child {node {negative} edge from parent node[above] {1}}
+      edge from parent node[above] {0.5}
+      }
+      edge from parent node[above] {0.5}
+    }
+    child {node {high quality}
+     child {node {fake}
+        child {node {positive} edge from parent node[above] {1}}
+        child {node {negative} edge from parent node[above] {0}}
+      edge from parent node[above] {0.5}
+      }
+      child {node {truth-teller}
+        child {node {positive} edge from parent node[below] {1}}
+        child {node {negative} edge from parent node[above] {0}}
+      edge from parent node[above] {0.5}
+      }
+      edge from parent node[above] {0.5}
+    };
+\end{tikzpicture}
+
+\end{document}

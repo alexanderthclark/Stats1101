@@ -168,7 +168,7 @@ $$\mathbb{P}(\text{Negative} | \text{No Disease}) = 0.99$$
 
 
 ```{exercise-start}
-:label: hatcoins
+:label: bballbayes
 ```
 
 You're playing basketball at the park when your team picks up an unknown player. The unknown player is equally likely to be a scrub or a baller. A baller makes 90% of their shots and each shot is independent. A scrub makes 10% of their shots and each shot is independent. 
