@@ -71,6 +71,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sampling';</script>
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -421,8 +423,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-response-in-the-american-time-use-survey">Non-response in the American Time Use Survey</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-methods">Probability Methods</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -453,13 +457,36 @@ document.write(`
 <li><p>Who will respond truthfully to the survey?</p></li>
 </ol>
 <p>Each hurdle presents an opportunity for bias in the final estimate.</p>
-<p>One important type of bias is <strong>selection bias</strong>, which occurs when the sample systematically excludes one kind of person. Suppose a political pollster sets up a table at the local creamery, asking people who they’ll vote for in an American election as they shop for organic milk. The sensible population of interest is American voters and the parameters of interest are the percentage voting for each candidate. However, the creamery setting <em>selects</em> for a sort of yuppie person who can tolerate lactose. People of Northern European descent have the lowest rate of lactose intolerant, so the sample is unlikely to be representative of America.</p>
-<p>The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurlde is getting responses. If a phone survey is used, there will be many who don’t answer. This is a problem <em>if</em> those who don’t respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called <strong>non-response bias</strong>.</p>
+<p>One important type of bias is <strong>selection bias</strong>, which occurs when the sample systematically excludes one kind of person. Suppose a political pollster sets up a table at the local creamery, asking people who they’ll vote for in an American election as they shop for organic milk. The sensible population of interest is American voters and the parameters of interest are the percentage voting for each candidate. However, the creamery setting <em>selects</em> for a sort of yuppie person who can tolerate lactose. People of Northern European descent have the lowest rate of lactose intolerance, so the sample is unlikely to be representative of America.</p>
+<p>The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurdle is getting responses. If a phone survey is used, there will be many who don’t answer. This is a problem <em>if</em> those who don’t respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called <strong>non-response bias</strong>.</p>
+<p>The specific problem of an unrepresentative distribution of ages in a sample can be solved by using <strong>quota sampling</strong>. In quota sampling, the sample is constructed to resemble the population of interest with respect to key characteristics. This can help, but it doesn’t guarantee representativeness because not all important characteristics can be understood.</p>
+<p><strong>Example</strong>: Imagine we want to estimate the public’s satisfaction with the US Postal Service. Opinions differ by age and by their curmudgeonliness. Perhaps older people like USPS more, but curmudgeons will not like USPS regardless of age <em>and</em> curmudgeons will not respond. It’s easy to quota sample based on age, and a quota sample will result in an average satisfaction rating of 9 based on <a class="reference internal" href="#age-curmudg-table"><span class="std std-numref">Table 11</span></a>. This is better than not using quota sampling and constructing a sample that overrepresents older non-curmudgeons. However, the true average rating is 7. Quota sampling can’t give a good estimate of the actual population parameter because quotas for old or young people will systematically exclude curmudgeons.</p>
+<table class="table" id="age-curmudg-table">
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Average USPS Satisfaction by Age and Curmudgeonliness</span><a class="headerlink" href="#age-curmudg-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Bottom 50% Age</p></th>
+<th class="head"><p>Top 50% Age</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bottom 50% Curmudgeon</p></td>
+<td><p>8</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Top 50% Curmudgeon</p></td>
+<td><p>5</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+<p>The last hurdle in surveying is getting truthful responses. People might provide socially acceptable answers instead of truthful answers, especially when the survey involves talking to an actual person. Answers can be influenced by the wording of questions. These phenomena all fall under the umbrella of <strong>response bias</strong>.</p>
+<p>The Trafalgar Group is an opinion polling company, notable for predicting that Donald Trump would win the 2016 US presidential election while most polls were wrong. One proposed explanation for why so many polls were wrong is the theory of the “shy Trump voter.” A shy Trump voter is someone who voted for Trump but indicated the opposite to pollsters, motivated by fear of social stigma. This is a case of response bias and correcting for it requires some artifice. The Trafalgar group attempted to account for that by asking respondents how they think their neighbors will vote.</p>
 <section id="non-response-in-the-american-time-use-survey">
 <h3>Non-response in the American Time Use Survey<a class="headerlink" href="#non-response-in-the-american-time-use-survey" title="Permalink to this heading">#</a></h3>
-<p><span id="id3">[<a class="reference internal" href="bibliography.html#id59" title="Katharine G Abraham, Aaron Maitland, and Suzanne M Bianchi. Nonresponse in the american time use survey: who is missing from the data and how much does it matter? International Journal of Public Opinion Quarterly, 70(5):676–703, 2006.">AMB06</a>]</span> reports different response rates for the American Time Use Survey, partially reproduced in <a class="reference internal" href="#atusresprates"><span class="std std-numref">Table 11</span></a>. The differing response rates present a mine field for researchers.</p>
+<p><span id="id3">[<a class="reference internal" href="bibliography.html#id59" title="Katharine G Abraham, Aaron Maitland, and Suzanne M Bianchi. Nonresponse in the american time use survey: who is missing from the data and how much does it matter? International Journal of Public Opinion Quarterly, 70(5):676–703, 2006.">AMB06</a>]</span> reports different response rates for the American Time Use Survey, partially reproduced in <a class="reference internal" href="#atusresprates"><span class="std std-numref">Table 12</span></a>. The differing response rates present a minefield for researchers.</p>
 <table class="table" id="atusresprates">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">2004 ATUS Response Rates (Table 2 from [AMB06])</span><a class="headerlink" href="#atusresprates" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">2004 ATUS Response Rates (Table 2 from [AMB06])</span><a class="headerlink" href="#atusresprates" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Variable</p></th>
 <th class="head"><p>Number in Sample</p></th>
@@ -553,6 +580,29 @@ document.write(`
 </figcaption>
 </figure>
 </section>
+<section id="probability-methods">
+<h3>Probability Methods<a class="headerlink" href="#probability-methods" title="Permalink to this heading">#</a></h3>
+<p>A good sample is representative of the population of interest. Like in experiments, the best way to ensure representativeness is to use randomization. A <strong>simple random sample</strong> is one drawn at random without replacement. When feasible, this is a good method. Feasibility requires there’s some big list of names to draw from. For people who will vote in the next election, there is no such list. So, political polling is complicated and the nuts and bolts are beyond our scope.</p>
+<p>Note that probability methods are important regardless of the sample size. An estimate can be decomposed as</p>
+<div class="math notranslate nohighlight">
+\[\text{estimate = parameter + bias + chance error}.\]</div>
+<p>The sample size controls the chance error, with larger samples reducing the chance error, but a bad sampling technique is vulnerable to bias no matter the sample size.</p>
+</section>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="incentivesurvey">
+
+<p class="admonition-title"><span class="caption-number">Exercise 39 </span></p>
+<section id="exercise-content">
+<p>A user researcher at a large ecommerce company wants to have a representative sample of its users take a survey.</p>
+<ol class="arabic simple">
+<li><p>They create a survey that is visible to anyone who completes an order on a single day. Describe at least one source of bias.</p></li>
+<li><p>They email 100 users, drawn without replacement, from a list of all people holding an account with the company.  What kind of sample is this?</p></li>
+<li><p>In the email to 100 users, they offer a $10 gift card to anyone who completes the survey. What kind of bias is this designed to prevent?</p></li>
+</ol>
+</section>
+</div>
 </section>
 </section>
 
@@ -622,8 +672,10 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-response-in-the-american-time-use-survey">Non-response in the American Time Use Survey</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-methods">Probability Methods</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 
