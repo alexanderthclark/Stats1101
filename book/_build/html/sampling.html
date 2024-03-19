@@ -7,8 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Intro Stats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Sampling &#8212; Intro Stats</title>
   
   
   
@@ -70,10 +71,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sampling';</script>
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Chance Variability" href="chancevary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,7 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
@@ -191,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="probability.html">Probability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Variability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -290,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fsampling.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -302,6 +305,54 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/sampling.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -343,7 +394,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -354,11 +407,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Sampling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -368,13 +429,144 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <section class="tex2jax_ignore mathjax_ignore" id="sampling">
+<span id="id1"></span><h1>Sampling<a class="headerlink" href="#sampling" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapters 19, 20</p></li>
+</ul>
 </div>
+<section id="sample-surveys">
+<h2>Sample Surveys<a class="headerlink" href="#sample-surveys" title="Permalink to this heading">#</a></h2>
+<p>Researchers are often interested in <strong>populations</strong>. This is the group of individuals to which the research aims to generalize. The numerical facts of interest are called <strong>parameters</strong>. Maybe you want to know the average lifespan of owls. The parameter of interest is the average lifespan. The population of interest is all owls.</p>
+<p>Of course, the leading owl experts don’t study every single owl. Nearly all researchers work with <strong>samples</strong>, or some subset of the larger population. One could estimate the average lifespan of owls from a sample, but this wouldn’t be a parameter. We reserve parameter as a term for populations. Instead the sample average is a <strong>statistic</strong> meant to estimate the population parameter. The statistic will be a good estimate when the sample is representative.</p>
+<p>In practice, finding a good sample statistic is difficult. There are nuances that require domain knowledge. For example, how will you find the owls? In surveys of people, there’s no guarantee that someone will respond and, even if they do, they might not respond truthfully. When using surveys, we can imagine three hurdles:</p>
+<ol class="arabic simple">
+<li><p>Who to survey?</p></li>
+<li><p>Who will respond to the survey?</p></li>
+<li><p>Who will respond truthfully to the survey?</p></li>
+</ol>
+<p>Each hurdle presents an opportunity for bias in the final estimate.</p>
+<p>One important type of bias is <strong>selection bias</strong>, which occurs when the sample systematically excludes one kind of person. Suppose a political pollster sets up a table at the local creamery, asking people who they’ll vote for in an American election as they shop for organic milk. The sensible population of interest is American voters and the parameters of interest are the percentage voting for each candidate. However, the creamery setting <em>selects</em> for a sort of yuppie person who can tolerate lactose. People of Northern European descent have the lowest rate of lactose intolerant, so the sample is unlikely to be representative of America.</p>
+<p>The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurlde is getting responses. If a phone survey is used, there will be many who don’t answer. This is a problem <em>if</em> those who don’t respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called <strong>non-response bias</strong>.</p>
+<p><span id="id3">[<a class="reference internal" href="bibliography.html#id59" title="Katharine G Abraham, Aaron Maitland, and Suzanne M Bianchi. Nonresponse in the american time use survey: who is missing from the data and how much does it matter? International Journal of Public Opinion Quarterly, 70(5):676–703, 2006.">AMB06</a>]</span> reports different response rates for the American Time Use Survey, partially reproduced in <a class="reference internal" href="#atusresprates"><span class="std std-numref">Table 11</span></a>. The differing response rates present a mine field for researchers.</p>
+<table class="table" id="atusresprates">
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">2004 ATUS Response Rates </span><a class="headerlink" href="#atusresprates" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Number in Sample</p></th>
+<th class="head"><p>Response Rate</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Respondent’s Sex</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Male</p></td>
+<td><p>12,160</p></td>
+<td><p>51.6</p></td>
+</tr>
+<tr class="row-even"><td><p>Female</p></td>
+<td><p>14,736</p></td>
+<td><p>54.7</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Respondent’s Age</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>15–30</p></td>
+<td><p>6,438</p></td>
+<td><p>46.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>31–45</p></td>
+<td><p>8,447</p></td>
+<td><p>51.7</p></td>
+</tr>
+<tr class="row-even"><td><p>46–55</p></td>
+<td><p>4,676</p></td>
+<td><p>58.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>56–65</p></td>
+<td><p>3,216</p></td>
+<td><p>60.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Over 65</p></td>
+<td><p>4,119</p></td>
+<td><p>55.3</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Respondent’s Race/Ethnicity</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Hispanic</p></td>
+<td><p>3,508</p></td>
+<td><p>46.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Non-Hispanic black</p></td>
+<td><p>3,864</p></td>
+<td><p>40.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Other</p></td>
+<td><p>19,524</p></td>
+<td><p>56.1</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Household Income ($)</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Missing</p></td>
+<td><p>5,055</p></td>
+<td><p>41.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Less than 20,000</p></td>
+<td><p>4,947</p></td>
+<td><p>46.2</p></td>
+</tr>
+<tr class="row-even"><td><p>20,000–39,999</p></td>
+<td><p>5,817</p></td>
+<td><p>53.9</p></td>
+</tr>
+<tr class="row-odd"><td><p>40,000–74,999</p></td>
+<td><p>5,982</p></td>
+<td><p>58.8</p></td>
+</tr>
+<tr class="row-even"><td><p>75,000 or more</p></td>
+<td><p>5,095</p></td>
+<td><p>62.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Differing response rates can be accounted for with statistical corrections, but the researcher can’t necessarily be confident in their results just by looking at the data. While different demographic groups can be reweighted when calculating a statistic, the features of non-respondents can never be fully known. The decline in response rates for important household surveys has caused some concern regarding the quality of this data.</p>
+<figure class="align-default" id="household-survey-respons">
+<a class="reference internal image-reference" href="_images/household-survey-respons.svg"><img alt="_images/household-survey-respons.svg" src="_images/household-survey-respons.svg" width="80%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Source: <a class="reference external" href="https://www.bls.gov/osmr/response-rates/">Bureau of Labor Statistics</a></span><a class="headerlink" href="#household-survey-respons" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "alexanderthclark/Stats1101",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -386,12 +578,44 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="chancevary.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chance Variability</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bibliography.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
