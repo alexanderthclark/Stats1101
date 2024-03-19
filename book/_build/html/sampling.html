@@ -417,7 +417,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-response-in-the-american-time-use-survey">Non-response in the American Time Use Survey</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -450,9 +453,32 @@ document.write(`
 <p>Each hurdle presents an opportunity for bias in the final estimate.</p>
 <p>One important type of bias is <strong>selection bias</strong>, which occurs when the sample systematically excludes one kind of person. Suppose a political pollster sets up a table at the local creamery, asking people who they’ll vote for in an American election as they shop for organic milk. The sensible population of interest is American voters and the parameters of interest are the percentage voting for each candidate. However, the creamery setting <em>selects</em> for a sort of yuppie person who can tolerate lactose. People of Northern European descent have the lowest rate of lactose intolerant, so the sample is unlikely to be representative of America.</p>
 <p>The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurlde is getting responses. If a phone survey is used, there will be many who don’t answer. This is a problem <em>if</em> those who don’t respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called <strong>non-response bias</strong>.</p>
-<p><span id="id3">[<a class="reference internal" href="bibliography.html#id59" title="Katharine G Abraham, Aaron Maitland, and Suzanne M Bianchi. Nonresponse in the american time use survey: who is missing from the data and how much does it matter? International Journal of Public Opinion Quarterly, 70(5):676–703, 2006.">AMB06</a>]</span> reports different response rates for the American Time Use Survey, partially reproduced in <a class="reference internal" href="#atusresprates"><span class="std std-numref">Table 11</span></a>. The differing response rates present a mine field for researchers.</p>
+<p>The specific problem of an unrepresentative distribution of ages in a sample can be solved by using <strong>quota sampling</strong>. In quota sampling, the sample is constructed to resemble the population of interest with respect to key characteristics. This can help, but it doesn’t guarantee representativeness because not all important characteristics can be understood.</p>
+<p><strong>Example</strong>: Imagine we want to estimate the public’s satisfaction with the US Postal Service. Opinions differ by age and by their curmudgeonliness. Perhaps older people like USPS more, but curmudgeons will not like USPS regardless of age <em>and</em> curmudgeons will not respond. It’s easy to quota sample based on age, and a quota sample will result in an average satisfaction rating of 9 based on <a class="reference internal" href="#age-curmudg-table"><span class="std std-numref">Table 11</span></a>. This is better than not using quota sampling and constructing a sample that overrepresents older non-curmudgeons. However, the true average rating is 7. Quota sampling can’t give a good estimate of the actual population parameter because quotas for old or young people will systematically exclude curmudgeons.</p>
+<table class="table" id="age-curmudg-table">
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Average USPS Satisfaction by Age and Curmudgeonliness</span><a class="headerlink" href="#age-curmudg-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Bottom 50% Age</p></th>
+<th class="head"><p>Top 50% Age</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bottom 50% Curmudgeon</p></td>
+<td><p>8</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Top 50% Curmudgeon</p></td>
+<td><p>5</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+<section id="non-response-in-the-american-time-use-survey">
+<h3>Non-response in the American Time Use Survey<a class="headerlink" href="#non-response-in-the-american-time-use-survey" title="Permalink to this heading">#</a></h3>
+<p><span id="id3">[<a class="reference internal" href="bibliography.html#id59" title="Katharine G Abraham, Aaron Maitland, and Suzanne M Bianchi. Nonresponse in the american time use survey: who is missing from the data and how much does it matter? International Journal of Public Opinion Quarterly, 70(5):676–703, 2006.">AMB06</a>]</span> reports different response rates for the American Time Use Survey, partially reproduced in <a class="reference internal" href="#atusresprates"><span class="std std-numref">Table 12</span></a>. The differing response rates present a mine field for researchers.</p>
 <table class="table" id="atusresprates">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">2004 ATUS Response Rates (Table 2 from [AMB06])</span><a class="headerlink" href="#atusresprates" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">2004 ATUS Response Rates (Table 2 from [AMB06])</span><a class="headerlink" href="#atusresprates" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Variable</p></th>
 <th class="head"><p>Number in Sample</p></th>
@@ -547,6 +573,7 @@ document.write(`
 </figure>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -611,7 +638,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-response-in-the-american-time-use-survey">Non-response in the American Time Use Survey</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

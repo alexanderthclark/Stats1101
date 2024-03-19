@@ -24,6 +24,27 @@ One important type of bias is **selection bias**, which occurs when the sample s
 
 The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurlde is getting responses. If a phone survey is used, there will be many who don't answer. This is a problem *if* those who don't respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called **non-response bias**. 
 
+The specific problem of an unrepresentative distribution of ages in a sample can be solved by using **quota sampling**. In quota sampling, the sample is constructed to resemble the population of interest with respect to key characteristics. This can help, but it doesn't guarantee representativeness because not all important characteristics can be understood. 
+
+**Example**: Imagine we want to estimate the public's satisfaction with the US Postal Service. Opinions differ by age and by their curmudgeonliness. Perhaps older people like USPS more, but curmudgeons will not like USPS regardless of age *and* curmudgeons will not respond. It's easy to quota sample based on age, and a quota sample will result in an average satisfaction rating of 9 based on {numref}`age-curmudg-table`. This is better than not using quota sampling and constructing a sample that overrepresents older non-curmudgeons. However, the true average rating is 7. Quota sampling can't give a good estimate of the actual population parameter because quotas for old or young people will systematically exclude curmudgeons. 
+
+```{list-table} Average USPS Satisfaction by Age and Curmudgeonliness
+:header-rows: 1
+:name: age-curmudg-table
+
+* - 
+  - Bottom 50% Age
+  - Top 50% Age
+* - Bottom 50% Curmudgeon
+  - 8
+  - 10
+* - Top 50% Curmudgeon
+  - 5
+  - 5
+```
+
+
+### Non-response in the American Time Use Survey
 
 {cite}`abraham2006nonresponse` reports different response rates for the American Time Use Survey, partially reproduced in {numref}`atusresprates`. The differing response rates present a mine field for researchers. 
 
