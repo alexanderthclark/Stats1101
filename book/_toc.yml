@@ -19,6 +19,7 @@ parts:
     - file: probability
     - file: bayes
     - file: chancevary
+    - file: sampling
     - file: bibliography
 
 #- caption: Solutions
