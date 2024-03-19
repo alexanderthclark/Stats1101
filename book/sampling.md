@@ -24,6 +24,7 @@ One important type of bias is **selection bias**, which occurs when the sample s
 
 The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurlde is getting responses. If a phone survey is used, there will be many who don't answer. This is a problem *if* those who don't respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called **non-response bias**. 
 
+### Non-response in the American Time Use Survey
 
 {cite}`abraham2006nonresponse` reports different response rates for the American Time Use Survey, partially reproduced in {numref}`atusresprates`. The differing response rates present a mine field for researchers. 
 
