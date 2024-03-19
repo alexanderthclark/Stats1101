@@ -71,6 +71,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sampling';</script>
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -419,8 +421,17 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-response-in-the-american-time-use-survey">Non-response in the American Time Use Survey</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-methods">Probability Methods</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chance-errors-in-sampling">Chance Errors in Sampling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-value-and-se">Expected Value and SE</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-right-se">Finding the right SE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -451,8 +462,8 @@ document.write(`
 <li><p>Who will respond truthfully to the survey?</p></li>
 </ol>
 <p>Each hurdle presents an opportunity for bias in the final estimate.</p>
-<p>One important type of bias is <strong>selection bias</strong>, which occurs when the sample systematically excludes one kind of person. Suppose a political pollster sets up a table at the local creamery, asking people who they’ll vote for in an American election as they shop for organic milk. The sensible population of interest is American voters and the parameters of interest are the percentage voting for each candidate. However, the creamery setting <em>selects</em> for a sort of yuppie person who can tolerate lactose. People of Northern European descent have the lowest rate of lactose intolerant, so the sample is unlikely to be representative of America.</p>
-<p>The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurlde is getting responses. If a phone survey is used, there will be many who don’t answer. This is a problem <em>if</em> those who don’t respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called <strong>non-response bias</strong>.</p>
+<p>One important type of bias is <strong>selection bias</strong>, which occurs when the sample systematically excludes one kind of person. Suppose a political pollster sets up a table at the local creamery, asking people who they’ll vote for in an American election as they shop for organic milk. The sensible population of interest is American voters and the parameters of interest are the percentage voting for each candidate. However, the creamery setting <em>selects</em> for a sort of yuppie person who can tolerate lactose. People of Northern European descent have the lowest rate of lactose intolerance, so the sample is unlikely to be representative of America.</p>
+<p>The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurdle is getting responses. If a phone survey is used, there will be many who don’t answer. This is a problem <em>if</em> those who don’t respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called <strong>non-response bias</strong>.</p>
 <p>The specific problem of an unrepresentative distribution of ages in a sample can be solved by using <strong>quota sampling</strong>. In quota sampling, the sample is constructed to resemble the population of interest with respect to key characteristics. This can help, but it doesn’t guarantee representativeness because not all important characteristics can be understood.</p>
 <p><strong>Example</strong>: Imagine we want to estimate the public’s satisfaction with the US Postal Service. Opinions differ by age and by their curmudgeonliness. Perhaps older people like USPS more, but curmudgeons will not like USPS regardless of age <em>and</em> curmudgeons will not respond. It’s easy to quota sample based on age, and a quota sample will result in an average satisfaction rating of 9 based on <a class="reference internal" href="#age-curmudg-table"><span class="std std-numref">Table 11</span></a>. This is better than not using quota sampling and constructing a sample that overrepresents older non-curmudgeons. However, the true average rating is 7. Quota sampling can’t give a good estimate of the actual population parameter because quotas for old or young people will systematically exclude curmudgeons.</p>
 <table class="table" id="age-curmudg-table">
@@ -474,9 +485,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+<p>The last hurdle in surveying is getting truthful responses. People might provide socially acceptable answers instead of truthful answers, especially when the survey involves talking to an actual person. Answers can be influenced by the wording of questions. These phenomena all fall under the umbrella of <strong>response bias</strong>.</p>
+<p>The Trafalgar Group is an opinion polling company, notable for predicting that Donald Trump would win the 2016 US presidential election while most polls were wrong. One proposed explanation for why so many polls were wrong is the theory of the “shy Trump voter.” A shy Trump voter is someone who voted for Trump but indicated the opposite to pollsters, motivated by fear of social stigma. This is a case of response bias and correcting for it requires some artifice. The Trafalgar group attempted to account for that by asking respondents how they think their neighbors will vote.</p>
 <section id="non-response-in-the-american-time-use-survey">
 <h3>Non-response in the American Time Use Survey<a class="headerlink" href="#non-response-in-the-american-time-use-survey" title="Permalink to this heading">#</a></h3>
-<p><span id="id3">[<a class="reference internal" href="bibliography.html#id59" title="Katharine G Abraham, Aaron Maitland, and Suzanne M Bianchi. Nonresponse in the american time use survey: who is missing from the data and how much does it matter? International Journal of Public Opinion Quarterly, 70(5):676–703, 2006.">AMB06</a>]</span> reports different response rates for the American Time Use Survey, partially reproduced in <a class="reference internal" href="#atusresprates"><span class="std std-numref">Table 12</span></a>. The differing response rates present a mine field for researchers.</p>
+<p><span id="id3">[<a class="reference internal" href="bibliography.html#id59" title="Katharine G Abraham, Aaron Maitland, and Suzanne M Bianchi. Nonresponse in the american time use survey: who is missing from the data and how much does it matter? International Journal of Public Opinion Quarterly, 70(5):676–703, 2006.">AMB06</a>]</span> reports different response rates for the American Time Use Survey, partially reproduced in <a class="reference internal" href="#atusresprates"><span class="std std-numref">Table 12</span></a>. The differing response rates present a minefield for researchers.</p>
 <table class="table" id="atusresprates">
 <caption><span class="caption-number">Table 12 </span><span class="caption-text">2004 ATUS Response Rates (Table 2 from [AMB06])</span><a class="headerlink" href="#atusresprates" title="Permalink to this table">#</a></caption>
 <thead>
@@ -572,6 +585,74 @@ document.write(`
 </figcaption>
 </figure>
 </section>
+<section id="probability-methods">
+<h3>Probability Methods<a class="headerlink" href="#probability-methods" title="Permalink to this heading">#</a></h3>
+<p>A good sample is representative of the population of interest. Like in experiments, the best way to ensure representativeness is to use randomization. A <strong>simple random sample</strong> is one drawn at random without replacement. When feasible, this is a good method. Feasibility requires there’s some big list of names to draw from. For people who will vote in the next election, there is no such list. So, political polling is complicated and the nuts and bolts are beyond our scope.</p>
+<p>Note that probability methods are important regardless of the sample size. An estimate can be decomposed as</p>
+<div class="math notranslate nohighlight">
+\[\text{estimate = parameter + bias + chance error}.\]</div>
+<p>The sample size controls the chance error, with larger samples reducing the chance error, but a bad sampling technique is vulnerable to bias no matter the sample size.</p>
+</section>
+</section>
+<section id="chance-errors-in-sampling">
+<h2>Chance Errors in Sampling<a class="headerlink" href="#chance-errors-in-sampling" title="Permalink to this heading">#</a></h2>
+<p>In this section, we put aside most issues of bias and try to understand the chance error for a sample statistic.</p>
+<section id="expected-value-and-se">
+<h3>Expected Value and SE<a class="headerlink" href="#expected-value-and-se" title="Permalink to this heading">#</a></h3>
+<p>Percentages are a focal population parameter and thus a focal sample statistic. What percentage of Columbia students want a TikTok ban? What percentage of Peloton members have an Apple Watch? What percentage of Uber customers also use Lyft? Etc. This sort of question can be answered with a simple random sample. With a simple ranomd sample, the expected value for the sample percentage equals the poulation percentage. This means there is no bias, but it doesn’t rule out chance error.</p>
+<section id="finding-the-right-se">
+<h4>Finding the right SE<a class="headerlink" href="#finding-the-right-se" title="Permalink to this heading">#</a></h4>
+<p>Let’s take the example of finding what percentage of Peloton members have an Apple Watch. Before building an app for the watchOS, a smart business will first “size” the opportunity by estimating how many members have a watch.</p>
+<figure class="align-default" id="boxapplewatch">
+<a class="reference internal image-reference" href="_images/boxapplewatch.svg"><img alt="_images/boxapplewatch.svg" src="_images/boxapplewatch.svg" width="61%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">The box represents a simplification where 40 members of a population of 100 members have an Apple Watch.</span><a class="headerlink" href="#boxapplewatch" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Suppose, as indicated by <a class="reference internal" href="#boxapplewatch"><span class="std std-numref">Fig. 48</span></a>, there are 100 Peloton members and, though Peloton doesn’t know it, 40 of them have an Apple Watch.</p>
+<p>If Peloton were to sample 100 members <em>with replacement</em>, the total in the sample who have an Apple Watch would be</p>
+<div class="math notranslate nohighlight">
+\[\text{# Apple Watch Owners in Sample = 40 + chance error}.\]</div>
+<p>Because the sample was done with replacement, the chance error can be nonzero, so SE&gt;0. In particular, it could be calculated as <span class="math notranslate nohighlight">\(\sqrt{100} \times \sqrt{.4\times.6} \approx 4.9\)</span> given what we learned from Chapter 17.</p>
+<p>We consider two adjustments to turn this into an SE for the percentage of users with an Apple Watch if we instead sampled without replacement.</p>
+<p><strong>Adjustment 1</strong>. The chance error above is for a sum. Peloton might prefer to report a percentage if they expect to continue to attract new members. This involves a straightforward adjustment. The fraction of members owning an Apple Watch is actually an average (recording a 1 for every Apple Watch owner and a 0 otherwise). For an average calculated as <span class="math notranslate nohighlight">\(\frac{\text{sum}}{n}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\text{SE for an average} = \frac{\text{SE for sum}}{n}.\]</div>
+<p>Just like how the SD for a list of numbers would double if you doubled each value, the SE is divided by <span class="math notranslate nohighlight">\(n\)</span> when moving from a sum to an average. This is mere arithmetic manipulation, so there is square root business at work. It follows that we simply multiply to work with percentages:</p>
+<div class="math notranslate nohighlight">
+\[\text{SE for a percentage} = \frac{\text{SE for sum}}{n} \times 100\%.\]</div>
+<p>Both of these can be rewritten by substituting in how the SE for the sum is calculated.</p>
+<div class="math notranslate nohighlight">
+\[\text{SE for an average} = \frac{\text{SD for the box}}{\sqrt{n}}.\]</div>
+<div class="math notranslate nohighlight">
+\[\text{SE for a proportion} = \sqrt{\frac{p(1-p)}{n}}.\]</div>
+<div class="math notranslate nohighlight">
+\[\text{SE for a percentage} = \sqrt{\frac{p(1-p)}{n}} \times 100\%.\]</div>
+<p>Thus, the SE for the percentage of members with an Apple Watch based on the sample of 100 members, drawn with replacement is about <span class="math notranslate nohighlight">\(\frac{4.9}{100}\times 100\%\)</span>, or 4.9%.</p>
+<p><strong>Adjustment 2</strong>. The SE formulas we first learned assume draws are made <em>with replacement</em>. Simple random samples are done without replacement. While we found SE to be about 4.9%, we should note that if a sample of 100 members were done without replacement, we’d have sampled the entire population and there would be no variability in the sample percentage. We’d always find 40% of members have an Apple Watch. This reveals that sampling without replacement actually has a lower associated standard error. The is corrected by a correction factor:</p>
+<div class="math notranslate nohighlight">
+\[\text{SE drawing without replacement = correction factor \times SE drawing with replacement}.\]</div>
+<p>And the correction factor is</p>
+<div class="math notranslate nohighlight">
+\[\text{correction factor} = \sqrt{\frac{\text{Population Size - Sample Size}} {\text{Population Size} -1}}.\]</div>
+<p>When the sample size equals the population size, this means the SE for a simple random sample is zero, because the numerator zeros out. When the population size is large relative to the sample size, the correction factor is nearly one. If we sample 10 people from a population of 100, the correction factor is about 0.95. In practice, the correction factor is often ignored. One rule of thumb is that this can be done when less than 10% of the population is sampled.</p>
+</section>
+</section>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="incentivesurvey">
+
+<p class="admonition-title"><span class="caption-number">Exercise 39 </span></p>
+<section id="exercise-content">
+<p>A user researcher at a large ecommerce company wants to have a representative sample of its users take a survey.</p>
+<ol class="arabic simple">
+<li><p>They create a survey that is visible to anyone who completes an order on a single day. Describe at least one source of bias.</p></li>
+<li><p>They email 100 users, drawn without replacement, from a list of all people holding an account with the company.  What kind of sample is this?</p></li>
+<li><p>In the email to 100 users, they offer a $10 gift card to anyone who completes the survey. What kind of bias is this designed to prevent?</p></li>
+</ol>
+</section>
+</div>
 </section>
 </section>
 
@@ -640,8 +721,17 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-surveys">Sample Surveys</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-response-in-the-american-time-use-survey">Non-response in the American Time Use Survey</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-methods">Probability Methods</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chance-errors-in-sampling">Chance Errors in Sampling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-value-and-se">Expected Value and SE</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-right-se">Finding the right SE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 
