@@ -137,6 +137,66 @@ $$\text{estimate = parameter + bias + chance error}.$$
 
 The sample size controls the chance error, with larger samples reducing the chance error, but a bad sampling technique is vulnerable to bias no matter the sample size. 
 
+## Chance Errors in Sampling
+
+In this section, we put aside most issues of bias and try to understand the chance error for a sample statistic.
+
+### Expected Value and SE
+
+Percentages are a focal population parameter and thus a focal sample statistic. What percentage of Columbia students want a TikTok ban? What percentage of Peloton members have an Apple Watch? What percentage of Uber customers also use Lyft? Etc. This sort of question can be answered with a simple random sample. With a simple ranomd sample, the expected value for the sample percentage equals the poulation percentage. This means there is no bias, but it doesn't rule out chance error. 
+
+#### Finding the right SE
+
+Let's take the example of finding what percentage of Peloton members have an Apple Watch. Before building an app for the watchOS, a smart business will first "size" the opportunity by estimating how many members have a watch.
+
+```{figure} images/tikz/boxapplewatch.svg
+---
+width: 61%
+name: boxapplewatch
+---
+The box represents a simplification where 40 members of a population of 100 members have an Apple Watch.
+```
+
+Suppose, as indicated by {numref}`boxapplewatch`, there are 100 Peloton members and, though Peloton doesn't know it, 40 of them have an Apple Watch. 
+
+If Peloton were to sample 100 members *with replacement*, the total in the sample who have an Apple Watch would be 
+
+$$\text{# Apple Watch Owners in Sample = 40 + chance error}.$$
+
+Because the sample was done with replacement, the chance error can be nonzero, so SE>0. In particular, it could be calculated as $\sqrt{100} \times \sqrt{.4\times.6} \approx 4.9$ given what we learned from Chapter 17. 
+
+We consider two adjustments to turn this into an SE for the percentage of users with an Apple Watch if we instead sampled without replacement. 
+
+**Adjustment 1**. The chance error above is for a sum. Peloton might prefer to report a percentage if they expect to continue to attract new members. This involves a straightforward adjustment. The fraction of members owning an Apple Watch is actually an average (recording a 1 for every Apple Watch owner and a 0 otherwise). For an average calculated as $\frac{\text{sum}}{n}$,
+
+$$\text{SE for an average} = \frac{\text{SE for sum}}{n}.$$
+
+Just like how the SD for a list of numbers would double if you doubled each value, the SE is divided by $n$ when moving from a sum to an average. This is mere arithmetic manipulation, so there is square root business at work. It follows that we simply multiply to work with percentages:
+
+$$\text{SE for a percentage} = \frac{\text{SE for sum}}{n} \times 100\%.$$
+
+Both of these can be rewritten by substituting in how the SE for the sum is calculated.
+
+$$\text{SE for an average} = \frac{\text{SD for the box}}{\sqrt{n}}.$$
+
+$$\text{SE for a proportion} = \sqrt{\frac{p(1-p)}{n}}.$$
+
+$$\text{SE for a percentage} = \sqrt{\frac{p(1-p)}{n}} \times 100\%.$$
+
+Thus, the SE for the percentage of members with an Apple Watch based on the sample of 100 members, drawn with replacement is about $\frac{4.9}{100}\times 100\%$, or 4.9%.
+
+
+**Adjustment 2**. The SE formulas we first learned assume draws are made *with replacement*. Simple random samples are done without replacement. While we found SE to be about 4.9%, we should note that if a sample of 100 members were done without replacement, we'd have sampled the entire population and there would be no variability in the sample percentage. We'd always find 40% of members have an Apple Watch. This reveals that sampling without replacement actually has a lower associated standard error. The is corrected by a correction factor:
+
+$$\text{SE drawing without replacement = correction factor \times SE drawing with replacement}.$$
+
+And the correction factor is 
+
+$$\text{correction factor} = \sqrt{\frac{\text{Population Size - Sample Size}} {\text{Population Size} -1}}.$$
+
+When the sample size equals the population size, this means the SE for a simple random sample is zero, because the numerator zeros out. When the population size is large relative to the sample size, the correction factor is nearly one. If we sample 10 people from a population of 100, the correction factor is about 0.95. In practice, the correction factor is often ignored. One rule of thumb is that this can be done when less than 10% of the population is sampled. 
+
+
 
 ## Exercises
 
@@ -153,8 +213,6 @@ A user researcher at a large ecommerce company wants to have a representative sa
 
 ```{exercise-end}
 ```
-
-
 
 
 
