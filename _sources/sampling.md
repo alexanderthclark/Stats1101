@@ -27,7 +27,7 @@ The pollster might have a smarter colleague who assembles a list of names that i
 
 {cite}`abraham2006nonresponse` reports different response rates for the American Time Use Survey, partially reproduced in {numref}`atusresprates`. The differing response rates present a mine field for researchers. 
 
-```{list-table} 2004 ATUS Response Rates 
+```{list-table} 2004 ATUS Response Rates (Table 2 from [AMB06])
 :header-rows: 1
 :name: atusresprates
 
