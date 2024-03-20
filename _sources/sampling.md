@@ -188,7 +188,7 @@ Thus, the SE for the percentage of members with an Apple Watch based on the samp
 
 **Adjustment 2**. The SE formulas we first learned assume draws are made *with replacement*. Simple random samples are done without replacement. While we found SE to be about 4.9%, we should note that if a sample of 100 members were done without replacement, we'd have sampled the entire population and there would be no variability in the sample percentage. We'd always find 40% of members have an Apple Watch. This reveals that sampling without replacement actually has a lower associated standard error. The is corrected by a correction factor:
 
-$$\text{SE drawing without replacement = correction factor \times SE drawing with replacement}.$$
+$$\text{SE drawing without replacement = correction factor} \times \text{SE drawing with replacement}.$$
 
 And the correction factor is 
 
