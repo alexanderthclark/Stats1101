@@ -28,7 +28,7 @@ If we repeatedly flip a coin *400* times, we can expect the sample proportion to
 ```{figure} images/bernoulliCLT2.svg
 ---
 width: 50%
-name: bernoulliCLT
+name: bernoulliCLT2
 ---
 Each miniature histogram reflects $n=400$ coin flips where $p=0.2$. Miniature histograms are arranged into a larger histogram according to their sample average.
 ```
