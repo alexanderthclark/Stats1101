@@ -77,6 +77,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Sampling" href="sampling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -138,8 +140,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
@@ -199,6 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Variability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Confidence Intervals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -398,7 +399,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -414,6 +417,20 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-accuracy-of-percentages">The Accuracy of Percentages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Confidence Intervals</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-a-confidence-interval">Interpretation of a Confidence Interval</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -431,8 +448,10 @@ document.write(`
 <li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapters 21, 23</p></li>
 </ul>
 </div>
+<section id="the-accuracy-of-percentages">
+<h2>The Accuracy of Percentages<a class="headerlink" href="#the-accuracy-of-percentages" title="Permalink to this heading">#</a></h2>
 <p>Let’s briefly review the Central Limit Theorem.</p>
-<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">bernoulliCLT</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">bernoulliCLT2</span></code> illustrate the central limit theorem for the case of flipping a weighted coin that comes up heads 20% of the time. For <span class="math notranslate nohighlight">\(n\)</span> flips of the coin, we can compute standard errors:</p>
+<p><a class="reference internal" href="#bernoulliclt"><span class="std std-numref">Fig. 49</span></a> and <a class="reference internal" href="#bernoulliclt2"><span class="std std-numref">Fig. 50</span></a> illustrate the central limit theorem for the case of flipping a weighted coin that comes up heads 20% of the time. For <span class="math notranslate nohighlight">\(n\)</span> flips of the coin, we can compute standard errors:</p>
 <div class="math notranslate nohighlight">
 \[\text{SE for number of heads} = \sqrt{n} \times \sqrt{0.2\times 0.8}\]</div>
 <div class="math notranslate nohighlight">
@@ -441,16 +460,50 @@ document.write(`
 <figure class="align-default" id="bernoulliclt">
 <a class="reference internal image-reference" href="_images/bernoulliCLT.svg"><img alt="_images/bernoulliCLT.svg" src="_images/bernoulliCLT.svg" width="50%" /></a>
 <figcaption>
-<p><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If we repeatedly flip a coin <em>400</em> times, we can expect the sample proportion to be in the interval <span class="math notranslate nohighlight">\(0.2\pm 2\times 0.02\)</span> for 95% of the repetitions, where 0.02 is the SE for the proportion.</p>
 <figure class="align-default" id="bernoulliclt2">
 <a class="reference internal image-reference" href="_images/bernoulliCLT2.svg"><img alt="_images/bernoulliCLT2.svg" src="_images/bernoulliCLT2.svg" width="50%" /></a>
 <figcaption>
-<p><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>This is all quite nice except it answers a question that isn’t very interesting because we start by knowing the true parameter is <span class="math notranslate nohighlight">\(p=0.2\)</span> and then we imagine repeatedly drawing samples.</p>
+<p>Consider again the example from <a class="reference internal" href="sampling.html#ptonsample"><span class="std std-ref">Finding the right SE</span></a>, where a researcher at Peloton wants to find the proportion of members who own an Apple Watch. In practice, only one sample will be collected and only one sample proportion <span class="math notranslate nohighlight">\(\hat{p}\)</span> is observed. Interesting questions relate the unknown <span class="math notranslate nohighlight">\(p\)</span> to the observed <span class="math notranslate nohighlight">\(\hat{p}\)</span>. That is, we are trying to make an <em>inference</em> about the population from the sample. To get some sense of the margin of error for the sample proportion <span class="math notranslate nohighlight">\(\hat{p}\)</span>, we also have to estimate the SE.</p>
+<p>To estimate the SE, we must first estimate the SD for the 0-1 box. According to the <em>bootstrap procedure</em>, the SD of the box can be estimated by substituting the fract of 0’s and 1’s in the sample for the unknown fractions in the box. This provides a good estimate for a large enough sample.</p>
+<p>That is, we estimate the SE computed from the population parameters, <span class="math notranslate nohighlight">\(\sqrt{\frac{p(1-p)}{n}}\)</span>, by substituting the sample proportion: <span class="math notranslate nohighlight">\(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span>.</p>
+<p><strong>Example</strong>: The Pew Research Center conducted a <a class="reference external" href="https://www.pewresearch.org/2023/11/09/tipping-culture-in-america-public-sees-a-changed-landscape/">study on tipping</a>. They surveyed 11,945 adults in the US. 59% reported that they always tip when having food delivered. Among all adults in the US, a proportion <span class="math notranslate nohighlight">\(p\)</span> must always tip. The survey estimates this as <span class="math notranslate nohighlight">\(\hat{p} = 0.59\)</span>. The estimated SD as <span class="math notranslate nohighlight">\(\sqrt{.59\times.41} \approx 0.49\)</span>. The SE for the sample proportion is SE = <span class="math notranslate nohighlight">\(\frac{0.49}{\sqrt{11945}} \approx 0.004\)</span>. Converting to percentages, we expect that about 59% of adults always tip, give or take 0.4% as a typical chance error.</p>
+<section id="id2">
+<h3>Confidence Intervals<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>A confidence interval for a sample proportion can be found</p>
+<div class="math notranslate nohighlight">
+\[\hat{p} \pm 1 \text{SE} \hspace{12pt} (\text{68% confidence interval}),\]</div>
+<div class="math notranslate nohighlight">
+\[\hat{p} \pm 2 \text{SE} \hspace{12pt} (\text{95% confidence interval}),\]</div>
+<div class="math notranslate nohighlight">
+\[\hat{p} \pm 3 \text{SE} \hspace{9pt} (\text{99.7% confidence interval}).\]</div>
+<p>And more generally, an arbitrary <span class="math notranslate nohighlight">\(a\%\)</span> confidence interval can be found as <span class="math notranslate nohighlight">\(\hat{p} \pm z^{\star} \text{SE}\)</span>, where <span class="math notranslate nohighlight">\(z^\star\)</span> is the critical value such that <span class="math notranslate nohighlight">\(a\%\)</span> of the area under a normal curve is between <span class="math notranslate nohighlight">\(-z^\star\)</span> and <span class="math notranslate nohighlight">\(z^\star\)</span>.</p>
+<section id="interpretation-of-a-confidence-interval">
+<h4>Interpretation of a Confidence Interval<a class="headerlink" href="#interpretation-of-a-confidence-interval" title="Permalink to this heading">#</a></h4>
+<p>The correct interpretation of a confidence interval is often misunderstood. The interpretation is based on our frequency theory of chance. First, there is nothing random about the parameter <span class="math notranslate nohighlight">\(p\)</span>. Our sample is random and thus randomness is manifested in <span class="math notranslate nohighlight">\(\hat{p}\)</span> instead. With <span class="math notranslate nohighlight">\(p\)</span> nonrandom, we <em>can’t</em> make probabilistic statement like <span class="math notranslate nohighlight">\(p\)</span> is in a 95% confidence interval with 95% probability. Relying on probabilities being long-run frequencies instead, we say that if we were to construct many samples and thus many 95% confidence intervals, about 95% of the intervals would contain the true parameter.</p>
+<p>Let’s return to the simulated data with <span class="math notranslate nohighlight">\(p=0.2\)</span>, in <a class="reference internal" href="#bernoulliclt"><span class="std std-numref">Fig. 49</span></a> and <a class="reference internal" href="#bernoulliclt2"><span class="std std-numref">Fig. 50</span></a>. Each miniature histogram is a sample and most of the sample means are not equal to 0.2. However, 95% confidence intervals can be found for each. Indeed, for 95 of 100 of the simulated samples, the confidence interval would cover the true parameter.</p>
+<figure class="align-default" id="bernoullicltwci">
+<a class="reference internal image-reference" href="_images/bernoulliCLTwCI.svg"><img alt="_images/bernoulliCLTwCI.svg" src="_images/bernoulliCLTwCI.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoullicltwci" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="bernoulliclt2wci">
+<a class="reference internal image-reference" href="_images/bernoulliCLT2wCI.svg"><img alt="_images/bernoulliCLT2wCI.svg" src="_images/bernoulliCLT2wCI.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoulliclt2wci" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -483,6 +536,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="sampling.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sampling</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bibliography.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -490,7 +561,26 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-accuracy-of-percentages">The Accuracy of Percentages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Confidence Intervals</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-a-confidence-interval">Interpretation of a Confidence Interval</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
