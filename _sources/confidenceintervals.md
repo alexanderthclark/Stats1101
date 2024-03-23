@@ -20,7 +20,7 @@ If we repeatedly flip a coin *100* times, we can expect the sample proportion to
 
 ```{figure} images/bernoulliCLT.svg
 ---
-width: 50%
+width: 35%
 name: bernoulliCLT
 ---
 Each miniature histogram reflects $n=100$ coin flips where $p=0.2$. Miniature histograms are arranged into a larger histogram according to their sample average.
@@ -29,7 +29,7 @@ If we repeatedly flip a coin *400* times, we can expect the sample proportion to
 
 ```{figure} images/bernoulliCLT2.svg
 ---
-width: 50%
+width: 35%
 name: bernoulliCLT2
 ---
 Each miniature histogram reflects $n=400$ coin flips where $p=0.2$. Miniature histograms are arranged into a larger histogram according to their sample average.
@@ -66,7 +66,7 @@ Let's return to the simulated data with $p=0.2$, in {numref}`bernoulliCLT` and {
 
 ```{figure} images/bernoulliCLTwCI.svg
 ---
-width: 50%
+width: 33%
 name: bernoulliCLTwCI
 ---
 Each miniature histogram reflects $n=100$ coin flips where $p=0.2$. Grayed out histograms are those where the confidence interval misses the true parameter.
@@ -74,7 +74,7 @@ Each miniature histogram reflects $n=100$ coin flips where $p=0.2$. Grayed out h
 
 ```{figure} images/bernoulliCLT2wCI.svg
 ---
-width: 50%
+width: 33%
 name: bernoulliCLT2wCI
 ---
 Each miniature histogram reflects $n=400$ coin flips where $p=0.2$. Grayed out histograms are those where the confidence interval misses the true parameter.

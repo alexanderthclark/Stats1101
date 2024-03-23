@@ -458,14 +458,14 @@ document.write(`
 \[\text{SE for proportion of heads} = \sqrt{\frac{0.2\times 0.8}{n}}\]</div>
 <p>If we repeatedly flip a coin <em>100</em> times, we can expect the sample proportion to be in the interval <span class="math notranslate nohighlight">\(0.2\pm 2\times 0.04\)</span> for 95% of the repetitions, where 0.04 is the SE for the proportion.</p>
 <figure class="align-default" id="bernoulliclt">
-<a class="reference internal image-reference" href="_images/bernoulliCLT.svg"><img alt="_images/bernoulliCLT.svg" src="_images/bernoulliCLT.svg" width="50%" /></a>
+<a class="reference internal image-reference" href="_images/bernoulliCLT.svg"><img alt="_images/bernoulliCLT.svg" src="_images/bernoulliCLT.svg" width="35%" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 49 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If we repeatedly flip a coin <em>400</em> times, we can expect the sample proportion to be in the interval <span class="math notranslate nohighlight">\(0.2\pm 2\times 0.02\)</span> for 95% of the repetitions, where 0.02 is the SE for the proportion.</p>
 <figure class="align-default" id="bernoulliclt2">
-<a class="reference internal image-reference" href="_images/bernoulliCLT2.svg"><img alt="_images/bernoulliCLT2.svg" src="_images/bernoulliCLT2.svg" width="50%" /></a>
+<a class="reference internal image-reference" href="_images/bernoulliCLT2.svg"><img alt="_images/bernoulliCLT2.svg" src="_images/bernoulliCLT2.svg" width="35%" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 50 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt2" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -490,13 +490,13 @@ document.write(`
 <p>The correct interpretation of a confidence interval is often misunderstood. The interpretation is based on our frequency theory of chance. First, there is nothing random about the parameter <span class="math notranslate nohighlight">\(p\)</span>. Our sample is random and thus randomness is manifested in <span class="math notranslate nohighlight">\(\hat{p}\)</span> instead. With <span class="math notranslate nohighlight">\(p\)</span> nonrandom, we <em>can’t</em> make probabilistic statement like <span class="math notranslate nohighlight">\(p\)</span> is in a 95% confidence interval with 95% probability. Relying on probabilities being long-run frequencies instead, we say that if we were to construct many samples and thus many 95% confidence intervals, about 95% of the intervals would contain the true parameter.</p>
 <p>Let’s return to the simulated data with <span class="math notranslate nohighlight">\(p=0.2\)</span>, in <a class="reference internal" href="#bernoulliclt"><span class="std std-numref">Fig. 49</span></a> and <a class="reference internal" href="#bernoulliclt2"><span class="std std-numref">Fig. 50</span></a>. Each miniature histogram is a sample and most of the sample means are not equal to 0.2. However, 95% confidence intervals can be found for each. Indeed, for 95 of 100 of the simulated samples, the confidence interval would cover the true parameter.</p>
 <figure class="align-default" id="bernoullicltwci">
-<a class="reference internal image-reference" href="_images/bernoulliCLTwCI.svg"><img alt="_images/bernoulliCLTwCI.svg" src="_images/bernoulliCLTwCI.svg" width="50%" /></a>
+<a class="reference internal image-reference" href="_images/bernoulliCLTwCI.svg"><img alt="_images/bernoulliCLTwCI.svg" src="_images/bernoulliCLTwCI.svg" width="33%" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 51 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoullicltwci" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="bernoulliclt2wci">
-<a class="reference internal image-reference" href="_images/bernoulliCLT2wCI.svg"><img alt="_images/bernoulliCLT2wCI.svg" src="_images/bernoulliCLT2wCI.svg" width="50%" /></a>
+<a class="reference internal image-reference" href="_images/bernoulliCLT2wCI.svg"><img alt="_images/bernoulliCLT2wCI.svg" src="_images/bernoulliCLT2wCI.svg" width="33%" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 52 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoulliclt2wci" title="Permalink to this image">#</a></p>
 </figcaption>
