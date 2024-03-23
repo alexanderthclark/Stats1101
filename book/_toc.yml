@@ -20,6 +20,7 @@ parts:
     - file: bayes
     - file: chancevary
     - file: sampling
+    - file: confidenceintervals
     - file: bibliography
 
 #- caption: Solutions
