@@ -143,7 +143,7 @@ In this section, we put aside most issues of bias and try to understand the chan
 
 ### Expected Value and SE
 
-Percentages are a focal population parameter and thus a focal sample statistic. What percentage of Columbia students want a TikTok ban? What percentage of Peloton members have an Apple Watch? What percentage of Uber customers also use Lyft? Etc. This sort of question can be answered with a simple random sample. With a simple ranomd sample, the expected value for the sample percentage equals the poulation percentage. This means there is no bias, but it doesn't rule out chance error. 
+Percentages are a focal population parameter and thus a focal sample statistic. What percentage of Columbia students want a TikTok ban? What percentage of Peloton members have an Apple Watch? What percentage of Uber customers also use Lyft? Etc. This sort of question can be answered with a simple random sample. With a simple random sample, the expected value for the sample percentage equals the poulation percentage. This means there is no bias, but it doesn't rule out chance error. 
 
 #### Finding the right SE
 
@@ -171,7 +171,7 @@ We consider two adjustments to turn this into an SE for the percentage of users 
 
 $$\text{SE for an average} = \frac{\text{SE for sum}}{n}.$$
 
-Just like how the SD for a list of numbers would double if you doubled each value, the SE is divided by $n$ when moving from a sum to an average. This is mere arithmetic manipulation, so there is square root business at work. It follows that we simply multiply to work with percentages:
+Just like how the SD for a list of numbers would double if you doubled each value, the SE is divided by $n$ when moving from a sum to an average. This is mere arithmetic manipulation, so there is no square root business at work. It follows that we simply multiply to work with percentages:
 
 $$\text{SE for a percentage} = \frac{\text{SE for sum}}{n} \times 100\%.$$
 
