@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to Intro Stats &#8212; Intro Stats</title>
+    <title>Hypothesis Testing &#8212; Intro Stats</title>
   
   
   
@@ -71,11 +71,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pyHypothesisTesting';</script>
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="gettingstarted.html" />
+    <link rel="next" title="Overview" href="Rbasics.html" />
+    <link rel="prev" title="Regression" href="statwrapregression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -137,8 +140,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -155,7 +156,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -175,8 +176,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to Intro Stats
                 </a>
             </li>
@@ -208,14 +209,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pyHypothesisTesting.html">Hypothesis Testing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Hypothesis Testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">R (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -273,6 +274,73 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/pyHypothesisTesting.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/pyHypothesisTesting.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -298,7 +366,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2FpyHypothesisTesting.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +396,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/pyHypothesisTesting.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -338,7 +406,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -412,7 +480,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to Intro Stats</h1>
+    <h1>Hypothesis Testing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -422,7 +490,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-about-1101">More about 1101</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proportions">Proportions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-right-tail">One-sided, right tail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-left-tail">One-sided, left tail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-sided">Two-sided</a></li>
 </ul>
 </li>
 </ul>
@@ -436,87 +507,123 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-intro-stats">
-<h1>Welcome to Intro Stats<a class="headerlink" href="#welcome-to-intro-stats" title="Permalink to this heading">#</a></h1>
-<p><img alt="Intro Stats" src="_images/stats-wide.png" /></p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>These notes are not entirely self-contained. They should be read in companion with the primary text, <span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, and other readings.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="hypothesis-testing">
+<h1>Hypothesis Testing<a class="headerlink" href="#hypothesis-testing" title="Permalink to this heading">#</a></h1>
+<section id="proportions">
+<h2>Proportions<a class="headerlink" href="#proportions" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.proportion</span> <span class="kn">import</span> <span class="n">proportions_ztest</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+</pre></div>
 </div>
-<p>These notes are based primarily on the textbook, <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, following the organization of content and the notation. The textbook and other readings are the real authorities on the material, but these notes can help direct you through what is important for the course. The course largely follows the textbook, but a few chapters are skipped and I add these topics.</p>
-<ol class="arabic simple">
-<li><p>Natural experiments</p></li>
-<li><p>A brief mention of exploratory data analysis</p></li>
-<li><p>Bayes’ Theorem and probability trees</p></li>
-<li><p>Power</p></li>
-<li><p>Multiple linear regression (if time allows)</p></li>
-</ol>
-<p>Sections marked “Extension” go beyond the book’s treatment of a subject. These sections are meant to help test your comfort with the ideas, either developing a deeper understanding or broadening the context.</p>
-<p>The provided exercises supplement the exercises in <span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. Use the textbook exercises to drill the concepts before attempting the exercises here.</p>
-<hr class="docutils" />
-<p>We’ll argue that statistics is <em>not</em> just math, but the imperative from Halmos still applies.</p>
-<p><img alt="How Math Works" src="_images/HowMath.png" /></p>
-<section id="more-about-1101">
-<h2>More about 1101<a class="headerlink" href="#more-about-1101" title="Permalink to this heading">#</a></h2>
-<p>This is an introductory course in statistics. Students will learn how to interpret and produce statistical analyses, with applications taken from many fields. Major topics include the design of experiments, descriptive statistics, correlation, probability, hypothesis testing, and regression.</p>
-<p>The only pre-requisite for this course is that you should be good at high school algebra. I recommend taking the calculus-based intro instead if you want to pursue stats or a related field.</p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experiments.html#types-of-questions">Types of Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experiments.html#id5">Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
-<li class="toctree-l1"><a class="reference internal" href="normal.html">Normal Distribution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="correlation.html">Correlation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="probability.html">Probability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Variability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="confidenceintervals.html">Confidence Intervals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
-</ul>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
-</ul>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statwrap0.html#example-catalog">Example Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pyHypothesisTesting.html">Hypothesis Testing</a></li>
-</ul>
+<section id="one-sided-right-tail">
+<h3>One-sided, right tail<a class="headerlink" href="#one-sided-right-tail" title="Permalink to this heading">#</a></h3>
+<p>This is a one-sided test based on a sample size of <span class="math notranslate nohighlight">\(n=30\)</span> and a sample proportion of 18/30.</p>
+<div class="math notranslate nohighlight">
+\[H_0: p = 0.5\]</div>
+<div class="math notranslate nohighlight">
+\[H_A: p &gt; 0.5\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_oneside</span><span class="p">,</span> <span class="n">pval_oneside</span> <span class="o">=</span> <span class="n">proportions_ztest</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> 
+                                            <span class="n">nobs</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> 
+                                            <span class="n">value</span> <span class="o">=</span> <span class="mf">.5</span><span class="p">,</span> 
+                                            <span class="n">prop_var</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> 
+                                            <span class="n">alternative</span> <span class="o">=</span> <span class="s1">&#39;larger&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">R (optional)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Rbasics.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Rbasics.html#variables">Variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Rbasics.html#comments">Comments</a></li>
-</ul>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">Selected Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
-</ul>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;z-statistic:&quot;</span><span class="p">,</span> <span class="n">z_oneside</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value&quot;</span><span class="p">,</span> <span class="n">pval_oneside</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z-statistic: 1.0954451150103321
+P-value 0.13666083914614907
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="one-sided-left-tail">
+<h3>One-sided, left tail<a class="headerlink" href="#one-sided-left-tail" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[H_0: p = 0.5\]</div>
+<div class="math notranslate nohighlight">
+\[H_A: p &lt; 0.5\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_one_left</span><span class="p">,</span> <span class="n">pval_one_left</span> <span class="o">=</span> <span class="n">proportions_ztest</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> 
+                                            <span class="n">nobs</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> 
+                                            <span class="n">value</span> <span class="o">=</span> <span class="mf">.5</span><span class="p">,</span> 
+                                            <span class="n">prop_var</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> 
+                                            <span class="n">alternative</span> <span class="o">=</span> <span class="s1">&#39;smaller&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;z-statistic:&quot;</span><span class="p">,</span> <span class="n">z_one_left</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value&quot;</span><span class="p">,</span> <span class="n">pval_one_left</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z-statistic: 1.0954451150103321
+P-value 0.863339160853851
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="two-sided">
+<h3>Two-sided<a class="headerlink" href="#two-sided" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[H_0: p = 0.5\]</div>
+<div class="math notranslate nohighlight">
+\[H_A: p \neq 0.5\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_twoside</span><span class="p">,</span> <span class="n">pval_twoside</span> <span class="o">=</span> <span class="n">proportions_ztest</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
+                                            <span class="n">nobs</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+                                            <span class="n">value</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span>
+                                            <span class="n">prop_var</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                                            <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;two-sided&#39;</span><span class="p">)</span>
+
+<span class="c1"># Two sided by hand</span>
+<span class="n">p_hat</span> <span class="o">=</span> <span class="mf">0.6</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">sd</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span> <span class="c1"># st dev from sampling distribution</span>
+<span class="n">z2</span> <span class="o">=</span> <span class="p">(</span><span class="n">p_hat</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span><span class="o">/</span><span class="n">sd</span> <span class="c1"># test stat</span>
+<span class="n">pval2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z2</span><span class="p">))</span> <span class="c1"># P-value</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;z-statistic:&quot;</span><span class="p">,</span> <span class="n">z_twoside</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value&quot;</span><span class="p">,</span> <span class="n">pval_twoside</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z-statistic: 1.0954451150103321
+P-value 0.27332167829229814
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -550,12 +657,21 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="statwrapregression.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Regression</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="gettingstarted.html"
+       href="Rbasics.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Getting Started</p>
+        <p class="prev-next-title">Overview</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -575,7 +691,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-about-1101">More about 1101</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proportions">Proportions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-right-tail">One-sided, right tail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-left-tail">One-sided, left tail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-sided">Two-sided</a></li>
 </ul>
 </li>
 </ul>
