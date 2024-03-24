@@ -96,10 +96,9 @@ Once the SE is found, a confidence interval is constructed like in the case of p
 
 **Example**: Use this [American Time Use Survey data](https://docs.google.com/spreadsheets/d/1PLUjN4IR-XRPJ8pjDGZGyUG4ii9b_shQa_R78rKaghA/edit?usp=sharing) to find a 95% confidence interval for the hours spent alone among 2020 respondents.
 
+```{dropdown} 90% confidence interval
 The sample size is $n$ = 8782, the sample average is 6.03 and the SE is 0.05.
 
-
-```{dropdown} 90% confidence interval
 The interval is $6.03 \pm 0.1$. 
 ```
 
