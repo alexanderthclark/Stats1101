@@ -84,7 +84,7 @@ Each miniature histogram reflects $n=400$ coin flips where $p=0.2$. Grayed out h
 
 Proportions are a special kind of average. The sample average $\bar{x}$ estimates the  population average $\mu$. For general averages, there is no formula analogous to SD=$\sqrt{p(1-p)}$. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box. Then, the SE for the average can be calculated
 
-$$\text{SE for average} = \frac{\text{SD}}{n}.$$
+$$\text{SE for average} = \frac{\text{SD}}{\sqrt{n}}.$$
 
 Once the SE is found, a confidence interval is constructed like in the case of proportions. For example, a 95% confidence interval is $\bar{x} \pm 2\text{SE}$.
 
