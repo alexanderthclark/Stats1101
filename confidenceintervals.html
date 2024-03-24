@@ -488,7 +488,17 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\hat{p} \pm 3 \text{SE} \hspace{9pt} (\text{99.7% confidence interval}).\]</div>
 <p>And more generally, an arbitrary <span class="math notranslate nohighlight">\(a\%\)</span> confidence interval can be found as <span class="math notranslate nohighlight">\(\hat{p} \pm z^{\star} \text{SE}\)</span>, where <span class="math notranslate nohighlight">\(z^\star\)</span> is the critical value such that <span class="math notranslate nohighlight">\(a\%\)</span> of the area under a normal curve is between <span class="math notranslate nohighlight">\(-z^\star\)</span> and <span class="math notranslate nohighlight">\(z^\star\)</span>.</p>
-<section id="interpretation-of-a-confidence-interval">
+<p><strong>Example</strong>: Use a <span class="math notranslate nohighlight">\(z\)</span>-table to find the appropriate critical value for a 90% confidence interval.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+90% confidence interval<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The critical value is 1.645. The interval takes the form <span class="math notranslate nohighlight">\( \hat{p} \pm 1.645 \times \text{SE}\)</span>.</p>
+</div>
+</details><section id="interpretation-of-a-confidence-interval">
 <h4>Interpretation of a Confidence Interval<a class="headerlink" href="#interpretation-of-a-confidence-interval" title="Permalink to this heading">#</a></h4>
 <p>The correct interpretation of a confidence interval is often misunderstood. The interpretation is based on our frequency theory of chance. First, there is nothing random about the parameter <span class="math notranslate nohighlight">\(p\)</span>. Our sample is random and thus randomness is manifested in <span class="math notranslate nohighlight">\(\hat{p}\)</span> instead. With <span class="math notranslate nohighlight">\(p\)</span> nonrandom, we <em>can’t</em> make probabilistic statement like <span class="math notranslate nohighlight">\(p\)</span> is in a 95% confidence interval with 95% probability. Relying on probabilities being long-run frequencies instead, we say that if we were to construct many samples and thus many 95% confidence intervals, about 95% of the intervals would contain the true parameter.</p>
 <p>Let’s return to the simulated data with <span class="math notranslate nohighlight">\(p=0.2\)</span>, in <a class="reference internal" href="#bernoulliclt"><span class="std std-numref">Fig. 49</span></a> and <a class="reference internal" href="#bernoulliclt2"><span class="std std-numref">Fig. 50</span></a>. Each miniature histogram is a sample and most of the sample means are not equal to 0.2. However, 95% confidence intervals can be found for each. Indeed, for 95 of 100 of the simulated samples, the confidence interval would cover the true parameter.</p>
@@ -513,7 +523,18 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\text{SE for average} = \frac{\text{SD}}{\sqrt{n}}.\]</div>
 <p>Once the SE is found, a confidence interval is constructed like in the case of proportions. For example, a 95% confidence interval is <span class="math notranslate nohighlight">\(\bar{x} \pm 2\text{SE}\)</span>.</p>
-</section>
+<p><strong>Example</strong>: Use this <a class="reference external" href="https://docs.google.com/spreadsheets/d/1PLUjN4IR-XRPJ8pjDGZGyUG4ii9b_shQa_R78rKaghA/edit?usp=sharing">American Time Use Survey data</a> to find a 95% confidence interval for the hours spent alone among 2020 respondents.</p>
+<p>The sample size is <span class="math notranslate nohighlight">\(n\)</span> = 8782, the sample average is 6.03 and the SE is 0.05.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+90% confidence interval<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The interval is <span class="math notranslate nohighlight">\(6.03 \pm 0.1\)</span>.</p>
+</div>
+</details></section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="CIicecream">

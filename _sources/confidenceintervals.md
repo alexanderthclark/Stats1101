@@ -56,7 +56,13 @@ $$\hat{p} \pm 2 \text{SE} \hspace{12pt} (\text{95% confidence interval}),$$
 
 $$\hat{p} \pm 3 \text{SE} \hspace{9pt} (\text{99.7% confidence interval}).$$ 
 
-And more generally, an arbitrary $a\%$ confidence interval can be found as $\hat{p} \pm z^{\star} \text{SE}$, where $z^\star$ is the critical value such that $a\%$ of the area under a normal curve is between $-z^\star$ and $z^\star$.
+And more generally, an arbitrary $a\%$ confidence interval can be found as $\hat{p} \pm z^{\star} \text{SE}$, where $z^\star$ is the critical value such that $a\%$ of the area under a normal curve is between $-z^\star$ and $z^\star$. 
+
+**Example**: Use a $z$-table to find the appropriate critical value for a 90% confidence interval. 
+
+```{dropdown} 90% confidence interval
+The critical value is 1.645. The interval takes the form $ \hat{p} \pm 1.645 \times \text{SE}$.
+```
 
 #### Interpretation of a Confidence Interval
 
@@ -87,6 +93,16 @@ Proportions are a special kind of average. The sample average $\bar{x}$ estimate
 $$\text{SE for average} = \frac{\text{SD}}{\sqrt{n}}.$$
 
 Once the SE is found, a confidence interval is constructed like in the case of proportions. For example, a 95% confidence interval is $\bar{x} \pm 2\text{SE}$.
+
+**Example**: Use this [American Time Use Survey data](https://docs.google.com/spreadsheets/d/1PLUjN4IR-XRPJ8pjDGZGyUG4ii9b_shQa_R78rKaghA/edit?usp=sharing) to find a 95% confidence interval for the hours spent alone among 2020 respondents.
+
+The sample size is $n$ = 8782, the sample average is 6.03 and the SE is 0.05.
+
+
+```{dropdown} 90% confidence interval
+The interval is $6.03 \pm 0.1$. 
+```
+
 
 ## Exercises
 
