@@ -110,3 +110,10 @@ You are interested in the 95% confidence interval of a sample mean. Which of the
 ```{exercise-end}
 ```
 
+```{exercise-start}
+:label: CImc
+```
+Consider a multiple choice exam with choices A, B, C, D, and E for each question. Assume that the probability that a particular question has the answer $C$ is $p = 0.2$ and that all letter answers are determined independently. Find a 90% confidence interval for the proportion of questions that will have a correct answer of C on a 1600-question exam. 
+```{exercise-end}
+```
+

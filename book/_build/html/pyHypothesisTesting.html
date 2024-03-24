@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Confidence Intervals &#8212; Intro Stats</title>
+    <title>Hypothesis Testing &#8212; Intro Stats</title>
   
   
   
@@ -73,12 +73,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'confidenceintervals';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pyHypothesisTesting';</script>
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hypothesis Testing" href="hypothesistesting.html" />
-    <link rel="prev" title="Sampling" href="sampling.html" />
+    <link rel="next" title="Overview" href="Rbasics.html" />
+    <link rel="prev" title="Regression" href="statwrapregression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
@@ -197,7 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Variability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Confidence Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confidenceintervals.html">Confidence Intervals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hypothesistesting.html">Hypothesis Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
@@ -208,14 +208,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pyHypothesisTesting.html">Hypothesis Testing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Hypothesis Testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">R (optional)</span></p>
 <ul class="nav bd-sidenav">
@@ -273,6 +273,73 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/pyHypothesisTesting.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/pyHypothesisTesting.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -298,7 +365,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fconfidenceintervals.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2FpyHypothesisTesting.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +395,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/confidenceintervals.md" target="_blank"
+      <li><a href="_sources/pyHypothesisTesting.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -338,7 +405,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -412,7 +479,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Confidence Intervals</h1>
+    <h1>Hypothesis Testing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -422,15 +489,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-accuracy-of-percentages">The Accuracy of Percentages</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Confidence Intervals</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-a-confidence-interval">Interpretation of a Confidence Interval</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proportions">Proportions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-right-tail">One-sided, right tail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-left-tail">One-sided, left tail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-sided">Two-sided</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-accuracy-of-averages">The Accuracy of Averages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -442,107 +506,123 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="confidence-intervals">
-<span id="confid"></span><h1>Confidence Intervals<a class="headerlink" href="#confidence-intervals" title="Permalink to this heading">#</a></h1>
-<div class="seealso admonition">
-<p class="admonition-title">Important Readings</p>
-<ul class="simple">
-<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapters 21, 23</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="hypothesis-testing">
+<h1>Hypothesis Testing<a class="headerlink" href="#hypothesis-testing" title="Permalink to this heading">#</a></h1>
+<section id="proportions">
+<h2>Proportions<a class="headerlink" href="#proportions" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.proportion</span> <span class="kn">import</span> <span class="n">proportions_ztest</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+</pre></div>
 </div>
-<section id="the-accuracy-of-percentages">
-<h2>The Accuracy of Percentages<a class="headerlink" href="#the-accuracy-of-percentages" title="Permalink to this heading">#</a></h2>
-<p>Let’s briefly review the Central Limit Theorem.</p>
-<p><a class="reference internal" href="#bernoulliclt"><span class="std std-numref">Fig. 49</span></a> and <a class="reference internal" href="#bernoulliclt2"><span class="std std-numref">Fig. 50</span></a> illustrate the central limit theorem for the case of flipping a weighted coin that comes up heads 20% of the time. For <span class="math notranslate nohighlight">\(n\)</span> flips of the coin, we can compute standard errors:</p>
+</div>
+</div>
+<section id="one-sided-right-tail">
+<h3>One-sided, right tail<a class="headerlink" href="#one-sided-right-tail" title="Permalink to this heading">#</a></h3>
+<p>This is a one-sided test based on a sample size of <span class="math notranslate nohighlight">\(n=30\)</span> and a sample proportion of 18/30.</p>
 <div class="math notranslate nohighlight">
-\[\text{SE for number of heads} = \sqrt{n} \times \sqrt{0.2\times 0.8}\]</div>
+\[H_0: p = 0.5\]</div>
 <div class="math notranslate nohighlight">
-\[\text{SE for proportion of heads} = \sqrt{\frac{0.2\times 0.8}{n}}\]</div>
-<p>If we repeatedly flip a coin <em>100</em> times, we can expect the sample proportion to be in the interval <span class="math notranslate nohighlight">\(0.2\pm 2\times 0.04\)</span> for 95% of the repetitions, where 0.04 is the SE for the proportion.</p>
-<figure class="align-default" id="bernoulliclt">
-<a class="reference internal image-reference" href="_images/bernoulliCLT.svg"><img alt="_images/bernoulliCLT.svg" src="_images/bernoulliCLT.svg" width="35%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>If we repeatedly flip a coin <em>400</em> times, we can expect the sample proportion to be in the interval <span class="math notranslate nohighlight">\(0.2\pm 2\times 0.02\)</span> for 95% of the repetitions, where 0.02 is the SE for the proportion.</p>
-<figure class="align-default" id="bernoulliclt2">
-<a class="reference internal image-reference" href="_images/bernoulliCLT2.svg"><img alt="_images/bernoulliCLT2.svg" src="_images/bernoulliCLT2.svg" width="35%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>This is all quite nice except it answers a question that isn’t very interesting because we start by knowing the true parameter is <span class="math notranslate nohighlight">\(p=0.2\)</span> and then we imagine repeatedly drawing samples.</p>
-<p>Consider again the example from <a class="reference internal" href="sampling.html#ptonsample"><span class="std std-ref">Finding the right SE</span></a>, where a researcher at Peloton wants to find the proportion of members who own an Apple Watch. In practice, only one sample will be collected and only one sample proportion <span class="math notranslate nohighlight">\(\hat{p}\)</span> is observed. Interesting questions relate the unknown <span class="math notranslate nohighlight">\(p\)</span> to the observed <span class="math notranslate nohighlight">\(\hat{p}\)</span>. That is, we are trying to make an <em>inference</em> about the population from the sample. To get some sense of the margin of error for the sample proportion <span class="math notranslate nohighlight">\(\hat{p}\)</span>, we also have to estimate the SE.</p>
-<p>To estimate the SE, we must first estimate the SD for the 0-1 box. According to the <em>bootstrap procedure</em>, the SD of the box can be estimated by substituting the fract of 0’s and 1’s in the sample for the unknown fractions in the box. This provides a good estimate for a large enough sample.</p>
-<p>That is, we estimate the SE computed from the population parameters, <span class="math notranslate nohighlight">\(\sqrt{\frac{p(1-p)}{n}}\)</span>, by substituting the sample proportion: <span class="math notranslate nohighlight">\(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span>.</p>
-<p><strong>Example</strong>: The Pew Research Center conducted a <a class="reference external" href="https://www.pewresearch.org/2023/11/09/tipping-culture-in-america-public-sees-a-changed-landscape/">study on tipping</a>. They surveyed 11,945 adults in the US. 59% reported that they always tip when having food delivered. Among all adults in the US, a proportion <span class="math notranslate nohighlight">\(p\)</span> must always tip. The survey estimates this as <span class="math notranslate nohighlight">\(\hat{p} = 0.59\)</span>. The estimated SD as <span class="math notranslate nohighlight">\(\sqrt{.59\times.41} \approx 0.49\)</span>. The SE for the sample proportion is SE = <span class="math notranslate nohighlight">\(\frac{0.49}{\sqrt{11945}} \approx 0.004\)</span>. Converting to percentages, we expect that about 59% of adults always tip, give or take 0.4% as a typical chance error.</p>
-<section id="id2">
-<h3>Confidence Intervals<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>A confidence interval for a sample proportion can be found</p>
-<div class="math notranslate nohighlight">
-\[\hat{p} \pm 1 \text{SE} \hspace{12pt} (\text{68% confidence interval}),\]</div>
-<div class="math notranslate nohighlight">
-\[\hat{p} \pm 2 \text{SE} \hspace{12pt} (\text{95% confidence interval}),\]</div>
-<div class="math notranslate nohighlight">
-\[\hat{p} \pm 3 \text{SE} \hspace{9pt} (\text{99.7% confidence interval}).\]</div>
-<p>And more generally, an arbitrary <span class="math notranslate nohighlight">\(a\%\)</span> confidence interval can be found as <span class="math notranslate nohighlight">\(\hat{p} \pm z^{\star} \text{SE}\)</span>, where <span class="math notranslate nohighlight">\(z^\star\)</span> is the critical value such that <span class="math notranslate nohighlight">\(a\%\)</span> of the area under a normal curve is between <span class="math notranslate nohighlight">\(-z^\star\)</span> and <span class="math notranslate nohighlight">\(z^\star\)</span>.</p>
-<section id="interpretation-of-a-confidence-interval">
-<h4>Interpretation of a Confidence Interval<a class="headerlink" href="#interpretation-of-a-confidence-interval" title="Permalink to this heading">#</a></h4>
-<p>The correct interpretation of a confidence interval is often misunderstood. The interpretation is based on our frequency theory of chance. First, there is nothing random about the parameter <span class="math notranslate nohighlight">\(p\)</span>. Our sample is random and thus randomness is manifested in <span class="math notranslate nohighlight">\(\hat{p}\)</span> instead. With <span class="math notranslate nohighlight">\(p\)</span> nonrandom, we <em>can’t</em> make probabilistic statement like <span class="math notranslate nohighlight">\(p\)</span> is in a 95% confidence interval with 95% probability. Relying on probabilities being long-run frequencies instead, we say that if we were to construct many samples and thus many 95% confidence intervals, about 95% of the intervals would contain the true parameter.</p>
-<p>Let’s return to the simulated data with <span class="math notranslate nohighlight">\(p=0.2\)</span>, in <a class="reference internal" href="#bernoulliclt"><span class="std std-numref">Fig. 49</span></a> and <a class="reference internal" href="#bernoulliclt2"><span class="std std-numref">Fig. 50</span></a>. Each miniature histogram is a sample and most of the sample means are not equal to 0.2. However, 95% confidence intervals can be found for each. Indeed, for 95 of 100 of the simulated samples, the confidence interval would cover the true parameter.</p>
-<figure class="align-default" id="bernoullicltwci">
-<a class="reference internal image-reference" href="_images/bernoulliCLTwCI.svg"><img alt="_images/bernoulliCLTwCI.svg" src="_images/bernoulliCLTwCI.svg" width="33%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoullicltwci" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="bernoulliclt2wci">
-<a class="reference internal image-reference" href="_images/bernoulliCLT2wCI.svg"><img alt="_images/bernoulliCLT2wCI.svg" src="_images/bernoulliCLT2wCI.svg" width="33%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoulliclt2wci" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+\[H_A: p &gt; 0.5\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_oneside</span><span class="p">,</span> <span class="n">pval_oneside</span> <span class="o">=</span> <span class="n">proportions_ztest</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> 
+                                            <span class="n">nobs</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> 
+                                            <span class="n">value</span> <span class="o">=</span> <span class="mf">.5</span><span class="p">,</span> 
+                                            <span class="n">prop_var</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> 
+                                            <span class="n">alternative</span> <span class="o">=</span> <span class="s1">&#39;larger&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;z-statistic:&quot;</span><span class="p">,</span> <span class="n">z_oneside</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value&quot;</span><span class="p">,</span> <span class="n">pval_oneside</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z-statistic: 1.0954451150103321
+P-value 0.13666083914614907
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-</section>
-</section>
-<section id="the-accuracy-of-averages">
-<h2>The Accuracy of Averages<a class="headerlink" href="#the-accuracy-of-averages" title="Permalink to this heading">#</a></h2>
-<p>Proportions are a special kind of average. The sample average <span class="math notranslate nohighlight">\(\bar{x}\)</span> estimates the  population average <span class="math notranslate nohighlight">\(\mu\)</span>. For general averages, there is no formula analogous to SD=<span class="math notranslate nohighlight">\(\sqrt{p(1-p)}\)</span>. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box. Then, the SE for the average can be calculated</p>
+<section id="one-sided-left-tail">
+<h3>One-sided, left tail<a class="headerlink" href="#one-sided-left-tail" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
-\[\text{SE for average} = \frac{\text{SD}}{\sqrt{n}}.\]</div>
-<p>Once the SE is found, a confidence interval is constructed like in the case of proportions. For example, a 95% confidence interval is <span class="math notranslate nohighlight">\(\bar{x} \pm 2\text{SE}\)</span>.</p>
+\[H_0: p = 0.5\]</div>
+<div class="math notranslate nohighlight">
+\[H_A: p &lt; 0.5\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_one_left</span><span class="p">,</span> <span class="n">pval_one_left</span> <span class="o">=</span> <span class="n">proportions_ztest</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> 
+                                            <span class="n">nobs</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> 
+                                            <span class="n">value</span> <span class="o">=</span> <span class="mf">.5</span><span class="p">,</span> 
+                                            <span class="n">prop_var</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> 
+                                            <span class="n">alternative</span> <span class="o">=</span> <span class="s1">&#39;smaller&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;z-statistic:&quot;</span><span class="p">,</span> <span class="n">z_one_left</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value&quot;</span><span class="p">,</span> <span class="n">pval_one_left</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z-statistic: 1.0954451150103321
+P-value 0.863339160853851
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="CIicecream">
+<section id="two-sided">
+<h3>Two-sided<a class="headerlink" href="#two-sided" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[H_0: p = 0.5\]</div>
+<div class="math notranslate nohighlight">
+\[H_A: p \neq 0.5\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_twoside</span><span class="p">,</span> <span class="n">pval_twoside</span> <span class="o">=</span> <span class="n">proportions_ztest</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
+                                            <span class="n">nobs</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+                                            <span class="n">value</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span>
+                                            <span class="n">prop_var</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                                            <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;two-sided&#39;</span><span class="p">)</span>
 
-<p class="admonition-title"><span class="caption-number">Exercise 41 </span></p>
-<section id="exercise-content">
-<p>In a survey of 96 randomly selected Americans, <span class="math notranslate nohighlight">\(\hat{p} = 0.60\)</span> said they think ice cream should be banned. Find the 95% confidence interval for the proportion.</p>
-</section>
+<span class="c1"># Two sided by hand</span>
+<span class="n">p_hat</span> <span class="o">=</span> <span class="mf">0.6</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">sd</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span> <span class="c1"># st dev from sampling distribution</span>
+<span class="n">z2</span> <span class="o">=</span> <span class="p">(</span><span class="n">p_hat</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span><span class="o">/</span><span class="n">sd</span> <span class="c1"># test stat</span>
+<span class="n">pval2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z2</span><span class="p">))</span> <span class="c1"># P-value</span>
+</pre></div>
 </div>
-<div class="exercise admonition" id="CInarrow">
-
-<p class="admonition-title"><span class="caption-number">Exercise 42 </span></p>
-<section id="exercise-content">
-<p>You are interested in the 95% confidence interval of a sample mean. Which of the following makes this interval more narrow?</p>
-<ol class="arabic simple">
-<li><p>More observations.</p></li>
-<li><p>Fewer observations.</p></li>
-<li><p>Higher value of the average.</p></li>
-<li><p>Lower value of the average.</p></li>
-<li><p>Both 1 and 4</p></li>
-</ol>
-</section>
 </div>
-<div class="exercise admonition" id="CImc">
-
-<p class="admonition-title"><span class="caption-number">Exercise 43 </span></p>
-<section id="exercise-content">
-<p>Consider a multiple choice exam with choices A, B, C, D, and E for each question. Assume that the probability that a particular question has the answer <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(p = 0.2\)</span> and that all letter answers are determined independently. Find a 90% confidence interval for the proportion of questions that will have a correct answer of C on a 1600-question exam.</p>
-</section>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;z-statistic:&quot;</span><span class="p">,</span> <span class="n">z_twoside</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value&quot;</span><span class="p">,</span> <span class="n">pval_twoside</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z-statistic: 1.0954451150103321
+P-value 0.27332167829229814
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -577,20 +657,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="sampling.html"
+       href="statwrapregression.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Sampling</p>
+        <p class="prev-next-title">Regression</p>
       </div>
     </a>
     <a class="right-next"
-       href="hypothesistesting.html"
+       href="Rbasics.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Hypothesis Testing</p>
+        <p class="prev-next-title">Overview</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -609,15 +689,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-accuracy-of-percentages">The Accuracy of Percentages</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Confidence Intervals</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-a-confidence-interval">Interpretation of a Confidence Interval</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proportions">Proportions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-right-tail">One-sided, right tail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-left-tail">One-sided, left tail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-sided">Two-sided</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-accuracy-of-averages">The Accuracy of Averages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 

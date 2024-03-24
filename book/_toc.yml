@@ -21,6 +21,7 @@ parts:
     - file: chancevary
     - file: sampling
     - file: confidenceintervals
+   # - file: hypothesistesting
     - file: bibliography
 
 #- caption: Solutions
@@ -40,6 +41,7 @@ parts:
     - file: pylibs
     - file: statwrap0
     - file: statwrapregression
+    - file: pyHypothesisTesting
 
 - caption: R (optional)
   chapters:

@@ -436,3 +436,16 @@ B. The number of ways you can have a President/Vice President duo of a three-per
 ```{exercise-end}
 ```
 
+```{exercise-start}
+:label: ncaa 
+```
+*Skip this question if you're not familiar with March Madness brackets.* The men's basketball NCAA tournament begins with 64 teams. How many different final fours are possible?
+
+a.) $\binom{64}{4}$ <br>
+b.) More than $\binom{64}{4}$ <br>
+c.) Less than $\binom{64}{4}$ <br>
+
+```{exercise-end}
+```
+
+
