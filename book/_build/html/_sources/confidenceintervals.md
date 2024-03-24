@@ -80,3 +80,33 @@ name: bernoulliCLT2wCI
 Each miniature histogram reflects $n=400$ coin flips where $p=0.2$. Grayed out histograms are those where the confidence interval misses the true parameter.
 ```
 
+## The Accuracy of Averages
+
+Proportions are a special kind of average. The sample average $\bar{x}$ estimates the  population average $\mu$. For general averages, there is no formula analogous to SD=$\sqrt{p(1-p)}$. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box. Then, the SE for the average can be calculated
+
+$$\text{SE for average} = \frac{\text{SD}}{\sqrt{n}}.$$
+
+Once the SE is found, a confidence interval is constructed like in the case of proportions. For example, a 95% confidence interval is $\bar{x} \pm 2\text{SE}$.
+
+## Exercises
+
+```{exercise-start}
+:label: CIicecream
+```
+In a survey of 96 randomly selected Americans, $\hat{p} = 0.60$ said they think ice cream should be banned. Find the 95% confidence interval for the proportion. 
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: CInarrow
+```
+You are interested in the 95% confidence interval of a sample mean. Which of the following makes this interval more narrow?
+
+1. More observations.
+2. Fewer observations.
+3. Higher value of the average.
+4. Lower value of the average. 
+5. Both 1 and 4
+```{exercise-end}
+```
+
