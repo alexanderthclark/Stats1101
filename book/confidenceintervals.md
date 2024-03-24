@@ -39,9 +39,9 @@ This is all quite nice except it answers a question that isn't very interesting 
 
 Consider again the example from {ref}`ptonSample`, where a researcher at Peloton wants to find the proportion of members who own an Apple Watch. In practice, only one sample will be collected and only one sample proportion $\hat{p}$ is observed. Interesting questions relate the unknown $p$ to the observed $\hat{p}$. That is, we are trying to make an *inference* about the population from the sample. To get some sense of the margin of error for the sample proportion $\hat{p}$, we also have to estimate the SE. 
 
-To estimate the SE, we must first estimate the SD for the 0-1 box. According to the *bootstrap procedure*, the SD of the box can be estimated by substituting the fract of 0's and 1's in the sample for the unknown fractions in the box. This provides a good estimate for a large enough sample. 
+To estimate the SE, we must first estimate the SD for the 0-1 box. According to the *bootstrap procedure*, the SD of the box can be estimated by substituting the fraction of 0's and 1's in the sample for the unknown fractions in the box. This provides a good estimate for a large enough sample. 
 
-That is, we estimate the SE computed from the population parameters, $\sqrt{\frac{p(1-p)}{n}}$, by substituting the sample proportion: $\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$.
+That is, we estimate the SE based on the population parameters, $\sqrt{\frac{p(1-p)}{n}}$, by substituting the sample proportion: $\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$.
 
 **Example**: The Pew Research Center conducted a [study on tipping](https://www.pewresearch.org/2023/11/09/tipping-culture-in-america-public-sees-a-changed-landscape/). They surveyed 11,945 adults in the US. 59% reported that they always tip when having food delivered. Among all adults in the US, a proportion $p$ must always tip. The survey estimates this as $\hat{p} = 0.59$. The estimated SD as $\sqrt{.59\times.41} \approx 0.49$. The SE for the sample proportion is SE = $\frac{0.49}{\sqrt{11945}} \approx 0.004$. Converting to percentages, we expect that about 59% of adults always tip, give or take 0.4% as a typical chance error.
 
