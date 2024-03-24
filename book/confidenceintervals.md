@@ -99,7 +99,9 @@ Once the SE is found, a confidence interval is constructed like in the case of p
 ```{dropdown} 90% confidence interval
 The sample size is $n$ = 8782, the sample average is 6.03 and the SE is 0.05.
 
-The interval is $6.03 \pm 0.1$. 
+The interval is $6.03 \pm 0.1$.
+
+There are important caveats related to this number that would require a look at the ATUS documentation. Notably, no data was collected at the peak of the pandemic.
 ```
 
 
