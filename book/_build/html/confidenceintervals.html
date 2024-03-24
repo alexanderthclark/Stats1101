@@ -77,7 +77,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hypothesis Testing" href="hypothesistesting.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
     <link rel="prev" title="Sampling" href="sampling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -198,7 +198,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Variability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Confidence Intervals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hypothesistesting.html">Hypothesis Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -474,8 +473,8 @@ document.write(`
 </figure>
 <p>This is all quite nice except it answers a question that isn’t very interesting because we start by knowing the true parameter is <span class="math notranslate nohighlight">\(p=0.2\)</span> and then we imagine repeatedly drawing samples.</p>
 <p>Consider again the example from <a class="reference internal" href="sampling.html#ptonsample"><span class="std std-ref">Finding the right SE</span></a>, where a researcher at Peloton wants to find the proportion of members who own an Apple Watch. In practice, only one sample will be collected and only one sample proportion <span class="math notranslate nohighlight">\(\hat{p}\)</span> is observed. Interesting questions relate the unknown <span class="math notranslate nohighlight">\(p\)</span> to the observed <span class="math notranslate nohighlight">\(\hat{p}\)</span>. That is, we are trying to make an <em>inference</em> about the population from the sample. To get some sense of the margin of error for the sample proportion <span class="math notranslate nohighlight">\(\hat{p}\)</span>, we also have to estimate the SE.</p>
-<p>To estimate the SE, we must first estimate the SD for the 0-1 box. According to the <em>bootstrap procedure</em>, the SD of the box can be estimated by substituting the fract of 0’s and 1’s in the sample for the unknown fractions in the box. This provides a good estimate for a large enough sample.</p>
-<p>That is, we estimate the SE computed from the population parameters, <span class="math notranslate nohighlight">\(\sqrt{\frac{p(1-p)}{n}}\)</span>, by substituting the sample proportion: <span class="math notranslate nohighlight">\(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span>.</p>
+<p>To estimate the SE, we must first estimate the SD for the 0-1 box. According to the <em>bootstrap procedure</em>, the SD of the box can be estimated by substituting the fraction of 0’s and 1’s in the sample for the unknown fractions in the box. This provides a good estimate for a large enough sample.</p>
+<p>That is, we estimate the SE based on the population parameters, <span class="math notranslate nohighlight">\(\sqrt{\frac{p(1-p)}{n}}\)</span>, by substituting the sample proportion: <span class="math notranslate nohighlight">\(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span>.</p>
 <p><strong>Example</strong>: The Pew Research Center conducted a <a class="reference external" href="https://www.pewresearch.org/2023/11/09/tipping-culture-in-america-public-sees-a-changed-landscape/">study on tipping</a>. They surveyed 11,945 adults in the US. 59% reported that they always tip when having food delivered. Among all adults in the US, a proportion <span class="math notranslate nohighlight">\(p\)</span> must always tip. The survey estimates this as <span class="math notranslate nohighlight">\(\hat{p} = 0.59\)</span>. The estimated SD as <span class="math notranslate nohighlight">\(\sqrt{.59\times.41} \approx 0.49\)</span>. The SE for the sample proportion is SE = <span class="math notranslate nohighlight">\(\frac{0.49}{\sqrt{11945}} \approx 0.004\)</span>. Converting to percentages, we expect that about 59% of adults always tip, give or take 0.4% as a typical chance error.</p>
 <section id="id2">
 <h3>Confidence Intervals<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
@@ -487,7 +486,17 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\hat{p} \pm 3 \text{SE} \hspace{9pt} (\text{99.7% confidence interval}).\]</div>
 <p>And more generally, an arbitrary <span class="math notranslate nohighlight">\(a\%\)</span> confidence interval can be found as <span class="math notranslate nohighlight">\(\hat{p} \pm z^{\star} \text{SE}\)</span>, where <span class="math notranslate nohighlight">\(z^\star\)</span> is the critical value such that <span class="math notranslate nohighlight">\(a\%\)</span> of the area under a normal curve is between <span class="math notranslate nohighlight">\(-z^\star\)</span> and <span class="math notranslate nohighlight">\(z^\star\)</span>.</p>
-<section id="interpretation-of-a-confidence-interval">
+<p><strong>Example</strong>: Use a <span class="math notranslate nohighlight">\(z\)</span>-table to find the appropriate critical value for a 90% confidence interval.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+90% confidence interval<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The critical value is 1.645. The interval takes the form <span class="math notranslate nohighlight">\( \hat{p} \pm 1.645 \times \text{SE}\)</span>.</p>
+</div>
+</details><section id="interpretation-of-a-confidence-interval">
 <h4>Interpretation of a Confidence Interval<a class="headerlink" href="#interpretation-of-a-confidence-interval" title="Permalink to this heading">#</a></h4>
 <p>The correct interpretation of a confidence interval is often misunderstood. The interpretation is based on our frequency theory of chance. First, there is nothing random about the parameter <span class="math notranslate nohighlight">\(p\)</span>. Our sample is random and thus randomness is manifested in <span class="math notranslate nohighlight">\(\hat{p}\)</span> instead. With <span class="math notranslate nohighlight">\(p\)</span> nonrandom, we <em>can’t</em> make probabilistic statement like <span class="math notranslate nohighlight">\(p\)</span> is in a 95% confidence interval with 95% probability. Relying on probabilities being long-run frequencies instead, we say that if we were to construct many samples and thus many 95% confidence intervals, about 95% of the intervals would contain the true parameter.</p>
 <p>Let’s return to the simulated data with <span class="math notranslate nohighlight">\(p=0.2\)</span>, in <a class="reference internal" href="#bernoulliclt"><span class="std std-numref">Fig. 49</span></a> and <a class="reference internal" href="#bernoulliclt2"><span class="std std-numref">Fig. 50</span></a>. Each miniature histogram is a sample and most of the sample means are not equal to 0.2. However, 95% confidence intervals can be found for each. Indeed, for 95 of 100 of the simulated samples, the confidence interval would cover the true parameter.</p>
@@ -508,11 +517,23 @@ document.write(`
 </section>
 <section id="the-accuracy-of-averages">
 <h2>The Accuracy of Averages<a class="headerlink" href="#the-accuracy-of-averages" title="Permalink to this heading">#</a></h2>
-<p>Proportions are a special kind of average. The sample average <span class="math notranslate nohighlight">\(\bar{x}\)</span> estimates the  population average <span class="math notranslate nohighlight">\(\mu\)</span>. For general averages, there is no formula analogous to SD=<span class="math notranslate nohighlight">\(\sqrt{p(1-p)}\)</span>. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box. Then, the SE for the average can be calculated</p>
+<p>Proportions are a special kind of average. The sample average <span class="math notranslate nohighlight">\(\bar{x}\)</span> estimates the  population average <span class="math notranslate nohighlight">\(\mu\)</span>. For general averages, there is no formula analogous to SD=<span class="math notranslate nohighlight">\(\sqrt{p(1-p)}\)</span>. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box.<a class="footnote-reference brackets" href="#sd" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Then, the SE for the average can be calculated</p>
 <div class="math notranslate nohighlight">
 \[\text{SE for average} = \frac{\text{SD}}{\sqrt{n}}.\]</div>
 <p>Once the SE is found, a confidence interval is constructed like in the case of proportions. For example, a 95% confidence interval is <span class="math notranslate nohighlight">\(\bar{x} \pm 2\text{SE}\)</span>.</p>
-</section>
+<p><strong>Example</strong>: Use this <a class="reference external" href="https://docs.google.com/spreadsheets/d/1PLUjN4IR-XRPJ8pjDGZGyUG4ii9b_shQa_R78rKaghA/edit?usp=sharing">American Time Use Survey data</a> to find a 95% confidence interval for the hours spent alone among 2020 respondents.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+90% confidence interval<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The sample size is <span class="math notranslate nohighlight">\(n\)</span> = 8782, the sample average is 6.03 and the SE is 0.05.</p>
+<p class="sd-card-text">The interval is <span class="math notranslate nohighlight">\(6.03 \pm 0.1\)</span>.</p>
+<p class="sd-card-text">There are important caveats related to this number that would require a look at the ATUS documentation. Notably, no data was collected at the peak of the pandemic.</p>
+</div>
+</details></section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="CIicecream">
@@ -543,6 +564,11 @@ document.write(`
 <p>Consider a multiple choice exam with choices A, B, C, D, and E for each question. Assume that the probability that a particular question has the answer <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(p = 0.2\)</span> and that all letter answers are determined independently. Find a 90% confidence interval for the proportion of questions that will have a correct answer of C on a 1600-question exam.</p>
 </section>
 </div>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="sd" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p>It would be typical to use the sample standard deviation SD<sup>+</sup> here, but, following <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, we’ll use the population standard deviation SD. There is little difference in a large sample.</p>
+</aside>
 </section>
 </section>
 
@@ -586,11 +612,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="hypothesistesting.html"
+       href="bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Hypothesis Testing</p>
+        <p class="prev-next-title">Bibliography</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

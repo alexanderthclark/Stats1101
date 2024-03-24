@@ -419,7 +419,7 @@ Let $A$ and $B$ be independent. Which of these sums is equal to one? What if the
 ```
 (Use a calculator) Ignore leap day and assume that all birthdays are equally likely and independent. What is the probability that, of 365 people, nobody is born on June 1st? 
 
-What is the probability that, of 40 people, no two people share the same birthday?
+(Hard) What is the probability that, of 40 people, no two people share the same birthday?
 ```{exercise-end}
 ```
 

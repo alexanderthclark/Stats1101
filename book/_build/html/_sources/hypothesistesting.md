@@ -36,9 +36,7 @@ name: notredamefire
 
 We consider the experiment of {cite}`carlson1983double` which tests the claims of astrologers. An astrologer is "given the natal chart of a random subject and an objective and respected measure of his personality traits called the California Personality Inventory (CPI)." The astrologer must select the CPI that matches the natal chart. The structure is such that a random guesser will be correct with $p = \frac{1}{3}$. The astrologers predicted a correct choice half the time or more.
 
-The result was barely better than chance. From $n=116$, $\hat{p} = 0.34$ and $\text{SE}(\hat{p}) = 0.044$ 
-
-A 95% confidence interval would be $0.34 \pm 2\times 0.044$. The confidence interval for the sample proportion starts with the data. But, with a hypothesis test, we will *assume* a true $p$ and reason how often we'd see a sample proportion $\hat{p}$ as extreme as the one observed.
+The result was barely better than chance. From $n=116$, $\hat{p} = 0.34$ and $\text{SE}(\hat{p}) = 0.044$. A 95% confidence interval would be $0.34 \pm 2\times 0.044$. The confidence interval for the sample proportion starts with the data. But, with a hypothesis test, we will *assume* a true $p$ and reason how often we'd see a sample proportion $\hat{p}$ as extreme as the one observed.
 
 #### One-sided test
 
@@ -168,9 +166,6 @@ The first quantity, the P-value, might correspond to something like the probabil
 
 The more interesting quantity above is the second, $\mathbb{P}(H_0 \mid \text{your data or data more extreme})$, which could correspond to the probability someone is healthy given their temperature. This is *not* the P-value. We could only arrive there with more information and by applying Bayes' Theorem. In particular, this will depend on $\mathbb{P}(H_0)$, the probability you attached to the null prior to observing any data.
 
-
-### Comments on Significance
-
-95% significance (or any other level) is an arbitrary rule. That might bother you, even if it's more or less from Ronald Fisher himself. Hypothesis testing is abstract and it doesn't correspond to a cost benefit analysis you might construct for a particular decision. There are good critiques regarding the obsession with statistical significance. Some notable writing on this is by Deirdre McCloskey (often with Stephen Ziliak). Part of their critique is that we shouldn't confuse statistical significance for practical (or economic) significance. We'll give hearing to some of these ideas later in the course.
+95% significance (or any other level) is an arbitrary rule. That might bother you, even though it was proposed by Ronald Fisher himself. Hypothesis testing is abstract and it doesn't correspond to a cost benefit analysis you might construct for a particular decision. There are good critiques regarding the obsession with statistical significance. Some notable writing on this is by Deirdre McCloskey (often with Stephen Ziliak). Part of their critique is that we shouldn't confuse statistical significance for practical (or economic) significance. We'll give hearing to some of these ideas later in the course.
 
 

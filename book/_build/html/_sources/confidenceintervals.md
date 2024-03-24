@@ -39,9 +39,9 @@ This is all quite nice except it answers a question that isn't very interesting 
 
 Consider again the example from {ref}`ptonSample`, where a researcher at Peloton wants to find the proportion of members who own an Apple Watch. In practice, only one sample will be collected and only one sample proportion $\hat{p}$ is observed. Interesting questions relate the unknown $p$ to the observed $\hat{p}$. That is, we are trying to make an *inference* about the population from the sample. To get some sense of the margin of error for the sample proportion $\hat{p}$, we also have to estimate the SE. 
 
-To estimate the SE, we must first estimate the SD for the 0-1 box. According to the *bootstrap procedure*, the SD of the box can be estimated by substituting the fract of 0's and 1's in the sample for the unknown fractions in the box. This provides a good estimate for a large enough sample. 
+To estimate the SE, we must first estimate the SD for the 0-1 box. According to the *bootstrap procedure*, the SD of the box can be estimated by substituting the fraction of 0's and 1's in the sample for the unknown fractions in the box. This provides a good estimate for a large enough sample. 
 
-That is, we estimate the SE computed from the population parameters, $\sqrt{\frac{p(1-p)}{n}}$, by substituting the sample proportion: $\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$.
+That is, we estimate the SE based on the population parameters, $\sqrt{\frac{p(1-p)}{n}}$, by substituting the sample proportion: $\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$.
 
 **Example**: The Pew Research Center conducted a [study on tipping](https://www.pewresearch.org/2023/11/09/tipping-culture-in-america-public-sees-a-changed-landscape/). They surveyed 11,945 adults in the US. 59% reported that they always tip when having food delivered. Among all adults in the US, a proportion $p$ must always tip. The survey estimates this as $\hat{p} = 0.59$. The estimated SD as $\sqrt{.59\times.41} \approx 0.49$. The SE for the sample proportion is SE = $\frac{0.49}{\sqrt{11945}} \approx 0.004$. Converting to percentages, we expect that about 59% of adults always tip, give or take 0.4% as a typical chance error.
 
@@ -56,7 +56,13 @@ $$\hat{p} \pm 2 \text{SE} \hspace{12pt} (\text{95% confidence interval}),$$
 
 $$\hat{p} \pm 3 \text{SE} \hspace{9pt} (\text{99.7% confidence interval}).$$ 
 
-And more generally, an arbitrary $a\%$ confidence interval can be found as $\hat{p} \pm z^{\star} \text{SE}$, where $z^\star$ is the critical value such that $a\%$ of the area under a normal curve is between $-z^\star$ and $z^\star$.
+And more generally, an arbitrary $a\%$ confidence interval can be found as $\hat{p} \pm z^{\star} \text{SE}$, where $z^\star$ is the critical value such that $a\%$ of the area under a normal curve is between $-z^\star$ and $z^\star$. 
+
+**Example**: Use a $z$-table to find the appropriate critical value for a 90% confidence interval. 
+
+```{dropdown} 90% confidence interval
+The critical value is 1.645. The interval takes the form $ \hat{p} \pm 1.645 \times \text{SE}$.
+```
 
 #### Interpretation of a Confidence Interval
 
@@ -82,11 +88,24 @@ Each miniature histogram reflects $n=400$ coin flips where $p=0.2$. Grayed out h
 
 ## The Accuracy of Averages
 
-Proportions are a special kind of average. The sample average $\bar{x}$ estimates the  population average $\mu$. For general averages, there is no formula analogous to SD=$\sqrt{p(1-p)}$. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box. Then, the SE for the average can be calculated
+Proportions are a special kind of average. The sample average $\bar{x}$ estimates the  population average $\mu$. For general averages, there is no formula analogous to SD=$\sqrt{p(1-p)}$. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box.[^sd] Then, the SE for the average can be calculated
 
 $$\text{SE for average} = \frac{\text{SD}}{\sqrt{n}}.$$
 
+[^sd]: It would be typical to use the sample standard deviation SD<sup>+</sup> here, but, following {cite}`freedman2007statistics`, we'll use the population standard deviation SD. There is little difference in a large sample.  
+
 Once the SE is found, a confidence interval is constructed like in the case of proportions. For example, a 95% confidence interval is $\bar{x} \pm 2\text{SE}$.
+
+**Example**: Use this [American Time Use Survey data](https://docs.google.com/spreadsheets/d/1PLUjN4IR-XRPJ8pjDGZGyUG4ii9b_shQa_R78rKaghA/edit?usp=sharing) to find a 95% confidence interval for the hours spent alone among 2020 respondents.
+
+```{dropdown} 90% confidence interval
+The sample size is $n$ = 8782, the sample average is 6.03 and the SE is 0.05.
+
+The interval is $6.03 \pm 0.1$.
+
+There are important caveats related to this number that would require a look at the ATUS documentation. Notably, no data was collected at the peak of the pandemic.
+```
+
 
 ## Exercises
 
