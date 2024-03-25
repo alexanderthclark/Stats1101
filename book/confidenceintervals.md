@@ -95,6 +95,8 @@ Here are a few more *wrong* interpretations for a 95% confidence interval.
 
 ## The Accuracy of Averages
 
+For averages, the central limit theorem again holds. When drawing at random from a box, the sample average will follow a normal distribution even if the contents of the box do not. 
+
 Proportions are a special kind of average. The sample average $\bar{x}$ estimates the  population average $\mu$. For general averages, there is no formula analogous to SD=$\sqrt{p(1-p)}$. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box.[^sd] Then, the SE for the average can be calculated
 
 $$\text{SE for average} = \frac{\text{SD}}{\sqrt{n}}.$$
