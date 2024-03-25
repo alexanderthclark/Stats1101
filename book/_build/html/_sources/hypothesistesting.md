@@ -6,7 +6,7 @@
 - {cite}`freedman2007statistics`, Chapters 26, 27
 ```
 
-Previously, we'd take a sample proportion or mean and construct some confidence interval around it. Often, there was some other value of interest beyond the sample statistic as well. When conducting a poll in a two-way race, you'll want to know if 50% is within the margin of error. Hypothesis testing allows us to formalize this idea of testing if our sample is sufficiently far from another value for the difference to be judged statistically significant.
+Previously, we'd take a sample proportion or mean and construct some confidence interval around it. Often, there was some other value of interest beyond the sample statistic as well. When conducting a poll in a two-way race, you'll want to know if 50% is within the margin of error. Hypothesis testing allows us to formalize this idea of testing if our sample is sufficiently far from another value for the difference to be judged statistically significant. The calculations should look familiar, but there a few new concepts like P-values. 
 
 ## Hypothesis Formulation
 
@@ -22,15 +22,8 @@ Hypothesis testing touches on philosophy in at least two points. First, this sor
 
 Second, the practice of hypothesis testing involves favoring the null hypothesis. When we fail to reject a null of $p = 0.5$, it might also be true that we would fail to reject $p=0.51$. The deference to the null might seem arbitrary, but it's not arbitrary when we can choose it according to the *principle of parsimony*. A parsimonious model is one with few complications. Parsimony need not be decisive, but it is generally preferred. You might counter that a flat-earth theory is simpler than a round-earth theory; however, flat-earth theory quickly becomes more complicated than round-earth theory once you have to start explaining satellite images. Similarly, hypothesizing a coin to be fair seems more appropriate than picking a particular bias for heads or tails.
 
-Parsimony also guards against apophenia, or the "human propensity to seek patterns in random information." Below is a picture of the 2019 fire at Notre-Dame. Some claimed to see the figure of Jesus in the circled flames. Some will find this outlandish and others will not. The simpler, or more parsimonious view would usually favor the explanation that does not make supernatural claims. Faith won't impose the same constraints.
+Parsimony also guards against apophenia, or the "human propensity to seek patterns in random information." People claim to see the the Virgin Mary in a piece of toast. Others claimed to see the figure of Christ in the 2019 fire at Notre-Dame. Some will find this outlandish and others will not. Your faith need not impose the same constraints, but the more parsimonious view would usually favor the explanation that does not make supernatural claims.
 
-```{figure} images/notredamefire.png
----
-width: 35%
-name: notredamefire
----
-
-```
 
 ## Proportions
 
@@ -61,11 +54,22 @@ We're assuming the null is true in this procedure, and that means we have a defi
 
 $$ z = \frac{\hat{p}-p}{\text{SE}} = \frac{.34 - \frac{1}{3}} {\sqrt{\frac{0.222}{116}}} \approx 0.15 .$$
 
+
+```{figure} images/onesidedHT.svg
+---
+width: 65%
+name: onesidedHT
+---
+The $z$-statistic is based on the rounding done in the accompanying text. 
+```
+
 **Fourth**, we calculate a **P-value** using a $z$-table. For a two-sided test, find the probability or area that is more extreme that the observed statistic, $\mathbb{P}( \vert Z \vert > z).$ For a one-sided test, we find the probability remaining in the tail allowed by the alternative hypothesis, $\mathbb{P}(Z > z)$ or $\mathbb{P}(Z < z)$. In our application, we find $\mathbb{P}(Z > 0.15)$ and this comes to be about 44\%. 
 
 $$\mathbb{P}(Z > z)  \approx 1 - 0.5596  = 0.4404.$$
 
 **Fifth**, we either "reject" or "fail to reject" the null hypothesis. We reject the null hypothesis if the P-value falls below our **significance level**, sometimes called $\alpha$. A typical significance level is $\alpha = .05$, corresponding to a 95% (1-$\alpha$) confidence level. Since we calculated a P-value of 0.44, we fail to reject the null hypothesis at $\alpha = 0.05". That means our data isn't significantly different than what we'd expect from the null hypothesis, or random guessing.
+
+A value of $\alpha$ also corresponds to a critical value. For a one-sided, right-tailed test like in the above, the critical value for $\alpha = 0.05$ is 1.645. When the $z$-statistic exceeds is more extreme than the critical value, we reject the null hypothesis. This condition is equivalent to the P-value being below $\alpha$, so you only need to check one of the two conditions to determine the result of the test. The area beyond the critical value is sometimes called the rejection region, like in {numref}`onesidedHT`.
 
 ### What about two-sided tests?
 
@@ -80,9 +84,9 @@ Which of these lends itself better to a one-sided test?
 The second lends itself better to a one-sided test because we have reason to think that a sample proportion below 0.5 is just bad luck and not evidence that someone does worse than guessing.
 ```
 
-Following our textbook, {cite}`freedman2007statistics`, we won't go into the exact procedure for a two-tailed test, but let's examine Figure TKTKT and pay special attention to the *rejection region* in the bottom panel. A rejection region is the range of test statistic values where the P-value would be low enough so that the null hypothesis is rejected. In the two-tailed case, the rejection region is in two pieces. Using a 95% confidence level, the area over the rejection region is 5% with 2.5% in each piece. 
+Following our textbook, {cite}`freedman2007statistics`, we won't go into the exact procedure for a two-tailed test. A rejection region is the range of test statistic values where the P-value would be low enough so that the null hypothesis is rejected. In the two-tailed case, the rejection region is in two pieces. Using a 95% confidence level, the area over the rejection region is 5% with 2.5% in each piece. 
 
-If we instead used a one-tailed alternative that $p>\frac{1}{3}$, the rejection region would be contained only on the right. That would \emph{not} increase the total rejection region area, but it increase the area on the right side. If the the statistic $z>0$, then we end up rejecting the null more often. For this reason, one-sided tests are often considered to be more liberal ({cite}`abelson2012statistics}`).
+If we instead used a one-tailed alternative that $p>\frac{1}{3}$, the rejection region would be contained only on the right. That would *not* increase the total rejection region area, but it increase the area on the right side. If the the statistic $z>0$, then we end up rejecting the null more often. For this reason, one-sided tests are often considered to be more liberal ({cite}`abelson2012statistics}`).
 
 ## Averages
 

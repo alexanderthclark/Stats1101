@@ -512,11 +512,18 @@ document.write(`
 <p><span class="caption-number">Fig. 52 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoulliclt2wci" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>Here are a few more <em>wrong</em> interpretations for a 95% confidence interval.</p>
+<ol class="arabic simple">
+<li><p>95% of all of the data is in the interval.</p></li>
+<li><p>95% of randomly selected data points will be in the interval.</p></li>
+<li><p>The sample average is contained in the interval for 95% of samples.</p></li>
+</ol>
 </section>
 </section>
 </section>
 <section id="the-accuracy-of-averages">
 <h2>The Accuracy of Averages<a class="headerlink" href="#the-accuracy-of-averages" title="Permalink to this heading">#</a></h2>
+<p>For averages, the central limit theorem again holds. When drawing at random from a box, the sample average will follow a normal distribution even if the contents of the box do not.</p>
 <p>Proportions are a special kind of average. The sample average <span class="math notranslate nohighlight">\(\bar{x}\)</span> estimates the  population average <span class="math notranslate nohighlight">\(\mu\)</span>. For general averages, there is no formula analogous to SD=<span class="math notranslate nohighlight">\(\sqrt{p(1-p)}\)</span>. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box.<a class="footnote-reference brackets" href="#sd" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Then, the SE for the average can be calculated</p>
 <div class="math notranslate nohighlight">
 \[\text{SE for average} = \frac{\text{SD}}{\sqrt{n}}.\]</div>
@@ -524,7 +531,7 @@ document.write(`
 <p><strong>Example</strong>: Use this <a class="reference external" href="https://docs.google.com/spreadsheets/d/1PLUjN4IR-XRPJ8pjDGZGyUG4ii9b_shQa_R78rKaghA/edit?usp=sharing">American Time Use Survey data</a> to find a 95% confidence interval for the hours spent alone among 2020 respondents.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-90% confidence interval<div class="sd-summary-down docutils">
+95% confidence interval<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -567,7 +574,7 @@ document.write(`
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="sd" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
-<p>It would be typical to use the sample standard deviation SD<sup>+</sup> here, but, following <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, we’ll use the population standard deviation SD. There is little difference in a large sample.</p>
+<p>It would be typical to use the sample standard deviation (SD<sup>+</sup>) here, but, following <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, we’ll use the population standard deviation SD. There is little difference in a large sample.</p>
 </aside>
 </section>
 </section>
