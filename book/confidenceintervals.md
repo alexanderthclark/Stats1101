@@ -86,6 +86,13 @@ name: bernoulliCLT2wCI
 Each miniature histogram reflects $n=400$ coin flips where $p=0.2$. Grayed out histograms are those where the confidence interval misses the true parameter.
 ```
 
+Here are a few more *wrong* interpretations for a 95% confidence interval.
+
+1. 95% of all of the data is in the interval. 
+2. 95% of randomly selected data points will be in the interval. 
+3. The sample average is contained in the interval for 95% of samples. 
+
+
 ## The Accuracy of Averages
 
 Proportions are a special kind of average. The sample average $\bar{x}$ estimates the  population average $\mu$. For general averages, there is no formula analogous to SD=$\sqrt{p(1-p)}$. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box.[^sd] Then, the SE for the average can be calculated
@@ -98,7 +105,7 @@ Once the SE is found, a confidence interval is constructed like in the case of p
 
 **Example**: Use this [American Time Use Survey data](https://docs.google.com/spreadsheets/d/1PLUjN4IR-XRPJ8pjDGZGyUG4ii9b_shQa_R78rKaghA/edit?usp=sharing) to find a 95% confidence interval for the hours spent alone among 2020 respondents.
 
-```{dropdown} 90% confidence interval
+```{dropdown} 95% confidence interval
 The sample size is $n$ = 8782, the sample average is 6.03 and the SE is 0.05.
 
 The interval is $6.03 \pm 0.1$.
