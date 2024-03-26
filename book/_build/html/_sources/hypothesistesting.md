@@ -22,7 +22,7 @@ Hypothesis testing touches on philosophy in at least two points. First, this sor
 
 Second, the practice of hypothesis testing involves favoring the null hypothesis. When we fail to reject a null of $p = 0.5$, it might also be true that we would fail to reject $p=0.51$. The deference to the null might seem arbitrary, but it's not arbitrary when we can choose it according to the *principle of parsimony*. A parsimonious model is one with few complications. Parsimony need not be decisive, but it is generally preferred. You might counter that a flat-earth theory is simpler than a round-earth theory; however, flat-earth theory quickly becomes more complicated than round-earth theory once you have to start explaining satellite images. Similarly, hypothesizing a coin to be fair seems more appropriate than picking a particular bias for heads or tails.
 
-Parsimony also guards against apophenia, or the "human propensity to seek patterns in random information." People claim to see the the Virgin Mary in a piece of toast. Others claimed to see the figure of Christ in the 2019 fire at Notre-Dame. Some will find this outlandish and others will not. Your faith need not impose the same constraints, but the more parsimonious view would usually favor the explanation that does not make supernatural claims.
+Parsimony also guards against apophenia, or the "human propensity to seek patterns in random information." People claim to see the the Virgin Mary in a piece of toast, etc. You might find this outlandish just as others might find your beliefs outlandish. Your beliefs and faith need not alwyays impose the same constraints, but the more parsimonious view would favor the explanation that does not make supernatural claims.
 
 
 ## Proportions
@@ -88,6 +88,14 @@ Following our textbook, {cite}`freedman2007statistics`, we won't go into the exa
 
 If we instead used a one-tailed alternative that $p>\frac{1}{3}$, the rejection region would be contained only on the right. That would *not* increase the total rejection region area, but it increase the area on the right side. If the the statistic $z>0$, then we end up rejecting the null more often. For this reason, one-sided tests are often considered to be more liberal ({cite}`abelson2012statistics}`).
 
+```{figure} images/twosidedHT.svg
+---
+width: 65%
+name: twosidedHT
+---
+For a two-sided test, the null rejection region is split between both tails and the P-value sums the areas in both extremes.
+```
+
 ## Averages
 
 
@@ -119,7 +127,7 @@ In this [Google Sheets example](https://docs.google.com/spreadsheets/d/1MHuqzyD1
 9. Render judgment---reject or fail to reject the null. Reject the null because *P*<0.05. 
 
 
-## Big Picture
+## (Aside) Big Picture
 
 ### Comments on P-values
 
@@ -170,6 +178,15 @@ The first quantity, the P-value, might correspond to something like the probabil
 
 The more interesting quantity above is the second, $\mathbb{P}(H_0 \mid \text{your data or data more extreme})$, which could correspond to the probability someone is healthy given their temperature. This is *not* the P-value. We could only arrive there with more information and by applying Bayes' Theorem. In particular, this will depend on $\mathbb{P}(H_0)$, the probability you attached to the null prior to observing any data.
 
-95% significance (or any other level) is an arbitrary rule. That might bother you, even though it was proposed by Ronald Fisher himself. Hypothesis testing is abstract and it doesn't correspond to a cost benefit analysis you might construct for a particular decision. There are good critiques regarding the obsession with statistical significance. Some notable writing on this is by Deirdre McCloskey (often with Stephen Ziliak). Part of their critique is that we shouldn't confuse statistical significance for practical (or economic) significance. We'll give hearing to some of these ideas later in the course.
+95% significance (or any other level) is an arbitrary rule. That might bother you, even though it was proposed by Ronald Fisher himself. Hypothesis testing is abstract and it doesn't correspond to a cost benefit analysis you might construct for a particular decision. One notable critic is Deirdre McCloskey (often accompanied by Stephen Ziliak). Part of their critique is that we shouldn't confuse statistical significance for practical (or economic) significance. We're mainly setting these critiques aside for now.
 
+## Averages with Small Data
 
+Hypothesis testing from data usually involves estimating a standard error. With a small number of observations, the normal approximation used in the $z$-test might fail. Instead, use the $t$-test when:
+
+1. The data are like draws from a box (iid draws). 
+2. The SD of the box is unknown. 
+3. The number of observations is small. 
+4. The histogram for the contents of the box does not look too different from the normal curve. 
+
+Having to estimate the SD, we lose some precision. The $t$-test accounts for this, using the $t$-distribution to calculate P-values. The $t$-distribution has thicker tails than the normal distribution. It is also called the *Student's curve*.

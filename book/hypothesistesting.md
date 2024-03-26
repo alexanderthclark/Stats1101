@@ -127,7 +127,7 @@ In this [Google Sheets example](https://docs.google.com/spreadsheets/d/1MHuqzyD1
 9. Render judgment---reject or fail to reject the null. Reject the null because *P*<0.05. 
 
 
-## Big Picture
+## (Aside) Big Picture
 
 ### Comments on P-values
 
@@ -180,4 +180,13 @@ The more interesting quantity above is the second, $\mathbb{P}(H_0 \mid \text{yo
 
 95% significance (or any other level) is an arbitrary rule. That might bother you, even though it was proposed by Ronald Fisher himself. Hypothesis testing is abstract and it doesn't correspond to a cost benefit analysis you might construct for a particular decision. One notable critic is Deirdre McCloskey (often accompanied by Stephen Ziliak). Part of their critique is that we shouldn't confuse statistical significance for practical (or economic) significance. We're mainly setting these critiques aside for now.
 
+## Averages with Small Data
 
+Hypothesis testing from data usually involves estimating a standard error. With a small number of observations, the normal approximation used in the $z$-test might fail. Instead, use the $t$-test when:
+
+1. The data are like draws from a box (iid draws). 
+2. The SD of the box is unknown. 
+3. The number of observations is small. 
+4. The histogram for the contents of the box does not look too different from the normal curve. 
+
+Having to estimate the SD, we lose some precision. The $t$-test accounts for this, using the $t$-distribution to calculate P-values. The $t$-distribution has thicker tails than the normal distribution. It is also called the *Student's curve*.
