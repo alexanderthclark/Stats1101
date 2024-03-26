@@ -88,6 +88,14 @@ Following our textbook, {cite}`freedman2007statistics`, we won't go into the exa
 
 If we instead used a one-tailed alternative that $p>\frac{1}{3}$, the rejection region would be contained only on the right. That would *not* increase the total rejection region area, but it increase the area on the right side. If the the statistic $z>0$, then we end up rejecting the null more often. For this reason, one-sided tests are often considered to be more liberal ({cite}`abelson2012statistics}`).
 
+```{figure} images/twosidedHT.svg
+---
+width: 65%
+name: twosidedHT
+---
+For a two-sided test, the null rejection region is split between both tails and the P-value sums the areas in both extremes.
+```
+
 ## Averages
 
 
@@ -170,6 +178,6 @@ The first quantity, the P-value, might correspond to something like the probabil
 
 The more interesting quantity above is the second, $\mathbb{P}(H_0 \mid \text{your data or data more extreme})$, which could correspond to the probability someone is healthy given their temperature. This is *not* the P-value. We could only arrive there with more information and by applying Bayes' Theorem. In particular, this will depend on $\mathbb{P}(H_0)$, the probability you attached to the null prior to observing any data.
 
-95% significance (or any other level) is an arbitrary rule. That might bother you, even though it was proposed by Ronald Fisher himself. Hypothesis testing is abstract and it doesn't correspond to a cost benefit analysis you might construct for a particular decision. There are good critiques regarding the obsession with statistical significance. Some notable writing on this is by Deirdre McCloskey (often with Stephen Ziliak). Part of their critique is that we shouldn't confuse statistical significance for practical (or economic) significance. We'll give hearing to some of these ideas later in the course.
+95% significance (or any other level) is an arbitrary rule. That might bother you, even though it was proposed by Ronald Fisher himself. Hypothesis testing is abstract and it doesn't correspond to a cost benefit analysis you might construct for a particular decision. One notable critic is Deirdre McCloskey (often accompanied by Stephen Ziliak). Part of their critique is that we shouldn't confuse statistical significance for practical (or economic) significance. We're mainly setting these critiques aside for now.
 
 
