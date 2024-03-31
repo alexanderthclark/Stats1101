@@ -273,6 +273,73 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/hypothesistesting.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/hypothesistesting.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -328,7 +395,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/hypothesistesting.md" target="_blank"
+      <li><a href="_sources/hypothesistesting.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -338,7 +405,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -440,7 +507,11 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#averages-with-small-data">Averages with Small Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#averages-with-small-data">Averages with Small Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-t-table">The <span class="math notranslate nohighlight">\(t\)</span>-Table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-or-z"><span class="math notranslate nohighlight">\(t\)</span> or <span class="math notranslate nohighlight">\(z\)</span>?</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -499,17 +570,17 @@ H_A: p &gt; \frac{1}{3}
 <p><strong>Third</strong>, by the Central Limit Theorem, we can use a Normal model to find the probability of “our particular <span class="math notranslate nohighlight">\(\hat{p}\)</span> <em>or</em> a value further from the mean <span class="math notranslate nohighlight">\(p\)</span>.” The observed proportion is converted to standard units to find the <strong>test statistic</strong>:</p>
 <div class="math notranslate nohighlight">
 \[ z = \frac{\hat{p}-p}{\text{SE}} = \frac{.34 - \frac{1}{3}} {\sqrt{\frac{0.222}{116}}} \approx 0.15 .\]</div>
-<figure class="align-default" id="onesidedht">
+<figure class="align-default" id="onesidedht1">
 <a class="reference internal image-reference" href="_images/onesidedHT.svg"><img alt="_images/onesidedHT.svg" src="_images/onesidedHT.svg" width="65%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 53 </span><span class="caption-text">The <span class="math notranslate nohighlight">\(z\)</span>-statistic is based on the rounding done in the accompanying text.</span><a class="headerlink" href="#onesidedht" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">The <span class="math notranslate nohighlight">\(z\)</span>-statistic is based on the rounding done in the accompanying text.</span><a class="headerlink" href="#onesidedht1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Fourth</strong>, we calculate a <strong>P-value</strong> using a <span class="math notranslate nohighlight">\(z\)</span>-table. For a two-sided test, find the probability or area that is more extreme that the observed statistic, <span class="math notranslate nohighlight">\(\mathbb{P}( \vert Z \vert &gt; z).\)</span> For a one-sided test, we find the probability remaining in the tail allowed by the alternative hypothesis, <span class="math notranslate nohighlight">\(\mathbb{P}(Z &gt; z)\)</span> or <span class="math notranslate nohighlight">\(\mathbb{P}(Z &lt; z)\)</span>. In our application, we find <span class="math notranslate nohighlight">\(\mathbb{P}(Z &gt; 0.15)\)</span> and this comes to be about 44%.</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(Z &gt; z)  \approx 1 - 0.5596  = 0.4404.\]</div>
 <p><strong>Fifth</strong>, we either “reject” or “fail to reject” the null hypothesis. We reject the null hypothesis if the P-value falls below our <strong>significance level</strong>, sometimes called <span class="math notranslate nohighlight">\(\alpha\)</span>. A typical significance level is <span class="math notranslate nohighlight">\(\alpha = .05\)</span>, corresponding to a 95% (1-<span class="math notranslate nohighlight">\(\alpha\)</span>) confidence level. Since we calculated a P-value of 0.44, we fail to reject the null hypothesis at $\alpha = 0.05”. That means our data isn’t significantly different than what we’d expect from the null hypothesis, or random guessing.</p>
-<p>A value of <span class="math notranslate nohighlight">\(\alpha\)</span> also corresponds to a critical value. For a one-sided, right-tailed test like in the above, the critical value for <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> is 1.645. When the <span class="math notranslate nohighlight">\(z\)</span>-statistic exceeds is more extreme than the critical value, we reject the null hypothesis. This condition is equivalent to the P-value being below <span class="math notranslate nohighlight">\(\alpha\)</span>, so you only need to check one of the two conditions to determine the result of the test. The area beyond the critical value is sometimes called the rejection region, like in <a class="reference internal" href="#onesidedht"><span class="std std-numref">Fig. 53</span></a>.</p>
+<p>A value of <span class="math notranslate nohighlight">\(\alpha\)</span> also corresponds to a critical value. For a one-sided, right-tailed test like in the above, the critical value for <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> is 1.645. When the <span class="math notranslate nohighlight">\(z\)</span>-statistic exceeds is more extreme than the critical value, we reject the null hypothesis. This condition is equivalent to the P-value being below <span class="math notranslate nohighlight">\(\alpha\)</span>, so you only need to check one of the two conditions to determine the result of the test. The area beyond the critical value is sometimes called the rejection region, like in <a class="reference internal" href="#onesidedht1"><span class="std std-numref">Fig. 53</span></a> <code class="xref std std-numref docutils literal notranslate"><span class="pre">onesidedHT</span></code>.</p>
 </section>
 <section id="what-about-two-sided-tests">
 <h3>What about two-sided tests?<a class="headerlink" href="#what-about-two-sided-tests" title="Permalink to this heading">#</a></h3>
@@ -529,11 +600,11 @@ One- or two-sided test?<div class="sd-summary-down docutils">
 <p class="sd-card-text">The second lends itself better to a one-sided test because we have reason to think that a sample proportion below 0.5 is just bad luck and not evidence that someone does worse than guessing.</p>
 </div>
 </details><p>Following our textbook, <span id="id5">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, we won’t go into the exact procedure for a two-tailed test. A rejection region is the range of test statistic values where the P-value would be low enough so that the null hypothesis is rejected. In the two-tailed case, the rejection region is in two pieces. Using a 95% confidence level, the area over the rejection region is 5% with 2.5% in each piece.</p>
-<p>If we instead used a one-tailed alternative that <span class="math notranslate nohighlight">\(p&gt;\frac{1}{3}\)</span>, the rejection region would be contained only on the right. That would <em>not</em> increase the total rejection region area, but it increase the area on the right side. If the the statistic <span class="math notranslate nohighlight">\(z&gt;0\)</span>, then we end up rejecting the null more often. For this reason, one-sided tests are often considered to be more liberal (<span id="id6">[]</span>).</p>
+<p>If we instead used a one-tailed alternative that <span class="math notranslate nohighlight">\(p&gt;\frac{1}{3}\)</span>, the rejection region would be contained only on the right. That would <em>not</em> increase the total rejection region area, but it increase the area on the right side. If the the statistic <span class="math notranslate nohighlight">\(z&gt;0\)</span>, then we end up rejecting the null more often. For this reason, one-sided tests are often considered to be more liberal (<span id="id6">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span>).</p>
 <figure class="align-default" id="twosidedht">
-<a class="reference internal image-reference" href="_images/twosidedHT.svg"><img alt="_images/twosidedHT.svg" src="_images/twosidedHT.svg" width="65%" /></a>
+<a class="reference internal image-reference" href="_images/twosidedHT.svg"><img alt="_images/twosidedHT.svg" src="_images/twosidedHT.svg" width="85%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 54 </span><span class="caption-text">For a two-sided test, the null rejection region is split between both tails and the P-value sums the areas in both extremes.</span><a class="headerlink" href="#twosidedht" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">For a two-sided test, the rejection region is split between both tails and the P-value sums the areas in both extremes.</span><a class="headerlink" href="#twosidedht" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -567,14 +638,13 @@ One- or two-sided test?<div class="sd-summary-down docutils">
 <h2>(Aside) Big Picture<a class="headerlink" href="#aside-big-picture" title="Permalink to this heading">#</a></h2>
 <section id="comments-on-p-values">
 <h3>Comments on P-values<a class="headerlink" href="#comments-on-p-values" title="Permalink to this heading">#</a></h3>
-<p>A P-value is the probability that we’d observe our test statistic (above, a <span class="math notranslate nohighlight">\(z\)</span>-statistic), assuming the null hypothesis is true. And we are assuming independence, assuming the sample is properly randomized, and counting on our sample size to be reasonably large.</p>
-<p>P-values can be difficult. According to <span id="id7">[<a class="reference internal" href="bibliography.html#id15" title="Sander Greenland, Stephen J Senn, Kenneth J Rothman, John B Carlin, Charles Poole, Steven N Goodman, and Douglas G Altman. Statistical tests, p values, confidence intervals, and power: a guide to misinterpretations. European journal of epidemiology, 31:337–350, 2016.">GSR+16</a>]</span>, “A key problem is that there are no interpretations of these concepts that are at once simple, intuitive, correct, and foolproof.” The article continues:</p>
-<blockquote>
-<div><p>We will adopt a more general view of the P value as a statistical summary of the compatibility between the observed data and what we would predict or expect to see if we knew the entire statistical model (all the assumptions used to compute the P value) were correct … The P value is then the probability that the chosen test statistic would have been at least as large as its observed value if every model assumption were correct, including the test hypothesis. This definition embodies a crucial point lost in traditional definitions: In logical terms, the P value tests all the assumptions about how the data were generated (the entire model), not just the targeted hypothesis it is supposed to test (such as a null hypothesis).</p>
-</div></blockquote>
+<p>Here are two good definitions for P-values.</p>
+<p><em>From <span id="id7">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span></em>: The P-value of a test is the chance of getting a big test statistic—assuming the null hypothesis to be right.</p>
+<p><em>More technical</em>: The P-value is the probability of obtaining a result equal to or more extreme than what was observed, assuming that all the modeling assumptions, including the null hypothesis, are true.</p>
+<p>P-values can be difficult. According to <span id="id8">[<a class="reference internal" href="bibliography.html#id15" title="Sander Greenland, Stephen J Senn, Kenneth J Rothman, John B Carlin, Charles Poole, Steven N Goodman, and Douglas G Altman. Statistical tests, p values, confidence intervals, and power: a guide to misinterpretations. European journal of epidemiology, 31:337–350, 2016.">GSR+16</a>]</span>, “A key problem is that there are no interpretations of these concepts that are at once simple, intuitive, correct, and foolproof.”</p>
 <section id="misconceptions">
 <h4>Misconceptions<a class="headerlink" href="#misconceptions" title="Permalink to this heading">#</a></h4>
-<p>These are all misconceptions, based on <span id="id8">[<a class="reference internal" href="bibliography.html#id44" title="Steven Goodman. A dirty dozen: twelve p-value misconceptions. In Seminars in hematology, volume 45, 135–140. Elsevier, 2008.">Goo08</a>]</span>.</p>
+<p>These are all misconceptions, based on <span id="id9">[<a class="reference internal" href="bibliography.html#id44" title="Steven Goodman. A dirty dozen: twelve p-value misconceptions. In Seminars in hematology, volume 45, 135–140. Elsevier, 2008.">Goo08</a>]</span>.</p>
 <ol class="arabic simple">
 <li><p>If P = 0.05, the null hypothesis has only a 5% chance of being true.</p></li>
 <li><p>A non-significant difference means the null is true.</p></li>
@@ -619,6 +689,357 @@ One- or two-sided test?<div class="sd-summary-down docutils">
 <li><p>The histogram for the contents of the box does not look too different from the normal curve.</p></li>
 </ol>
 <p>Having to estimate the SD, we lose some precision. The <span class="math notranslate nohighlight">\(t\)</span>-test accounts for this, using the <span class="math notranslate nohighlight">\(t\)</span>-distribution to calculate P-values. The <span class="math notranslate nohighlight">\(t\)</span>-distribution has thicker tails than the normal distribution. It is also called the <em>Student’s curve</em>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<script type="application/javascript">(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  const force = true;
+
+  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
+    root._bokeh_onload_callbacks = [];
+    root._bokeh_is_loading = undefined;
+  }
+
+const JS_MIME_TYPE = 'application/javascript';
+  const HTML_MIME_TYPE = 'text/html';
+  const EXEC_MIME_TYPE = 'application/vnd.bokehjs_exec.v0+json';
+  const CLASS_NAME = 'output_bokeh rendered_html';
+
+  /**
+   * Render data to the DOM node
+   */
+  function render(props, node) {
+    const script = document.createElement("script");
+    node.appendChild(script);
+  }
+
+  /**
+   * Handle when an output is cleared or removed
+   */
+  function handleClearOutput(event, handle) {
+    function drop(id) {
+      const view = Bokeh.index.get_by_id(id)
+      if (view != null) {
+        view.model.document.clear()
+        Bokeh.index.delete(view)
+      }
+    }
+
+    const cell = handle.cell;
+
+    const id = cell.output_area._bokeh_element_id;
+    const server_id = cell.output_area._bokeh_server_id;
+
+    // Clean up Bokeh references
+    if (id != null) {
+      drop(id)
+    }
+
+    if (server_id !== undefined) {
+      // Clean up Bokeh references
+      const cmd_clean = "from bokeh.io.state import curstate; print(curstate().uuid_to_server['" + server_id + "'].get_sessions()[0].document.roots[0]._id)";
+      cell.notebook.kernel.execute(cmd_clean, {
+        iopub: {
+          output: function(msg) {
+            const id = msg.content.text.trim()
+            drop(id)
+          }
+        }
+      });
+      // Destroy server and session
+      const cmd_destroy = "import bokeh.io.notebook as ion; ion.destroy_server('" + server_id + "')";
+      cell.notebook.kernel.execute(cmd_destroy);
+    }
+  }
+
+  /**
+   * Handle when a new output is added
+   */
+  function handleAddOutput(event, handle) {
+    const output_area = handle.output_area;
+    const output = handle.output;
+
+    // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
+    if ((output.output_type != "display_data") || (!Object.prototype.hasOwnProperty.call(output.data, EXEC_MIME_TYPE))) {
+      return
+    }
+
+    const toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+
+    if (output.metadata[EXEC_MIME_TYPE]["id"] !== undefined) {
+      toinsert[toinsert.length - 1].firstChild.textContent = output.data[JS_MIME_TYPE];
+      // store reference to embed id on output_area
+      output_area._bokeh_element_id = output.metadata[EXEC_MIME_TYPE]["id"];
+    }
+    if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+      const bk_div = document.createElement("div");
+      bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+      const script_attrs = bk_div.children[0].attributes;
+      for (let i = 0; i < script_attrs.length; i++) {
+        toinsert[toinsert.length - 1].firstChild.setAttribute(script_attrs[i].name, script_attrs[i].value);
+        toinsert[toinsert.length - 1].firstChild.textContent = bk_div.children[0].textContent
+      }
+      // store reference to server id on output_area
+      output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+    }
+  }
+
+  function register_renderer(events, OutputArea) {
+
+    function append_mime(data, metadata, element) {
+      // create a DOM node to render to
+      const toinsert = this.create_output_subarea(
+        metadata,
+        CLASS_NAME,
+        EXEC_MIME_TYPE
+      );
+      this.keyboard_manager.register_events(toinsert);
+      // Render to node
+      const props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+      render(props, toinsert[toinsert.length - 1]);
+      element.append(toinsert);
+      return toinsert
+    }
+
+    /* Handle when an output is cleared or removed */
+    events.on('clear_output.CodeCell', handleClearOutput);
+    events.on('delete.Cell', handleClearOutput);
+
+    /* Handle when a new output is added */
+    events.on('output_added.OutputArea', handleAddOutput);
+
+    /**
+     * Register the mime type and append_mime function with output_area
+     */
+    OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+      /* Is output safe? */
+      safe: true,
+      /* Index of renderer in `output_area.display_order` */
+      index: 0
+    });
+  }
+
+  // register the mime type if in Jupyter Notebook environment and previously unregistered
+  if (root.Jupyter !== undefined) {
+    const events = require('base/js/events');
+    const OutputArea = require('notebook/js/outputarea').OutputArea;
+
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  }
+  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  const NB_LOAD_WARNING = {'data': {'text/html':
+     "<div style='background-color: #fdd'>\n"+
+     "<p>\n"+
+     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
+     "may be due to a slow or bad network connection. Possible fixes:\n"+
+     "</p>\n"+
+     "<ul>\n"+
+     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
+     "<li>use INLINE resources instead, as so:</li>\n"+
+     "</ul>\n"+
+     "<code>\n"+
+     "from bokeh.resources import INLINE\n"+
+     "output_notebook(resources=INLINE)\n"+
+     "</code>\n"+
+     "</div>"}};
+
+  function display_loaded() {
+    const el = document.getElementById(null);
+    if (el != null) {
+      el.textContent = "BokehJS is loading...";
+    }
+    if (root.Bokeh !== undefined) {
+      if (el != null) {
+        el.textContent = "BokehJS " + root.Bokeh.version + " successfully loaded.";
+      }
+    } else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(display_loaded, 100)
+    }
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+
+    root._bokeh_onload_callbacks.push(callback);
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls == null || js_urls.length === 0) {
+      run_callbacks();
+      return null;
+    }
+    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    root._bokeh_is_loading = css_urls.length + js_urls.length;
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+
+    function on_error(url) {
+      console.error("failed to load " + url);
+    }
+
+    for (let i = 0; i < css_urls.length; i++) {
+      const url = css_urls[i];
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }
+
+    for (let i = 0; i < js_urls.length; i++) {
+      const url = js_urls[i];
+      const element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  const js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.3.4.min.js"];
+  const css_urls = [];
+
+  const inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {
+    }
+  ];
+
+  function run_inline_js() {
+    if (root.Bokeh !== undefined || force === true) {
+          for (let i = 0; i < inline_js.length; i++) {
+      inline_js[i].call(root, root.Bokeh);
+    }
+} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    } else if (force !== true) {
+      const cell = $(document.getElementById(null)).parents('.cell').data().cell;
+      cell.output_area.append_execute_result(NB_LOAD_WARNING)
+    }
+  }
+
+  if (root._bokeh_is_loading === 0) {
+    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
+    run_inline_js();
+  } else {
+    load_libs(css_urls, js_urls, function() {
+      console.debug("Bokeh: BokehJS plotting callback run at", now());
+      run_inline_js();
+    });
+  }
+}(window));</script><div class="output text_html">
+<style>
+.output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+</div><div class="output text_html">
+  <div id="bbe67841-936a-4bf2-9700-7046f0822afe" data-root-id="p1057" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"f62b2b83-d499-43f8-bc73-b1438cc67ccd":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p1057","attributes":{"children":[{"type":"object","name":"Slider","id":"p1055","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"type":"object","name":"CustomJS","id":"p1056","attributes":{"args":{"type":"map","entries":[["source",{"type":"object","name":"ColumnDataSource","id":"p1001","attributes":{"selected":{"type":"object","name":"Selection","id":"p1002","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["x",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAFMBDYt7OkJgTwIbEvJ0hMRPAyiabbLLJEsANiXk7Q2ISwFDrVwrU+hHAk0022WSTEcDXrxSo9SsRwBoS83aGxBDAXXTRRRddEMBArV8pUOsPwMdxHMdxHA/ATjbZZJNNDsDU+pUCtX4NwFq/UqDWrwzA4YMPPvjgC8BoSMzbGRILwO4MiXk7QwrAdNFFF110CcD7lQK1fqUIwIFav1Kg1gfACB988MEHB8CO4ziO4zgGwBWo9SsFagXAm2yyySabBMAiMW9nSMwDwKj1KwVq/QLAL7rooosuAsC1fqVArV8BwDxDYt7OkADAhA8++OCD/7+SmLczJOb9v54hMW9nSPy/qqqqqqqq+r+4MyTm7Qz5v8S8nSExb/e/0kUXXXTR9b/ezpCYtzP0v+xXCtT6lfK/+OCDDz748L8I1PqVArXuvyjm7QyJeeu/QPjggw8+6L9YCtT6lQLlv3Acx3Ecx+G/IF100UUX3b9QgVq/UqDWv4ClQK1fKdC/YJNNNtlkw78Ab2dIzNupvwBvZ0jM26k/YJNNNtlkwz+ApUCtXynQP1CBWr9SoNY/EF100UUX3T9wHMdxHMfhP1gK1PqVAuU/QPjggw8+6D8g5u0MiXnrPwjU+pUCte4/+OCDDz748D/sVwrU+pXyP9zOkJi3M/Q/0EUXXXTR9T/EvJ0hMW/3P7gzJObtDPk/rKqqqqqq+j+cITFvZ0j8P5CYtzMk5v0/hA8++OCD/z88Q2LezpAAQLR+pUCtXwFALrrooosuAkCo9SsFav0CQCIxb2dIzANAmmyyySabBEAUqPUrBWoFQI7jOI7jOAZACB988MEHB0CAWr9SoNYHQPyVArV+pQhAdNFFF110CUDsDIl5O0MKQGhIzNsZEgtA4IMPPvjgC0Bcv1Kg1q8MQNT6lQK1fg1ATDbZZJNNDkDIcRzHcRwPQECtXylQ6w9AXHTRRRddEEAaEvN2hsQQQNavFKj1KxFAlE022WSTEUBQ61cK1PoRQAyJeTtDYhJAyiabbLLJEkCGxLydITETQERi3s6QmBNAAAAAAAAAFEA="},"shape":[100],"dtype":"float64","order":"little"}],["y_normal",{"type":"ndarray","array":{"type":"bytes","data":"QP3IZGnxuD5mQv0OnY/EPhP0Wn7ZxtA+YD/55J8Z2z5RAZy7aqrlPqJj5lYtJfE+/B0dskPc+j72Vd0kpNMEP72hSBsM+A8//l5LQXpJGD8NgToig0MiP4GaHq+KMCs/OjRdV5AIND9gvSHJyTg9P9yx8E2MGEU/cX588mUmTj+u3Y4riFNVP90vl5wW3V0/BayxF3KyZD9nFNyvpWVsP4kM0/V5SHM/gSSN/DPseT+aCYg5Tz+BP7gVHYKxt4Y/cb+ddHiejT9UownF0ByTPy8B3RBfapg/6+oJV4rfnj/hPnsFQVKjPzu8LbEo8Kc/Y2yoMWhbrT9dmfekkNGxP4cY5jUuabU/pIPQcVV3uT/IrPw8Z/u9P9Eu6aBfeME/vITmLhknxD9PIq4x2wLHP4S+LeEfAso/AD4mx+8YzT/9CFVBihzQP27Ya1Q4qdE/uh0Vwr0p0z/C2VBS7pTUP/+qjDeQ4dU/zh7WMr4G1z9iTTwATPzXP+aWHOsmu9g/AIV8V6w92T94qPh88H/ZP3io+Hzwf9k/AIV8V6w92T/mlhzrJrvYP2JNPABM/Nc/0B7WMr4G1z//qow3kOHVP8LZUFLulNQ/uh0Vwr0p0z9x2GtUOKnRP/0IVUGKHNA/AD4mx+8YzT+Evi3hHwLKP1MirjHbAsc/v4TmLhknxD/RLumgX3jBP8is/Dxn+70/n4PQcVV3uT+LGOY1Lmm1P2GZ96SQ0bE/Y2yoMWhbrT87vC2xKPCnP+Y+ewVBUqM/9uoJV4rfnj8vAd0QX2qYP1SjCcXQHJM/fb+ddHiejT/AFR2CsbeGP5oJiDlPP4E/gSSN/DPseT+NDNP1eUhzP1kU3K+lZWw/BayxF3KyZD/0L5ecFt1dP67djiuIU1U/f3588mUmTj/GsfBNjBhFP2C9IcnJOD0/TjRdV5AIND9ymh6vijArPw2BOiKDQyI/Fl9LQXpJGD+9oUgbDPgPPwpW3SSk0wQ/1B0dskPc+j6iY+ZWLSXxPmcBnLtqquU+YD/55J8Z2z4T9Fp+2cbQPlFC/Q6dj8Q+QP3IZGnxuD4="},"shape":[100],"dtype":"float64","order":"little"}],["y_t",{"type":"ndarray","array":{"type":"bytes","data":"7WwzwrESiT8cIus2ahOKP7tVr4eeI4s/pmRuy45EjD8KMIp8m3eNPzTgmGdJvo4/0gQgFCMNkD8IGnGltsaQP9Fd7RbnjJE/EMHlYNlgkj9kvBin00OTPzZFH7NBN5Q/pogHIbo8lT/5LftcBFaWP5QtjZYfhZc/Tvke1UrMmD9w7eNgDi6aP6d9lb1GrZs/Ft0ZfzFNnT9kPFlNfBGfPxy8qj0rf6A/6HIa00KMoT/swnXxvrKiPxv/yQm/9aM/Pzo+h9hYpT9V14AmKuCmP3zWzmxykKg/Rs2EkClvqj8B9LcIn4KsP4kvw7wa0q4/pNQ9rQCzsD9oH/tH/SOyP6KH7keLwbM/JafVCveRtT/R7mlOWpy3P23CmoOX6Lk/HH13WDx/vD9O0HuAOmm/Pwop2NGuV8E/m1l1sa0swz9mb/Y5KDbFPzAFYag8dMc/T/rYmQDjyT/l3eNgeXjMP8FiNCpiIs8/zmiCZS3i0D9Hplq5xhvSP4uUTtWOJtM//Tjf1ibq0z9Lal+a61HUP0tqX5rrUdQ//Tjf1ibq0z+LlE7VjibTP0emWrnGG9I/0WiCZS3i0D/BYjQqYiLPP+Xd42B5eMw/T/rYmQDjyT81BWGoPHTHP2Zv9jkoNsU/m1l1sa0swz8KKdjRrlfBP1LQe4A6ab8/H313WDx/vD9twpqDl+i5P9HuaU5anLc/IKfVCveRtT+nh+5Hi8GzP2gf+0f9I7I/pNQ9rQCzsD+JL8O8GtKuPwT0twifgqw/Sc2EkClvqj981s5scpCoP1XXgCYq4KY/Qjo+h9hYpT8d/8kJv/WjP+zCdfG+sqI/6HIa00KMoT8cvKo9K3+gP2Q8WU18EZ8/Ft0ZfzFNnT+rfZW9Rq2bP3Dt42AOLpo/Tvke1UrMmD+RLY2WH4WXP/kt+1wEVpY/qYgHIbo8lT82RR+zQTeUP2S8GKfTQ5M/EMHlYNlgkj/RXe0W54yRPwgacaW2xpA/zQQgFCMNkD804JhnSb6OPxEwinybd40/pmRuy45EjD+7Va+HniOLPxwi6zZqE4o/7WwzwrESiT8="},"shape":[100],"dtype":"float64","order":"little"}]]}}}],["slider",{"id":"p1055"}]]},"code":"\n    const data = source.data;\n    const x = data['x'];\n    const df = slider.value;\n    const y_t = data['y_t'];\n    for (let i = 0; i < x.length; i++) {\n        y_t[i] = Math.exp(lgamma((df+1)/2) - lgamma(df/2)) * Math.pow(1 + x[i]*x[i]/df, -(df+1)/2) / (Math.sqrt(df*Math.PI) * Math.pow((1/x[i]*x[i]), 1/2));\n    }\n    source.change.emit();\n\n    // Gamma function approximation for positive numbers\n    function gamma(z) {\n        const g = 7;\n        const C = [\n            0.99999999999980993, 676.5203681218851, -1259.1392167224028,\n            771.32342877765313, -176.61502916214059, 12.507343278686905,\n            -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7\n        ];\n\n        if (z < 0.5) return Math.PI / (Math.sin(Math.PI * z) * gamma(1 - z));\n        z -= 1;\n\n        let x = C[0];\n        for (let i = 1; i < g + 2; i++)\n        x += C[i] / (z + i);\n\n        const t = z + g + 0.5;\n        return Math.sqrt(2 * Math.PI) * Math.pow(t, z + 0.5) * Math.exp(-t) * x;\n    }\n\n    // Log gamma function\n    function lgamma(x) {\n        return Math.log(gamma(x));\n    }\n"}}]]]},"title":"Degrees of Freedom","start":1,"end":30,"value":1}},{"type":"object","name":"Figure","id":"p1004","attributes":{"width":400,"height":400,"x_range":{"type":"object","name":"DataRange1d","id":"p1005"},"y_range":{"type":"object","name":"DataRange1d","id":"p1006"},"x_scale":{"type":"object","name":"LinearScale","id":"p1014"},"y_scale":{"type":"object","name":"LinearScale","id":"p1015"},"title":{"type":"object","name":"Title","id":"p1007","attributes":{"text":"t-Distribution (solid) and Normal (dashed)"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1043","attributes":{"data_source":{"id":"p1001"},"view":{"type":"object","name":"CDSView","id":"p1044","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1045"}}},"glyph":{"type":"object","name":"Line","id":"p1040","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_normal"},"line_color":"#1f77b4","line_width":2,"line_dash":[6]}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1041","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_normal"},"line_color":"#1f77b4","line_alpha":0.1,"line_width":2,"line_dash":[6]}},"muted_glyph":{"type":"object","name":"Line","id":"p1042","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_normal"},"line_color":"#1f77b4","line_alpha":0.2,"line_width":2,"line_dash":[6]}}}},{"type":"object","name":"GlyphRenderer","id":"p1052","attributes":{"data_source":{"id":"p1001"},"view":{"type":"object","name":"CDSView","id":"p1053","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1054"}}},"glyph":{"type":"object","name":"Line","id":"p1049","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_t"},"line_color":"green","line_width":2}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1050","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_t"},"line_color":"green","line_alpha":0.1,"line_width":2}},"muted_glyph":{"type":"object","name":"Line","id":"p1051","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_t"},"line_color":"green","line_alpha":0.2,"line_width":2}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1013","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1026"},{"type":"object","name":"WheelZoomTool","id":"p1027","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1028","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1029","attributes":{"syncable":false,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"SaveTool","id":"p1034"},{"type":"object","name":"ResetTool","id":"p1035"},{"type":"object","name":"HelpTool","id":"p1036"}]}},"toolbar_location":null,"left":[{"type":"object","name":"LinearAxis","id":"p1021","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1022","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1023"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1024"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1016","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1017","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1018"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1019"}}}],"center":[{"type":"object","name":"Grid","id":"p1020","attributes":{"axis":{"id":"p1016"}}},{"type":"object","name":"Grid","id":"p1025","attributes":{"dimension":1,"axis":{"id":"p1021"}}}]}}]}}]}};
+  const render_items = [{"docid":"f62b2b83-d499-43f8-bc73-b1438cc67ccd","roots":{"p1057":"bbe67841-936a-4bf2-9700-7046f0822afe"},"root_ids":["p1057"]}];
+  root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+<p>The steps are similar. We calculate a test statistic</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{\text{observed - expected}}{\text{SE}}.\]</div>
+<p>However, with just a few data points, it is time to take sample corrections seriously. We use the sample standard deviation, <span class="math notranslate nohighlight">\(\text{SD}^{+}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\text{SD}^{+}= \sqrt{\frac{n}{n-1}}\text{SD} = \sqrt{\frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2}\]</div>
+<p>The standard error is</p>
+<div class="math notranslate nohighlight">
+\[\text{SE} = \frac{\sqrt{n}\times \text{SD}^{+}}{n} = \frac{\text{SD}^{+}}{\sqrt{n}}.\]</div>
+<p>Our test statistic is</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{\bar{x}-\mu}{\text{SE}}.\]</div>
+<p>There is a new step when converting the statistic to a P-value. The <span class="math notranslate nohighlight">\(t\)</span>-distribution is actually a family of distributions and we have to select the one with the correct <strong>degrees of freedom</strong>,</p>
+<div class="math notranslate nohighlight">
+\[\text{degrees of freedom} = n-1.\]</div>
+<p>Suppose we had <span class="math notranslate nohighlight">\(\bar{x} = 7\)</span>, <span class="math notranslate nohighlight">\(n=6\)</span> and <span class="math notranslate nohighlight">\(\text{SD}^{+} = 1\)</span>. Suppose the confidence level is 95%, the null specified <span class="math notranslate nohighlight">\(\mu = 8\)</span>, and the alternative was <span class="math notranslate nohighlight">\(\mu &lt; 8\)</span>. Our test statistic would be</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{7-8}{\frac{1}{\sqrt{6}}} = -\sqrt{6} \approx -2.45.\]</div>
+<p>We compare this to a <span class="math notranslate nohighlight">\(t\)</span>-table, which works differently than a <span class="math notranslate nohighlight">\(z\)</span>-table. We find that the test statistic is beyond the critical value of -2.015 for a test with five degrees of freedom and a 95% confidence level. The P-value must be below 5%. This is enough to lead us to reject the null.</p>
+<section id="the-t-table">
+<h3>The <span class="math notranslate nohighlight">\(t\)</span>-Table<a class="headerlink" href="#the-t-table" title="Permalink to this heading">#</a></h3>
+<p>Below, the <span class="math notranslate nohighlight">\(t\)</span>-table gives critical values for a right-tailed test with a particular significance level and degrees of freedom. For a left-tailed test (e.g. <span class="math notranslate nohighlight">\(\mu &lt; 8\)</span>), flip the sign on the critical value.</p>
+<figure class="align-default" id="ttableoneside">
+<a class="reference internal image-reference" href="_images/tTableOneSide.svg"><img alt="_images/tTableOneSide.svg" src="_images/tTableOneSide.svg" width="60%" /></a>
+</figure>
+<p>Another way to interpret the table is that the <span class="math notranslate nohighlight">\(\alpha\)</span> value is the area to the right of the cell value for a <span class="math notranslate nohighlight">\(t\)</span>-distribution with the given degrees of freedom.</p>
+</section>
+<section id="t-or-z">
+<h3><span class="math notranslate nohighlight">\(t\)</span> or <span class="math notranslate nohighlight">\(z\)</span>?<a class="headerlink" href="#t-or-z" title="Permalink to this heading">#</a></h3>
+<p>When to use a <span class="math notranslate nohighlight">\(t\)</span>-test? The following chart is reproduced from <span id="id10">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>.</p>
+<figure class="align-default" id="tvsztree">
+<a class="reference internal image-reference" href="_images/tVsZTree.svg"><img alt="_images/tVsZTree.svg" src="_images/tVsZTree.svg" width="83%" /></a>
+</figure>
+</section>
 </section>
 </section>
 
@@ -703,7 +1124,11 @@ One- or two-sided test?<div class="sd-summary-down docutils">
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#averages-with-small-data">Averages with Small Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#averages-with-small-data">Averages with Small Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-t-table">The <span class="math notranslate nohighlight">\(t\)</span>-Table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-or-z"><span class="math notranslate nohighlight">\(t\)</span> or <span class="math notranslate nohighlight">\(z\)</span>?</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
