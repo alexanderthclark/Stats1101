@@ -295,7 +295,7 @@ It follows that $\mathbb{P}(H_1 \mid H_2)$ is also $\frac{3}{4}$ because the unc
 
 What are trying to find the probability that someone has the rare disease given a positive test. We'll use a natural frequencies approach to find
 
-$$\mathbb{P}(\text{disease} mid \text{positive}) = \mathbb{P}(\text{positive and disease}) / \mathbb{P}(\text{positive}).$$
+$$\mathbb{P}(\text{disease} \mid \text{positive}) = \mathbb{P}(\text{positive and disease}) / \mathbb{P}(\text{positive}).$$
 
 In a population of 990,000 people (99$\times$10000), we expect 99 to have the diease. Of those, 99% will test positive. This is 99-.99 = 98.01. We expect 989,901 not to have the disease. Of those, 1% will get a positive result, or 9899.01. Together, 9899.01 + 98.01 = 9997.02 get a positive test result
 
