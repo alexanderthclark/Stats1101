@@ -319,6 +319,7 @@ Simplifying yields $0.5(0.9 + 0.1) = 0.5$.
 Suppose there were 200 players. We can expect 100 scrubs and 100 ballers. The ballers make 90 shots and the scrubs make 10. There are 100 makes total.
 
 The probability of a scrub is now $\frac{10}{100}$ and the probability of a baller is now $\frac{90}{100}$. The second shot goes in with probability 
+
 $$0.9\times 0.9 + 0.1 \times 0.1 = 0.81 + 0.01 = 0.82.$$ 
 
 From the observer's perspective, the first and second shots are not independent. With more shots observed, they are beginning to learn the player's type. In other words, you should be more willing to pass to someone who makes their first shot because you should have greater confidence that the second shot will go in. 
