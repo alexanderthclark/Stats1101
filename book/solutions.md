@@ -217,7 +217,7 @@ The president/VP pair is ordered and the co-preseident pair is not. Only the co-
 2. $\mathbb{P}(\text{box with two Ts} \mid H) = 0$ because the box must have an $H$ to draw an $H$. 
 3. $$\mathbb{P}(\text{box with two Hs} \mid H) = \frac{ \mathbb{P}(H \mid \text{box with two Hs}) \mathbb{P}(\text{box with two Hs})}{\mathbb{P}(H)} $$
 
-$$= \frac{1\times 0.25}{0.5} = 0.25$$
+$$= \frac{1\times 0.25}{0.5} = 0.5$$
 
 4. To find $\mathbb{P}(\text{H on second draw} \mid \text{H on first draw})$, the subtlety is that these are not independent. The unconditional probability is $\mathbb{P}(\text{H on second draw}) = 0.5$. This allows for the possibility of a box with two $T$s. An $H$ on the first draw reveals that the box does not have two $T$s, which will push our probability up. The intuititive answer of 0.5 is therefore *wrong*. For a similar problem, see also the famously difficult [boy girl paradox](https://en.wikipedia.org/wiki/Boy_or_girl_paradox).
 
