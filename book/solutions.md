@@ -369,5 +369,28 @@ $$\mathbb{P}(\text{truck}\mid \text{tractor}) = \frac{ \mathbb{P}(\text{tractor}
 ```{solution-end}
 ```
 
+## [Sampling](sampling)
 
+
+```{solution-start} incentivesurvey
+:class: dropdown
+```
+1. Non-response bias will be a problem because the survey is voluntary. Less obvious, there is also a selection bias problem among who will see it. The most active users will use the site every day and the more casual users will not. Before considering non-response bias, the sample is skewed to more active users. 
+
+2. This is a simple random sample of the entire user base. 
+
+3. This is designed to combat non-response bias, but providing an incentive for responding.
+
+```{solution-end}
+```
+
+## [Confidence Intervals](sampling)
+
+```{solution-start} CInarrow
+:class: dropdown
+```
+More observations will make an interval more narrow. The average itself does not change the width of an interval if this is not for a sample proportion. The average only sets the center of the interval, holding constant the SD.
+
+```{solution-end}
+```
 
