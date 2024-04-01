@@ -404,7 +404,7 @@ The SE is $\sqrt{\frac{.16}{64}}=\frac{0.4}{8} = 0.05$. The test statistic is $\
 
 This is the odd case where the test statistic falls in the "wrong" side.
 
-The numbers are made up in this exercise, but this is based on a true story. See "A Fine is a Price" by Uri Gneezy and Aldo Rustichini. They found that introducing a fine actually increases late pickups. This underscores that you usually need a strong theoretical reason to use a one-sided test instead of just expecting an intervention to operate one way. 
+The numbers are made up in this exercise, but this is based on a true story. See "A Fine is a Price" ({cite}`gneezy2000fine`). The authors found that introducing a fine actually increases late pickups. This underscores that you usually need a strong theoretical reason to use a one-sided test instead of just expecting an intervention to operate one way. 
 ```{solution-end}
 ```
 
