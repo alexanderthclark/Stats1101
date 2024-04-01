@@ -394,3 +394,18 @@ More observations will make an interval more narrow. The average itself does not
 ```{solution-end}
 ```
 
+## [Hypothesis Testing](hyptest)
+
+
+```{solution-start} daycare
+:class: dropdown
+```
+The SE is $\sqrt{\frac{.16}{64}}=\frac{0.4}{8} = 0.05$. The test statistic is $\frac{0.2-0.1}{0.05} = 2$. The P-value is about 97.5%. We fail to reject because this is a one-sided case. 
+
+This is the odd case where the test statistic falls in the "wrong" side.
+
+The numbers are made up in this exercise, but this is based on a true story. See "A Fine is a Price" by Uri Gneezy and Aldo Rustichini. They found that introducing a fine actually increases late pickups. This underscores that you usually need a strong theoretical reason to use a one-sided test instead of just expecting an intervention to operate one way. 
+```{solution-end}
+```
+
+
