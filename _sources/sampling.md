@@ -214,8 +214,3 @@ A user researcher at a large ecommerce company wants to have a representative sa
 
 ```{exercise-end}
 ```
-
-
-
-
-
