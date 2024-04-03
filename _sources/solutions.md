@@ -401,7 +401,7 @@ More observations will make an interval more narrow. The average itself does not
 ```{solution-start} daycare
 :class: dropdown
 ```
-The SE is $\sqrt{\frac{.16}{64}}=\frac{0.4}{8} = 0.05$. The test statistic is $\frac{0.2-0.1}{0.05} = 2$. The P-value is about 97.5%. We fail to reject because this is a one-sided case. 
+The SE is $\sqrt{\frac{.16}{64}}=\frac{0.4}{8} = 0.05$. The test statistic is $\frac{0.3-0.2}{0.05} = 2$. The P-value is about 97.5%. We fail to reject because this is a one-sided case. 
 
 This is the odd case where the test statistic falls in the "wrong" side.
 
