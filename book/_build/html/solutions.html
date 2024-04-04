@@ -432,6 +432,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression"><span class="xref myst">Regression</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-i"><span class="xref myst">Probability I</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-ii"><span class="xref myst">Probability II</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling"><span class="xref myst">Sampling</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confidence-intervals"><span class="xref myst">Confidence Intervals</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing"><span class="xref myst">Hypothesis Testing</span></a></li>
 </ul>
             </nav>
         </div>
@@ -620,7 +623,7 @@ Treatment group: second joke audience <br></p>
 </li>
 </ol>
 <div class="math notranslate nohighlight">
-\[= \frac{1\times 0.25}{0.5} = 0.25\]</div>
+\[= \frac{1\times 0.25}{0.5} = 0.5\]</div>
 <ol class="arabic simple" start="4">
 <li><p>To find <span class="math notranslate nohighlight">\(\mathbb{P}(\text{H on second draw} \mid \text{H on first draw})\)</span>, the subtlety is that these are not independent. The unconditional probability is <span class="math notranslate nohighlight">\(\mathbb{P}(\text{H on second draw}) = 0.5\)</span>. This allows for the possibility of a box with two <span class="math notranslate nohighlight">\(T\)</span>s. An <span class="math notranslate nohighlight">\(H\)</span> on the first draw reveals that the box does not have two <span class="math notranslate nohighlight">\(T\)</span>s, which will push our probability up. The intuititive answer of 0.5 is therefore <em>wrong</em>. For a similar problem, see also the famously difficult <a class="reference external" href="https://en.wikipedia.org/wiki/Boy_or_girl_paradox">boy girl paradox</a>.</p></li>
 </ol>
@@ -703,7 +706,7 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 <section id="solution-content">
 <p>What are trying to find the probability that someone has the rare disease given a positive test. We’ll use a natural frequencies approach to find</p>
 <div class="math notranslate nohighlight">
-\[\mathbb{P}(\text{disease} mid \text{positive}) = \mathbb{P}(\text{positive and disease}) / \mathbb{P}(\text{positive}).\]</div>
+\[\mathbb{P}(\text{disease} \mid \text{positive}) = \mathbb{P}(\text{positive and disease}) / \mathbb{P}(\text{positive}).\]</div>
 <p>In a population of 990,000 people (99<span class="math notranslate nohighlight">\(\times\)</span>10000), we expect 99 to have the diease. Of those, 99% will test positive. This is 99-.99 = 98.01. We expect 989,901 not to have the disease. Of those, 1% will get a positive result, or 9899.01. Together, 9899.01 + 98.01 = 9997.02 get a positive test result</p>
 <p>Thus, the conditional probability is about 98/9997, which is less than 1%.</p>
 </section>
@@ -717,8 +720,9 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 \[0.5\times 0.9 + 0.5 \times 0.1.\]</div>
 <p>Simplifying yields <span class="math notranslate nohighlight">\(0.5(0.9 + 0.1) = 0.5\)</span>.</p>
 <p>Suppose there were 200 players. We can expect 100 scrubs and 100 ballers. The ballers make 90 shots and the scrubs make 10. There are 100 makes total.</p>
-<p>The probability of a scrub is now <span class="math notranslate nohighlight">\(\frac{10}{100}\)</span> and the probability of a baller is now <span class="math notranslate nohighlight">\(\frac{90}{100}\)</span>. The second shot goes in with probability
-$<span class="math notranslate nohighlight">\(0.9\times 0.9 + 0.1 \times 0.1 = 0.81 + 0.01 = 0.82.\)</span>$</p>
+<p>The probability of a scrub is now <span class="math notranslate nohighlight">\(\frac{10}{100}\)</span> and the probability of a baller is now <span class="math notranslate nohighlight">\(\frac{90}{100}\)</span>. The second shot goes in with probability</p>
+<div class="math notranslate nohighlight">
+\[0.9\times 0.9 + 0.1 \times 0.1 = 0.81 + 0.01 = 0.82.\]</div>
 <p>From the observer’s perspective, the first and second shots are not independent. With more shots observed, they are beginning to learn the player’s type. In other words, you should be more willing to pass to someone who makes their first shot because you should have greater confidence that the second shot will go in.</p>
 </section>
 </div>
@@ -749,6 +753,42 @@ $<span class="math notranslate nohighlight">\(0.9\times 0.9 + 0.1 \times 0.1 = 0
 <p>2 of the 4 mentioning tractor mention truck. This can be calculated by simplying inspecting the data or by solve for the first three and then applying Bayes’ Theorem.</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(\text{truck}\mid \text{tractor}) = \frac{ \mathbb{P}(\text{tractor}\mid \text{truck}) \mathbb{P}(\text{truck})} {\mathbb{P}(\text{tractor}) }  = \frac{ \frac{2}{14} \times \frac{14}{63} }{\frac{4}{63}} = \frac{2}{4}.\]</div>
+</section>
+</div>
+</section>
+<section id="sampling">
+<h2><a class="reference internal" href="sampling.html#sampling"><span class="std std-ref">Sampling</span></a><a class="headerlink" href="#sampling" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="solutions-solution-18">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="sampling.html#incentivesurvey"> Exercise 40</a></p>
+<section id="solution-content">
+<ol class="arabic simple">
+<li><p>Non-response bias will be a problem because the survey is voluntary. Less obvious, there is also a selection bias problem among who will see it. The most active users will use the site every day and the more casual users will not. Before considering non-response bias, the sample is skewed to more active users.</p></li>
+<li><p>This is a simple random sample of the entire user base.</p></li>
+<li><p>This is designed to combat non-response bias, but providing an incentive for responding.</p></li>
+</ol>
+</section>
+</div>
+</section>
+<section id="confidence-intervals">
+<h2><a class="reference internal" href="sampling.html#sampling"><span class="std std-ref">Confidence Intervals</span></a><a class="headerlink" href="#confidence-intervals" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="solutions-solution-19">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="confidenceintervals.html#CInarrow"> Exercise 42</a></p>
+<section id="solution-content">
+<p>More observations will make an interval more narrow. The average itself does not change the width of an interval if this is not for a sample proportion. The average only sets the center of the interval, holding constant the SD.</p>
+</section>
+</div>
+</section>
+<section id="hypothesis-testing">
+<h2><a class="reference internal" href="hypothesistesting.html#hyptest"><span class="std std-ref">Hypothesis Testing</span></a><a class="headerlink" href="#hypothesis-testing" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="solutions-solution-20">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="hypothesistesting.html#daycare"> Exercise 44</a></p>
+<section id="solution-content">
+<p>The SE is <span class="math notranslate nohighlight">\(\sqrt{\frac{.16}{64}}=\frac{0.4}{8} = 0.05\)</span>. The test statistic is <span class="math notranslate nohighlight">\(\frac{0.3-0.2}{0.05} = 2\)</span>. The P-value is about 97.5%. We fail to reject because this is a one-sided case.</p>
+<p>This is the odd case where the test statistic falls in the “wrong” side.</p>
+<p>The numbers are made up in this exercise, but this is based on a true story. See “A Fine is a Price” (<span id="id1">[<a class="reference internal" href="bibliography.html#id26" title="Uri Gneezy and Aldo Rustichini. A fine is a price. The journal of legal studies, 29(1):1–17, 2000.">GR00</a>]</span>). The authors found that introducing a fine actually increases late pickups. This underscores that you usually need a strong theoretical reason to use a one-sided test instead of just expecting an intervention to operate one way.</p>
 </section>
 </div>
 </section>
@@ -827,6 +867,9 @@ $<span class="math notranslate nohighlight">\(0.9\times 0.9 + 0.1 \times 0.1 = 0
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression"><span class="xref myst">Regression</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-i"><span class="xref myst">Probability I</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-ii"><span class="xref myst">Probability II</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling"><span class="xref myst">Sampling</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confidence-intervals"><span class="xref myst">Confidence Intervals</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing"><span class="xref myst">Hypothesis Testing</span></a></li>
 </ul>
   </nav></div>
 

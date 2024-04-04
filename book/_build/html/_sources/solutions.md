@@ -217,7 +217,7 @@ The president/VP pair is ordered and the co-preseident pair is not. Only the co-
 2. $\mathbb{P}(\text{box with two Ts} \mid H) = 0$ because the box must have an $H$ to draw an $H$. 
 3. $$\mathbb{P}(\text{box with two Hs} \mid H) = \frac{ \mathbb{P}(H \mid \text{box with two Hs}) \mathbb{P}(\text{box with two Hs})}{\mathbb{P}(H)} $$
 
-$$= \frac{1\times 0.25}{0.5} = 0.25$$
+$$= \frac{1\times 0.25}{0.5} = 0.5$$
 
 4. To find $\mathbb{P}(\text{H on second draw} \mid \text{H on first draw})$, the subtlety is that these are not independent. The unconditional probability is $\mathbb{P}(\text{H on second draw}) = 0.5$. This allows for the possibility of a box with two $T$s. An $H$ on the first draw reveals that the box does not have two $T$s, which will push our probability up. The intuititive answer of 0.5 is therefore *wrong*. For a similar problem, see also the famously difficult [boy girl paradox](https://en.wikipedia.org/wiki/Boy_or_girl_paradox).
 
@@ -295,7 +295,7 @@ It follows that $\mathbb{P}(H_1 \mid H_2)$ is also $\frac{3}{4}$ because the unc
 
 What are trying to find the probability that someone has the rare disease given a positive test. We'll use a natural frequencies approach to find
 
-$$\mathbb{P}(\text{disease} mid \text{positive}) = \mathbb{P}(\text{positive and disease}) / \mathbb{P}(\text{positive}).$$
+$$\mathbb{P}(\text{disease} \mid \text{positive}) = \mathbb{P}(\text{positive and disease}) / \mathbb{P}(\text{positive}).$$
 
 In a population of 990,000 people (99$\times$10000), we expect 99 to have the diease. Of those, 99% will test positive. This is 99-.99 = 98.01. We expect 989,901 not to have the disease. Of those, 1% will get a positive result, or 9899.01. Together, 9899.01 + 98.01 = 9997.02 get a positive test result
 
@@ -319,6 +319,7 @@ Simplifying yields $0.5(0.9 + 0.1) = 0.5$.
 Suppose there were 200 players. We can expect 100 scrubs and 100 ballers. The ballers make 90 shots and the scrubs make 10. There are 100 makes total.
 
 The probability of a scrub is now $\frac{10}{100}$ and the probability of a baller is now $\frac{90}{100}$. The second shot goes in with probability 
+
 $$0.9\times 0.9 + 0.1 \times 0.1 = 0.81 + 0.01 = 0.82.$$ 
 
 From the observer's perspective, the first and second shots are not independent. With more shots observed, they are beginning to learn the player's type. In other words, you should be more willing to pass to someone who makes their first shot because you should have greater confidence that the second shot will go in. 
@@ -369,5 +370,43 @@ $$\mathbb{P}(\text{truck}\mid \text{tractor}) = \frac{ \mathbb{P}(\text{tractor}
 ```{solution-end}
 ```
 
+## [Sampling](sampling)
+
+
+```{solution-start} incentivesurvey
+:class: dropdown
+```
+1. Non-response bias will be a problem because the survey is voluntary. Less obvious, there is also a selection bias problem among who will see it. The most active users will use the site every day and the more casual users will not. Before considering non-response bias, the sample is skewed to more active users. 
+
+2. This is a simple random sample of the entire user base. 
+
+3. This is designed to combat non-response bias, but providing an incentive for responding.
+
+```{solution-end}
+```
+
+## [Confidence Intervals](sampling)
+
+```{solution-start} CInarrow
+:class: dropdown
+```
+More observations will make an interval more narrow. The average itself does not change the width of an interval if this is not for a sample proportion. The average only sets the center of the interval, holding constant the SD.
+
+```{solution-end}
+```
+
+## [Hypothesis Testing](hyptest)
+
+
+```{solution-start} daycare
+:class: dropdown
+```
+The SE is $\sqrt{\frac{.16}{64}}=\frac{0.4}{8} = 0.05$. The test statistic is $\frac{0.3-0.2}{0.05} = 2$. The P-value is about 97.5%. We fail to reject because this is a one-sided case. 
+
+This is the odd case where the test statistic falls in the "wrong" side.
+
+The numbers are made up in this exercise, but this is based on a true story. See "A Fine is a Price" ({cite}`gneezy2000fine`). The authors found that introducing a fine actually increases late pickups. This underscores that you usually need a strong theoretical reason to use a one-sided test instead of just expecting an intervention to operate one way. 
+```{solution-end}
+```
 
 
