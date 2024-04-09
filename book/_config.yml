@@ -51,3 +51,7 @@ sphinx:
 thebe:
   repository_url: "https://github.com/alexanderthclark/Stats1101"
   branch: main
+
+#parse:
+#  myst_enable_extensions:
+#    - amsmath

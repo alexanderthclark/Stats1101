@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Overview &#8212; Intro Stats</title>
+    <title>Two-Sample Tests &#8212; Intro Stats</title>
   
   
   
@@ -73,12 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'python';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hyptest2';</script>
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Basics" href="pycalculator.html" />
-    <link rel="prev" title="Regression" href="gregression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -208,8 +206,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Overview</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
@@ -298,7 +296,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fpython.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fhyptest2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +326,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/python.md" target="_blank"
+      <li><a href="_sources/hyptest2.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -412,7 +410,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Overview</h1>
+    <h1>Two-Sample Tests</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -422,9 +420,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#should-you-learn-python">Should you learn Python?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thinking-like-a-programmer">Thinking like a Programmer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Two-Sample Tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-error">The Standard Error</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-idea">The Idea</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-formula">The Formula</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-test">The Test</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -436,86 +441,211 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h1>
-<section id="should-you-learn-python">
-<h2>Should you learn Python?<a class="headerlink" href="#should-you-learn-python" title="Permalink to this heading">#</a></h2>
-<p>Coding is cool, but use Excel/Sheets if you prefer. Python opens doors professionally, and R to a lesser extent, but it’s easier to go back and pick up coding later than it is to go back and learn stats. A stinging critique of someone interviewing for a data scientist job is, “This person can open [common machine learning package in Python].” The implication is that person can write some code but they can’t do anything creative. The course is mainly about being able to solve problems and form coherent sentences involving statistical ideas.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="two-sample-tests">
+<span id="twosample"></span><h1>Two-Sample Tests<a class="headerlink" href="#two-sample-tests" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapter 27</p></li>
+</ul>
+</div>
+<section id="id2">
+<h2>Two-Sample Tests<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>Until now, we’ve been studying one-sample tests. We proposed null hypotheses like <span class="math notranslate nohighlight">\(\mu = 8\)</span> or <span class="math notranslate nohighlight">\(p = \frac{1}{3}\)</span>. This works if we have a good reason to care about if <span class="math notranslate nohighlight">\(\mu\)</span> is eight or not, perhaps if we want to know if a population gets the recommended number of hours of sleep. In other instances, you are more interested in one population relative to another. For example, do bankers get more or less sleep than college students? And this corresponds to the questions typically motivating experiments. Do people who take fish oil supplements have better cardiovascular outcomes than a control group not taking fish oil supplements?</p>
+<section id="the-standard-error">
+<h3>The Standard Error<a class="headerlink" href="#the-standard-error" title="Permalink to this heading">#</a></h3>
+<section id="the-idea">
+<h4>The Idea<a class="headerlink" href="#the-idea" title="Permalink to this heading">#</a></h4>
+<p>Let’s start by comparing the sample number of heads for two different coins. We use a sample size of two flips for each coin for simplicity–sample sizes should be larger in practice. The SD for the list of chance errors is found in <code class="xref std std-numref docutils literal notranslate"><span class="pre">headDiff</span></code> is equal to 1.</p>
+<table class="table" id="headdiff">
+<caption><span class="caption-text">Comparison of the number of heads for two coins</span><a class="headerlink" href="#headdiff" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Sequences</p></th>
+<th class="head"><p>Observed Heads (Coin 1)</p></th>
+<th class="head"><p>Observed Heads (Coin 2)</p></th>
+<th class="head"><p>Chance Error (Coin 1-Coin 2)</p></th>
+<th class="head"><div class="math notranslate nohighlight">
+\[\mathbb{P}(\text{Sequences})\]</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>HH-HH</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>0</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-odd"><td><p>HH-HT</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-even"><td><p>HH-TH</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-odd"><td><p>HH-TT</p></td>
+<td><p>2</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-even"><td><p>HT-HH</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>-1</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-odd"><td><p>HT-HT</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-even"><td><p>HT-TH</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-odd"><td><p>HT-TT</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-even"><td><p>TH-HH</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>-1</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-odd"><td><p>TH-HT</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-even"><td><p>TH-TH</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-odd"><td><p>TH-TT</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-even"><td><p>TT-HH</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>-2</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-odd"><td><p>TT-HT</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>-1</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-even"><td><p>TT-TH</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>-1</p></td>
+<td><p>1/16</p></td>
+</tr>
+<tr class="row-odd"><td><p>TT-TT</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1/16</p></td>
+</tr>
+</tbody>
+</table>
+<p>The table and calculations above are for two sums. For the proportion of heads, everything would be divided by two, because <span class="math notranslate nohighlight">\(n=2\)</span>. The resulting SD is <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>. This is the <em>SE for the difference of the proportions</em> if we were to assume that <span class="math notranslate nohighlight">\(p_1=p_2 = \frac{1}{2}\)</span> and that the coin flip outcomes are independent. Compare this to the chance error from counting the number of heads from flipping a single fair coin twice. In that case, the possible chance errors would be -1, 0, 0, and 1 and the SE for the proportion would be <span class="math notranslate nohighlight">\(\frac{1}{2\sqrt{2}}\)</span>.</p>
 </section>
-<section id="what-is-python">
-<h2>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this heading">#</a></h2>
-<p>Python is a general-purpose programming language. Our purposes are statistical calculations and the occasional graph. We will run code in <a class="reference external" href="https://colab.research.google.com/">Google Colaboratory</a>. This roughly mirrors running Jupyter notebooks on your own machine, but we skip the setup by running everything in the browser. If you master intro stats and become proficient in Python and SQL, there is a six-figure job waiting for you at any number of tech companies.</p>
-<p>Python is popular because the code is readable. More specifically, “Pythonic” code is readable. Pythonic code not only gets you from point A to B, but it uses Python as it was intended and conforms to the standards of beauty described in <em>The Zen of Python</em> and <a class="reference external" href="https://peps.python.org/pep-0008/">elsewhere</a>.</p>
-<p><strong>The Zen of Python, by Tim Peters</strong></p>
-<p><em>Beautiful is better than ugly.</em><br />
-<em>Explicit is better than implicit.</em><br />
-<em>Simple is better than complex.</em><br />
-<em>Complex is better than complicated.</em><br />
-<em>Flat is better than nested.</em><br />
-<em>Sparse is better than dense.</em><br />
-<em>Readability counts.</em><br />
-<em>Special cases aren’t special enough to break the rules.</em><br />
-<em>Although practicality beats purity.</em><br />
-<em>Errors should never pass silently.</em><br />
-<em>Unless explicitly silenced.</em><br />
-<em>In the face of ambiguity, refuse the temptation to guess.</em><br />
-<em>There should be one—and preferably only one—obvious way to do it.</em><br />
-<em>Although that way may not be obvious at first unless you’re Dutch.</em><br />
-<em>Now is better than never.</em><br />
-<em>Although never is often better than <em>right</em> now.</em><br />
-<em>If the implementation is hard to explain, it’s a bad idea.</em><br />
-<em>If the implementation is easy to explain, it may be a good idea.</em><br />
-<em>Namespaces are one honking great idea—let’s do more of those!</em></p>
-<p>Python can seem endlessly complex. <a class="reference external" href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348">Fluent Python</a> is 1,012 pages. Luckily, we don’t need to aspire to fluency.</p>
+<section id="the-formula">
+<h4>The Formula<a class="headerlink" href="#the-formula" title="Permalink to this heading">#</a></h4>
+<p>For the proportion of heads, everything would be divided by two, because <span class="math notranslate nohighlight">\(n=2\)</span>. The resulting SD is <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>. This is the SE for the difference of the proportions, <span class="math notranslate nohighlight">\(p_1-p_2\)</span>, if we were to assume that <span class="math notranslate nohighlight">\(p_1=p_2 = \frac{1}{2}\)</span> and that the coin flip outcomes are independent. Compare this to the chance error from counting the number of heads from flipping a single fair coin twice. In that case, the possible chance errors would be -1, 0, 0, and 1 and the SE for the proportion would be <span class="math notranslate nohighlight">\(\frac{1}{2\sqrt{2}}\)</span>.</p>
+<p>The <strong>standard error for the difference of two independent quantities</strong> is <span class="math notranslate nohighlight">\(\sqrt{a^2 + b^2}\)</span>, where <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are the SEs for the first and second quantities.</p>
+<p><strong>Aside</strong>: You might note the similarities to the Pythagorean Theorem, coming from the similarity between the SD formula and the formula for Euclidean distance.<a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The side of the triangle, or vector, corresponds to the random quantity and the length of the side is the SE (not to be confused with the value of the random quantity which does not appear in the triangle).</p>
+<figure class="align-default" id="twosamplese">
+<a class="reference internal image-reference" href="_images/twoSampleSE.svg"><img alt="_images/twoSampleSE.svg" src="_images/twoSampleSE.svg" width="34%" /></a>
+<figcaption>
+<p><span class="caption-text">If <span class="math notranslate nohighlight">\(\vec{y}\)</span> has length <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(\vec{x}\)</span> has length <span class="math notranslate nohighlight">\(b\)</span>, then <span class="math notranslate nohighlight">\(\vec{y}-\vec{x}\)</span> has length <span class="math notranslate nohighlight">\(\sqrt{a^2 + b^2}\)</span>. The SE is like the length of the hypotenuse.</span><a class="headerlink" href="#twosamplese" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="thinking-like-a-programmer">
-<h2>Thinking like a Programmer<a class="headerlink" href="#thinking-like-a-programmer" title="Permalink to this heading">#</a></h2>
-<p>Here’s a joke.</p>
-<blockquote>
-<div><p>A programmer is given orders, “Go to the store and buy a loaf of bread. If they have eggs, buy a dozen.” The programmer returns with 12 loaves of bread.</p>
-</div></blockquote>
-<p>This joke speaks to the importance of logic and literalism in coding. This will be frustrating if you’re the kind of person who says, “I could care less” when you mean you couldn’t care less. Python is your belligerent friend who insists on taking you literally.</p>
-<p>When executing a chunk of code, remember that is executed in order, from the one line to the next, and that any variables have to be defined before you can use them. When using a notebook like in Google Colab, be careful with running different cells out of order or forgetting to run one cell before going on to the next.</p>
-<p>Here are a few questions to ask yourself when your code doesn’t work.</p>
+<section id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h4>
+<p><strong>Example 1.</strong> If <span class="math notranslate nohighlight">\(p_1 = 0.5\)</span>, <span class="math notranslate nohighlight">\(p_2 = 0.5\)</span>, <span class="math notranslate nohighlight">\(n_1= 25\)</span> and <span class="math notranslate nohighlight">\(n_2 = 50\)</span>, find the SE for <span class="math notranslate nohighlight">\(p_1 - p_2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[    \text{SE}  = \sqrt{\frac{0.25}{25} + \frac{.25}{50}} \]</div>
+<div class="math notranslate nohighlight">
+\[ \text{SE}  = \sqrt{\frac{1}{100} + \frac{1}{200}}\]</div>
+<div class="math notranslate nohighlight">
+\[ \text{SE} = \sqrt{\frac{3}{200}}\]</div>
+<p><strong>Example 2.</strong> Box A has an average of 100 and SD of 10. Box B has an average of 50 and an SD of 18. 25 random draws are made with replacement from box A and 36 draws are made with replacement from box B. Find the expected value and difference between the average of the draws from box A and the average of the draws from box B.</p>
+<p>The expected value for the difference is <span class="math notranslate nohighlight">\(100 - 50 = 50\)</span>. The SE is calculated,</p>
+<div class="math notranslate nohighlight">
+\[\text{SE}  = \sqrt{ \left(\frac{10}{\sqrt{25}}\right)^2 + \left(\frac{18}{\sqrt{36}}\right)^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[\text{SE} = \sqrt{2^2 + 3^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{SE}  = \sqrt{13}.\]</div>
+<p><strong>Example 3.</strong> If <span class="math notranslate nohighlight">\(\hat{p}_1 = 0.5\)</span>, <span class="math notranslate nohighlight">\(\hat{p}_2 = 0.6\)</span>, <span class="math notranslate nohighlight">\(n_1 = 50\)</span>, and <span class="math notranslate nohighlight">\(n_2 = 48\)</span>, find the SE for <span class="math notranslate nohighlight">\(\hat{p}_2 - \hat{p}_1\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+SE for difference in proportions<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\text{SE}  = \sqrt{\frac{0.25}{50} + \frac{.24}{48}} \]</div>
+<div class="math notranslate nohighlight">
+\[ = \sqrt{\frac{1}{200} + \frac{1}{200}}\]</div>
+<div class="math notranslate nohighlight">
+\[= \sqrt{\frac{1}{100}} = \frac{1}{10}\]</div>
+</div>
+</details></section>
+</section>
+<section id="the-test">
+<h3>The Test<a class="headerlink" href="#the-test" title="Permalink to this heading">#</a></h3>
+<p>Now we construct a hypothesis test for the population averages <span class="math notranslate nohighlight">\(\mu_1\)</span> and <span class="math notranslate nohighlight">\(\mu_2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[    H_0: \;\;\; \mu_1 = \mu_2, \]</div>
+<div class="math notranslate nohighlight">
+\[ H_A: \;\;\; \mu_1 &gt; \mu_2.\]</div>
+<p>Again, the test statistic is</p>
+<div class="math notranslate nohighlight">
+\[z = \dfrac{\text{observed difference - expected difference}}{\text{SE for difference}}.\]</div>
+<p>The two-sample <span class="math notranslate nohighlight">\(z\)</span>-statistic is calculated from</p>
+<ul class="simple">
+<li><p>the size of the two samples,</p></li>
+<li><p>the averages of the two samples,</p></li>
+<li><p>the SDs of the two samples.</p></li>
+</ul>
+<p>The test assumes two independent simple random samples.</p>
+<p><strong>Example</strong> In both 1990 and 2004, NAEP tested 1,000 17-year-olds on mathematics as well as reading. The average score went up from 305 to 307. You may assume the assumptions for hypothesis testing hold. The SD for the 1990 data was 34, and the SD for the 2004 data was 27. Can the difference between the 305 and 307 be explained as a chance variation?</p>
 <ol class="arabic simple">
-<li><p>If there’s an error, does the error message say anything useful?</p>
-<ul class="simple">
-<li><p>For example, the error message might tell you a variable is not defined. Check for typos or make sure you actually defined it and ran the appropriate code.</p></li>
-<li><p>If the error message is too complicated to understand, paste it into ChatGPT and ask for an explanation.</p></li>
-</ul>
-</li>
-<li><p>Does the error persist if I start and over and run all code from scratch?</p>
-<ul class="simple">
-<li><p>If you are re-using variable names, you might overwrite something in an unexpected way. This can cause a clash that messes up the code.</p></li>
-<li><p>A “run all” command will also ensure that you didn’t forget to run a cell in a Jupyter or Colab notebook.</p></li>
-</ul>
-</li>
-<li><p>Did I import the right packages?</p>
-<ul class="simple">
-<li><p>If you want to make a graph or work with dataframes, this will require importing a package that offers that functionality.</p></li>
-</ul>
-</li>
-<li><p>Is my code in the correct order?</p>
-<ul class="simple">
-<li><p>The order of execution matters. Make sure your code is executed in the sequence you intend, especially in Jupyter or Colab notebooks where cells can be run in any order.</p></li>
-</ul>
-</li>
-<li><p>Is there something odd about my data types?</p>
-<ul class="simple">
-<li><p>Note that <code class="docutils literal notranslate"><span class="pre">1+1</span></code> will produce <code class="docutils literal notranslate"><span class="pre">2</span></code> but <code class="docutils literal notranslate"><span class="pre">'1'</span> <span class="pre">+</span> <span class="pre">'1'</span></code> will produce <code class="docutils literal notranslate"><span class="pre">'11'</span></code>. The former treats 1 as a number but the second, by using quotes, treats it as plain text, or a string.</p></li>
-</ul>
-</li>
-<li><p>Is there anything wrong with my syntax?</p>
-<ul class="simple">
-<li><p>Recall <code class="docutils literal notranslate"><span class="pre">**</span></code> is used for exponents, so <span class="math notranslate nohighlight">\(2^4\)</span> is written as <code class="docutils literal notranslate"><span class="pre">2**4</span></code>. <code class="docutils literal notranslate"><span class="pre">2^4</span></code> does something else.</p></li>
-</ul>
-</li>
-<li><p>Could the precision of a decimal value change my results?</p>
-<ul class="simple">
-<li><p>Computers can have a hard time storing exact values. You might get 0.00000000001 instead of 0. This usually isn’t a big deal in our applications.</p></li>
-</ul>
-</li>
+<li><p>Should you make a one-sample <span class="math notranslate nohighlight">\(z\)</span>-test or a two-sample <span class="math notranslate nohighlight">\(z\)</span>-test? Why?</p></li>
+<li><p>Formulate the null and alternative hypotheses in terms of a box model. Do you need one box or two? Why? How many tickets go into each box? How many draws? Do the tickets show test scores, or 0’s and 1’s? Why?</p></li>
+<li><p>Is the difference real, or can it be explained by chance?</p></li>
 </ol>
+<p>We should use a two-sample <span class="math notranslate nohighlight">\(z\)</span>-test. There is no pairing and these are separate, independent samples. There are two boxes, a 1990 box and a 2004 box. There are as many tickets as there are 17-year-olds for each population, and 1,000 draws from each. The tickets show test scores. The null hypothesis says the average of the boxes are the same. The alternative says the averages are different. The SE for the difference is 1.37, so <span class="math notranslate nohighlight">\(z = \frac{2}{1.37} \approx 1.46\)</span>. This is below the typical one-tailed threshold of 1.645, for 95% confidence, and could easily be chance variation. We fail to reject the null.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p>The size of a vector, <span class="math notranslate nohighlight">\( \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \)</span>, or distance from the point to the origin, is <span class="math notranslate nohighlight">\( \Vert x \Vert = \sqrt{x_1^2 + x_2^2} \)</span>.</p>
+</aside>
+</section>
 </section>
 </section>
 
@@ -549,24 +679,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="gregression.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Regression</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="pycalculator.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Basics</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -582,9 +694,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#should-you-learn-python">Should you learn Python?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thinking-like-a-programmer">Thinking like a Programmer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Two-Sample Tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-error">The Standard Error</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-idea">The Idea</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-formula">The Formula</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-test">The Test</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

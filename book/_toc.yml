@@ -22,6 +22,7 @@ parts:
     - file: sampling
     - file: confidenceintervals
     - file: hypothesistesting
+    - file: twosample
     - file: bibliography
 
 #- caption: Solutions
