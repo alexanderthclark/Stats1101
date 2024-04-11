@@ -1,0 +1,997 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Chi-squared Tests &#8212; Intro Stats</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-32DRGZQWDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chi2';</script>
+    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Two-Sample Tests" href="twosample.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/statLogo.svg" class="logo__image only-light" alt="Intro Stats - Home"/>
+    <script>document.write(`<img src="_static/statLogo.svg" class="logo__image only-dark" alt="Intro Stats - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Intro Stats
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normal.html">Normal Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="correlation.html">Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probability.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Variability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confidenceintervals.html">Confidence Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesistesting.html">Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twosample.html">Two-Sample Tests</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chi-squared Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyHypothesisTesting.html">Hypothesis Testing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Rbasics.html">Overview</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">Selected Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/chi2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/chi2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alexanderthclark/Stats1101" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fchi2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chi2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chi-squared Tests</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chi-2-distribution">The <span class="math notranslate nohighlight">\(\chi^2\)</span> Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chi-squared-tests">
+<span id="chi2"></span><h1>Chi-squared Tests<a class="headerlink" href="#chi-squared-tests" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapters 28</p></li>
+</ul>
+</div>
+<section id="the-chi-2-distribution">
+<h2>The <span class="math notranslate nohighlight">\(\chi^2\)</span> Distribution<a class="headerlink" href="#the-chi-2-distribution" title="Permalink to this heading">#</a></h2>
+<p>The <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution is characterized by a degrees of freedom parameter.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<script type="application/javascript">'use strict';
+(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  const force = true;
+
+  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
+    root._bokeh_onload_callbacks = [];
+    root._bokeh_is_loading = undefined;
+  }
+
+const JS_MIME_TYPE = 'application/javascript';
+  const HTML_MIME_TYPE = 'text/html';
+  const EXEC_MIME_TYPE = 'application/vnd.bokehjs_exec.v0+json';
+  const CLASS_NAME = 'output_bokeh rendered_html';
+
+  /**
+   * Render data to the DOM node
+   */
+  function render(props, node) {
+    const script = document.createElement("script");
+    node.appendChild(script);
+  }
+
+  /**
+   * Handle when an output is cleared or removed
+   */
+  function handleClearOutput(event, handle) {
+    function drop(id) {
+      const view = Bokeh.index.get_by_id(id)
+      if (view != null) {
+        view.model.document.clear()
+        Bokeh.index.delete(view)
+      }
+    }
+
+    const cell = handle.cell;
+
+    const id = cell.output_area._bokeh_element_id;
+    const server_id = cell.output_area._bokeh_server_id;
+
+    // Clean up Bokeh references
+    if (id != null) {
+      drop(id)
+    }
+
+    if (server_id !== undefined) {
+      // Clean up Bokeh references
+      const cmd_clean = "from bokeh.io.state import curstate; print(curstate().uuid_to_server['" + server_id + "'].get_sessions()[0].document.roots[0]._id)";
+      cell.notebook.kernel.execute(cmd_clean, {
+        iopub: {
+          output: function(msg) {
+            const id = msg.content.text.trim()
+            drop(id)
+          }
+        }
+      });
+      // Destroy server and session
+      const cmd_destroy = "import bokeh.io.notebook as ion; ion.destroy_server('" + server_id + "')";
+      cell.notebook.kernel.execute(cmd_destroy);
+    }
+  }
+
+  /**
+   * Handle when a new output is added
+   */
+  function handleAddOutput(event, handle) {
+    const output_area = handle.output_area;
+    const output = handle.output;
+
+    // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
+    if ((output.output_type != "display_data") || (!Object.prototype.hasOwnProperty.call(output.data, EXEC_MIME_TYPE))) {
+      return
+    }
+
+    const toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+
+    if (output.metadata[EXEC_MIME_TYPE]["id"] !== undefined) {
+      toinsert[toinsert.length - 1].firstChild.textContent = output.data[JS_MIME_TYPE];
+      // store reference to embed id on output_area
+      output_area._bokeh_element_id = output.metadata[EXEC_MIME_TYPE]["id"];
+    }
+    if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+      const bk_div = document.createElement("div");
+      bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+      const script_attrs = bk_div.children[0].attributes;
+      for (let i = 0; i < script_attrs.length; i++) {
+        toinsert[toinsert.length - 1].firstChild.setAttribute(script_attrs[i].name, script_attrs[i].value);
+        toinsert[toinsert.length - 1].firstChild.textContent = bk_div.children[0].textContent
+      }
+      // store reference to server id on output_area
+      output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+    }
+  }
+
+  function register_renderer(events, OutputArea) {
+
+    function append_mime(data, metadata, element) {
+      // create a DOM node to render to
+      const toinsert = this.create_output_subarea(
+        metadata,
+        CLASS_NAME,
+        EXEC_MIME_TYPE
+      );
+      this.keyboard_manager.register_events(toinsert);
+      // Render to node
+      const props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+      render(props, toinsert[toinsert.length - 1]);
+      element.append(toinsert);
+      return toinsert
+    }
+
+    /* Handle when an output is cleared or removed */
+    events.on('clear_output.CodeCell', handleClearOutput);
+    events.on('delete.Cell', handleClearOutput);
+
+    /* Handle when a new output is added */
+    events.on('output_added.OutputArea', handleAddOutput);
+
+    /**
+     * Register the mime type and append_mime function with output_area
+     */
+    OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+      /* Is output safe? */
+      safe: true,
+      /* Index of renderer in `output_area.display_order` */
+      index: 0
+    });
+  }
+
+  // register the mime type if in Jupyter Notebook environment and previously unregistered
+  if (root.Jupyter !== undefined) {
+    const events = require('base/js/events');
+    const OutputArea = require('notebook/js/outputarea').OutputArea;
+
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  }
+  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  const NB_LOAD_WARNING = {'data': {'text/html':
+     "<div style='background-color: #fdd'>\n"+
+     "<p>\n"+
+     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
+     "may be due to a slow or bad network connection. Possible fixes:\n"+
+     "</p>\n"+
+     "<ul>\n"+
+     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
+     "<li>use INLINE resources instead, as so:</li>\n"+
+     "</ul>\n"+
+     "<code>\n"+
+     "from bokeh.resources import INLINE\n"+
+     "output_notebook(resources=INLINE)\n"+
+     "</code>\n"+
+     "</div>"}};
+
+  function display_loaded(error = null) {
+    const el = document.getElementById(null);
+    if (el != null) {
+      const html = (() => {
+        if (typeof root.Bokeh === "undefined") {
+          if (error == null) {
+            return "BokehJS is loading ...";
+          } else {
+            return "BokehJS failed to load.";
+          }
+        } else {
+          const prefix = `BokehJS ${root.Bokeh.version}`;
+          if (error == null) {
+            return `${prefix} successfully loaded.`;
+          } else {
+            return `${prefix} <b>encountered errors</b> while loading and may not function as expected.`;
+          }
+        }
+      })();
+      el.innerHTML = html;
+
+      if (error != null) {
+        const wrapper = document.createElement("div");
+        wrapper.style.overflow = "auto";
+        wrapper.style.height = "5em";
+        wrapper.style.resize = "vertical";
+        const content = document.createElement("div");
+        content.style.fontFamily = "monospace";
+        content.style.whiteSpace = "pre-wrap";
+        content.style.backgroundColor = "rgb(255, 221, 221)";
+        content.textContent = error.stack ?? error.toString();
+        wrapper.append(content);
+        el.append(wrapper);
+      }
+    } else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(() => display_loaded(error), 100);
+    }
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+
+    root._bokeh_onload_callbacks.push(callback);
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls == null || js_urls.length === 0) {
+      run_callbacks();
+      return null;
+    }
+    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    root._bokeh_is_loading = css_urls.length + js_urls.length;
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+
+    function on_error(url) {
+      console.error("failed to load " + url);
+    }
+
+    for (let i = 0; i < css_urls.length; i++) {
+      const url = css_urls[i];
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }
+
+    for (let i = 0; i < js_urls.length; i++) {
+      const url = js_urls[i];
+      const element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  const js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.4.0.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.4.0.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.4.0.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.4.0.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.4.0.min.js"];
+  const css_urls = [];
+
+  const inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {
+    }
+  ];
+
+  function run_inline_js() {
+    if (root.Bokeh !== undefined || force === true) {
+      try {
+            for (let i = 0; i < inline_js.length; i++) {
+      inline_js[i].call(root, root.Bokeh);
+    }
+
+      } catch (error) {throw error;
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    } else if (force !== true) {
+      const cell = $(document.getElementById(null)).parents('.cell').data().cell;
+      cell.output_area.append_execute_result(NB_LOAD_WARNING)
+    }
+  }
+
+  if (root._bokeh_is_loading === 0) {
+    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
+    run_inline_js();
+  } else {
+    load_libs(css_urls, js_urls, function() {
+      console.debug("Bokeh: BokehJS plotting callback run at", now());
+      run_inline_js();
+    });
+  }
+}(window));</script><div class="output text_html">
+  <div id="e7fc07c0-295a-45c7-8cb3-4100e7a41f18" data-root-id="p1048" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"f92920ba-e22e-4ae6-9b33-443efd7e281e":{"version":"3.4.0","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p1048","attributes":{"children":[{"type":"object","name":"Slider","id":"p1046","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"type":"object","name":"CustomJS","id":"p1047","attributes":{"args":{"type":"map","entries":[["source",{"type":"object","name":"ColumnDataSource","id":"p1001","attributes":{"selected":{"type":"object","name":"Selection","id":"p1002","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["x",{"type":"ndarray","array":{"type":"bytes","data":"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"},"shape":[400],"dtype":"float64","order":"little"}],["y_chi2",{"type":"ndarray","array":{"type":"bytes","data":"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"},"shape":[400],"dtype":"float64","order":"little"}]]}}}],["slider",{"id":"p1046"}]]},"code":"\n    const data = source.data;\n    const x = data['x'];\n    const df = slider.value;\n    const y_chi2 = data['y_chi2'];\n    for (let i = 0; i < x.length; i++) {\n        y_chi2[i] = Math.pow(x[i], df/2 - 1) * Math.exp(-x[i]/2) / (Math.pow(2, df/2) * gamma(df/2));\n    }\n    source.change.emit();\n\n    // Gamma function approximation\n    function gamma(z) {\n        const g = 7;\n        const C = [\n            0.99999999999980993, 676.5203681218851, -1259.1392167224028,\n            771.32342877765313, -176.61502916214059, 12.507343278686905,\n            -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7\n        ];\n\n        if (z < 0.5) return Math.PI / (Math.sin(Math.PI * z) * gamma(1 - z));\n        z -= 1;\n\n        let x = C[0];\n        for (let i = 1; i < g + 2; i++)\n        x += C[i] / (z + i);\n\n        const t = z + g + 0.5;\n        return Math.sqrt(2 * Math.PI) * Math.pow(t, z + 0.5) * Math.exp(-t) * x;\n    }\n"}}]]]},"title":"Degrees of Freedom","start":1,"end":30,"value":1}},{"type":"object","name":"Figure","id":"p1004","attributes":{"width":400,"height":400,"x_range":{"type":"object","name":"DataRange1d","id":"p1005"},"y_range":{"type":"object","name":"DataRange1d","id":"p1006"},"x_scale":{"type":"object","name":"LinearScale","id":"p1014"},"y_scale":{"type":"object","name":"LinearScale","id":"p1015"},"title":{"type":"object","name":"Title","id":"p1007","attributes":{"text":"Chi-squared Distribution"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1043","attributes":{"data_source":{"id":"p1001"},"view":{"type":"object","name":"CDSView","id":"p1044","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1045"}}},"glyph":{"type":"object","name":"Line","id":"p1040","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_chi2"},"line_color":"blue","line_width":2}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1041","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_chi2"},"line_color":"blue","line_alpha":0.1,"line_width":2}},"muted_glyph":{"type":"object","name":"Line","id":"p1042","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_chi2"},"line_color":"blue","line_alpha":0.2,"line_width":2}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1013","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1026"},{"type":"object","name":"WheelZoomTool","id":"p1027","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1028","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1029","attributes":{"syncable":false,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"SaveTool","id":"p1034"},{"type":"object","name":"ResetTool","id":"p1035"},{"type":"object","name":"HelpTool","id":"p1036"}]}},"toolbar_location":null,"left":[{"type":"object","name":"LinearAxis","id":"p1021","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1022","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1023"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1024"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1016","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1017","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1018"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1019"}}}],"center":[{"type":"object","name":"Grid","id":"p1020","attributes":{"axis":{"id":"p1016"}}},{"type":"object","name":"Grid","id":"p1025","attributes":{"dimension":1,"axis":{"id":"p1021"}}}]}}]}}]}};
+  const render_items = [{"docid":"f92920ba-e22e-4ae6-9b33-443efd7e281e","roots":{"p1048":"e7fc07c0-295a-45c7-8cb3-4100e7a41f18"},"root_ids":["p1048"]}];
+  void root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script><div class="output text_html">
+<style>
+.output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+</div></div>
+</div>
+<section id="interactive">
+<h3>Interactive<a class="headerlink" href="#interactive" title="Permalink to this heading">#</a></h3>
+<p>Use <a class="reference external" href="https://colab.research.google.com/drive/1ZZkQTf1ceaLvU1QDS7UGZymmtCl_A2gy?usp=sharing">this Colab notebook</a> to find the area to the right of a value for a given degrees of freedom.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "alexanderthclark/Stats1101",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="twosample.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Two-Sample Tests</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bibliography.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chi-2-distribution">The <span class="math notranslate nohighlight">\(\chi^2\)</span> Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alexander Clark, Columbia University
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
