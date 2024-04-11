@@ -1,0 +1,999 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Chi-Square Test &#8212; Intro Stats</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-32DRGZQWDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chi2';</script>
+    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Two-Sample Tests" href="twosample.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/statLogo.svg" class="logo__image only-light" alt="Intro Stats - Home"/>
+    <script>document.write(`<img src="_static/statLogo.svg" class="logo__image only-dark" alt="Intro Stats - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Intro Stats
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normal.html">Normal Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="correlation.html">Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probability.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Variability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confidenceintervals.html">Confidence Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesistesting.html">Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twosample.html">Two-Sample Tests</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Chi-Square Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyHypothesisTesting.html">Hypothesis Testing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Rbasics.html">Overview</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">Selected Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/chi2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/chi2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alexanderthclark/Stats1101" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fchi2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chi2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Chi-Square Test</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chi-2-test">The <span class="math notranslate nohighlight">\(\chi^2\)</span> Test</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-chi-2-distribution">Using the <span class="math notranslate nohighlight">\(\chi^2\)</span> Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-chi-square-test">
+<span id="chi2"></span><h1>The Chi-Square Test<a class="headerlink" href="#the-chi-square-test" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapters 28</p></li>
+</ul>
+</div>
+<p>We used <span class="math notranslate nohighlight">\(z\)</span>-tests for proportions, or when our box model had just two categories and could be cast as a 0-1 box.</p>
+<p>The simple 0-1 days are gone. Now we live in a world where the box might contain many values. The NBA lottery chooses among fourteen teams or a gambler might throw a six-sided die. At work, engineers randomize over who is supposed to conduct code reviews. A name is randomly selected, as if from a box, and that person is stuck with the onerous task of double-checking a colleague’s code. The box below considers a three-colleague example.</p>
+<figure class="align-default" id="boxcodereview">
+<a class="reference internal image-reference" href="_images/boxCodeReview.svg"><img alt="_images/boxCodeReview.svg" src="_images/boxCodeReview.svg" width="38%" /></a>
+</figure>
+<p>Suppose that over 30 draws, we expect the work to be split evenly but that Velma does 10 reviews, Marvin is tasked with 15, and Paul only does 5.</p>
+<p>Paul is more senior and, only after seeing the data, we’re suspicious that the game has been rigged to lower his workload.</p>
+<p>A <span class="math notranslate nohighlight">\(z\)</span>-test could be applied here if we consider Paul vs. Everyone. Let <span class="math notranslate nohighlight">\(p\)</span> be the proportion of times Paul is selected. Our null is <span class="math notranslate nohighlight">\(p = \frac{1}{3}\)</span> and the alternative is <span class="math notranslate nohighlight">\(p &lt; \frac{1}{3}\)</span>.</p>
+<p>The resulting <span class="math notranslate nohighlight">\(z\)</span>-statistic is</p>
+<div class="math notranslate nohighlight">
+\[z = \dfrac{ \frac{5}{30} - \frac{1}{3} }{\sqrt{\frac{\frac{1}{3}\cdot\frac{2}{3}}{30}}} \approx -1.94.\]</div>
+<p>This is beyond the critical value of -1.645 for a left-tailed test with a 95% confidence level. We’re tempted to declare that Paul is cheating. But the next section should give us pause.</p>
+<section id="the-chi-2-test">
+<h2>The <span class="math notranslate nohighlight">\(\chi^2\)</span> Test<a class="headerlink" href="#the-chi-2-test" title="Permalink to this heading">#</a></h2>
+<p>The previous application of the <span class="math notranslate nohighlight">\(z\)</span>-test might have been too opportunistic. With enough colleagues, someone is probably going to get a bad break. If, in practice, we only became suspicious of Paul after seeing the data, that should also raise red flags. To address the fairness of this kind of random name drawing, we should ask the question “are all names equally likely” instead of asking if a particular name comes up with a one-third chance.</p>
+<div class="math notranslate nohighlight">
+\[ H_0: \hspace{10pt} \text{all names are equally likely} \]</div>
+<div class="math notranslate nohighlight">
+\[ H_A: \hspace{10pt}  \text{all names are not equally likely} \]</div>
+<p>In this setup, we don’t reduce this to a Paul vs. Everyone binary. Instead, we calculate a <span class="math notranslate nohighlight">\(\mathbf{\chi^2}\)</span><strong>-statistic</strong>,</p>
+<div class="math notranslate nohighlight">
+\[\chi^2 = \sum \frac{\text{(observed frequency - expected frequency)}^2}{\text{expected frequency}}.\]</div>
+<p>The sum is taken over all possible names. Note we don’t convert anything to proportions, but we work directly with the counts and expected counts. With our data,</p>
+<div class="math notranslate nohighlight">
+\[\chi^2 = \frac{(10-10)^2 + (15-10)^2 + (5-10)^2)}{10} = 5.\]</div>
+<p>There are two degrees of freedom because once we know two of the values from 10, 15, and 5, we know the last. The <span class="math notranslate nohighlight">\(\chi^2\)</span> statistic comes from a <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with two degrees of freedom. More generally, the statistic comes from a <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with degrees of freedom equal to the number of terms minus one.</p>
+<section id="using-the-chi-2-distribution">
+<h3>Using the <span class="math notranslate nohighlight">\(\chi^2\)</span> Distribution<a class="headerlink" href="#using-the-chi-2-distribution" title="Permalink to this heading">#</a></h3>
+<p>The <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution is characterized by a degrees of freedom parameter.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<script type="application/javascript">(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  const force = true;
+
+  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
+    root._bokeh_onload_callbacks = [];
+    root._bokeh_is_loading = undefined;
+  }
+
+const JS_MIME_TYPE = 'application/javascript';
+  const HTML_MIME_TYPE = 'text/html';
+  const EXEC_MIME_TYPE = 'application/vnd.bokehjs_exec.v0+json';
+  const CLASS_NAME = 'output_bokeh rendered_html';
+
+  /**
+   * Render data to the DOM node
+   */
+  function render(props, node) {
+    const script = document.createElement("script");
+    node.appendChild(script);
+  }
+
+  /**
+   * Handle when an output is cleared or removed
+   */
+  function handleClearOutput(event, handle) {
+    function drop(id) {
+      const view = Bokeh.index.get_by_id(id)
+      if (view != null) {
+        view.model.document.clear()
+        Bokeh.index.delete(view)
+      }
+    }
+
+    const cell = handle.cell;
+
+    const id = cell.output_area._bokeh_element_id;
+    const server_id = cell.output_area._bokeh_server_id;
+
+    // Clean up Bokeh references
+    if (id != null) {
+      drop(id)
+    }
+
+    if (server_id !== undefined) {
+      // Clean up Bokeh references
+      const cmd_clean = "from bokeh.io.state import curstate; print(curstate().uuid_to_server['" + server_id + "'].get_sessions()[0].document.roots[0]._id)";
+      cell.notebook.kernel.execute(cmd_clean, {
+        iopub: {
+          output: function(msg) {
+            const id = msg.content.text.trim()
+            drop(id)
+          }
+        }
+      });
+      // Destroy server and session
+      const cmd_destroy = "import bokeh.io.notebook as ion; ion.destroy_server('" + server_id + "')";
+      cell.notebook.kernel.execute(cmd_destroy);
+    }
+  }
+
+  /**
+   * Handle when a new output is added
+   */
+  function handleAddOutput(event, handle) {
+    const output_area = handle.output_area;
+    const output = handle.output;
+
+    // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
+    if ((output.output_type != "display_data") || (!Object.prototype.hasOwnProperty.call(output.data, EXEC_MIME_TYPE))) {
+      return
+    }
+
+    const toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+
+    if (output.metadata[EXEC_MIME_TYPE]["id"] !== undefined) {
+      toinsert[toinsert.length - 1].firstChild.textContent = output.data[JS_MIME_TYPE];
+      // store reference to embed id on output_area
+      output_area._bokeh_element_id = output.metadata[EXEC_MIME_TYPE]["id"];
+    }
+    if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+      const bk_div = document.createElement("div");
+      bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+      const script_attrs = bk_div.children[0].attributes;
+      for (let i = 0; i < script_attrs.length; i++) {
+        toinsert[toinsert.length - 1].firstChild.setAttribute(script_attrs[i].name, script_attrs[i].value);
+        toinsert[toinsert.length - 1].firstChild.textContent = bk_div.children[0].textContent
+      }
+      // store reference to server id on output_area
+      output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+    }
+  }
+
+  function register_renderer(events, OutputArea) {
+
+    function append_mime(data, metadata, element) {
+      // create a DOM node to render to
+      const toinsert = this.create_output_subarea(
+        metadata,
+        CLASS_NAME,
+        EXEC_MIME_TYPE
+      );
+      this.keyboard_manager.register_events(toinsert);
+      // Render to node
+      const props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+      render(props, toinsert[toinsert.length - 1]);
+      element.append(toinsert);
+      return toinsert
+    }
+
+    /* Handle when an output is cleared or removed */
+    events.on('clear_output.CodeCell', handleClearOutput);
+    events.on('delete.Cell', handleClearOutput);
+
+    /* Handle when a new output is added */
+    events.on('output_added.OutputArea', handleAddOutput);
+
+    /**
+     * Register the mime type and append_mime function with output_area
+     */
+    OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+      /* Is output safe? */
+      safe: true,
+      /* Index of renderer in `output_area.display_order` */
+      index: 0
+    });
+  }
+
+  // register the mime type if in Jupyter Notebook environment and previously unregistered
+  if (root.Jupyter !== undefined) {
+    const events = require('base/js/events');
+    const OutputArea = require('notebook/js/outputarea').OutputArea;
+
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  }
+  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  const NB_LOAD_WARNING = {'data': {'text/html':
+     "<div style='background-color: #fdd'>\n"+
+     "<p>\n"+
+     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
+     "may be due to a slow or bad network connection. Possible fixes:\n"+
+     "</p>\n"+
+     "<ul>\n"+
+     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
+     "<li>use INLINE resources instead, as so:</li>\n"+
+     "</ul>\n"+
+     "<code>\n"+
+     "from bokeh.resources import INLINE\n"+
+     "output_notebook(resources=INLINE)\n"+
+     "</code>\n"+
+     "</div>"}};
+
+  function display_loaded() {
+    const el = document.getElementById(null);
+    if (el != null) {
+      el.textContent = "BokehJS is loading...";
+    }
+    if (root.Bokeh !== undefined) {
+      if (el != null) {
+        el.textContent = "BokehJS " + root.Bokeh.version + " successfully loaded.";
+      }
+    } else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(display_loaded, 100)
+    }
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+
+    root._bokeh_onload_callbacks.push(callback);
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls == null || js_urls.length === 0) {
+      run_callbacks();
+      return null;
+    }
+    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    root._bokeh_is_loading = css_urls.length + js_urls.length;
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+
+    function on_error(url) {
+      console.error("failed to load " + url);
+    }
+
+    for (let i = 0; i < css_urls.length; i++) {
+      const url = css_urls[i];
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }
+
+    for (let i = 0; i < js_urls.length; i++) {
+      const url = js_urls[i];
+      const element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  const js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.3.4.min.js"];
+  const css_urls = [];
+
+  const inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {
+    }
+  ];
+
+  function run_inline_js() {
+    if (root.Bokeh !== undefined || force === true) {
+          for (let i = 0; i < inline_js.length; i++) {
+      inline_js[i].call(root, root.Bokeh);
+    }
+} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    } else if (force !== true) {
+      const cell = $(document.getElementById(null)).parents('.cell').data().cell;
+      cell.output_area.append_execute_result(NB_LOAD_WARNING)
+    }
+  }
+
+  if (root._bokeh_is_loading === 0) {
+    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
+    run_inline_js();
+  } else {
+    load_libs(css_urls, js_urls, function() {
+      console.debug("Bokeh: BokehJS plotting callback run at", now());
+      run_inline_js();
+    });
+  }
+}(window));</script><div class="output text_html">
+  <div id="a614bb54-d9f6-4705-96d1-26833cb491ac" data-root-id="p1048" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"11f27cc2-91e0-490d-860f-0bd49b10ed9f":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p1048","attributes":{"children":[{"type":"object","name":"Slider","id":"p1046","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"type":"object","name":"CustomJS","id":"p1047","attributes":{"args":{"type":"map","entries":[["source",{"type":"object","name":"ColumnDataSource","id":"p1001","attributes":{"selected":{"type":"object","name":"Selection","id":"p1002","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["x",{"type":"ndarray","array":{"type":"bytes","data":"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"},"shape":[777],"dtype":"float64","order":"little"}],["y_chi2",{"type":"ndarray","array":{"type":"bytes","data":"SvBWClwz8z8Jzm/1UGruPyEuPvCrnOk/0SBYjaVL5j9LV5lrY9HjP5qxtYjM3uE/65WWfqZI4D8wpC7RBerdP4SlslR2pts/Gm8f8Rew2T8bAvIvCvfXP/L4bgy7b9Y/m5euZn8R1T8Jf+yEsdXTP0iYEzset9I/SXhRLqKx0T/nzlGX5cHQP8dajeZXys8/LeUbLmIyzj9eGV7rHrjMP9ktxbhZWMs/OxfSmlcQyj+xVbRuwN3IP3wNGVCNvsc/krMNt/qwxj/8fglofbPFPzhtG465xMQ/1Ovggnvjwz/0ux7nsQ7DPxTncMVoRcI/uW4ZicWGwT8o3z6fA9LAPwFFIKJxJsA/mc506d0Gvz8rVVV109C9Pxu9Zji6qbw/6vDjkp+Quz+MYqZkpYS6P5q4itX/hLk/Y91raPOQuD87NEdN06e3P0OWGOn/yLY/JJ6Wi+XztT9La0RM+ye1PwRVXQnCZLQ/GGr9g8Opsz9gvKCVkfayP4P2qnvFSrI/RZImNv+lsT+A/1P35AexP//x+KEicLA/KN9TqdK8rz/7Ew0B3qSuP8XkKhTcl60/BMM05kmVrD8C+MsYrJyrP2XzgF2Orao/iJlX9ILHqT+pHaQ1IuqoP7JjEyYKFag/J7TVE95Hpz8BlAE8RoKmP+6FX3fvw6U/HPHm7YoMpT/l5EjQzVukP+RZ9xZxsaM/vUQnRjENoz+5mVk2zm6iP5iEA+EK1qE/u8z4MK1CoT+P1ETWfbSgPzgDJx1IK6A/uavdj7NNnz8+3/TWBU6ePy2/QJwrV50/+iGlkc1onD8yDppUmIKbP7BqTjg8pJo/zgZFE23NmT8H0ycQ4v2YP/Qsk4FVNZg/TZCguIRzlz++5PzdL7iWP+YJW80ZA5Y/fEEX8wdUlT9tsuMrwqqUP3WFWaYSB5Q/exFNxsVokz/MP8YJqs+SP8PBgO+PO5I/CuvZ3kmskT+/CxQRrCGRP5H92HuMm5A/lEjnvMIZkD/tnK0NUDiPPwiqxh0uRY4/fCVZ99dZjT9xIrmpCHaMPzubTOd9mYs/nAEf6PfDij/txfJNOfWJP3wtugkHLYk/hF9iQihriD+o/tw8Zq+HPxz4VUWM+YY/b2qEmWdJhj/SpgZUx56FP0xbulh8+YQ/nOsCQllZhD8E5PBOMr6DP05FPlLdJ4M/DS8UojGWgj+PI48ICAmCP1vL97Q6gIE/WLymLaX7gD8MW4pCJHuAP33sjAAs/X8/BXjLR7MLfz/ZPSsenyF+P7hgy3myPn0/OrkHbrJifD9hrd4WZo17P5q2OIWWvno/So8GrA72eT/dnitOmzN5P/POKu0Kd3g/PYCMuC3Adz+01fR91Q53PzUJ4pnVYnY/RewK6QK8dT9zJVa6Mxp1P3QeY8E/fXQ/AvadCQDlcz+eItjpTlFzP03FX/gHwnI/8fyP/wc3cj+K0tTyLLBxP/WeHeRVLXE/Awu5+WKucD+pCpZkNTNwP2TZyq1ed28/L6Qv9mePbj/oJWjWTq5tP/6QBFHd02w/gcYPJ9//az9Iv6LIITJrP8SrDEZ0amo/r5GJQaeoaT8ae4HhjOxoPxaQSsP4NWg/qbho7r+EZz+uokXIuNhmPx5FXAi7MWY/2TLTrJ+PZT+eRIHvQPJkP+5WWDt6WWQ/NggyIijFYz/ykfpSKDVjP2wFNpBZqWI/wlvcppshYj+884hlz51hP2g7+pPWHWE/S2ne6pOhYD9JSuoL6yhgPz6UbvSAZ18/LPjLJfODXj/UDAUM+aZdP2feUJ9g0Fw/tcrGYvn/Wz/bcJVXlDVbP6OXqvADcVo/rdDHBhyyWT93y//MsfhYPwZ2mMWbRFg/XTFOt7GVVz95hfSizOtWPyvocLnGRlY/8EkMUnumVT9HQRjhxgpVP7LJ5O6Gc1Q/pK0DD5rgUz+kzdbX31FTP0SUZto4x1I/TAF+moZAUj9x0AmHq71RP+tXuPKKPlE/49PXDAnDUD9o6XDaCktQP/yDNl/srE8/ymkUUmPKTj/0D59LSe5NP2vIpIJuGE0/blnxmqRITD/A8AGavn5LP8j+FtyQuko/77qgCfH7ST/RMgMNtkJJP6/irgi4jkg/+PKKTdDfRz8rUK5R2TVHP6fuZKeukEY/DKR+9CzwRT+gF+XpMVRFPxtjdjucvEQ/UBMimEspRD+BTUaiIJpDPxvySuj8DkM/kap43cKHQj9D4gnTVQRCP3C8c/GZhEE/fCvlMXQIQT++XfpXyo9AP1LFouuCGkA/xR5wZgpRPz8D3IhbcnM+P6FO7RoPnD0/oNKEZLPKPD9L4FZJM/87P+swdCFkOTs/qgkwghx5Oj/AEac0NL45P+kukSyECDk/jftbf+ZXOD8cfYtbNqw3PzPXXgBQBTc/H8u2tRBjNj895jvEVsU1PydVwm0BLDU/CWLp5fCWND8+tvRKBgY0P12H3Z4jeTM/vuiZwCvwMj8WiJhlAmsyP/ArbxOM6TE/d1i6Ga5rMT/5jCyMTvEwP8KYyzxUejA/zJRatqYGMD/mMt5tXCwvP/mqYFWnUS4/e2t9TQF9LT+nsIXIPq4sP8siRXc15Ss/DaG1P7whKz+Ngvozq2MqP0wToYnbqik/fyckkSf3KD9Hr7CtakgoP9NHKU2Bnic/mddm4Ej5Jj+VUbTTn1gmP/TNg4dlvCU/ozJbSXokJT+It/ZMv5AkP6Sdn6UWASQ/6X+1P2N1Iz9PsGjaiO0iP7shpAFsaSI/7mklCPLoIT+Rc8EBAWwhPwiE1L1/8iA/6ULcwVV8ID9afDpEawkgP/rCPk5SMx8/Vyk05/FZHj/Jr5ypiYYdP8R8nCbvuBw/KJQtIfnwGz+3z1yFfy4bP2mIyF9bcRo/cPde1Wa5GT+0Y1obfQYZP/U/eW96WBg/bW1wEDyvFz9Z5JU2oAoXPxYSwgyGahY/XElmqc3OFT/HrtYHWDcVPyMYxgEHpBQ/wWDySL0UFD9fwf9gXokTPznFgZnOARM/KoEwCPN9Ej/fu0iDsf0RPzLBFZzwgBE/GKSjmZcHET+jvJhzjpEQP6A4Nc29HhA/3D3v4B1eDz9HW8qS14QOP4EJ6sJ9sQ0/9Cs6tubjDD8Mt//a6RsMP1q9c8BfWQs/7TycDiKcCj/m3GB+C+QJP2/Y2dH3MAk/y2LXzMOCCD9D258tTdkHP3Y446VyNAc/iRni0xOUBj9p/cY7EfgFPwYnMEFMYAU/pcPoIKfMBD/y8s/qBD0EP0ZZ7HtJsQM/BPGqeFkpAz/N2EdHGqUCP6vlXwpyJAI/R8qpm0enAT/0rNWGgi0BP/cOkgQLtwA/ZfC09clDAD9sRxC9Uaf/PkOYb8Qjzf4+WRTEfN/4/T4SwY2NWyr9PnXGLsJvYfw+MpPGAfWd+z5QBkhHxd/6PrLpyJm7Jvo+yBgJBbRy+T7Nti+Si8P4PpPovEAgGfg+9Y2u/1Bz9z5khNam/dH2PsMGYfAGNfY+Q8iJck6c9T6adH6Ztgf1PuxGbaEid/Q+l3W+kHbq8z4YOHcyl2HzPj83xRBq3PI+8z6xb9Va8j5GE/hHwNzxPttRCEISYvE+v1AksbPq8D439KaOjXbwPkB8anWJBfA+k6SgOiMv7z58zNGtIVnuPtpjdQ7liO0+2/5OR0W+7D6yLd5bG/nrPnP6nGBBOes+Vep1c5J+6j4b72+06sjpPv3Ajj4nGOk+FiXmICZs6D5Prt5XxsTnPnuTqsbnIec+hzzpMGuD5j4CNng0MunlPqZBcEMfU+U+JEVNnhXB5D7i4D9O+TLkPuSBpx+vqOM+2cqznBwi4z6DNywIKJ/iPlfnXFi4H+I+34InMrWj4T7/NzfkBivhPi3QVmKWteA+1ernQE1D4D7H2vRgK6jfPkKDBvO0z94+DgFj8A393T7/XsIwDjDdPgV2VaOOaNw+cMEcR2mm2z4igHUjeenaPp2d20CaMdo+kOjeoal+2T4VJko8hdDYPpadevILJ9g+0MDmjB2C1z7yn9KzmuHWPhHhMOlkRdY+rvyugl6t1T6IiuujahnVPvZw1ThtidQ+kdMy8Er90z65pE426XTTPkbGyy8u8NI+vK2ctABv0j6Mhh5LSPHRPjvWViPtdtE+J6xSEtj/0D6VbaaN8ovQPjJWDacmG9A+bpVPEL5azz5XRq/cDYXOPkQtc00Utc0+VvN1FKrqzD4qDZbzqCXMPnnVTbXrZcs+C7d/JU6ryj449HQKrfXJPn2jDR7mRMk+PIUgB9iYyD4vXglTYvHHPr6NZG9lTsc+Lp72o8Kvxj45mL4MXBXGPkXqMZQUf8U+d72g7c/sxD7gmcGPcl7EPoZDY6/h08M+isJDOgNNwz7ojgvSvcnCPkjga8f4ScI+CypfFZzNwT6H0YpckFTBPks0wd6+3sA+rRmjehFswD6TZL9O5fi/Ps6bJOGaH78+KOt55BpMvj6PPb6pPX69PsJiT5Pctbw+Rj+DDdLyuz6vqnSH+TS7PgCPAmwvfLo+dun/GlHIuT4KUpPiPBm5Pv28xPjRbrg+wTA4dfDItz6cMxRLeSe3Pp2+EkNOirY+iom79VHxtT48j8bFZ1y1Pqatpdpzy7Q+eFA0G1s+tD7CGowoA7WzPruL/VhSL7M+SKIrsy+tsj4piknpgi6yPktjeVQ0s7E+4TtL8Cw7sT5TW1tWVsawPjgCD7qaVLA+YZXdyMnLrz6tsTtgQPSuPjIk2gpxIq4+Ei4TrTRWrT4Tgos3ZY+sPtnT95/dzas+VJMU2nkRqz6fdM7QFlqqPrhvml+Sp6k+6ev7S8v5qD5g1Dc/oVCoPoZcM8D0q6c+P0J9LacLpz4eZoC3mm+mPk6Y3lqy16U+dILy2tFDpT6SnHe83bOkPlwkV0C7J6Q+bxSZXlCfoz6jIHjBgxqjPmbDl8A8maI+MW5bXGMboj7V9l054KChPrpgCJycKaE+0ydHZIK1oD5xOF0JfESgPkyMpyvprJ8+x28MR6/Wnj5SzZKvIgaePj3gWr8cO50+k8my2Hd1nD4LOwBfD7WbPoQT26+/+Zo+lphXHGZDmj5+An/i4JGZPv0X9SYP5Zg+KaLJ7tA8mD7ShnQZB5mXPqZh+1qT+ZY+T3w/Nlhelj7BDHP3OMeVPuSptK4ZNJU+6OzPKt+klD66PSL0bhmUPrvPokevkZM+wNoMEocNkz4jIyvr3YySPnXpQxGcD5I+lGKkZKqVkT4t3Epj8h6RPiK6riReq5A+CX6lVdg6kD7qHshomJqPPuoCNxlLxY4+4S5hZ6H1jT6RnxoKdSuNPhaBF72gZow+rS3zOQCniz6jHWcxcOyKPox8sETONoo+PCEj//iFiT4Lr+jPz9mIPkSv6gMzMog+gXnmvwOPhz5Tyqn6I/CGPlzvdnd2VYY+RHePwN6+hT63W+QhQSyFPt+i6qOCnYQ+H3yTBokShD4Z5Ga8OouDPtfgv+V+B4M+824pTD2Hgj7XPdtdXgqCPl9gVSnLkIE+jhsaWW0agT5KBIUvL6eAPlmivoL7NoA+Q6aXcXuTfz5RXHCHw75+Pg5gtTuo730+fvBnjAMmfT6p0Mp5sGF8PgP0gP+Kons+cUrbDXDoej56aFSDPTN6PmfOOCbSgnk+zZx6ng3XeD6Oi69v0C94PoP/N/P7jHc+NiWOUnLudj7S/LuBFlR2Pt1L9znMvXU+hG9i9HcrdT4WE/Hk/px0Pg3Tb/VGEnQ++9ytwDaLcz5Go8eNtQdzPjrAkUurh3I+ly0jjAALcj6E9n2AnpFxPoKVVfRuG3E+czDySVyocD487i92UThwPp1GM/lzlm8+ozc81wPCbj6elL6xK/NtPvxWNbvFKW0+6GBUJq1lbD5JEDofvqZrPllIz8TV7Go+TbNUItI3aj5lBRwpkodpPo8UbKr122g+XZ+OUd00aD5apAaeKpJnPgE17t2/82Y+JrV6KIBZZj72f6ZYT8NlPt/y/gcSMWU+c+OVia2iZD7hjxXlBxhkPgcd9tEHkWM+arvTspQNYz7vleSQlo1iPiWujRf2EGI+JtUVkJyXYT4Z8HXdcyFhPk7DRXhmrmA+in3Eal8+YD6tkPiZlKJfPktFAIImzl4+G6eG3k3/XT44ihMG5TVdPs864U3HcVw+DeAcA9GyWz54zlRk3/haPrGNE5vQQ1o+DWKmtYOTWT6GMA6h2OdYPrGaGSOwQFg+Mjqn1OudVz546Q4cbv9WPuAOsScaZVY++uaq6NPOVT5F0a4NgDxVPuSp//0DrlQ+RUCO1EUjVD5lAzhbLJxTPkv/JQafGFM+1FBL74WYUj6COALSyRtSPk/7xgZUolE+YsYPfw4sUT4f0EDB47hQPsH1u+S+SFA++jMWHBe3Tz7AHEnWa+JOPiOtkV9VE04+gy7yI65JTT5tFAuNUYVMPpGlZvsbxks+tCfyv+oLSz4cWaMVnFZKPnYISRsPpkk+s6aFzSP6SD7LtPIAu1JIPln2a1y2r0c+AluBU/gQRz7dlw4hZHZGPnJu98Hd30U+r6gH8ElNRT4q2PUcjr5EPs/oh22QM0Q+p6TYtDesQz59Rb1vayhDPhM8SsATqEI+o1h2aRkrQj5fhNvKZbFBPkNFlNziOkE+l0Y1K3vHQD5qKOLTGVdAPiq5+QBV0z8+FrndxzL+Pj6nEBdtpi4+Ps4HFmWKZD0+etg5IbqfPD4xhCQJEuA7PsHZO3RvJTs+Y3hWo7BvOj5+pJO6tL45PrzMXLtbEjk+9aKPfoZqOD7ltc+uFsc3PmJ//sLuJzc+XOLY+PGMNj7mGblPBPY1PqEhfIMKYzU+lqiJB+rTND4Jof0BiUg0PmqM8kbOwDM+hKLrU6E8Mz7j/V1L6rsyPhv5V/CRPjI+xPFFooHEMT7TqNNYo00xPn9+6Z/h2TA+SczEkydpMD4+TVW6wfYvPvehaFvzIC8+EXFpeL1QLj5rkmyC+oUtPgr2IOeFwCw+j+coCjwALD68RaA++kQrPpt8zsCejio+jxgDsAjdKT5c0psIGDApPrr7Mp6thyg+Yzr1FavjJz5mhh3h8kMnPqtqljdoqCY+dom/Eu8QJj78b1YobH0lPl7KgeXE7SQ+Pg7+ad9hJD7WuWqDotkjPkJMt6j1VCM+nB2v9cDTIj4eSKMm7VUiPizWMZRj2yE+UG4pLw5kIT4avoh81+8gPiHmmJGqfiA+ZTIiEHMQID5e1nRFOkofPgUmWPIqeR4+zc/riZKtHT4PCcRrTOccPm4BaO00Jhw+je3aUylqGz5MqlDNB7MaPsTTDGuvABo+GDBrGwBTGT7EVRCk2qkYPrh/QZwgBRg+8oNiZ7RkFz7A7JgvecgWPpA4k+BSMBY+EkxzIiacFT7VKdtU2AsVPhsGG4pPfxQ+T9d/gnL2Ez4IhsGnKHETPjLojwha7xI+LrY9VO9wEj47sYjW0fURPrAzfnPrfRE+4Gx7oyYJET4ejUhvbpcQPiosTmyuKBA+YXHIcaV5Dz4piXPxj6cOPpwNqqL22g0+YdtVzbQTDT4eSpuvplEMPsrlYneplAs+kKoOPJvcCj7PnFn4WikKPuieYITIegk++G7Tj8TQCD78vUycMCsIPllX0PfuiQc+lllut+LsBj7RhAqy71MGPpmsRnv6vgU+FF+PXugtBT5D3Elan6AEPvZ6IhsGFwQ+fKJ69wORAz6agvXqgA4DPkq7IpJljwI+9SpGJpsTAj4NHTx5C5sBPnUbefGgJQE+/6YkhkazAD4+I06750MAPnmGdjzhrv89kJmeg5vb/j12FBV22A3+PS6PQjtzRf09qXpT8UeC/D3CmcCmM8T7PVf0AlQUC/s9Oxxy1chW+j3UqUvlMKf5PfrY4hUt/Pg9Nzj3y55V+D2QYzE5aLP3PY7KxFZsFfc9WYg14I579j3XWUFOtOX1PbXG6tHBU/U97palT53F9D2Fs6NaLTv0PY+ZQTBZtPM9cYqRswgx8z0WqgRpJLHyPcZCMXKVNPI9q2i1iUW78T0HQDX/HkXxPewqdLMM0vA9uymIFPph8D0SfE00punvPVhJFYQIFe89zn7jGPVF7j1YF2XxRnztPSEQ0QPat+w9VtxtN4v46z3YVEJeOD7rPfYA8S7AiOo9F5m8PgLY6T1UsLT73ivpPSN1Cac3hOg9doSFT+7g5z36yyzM5UHnPXuG/7YBp+Y991vgZyYQ5j2qu5zvOH3lPXOIFhMf7uQ9yDiORr9i5D1HjwypANvjPQEY6//KVuM9PZt6sgbW4j0MvcbFnFjiPQ4Fdth23uE9"},"shape":[777],"dtype":"float64","order":"little"}]]}}}],["slider",{"id":"p1046"}]]},"code":"\n    const data = source.data;\n    const x = data['x'];\n    const df = slider.value;\n    const y_chi2 = data['y_chi2'];\n    for (let i = 0; i < x.length; i++) {\n        y_chi2[i] = Math.pow(x[i], df/2 - 1) * Math.exp(-x[i]/2) / (Math.pow(2, df/2) * gamma(df/2));\n    }\n    source.change.emit();\n\n    // Gamma function approximation\n    function gamma(z) {\n        const g = 7;\n        const C = [\n            0.99999999999980993, 676.5203681218851, -1259.1392167224028,\n            771.32342877765313, -176.61502916214059, 12.507343278686905,\n            -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7\n        ];\n\n        if (z < 0.5) return Math.PI / (Math.sin(Math.PI * z) * gamma(1 - z));\n        z -= 1;\n\n        let x = C[0];\n        for (let i = 1; i < g + 2; i++)\n        x += C[i] / (z + i);\n\n        const t = z + g + 0.5;\n        return Math.sqrt(2 * Math.PI) * Math.pow(t, z + 0.5) * Math.exp(-t) * x;\n    }\n"}}]]]},"title":"Degrees of Freedom","start":1,"end":20,"value":1}},{"type":"object","name":"Figure","id":"p1004","attributes":{"width":400,"height":400,"x_range":{"type":"object","name":"DataRange1d","id":"p1005"},"y_range":{"type":"object","name":"DataRange1d","id":"p1006"},"x_scale":{"type":"object","name":"LinearScale","id":"p1014"},"y_scale":{"type":"object","name":"LinearScale","id":"p1015"},"title":{"type":"object","name":"Title","id":"p1007","attributes":{"text":"Chi-squared Curve"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1043","attributes":{"data_source":{"id":"p1001"},"view":{"type":"object","name":"CDSView","id":"p1044","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1045"}}},"glyph":{"type":"object","name":"Line","id":"p1040","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_chi2"},"line_color":"blue","line_width":2}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1041","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_chi2"},"line_color":"blue","line_alpha":0.1,"line_width":2}},"muted_glyph":{"type":"object","name":"Line","id":"p1042","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y_chi2"},"line_color":"blue","line_alpha":0.2,"line_width":2}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1013","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1026"},{"type":"object","name":"WheelZoomTool","id":"p1027","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1028","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1029","attributes":{"syncable":false,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"SaveTool","id":"p1034"},{"type":"object","name":"ResetTool","id":"p1035"},{"type":"object","name":"HelpTool","id":"p1036"}]}},"toolbar_location":null,"left":[{"type":"object","name":"LinearAxis","id":"p1021","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1022","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1023"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1024"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1016","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1017","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1018"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1019"}}}],"center":[{"type":"object","name":"Grid","id":"p1020","attributes":{"axis":{"id":"p1016"}}},{"type":"object","name":"Grid","id":"p1025","attributes":{"dimension":1,"axis":{"id":"p1021"}}}]}}]}}]}};
+  const render_items = [{"docid":"11f27cc2-91e0-490d-860f-0bd49b10ed9f","roots":{"p1048":"a614bb54-d9f6-4705-96d1-26833cb491ac"},"root_ids":["p1048"]}];
+  root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script><div class="output text_html">
+<style>
+.output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+</div></div>
+</div>
+<p>Now, we can find the P-value from the appropriate <span class="math notranslate nohighlight">\(\chi^2\)</span> curve. This is the area to the right of the statistic. Recall that if the statistic is zero, that means the observed counts perfectly matched the expected counts. Therefore, only a large test statistic indicates data that deviates from what you would expect according to the null hypothesis.</p>
+<figure class="align-default" id="chi2pval">
+<a class="reference internal image-reference" href="_images/chi2Pval.svg"><img alt="_images/chi2Pval.svg" src="_images/chi2Pval.svg" width="70%" /></a>
+</figure>
+<p>In Google Sheets, the P-value can be found with <code class="docutils literal notranslate"><span class="pre">=CHISQ.DIST.RT(5,2)}</span></code>. Assuming a null of equal chances, our data or data more extreme would only arise about 8% of the time. This doesn’t fall below the typical 5% threshold. The <span class="math notranslate nohighlight">\(\chi^2\)</span>-test turns out to be more charitable toward Paul.</p>
+</section>
+<section id="interactive">
+<h3>Interactive<a class="headerlink" href="#interactive" title="Permalink to this heading">#</a></h3>
+<p>Use <a class="reference external" href="https://colab.research.google.com/drive/1ZZkQTf1ceaLvU1QDS7UGZymmtCl_A2gy?usp=sharing">this Colab notebook</a> to find the area to the right of a value for a given degrees of freedom.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "alexanderthclark/Stats1101",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="twosample.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Two-Sample Tests</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bibliography.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chi-2-test">The <span class="math notranslate nohighlight">\(\chi^2\)</span> Test</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-chi-2-distribution">Using the <span class="math notranslate nohighlight">\(\chi^2\)</span> Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">Interactive</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alexander Clark, Columbia University
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
