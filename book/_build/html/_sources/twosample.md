@@ -134,6 +134,10 @@ If $\vec{y}$ has length $a$ and $\vec{x}$ has length $b$, then $\vec{y}-\vec{x}$
 
 **Example 1.** If $p_1 = 0.5$, $p_2 = 0.5$, $n_1= 25$ and $n_2 = 50$, find the SE for $p_1 - p_2$.
 
+We apply the formula for the standard error of a difference. The first quantity is for $p_1$. Its sample average has an SE of $\sqrt{\frac{0.5\times(1-0.5)}{25}}$. The second quantity is for $p_2$. Its sample average has an SE of $\sqrt{\frac{0.5\times(1-0.5)}{50}}$. The SE for the difference is below.
+
+$$    \text{SE}  = \sqrt{\frac{0.25}{25} + \frac{.25}{50}} $$
+
 $$    \text{SE}  = \sqrt{\frac{0.25}{25} + \frac{.25}{50}} $$
 $$ \text{SE}  = \sqrt{\frac{1}{100} + \frac{1}{200}}$$
 $$ \text{SE} = \sqrt{\frac{3}{200}}$$
