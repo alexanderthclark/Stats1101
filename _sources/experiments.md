@@ -16,6 +16,7 @@ A non-causal question might be a matter of mere prediction. Hiring managers will
 
 And there are many other types of non-causal questions. Some have merely descriptive purposes, for example. It's fun to marvel at stats that describe Michael Jordan's basketball career or Shakespeare's influence. {cite}`galenson2006old` studies the life cycles of artists, categorizing artists who tend to peak early versus those who peak later in life. On the surface, this makes no explicit prediction and doesn't propose a causal theory of creativity. The descriptive statistics might inform further theorizing that might creep into causal or predictive territory, but the statistics are interesting in and of themselves. It tells us something about how creativity can work and challenges a simplistic belief that "artists peak early."
 
+(typesEvidence)=
 ## Types of Evidence
 
 For answering any questions, evidence can be more or less reliable. Practitioners often speak of a hiearchy of evidence. A simple hierarchy for our purposes is the following (based on {cite}`kohavi2020trustworthy`). We'll discuss 2-4 over the next three sections. 
