@@ -197,6 +197,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="confidenceintervals.html">Confidence Intervals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hypothesistesting.html">Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twosample.html">Two-Sample Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chi2.html">The Chi-Square Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more.html">More About Tests of Significance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power.html">Statistical Power</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -461,7 +465,7 @@ document.write(`
 <p>A non-causal question might be a matter of mere prediction. Hiring managers will use your Columbia degree as a predictor of your qualifications for a job. They can predict that you will be intelligent and easy to train. The cause of those qualities might be Columbia, but for the purposes of the hiring manager, it doesn’t matter if you possessed these qualities prior to arriving on campus. The true cause could be something not on your resume—perhaps your genetics, the water quality in your hometown, or your formation in preschool. The Columbia degree is only valuable as a signal. It will remain valuable so long as there is no shock that changes the statistical relationship, like if the <a class="reference external" href="https://www.nytimes.com/2022/03/17/us/columbia-university-rank.html">U.S. News scandal</a> were to lower the prestige of the university and thus the quality of students or faculty.</p>
 <p>And there are many other types of non-causal questions. Some have merely descriptive purposes, for example. It’s fun to marvel at stats that describe Michael Jordan’s basketball career or Shakespeare’s influence. <span id="id3">[<a class="reference internal" href="bibliography.html#id51" title="D.W. Galenson. Old Masters and Young Geniuses: The Two Life Cycles of Artistic Creativity. Princeton University Press, 2006. ISBN 9780691121093. URL: https://clio.columbia.edu/catalog/14140122.">Gal06</a>]</span> studies the life cycles of artists, categorizing artists who tend to peak early versus those who peak later in life. On the surface, this makes no explicit prediction and doesn’t propose a causal theory of creativity. The descriptive statistics might inform further theorizing that might creep into causal or predictive territory, but the statistics are interesting in and of themselves. It tells us something about how creativity can work and challenges a simplistic belief that “artists peak early.”</p>
 <section id="types-of-evidence">
-<h2>Types of Evidence<a class="headerlink" href="#types-of-evidence" title="Permalink to this heading">#</a></h2>
+<span id="typesevidence"></span><h2>Types of Evidence<a class="headerlink" href="#types-of-evidence" title="Permalink to this heading">#</a></h2>
 <p>For answering any questions, evidence can be more or less reliable. Practitioners often speak of a hiearchy of evidence. A simple hierarchy for our purposes is the following (based on <span id="id4">[<a class="reference internal" href="bibliography.html#id17" title="Ron Kohavi, Diane Tang, and Ya Xu. Trustworthy online controlled experiments: A practical guide to a/b testing. Cambridge University Press, 2020.">KTX20</a>]</span>). We’ll discuss 2-4 over the next three sections.</p>
 <ol class="arabic simple">
 <li><p>Systematic reviews of randomized controlled experiments (e.g. replications and meta-analysis)</p></li>

@@ -1,0 +1,702 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>More About Tests of Significance &#8212; Intro Stats</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-32DRGZQWDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'more';</script>
+    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Statistical Power" href="power.html" />
+    <link rel="prev" title="The Chi-Square Test" href="chi2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/statLogo.svg" class="logo__image only-light" alt="Intro Stats - Home"/>
+    <script>document.write(`<img src="_static/statLogo.svg" class="logo__image only-dark" alt="Intro Stats - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Intro Stats
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="observational.html">Observational Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="natural.html">Natural Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thehistogram.html">The Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centerspread.html">Center and Spread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normal.html">Normal Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="correlation.html">Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probability.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayes.html">Probability II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chancevary.html">Chance Variability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confidenceintervals.html">Confidence Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesistesting.html">Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twosample.html">Two-Sample Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chi2.html">The Chi-Square Test</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">More About Tests of Significance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power.html">Statistical Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gsheets.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ghistogram.html">Histograms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gregression.html">Regression</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="python.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pycalculator.html">Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylibs.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statwrap0.html">StatWrap</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="statwrapregression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyHypothesisTesting.html">Hypothesis Testing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R (optional)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Rbasics.html">Overview</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">Selected Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/more.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/more.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alexanderthclark/Stats1101" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alexanderthclark/Stats1101/issues/new?title=Issue%20on%20page%20%2Fmore.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/more.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>More About Tests of Significance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-snooping">Data Snooping</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peeking">Peeking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-hypotheses">Multiple Hypotheses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-and-design">Model and Design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjectivity-and-argument">Subjectivity and Argument</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="more-about-tests-of-significance">
+<span id="more"></span><h1>More About Tests of Significance<a class="headerlink" href="#more-about-tests-of-significance" title="Permalink to this heading">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Important Readings</p>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, Chapters 29</p></li>
+</ul>
+</div>
+<p>A test of significance is table stakes in business or academia for almost any empirical inquiry. Test results are just information though, meaning they still have to be interpreted, critiqued, and put to use wisely. In this section, we’ll discuss ways tests can be run improperly.</p>
+<p><span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> presents a few rules:</p>
+<ol class="arabic simple">
+<li><p>Transparency. Describe the data, the test, and the P-value instead of only the conclusion.</p></li>
+<li><p>Restraint. Don’t snoop–deciding what hypotheses to test after seeing the data.</p></li>
+<li><p>Importance. Statistical significance and importance are not the same.</p></li>
+<li><p>Model. The model should match the data.</p></li>
+<li><p>Design. Statistical significance does not substitute for good study design.</p></li>
+</ol>
+<p>Let’s elaborate on some of these.</p>
+<section id="data-snooping">
+<h2>Data Snooping<a class="headerlink" href="#data-snooping" title="Permalink to this heading">#</a></h2>
+<p>Snooping undermines your asserted confidence levels. One way of snooping is to determine if you will run a left- or right-tailed <span class="math notranslate nohighlight">\(z\)</span>-test only after calculating your test statistic. Let’s think through the consequences.</p>
+<ol class="arabic simple">
+<li><p>Set <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>. This means if the null is true, you will only reject the null 5% of the time.</p></li>
+<li><p>Calculate <span class="math notranslate nohighlight">\(z\)</span>.</p></li>
+<li><p>Assuming the null is true, half the time you find <span class="math notranslate nohighlight">\(z &gt; 0\)</span>. Use a right-tailed test with critical value 1.645.</p></li>
+<li><p>The other half of the time, you find <span class="math notranslate nohighlight">\(z\leq 0\)</span>. Use a left-tailed test with a critical value of -1.645.</p></li>
+</ol>
+<p>What is the chance of rejecting the null now, assuming the null to be true? It is 5% + 5% = 10%. This sort of rule is the same as running a two-tailed test with a 90% confidence level.</p>
+<section id="peeking">
+<h3>Peeking<a class="headerlink" href="#peeking" title="Permalink to this heading">#</a></h3>
+<p>There are still many more ways to snoop. One subtle mistake occurs when you might stop collecting data once your P-value dips below <span class="math notranslate nohighlight">\(\alpha\)</span>. For example, a company might start an A/B test with a plan to run it for a week, but stop it sooner if they see a low P-value.  Without more advanced statistical calculations, this undermines your asserted confidence level.</p>
+<p>This can be demonstrated in Google Sheets. In the <a class="reference external" href="https://docs.google.com/spreadsheets/d/1LonXAScMqMZNSvBl1oSwtUeyfqExaHDh8rAOqT8kl4c/edit?usp=sharing">spreadsheet below</a>, I simulate 100 tosses of a fair coin in each tab. For each toss, I calculate the <span class="math notranslate nohighlight">\(z\)</span>-statistic up to that point. The <span class="math notranslate nohighlight">\(z\)</span>-statistics greater than 1.645 (a right-tailed test with <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>) are highlighted in yellow. We should expect one of these twenty experiments to <em>end</em> with a <span class="math notranslate nohighlight">\(z\)</span>-statistic above 1.645. However, several more show an extreme test significant at some point between the first and last coin toss. Someone who stops the experiment as soon as <span class="math notranslate nohighlight">\(z &gt; 1.645\)</span> will result in a false positive much more than 5% of the time.</p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyaPxjLjvBzlAVPQnzrPzvZ433OBpSLTqxuWdZR0fcLsS2sVZdh3msgTrNFKWiYnoRJ7FkiJu2TviD/pubhtml?widget=true&amp;headers=false" width="60%" height="300px"></iframe>
+<p>The <span class="math notranslate nohighlight">\(z\)</span>-statistics are calculated “correctly,” but the mistake is in the stopping procedure. The procedure, in some sense, selectively drops observations. This turns out to be all take and no give. After all, the experiment would never be stopped early in favor of the null and it is possible for the <span class="math notranslate nohighlight">\(z\)</span>-statistic to settle down to a more moderate value. The solution is to exercise restraint. Use a fixed experiment length (or learn fancier methods for sequential hypothesis tests).</p>
+</section>
+<section id="multiple-hypotheses">
+<h3>Multiple Hypotheses<a class="headerlink" href="#multiple-hypotheses" title="Permalink to this heading">#</a></h3>
+<p>Suppose I designed an experiment where I flipped a coin 500 times to see if it was weighted. After every 25 flips, I paint the coin a new color, dividing my data into 20 subsets. Chance is lumpy, so while <span class="math notranslate nohighlight">\(\hat{p}\)</span> will be close to 0.5, I will find streaks in the data where the sample proportion is far from 0.5. This is demonstrated via simulation in <a class="reference internal" href="#cointable"><span class="std std-numref">Fig. 57</span></a>.</p>
+<figure class="align-default" id="cointable">
+<a class="reference internal image-reference" href="_images/coinTable.svg"><img alt="_images/coinTable.svg" src="_images/coinTable.svg" width="40%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">The maroon and orange coins look to be rigged, but only by chance.</span><a class="headerlink" href="#cointable" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This sort of repeated testing inflates the chance of rejecting the null. Risk compounds. If you conduct <span class="math notranslate nohighlight">\(n\)</span> independent hypothesis tests, each at <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{P}( \text{at least one false positive} \mid H_0 \text{ true}) = 1 - 0.95^n.\]</div>
+<p>The probability is 5% for <span class="math notranslate nohighlight">\(n=1\)</span> and it gets bigger for <span class="math notranslate nohighlight">\(n&gt; 1\)</span>. P-values are calculated assuming this isn’t happening.</p>
+</section>
+</section>
+<section id="model-and-design">
+<h2>Model and Design<a class="headerlink" href="#model-and-design" title="Permalink to this heading">#</a></h2>
+<p>All of our results assume sampling done with replacement. Simple random sampling is done without replacement and this is okay if we aren’t sampling too much of the entire population. The concept of statistical significance does not apply to census data taken from our population of interest. Nonrandom sampling, like taking a convenience sample, can also introduce selection bias. Not that it’s especially convenient, but I shouldn’t predict the success of new Taco Bell menu items by polling a sample of Met Gala attendees.</p>
+<p>A test of significance does not ensure a test was well designed, and publication in a peer-reviewed journal might not add much. Recall we introduced the hiearchy of evidence in the <a class="reference internal" href="experiments.html#typesevidence"><span class="std std-ref">Types of Evidence</span></a> section and that we could do this even before introducing hypothesis testing. Observational studies are not as trustworthy because of the potential for confounding, and hypothesis does nothing to solve this problem. Adding a hypothesis test in such a case might be called “intellectual desperation.”</p>
+</section>
+<section id="subjectivity-and-argument">
+<h2>Subjectivity and Argument<a class="headerlink" href="#subjectivity-and-argument" title="Permalink to this heading">#</a></h2>
+<p><span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> concludes with an important reminder. Irrespective of the bottom-line of your research, tests of significance answer “one and only one question: How easy is it to explain the idfference between the data and what is expected on the null hypothesis, on the basis of chance variation alone?” To bridge the gap between that and your bottom-line requires deeper understanding and some principled argument. From <span id="id4">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span>:</p>
+<blockquote>
+<div><p>Some subjectivity in statistical presentations is unavoidable, as acknowledged even by the rather stuffy developers of statistical hypothesis testing … Data analysis should not be pointlessly formal. It should make an interesting claim; it should tell a story that an informed audience will care about, and it should do so by intelligent interpretation of appropriate evidence from empirical measurements or observations.</p>
+</div></blockquote>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "alexanderthclark/Stats1101",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chi2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Chi-Square Test</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="power.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Statistical Power</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-snooping">Data Snooping</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peeking">Peeking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-hypotheses">Multiple Hypotheses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-and-design">Model and Design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjectivity-and-argument">Subjectivity and Argument</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alexander Clark, Columbia University
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

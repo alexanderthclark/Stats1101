@@ -199,6 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="hypothesistesting.html">Hypothesis Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="twosample.html">Two-Sample Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chi2.html">The Chi-Square Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more.html">More About Tests of Significance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -490,10 +491,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-i-and-ii-errors">Type I and II Errors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Power</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Power</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-power-relevant-in-the-world-of-big-data">Is power relevant in the world of big data?</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -507,6 +509,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="statistical-power">
 <span id="power"></span><h1>Statistical Power<a class="headerlink" href="#statistical-power" title="Permalink to this heading">#</a></h1>
+<p>Power is not covered in <span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. I choose to cover it because it’s a natural extension of hypothesis testing and of importance as experiments have become more common in tech and academic research. Power helps you make sense of your conclusion if you fail to reject the null hypothesis. With a pitifully small sample, you’re unlikely to reject the null. It’s power that helps us understand how likely we are to reject the null if we can assume that the alternative is true. That is, it helps us understand the potential for a false negative.</p>
 <section id="type-i-and-ii-errors">
 <h2>Type I and II Errors<a class="headerlink" href="#type-i-and-ii-errors" title="Permalink to this heading">#</a></h2>
 <p>A <strong>Type I error</strong> is made by rejecting the null hypothesis when the null hypothesis is true. A <strong>Type II Error</strong> is made when failing to reject the null hypothesis when the null hypothesis is false. While some mistakes, like snooping, are a matter of bad practice and can be avoided, Type I and II errors are unavoidable.</p>
@@ -517,23 +520,42 @@ document.write(`
 \[\alpha = \mathbb{P}(\text{reject }H_0 \mid H_0\text{ true})\]</div>
 <div class="math notranslate nohighlight">
 \[\beta = \mathbb{P}(\text{fail to reject }H_0 \mid H_0\text{ false})\]</div>
-<p>The value <span class="math notranslate nohighlight">\(\alpha\)</span> is familiar, being directly related to the confidence level. A test has an associated <strong>power</strong> level, <span class="math notranslate nohighlight">\(1-\beta\)</span>.</p>
+<p>The value <span class="math notranslate nohighlight">\(\alpha\)</span> is familiar, being directly related to the confidence level. A test has an associated <strong>power</strong> level, <span class="math notranslate nohighlight">\(1-\beta\)</span>. To pinpoint power or <span class="math notranslate nohighlight">\(\beta\)</span>, it is typical to propose a single alternative. For example, while the null might specify that <span class="math notranslate nohighlight">\(\mu=0\)</span>, the alternative considered below is <span class="math notranslate nohighlight">\(\mu=2\)</span>.</p>
+<figure class="align-default" id="typeiandii">
+<a class="reference internal image-reference" href="_images/typeIandII.svg"><img alt="_images/typeIandII.svg" src="_images/typeIandII.svg" width="80%" /></a>
+</figure>
 </section>
-<section id="id1">
-<h2>Power<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h2>Power<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>The <strong>power</strong> of a test is the probability it will reject the null hypothesis if the null is false.</p>
 <p>For a given statistical test, the power depends on the significance level <span class="math notranslate nohighlight">\(\alpha\)</span> and the sample size <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <p>First, the significance <span class="math notranslate nohighlight">\(\alpha\)</span> influences the power because you are determining how liberal or conservative to be with rejecting the null. A high <span class="math notranslate nohighlight">\(\alpha\)</span> means you will reject the null more often.</p>
-<p>TKTK TK</p>
+<figure class="align-default" id="power-stacked-vary-alpha">
+<a class="reference internal image-reference" href="_images/power_stacked_vary_alpha.svg"><img alt="_images/power_stacked_vary_alpha.svg" src="_images/power_stacked_vary_alpha.svg" width="80%" /></a>
+<figcaption>
+<p><span class="caption-text">As <span class="math notranslate nohighlight">\(\alpha\)</span> increases, <span class="math notranslate nohighlight">\(\beta\)</span> decreases.</span><a class="headerlink" href="#power-stacked-vary-alpha" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Suppose you wanted 95% power in the illustration above (<span class="math notranslate nohighlight">\(\beta = 0.05\)</span>). According to the null hypothesis, a <span class="math notranslate nohighlight">\(z\)</span>-statistic will be drawn from a standard normal distribution (the top panel). We simplify the world to consider a single alternative hypothesis, under which the <span class="math notranslate nohighlight">\(z\)</span>-statistic is actually drawn from a distribution centered at two. To force <span class="math notranslate nohighlight">\(\beta = 0.05\)</span>, the vertical line must be 1.645 standard deviations away from the mean of the alternative distribution. Accordingly our critical value is <span class="math notranslate nohighlight">\(z^\star = 2-1.645 = 0.355\)</span>. A <span class="math notranslate nohighlight">\(z\)</span>-table helps show this corresponds to <span class="math notranslate nohighlight">\(\alpha \approx 0.361\)</span>.</p>
 <p>Second, <span class="math notranslate nohighlight">\(n\)</span> increases power by lowering the standard errors and thus making the sampling distribution for the sample mean more narrow. This is because the standard error for such a distribution is <span class="math notranslate nohighlight">\(\text{SE} = \frac{\text{SD}}{\sqrt{n}}\)</span>. With less overlapping area, greater power is achieved.</p>
 <section id="is-power-relevant-in-the-world-of-big-data">
 <h3>Is power relevant in the world of big data?<a class="headerlink" href="#is-power-relevant-in-the-world-of-big-data" title="Permalink to this heading">#</a></h3>
-<p>From Ronny Kohavi on <a class="reference external" href="https://www.linkedin.com/posts/ronnyk_abtesting-abtesting-statisticalpower-activity-6950341450593161216-dpTV">LinkedIn</a>:</p>
+<p>Power increases with sample size, but that doesn’t mean that you never have to worry about power in big data applications. After all, a small percentage increase in revenue for a company the size of Amazon amounts to a very big number.</p>
+<p>Ronny Kohavi provides some back-of-the-envelope calculations (the details of which we can ignore) on <a class="reference external" href="https://www.linkedin.com/posts/ronnyk_abtesting-abtesting-statisticalpower-activity-6950341450593161216-dpTV">LinkedIn</a>:</p>
 <blockquote>
 <div><p>If you think large companies with a massive userbase (Amazon, Google) have an easy time detecting tiny changes in A/B tests, you’re wrong! … The largest companies cannot power experiments with enough users to detect a $10M loss.</p>
 </div></blockquote>
 </section>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="powerIppei">
+
+<p class="admonition-title"></p>
+<section id="exercise-content">
+<p>Ippei bought a special coin from Tony for gambling purposes. Tony tells him the coin is weighted to come up heads 60% of the time. Tony is a scammer and sold a regular coin that comes up heads 50% of the time. Ippei tests the coin with a <span class="math notranslate nohighlight">\(z\)</span>-test after 96 flips of the coin. Ippei starts with a null hypothesis that <span class="math notranslate nohighlight">\(p=0.6\)</span> and tests an alternative than <span class="math notranslate nohighlight">\(p&lt; 0.6\)</span>. Ippei uses a 95% confidence level (<span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>). What test statistic does Tony expect Ippei to find? Is the power above or below 50%?</p>
+</section>
+</div>
 </section>
 </section>
 
@@ -583,10 +605,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-i-and-ii-errors">Type I and II Errors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Power</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Power</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-power-relevant-in-the-world-of-big-data">Is power relevant in the world of big data?</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 
