@@ -214,3 +214,20 @@ A user researcher at a large ecommerce company wants to have a representative sa
 
 ```{exercise-end}
 ```
+
+
+```{exercise-start}
+:label: netflix
+```
+Netflix replaced the original 1-5 star moving-rating system with a thumbs up/thumbs down scale. The goal was to have users rate more movies so they could increase the quality of their recommendations. Is this change better explained as an effort to combat selection bias, response bias, or non-response bias? 
+
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: rivera
+```
+{cite}`rivera2019scaling` finds that "that the number of scale points used in faculty teaching evaluations—whether instructors were rated on a scale of 6 versus a scale of 10—significantly affected the size of the gender gap in evaluations in the most male-dominated fields." That is, women receive better ratings relative to men when rated out of 6 instead of out of 10. Is this difference, driven by the scales, better explained by selection bias, response bias, or non-response bias? 
+
+```{exercise-end}
+```
