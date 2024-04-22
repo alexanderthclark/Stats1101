@@ -77,6 +77,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="More About Significance" href="more.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -138,8 +140,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Text</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
 
@@ -204,6 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="twosample.html">Two-Sample Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chi2.html">The Chi-Square Test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more.html">More About Significance</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Statistical Power</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -517,8 +518,25 @@ document.write(`
 <section id="type-i-and-ii-errors">
 <h2>Type I and II Errors<a class="headerlink" href="#type-i-and-ii-errors" title="Permalink to this heading">#</a></h2>
 <p>A <strong>Type I error</strong> is made by rejecting the null hypothesis when the null hypothesis is true. A <strong>Type II Error</strong> is made when failing to reject the null hypothesis when the null hypothesis is false. While some mistakes, like snooping, are a matter of bad practice and can be avoided, Type I and II errors are unavoidable.</p>
-<p>Hypothesis testing involves a binary decision. If we compare this to the deliberations of a judge, it is the null hypothesis that is on trial. Rejecting the hypothesis is akin to judging it to be guilty. Failing to reject the null hypothesis is akin to acquitting it, and this might be considered a negative result. This corresponds to the taxonomy in the table below.</p>
-<p>Continuing the judicial analogy, a Type I error is convicting the true, innocent null hypothesis. A Type II error lets the false, crooked null hypothesis off the hook.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(H_0\)</span> is true</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(H_0\)</span> is false</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Don’t Reject</p></td>
+<td><p>True Negative</p></td>
+<td><p><span style="color:red;">False Negative (Type II Error)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Reject</p></td>
+<td><p><span style="color:red;">False Positive (Type I Error)</span></p></td>
+<td><p>True Positive</p></td>
+</tr>
+</tbody>
+</table>
+<p>Hypothesis testing involves a binary decision. If we compare this to the deliberations of a judge, it is the null hypothesis that is on trial. Rejecting the hypothesis is akin to judging it to be guilty. Failing to reject the null hypothesis is akin to acquitting it, and this might be considered a negative result. Continuing the judicial analogy, a Type I error is convicting the true, innocent null hypothesis. A Type II error lets the false, crooked null hypothesis off the hook.</p>
 <p>Statisticians use <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> to denote the Type I and II conditional error rates. I call them <em>conditional</em> error rates to emphasize that each is a conditional probability.</p>
 <div class="math notranslate nohighlight">
 \[\alpha = \mathbb{P}(\text{reject }H_0 \mid H_0\text{ true})\]</div>
@@ -537,11 +555,22 @@ document.write(`
 <figure class="align-default" id="power-stacked-vary-alpha">
 <a class="reference internal image-reference" href="_images/power_stacked_vary_alpha.svg"><img alt="_images/power_stacked_vary_alpha.svg" src="_images/power_stacked_vary_alpha.svg" width="80%" /></a>
 <figcaption>
-<p><span class="caption-text">As <span class="math notranslate nohighlight">\(\alpha\)</span> increases, <span class="math notranslate nohighlight">\(\beta\)</span> decreases.</span><a class="headerlink" href="#power-stacked-vary-alpha" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">As <span class="math notranslate nohighlight">\(\alpha\)</span> increases, <span class="math notranslate nohighlight">\(\beta\)</span> decreases and power increases. The power is the unshaded region under the orange curve.</span><a class="headerlink" href="#power-stacked-vary-alpha" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Suppose you wanted 95% power in the illustration above (<span class="math notranslate nohighlight">\(\beta = 0.05\)</span>). According to the null hypothesis, a <span class="math notranslate nohighlight">\(z\)</span>-statistic will be drawn from a standard normal distribution (the top panel). We simplify the world to consider a single alternative hypothesis, under which the <span class="math notranslate nohighlight">\(z\)</span>-statistic is actually drawn from a distribution centered at two. To force <span class="math notranslate nohighlight">\(\beta = 0.05\)</span>, the vertical line must be 1.645 standard deviations away from the mean of the alternative distribution. Accordingly our critical value is <span class="math notranslate nohighlight">\(z^\star = 2-1.645 = 0.355\)</span>. A <span class="math notranslate nohighlight">\(z\)</span>-table helps show this corresponds to <span class="math notranslate nohighlight">\(\alpha \approx 0.361\)</span>.</p>
-<p>Second, <span class="math notranslate nohighlight">\(n\)</span> increases power by lowering the standard errors and thus making the sampling distribution for the sample mean more narrow. This is because the standard error for such a distribution is <span class="math notranslate nohighlight">\(\text{SE} = \frac{\text{SD}}{\sqrt{n}}\)</span>. With less overlapping area, greater power is achieved.</p>
+<p>Above, we simplify the world to consider a single alternative hypothesis, under which the <span class="math notranslate nohighlight">\(z\)</span>-statistic is actually drawn from a distribution centered at two. Suppose you wanted 95% power in the illustration above (<span class="math notranslate nohighlight">\(\beta = 0.05\)</span>). According to the null hypothesis, a <span class="math notranslate nohighlight">\(z\)</span>-statistic will be drawn from a standard normal distribution (the top panel). To force <span class="math notranslate nohighlight">\(\beta = 0.05\)</span>, the vertical line must be 1.645 standard deviations away from the mean of the alternative distribution. Accordingly our critical value is <span class="math notranslate nohighlight">\(z^\star = 2-1.645 = 0.355\)</span>. A <span class="math notranslate nohighlight">\(z\)</span>-table helps show this corresponds to <span class="math notranslate nohighlight">\(\alpha \approx 0.361\)</span>.</p>
+<p>Second, this analysis was based on an <strong>effect size</strong> corresponding to the alternative distribution being centered at two. A bigger effect size will spread the two distributions further apart. What if we have a smaller effect size? The power will be lower for a fixed <span class="math notranslate nohighlight">\(\alpha\)</span>. What <span class="math notranslate nohighlight">\(\alpha\)</span> is required if the test statistic was actually drawn from a distribution centered at 1.645? Why is this unrealistic?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Smaller Effect Size<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This would require <span class="math notranslate nohighlight">\(\alpha = 0.5\)</span> and <span class="math notranslate nohighlight">\(z^\star = 0\)</span>. This is not realistic because <span class="math notranslate nohighlight">\(\alpha = 0.5\)</span> is unreasonably high. If the null is true, you expect the test statistic to equal the corresponding critical value. Achieving 95% power is simply not realistic in this world.</p>
+</div>
+</details><p>Third, higher <span class="math notranslate nohighlight">\(n\)</span> increases power by lowering the standard errors and thus making the sampling distribution for the sample mean more narrow. This is because the standard error for such a distribution is <span class="math notranslate nohighlight">\(\text{SE} = \frac{\text{SD}}{\sqrt{n}}\)</span>. With less overlapping area, greater power is achieved.</p>
+<p>In real-world applications, a <em>power analysis</em> is usually done before launching an experiment. While 95% is the typical confidence level, 80% is the typical power chosen. A power analysis takes these targets as given and then finds the required number of observations, <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <section id="is-power-relevant-in-the-world-of-big-data">
 <h3>Is power relevant in the world of big data?<a class="headerlink" href="#is-power-relevant-in-the-world-of-big-data" title="Permalink to this heading">#</a></h3>
 <p>Power increases with sample size, but that doesn’t mean that you never have to worry about power in big data applications. After all, a small percentage increase in revenue for a company the size of Amazon amounts to a very big number.</p>
@@ -555,9 +584,9 @@ document.write(`
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="powerIppei">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 49 </span></p>
 <section id="exercise-content">
-<p>Ippei bought a special coin from Tony for gambling purposes. Tony tells him the coin is weighted to come up heads 60% of the time. Tony is a scammer and sold a regular coin that comes up heads 50% of the time. Ippei tests the coin with a <span class="math notranslate nohighlight">\(z\)</span>-test after 96 flips of the coin. Ippei starts with a null hypothesis that <span class="math notranslate nohighlight">\(p=0.6\)</span> and tests an alternative than <span class="math notranslate nohighlight">\(p&lt; 0.6\)</span>. Ippei uses a 95% confidence level (<span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>). What test statistic does Tony expect Ippei to find? Is the power above or below 50%?</p>
+<p>Ippei bought a special coin from Jontay for gambling purposes. Jontay tells him the coin is weighted to come up heads 60% of the time. Jontay is a scammer and sold a regular coin that comes up heads 50% of the time. Ippei tests the coin with a <span class="math notranslate nohighlight">\(z\)</span>-test after 96 flips of the coin. Ippei starts with a null hypothesis that <span class="math notranslate nohighlight">\(p=0.6\)</span> and tests an alternative than <span class="math notranslate nohighlight">\(p&lt; 0.6\)</span>. Ippei uses a 95% confidence level (<span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>). What test statistic does Jontay expect Ippei to find? Is the power above or below 50%?</p>
 </section>
 </div>
 </section>
@@ -593,6 +622,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="more.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">More About Significance</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bibliography.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
