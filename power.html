@@ -514,7 +514,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="statistical-power">
 <span id="power"></span><h1>Statistical Power<a class="headerlink" href="#statistical-power" title="Permalink to this heading">#</a></h1>
-<p>Power is not covered in <span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. I choose to cover it because it’s a natural extension of hypothesis testing and of importance as experiments have become more common in tech and academic research. Power helps you make sense of your conclusion if you fail to reject the null hypothesis. With a pitifully small sample, you’re unlikely to reject the null. It’s power that helps us understand how likely we are to reject the null if we can assume that the alternative is true. That is, it helps us understand the potential for a false negative.</p>
+<p>Power is not covered in <span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. <a class="reference external" href="https://learningstatisticswithr.com/lsr-0.6.pdf#section.11.2">Here’s a brief treatment</a> from a free textbook. I choose to cover it because it’s a natural extension of hypothesis testing and of importance as experiments have become more common in tech and academic research. Power helps you make sense of your conclusion if you fail to reject the null hypothesis. With a pitifully small sample, you’re unlikely to reject the null. It’s power that helps us understand how likely we are to reject the null if we can assume that the alternative is true. That is, it helps us understand the potential for a false negative.</p>
 <section id="type-i-and-ii-errors">
 <h2>Type I and II Errors<a class="headerlink" href="#type-i-and-ii-errors" title="Permalink to this heading">#</a></h2>
 <p>A <strong>Type I error</strong> is made by rejecting the null hypothesis when the null hypothesis is true. A <strong>Type II Error</strong> is made when failing to reject the null hypothesis when the null hypothesis is false. While some mistakes, like snooping, are a matter of bad practice and can be avoided, Type I and II errors are unavoidable.</p>
@@ -578,6 +578,12 @@ Smaller Effect Size<div class="sd-summary-down docutils">
 <blockquote>
 <div><p>If you think large companies with a massive userbase (Amazon, Google) have an easy time detecting tiny changes in A/B tests, you’re wrong! … The largest companies cannot power experiments with enough users to detect a $10M loss.</p>
 </div></blockquote>
+<p>And now, you can be a gadfly in any meeting by deploying these three questions:</p>
+<ol class="arabic simple">
+<li><p>Is the difference statistically significant?</p></li>
+<li><p>Is a proposed explanation for the statistically significant difference causal or is it confounded?</p></li>
+<li><p>Is a result statistically insignificant because of low power?</p></li>
+</ol>
 </section>
 </section>
 <section id="exercises">
