@@ -25,7 +25,7 @@ parts:
     - file: twosample
     - file: chi2
     - file: more
-    #- file: power
+    - file: power
     - file: bibliography
 
 #- caption: Solutions
