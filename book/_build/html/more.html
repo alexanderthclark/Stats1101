@@ -498,6 +498,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-hypotheses">Multiple Hypotheses</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-importance">Practical Importance</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-and-design">Model and Design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjectivity-and-argument">Subjectivity and Argument</a></li>
 </ul>
@@ -561,6 +562,18 @@ document.write(`
 <p>The probability is 5% for <span class="math notranslate nohighlight">\(n=1\)</span> and it gets bigger for <span class="math notranslate nohighlight">\(n&gt; 1\)</span>. P-values are calculated assuming this isn’t happening.</p>
 </section>
 </section>
+<section id="practical-importance">
+<h2>Practical Importance<a class="headerlink" href="#practical-importance" title="Permalink to this heading">#</a></h2>
+<p>Statistical significance relies on a P-value crossing an arbitrary threshold. As previously mentioned (<a class="reference internal" href="hypothesistesting.html#sigbigpic"><span class="std std-ref">(Aside) Big Picture</span></a>), we should be skeptical of significant results necessarily being important and insignificant results being unimportant.</p>
+<p>Below are two similar boxes. We can say they are similar because in either case we will draw a 1 with either 50% or 50.1% chance. With enough draws made with replacement, the sample average from the second box will be higher and this will be judged to be statistically significant when conducting a two-sample test. Is that important? Maybe. In some settings, a 0.1 percentage point difference in averages is important. In other settings it is not.</p>
+<figure class="align-default" id="boxtwosim">
+<a class="reference internal image-reference" href="_images/boxTwoSim.svg"><img alt="_images/boxTwoSim.svg" src="_images/boxTwoSim.svg" width="60%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">The difference between these boxes is easily overstated if you will only make one draw from each.</span><a class="headerlink" href="#boxtwosim" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Imagine you can select one ticket from a single box and then you win a dollar if you draw a 1. You might have 95% confidence that the second box is better, but with a single draw from each, the draws are the same 50% of the time, the first box is better 24.5% of the time, and the second box is better 25.5% of the time. Statistical significance can therefore become a shiny distraction, leading to practical significance being put aside or snooping and other bad statistical practices.</p>
+</section>
 <section id="model-and-design">
 <h2>Model and Design<a class="headerlink" href="#model-and-design" title="Permalink to this heading">#</a></h2>
 <p>All of our results assume sampling done with replacement. Simple random sampling is done without replacement and this is okay if we aren’t sampling too much of the entire population. The concept of statistical significance does not apply to census data taken from our population of interest. Nonrandom sampling, like taking a convenience sample, can also introduce selection bias. Not that it’s especially convenient, but I shouldn’t predict the success of new Taco Bell menu items by polling a sample of Met Gala attendees.</p>
@@ -568,7 +581,7 @@ document.write(`
 </section>
 <section id="subjectivity-and-argument">
 <h2>Subjectivity and Argument<a class="headerlink" href="#subjectivity-and-argument" title="Permalink to this heading">#</a></h2>
-<p><span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> concludes with an important reminder. Irrespective of the bottom-line of your research, tests of significance answer “one and only one question: How easy is it to explain the idfference between the data and what is expected on the null hypothesis, on the basis of chance variation alone?” To bridge the gap between that and your bottom-line requires deeper understanding and some principled argument. From <span id="id4">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span>:</p>
+<p><span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> concludes with an important reminder. Irrespective of the bottom-line of your research, tests of significance answer “one and only one question: How easy is it to explain the difference between the data and what is expected on the null hypothesis, on the basis of chance variation alone?” To bridge the gap between that and your bottom-line requires deeper understanding and some principled argument. From <span id="id4">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span>:</p>
 <blockquote>
 <div><p>Some subjectivity in statistical presentations is unavoidable, as acknowledged even by the rather stuffy developers of statistical hypothesis testing … Data analysis should not be pointlessly formal. It should make an interesting claim; it should tell a story that an informed audience will care about, and it should do so by intelligent interpretation of appropriate evidence from empirical measurements or observations.</p>
 </div></blockquote>
@@ -643,6 +656,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-hypotheses">Multiple Hypotheses</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-importance">Practical Importance</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-and-design">Model and Design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjectivity-and-argument">Subjectivity and Argument</a></li>
 </ul>
