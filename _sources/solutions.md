@@ -196,7 +196,6 @@ $\mathbb{P}(A \mid B) + \mathbb{P}(\text{not }A \mid B)=1$ for any $A,B$.
 ```{solution-end}
 ```
 
-
 ```{solution-start} glee
 :class: dropdown
 ```
@@ -205,6 +204,36 @@ Binomial coefficients tell you how many ways you can select $k$ items from a lis
 The president/VP pair is ordered and the co-preseident pair is not. Only the co-president pairings are counted by $\binom{3}{2}$. There will be twice as many president/VP pairings because (Alice, Bob) and (Bob, Alice) are considered distinct. 
 ```{solution-end}
 ```
+
+```{solution-start} turnout
+:class: dropdown
+```
+
+a.) $\mathbb{P}(3D) = \mathbb{P}(0D) =\frac{1}{8}$, $\mathbb{P}(2D) = \mathbb{P}(1D) = \frac{3}{8}$
+
+b.) Democrats win if either of these events occur:
+
+1. Three democrats vote (1/8).
+2. Two democrats vote and 1 or 0 republicans vote ($\frac38 \times (1-\frac{9}{16})$).
+3. One democrat votes and 0 republicans vote ($\frac38 \times \frac{1}{16}$).
+
+These are mutually exclusive events. Summing them, the probability that democrats win is $\frac{5}{16}$.
+
+c.) Now, a democrat votes with probability $1 - \frac{1}{2}^2 = \frac34$ and a republican votes with a probability $1 - \frac{1}{4}^2 =\frac{15}{16}$. We can repeat parts a and b with these probabilities.
+
+$\mathbb{P}(3D) = \mathbb{P}(2D) = \frac{27}{64}$, $\mathbb{P}(1D) = \frac{9}{64}$,  $\mathbb{P}(0D) = \frac{1}{64}$
+
+$\mathbb{P}(2R) = \frac{225}{256}$, $\mathbb{P}(1R) = \frac{30}{256}$,  $\mathbb{P}(0D) = \frac{1}{256}$
+
+Democrats win with a probability of at least $\frac{27}{64}$ because they always win if there are 3 democrats who vote. Therefore the probability that democrats win increases. 
+
+d.) Democrats will prefer more early voting according to this model, as it decreases the Republican turnout advantage.
+
+
+```{solution-end}
+```
+
+
 
 ## [Probability II](bayes)
 

@@ -559,7 +559,7 @@ Treatment group: second joke audience <br></p>
 <figure class="align-default" id="cumulative-ztable">
 <a class="reference internal image-reference" href="_images/schoolnormexercise.svg"><img alt="_images/schoolnormexercise.svg" src="_images/schoolnormexercise.svg" width="50%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 61 </span><span class="caption-text">A score of 1400 is two SDs above the mean for either school.</span><a class="headerlink" href="#cumulative-ztable" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">A score of 1400 is two SDs above the mean for either school.</span><a class="headerlink" href="#cumulative-ztable" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>School A can maintain a higher admission rate even if the admission rate is above 50% for school B.</p>
@@ -614,12 +614,31 @@ Treatment group: second joke audience <br></p>
 <p>The president/VP pair is ordered and the co-preseident pair is not. Only the co-president pairings are counted by <span class="math notranslate nohighlight">\(\binom{3}{2}\)</span>. There will be twice as many president/VP pairings because (Alice, Bob) and (Bob, Alice) are considered distinct.</p>
 </section>
 </div>
+<div class="solution dropdown admonition" id="solutions-solution-13">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="probability.html#turnout"> Exercise 33</a></p>
+<section id="solution-content">
+<p>a.) <span class="math notranslate nohighlight">\(\mathbb{P}(3D) = \mathbb{P}(0D) =\frac{1}{8}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{P}(2D) = \mathbb{P}(1D) = \frac{3}{8}\)</span></p>
+<p>b.) Democrats win if either of these events occur:</p>
+<ol class="arabic simple">
+<li><p>Three democrats vote (1/8).</p></li>
+<li><p>Two democrats vote and 1 or 0 republicans vote (<span class="math notranslate nohighlight">\(\frac38 \times (1-\frac{9}{16})\)</span>).</p></li>
+<li><p>One democrat votes and 0 republicans vote (<span class="math notranslate nohighlight">\(\frac38 \times \frac{1}{16}\)</span>).</p></li>
+</ol>
+<p>These are mutually exclusive events. Summing them, the probability that democrats win is <span class="math notranslate nohighlight">\(\frac{5}{16}\)</span>.</p>
+<p>c.) Now, a democrat votes with probability <span class="math notranslate nohighlight">\(1 - \frac{1}{2}^2 = \frac34\)</span> and a republican votes with a probability <span class="math notranslate nohighlight">\(1 - \frac{1}{4}^2 =\frac{15}{16}\)</span>. We can repeat parts a and b with these probabilities.</p>
+<p><span class="math notranslate nohighlight">\(\mathbb{P}(3D) = \mathbb{P}(2D) = \frac{27}{64}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{P}(1D) = \frac{9}{64}\)</span>,  <span class="math notranslate nohighlight">\(\mathbb{P}(0D) = \frac{1}{64}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbb{P}(2R) = \frac{225}{256}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{P}(1R) = \frac{30}{256}\)</span>,  <span class="math notranslate nohighlight">\(\mathbb{P}(0D) = \frac{1}{256}\)</span></p>
+<p>Democrats win with a probability of at least <span class="math notranslate nohighlight">\(\frac{27}{64}\)</span> because they always win if there are 3 democrats who vote. Therefore the probability that democrats win increases.</p>
+<p>d.) Democrats will prefer more early voting according to this model, as it decreases the Republican turnout advantage.</p>
+</section>
+</div>
 </section>
 <section id="probability-ii">
 <h2><a class="reference internal" href="bayes.html#bayes"><span class="std std-ref">Probability II</span></a><a class="headerlink" href="#probability-ii" title="Permalink to this heading">#</a></h2>
-<div class="solution dropdown admonition" id="solutions-solution-13">
+<div class="solution dropdown admonition" id="solutions-solution-14">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#boxes"> Exercise 33</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#boxes"> Exercise 34</a></p>
 <section id="solution-content">
 <ol class="arabic">
 <li><p><span class="math notranslate nohighlight">\(\mathbb{P}(H) = 0.5\)</span></p></li>
@@ -706,9 +725,9 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 <p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1xlryzoPWZ05K4SeHVzZHiCC4yQ-XhLVaZChy-gYoWRc/edit?usp=sharing">Here is a Google Sheets simulation</a>.</p>
 </section>
 </div>
-<div class="solution dropdown admonition" id="solutions-solution-14">
+<div class="solution dropdown admonition" id="solutions-solution-15">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesraredisease"> Exercise 34</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesraredisease"> Exercise 35</a></p>
 <section id="solution-content">
 <p>What are trying to find the probability that someone has the rare disease given a positive test. We’ll use a natural frequencies approach to find</p>
 <div class="math notranslate nohighlight">
@@ -717,9 +736,9 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 <p>Thus, the conditional probability is about 98/9997, which is less than 1%.</p>
 </section>
 </div>
-<div class="solution dropdown admonition" id="solutions-solution-15">
+<div class="solution dropdown admonition" id="solutions-solution-16">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bballbayes"> Exercise 35</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bballbayes"> Exercise 36</a></p>
 <section id="solution-content">
 <p>An unknown player makes their first shot 50% of the time. This is calculated as</p>
 <div class="math notranslate nohighlight">
@@ -732,9 +751,9 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 <p>From the observer’s perspective, the first and second shots are not independent. With more shots observed, they are beginning to learn the player’s type. In other words, you should be more willing to pass to someone who makes their first shot because you should have greater confidence that the second shot will go in.</p>
 </section>
 </div>
-<div class="solution dropdown admonition" id="solutions-solution-16">
+<div class="solution dropdown admonition" id="solutions-solution-17">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesReview"> Exercise 37</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesReview"> Exercise 38</a></p>
 <section id="solution-content">
 <p><span class="math notranslate nohighlight">\(\mathbb{P}(\text{good review}) = 0.75\)</span></p>
 <p><span class="math notranslate nohighlight">\(\mathbb{P}(\text{good review} \mid H) = 1\)</span></p>
@@ -750,9 +769,9 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 <p>If the truth-teller is replaced by a joker, then <span class="math notranslate nohighlight">\(\mathbb{P}(H \mid \text{bad review}) = 1\)</span>. The fake reviewer always leaves a positive reviewer, so the probability is the same as <span class="math notranslate nohighlight">\(\mathbb{P}(H \mid \text{joker and bad review})\)</span> and the joker only leaves a bad review if the product is of good quality.</p>
 </section>
 </div>
-<div class="solution dropdown admonition" id="solutions-solution-17">
+<div class="solution dropdown admonition" id="solutions-solution-18">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesCountry"> Exercise 38</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesCountry"> Exercise 39</a></p>
 <section id="solution-content">
 <p>4/63 songs mention tractor and 14/63 mention truck.</p>
 <p>2 of the 14 mentioning truck mention tractor.</p>
@@ -764,9 +783,9 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </section>
 <section id="sampling">
 <h2><a class="reference internal" href="sampling.html#sampling"><span class="std std-ref">Sampling</span></a><a class="headerlink" href="#sampling" title="Permalink to this heading">#</a></h2>
-<div class="solution dropdown admonition" id="solutions-solution-18">
+<div class="solution dropdown admonition" id="solutions-solution-19">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="sampling.html#incentivesurvey"> Exercise 40</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="sampling.html#incentivesurvey"> Exercise 41</a></p>
 <section id="solution-content">
 <ol class="arabic simple">
 <li><p>Non-response bias will be a problem because the survey is voluntary. Less obvious, there is also a selection bias problem among who will see it. The most active users will use the site every day and the more casual users will not. Before considering non-response bias, the sample is skewed to more active users.</p></li>
@@ -778,9 +797,9 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </section>
 <section id="confidence-intervals">
 <h2><a class="reference internal" href="sampling.html#sampling"><span class="std std-ref">Confidence Intervals</span></a><a class="headerlink" href="#confidence-intervals" title="Permalink to this heading">#</a></h2>
-<div class="solution dropdown admonition" id="solutions-solution-19">
+<div class="solution dropdown admonition" id="solutions-solution-20">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="confidenceintervals.html#CInarrow"> Exercise 44</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="confidenceintervals.html#CInarrow"> Exercise 45</a></p>
 <section id="solution-content">
 <p>More observations will make an interval more narrow. The average itself does not change the width of an interval if this is not for a sample proportion. The average only sets the center of the interval, holding constant the SD.</p>
 </section>
@@ -788,9 +807,9 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </section>
 <section id="hypothesis-testing">
 <h2><a class="reference internal" href="hypothesistestingB.html#hyptest"><span class="std std-ref">Hypothesis Testing</span></a><a class="headerlink" href="#hypothesis-testing" title="Permalink to this heading">#</a></h2>
-<div class="solution dropdown admonition" id="solutions-solution-20">
+<div class="solution dropdown admonition" id="solutions-solution-21">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="hypothesistesting.html#daycare"> Exercise 46</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="hypothesistesting.html#daycare"> Exercise 47</a></p>
 <section id="solution-content">
 <p>The SE is <span class="math notranslate nohighlight">\(\sqrt{\frac{.16}{64}}=\frac{0.4}{8} = 0.05\)</span>. The test statistic is <span class="math notranslate nohighlight">\(\frac{0.3-0.2}{0.05} = 2\)</span>. The P-value is about 97.5%. We fail to reject because this is a one-sided case.</p>
 <p>This is the odd case where the test statistic falls in the “wrong” side.</p>
