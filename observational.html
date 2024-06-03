@@ -15,19 +15,19 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -40,9 +40,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -88,27 +88,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -130,8 +126,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -248,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -257,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -479,7 +480,7 @@ document.write(`
 <li><p>Women are admitted at a higher rate within each major.</p></li>
 </ol>
 <p>The paradox arises if women are more likely to apply to programs with lower admission rates. Suppose there are 120 women and 120 men. There are two majors, A and B, that have their own independent admission standards. In major A, 100% of applicants are admitted. In major B, 20% of applicants are admitted. This is the admission rate for both men and women. <a class="reference internal" href="#applicant-table"><span class="std std-numref">Table 1</span></a> and <a class="reference internal" href="#admit-table"><span class="std std-numref">Table 2</span></a> below demonstrate the paradox when men apply to major A more often.</p>
-<table class="table" id="applicant-table">
+<div class="pst-scrollable-table-container"><table class="table" id="applicant-table">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Applicants</span><a class="headerlink" href="#applicant-table" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
@@ -506,7 +507,8 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<table class="table" id="admit-table">
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="admit-table">
 <caption><span class="caption-number">Table 2 </span><span class="caption-text">Admits</span><a class="headerlink" href="#admit-table" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
@@ -533,6 +535,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>Simpson’s paradox can also be seen in scatter plots. In <a class="reference internal" href="#simpsonscatter"><span class="std std-numref">Fig. 1</span></a>, the overall trend is negative, but this might come from confounding that distorts two flat trends. Turning this into a concrete example, it might be that <span class="math notranslate nohighlight">\(x\)</span> measures the level of a continuous treatment, like the dosage of a medicine, and <span class="math notranslate nohighlight">\(y\)</span> measures a health outcome. The overall trend is that the medicine has a negative effect on health. However, if there is one group of young people who take low dosage (the X points) and a group of old people who take a high dosage (the O points), then age is confounding the comparison and obscuring the truth of no effect.</p>
 <figure class="align-default" id="simpsonscatter">
 <a class="reference internal image-reference" href="_images/simpsonscatter.svg"><img alt="_images/simpsonscatter.svg" src="_images/simpsonscatter.svg" width="80%" /></a>
@@ -546,7 +549,7 @@ document.write(`
 <h2>Extension: Other Potential Worlds<a class="headerlink" href="#extension-other-potential-worlds" title="Permalink to this heading">#</a></h2>
 <p>In this section, we imagine ways observational studies can be confounded and make it concrete by writing down potential, or counterfactual outcomes. We show that differences in group averages can be misleading because (1) groups can be different to begin with, or (2) groups can respond to a treatment differently.</p>
 <p>Imagine that Alice and Bob both got the flu shot and both get the flu. Alice is happy she got the shot nonetheless, believing she would be a lot more sick if not for the flu shot. Bob believes the shot did nothing but line the pockets of big pharma and that he’d be no worse off if he didn’t get the shot. Both are thinking about a counterfactual when they think about <em>if</em> they didn’t get the flu shot. If their health can be quantified, we might write this down like in the following table:</p>
-<table class="table" id="shotbeliefs">
+<div class="pst-scrollable-table-container"><table class="table" id="shotbeliefs">
 <caption><span class="caption-number">Table 3 </span><span class="caption-text">Health Outcomes According to Alice and Bob’s Beliefs</span><a class="headerlink" href="#shotbeliefs" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Person</p></th>
@@ -568,12 +571,13 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>The individual effects are based on the difference between the two potential outcomes. We can’t observe it because we don’t observe the “No Shot” column, but Alice believes the effect was positive, and Bob believes it was zero. A table like this is helpful in describing two ways observational studies can be misleading.</p>
 <section id="college-and-earnings">
 <h3>College and Earnings<a class="headerlink" href="#college-and-earnings" title="Permalink to this heading">#</a></h3>
 <p>Take the example of college. On my elementary school front door, there was posted a flyer that showed how college graduates earn more money than non-graduates. We were being told that college would make us richer, and reading between the lines, this was implying a causal relationship. This was based on observational data, so let’s describe two ways it can be wrong to infer a causal effect.</p>
 <p>First, it can be that everyone who goes to college has higher earning potential to begin with. The following table shows that college has no effect on earnings because the College and No College columns are the same.</p>
-<table class="table" id="posignal">
+<div class="pst-scrollable-table-container"><table class="table" id="posignal">
 <caption><span class="caption-number">Table 4 </span><span class="caption-text">College as a Signal of Ability</span><a class="headerlink" href="#posignal" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Person</p></th>
@@ -610,9 +614,10 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>In any study, we only observe the last two columns. If we compare group averages, we’ll see that graduates earn $100,000 salaries and non-graduates earn $30,000. But the naive belief that college will increase your earning by an average of $70,000 is wrong. Because of the lack of randomization in education levels, these two groups are not similar. The graduates would have earned more money regardless of their education level.</p>
 <p>Second, it can be that people who choose to go to college get more out of college. That is, graduates and non-graduates might have been the same if none of them attended college, but it is only those choosing to attend who use the time to boost their earning potential.</p>
-<table class="table" id="pohet">
+<div class="pst-scrollable-table-container"><table class="table" id="pohet">
 <caption><span class="caption-number">Table 5 </span><span class="caption-text">College Increases Earnings for Certain Individuals</span><a class="headerlink" href="#pohet" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Person</p></th>
@@ -649,6 +654,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>The observed difference in group averages will be $50,000, but this isn’t a causal effect that we should expect to apply to those not choosing to attend college. With a randomized experiment, the effect would be cut in half. The non-graduate group would average $30,000 and the average graduate salary would be $55,000. At the population level, the average benefit of college is +$25,000.</p>
 <p>In both of these examples, we could point out ways an observational study would overestimate the effect of college on earnings <em>if</em> the tables accurately described the counterfactuals.</p>
 </section>
@@ -725,7 +731,7 @@ Romano Tours<div class="sd-summary-down docutils">
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -820,8 +826,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>

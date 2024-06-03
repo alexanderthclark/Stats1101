@@ -15,19 +15,19 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -40,9 +40,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -88,27 +88,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -130,8 +126,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -248,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -257,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -478,7 +479,7 @@ document.write(`
 </figure>
 <p>A histogram is made of blocks (or bars). Each block has a predetermined <strong>class interval</strong> and thus a width. Given the interval, the height of a block is determined by the data. More specifically, the height is chosen so the <em>area</em> of the block is proportional to the number of data points in the class interval. If a vertical scale is supplied, the areas will sum to 100% (or 1, depending on what software you use). This corresponds to a <strong>density</strong> scale.</p>
 <p>Suppose we observed incomes $0, $10, $10, $20, $20, $20, $30, and $216. This approximates the level of income inequality in South Africa.<a class="footnote-reference brackets" href="#id19" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="reference internal" href="#sarand"><span class="std std-numref">Table 6</span></a> summarizes the data set.</p>
-<table class="table" id="sarand">
+<div class="pst-scrollable-table-container"><table class="table" id="sarand">
 <caption><span class="caption-number">Table 6 </span><span class="caption-text">Data Frequencies</span><a class="headerlink" href="#sarand" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Value</p></th>
@@ -509,6 +510,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p><a class="reference internal" href="#incomehist"><span class="std std-numref">Fig. 4</span></a> plots histograms with different class intervals. The top panel is the most natural to draw, with one-unit-wide class intervals. It’s typical to use wider intervals. The other panels increase the widths, thus changing the <span class="math notranslate nohighlight">\(y\)</span>-axis.</p>
 <figure class="align-default" id="incomehist">
 <a class="reference internal image-reference" href="_images/income_histograms.svg"><img alt="_images/income_histograms.svg" src="_images/income_histograms.svg" width="80%" /></a>
@@ -522,7 +524,7 @@ document.write(`
 <h3>Example: Sleuthing out Fraud<a class="headerlink" href="#example-sleuthing-out-fraud" title="Permalink to this heading">#</a></h3>
 <p><span id="id6">[<a class="reference internal" href="bibliography.html#id36" title="Lisa L Shu, Nina Mazar, Francesca Gino, Dan Ariely, and Max H Bazerman. Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end. Proceedings of the National Academy of Sciences, 109(38):15197–15200, 2012.">SMG+12</a>]</span>, titled “Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end,” was retracted in 2021 because of evidence of fraud, uncovered in <span id="id7">[<a class="reference internal" href="bibliography.html#id37" title="Uri Simonsohn, Leif D. Nelson, and Joe Simmons. 98: evidence of fraud in an influential field experiment about dishonesty. Data Colada, 2021. URL: https://datacolada.org/98.">SNS21</a>]</span>. The retracted research was based on an experiment where customers of an insurance company were asked to report their odemeter readings. Customers signed a statement asserting their honesty, and the statement was either at the top or at the bottom of the form. The presented finding was that it’s better to have the statement signed <em>before</em> the customer provides the information instead of after.</p>
 <p>Data was collected like in <a class="reference internal" href="#drivingdata"><span class="std std-numref">Table 7</span></a>. The mileage driven is the difference between the baseline and updated mileage.</p>
-<table class="table" id="drivingdata">
+<div class="pst-scrollable-table-container"><table class="table" id="drivingdata">
 <caption><span class="caption-number">Table 7 </span><span class="caption-text">Driving Data</span><a class="headerlink" href="#drivingdata" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Condition</p></th>
@@ -544,6 +546,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>The alleged fraud in this research was uncovered, in part, because of the use of histograms. The first red flag was the <strong>uniform</strong> distribution in the implied miles driven. It’s hard to explain why there appears to be a ceiling so that no customers drove more than 50,000 miles or why driving close to zero miles is not more rare. In general, you would expect something closer to a bell curve.</p>
 <figure class="align-default" id="impliedhist">
 <a class="reference internal image-reference" href="_images/colada98_implied_hist.svg"><img alt="_images/colada98_implied_hist.svg" src="_images/colada98_implied_hist.svg" width="80%" /></a>
@@ -993,6 +996,15 @@ text-align: center;
 </ul>
 </section>
 </div>
+<div class="exercise admonition" id="ptonhist">
+
+<p class="admonition-title"><span class="caption-number">Exercise 15 </span></p>
+<section id="exercise-content">
+<p>A person must be at least sixteen years old to use a Peloton treadmill, according to Peloton’s terms of service. Assume all users must enter their age before using a treadmill.</p>
+<p>Sketch a plausible histogram for user ages if all users are honest and comply with this requirement.</p>
+<p>A data scientist at Peloton wants to see if a large number of users who are below the age of sixteen lie and say they are sixteen. Sketch a histogram that might indicate this is happening.</p>
+</section>
+</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id18" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
@@ -1032,7 +1044,7 @@ text-align: center;
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1130,8 +1142,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>

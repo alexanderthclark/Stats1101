@@ -15,19 +15,19 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -40,9 +40,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -88,27 +88,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -130,8 +126,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -248,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -257,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -589,7 +590,7 @@ I’m always a suspect</p>
 <p>But, strictly speaking, the lyrics are not clear. With enough boozers, it seems likely enough that at least one is an outlaw. If that is the case, these labels are not mutually exclusive and the addition rule does not apply. <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})\)</span> could be between <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> and 1.</p>
 <section id="expanding-a">
 <h3>Expanding <span class="math notranslate nohighlight">\(A\)</span><a class="headerlink" href="#expanding-a" title="Permalink to this heading">#</a></h3>
-<p>Another application of the addition rule is in expanding one probability into two. Instead of <span class="math notranslate nohighlight">\(\mathbb{P}(A)\)</span>, you might prefer to work with the equivalent probability of <span class="math notranslate nohighlight">\(\mathbb{P}(A \text{ and }B) + \mathbb{P}(A \text{ and not }B) \)</span>. This kind of addition works because <span class="math notranslate nohighlight">\(A \text{ and }B\)</span> is mutually exclusive of <span class="math notranslate nohighlight">\(A \text{ and not }B\)</span>. Try solving <a class="reference internal" href="#linda"><span class="std std-numref">Exercise 29</span></a> by expanding the probability that Linda is a bank teller.</p>
+<p>Another application of the addition rule is in expanding one probability into two. Instead of <span class="math notranslate nohighlight">\(\mathbb{P}(A)\)</span>, you might prefer to work with the equivalent probability of <span class="math notranslate nohighlight">\(\mathbb{P}(A \text{ and }B) + \mathbb{P}(A \text{ and not }B) \)</span>. This kind of addition works because <span class="math notranslate nohighlight">\(A \text{ and }B\)</span> is mutually exclusive of <span class="math notranslate nohighlight">\(A \text{ and not }B\)</span>. Try solving <a class="reference internal" href="#linda"><span class="std std-numref">Exercise 30</span></a> by expanding the probability that Linda is a bank teller.</p>
 </section>
 </section>
 <section id="listing-the-ways">
@@ -767,14 +768,14 @@ Three or four heads<div class="sd-summary-down docutils">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="battleship">
 
-<p class="admonition-title"><span class="caption-number">Exercise 26 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 27 </span></p>
 <section id="exercise-content">
 <p>Alice is a <a class="reference external" href="https://en.wikipedia.org/wiki/Battleship_(game)">Battleship</a> grandmaster. Her secret is that if she lands a hit on spot B2, she will follow that up with B3 instead of a random spot like E12. Explain why this is a good strategy using the language of independence and dependence.</p>
 </section>
 </div>
 <div class="exercise admonition" id="carnival">
 
-<p class="admonition-title"><span class="caption-number">Exercise 27 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 28 </span></p>
 <section id="exercise-content">
 <p>A carnival game is done according to the rules:</p>
 <ul class="simple">
@@ -798,7 +799,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="conditional">
 
-<p class="admonition-title"><span class="caption-number">Exercise 28 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 29 </span></p>
 <section id="exercise-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be independent. Which of these sums is equal to one? What if they are not independent?</p>
 <ul class="simple">
@@ -809,7 +810,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="linda">
 
-<p class="admonition-title"><span class="caption-number">Exercise 29 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 30 </span></p>
 <section id="exercise-content">
 <p>(From <span id="id6">[<a class="reference internal" href="bibliography.html#id27" title="Amos Tversky and Daniel Kahneman. Extensional versus intuitive reasoning: the conjunction fallacy in probability judgment. Psychological review, 90(4):293, 1983.">TK83</a>]</span>) Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations. Which is more probable?</p>
 <ul class="simple">
@@ -820,7 +821,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="bday">
 
-<p class="admonition-title"><span class="caption-number">Exercise 30 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 31 </span></p>
 <section id="exercise-content">
 <p>(Use a calculator) Ignore leap day and assume that all birthdays are equally likely and independent. What is the probability that, of 365 people, nobody is born on June 1st?</p>
 <p>(Hard) What is the probability that, of 40 people, no two people share the same birthday?</p>
@@ -828,7 +829,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="glee">
 
-<p class="admonition-title"><span class="caption-number">Exercise 31 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 32 </span></p>
 <section id="exercise-content">
 <p>Which of these is not found with a binomial coefficient <span class="math notranslate nohighlight">\(\binom{3}{2}\)</span>?</p>
 <p>A. The number of ways you can have two co-presidents of a three-person Glee Club?</p>
@@ -837,7 +838,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="ncaa">
 
-<p class="admonition-title"><span class="caption-number">Exercise 32 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 33 </span></p>
 <section id="exercise-content">
 <p><em>Skip this question if you’re not familiar with March Madness brackets.</em> The men’s basketball NCAA tournament begins with 64 teams. How many different final fours are possible?</p>
 <p>a.) <span class="math notranslate nohighlight">\(\binom{64}{4}\)</span> <br>
@@ -847,7 +848,7 @@ c.) Less than <span class="math notranslate nohighlight">\(\binom{64}{4}\)</span
 </div>
 <div class="exercise admonition" id="turnout">
 
-<p class="admonition-title"><span class="caption-number">Exercise 33 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 34 </span></p>
 <section id="exercise-content">
 <p>In the USA, there are more registered Democrats than Republicans and Republicans tend to have higher voter turnout rates. Suppose there are just 3 Democrats and 2 Republicans who always vote for their party if they vote. Suppose all turnout decisions are independent.</p>
 <p>a.) Suppose each Democrat votes with a 50% chance. What is the probability that 3 Democrats vote? 2 Democrats? 1 Democrat? 0 Democrats?</p>
@@ -886,7 +887,7 @@ c.) Less than <span class="math notranslate nohighlight">\(\binom{64}{4}\)</span
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -991,8 +992,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>

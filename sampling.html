@@ -15,19 +15,19 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -40,9 +40,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -88,27 +88,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -130,8 +126,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -248,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -257,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -475,7 +476,7 @@ document.write(`
 <p>The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurdle is getting responses. If a phone survey is used, there will be many who don’t answer. This is a problem <em>if</em> those who don’t respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called <strong>non-response bias</strong>.</p>
 <p>The specific problem of an unrepresentative distribution of ages in a sample can be solved by using <strong>quota sampling</strong>. In quota sampling, the sample is constructed to resemble the population of interest with respect to key characteristics. This can help, but it doesn’t guarantee representativeness because not all important characteristics can be understood.</p>
 <p><strong>Example</strong>: Imagine we want to estimate the public’s satisfaction with the US Postal Service. Opinions differ by age and by their curmudgeonliness. Perhaps older people like USPS more, but curmudgeons will not like USPS regardless of age <em>and</em> curmudgeons will not respond. It’s easy to quota sample based on age, and a quota sample will result in an average satisfaction rating of 9 based on <a class="reference internal" href="#age-curmudg-table"><span class="std std-numref">Table 11</span></a>. This is better than not using quota sampling and constructing a sample that overrepresents older non-curmudgeons. However, the true average rating is 7. Quota sampling can’t give a good estimate of the actual population parameter because quotas for old or young people will systematically exclude curmudgeons.</p>
-<table class="table" id="age-curmudg-table">
+<div class="pst-scrollable-table-container"><table class="table" id="age-curmudg-table">
 <caption><span class="caption-number">Table 11 </span><span class="caption-text">Average USPS Satisfaction by Age and Curmudgeonliness</span><a class="headerlink" href="#age-curmudg-table" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
@@ -494,12 +495,13 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>The last hurdle in surveying is getting truthful responses. People might provide socially acceptable answers instead of truthful answers, especially when the survey involves talking to an actual person. Answers can be influenced by the wording of questions. These phenomena all fall under the umbrella of <strong>response bias</strong>.</p>
 <p>The Trafalgar Group is an opinion polling company, notable for predicting that Donald Trump would win the 2016 US presidential election while most polls were wrong. One proposed explanation for why so many polls were wrong is the theory of the “shy Trump voter.” A shy Trump voter is someone who voted for Trump but indicated the opposite to pollsters, motivated by fear of social stigma. This is a case of response bias and correcting for it requires some artifice. The Trafalgar group attempted to account for that by asking respondents how they think their neighbors will vote.</p>
 <section id="non-response-in-the-american-time-use-survey">
 <h3>Non-response in the American Time Use Survey<a class="headerlink" href="#non-response-in-the-american-time-use-survey" title="Permalink to this heading">#</a></h3>
 <p><span id="id3">[<a class="reference internal" href="bibliography.html#id61" title="Katharine G Abraham, Aaron Maitland, and Suzanne M Bianchi. Nonresponse in the american time use survey: who is missing from the data and how much does it matter? International Journal of Public Opinion Quarterly, 70(5):676–703, 2006.">AMB06</a>]</span> reports different response rates for the American Time Use Survey, partially reproduced in <a class="reference internal" href="#atusresprates"><span class="std std-numref">Table 12</span></a>. The differing response rates present a minefield for researchers.</p>
-<table class="table" id="atusresprates">
+<div class="pst-scrollable-table-container"><table class="table" id="atusresprates">
 <caption><span class="caption-number">Table 12 </span><span class="caption-text">2004 ATUS Response Rates (Table 2 from [AMB06])</span><a class="headerlink" href="#atusresprates" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Variable</p></th>
@@ -586,6 +588,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>Differing response rates can be accounted for with statistical corrections, but the researcher can’t necessarily be confident in their results just by looking at the data. While different demographic groups can be reweighted when calculating a statistic, the features of non-respondents can never be fully known. The decline in response rates for important household surveys has caused some concern regarding the quality of this data.</p>
 <figure class="align-default" id="household-survey-respons">
 <a class="reference internal image-reference" href="_images/household-survey-respons.svg"><img alt="_images/household-survey-respons.svg" src="_images/household-survey-respons.svg" width="80%" /></a>
@@ -652,7 +655,7 @@ document.write(`
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="incentivesurvey">
 
-<p class="admonition-title"><span class="caption-number">Exercise 41 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 42 </span></p>
 <section id="exercise-content">
 <p>A user researcher at a large ecommerce company wants to have a representative sample of its users take a survey.</p>
 <ol class="arabic simple">
@@ -664,14 +667,14 @@ document.write(`
 </div>
 <div class="exercise admonition" id="netflix">
 
-<p class="admonition-title"><span class="caption-number">Exercise 42 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 43 </span></p>
 <section id="exercise-content">
 <p>Netflix replaced the original 1-5 star moving-rating system with a thumbs up/thumbs down scale. The goal was to have users rate more movies so they could increase the quality of their recommendations. Is this change better explained as an effort to combat selection bias, response bias, or non-response bias?</p>
 </section>
 </div>
 <div class="exercise admonition" id="rivera">
 
-<p class="admonition-title"><span class="caption-number">Exercise 43 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 44 </span></p>
 <section id="exercise-content">
 <p><span id="id4">[<a class="reference internal" href="bibliography.html#id41" title="Lauren A Rivera and András Tilcsik. Scaling down inequality: rating scales, gender bias, and the architecture of evaluation. American Sociological Review, 84(2):248–274, 2019.">RT19</a>]</span> finds that “that the number of scale points used in faculty teaching evaluations—whether instructors were rated on a scale of 6 versus a scale of 10—significantly affected the size of the gender gap in evaluations in the most male-dominated fields.” That is, women receive better ratings relative to men when rated out of 6 instead of out of 10. Is this difference, driven by the scales, better explained by selection bias, response bias, or non-response bias?</p>
 </section>
@@ -706,7 +709,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -804,8 +807,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>
