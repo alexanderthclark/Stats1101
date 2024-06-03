@@ -599,4 +599,16 @@ Classify each of the following variables as qualitative or quantitative.
 ```{exercise-end}
 ```
 
+```{exercise-start}
+:label: ptonhist
+```
+
+A person must be at least sixteen years old to use a Peloton treadmill, according to Peloton's terms of service. Assume all users must enter their age before using a treadmill.
+
+Sketch a plausible histogram for user ages if all users are honest and comply with this requirement.
+
+A data scientist at Peloton wants to see if a large number of users who are below the age of sixteen lie and say they are sixteen. Sketch a histogram that might indicate this is happening.
+
+```{exercise-end}
+```
 
