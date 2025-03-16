@@ -20,6 +20,8 @@ jobs:
         run: pip install jupyter-book==0.15.1
 
       - name: Install Other Dependencies
+        env:
+          RPY2_CFFI_MODE: ABI
         run: |
           pip install -r book/requirements.txt
           pip install sphinx-exercise
