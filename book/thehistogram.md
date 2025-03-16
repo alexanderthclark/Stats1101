@@ -75,7 +75,7 @@ Histograms reveal the shape of the distribution, and sometimes interesting irreg
 
 ### Example: Sleuthing out Fraud
 
-{cite}`shu2012signing`, titled "Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end," was retracted in 2021 because of evidence of fraud, uncovered in {cite}`simonsohn_2021`. The retracted research was based on an experiment where customers of an insurance company were asked to report their odemeter readings. Customers signed a statement asserting their honesty, and the statement was either at the top or at the bottom of the form. The presented finding was that it's better to have the statement signed *before* the customer provides the information instead of after. 
+{cite}`shu2012signing`, titled "Signing at the beginning makes ethics salient and decreases dishonest self-reports in comparison to signing at the end," was retracted in 2021 because of evidence of fraud, uncovered in {cite}`simonsohn_2021`. The retracted research was based on an experiment where customers of an insurance company were asked to report their odometer readings. Customers signed a statement asserting their honesty, and the statement was either at the top or at the bottom of the form. The presented finding was that it's better to have the statement signed *before* the customer provides the information instead of after. 
 
 Data was collected like in {numref}`drivingdata`. The mileage driven is the difference between the baseline and updated mileage. 
 
@@ -150,18 +150,18 @@ Variable taxonomy
 ```
 
 
-Quantitative variables can be subdivided into discrete and continuous variables. For a continuous variable, you'll always be able to find another value between two other values. The quantities don't come in discrete steps. You could fill a beaker with 1 ounce of water, 2 ounces of water, or any arbitrary amount between 1 and 2 ounces. Water can be measured continuoustly. For a discrete variable, each value has a next highest or next lowest value. Family size is discrete because there are no possibilities between 3 and 4. The lines can be blurry, either because of convention or limits of measurement precision. Ice cream could be measured continuously, just like water. A shop might charge by weight, but it's more likely you'll order by the scoop and they'll shoo you away if you ask for 1.7777777 scoops or if you complain that you asked for 2 scoops and they gave you 1.99999999998. This tension between continuous and discrete will be familiar to anyone who has agonized over a stingy serving of chicken when dining at Chipotle Mexican Grill.
+Quantitative variables can be subdivided into discrete and continuous variables. For a continuous variable, you'll always be able to find another value between two other values. The quantities don't come in discrete steps. You could fill a beaker with 1 ounce of water, 2 ounces of water, or any arbitrary amount between 1 and 2 ounces. Water can be measured continuously. For a discrete variable, each value has a next highest or next lowest value. Family size is discrete because there are no possibilities between 3 and 4. The lines can be blurry, either because of convention or limits of measurement precision. Ice cream could be measured continuously, just like water. A shop might charge by weight, but it's more likely you'll order by the scoop and they'll shoo you away if you ask for 1.7777777 scoops or if you complain that you asked for 2 scoops and they gave you 1.99999999998. This tension between continuous and discrete will be familiar to anyone who has agonized over a stingy serving of chicken when dining at Chipotle Mexican Grill.
 
-Developing this taxonomy is a bit of a detour, but it helps provide the vocabulary for discussing whether or not endpoints are included in the class intervals for a contiuous variable. Ultimately, it's up to the investigator. 
+Developing this taxonomy is a bit of a detour, but it helps provide the vocabulary for discussing whether or not endpoints are included in the class intervals for a continuous variable. Ultimately, it's up to the investigator. 
 
 
 ### Working with Real Data
 
-Real world data is messy and sometimes inelegantly organized. The 1996-1997 National Organizations Survey ({cite}`kalleberg2001national`) records data on US work establishments, including demographics and revenue among other variables. Revenue is a quantitative variable, but responding establishments could also refuse to answer, respond that they don't know, or choose "not applicable." Perhaps because of technical limitations, all responses are still recorded as numbers. The "Not applicable" response is recorded as -999. "Don't know" is recorded as 88,888,888,888 and "refused to answer" is recorded as 99,999,999,999. These are special *flag values* that aren't meant to be interpreted as dollar amounts like the other values for the otherwise quantiative variable. Anyone deriving a statistic using the variable would have to remove these observations in their calculations. 
+Real world data is messy and sometimes inelegantly organized. The 1996-1997 National Organizations Survey ({cite}`kalleberg2001national`) records data on US work establishments, including demographics and revenue among other variables. Revenue is a quantitative variable, but responding establishments could also refuse to answer, respond that they don't know, or choose "not applicable." Perhaps because of technical limitations, all responses are still recorded as numbers. The "Not applicable" response is recorded as -999. "Don't know" is recorded as 88,888,888,888 and "refused to answer" is recorded as 99,999,999,999. These are special *flag values* that aren't meant to be interpreted as dollar amounts like the other values for the otherwise quantitative variable. Anyone deriving a statistic using the variable would have to remove these observations in their calculations. 
 
 The lesson is to inspect your data and any accompanying documentation. The survey codebook explains these flag values. Preliminary data inspection and a histogram can also help a researcher discover impossible negative values or strange clumps at large values like 99,999,999,999.
 
-Unfortunately, this lesson was a learned only after a mistake was discovered in {cite}`herring2009does`. Herring found that more diverse businesses recorded higher revenue in an observational study, arguing for the business case for racial and gender diversity. {cite}`stojmenovska2017does` found the mistakes in the calculations and argued for no effect on the basis of other statistical details. This necessitated the follow-up {cite}`herring2017diversity`, which argued in support of the original hypothesis with an updated analysis. 
+Unfortunately, this lesson was learned only after a mistake was discovered in {cite}`herring2009does`. Herring found that more diverse businesses recorded higher revenue in an observational study, arguing for the business case for racial and gender diversity. {cite}`stojmenovska2017does` found the mistakes in the calculations and argued for no effect on the basis of other statistical details. This necessitated the follow-up {cite}`herring2017diversity`, which argued in support of the original hypothesis with an updated analysis. 
 
 ```{figure} images/nos_histogram.svg
 :width: 72%
@@ -178,7 +178,7 @@ The above is a cautionary tale and highlights the necessity of dealing with miss
 
 Chapter 3.5 works through an example showing the distribution of blood pressure levels for users and non-users of an oral contraceptive. Overlaying the histograms is useful when comparing only populations from the same age group, suggesting that the pill affects blood pressure. 
 
-We can also split histograms for merely descriptive purposes. Below, we show the distribution of the age at which 50 important paintings were completed for both Picasso and Cezanne. After splitting by the qualitative varaible, artist name, we see that Picasso peaked earlier. 
+We can also split histograms for merely descriptive purposes. Below, we show the distribution of the age at which 50 important paintings were completed for both Picasso and Cezanne. After splitting by the qualitative variable, artist name, we see that Picasso peaked earlier. 
 
 ```{figure} images/picasso_and_cezanne_combined.svg
 :width: 65%
@@ -196,7 +196,7 @@ Picasso peaked earlier than Cezanne.
 
 ## Cross-Tabulation
 
-Cross-tabs show a distribution much like a histogram, but in table form. This can be useful when you'd otherwise have a cluttered graph with many overlayed histograms. 
+Cross-tabs show a distribution much like a histogram, but in table form. This can be useful when you'd otherwise have a cluttered graph with many overlaid histograms. 
 
 In considering something like a covid-mortality rate across states, it is important to remember that states are demographically different. Age is one of the more important variables to adjust for. Below, each column contains the same information you'd find in the histogram for a specific state's age distribution. The background gradient helps make the difference in cell values more apparent. For example, Alaska and Utah are younger than Vermont. 
 

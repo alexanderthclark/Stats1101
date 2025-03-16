@@ -19,7 +19,7 @@ And there are many other types of non-causal questions. Some have merely descrip
 (typesEvidence)=
 ## Types of Evidence
 
-For answering any questions, evidence can be more or less reliable. Practitioners often speak of a hiearchy of evidence. A simple hierarchy for our purposes is the following (based on {cite}`kohavi2020trustworthy`). We'll discuss 2-4 over the next three sections. 
+For answering any questions, evidence can be more or less reliable. Practitioners often speak of a hierarchy of evidence. A simple hierarchy for our purposes is the following (based on {cite}`kohavi2020trustworthy`). We'll discuss 2-4 over the next three sections. 
 
 1. Systematic reviews of randomized controlled experiments (e.g. replications and meta-analysis)
 2. Randomized controlled experiments
@@ -44,7 +44,7 @@ The clip below speaks to the importance of having a control group. Lisa Simpson 
 
 <br>
 
-Of course, we shouldn't imagine a control group. We must actually observe a control group. A control group helps us answer the "but-for test." This is used in courtrooms, posing the question, "But for the defendant's actions, would the harm have occurred?" In the vitamin example, but for the the vitamin, would health have improved? 
+Of course, we shouldn't imagine a control group. We must actually observe a control group. A control group helps us answer the "but-for test." This is used in courtrooms, posing the question, "But for the defendant's actions, would the harm have occurred?" In the vitamin example, but for the vitamin, would health have improved? 
 
 Can we use the method of comparison to measure the effect of the vitamin once we have a group taking the vitamin and another not taking the vitamin? Not yet. It is important that the control and treatment groups are similar in every other relevant way. With no other dissimilarities, the difference in health outcomes can be fully attributed to the vitamin. A study where individuals themselves choose if they take a vitamin is less reliable. People who *choose* to take vitamins are going to be systematically different than those who choose not to take a vitamin. One, they'll be able to afford vitamins. Two, they'll be interested in their own health, so their baseline health or other behaviors might be different than the control group.
 
@@ -58,7 +58,7 @@ The problem of confounding from non-randomness is not black and white. Imagine a
 
 ## On Designing and Interpreting Experiments
 
-The above describes the basic usefulness of experiments for answering causal questions. An experiment worth running involes a lot more care than "try stuff and see what happens." We avoid the problem of confounding when using randomized controlled experiments. Still, there's much more to designing an experiment. For example, the control group might be given a *placebo*, especially in experiments where the outcome might be based on the self-reports of the participants (e.g. reported level of pain). This is a kind of blinding—the participants are blind to their status in treatment or control. It's also possible to use *double blinding*, where someone on the other side, like a doctor evaluating participants, also doesn't know which participants are in treatment or control. This should produce more reliable evaluations and measurements, where the doctor doesn't see a treatment effect when it isn't there.
+The above describes the basic usefulness of experiments for answering causal questions. An experiment worth running involves a lot more care than "try stuff and see what happens." We avoid the problem of confounding when using randomized controlled experiments. Still, there's much more to designing an experiment. For example, the control group might be given a *placebo*, especially in experiments where the outcome might be based on the self-reports of the participants (e.g. reported level of pain). This is a kind of blinding—the participants are blind to their status in treatment or control. It's also possible to use *double blinding*, where someone on the other side, like a doctor evaluating participants, also doesn't know which participants are in treatment or control. This should produce more reliable evaluations and measurements, where the doctor doesn't see a treatment effect when it isn't there.
 
 ### Extension: The Gold Standard and Story Time
 
@@ -70,7 +70,7 @@ Moving to hard science, consider the case of James Lind's investigation of scurv
 
 > Scurvy, a debilitating disease caused by vitamin C deficiency, was the scourge of the British Navy. In 1742, James Lind, a surgeon on HMS Salisbury, experimented with a cure for scurvy. Lind chose 12 seamen with scurvy and started them on an identical diet. He then formed six pairs and treated each of the pairs with a different supplement to their daily food ration. One of the additions was an extra two oranges and one lemon (Lind believed an acidic diet might cure scurvy). Though Lind did not use random assignment, and his sample was small by our standards, he was a pioneer in that he chose his 12 study members so they were "as similar as I could have them." The citrus eaters—Britain’s first limeys—were quickly and incontrovertibly cured, a life-changing empirical finding that emerged from Lind’s data even though his theory was wrong.
 
-Despite the lack of randomization, this is a good approach that was ahead of its time. Lind didn't understand the role of vitamin C, but he got the essential thing right by recommending citrus, but imagine a less disciplined researcher indulging in story time. A bad chain of reasoning might go, (1) citrus is helpful, (2) cider is acidic like citrus, (3) therefore cider is helpful. Luckily, Lind didn't recommend other acidic foods that lacked vitamin C or otherwise attempt to explain why citrus was helpful.
+Despite the lack of randomization, this is a good approach that was ahead of its time. Lind didn't understand the role of vitamin C, but he got the essential thing right by recommending citrus—unlike a less disciplined researcher who might have indulged in story time. A bad chain of reasoning might go, (1) citrus is helpful, (2) cider is acidic like citrus, (3) therefore cider is helpful. Luckily, Lind didn't recommend other acidic foods that lacked vitamin C or otherwise attempt to explain why citrus was helpful.
 
 Running an experiment and working with data requires scientific integrity that goes beyond not lying. Here's how Richard Feynman put it in his famous Cargo Cult Science address ({cite}`feynman1999pleasure`).[^1]
 
