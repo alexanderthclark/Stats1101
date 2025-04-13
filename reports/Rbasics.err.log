@@ -39,14 +39,14 @@ Unable to determine R home: [Errno 2] No such file or directory: 'R'
 [32m      1[39m get_ipython().system([33m'[39m[33mpip install rpy2[39m[33m'[39m)
 [32m----> [39m[32m2[39m [43mget_ipython[49m[43m([49m[43m)[49m[43m.[49m[43mrun_line_magic[49m[43m([49m[33;43m'[39;49m[33;43mload_ext[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mrpy2.ipython[39;49m[33;43m'[39;49m[43m)[49m
 
-[36mFile [39m[32m/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2481[39m, in [36mInteractiveShell.run_line_magic[39m[34m(self, magic_name, line, _stack_depth)[39m
-[32m   2479[39m     kwargs[[33m'[39m[33mlocal_ns[39m[33m'[39m] = [38;5;28mself[39m.get_local_scope(stack_depth)
-[32m   2480[39m [38;5;28;01mwith[39;00m [38;5;28mself[39m.builtin_trap:
-[32m-> [39m[32m2481[39m     result = [43mfn[49m[43m([49m[43m*[49m[43margs[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m)[49m
-[32m   2483[39m [38;5;66;03m# The code below prevents the output from being displayed[39;00m
-[32m   2484[39m [38;5;66;03m# when using magics with decorator @output_can_be_silenced[39;00m
-[32m   2485[39m [38;5;66;03m# when the last Python token in the expression is a ';'.[39;00m
-[32m   2486[39m [38;5;28;01mif[39;00m [38;5;28mgetattr[39m(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, [38;5;28;01mFalse[39;00m):
+[36mFile [39m[32m/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2486[39m, in [36mInteractiveShell.run_line_magic[39m[34m(self, magic_name, line, _stack_depth)[39m
+[32m   2484[39m     kwargs[[33m'[39m[33mlocal_ns[39m[33m'[39m] = [38;5;28mself[39m.get_local_scope(stack_depth)
+[32m   2485[39m [38;5;28;01mwith[39;00m [38;5;28mself[39m.builtin_trap:
+[32m-> [39m[32m2486[39m     result = [43mfn[49m[43m([49m[43m*[49m[43margs[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m)[49m
+[32m   2488[39m [38;5;66;03m# The code below prevents the output from being displayed[39;00m
+[32m   2489[39m [38;5;66;03m# when using magics with decorator @output_can_be_silenced[39;00m
+[32m   2490[39m [38;5;66;03m# when the last Python token in the expression is a ';'.[39;00m
+[32m   2491[39m [38;5;28;01mif[39;00m [38;5;28mgetattr[39m(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, [38;5;28;01mFalse[39;00m):
 
 [36mFile [39m[32m/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/IPython/core/magics/extension.py:33[39m, in [36mExtensionMagics.load_ext[39m[34m(self, module_str)[39m
 [32m     31[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m module_str:
