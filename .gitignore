@@ -61,3 +61,7 @@ book/.ipynb_checkpoints/more-checkpoint.ipynb
 helpers/.ipynb_checkpoints/moreHelper-checkpoint.ipynb
 book/.ipynb_checkpoints/more-checkpoint.ipynb
 book/.ipynb_checkpoints/correlation-checkpoint.ipynb
+
+# Ignore build artefacts & OS cruft
+**/_build/
+.DS_Store
