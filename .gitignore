@@ -65,3 +65,4 @@ book/.ipynb_checkpoints/correlation-checkpoint.ipynb
 # Ignore build artefacts & OS cruft
 **/_build/
 .DS_Store
+**/_build/
