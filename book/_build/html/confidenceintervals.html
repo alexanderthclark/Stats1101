@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Confidence Intervals &#8212; Intro Stats</title>
   
@@ -15,49 +14,47 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -65,16 +62,20 @@
                 gtag('js', new Date());
                 gtag('config', 'G-32DRGZQWDG');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-32DRGZQWDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'confidenceintervals';</script>
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Hypothesis Testing" href="hypothesistesting.html" />
@@ -88,28 +89,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -131,12 +127,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -152,6 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -170,7 +176,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -230,6 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="solutions.html">Selected Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="midterm1.html">Midterms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 
@@ -246,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +273,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -387,10 +405,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -398,14 +416,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -444,10 +462,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="confidence-intervals">
-<span id="confid"></span><h1>Confidence Intervals<a class="headerlink" href="#confidence-intervals" title="Permalink to this heading">#</a></h1>
+<span id="confid"></span><h1>Confidence Intervals<a class="headerlink" href="#confidence-intervals" title="Link to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
@@ -455,7 +473,7 @@ document.write(`
 </ul>
 </div>
 <section id="the-accuracy-of-percentages">
-<h2>The Accuracy of Percentages<a class="headerlink" href="#the-accuracy-of-percentages" title="Permalink to this heading">#</a></h2>
+<h2>The Accuracy of Percentages<a class="headerlink" href="#the-accuracy-of-percentages" title="Link to this heading">#</a></h2>
 <p>Let’s briefly review the Central Limit Theorem.</p>
 <p><a class="reference internal" href="#bernoulliclt"><span class="std std-numref">Fig. 49</span></a> and <a class="reference internal" href="#bernoulliclt2"><span class="std std-numref">Fig. 50</span></a> illustrate the central limit theorem for the case of flipping a weighted coin that comes up heads 20% of the time. For <span class="math notranslate nohighlight">\(n\)</span> flips of the coin, we can compute standard errors:</p>
 <div class="math notranslate nohighlight">
@@ -464,16 +482,16 @@ document.write(`
 \[\text{SE for proportion of heads} = \sqrt{\frac{0.2\times 0.8}{n}}\]</div>
 <p>If we repeatedly flip a coin <em>100</em> times, we can expect the sample proportion to be in the interval <span class="math notranslate nohighlight">\(0.2\pm 2\times 0.04\)</span> for 95% of the repetitions, where 0.04 is the SE for the proportion.</p>
 <figure class="align-default" id="bernoulliclt">
-<a class="reference internal image-reference" href="_images/bernoulliCLT.svg"><img alt="_images/bernoulliCLT.svg" src="_images/bernoulliCLT.svg" width="35%" /></a>
+<a class="reference internal image-reference" href="_images/bernoulliCLT.svg"><img alt="_images/bernoulliCLT.svg" src="_images/bernoulliCLT.svg" style="width: 35%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If we repeatedly flip a coin <em>400</em> times, we can expect the sample proportion to be in the interval <span class="math notranslate nohighlight">\(0.2\pm 2\times 0.02\)</span> for 95% of the repetitions, where 0.02 is the SE for the proportion.</p>
 <figure class="align-default" id="bernoulliclt2">
-<a class="reference internal image-reference" href="_images/bernoulliCLT2.svg"><img alt="_images/bernoulliCLT2.svg" src="_images/bernoulliCLT2.svg" width="35%" /></a>
+<a class="reference internal image-reference" href="_images/bernoulliCLT2.svg"><img alt="_images/bernoulliCLT2.svg" src="_images/bernoulliCLT2.svg" style="width: 35%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Miniature histograms are arranged into a larger histogram according to their sample average.</span><a class="headerlink" href="#bernoulliclt2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This is all quite nice except it answers a question that isn’t very interesting because we start by knowing the true parameter is <span class="math notranslate nohighlight">\(p=0.2\)</span> and then we imagine repeatedly drawing samples.</p>
@@ -482,7 +500,7 @@ document.write(`
 <p>That is, we estimate the SE based on the population parameters, <span class="math notranslate nohighlight">\(\sqrt{\frac{p(1-p)}{n}}\)</span>, by substituting the sample proportion: <span class="math notranslate nohighlight">\(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span>.</p>
 <p><strong>Example</strong>: The Pew Research Center conducted a <a class="reference external" href="https://www.pewresearch.org/2023/11/09/tipping-culture-in-america-public-sees-a-changed-landscape/">study on tipping</a>. They surveyed 11,945 adults in the US. 59% reported that they always tip when having food delivered. Among all adults in the US, a proportion <span class="math notranslate nohighlight">\(p\)</span> must always tip. The survey estimates this as <span class="math notranslate nohighlight">\(\hat{p} = 0.59\)</span>. The estimated SD as <span class="math notranslate nohighlight">\(\sqrt{.59\times.41} \approx 0.49\)</span>. The SE for the sample proportion is SE = <span class="math notranslate nohighlight">\(\frac{0.49}{\sqrt{11945}} \approx 0.004\)</span>. Converting to percentages, we expect that about 59% of adults always tip, give or take 0.4% as a typical chance error.</p>
 <section id="id2">
-<h3>Confidence Intervals<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Confidence Intervals<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>A confidence interval for a sample proportion can be found</p>
 <div class="math notranslate nohighlight">
 \[\hat{p} \pm 1 \text{SE} \hspace{12pt} (\text{68% confidence interval}),\]</div>
@@ -494,27 +512,23 @@ document.write(`
 <p><strong>Example</strong>: Use a <span class="math notranslate nohighlight">\(z\)</span>-table to find the appropriate critical value for a 90% confidence interval.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-90% confidence interval<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">90% confidence interval</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The critical value is 1.645. The interval takes the form <span class="math notranslate nohighlight">\( \hat{p} \pm 1.645 \times \text{SE}\)</span>.</p>
 </div>
 </details><section id="interpretation-of-a-confidence-interval">
-<h4>Interpretation of a Confidence Interval<a class="headerlink" href="#interpretation-of-a-confidence-interval" title="Permalink to this heading">#</a></h4>
+<h4>Interpretation of a Confidence Interval<a class="headerlink" href="#interpretation-of-a-confidence-interval" title="Link to this heading">#</a></h4>
 <p>The correct interpretation of a confidence interval is often misunderstood. The interpretation is based on our frequency theory of chance. First, there is nothing random about the parameter <span class="math notranslate nohighlight">\(p\)</span>. Our sample is random and thus randomness is manifested in <span class="math notranslate nohighlight">\(\hat{p}\)</span> instead. With <span class="math notranslate nohighlight">\(p\)</span> nonrandom, we <em>can’t</em> make probabilistic statement like <span class="math notranslate nohighlight">\(p\)</span> is in a 95% confidence interval with 95% probability. Relying on probabilities being long-run frequencies instead, we say that if we were to construct many samples and thus many 95% confidence intervals, about 95% of the intervals would contain the true parameter.</p>
 <p>Let’s return to the simulated data with <span class="math notranslate nohighlight">\(p=0.2\)</span>, in <a class="reference internal" href="#bernoulliclt"><span class="std std-numref">Fig. 49</span></a> and <a class="reference internal" href="#bernoulliclt2"><span class="std std-numref">Fig. 50</span></a>. Each miniature histogram is a sample and most of the sample means are not equal to 0.2. However, 95% confidence intervals can be found for each. Indeed, for 95 of 100 of the simulated samples, the confidence interval would cover the true parameter.</p>
 <figure class="align-default" id="bernoullicltwci">
-<a class="reference internal image-reference" href="_images/bernoulliCLTwCI.svg"><img alt="_images/bernoulliCLTwCI.svg" src="_images/bernoulliCLTwCI.svg" width="33%" /></a>
+<a class="reference internal image-reference" href="_images/bernoulliCLTwCI.svg"><img alt="_images/bernoulliCLTwCI.svg" src="_images/bernoulliCLTwCI.svg" style="width: 33%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoullicltwci" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=100\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoullicltwci" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="bernoulliclt2wci">
-<a class="reference internal image-reference" href="_images/bernoulliCLT2wCI.svg"><img alt="_images/bernoulliCLT2wCI.svg" src="_images/bernoulliCLT2wCI.svg" width="33%" /></a>
+<a class="reference internal image-reference" href="_images/bernoulliCLT2wCI.svg"><img alt="_images/bernoulliCLT2wCI.svg" src="_images/bernoulliCLT2wCI.svg" style="width: 33%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoulliclt2wci" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Each miniature histogram reflects <span class="math notranslate nohighlight">\(n=400\)</span> coin flips where <span class="math notranslate nohighlight">\(p=0.2\)</span>. Grayed out histograms are those where the confidence interval misses the true parameter.</span><a class="headerlink" href="#bernoulliclt2wci" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Here are a few more <em>wrong</em> interpretations for a 95% confidence interval.</p>
@@ -527,7 +541,7 @@ document.write(`
 </section>
 </section>
 <section id="the-accuracy-of-averages">
-<h2>The Accuracy of Averages<a class="headerlink" href="#the-accuracy-of-averages" title="Permalink to this heading">#</a></h2>
+<h2>The Accuracy of Averages<a class="headerlink" href="#the-accuracy-of-averages" title="Link to this heading">#</a></h2>
 <p>For averages, the central limit theorem again holds. When drawing at random from a box, the sample average will follow a normal distribution even if the contents of the box do not.</p>
 <p>Proportions are a special kind of average. The sample average <span class="math notranslate nohighlight">\(\bar{x}\)</span> estimates the  population average <span class="math notranslate nohighlight">\(\mu\)</span>. For general averages, there is no formula analogous to SD=<span class="math notranslate nohighlight">\(\sqrt{p(1-p)}\)</span>. The standard deviation must be estimated from the data. With a large simple random sample, the SD of the sample is a good estimate of the SD of the box.<a class="footnote-reference brackets" href="#sd" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Then, the SE for the average can be calculated</p>
 <div class="math notranslate nohighlight">
@@ -536,28 +550,24 @@ document.write(`
 <p><strong>Example</strong>: Use this <a class="reference external" href="https://docs.google.com/spreadsheets/d/1PLUjN4IR-XRPJ8pjDGZGyUG4ii9b_shQa_R78rKaghA/edit?usp=sharing">American Time Use Survey data</a> to find a 95% confidence interval for the hours spent alone among 2020 respondents.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-95% confidence interval<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">95% confidence interval</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The sample size is <span class="math notranslate nohighlight">\(n\)</span> = 8782, the sample average is 6.03 and the SE is 0.05.</p>
 <p class="sd-card-text">The interval is <span class="math notranslate nohighlight">\(6.03 \pm 0.1\)</span>.</p>
 <p class="sd-card-text">There are important caveats related to this number that would require a look at the ATUS documentation. Notably, no data was collected at the peak of the pandemic.</p>
 </div>
 </details></section>
 <section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
 <div class="exercise admonition" id="CIicecream">
 
-<p class="admonition-title"><span class="caption-number">Exercise 44 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 45 </span></p>
 <section id="exercise-content">
 <p>In a survey of 96 randomly selected Americans, <span class="math notranslate nohighlight">\(\hat{p} = 0.60\)</span> said they think ice cream should be banned. Find the 95% confidence interval for the proportion.</p>
 </section>
 </div>
 <div class="exercise admonition" id="CInarrow">
 
-<p class="admonition-title"><span class="caption-number">Exercise 45 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 46 </span></p>
 <section id="exercise-content">
 <p>You are interested in the 95% confidence interval of a sample mean. Which of the following makes this interval more narrow?</p>
 <ol class="arabic simple">
@@ -571,15 +581,17 @@ document.write(`
 </div>
 <div class="exercise admonition" id="CImc">
 
-<p class="admonition-title"><span class="caption-number">Exercise 46 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 47 </span></p>
 <section id="exercise-content">
 <p>Consider a multiple choice exam with choices A, B, C, D, and E for each question. Assume that the probability that a particular question has the answer <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(p = 0.2\)</span> and that all letter answers are determined independently. Find a 90% confidence interval for the proportion of questions that will have a correct answer of C on a 1600-question exam.</p>
 </section>
 </div>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="sd" role="note">
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="sd" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
 <p>It would be typical to use the sample standard deviation (SD<sup>+</sup>) here, but, following <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, we’ll use the population standard deviation SD. There is little difference in a large sample.</p>
+</aside>
 </aside>
 </section>
 </section>
@@ -611,7 +623,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -640,6 +652,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -680,7 +693,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -704,8 +717,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Hypothesis Testing &#8212; Intro Stats</title>
   
@@ -15,49 +14,47 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -65,16 +62,20 @@
                 gtag('js', new Date());
                 gtag('config', 'G-32DRGZQWDG');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-32DRGZQWDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'hypothesistestingB';</script>
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -86,28 +87,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -129,12 +125,22 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -150,6 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -168,7 +176,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -197,6 +216,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="confidenceintervals.html">Confidence Intervals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hypothesistesting.html">Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twosample.html">Two-Sample Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chi2.html">The Chi-Square Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more.html">More About Significance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power.html">Statistical Power</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Google Sheets (optional)</span></p>
@@ -224,6 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="solutions.html">Selected Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="midterm1.html">Midterms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 
@@ -240,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -249,14 +273,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -381,10 +405,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -392,14 +416,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -448,10 +472,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hypothesis-testing">
-<span id="hyptest"></span><h1>Hypothesis Testing<a class="headerlink" href="#hypothesis-testing" title="Permalink to this heading">#</a></h1>
+<span id="hyptest"></span><h1>Hypothesis Testing<a class="headerlink" href="#hypothesis-testing" title="Link to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
@@ -460,10 +484,10 @@ document.write(`
 </div>
 <p>Previously, we’d take a sample proportion or mean and construct some confidence interval around it. Often, there was some other value of interest beyond the sample statistic as well. When conducting a poll in a two-way race, you’ll want to know if 50% is within the margin of error. Hypothesis testing allows us to formalize this idea of testing if our sample is sufficiently far from another value for the difference to be judged statistically significant. The calculations should look familiar, but there a few new concepts like P-values.</p>
 <section id="hypothesis-formulation">
-<h2>Hypothesis Formulation<a class="headerlink" href="#hypothesis-formulation" title="Permalink to this heading">#</a></h2>
+<h2>Hypothesis Formulation<a class="headerlink" href="#hypothesis-formulation" title="Link to this heading">#</a></h2>
 <p>We start by specifying a <strong>null hypothesis</strong> and consider an <strong>alternative hypothesis</strong>. The hypothesis test investigates how often we’d see data like what is observed under the assumption that the null hypothesis is true. We use <span class="math notranslate nohighlight">\(H_0\)</span> to refer to the null hypothesis. <span class="math notranslate nohighlight">\(H_A\)</span> is the alternative hypothesis. With a hypothesis test, we <em>assume</em> a true parameter under the null hypothesis and reason how often we’d see the observed sample statistic according to the sampling distribution. Because we have <em>assumed</em> a particular hypothesis, we can construct the exact sampling distribution. When our data is too extreme, according to our significance threshold, we say we have rejected the null hypothesis. If the data is not that extreme, we fail to reject the null.</p>
 <section id="philosophy-again">
-<h3>Philosophy again?<a class="headerlink" href="#philosophy-again" title="Permalink to this heading">#</a></h3>
+<h3>Philosophy again?<a class="headerlink" href="#philosophy-again" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><p><em>A null hypothesis test is a ritualized exercise of devil’s advocacy.</em> <span id="id2">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span></p>
 </div></blockquote>
@@ -476,11 +500,11 @@ document.write(`
 </section>
 </section>
 <section id="proportions">
-<h2>Proportions<a class="headerlink" href="#proportions" title="Permalink to this heading">#</a></h2>
+<h2>Proportions<a class="headerlink" href="#proportions" title="Link to this heading">#</a></h2>
 <p>We consider the experiment of <span id="id4">[<a class="reference internal" href="bibliography.html#id14" title="Shawn Carlson. Double-blind test of astrology. Nature, 1983.">Car83</a>]</span> which tests the claims of astrologers. An astrologer is “given the natal chart of a random subject and an objective and respected measure of his personality traits called the California Personality Inventory (CPI).” The astrologer must select the CPI that matches the natal chart. The structure is such that a random guesser will be correct with <span class="math notranslate nohighlight">\(p = \frac{1}{3}\)</span>. The astrologers predicted a correct choice half the time or more.</p>
 <p>The result was barely better than chance. From <span class="math notranslate nohighlight">\(n=116\)</span>, <span class="math notranslate nohighlight">\(\hat{p} = 0.34\)</span> and <span class="math notranslate nohighlight">\(\text{SE}(\hat{p}) = 0.044\)</span>. A 95% confidence interval would be <span class="math notranslate nohighlight">\(0.34 \pm 2\times 0.044\)</span>. The confidence interval for the sample proportion starts with the data. But, with a hypothesis test, we will <em>assume</em> a true <span class="math notranslate nohighlight">\(p\)</span> and reason how often we’d see a sample proportion <span class="math notranslate nohighlight">\(\hat{p}\)</span> as extreme as the one observed.</p>
 <section id="one-sided-test">
-<h3>One-sided test<a class="headerlink" href="#one-sided-test" title="Permalink to this heading">#</a></h3>
+<h3>One-sided test<a class="headerlink" href="#one-sided-test" title="Link to this heading">#</a></h3>
 <p><strong>First</strong> we will specify our hypotheses, with a null of random guessing:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -498,9 +522,9 @@ H_A: p &gt; \frac{1}{3}
 <div class="math notranslate nohighlight">
 \[ z = \frac{\hat{p}-p}{\text{SE}} = \frac{.34 - \frac{1}{3}} {\sqrt{\frac{0.222}{116}}} \approx 0.15 .\]</div>
 <figure class="align-default" id="onesidedht">
-<a class="reference internal image-reference" href="_images/onesidedHT.svg"><img alt="_images/onesidedHT.svg" src="_images/onesidedHT.svg" width="65%" /></a>
+<a class="reference internal image-reference" href="_images/onesidedHT.svg"><img alt="_images/onesidedHT.svg" src="_images/onesidedHT.svg" style="width: 65%;" /></a>
 <figcaption>
-<p><span class="caption-text">The <span class="math notranslate nohighlight">\(z\)</span>-statistic is based on the rounding done in the accompanying text.</span><a class="headerlink" href="#onesidedht" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">The <span class="math notranslate nohighlight">\(z\)</span>-statistic is based on the rounding done in the accompanying text.</span><a class="headerlink" href="#onesidedht" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Fourth</strong>, we calculate a <strong>P-value</strong> using a <span class="math notranslate nohighlight">\(z\)</span>-table. For a two-sided test, find the probability or area that is more extreme that the observed statistic, <span class="math notranslate nohighlight">\(\mathbb{P}( \vert Z \vert &gt; z).\)</span> For a one-sided test, we find the probability remaining in the tail allowed by the alternative hypothesis, <span class="math notranslate nohighlight">\(\mathbb{P}(Z &gt; z)\)</span> or <span class="math notranslate nohighlight">\(\mathbb{P}(Z &lt; z)\)</span>. In our application, we find <span class="math notranslate nohighlight">\(\mathbb{P}(Z &gt; 0.15)\)</span> and this comes to be about 44%.</p>
@@ -510,7 +534,7 @@ H_A: p &gt; \frac{1}{3}
 <p>A value of <span class="math notranslate nohighlight">\(\alpha\)</span> also corresponds to a critical value. For a one-sided, right-tailed test like in the above, the critical value for <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> is 1.645. When the <span class="math notranslate nohighlight">\(z\)</span>-statistic exceeds is more extreme than the critical value, we reject the null hypothesis. This condition is equivalent to the P-value being below <span class="math notranslate nohighlight">\(\alpha\)</span>, so you only need to check one of the two conditions to determine the result of the test. The area beyond the critical value is sometimes called the rejection region, like in <code class="xref std std-numref docutils literal notranslate"><span class="pre">onesidedHT</span></code>.</p>
 </section>
 <section id="what-about-two-sided-tests">
-<h3>What about two-sided tests?<a class="headerlink" href="#what-about-two-sided-tests" title="Permalink to this heading">#</a></h3>
+<h3>What about two-sided tests?<a class="headerlink" href="#what-about-two-sided-tests" title="Link to this heading">#</a></h3>
 <p>If there is a strong expectation that a difference will be in a given direction, it is best to use a one-sided (or one-tailed) test. This places the rejection region all in the predicted tail like in the previous examples. Two-sided tests might be preferred when there is no prior reason to expect a result in a particular direction, as they allow for the possibility of detecting significant deviations from the null hypothesis in either direction.</p>
 <p>Which of these lends itself better to a one-sided test?</p>
 <ol class="arabic simple">
@@ -519,25 +543,21 @@ H_A: p &gt; \frac{1}{3}
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-One- or two-sided test?<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">One- or two-sided test?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The second lends itself better to a one-sided test because we have reason to think that a sample proportion below 0.5 is just bad luck and not evidence that someone does worse than guessing.</p>
 </div>
 </details><p>Following our textbook, <span id="id5">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>, we won’t go into the exact procedure for a two-tailed test. A rejection region is the range of test statistic values where the P-value would be low enough so that the null hypothesis is rejected. In the two-tailed case, the rejection region is in two pieces. Using a 95% confidence level, the area over the rejection region is 5% with 2.5% in each piece.</p>
 <p>If we instead used a one-tailed alternative that <span class="math notranslate nohighlight">\(p&gt;\frac{1}{3}\)</span>, the rejection region would be contained only on the right. That would <em>not</em> increase the total rejection region area, but it increase the area on the right side. If the the statistic <span class="math notranslate nohighlight">\(z&gt;0\)</span>, then we end up rejecting the null more often. For this reason, one-sided tests are often considered to be more liberal (<span id="id6">[]</span>).</p>
 <figure class="align-default" id="twosidedht">
-<a class="reference internal image-reference" href="_images/twosidedHT.svg"><img alt="_images/twosidedHT.svg" src="_images/twosidedHT.svg" width="65%" /></a>
+<a class="reference internal image-reference" href="_images/twosidedHT.svg"><img alt="_images/twosidedHT.svg" src="_images/twosidedHT.svg" style="width: 65%;" /></a>
 <figcaption>
-<p><span class="caption-text">For a two-sided test, the null rejection region is split between both tails and the P-value sums the areas in both extremes.</span><a class="headerlink" href="#twosidedht" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">For a two-sided test, the null rejection region is split between both tails and the P-value sums the areas in both extremes.</span><a class="headerlink" href="#twosidedht" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="averages">
-<h2>Averages<a class="headerlink" href="#averages" title="Permalink to this heading">#</a></h2>
+<h2>Averages<a class="headerlink" href="#averages" title="Link to this heading">#</a></h2>
 <p>For proportions, we found a test statistic</p>
 <div class="math notranslate nohighlight">
 \[z = \frac{\hat{p}-p}{\text{SE}} = \frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}}.\]</div>
@@ -562,17 +582,17 @@ One- or two-sided test?<div class="sd-summary-down docutils">
 </ol>
 </section>
 <section id="aside-big-picture">
-<h2>(Aside) Big Picture<a class="headerlink" href="#aside-big-picture" title="Permalink to this heading">#</a></h2>
+<h2>(Aside) Big Picture<a class="headerlink" href="#aside-big-picture" title="Link to this heading">#</a></h2>
 <section id="comments-on-p-values">
-<h3>Comments on P-values<a class="headerlink" href="#comments-on-p-values" title="Permalink to this heading">#</a></h3>
+<h3>Comments on P-values<a class="headerlink" href="#comments-on-p-values" title="Link to this heading">#</a></h3>
 <p>A P-value is the probability that we’d observe our test statistic (above, a <span class="math notranslate nohighlight">\(z\)</span>-statistic), assuming the null hypothesis is true. And we are assuming independence, assuming the sample is properly randomized, and counting on our sample size to be reasonably large.</p>
 <p>P-values can be difficult. According to <span id="id7">[<a class="reference internal" href="bibliography.html#id15" title="Sander Greenland, Stephen J Senn, Kenneth J Rothman, John B Carlin, Charles Poole, Steven N Goodman, and Douglas G Altman. Statistical tests, p values, confidence intervals, and power: a guide to misinterpretations. European journal of epidemiology, 31:337–350, 2016.">GSR+16</a>]</span>, “A key problem is that there are no interpretations of these concepts that are at once simple, intuitive, correct, and foolproof.” The article continues:</p>
 <blockquote>
 <div><p>We will adopt a more general view of the P value as a statistical summary of the compatibility between the observed data and what we would predict or expect to see if we knew the entire statistical model (all the assumptions used to compute the P value) were correct … The P value is then the probability that the chosen test statistic would have been at least as large as its observed value if every model assumption were correct, including the test hypothesis. This definition embodies a crucial point lost in traditional definitions: In logical terms, the P value tests all the assumptions about how the data were generated (the entire model), not just the targeted hypothesis it is supposed to test (such as a null hypothesis).</p>
 </div></blockquote>
 <section id="misconceptions">
-<h4>Misconceptions<a class="headerlink" href="#misconceptions" title="Permalink to this heading">#</a></h4>
-<p>These are all misconceptions, based on <span id="id8">[<a class="reference internal" href="bibliography.html#id45" title="Steven Goodman. A dirty dozen: twelve p-value misconceptions. In Seminars in hematology, volume 45, 135–140. Elsevier, 2008.">Goo08</a>]</span>.</p>
+<h4>Misconceptions<a class="headerlink" href="#misconceptions" title="Link to this heading">#</a></h4>
+<p>These are all misconceptions, based on <span id="id8">[<a class="reference internal" href="bibliography.html#id46" title="Steven Goodman. A dirty dozen: twelve p-value misconceptions. In Seminars in hematology, volume 45, 135–140. Elsevier, 2008.">Goo08</a>]</span>.</p>
 <ol class="arabic simple">
 <li><p>If P = 0.05, the null hypothesis has only a 5% chance of being true.</p></li>
 <li><p>A non-significant difference means the null is true.</p></li>
@@ -586,7 +606,7 @@ One- or two-sided test?<div class="sd-summary-down docutils">
 <p>Basing policy on just a P-value leaves out context and other things not captured in the data. However, we don’t even have to appeal to context to see why the P-value has shortcomings. For example, the P-value doesn’t communicate the magnitude of the effect. SCOTUS has also weighed in, ruling 9-0 in <em>Matrixx Initiatives, Inc. v. Siracusano</em> that companies can’t conceal bad news from investors by claiming that the adverse effects are not “statistically” significant at the 0.05 or any other level. Justice Sotomayor wrote that beyond statistical significance, “source, content, and context” should be addressed.</p>
 </section>
 <section id="for-the-gadfly">
-<h4>For the Gadfly<a class="headerlink" href="#for-the-gadfly" title="Permalink to this heading">#</a></h4>
+<h4>For the Gadfly<a class="headerlink" href="#for-the-gadfly" title="Link to this heading">#</a></h4>
 <p>We’ve now learned two questions you can ask to sound smart. These are go-to questions for the non-statistician in almost any meeting who wants to do a little chirping.</p>
 <ol class="arabic simple">
 <li><p>Is this a spurious correlation or does it suggest causation?</p></li>
@@ -608,7 +628,7 @@ One- or two-sided test?<div class="sd-summary-down docutils">
 </section>
 </section>
 <section id="averages-with-small-data">
-<h2>Averages with Small Data<a class="headerlink" href="#averages-with-small-data" title="Permalink to this heading">#</a></h2>
+<h2>Averages with Small Data<a class="headerlink" href="#averages-with-small-data" title="Link to this heading">#</a></h2>
 <p>Hypothesis testing from data usually involves estimating a standard error. With a small number of observations, the normal approximation used in the <span class="math notranslate nohighlight">\(z\)</span>-test might fail. Instead, use the <span class="math notranslate nohighlight">\(t\)</span>-test when:</p>
 <ol class="arabic simple">
 <li><p>The data are like draws from a box (iid draws).</p></li>
@@ -647,7 +667,7 @@ One- or two-sided test?<div class="sd-summary-down docutils">
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
 </div>
@@ -658,6 +678,7 @@ One- or two-sided test?<div class="sd-summary-down docutils">
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -708,7 +729,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -732,8 +753,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

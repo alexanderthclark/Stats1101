@@ -456,7 +456,7 @@ In the USA, there are more registered Democrats than Republicans and Republicans
 
 a.) Suppose each Democrat votes with a 50% chance. What is the probability that 3 Democrats vote? 2 Democrats? 1 Democrat? 0 Democrats? 
 
-b.) Suppose each Republican votes with a 75% chance and Democrats vote with a 50% chance. What is the probability that the Democrats win? 
+b.) Suppose each Republican votes with a 75% chance and Democrats vote with a 50% chance. What is the probability that the Democrats win, excluding ties or tiebreakers? 
 
 c.) Suppose that early voting is introduced. Each person can only vote once but they can vote on day 1 or on day 2. Democrats remember to vote with a 50% chance on each day. Republicans remember to vote with a 75% chance on each day. Someone doesn't vote if they forget on both days and they vote otherwise. Does the probability that Democrats win increase or decrease? 
 

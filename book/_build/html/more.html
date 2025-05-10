@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>More About Significance &#8212; Intro Stats</title>
   
@@ -15,49 +14,47 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -65,16 +62,20 @@
                 gtag('js', new Date());
                 gtag('config', 'G-32DRGZQWDG');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-32DRGZQWDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'more';</script>
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Statistical Power" href="power.html" />
@@ -88,28 +89,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -131,12 +127,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -152,6 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -170,7 +176,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -230,6 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="solutions.html">Selected Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="midterm1.html">Midterms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 
@@ -246,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +273,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -287,14 +305,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/alexanderthclark/Stats1101/main?urlpath=tree/book/more.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -305,14 +323,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://colab.research.google.com/github/alexanderthclark/Stats1101/blob/main/book/more.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_colab.png">
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -454,10 +472,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -465,14 +483,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -510,10 +528,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="more-about-significance">
-<span id="more"></span><h1>More About Significance<a class="headerlink" href="#more-about-significance" title="Permalink to this heading">#</a></h1>
+<span id="more"></span><h1>More About Significance<a class="headerlink" href="#more-about-significance" title="Link to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
@@ -531,7 +549,7 @@ document.write(`
 </ol>
 <p>Let’s elaborate on some of these.</p>
 <section id="data-snooping">
-<h2>Data Snooping<a class="headerlink" href="#data-snooping" title="Permalink to this heading">#</a></h2>
+<h2>Data Snooping<a class="headerlink" href="#data-snooping" title="Link to this heading">#</a></h2>
 <p>Snooping undermines your asserted confidence levels. One way of snooping is to determine if you will run a left- or right-tailed <span class="math notranslate nohighlight">\(z\)</span>-test only after calculating your test statistic. Let’s think through the consequences.</p>
 <ol class="arabic simple">
 <li><p>Set <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>. This means if the null is true, you will only reject the null 5% of the time.</p></li>
@@ -541,19 +559,19 @@ document.write(`
 </ol>
 <p>What is the chance of rejecting the null now, assuming the null to be true? It is 5% + 5% = 10%. This sort of rule is the same as running a two-tailed test with a 90% confidence level.</p>
 <section id="peeking">
-<h3>Peeking<a class="headerlink" href="#peeking" title="Permalink to this heading">#</a></h3>
+<h3>Peeking<a class="headerlink" href="#peeking" title="Link to this heading">#</a></h3>
 <p>There are still many more ways to snoop. One subtle mistake occurs when you might stop collecting data once your P-value dips below <span class="math notranslate nohighlight">\(\alpha\)</span>. For example, a company might start an A/B test with a plan to run it for a week, but stop it sooner if they see a low P-value.  Without more advanced statistical calculations, this undermines your asserted confidence level.</p>
 <p>This can be demonstrated in Google Sheets. In the <a class="reference external" href="https://docs.google.com/spreadsheets/d/1LonXAScMqMZNSvBl1oSwtUeyfqExaHDh8rAOqT8kl4c/edit?usp=sharing">spreadsheet below</a>, I simulate 100 tosses of a fair coin in each tab. For each toss, I calculate the <span class="math notranslate nohighlight">\(z\)</span>-statistic up to that point. The <span class="math notranslate nohighlight">\(z\)</span>-statistics greater than 1.645 (a right-tailed test with <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>) are highlighted in yellow. We should expect one of these twenty experiments to <em>end</em> with a <span class="math notranslate nohighlight">\(z\)</span>-statistic above 1.645. However, several more show an extreme test significant at some point between the first and last coin toss. Someone who stops the experiment as soon as <span class="math notranslate nohighlight">\(z &gt; 1.645\)</span> will result in a false positive much more than 5% of the time.</p>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyaPxjLjvBzlAVPQnzrPzvZ433OBpSLTqxuWdZR0fcLsS2sVZdh3msgTrNFKWiYnoRJ7FkiJu2TviD/pubhtml?widget=true&amp;headers=false" width="60%" height="300px"></iframe>
 <p>The <span class="math notranslate nohighlight">\(z\)</span>-statistics are calculated “correctly,” but the mistake is in the stopping procedure. The procedure, in some sense, selectively drops observations. This turns out to be all take and no give. After all, the experiment would never be stopped early in favor of the null and it is possible for the <span class="math notranslate nohighlight">\(z\)</span>-statistic to settle down to a more moderate value. The solution is to exercise restraint. Use a fixed experiment length (or learn fancier methods for sequential hypothesis tests).</p>
 </section>
 <section id="multiple-hypotheses">
-<h3>Multiple Hypotheses<a class="headerlink" href="#multiple-hypotheses" title="Permalink to this heading">#</a></h3>
+<h3>Multiple Hypotheses<a class="headerlink" href="#multiple-hypotheses" title="Link to this heading">#</a></h3>
 <p>Suppose I designed an experiment where I flipped a coin 500 times to see if it was weighted. After every 25 flips, I paint the coin a new color, dividing my data into 20 subsets. Chance is lumpy, so while <span class="math notranslate nohighlight">\(\hat{p}\)</span> will be close to 0.5, I will find streaks in the data where the sample proportion is far from 0.5. This is demonstrated via simulation in <a class="reference internal" href="#cointable"><span class="std std-numref">Fig. 57</span></a>.</p>
 <figure class="align-default" id="cointable">
-<a class="reference internal image-reference" href="_images/coinTable.svg"><img alt="_images/coinTable.svg" src="_images/coinTable.svg" width="40%" /></a>
+<a class="reference internal image-reference" href="_images/coinTable.svg"><img alt="_images/coinTable.svg" src="_images/coinTable.svg" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 57 </span><span class="caption-text">The maroon and orange coins look to be rigged, but only by chance.</span><a class="headerlink" href="#cointable" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">The maroon and orange coins look to be rigged, but only by chance.</span><a class="headerlink" href="#cointable" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This sort of repeated testing inflates the chance of rejecting the null. Risk compounds. If you conduct <span class="math notranslate nohighlight">\(n\)</span> independent hypothesis tests, each at <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>,</p>
@@ -563,24 +581,24 @@ document.write(`
 </section>
 </section>
 <section id="practical-importance">
-<h2>Practical Importance<a class="headerlink" href="#practical-importance" title="Permalink to this heading">#</a></h2>
+<h2>Practical Importance<a class="headerlink" href="#practical-importance" title="Link to this heading">#</a></h2>
 <p>Statistical significance relies on a P-value crossing an arbitrary threshold. As previously mentioned (<a class="reference internal" href="hypothesistesting.html#sigbigpic"><span class="std std-ref">(Aside) Big Picture</span></a>), we should be skeptical of significant results necessarily being important and insignificant results being unimportant.</p>
 <p>Below are two similar boxes. We can say they are similar because in either case we will draw a 1 with either 50% or 50.1% chance. With enough draws made with replacement, the sample average from the second box will be higher and this will be judged to be statistically significant when conducting a two-sample test. Is that important? Maybe. In some settings, a 0.1 percentage point difference in averages is important. In other settings it is not.</p>
 <figure class="align-default" id="boxtwosim">
-<a class="reference internal image-reference" href="_images/boxTwoSim.svg"><img alt="_images/boxTwoSim.svg" src="_images/boxTwoSim.svg" width="60%" /></a>
+<a class="reference internal image-reference" href="_images/boxTwoSim.svg"><img alt="_images/boxTwoSim.svg" src="_images/boxTwoSim.svg" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 58 </span><span class="caption-text">The difference between these boxes is easily overstated if you will only make one draw from each.</span><a class="headerlink" href="#boxtwosim" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">The difference between these boxes is easily overstated if you will only make one draw from each.</span><a class="headerlink" href="#boxtwosim" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Imagine you can select one ticket from a single box and then you win a dollar if you draw a 1. You might have 95% confidence that the second box is better, but with a single draw from each, the draws are the same 50% of the time, the first box is better 24.5% of the time, and the second box is better 25.5% of the time. Statistical significance can therefore become a shiny distraction, leading to practical significance being put aside or snooping and other bad statistical practices.</p>
 </section>
 <section id="model-and-design">
-<h2>Model and Design<a class="headerlink" href="#model-and-design" title="Permalink to this heading">#</a></h2>
+<h2>Model and Design<a class="headerlink" href="#model-and-design" title="Link to this heading">#</a></h2>
 <p>All of our results assume sampling done with replacement. Simple random sampling is done without replacement and this is okay if we aren’t sampling too much of the entire population. The concept of statistical significance does not apply to census data taken from our population of interest. Nonrandom sampling, like taking a convenience sample, can also introduce selection bias. Not that it’s especially convenient, but I shouldn’t predict the success of new Taco Bell menu items by polling a sample of Met Gala attendees.</p>
 <p>A test of significance does not ensure a test was well designed, and publication in a peer-reviewed journal might not add much. Recall we introduced the hiearchy of evidence in the <a class="reference internal" href="experiments.html#typesevidence"><span class="std std-ref">Types of Evidence</span></a> section and that we could do this even before introducing hypothesis testing. Observational studies are not as trustworthy because of the potential for confounding, and hypothesis does nothing to solve this problem. Adding a hypothesis test in such a case might be called “intellectual desperation.”</p>
 </section>
 <section id="subjectivity-and-argument">
-<h2>Subjectivity and Argument<a class="headerlink" href="#subjectivity-and-argument" title="Permalink to this heading">#</a></h2>
+<h2>Subjectivity and Argument<a class="headerlink" href="#subjectivity-and-argument" title="Link to this heading">#</a></h2>
 <p><span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> concludes with an important reminder. Irrespective of the bottom-line of your research, tests of significance answer “one and only one question: How easy is it to explain the difference between the data and what is expected on the null hypothesis, on the basis of chance variation alone?” To bridge the gap between that and your bottom-line requires deeper understanding and some principled argument. From <span id="id4">[<a class="reference internal" href="bibliography.html#id5" title="Robert P Abelson. Statistics as principled argument. Psychology Press, 2012.">Abe12</a>]</span>:</p>
 <blockquote>
 <div><p>Some subjectivity in statistical presentations is unavoidable, as acknowledged even by the rather stuffy developers of statistical hypothesis testing … Data analysis should not be pointlessly formal. It should make an interesting claim; it should tell a story that an informed audience will care about, and it should do so by intelligent interpretation of appropriate evidence from empirical measurements or observations.</p>
@@ -615,7 +633,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -644,6 +662,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -683,7 +702,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -707,8 +726,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

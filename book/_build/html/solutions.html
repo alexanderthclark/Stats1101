@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Selected Solutions &#8212; Intro Stats</title>
   
@@ -15,49 +14,47 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -65,19 +62,23 @@
                 gtag('js', new Date());
                 gtag('config', 'G-32DRGZQWDG');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-32DRGZQWDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'solutions';</script>
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Other" href="other.html" />
+    <link rel="next" title="Midterms" href="midterm1.html" />
     <link rel="prev" title="Overview" href="Rbasics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -88,28 +89,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -131,12 +127,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -152,6 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -170,7 +176,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -230,6 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Selected Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="midterm1.html">Midterms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 
@@ -246,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +273,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -387,10 +405,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -398,14 +416,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -448,15 +466,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="selected-solutions">
-<h1>Selected Solutions<a class="headerlink" href="#selected-solutions" title="Permalink to this heading">#</a></h1>
+<h1>Selected Solutions<a class="headerlink" href="#selected-solutions" title="Link to this heading">#</a></h1>
 <section id="getting-started">
-<h2><a class="reference internal" href="gettingstarted.html#getting-started"><span class="std std-ref">Getting Started</span></a><a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="gettingstarted.html#getting-started"><span class="std std-ref">Getting Started</span></a><a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-0">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="gettingstarted.html#spotpop"> Exercise 1</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>There are many possible answers. A good answer has to pay attention to the <strong>context</strong> of the data, in order to make fair comparisons or include appropriate caveats.</p>
 <p>Suppose you decide to average the song popularities for each artist. It’s important to acknowledge that</p>
@@ -470,27 +488,27 @@ document.write(`
 </div>
 </section>
 <section id="experiments">
-<h2><a class="reference internal" href="experiments.html#experiments"><span class="std std-ref">Experiments</span></a><a class="headerlink" href="#experiments" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="experiments.html#experiments"><span class="std std-ref">Experiments</span></a><a class="headerlink" href="#experiments" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-1">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="experiments.html#exp1"> Exercise 4</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>The difference in average incomes indicates that our comparison will be confounded. The treatment group has more money, so they will likely have other resources that contribute to their dental health other than the electric toothbrush.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="solutions-solution-2">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="experiments.html#exp2"> Exercise 5</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>Only the last choice fits the definition of an experiment. The first features assignment to treatment that is understood, but it is not done by the researcher. The second also lacks a researcher component.</p>
 </section>
 </div>
 </section>
 <section id="observational-studies">
-<h2><a class="reference internal" href="observational.html#observational-studies"><span class="std std-ref">Observational Studies</span></a><a class="headerlink" href="#observational-studies" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="observational.html#observational-studies"><span class="std std-ref">Observational Studies</span></a><a class="headerlink" href="#observational-studies" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="observational.html#medprog"> Exercise 7</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>The data might be valid, but the inference can be false. There are too many other factors to account for to conclude that the treatments have not improved. The historical comparison does not ensure that breast cancer is detected at the same stage, for example. There can also be the effect of other diseases, the treatments for which can also improve. Note also the different kinds of rates that are relevant. The provided data focuses on deaths only, but not what percentage of people who get cancer ultimately die.</p>
 <p>The above is a sufficient answer. Here is a toy, quantitative illustration.</p>
@@ -513,7 +531,7 @@ and \)</span>r = \frac{13}{987}$, or about 1.3%. Then, let the improved cancer t
 </div>
 <div class="solution dropdown admonition" id="solutions-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="observational.html#comedian"> Exercise 8</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>This is an experiment because it features a researcher who is deliberately varying a joke. The defining feature of an experiment is the researcher’s control of assignment to treatment.</p>
 <p>Researcher: comedian <br>
@@ -526,10 +544,10 @@ Treatment group: second joke audience <br></p>
 </div>
 </section>
 <section id="natural-experiments">
-<h2><a class="reference internal" href="natural.html#natural-exp"><span class="std std-ref">Natural Experiments</span></a><a class="headerlink" href="#natural-experiments" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="natural.html#natural-exp"><span class="std std-ref">Natural Experiments</span></a><a class="headerlink" href="#natural-experiments" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="natural.html#earlyclass"> Exercise 10</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>This can be used as a natural experiment. Because we are interested in the effect of an early morning class, we can call those in the 8am class the treatment group and the control group refers to the students in the 1pm section. “Nature” randomizes the assignment of students and the randomization is not undone because no students will switch to a different section under the assumption that all students prefer the later section.</p>
 <p>If not all students prefer the 1pm section, this becomes less compelling as a natural experiment. Students will sort according to their own preferences. Assignment is no longer random and there could be confounding. The preference for an 8am class could be related to studiousness, other classes the students are taking, etc.</p>
@@ -537,10 +555,10 @@ Treatment group: second joke audience <br></p>
 </div>
 </section>
 <section id="center-and-spread">
-<h2><a class="reference internal" href="centerspread.html#center-and-spread"><span class="std std-ref">Center and Spread</span></a><a class="headerlink" href="#center-and-spread" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="centerspread.html#center-and-spread"><span class="std std-ref">Center and Spread</span></a><a class="headerlink" href="#center-and-spread" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-6">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="centerspread.html#sdproperties"> Exercise 15</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>The SD is equal to 1 for all three lists. The SD doesn’t change by duplicating the list or by shifting it. Neither duplicating nor shifting the list would change the shape of the histogram either.</p>
 <p>Here is an <a class="reference external" href="https://www.youtube.com/watch?v=8eyg0meH5wo">explainer video</a> for the math.</p>
@@ -548,16 +566,16 @@ Treatment group: second joke audience <br></p>
 </div>
 </section>
 <section id="normal-distribution">
-<h2><a class="reference internal" href="normal.html#normal"><span class="std std-ref">Normal Distribution</span></a><a class="headerlink" href="#normal-distribution" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="normal0.html#normal"><span class="std std-ref">Normal Distribution</span></a><a class="headerlink" href="#normal-distribution" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-7">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="normal.html#schoolsnorm"> Exercise 20</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>Let school A have an average SAT of 1000 with an SD of 200 and the other have an average of 1200 and an SD of 100. Any cutoff above 1400 will favor the lower average school.</p>
 <figure class="align-default" id="cumulative-ztable">
-<a class="reference internal image-reference" href="_images/schoolnormexercise.svg"><img alt="_images/schoolnormexercise.svg" src="_images/schoolnormexercise.svg" width="50%" /></a>
+<a class="reference internal image-reference" href="_images/schoolnormexercise.svg"><img alt="_images/schoolnormexercise.svg" src="_images/schoolnormexercise.svg" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 62 </span><span class="caption-text">A score of 1400 is two SDs above the mean for either school.</span><a class="headerlink" href="#cumulative-ztable" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">A score of 1400 is two SDs above the mean for either school.</span><a class="headerlink" href="#cumulative-ztable" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>School A can maintain a higher admission rate even if the admission rate is above 50% for school B.</p>
@@ -566,10 +584,10 @@ Treatment group: second joke audience <br></p>
 </div>
 </section>
 <section id="correlation">
-<h2><a class="reference internal" href="correlation.html#correlation"><span class="std std-ref">Correlation</span></a><a class="headerlink" href="#correlation" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="regression.html#correlation"><span class="std std-ref">Correlation</span></a><a class="headerlink" href="#correlation" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-8">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="correlation.html#corrPairing"> Exercise 21</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>The correlation coefficient is <span class="math notranslate nohighlight">\(r=0.5\)</span> for the first two tables. The correlation increases to <span class="math notranslate nohighlight">\(r=0.866\)</span> for the last table.</p>
 <p>This is a question about the structure of data. There is an ordered pair <span class="math notranslate nohighlight">\((x,y)\)</span> for each day of the week where <span class="math notranslate nohighlight">\(x\)</span> first represents Matt Damon and <span class="math notranslate nohighlight">\(y\)</span> represents Wahlberg. In the second table, all <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> values are swapped. In a scatter plot, this would be like changing the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axis labels, so the correlation does not change.</p>
@@ -578,17 +596,17 @@ Treatment group: second joke audience <br></p>
 </div>
 <div class="solution dropdown admonition" id="solutions-solution-9">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="correlation.html#corrMental"> Exercise 22</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>No, the award is not merited because the lack of correlation does not demonstrate that there can be no causal effect. This is a chicken and egg problem like in the case of police funding and crime.</p>
 </section>
 </div>
 </section>
 <section id="regression">
-<h2><a class="reference internal" href="regression.html"><span class="doc std std-doc">Regression</span></a><a class="headerlink" href="#regression" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="regression.html"><span class="doc std std-doc">Regression</span></a><a class="headerlink" href="#regression" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-10">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="regression.html#assortMating"> Exercise 23</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>Researchers report both correlations and slopes, indicating that both can be interesting. If you want to know the effect size, use a slope. If you want to measure the strength of the relationship in terms of noisy vs perfectly linear, use a correlation coefficient.</p>
 <p>A single row will contain the incomes for two partnered individuals, but an <span class="math notranslate nohighlight">\(x,y\)</span> pair must also be <em>ordered</em>. There can different ways to decide what the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> columns are. If the data only contains opposite-sex couples, data can be arranged in <span class="math notranslate nohighlight">\(x,y\)</span> pairs for (male, female) or (female, male). The <span class="math notranslate nohighlight">\(x,y\)</span> pairs might also be ordered in other ways. One example is (primary earner, secondary earner) or (secondary earner, primary earner). Random ordering is also okay, but you might find a different slope or correlation coefficient and these must be interpreted based on the ordering.</p>
@@ -596,17 +614,17 @@ Treatment group: second joke audience <br></p>
 </div>
 </section>
 <section id="probability-i">
-<h2><a class="reference internal" href="probability.html#probability"><span class="std std-ref">Probability I</span></a><a class="headerlink" href="#probability-i" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="probability.html#probability"><span class="std std-ref">Probability I</span></a><a class="headerlink" href="#probability-i" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-11">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="probability.html#conditional"> Exercise 28</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p><span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B) + \mathbb{P}(\text{not }A \mid B)=1\)</span> for any <span class="math notranslate nohighlight">\(A,B\)</span>.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="solutions-solution-12">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="probability.html#glee"> Exercise 31</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>Binomial coefficients tell you how many ways you can select <span class="math notranslate nohighlight">\(k\)</span> items from a list of <span class="math notranslate nohighlight">\(n\)</span>, but the <span class="math notranslate nohighlight">\(k\)</span> items are not ordered.</p>
 <p>The president/VP pair is ordered and the co-preseident pair is not. Only the co-president pairings are counted by <span class="math notranslate nohighlight">\(\binom{3}{2}\)</span>. There will be twice as many president/VP pairings because (Alice, Bob) and (Bob, Alice) are considered distinct.</p>
@@ -614,7 +632,7 @@ Treatment group: second joke audience <br></p>
 </div>
 <div class="solution dropdown admonition" id="solutions-solution-13">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="probability.html#turnout"> Exercise 33</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>a.) <span class="math notranslate nohighlight">\(\mathbb{P}(3D) = \mathbb{P}(0D) =\frac{1}{8}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{P}(2D) = \mathbb{P}(1D) = \frac{3}{8}\)</span></p>
 <p>b.) Democrats win if either of these events occur:</p>
@@ -633,10 +651,10 @@ Treatment group: second joke audience <br></p>
 </div>
 </section>
 <section id="probability-ii">
-<h2><a class="reference internal" href="bayes.html#bayes"><span class="std std-ref">Probability II</span></a><a class="headerlink" href="#probability-ii" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="bayes.html#bayes"><span class="std std-ref">Probability II</span></a><a class="headerlink" href="#probability-ii" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-14">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#boxes"> Exercise 34</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <ol class="arabic">
 <li><p><span class="math notranslate nohighlight">\(\mathbb{P}(H) = 0.5\)</span></p></li>
@@ -654,7 +672,7 @@ Treatment group: second joke audience <br></p>
 The first draw reveals there is an <span class="math notranslate nohighlight">\(H\)</span> in the box. By part 3, we know there is a 0.5 probability the box contains two <span class="math notranslate nohighlight">\(H\)</span>s. The probability of an <span class="math notranslate nohighlight">\(H\)</span> on the second draw is</p>
 <div class="math notranslate nohighlight">
 \[ \underbrace{\frac{1}{2}}_{a} \cdot \overbrace{1}^{b} + \underbrace{\frac{1}{2}}_{c} \cdot \overbrace{\frac{1}{2}}^{b} = \frac{3}{4}.\]</div>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Term</p></th>
 <th class="head"><p>Probability of … given <span class="math notranslate nohighlight">\(H\)</span> on first draw</p></th>
@@ -675,13 +693,14 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </tr>
 </tbody>
 </table>
+</div>
 <p>Each ticket is marked <span class="math notranslate nohighlight">\(H\)</span> or <span class="math notranslate nohighlight">\(T\)</span> independently and with equal chance, so <span class="math notranslate nohighlight">\(d\)</span> is <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>.</p>
 <p><strong>4 - Solution 2 (my favorite)</strong></p>
 <p>This solution is remarkably similar to the previous, but with a different interpretation. The first draw reveals there is an <span class="math notranslate nohighlight">\(H\)</span> in the box. Half of the time you will draw the same exact ticket on your second draw. This always gives an <span class="math notranslate nohighlight">\(H\)</span>, but you can also get an <span class="math notranslate nohighlight">\(H\)</span> by drawing the other ticket. The other half of the time you draw the other ticket. The other ticket is an <span class="math notranslate nohighlight">\(H\)</span> half the time.</p>
 <p>The conditional probability of an <span class="math notranslate nohighlight">\(H\)</span> on the second draw given an <span class="math notranslate nohighlight">\(H\)</span> on the first draw can be expanded as the sum of the probability of <em>the same ticket and <span class="math notranslate nohighlight">\(H\)</span></em> and the probability of <em>a different ticket and <span class="math notranslate nohighlight">\(H\)</span></em>, all conditional on <span class="math notranslate nohighlight">\(H\)</span> on the first draw. The answer is</p>
 <div class="math notranslate nohighlight">
 \[ \underbrace{\frac{1}{2}}_{\alpha} \cdot \overbrace{1}^{\beta} + \underbrace{\frac{1}{2}}_{\gamma} \cdot \overbrace{\frac{1}{2}}^{\delta} = \frac{3}{4}.\]</div>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Term</p></th>
 <th class="head"><p>Probability of … given <span class="math notranslate nohighlight">\(H\)</span> on first draw</p></th>
@@ -702,6 +721,7 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </tr>
 </tbody>
 </table>
+</div>
 <p>Each ticket is marked <span class="math notranslate nohighlight">\(H\)</span> or <span class="math notranslate nohighlight">\(T\)</span> independently and with equal chance, so <span class="math notranslate nohighlight">\(\delta\)</span> is <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>.</p>
 <p><strong>4 - Solution 3 (the worst)</strong></p>
 <p>Now we attempt to solve this by applying Bayes Theorem directly. It’s important to get the notation clear. Let <span class="math notranslate nohighlight">\(H_2\)</span> denote getting an <span class="math notranslate nohighlight">\(H\)</span> on the second draw and <span class="math notranslate nohighlight">\(H_1\)</span> is an <span class="math notranslate nohighlight">\(H\)</span> on the first. We want to find <span class="math notranslate nohighlight">\(\mathbb{P}(H_2 \mid H_1)\)</span>. Bayes Theorem tells us</p>
@@ -710,11 +730,11 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 <p>This doesn’t do much to simplify the problem because <span class="math notranslate nohighlight">\(\mathbb{P}(H_1 \mid H_2)\)</span> is no easier to solve for and we’ll end up repeating calculations from Solution 1 or Solution 2 to find <span class="math notranslate nohighlight">\(\mathbb{P}(H_1 \mid H_2) \mathbb{P}(H_2) = \mathbb{P}(H_2 \text{ and } H_1).\)</span> It’s tempting to write this as <span class="math notranslate nohighlight">\(\mathbb{P}(H_1) \times \mathbb{P}(H_2)\)</span>, but these are dependent events so we can’t. A tree is helpful.</p>
 <p>For a single draw.</p>
 <figure class="align-default" id="htrandomboxtree2">
-<a class="reference internal image-reference" href="_images/HTrandomboxTree.svg"><img alt="_images/HTrandomboxTree.svg" src="_images/HTrandomboxTree.svg" width="70%" /></a>
+<a class="reference internal image-reference" href="_images/HTrandomboxTree.svg"><img alt="_images/HTrandomboxTree.svg" src="_images/HTrandomboxTree.svg" style="width: 70%;" /></a>
 </figure>
 <p>For two draws.</p>
 <figure class="align-default" id="htrandomboxtree2draws">
-<a class="reference internal image-reference" href="_images/HTrandomboxTree2Draws.svg"><img alt="_images/HTrandomboxTree2Draws.svg" src="_images/HTrandomboxTree2Draws.svg" width="70%" /></a>
+<a class="reference internal image-reference" href="_images/HTrandomboxTree2Draws.svg"><img alt="_images/HTrandomboxTree2Draws.svg" src="_images/HTrandomboxTree2Draws.svg" style="width: 70%;" /></a>
 </figure>
 <p>Therefore the probability of <span class="math notranslate nohighlight">\(H_1\)</span> and <span class="math notranslate nohighlight">\(H_2\)</span> is <span class="math notranslate nohighlight">\(0.5\times 0.25 + 0.25 \times 1 = \frac{3}{8}\)</span>. Plugging this into the formula for <span class="math notranslate nohighlight">\(\mathbb{P}(H_2 \mid H_1)\)</span>, we get</p>
 <div class="math notranslate nohighlight">
@@ -725,7 +745,7 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </div>
 <div class="solution dropdown admonition" id="solutions-solution-15">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesraredisease"> Exercise 35</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>What are trying to find the probability that someone has the rare disease given a positive test. We’ll use a natural frequencies approach to find</p>
 <div class="math notranslate nohighlight">
@@ -736,7 +756,7 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </div>
 <div class="solution dropdown admonition" id="solutions-solution-16">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bballbayes"> Exercise 36</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>An unknown player makes their first shot 50% of the time. This is calculated as</p>
 <div class="math notranslate nohighlight">
@@ -751,7 +771,7 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </div>
 <div class="solution dropdown admonition" id="solutions-solution-17">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesReview"> Exercise 38</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p><span class="math notranslate nohighlight">\(\mathbb{P}(\text{good review}) = 0.75\)</span></p>
 <p><span class="math notranslate nohighlight">\(\mathbb{P}(\text{good review} \mid H) = 1\)</span></p>
@@ -761,7 +781,7 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 \[ = \frac{1 \times 0.5}{.75} = \frac{2}{3}.\]</div>
 <p>The probability tree is shown below.</p>
 <figure class="align-default" id="productreviewtree">
-<a class="reference internal image-reference" href="_images/productreviewtree.svg"><img alt="_images/productreviewtree.svg" src="_images/productreviewtree.svg" width="70%" /></a>
+<a class="reference internal image-reference" href="_images/productreviewtree.svg"><img alt="_images/productreviewtree.svg" src="_images/productreviewtree.svg" style="width: 70%;" /></a>
 </figure>
 <p>These events are dependent because <span class="math notranslate nohighlight">\(\mathbb{P}(H \mid \text{good review}) \neq \mathbb{P}(H)\)</span>.</p>
 <p>If the truth-teller is replaced by a joker, then <span class="math notranslate nohighlight">\(\mathbb{P}(H \mid \text{bad review}) = 1\)</span>. The fake reviewer always leaves a positive reviewer, so the probability is the same as <span class="math notranslate nohighlight">\(\mathbb{P}(H \mid \text{joker and bad review})\)</span> and the joker only leaves a bad review if the product is of good quality.</p>
@@ -769,7 +789,7 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </div>
 <div class="solution dropdown admonition" id="solutions-solution-18">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="bayes.html#bayesCountry"> Exercise 39</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>4/63 songs mention tractor and 14/63 mention truck.</p>
 <p>2 of the 14 mentioning truck mention tractor.</p>
@@ -780,10 +800,10 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </div>
 </section>
 <section id="sampling">
-<h2><a class="reference internal" href="sampling.html#sampling"><span class="std std-ref">Sampling</span></a><a class="headerlink" href="#sampling" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="sampling.html#sampling"><span class="std std-ref">Sampling</span></a><a class="headerlink" href="#sampling" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-19">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="sampling.html#incentivesurvey"> Exercise 41</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <ol class="arabic simple">
 <li><p>Non-response bias will be a problem because the survey is voluntary. Less obvious, there is also a selection bias problem among who will see it. The most active users will use the site every day and the more casual users will not. Before considering non-response bias, the sample is skewed to more active users.</p></li>
@@ -794,20 +814,20 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
 </div>
 </section>
 <section id="confidence-intervals">
-<h2><a class="reference internal" href="sampling.html#sampling"><span class="std std-ref">Confidence Intervals</span></a><a class="headerlink" href="#confidence-intervals" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="sampling.html#sampling"><span class="std std-ref">Confidence Intervals</span></a><a class="headerlink" href="#confidence-intervals" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-20">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="confidenceintervals.html#CInarrow"> Exercise 45</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>More observations will make an interval more narrow. The average itself does not change the width of an interval if this is not for a sample proportion. The average only sets the center of the interval, holding constant the SD.</p>
 </section>
 </div>
 </section>
 <section id="hypothesis-testing">
-<h2><a class="reference internal" href="hypothesistesting.html#hyptest"><span class="std std-ref">Hypothesis Testing</span></a><a class="headerlink" href="#hypothesis-testing" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="hypothesistestingB.html#hyptest"><span class="std std-ref">Hypothesis Testing</span></a><a class="headerlink" href="#hypothesis-testing" title="Link to this heading">#</a></h2>
 <div class="solution dropdown admonition" id="solutions-solution-21">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="hypothesistesting.html#daycare"> Exercise 47</a></p>
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>The SE is <span class="math notranslate nohighlight">\(\sqrt{\frac{.16}{64}}=\frac{0.4}{8} = 0.05\)</span>. The test statistic is <span class="math notranslate nohighlight">\(\frac{0.3-0.2}{0.05} = 2\)</span>. The P-value is about 97.5%. We fail to reject because this is a one-sided case.</p>
 <p>This is the odd case where the test statistic falls in the “wrong” side.</p>
@@ -844,7 +864,7 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -857,11 +877,11 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
       </div>
     </a>
     <a class="right-next"
-       href="other.html"
+       href="midterm1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Other</p>
+        <p class="prev-next-title">Midterms</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -873,6 +893,7 @@ The first draw reveals there is an <span class="math notranslate nohighlight">\(
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -917,7 +938,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -941,8 +962,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Probability &#8212; Intro Stats</title>
   
@@ -15,49 +14,47 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -65,16 +62,20 @@
                 gtag('js', new Date());
                 gtag('config', 'G-32DRGZQWDG');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-32DRGZQWDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'probability';</script>
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Probability II" href="bayes.html" />
@@ -88,28 +89,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -131,12 +127,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -152,6 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -170,7 +176,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -230,6 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="solutions.html">Selected Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="midterm1.html">Midterms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 
@@ -246,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +273,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -387,10 +405,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -398,14 +416,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -455,10 +473,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="probability">
-<span id="id1"></span><h1>Probability<a class="headerlink" href="#probability" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>Probability<a class="headerlink" href="#probability" title="Link to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
@@ -466,7 +484,7 @@ document.write(`
 </ul>
 </div>
 <section id="probabilities">
-<h2>Probabilities<a class="headerlink" href="#probabilities" title="Permalink to this heading">#</a></h2>
+<h2>Probabilities<a class="headerlink" href="#probabilities" title="Link to this heading">#</a></h2>
 <p>A <strong>probability</strong> of a thing refers to the long-run tendency for that thing to occur.</p>
 <p>First, we have an <em>event</em>: “It rains tomorrow,” which describes possible outcomes from some random process.</p>
 <p>Imagine we repeat the process many times. The proportion of times in which we observe that event to occur is its <strong>probability</strong>. This corresponds to (1) the textbook and (2) a “frequentist” philosophy. There are other philosophies, but it’s not in scope to discuss alternatives.</p>
@@ -475,76 +493,76 @@ document.write(`
 \[\mathbb{P}(H) = \frac{\# \text{Heads}}{\# \text{Coin Tosses}}.\]</div>
 <p>For a fair coin, this will tend to <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>. For a weighted coin, it can be any value <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(0\leq p \leq 1\)</span>. This can also be represented by a  <strong>box model</strong>, like those in <span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span>. It’s also useful to represent a collection of outcomes as sets and their probability as an area. <span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="David Freedman, Robert Pisani, and Roger Purves. Statistics. WW Norton &amp; Company, 4 edition, 2007. URL: https://clio.columbia.edu/catalog/6285515.">FPP07</a>]</span> doesn’t use sets, but you mind find it natural for some examples.</p>
 <section id="sets">
-<h3>Sets<a class="headerlink" href="#sets" title="Permalink to this heading">#</a></h3>
+<h3>Sets<a class="headerlink" href="#sets" title="Link to this heading">#</a></h3>
 <p>In the diagram below, the outer box represents all possible things that can occur. Imagine we’re drawing a random number between 0 and 100. A point represents a single outcome, like the number 91 is drawn. A larger set of points represents several possible outcomes. Below, <span class="math notranslate nohighlight">\(A\)</span> might represent a set of outcomes like a number above 50 is drawn.</p>
 <figure class="align-default" id="eventseta">
-<a class="reference internal image-reference" href="_images/eventsetA.svg"><img alt="_images/eventsetA.svg" src="_images/eventsetA.svg" width="40%" /></a>
+<a class="reference internal image-reference" href="_images/eventsetA.svg"><img alt="_images/eventsetA.svg" src="_images/eventsetA.svg" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text"><span class="math notranslate nohighlight">\(\mathbb{P}(A) = \frac{\text{area } A}{\text{area outer box}}\)</span></span><a class="headerlink" href="#eventseta" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text"><span class="math notranslate nohighlight">\(\mathbb{P}(A) = \frac{\text{area } A}{\text{area outer box}}\)</span></span><a class="headerlink" href="#eventseta" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Using set diagrams is especially advantageous once we start talking about multiple collections of outcomes. Let <span class="math notranslate nohighlight">\(B\)</span> represent that a number above 90 is drawn. This is less likely than <span class="math notranslate nohighlight">\(A\)</span>, drawing a number above 50, and <span class="math notranslate nohighlight">\(B\)</span> is a subset of <span class="math notranslate nohighlight">\(A\)</span>. This can be represented below.</p>
 <figure class="align-default" id="eventsetab">
-<a class="reference internal image-reference" href="_images/eventsetAB.svg"><img alt="_images/eventsetAB.svg" src="_images/eventsetAB.svg" width="40%" /></a>
+<a class="reference internal image-reference" href="_images/eventsetAB.svg"><img alt="_images/eventsetAB.svg" src="_images/eventsetAB.svg" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text"><span class="math notranslate nohighlight">\(A\)</span> is more likely because it has greater area. And because <span class="math notranslate nohighlight">\(B\)</span> is inside <span class="math notranslate nohighlight">\(A\)</span>, if <span class="math notranslate nohighlight">\(B\)</span> occurs then <span class="math notranslate nohighlight">\(A\)</span> occurs. If <span class="math notranslate nohighlight">\(A\)</span> occurs, <span class="math notranslate nohighlight">\(B\)</span> is not guaranteed.</span><a class="headerlink" href="#eventsetab" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text"><span class="math notranslate nohighlight">\(A\)</span> is more likely because it has greater area. And because <span class="math notranslate nohighlight">\(B\)</span> is inside <span class="math notranslate nohighlight">\(A\)</span>, if <span class="math notranslate nohighlight">\(B\)</span> occurs then <span class="math notranslate nohighlight">\(A\)</span> occurs. If <span class="math notranslate nohighlight">\(A\)</span> occurs, <span class="math notranslate nohighlight">\(B\)</span> is not guaranteed.</span><a class="headerlink" href="#eventsetab" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="box-models">
-<h3>Box Models<a class="headerlink" href="#box-models" title="Permalink to this heading">#</a></h3>
+<h3>Box Models<a class="headerlink" href="#box-models" title="Link to this heading">#</a></h3>
 <p>A box contains labeled tickets that correspond to specific outcomes. With each ticket being drawn with equal chance, a fair coin can be represented with the box below.</p>
 <figure class="align-default" id="headstailsbox">
-<a class="reference internal image-reference" href="_images/headstailsbox.svg"><img alt="_images/headstailsbox.svg" height="40px" src="_images/headstailsbox.svg" /></a>
+<a class="reference internal image-reference" href="_images/headstailsbox.svg"><img alt="_images/headstailsbox.svg" src="_images/headstailsbox.svg" style="height: 40px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Fair coin box model representation.</span><a class="headerlink" href="#headstailsbox" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Fair coin box model representation.</span><a class="headerlink" href="#headstailsbox" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For a coin weighted to land heads more often, we simply add more <span class="math notranslate nohighlight">\(H\)</span> tickets to the box.</p>
 <figure class="align-default" id="headstailsweightedbox">
-<a class="reference internal image-reference" href="_images/headstailsweightedbox.svg"><img alt="_images/headstailsweightedbox.svg" height="40px" src="_images/headstailsweightedbox.svg" /></a>
+<a class="reference internal image-reference" href="_images/headstailsweightedbox.svg"><img alt="_images/headstailsweightedbox.svg" src="_images/headstailsweightedbox.svg" style="height: 40px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 36 </span><span class="caption-text">A weighted coin box model representation.</span><a class="headerlink" href="#headstailsweightedbox" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">A weighted coin box model representation.</span><a class="headerlink" href="#headstailsweightedbox" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="random-draws">
-<h3>Random Draws<a class="headerlink" href="#random-draws" title="Permalink to this heading">#</a></h3>
+<h3>Random Draws<a class="headerlink" href="#random-draws" title="Link to this heading">#</a></h3>
 <p>With a single random draw from a box, the probability of an outcome is the number of tickets labeled with that outcome divided by the total number of tickets. In <a class="reference internal" href="#headstailsweightedbox"><span class="std std-numref">Fig. 36</span></a>, <span class="math notranslate nohighlight">\(\mathbb{P}(H) = \frac{2}{3}\)</span>. If we draw two tickets, it matters what we do with the first ticket we drew. Draws can be done <strong>with replacement</strong> or <strong>without replacement</strong>. Drawing with replacement means you put the ticket back in the box, and you might draw the same ticket again. Drawing without replacement means the ticket is removed from the box and not available to be drawn again.</p>
 <p>If we take two draws with replacement from <a class="reference internal" href="#headstailsbox"><span class="std std-numref">Fig. 35</span></a>, that is akin to two flips of a fair coin (because a coin doesn’t lose its heads side if you already flipped a heads). The possible outcomes are <span class="math notranslate nohighlight">\(HH,HT,TH,TT\)</span>. If we instead take two draws without replacement, the second draw comes from a box with just one ticket remaining. The possible outcomes are <span class="math notranslate nohighlight">\(HT\)</span> or <span class="math notranslate nohighlight">\(TH\)</span>.</p>
 </section>
 </section>
 <section id="conditional-probability">
-<h2>Conditional Probability<a class="headerlink" href="#conditional-probability" title="Permalink to this heading">#</a></h2>
+<h2>Conditional Probability<a class="headerlink" href="#conditional-probability" title="Link to this heading">#</a></h2>
 <p>A probability like <span class="math notranslate nohighlight">\(\mathbb{P}(\text{bad weather})\)</span> is an unconditional probability. A <strong>conditional probability</strong> gives a probability if we already observed something else. For example, a devoted reader of the Farmers’ Almanac might know the signs of good or bad weather, like the color of the sky. A conditional probability is written <span class="math notranslate nohighlight">\(\mathbb{P}(\text{bad weather} \mid \text{red sky})\)</span>. The conditional probability is found <span class="math notranslate nohighlight">\(\mathbb{P}(\text{bad weather} \mid \text{red sky}) = \frac{ \mathbb{P}(\text{bad weather} \textit{ and } \text{red sky}) }{ \mathbb{P}(\text{red sky })}\)</span>.  More generally, <span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B)\)</span> is the probability of <span class="math notranslate nohighlight">\(A\)</span> conditional on <span class="math notranslate nohighlight">\(B\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(A \mid B) = \frac{ \mathbb{P}(A \textit{ and } B) }{ \mathbb{P}(B)}.\]</div>
 <p>In <a class="reference internal" href="#eventsetab"><span class="std std-numref">Fig. 34</span></a>, <span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B) = 1\)</span> because <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> is just <span class="math notranslate nohighlight">\(B\)</span>. In <a class="reference internal" href="#setsand"><span class="std std-numref">Fig. 37</span></a>, <span class="math notranslate nohighlight">\(\mathbb{P}(A \mid B)\)</span> can’t be eyeballed, but it would be the shaded area divided by the area of <span class="math notranslate nohighlight">\(B\)</span>. Without any conditioning, all of the enclosing box is possible. When we condition on <span class="math notranslate nohighlight">\(B\)</span>, it’s as if we throw away everything that is not <span class="math notranslate nohighlight">\(B\)</span>.</p>
 <figure class="align-default" id="setsand">
-<a class="reference internal image-reference" href="_images/setsAnd.svg"><img alt="_images/setsAnd.svg" src="_images/setsAnd.svg" width="53%" /></a>
+<a class="reference internal image-reference" href="_images/setsAnd.svg"><img alt="_images/setsAnd.svg" src="_images/setsAnd.svg" style="width: 53%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 37 </span><span class="caption-text"><span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> happens where the sets overlap.</span><a class="headerlink" href="#setsand" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text"><span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> happens where the sets overlap.</span><a class="headerlink" href="#setsand" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In a box model, conditional probabilities involve looking at a modified box.</p>
 <p><strong>Example</strong>. Suppose you’re taking a multiple choice exam. A question asks you to solve for a correlation coefficient but you don’t have time to do the math given some time pressure. If you guess among equally likely choices, you’ll get the right answer with a 20% chance.</p>
 <figure class="align-default" id="boxmultchoice">
-<a class="reference internal image-reference" href="_images/boxMultChoice.svg"><img alt="_images/boxMultChoice.svg" height="35px" src="_images/boxMultChoice.svg" /></a>
+<a class="reference internal image-reference" href="_images/boxMultChoice.svg"><img alt="_images/boxMultChoice.svg" src="_images/boxMultChoice.svg" style="height: 35px;" /></a>
 </figure>
 <p>But you find a clue: choice A is <span class="math notranslate nohighlight">\(\sqrt{5}\)</span>. Correlation coefficients can’t be above 1, so A is certainly wrong. You’ve simplified the guessing game to the box model below. If you guess C, you are right with probability <span class="math notranslate nohighlight">\(\mathbb{P}(\text{C} \mid \text{B or C or D or E}) = \frac{1}{4}\)</span>.</p>
 <figure class="align-default" id="boxmultchoicenoa">
-<a class="reference internal image-reference" href="_images/boxMultChoiceNoA.svg"><img alt="_images/boxMultChoiceNoA.svg" height="35px" src="_images/boxMultChoiceNoA.svg" /></a>
+<a class="reference internal image-reference" href="_images/boxMultChoiceNoA.svg"><img alt="_images/boxMultChoiceNoA.svg" src="_images/boxMultChoiceNoA.svg" style="height: 35px;" /></a>
 </figure>
 </section>
 <section id="mulitplication-rule-a-and-b">
-<h2>Mulitplication Rule (<span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>)<a class="headerlink" href="#mulitplication-rule-a-and-b" title="Permalink to this heading">#</a></h2>
+<h2>Mulitplication Rule (<span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>)<a class="headerlink" href="#mulitplication-rule-a-and-b" title="Link to this heading">#</a></h2>
 <p>The <strong>general multiplication rule</strong> is</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(A \textit{ and } B) = \mathbb{P}(A \mid B)\times \mathbb{P}(B).\]</div>
 <p>One thing to note, as suggested by <a class="reference internal" href="#setsand"><span class="std std-numref">Fig. 37</span></a> and <a class="reference internal" href="#eventsetab"><span class="std std-numref">Fig. 34</span></a>, the probability of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> can’t exceed the probability of either <span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>. The formula tells a story: first <span class="math notranslate nohighlight">\(B\)</span> happens with probability <span class="math notranslate nohighlight">\(\mathbb{P}(B)\)</span> and then, once you’re in the world of <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(A\)</span> will happen with probability <span class="math notranslate nohighlight">\(\mathbb{P}(A\mid B)\)</span>. Multiply and you have the unconditional probability of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
 </section>
 <section id="independence">
-<h2>Independence<a class="headerlink" href="#independence" title="Permalink to this heading">#</a></h2>
+<h2>Independence<a class="headerlink" href="#independence" title="Link to this heading">#</a></h2>
 <p>Informally, two things <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are <strong>independent</strong> if knowing that <span class="math notranslate nohighlight">\(B\)</span> occurred doesn’t change your belief that <span class="math notranslate nohighlight">\(A\)</span> might occur. The outcomes of two coin flips are independent, even if the coin is weighted. It would be hard to invent a reason for why heads should be more or less likely after a heads than after a tails. When <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are independent, then conditioning on one does nothing.</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}(A \mid B) = \mathbb{P}(A) \;\;\; A,B \text{ independent}\]</div>
@@ -559,7 +577,7 @@ document.write(`
 <p>Draws made with replacement are independent. The box never changes, so there is no way the outcome of the first draw can impact sequential draws. Draws made without replacement are dependent because the box changes and it changes depending on the previous outcomes.</p>
 </section>
 <section id="addition-rule-a-or-b">
-<h2>Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)<a class="headerlink" href="#addition-rule-a-or-b" title="Permalink to this heading">#</a></h2>
+<h2>Addition Rule (<span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span>)<a class="headerlink" href="#addition-rule-a-or-b" title="Link to this heading">#</a></h2>
 <p><strong>Mututally exclusive</strong> things when they cannot occur together. In a set diagram, the sets will have no overlap. You cannot both eath your cake today and have it for tomorrow. This is actually a special case of dependence.</p>
 <p>When <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are mutually exclusive, the chance that <span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(B\)</span> will occur is the sum of their individual probabilities. This is the <strong>addition rule for mutually exclusive things</strong>.</p>
 <div class="math notranslate nohighlight">
@@ -567,11 +585,7 @@ document.write(`
 <p>If <span class="math notranslate nohighlight">\(\mathbb{P}(A) = 0.5\)</span> and <span class="math notranslate nohighlight">\(\mathbb{P}(B) = 0.6\)</span>, can they be mutually exclusive?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Can they be mutually exclusive?<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Can they be mutually exclusive?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">No, because that would mean <span class="math notranslate nohighlight">\(\mathbb{P}(A \text{ or } B) = 1.1\)</span>, but probabilities cannot exceed 1.</p>
 </div>
 </details><p>When two things are not mutually exclusive, summing the probabilities double counts their overlap.</p>
@@ -586,12 +600,12 @@ I’m always a suspect</p>
 <p>Eddie Montgomery sings that he descends from outlaws and boozers. Translating into probability, <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw})= \mathbb{P}(\text{boozer}) = \frac{1}{2}\)</span> for Eddie’s ancestors. So what is <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})\)</span>? I read the lyrics as half of the ancestors are outlaws and the <em>other</em> half are boozers. In that case, these labels are mutually exclusive and <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})=1\)</span> and <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw and boozer})=0\)</span>.</p>
 <p>But, strictly speaking, the lyrics are not clear. With enough boozers, it seems likely enough that at least one is an outlaw. If that is the case, these labels are not mutually exclusive and the addition rule does not apply. <span class="math notranslate nohighlight">\(\mathbb{P}(\text{outlaw or boozer})\)</span> could be between <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> and 1.</p>
 <section id="expanding-a">
-<h3>Expanding <span class="math notranslate nohighlight">\(A\)</span><a class="headerlink" href="#expanding-a" title="Permalink to this heading">#</a></h3>
-<p>Another application of the addition rule is in expanding one probability into two. Instead of <span class="math notranslate nohighlight">\(\mathbb{P}(A)\)</span>, you might prefer to work with the equivalent probability of <span class="math notranslate nohighlight">\(\mathbb{P}(A \text{ and }B) + \mathbb{P}(A \text{ and not }B) \)</span>. This kind of addition works because <span class="math notranslate nohighlight">\(A \text{ and }B\)</span> is mutually exclusive of <span class="math notranslate nohighlight">\(A \text{ and not }B\)</span>. Try solving <a class="reference internal" href="#linda"><span class="std std-numref">Exercise 29</span></a> by expanding the probability that Linda is a bank teller.</p>
+<h3>Expanding <span class="math notranslate nohighlight">\(A\)</span><a class="headerlink" href="#expanding-a" title="Link to this heading">#</a></h3>
+<p>Another application of the addition rule is in expanding one probability into two. Instead of <span class="math notranslate nohighlight">\(\mathbb{P}(A)\)</span>, you might prefer to work with the equivalent probability of <span class="math notranslate nohighlight">\(\mathbb{P}(A \text{ and }B) + \mathbb{P}(A \text{ and not }B) \)</span>. This kind of addition works because <span class="math notranslate nohighlight">\(A \text{ and }B\)</span> is mutually exclusive of <span class="math notranslate nohighlight">\(A \text{ and not }B\)</span>. Try solving <a class="reference internal" href="#linda"><span class="std std-numref">Exercise 30</span></a> by expanding the probability that Linda is a bank teller.</p>
 </section>
 </section>
 <section id="listing-the-ways">
-<h2>Listing the Ways<a class="headerlink" href="#listing-the-ways" title="Permalink to this heading">#</a></h2>
+<h2>Listing the Ways<a class="headerlink" href="#listing-the-ways" title="Link to this heading">#</a></h2>
 <p>Many problems can be solved by a brute force routine: list the ways.</p>
 <p><strong>Example 1</strong>: You flip a fair coin three times. What is the probability of the sequence <span class="math notranslate nohighlight">\(HHH\)</span>?</p>
 <p>This can be solved by multiplication. The probability is <span class="math notranslate nohighlight">\(\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}\)</span>. But the brute force method of listing the ways helps show where the denominator comes from: there are eight possible sequences when you flip a coin three times.</p>
@@ -599,22 +613,14 @@ I’m always a suspect</p>
 <p><strong>Example 2</strong>: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by a heads. The first flip is equally likely to be heads or tails. What is the probability of the sequence <span class="math notranslate nohighlight">\(HTH\)</span>?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Example 2<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Example 2</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The possible outcomes are <span class="math notranslate nohighlight">\(HTH\)</span>, <span class="math notranslate nohighlight">\(THT\)</span>. The chances are both 50%.</p>
 </div>
 </details><p>Take caution. Just because a sequence is one of four possibilities, that sequence won’t necessarily have chance 25%. You must be confident that each sequence is equally first. For example, what is the chance of the sequence <span class="math notranslate nohighlight">\(HH\)</span> if a coin is weighted to come up heads with chance 90%. The chance is 81%.</p>
 <p><strong>Example 3</strong>: You flip a trick coin three times. A heads is always followed by a tails. A tails is always followed by heads or tails with equal chance. Suppose you just flipped a tails. Show the possible sequences are not equally likely.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Example 3<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Example 3</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The possible outcomes are <span class="math notranslate nohighlight">\(HTH\)</span>, <span class="math notranslate nohighlight">\(HTT\)</span>, <span class="math notranslate nohighlight">\(THT\)</span>, <span class="math notranslate nohighlight">\(TTH\)</span>, and <span class="math notranslate nohighlight">\(TTT\)</span>.</p>
 <p class="sd-card-text">Half of the time, the first flip is <span class="math notranslate nohighlight">\(H\)</span>. Only two sequences start with <span class="math notranslate nohighlight">\(H\)</span>. One of the remaining three sequences must also occur with chance 50%. Therefore, the five sequences above cannot be equally likely.</p>
 </div>
@@ -625,9 +631,9 @@ Example 3<div class="sd-summary-down docutils">
 <li><p>The two treasure-bearing islands are adjacent.</p></li>
 </ul>
 <figure class="align-default" id="islandslabeled">
-<a class="reference internal image-reference" href="_images/islandsLabeled.svg"><img alt="_images/islandsLabeled.svg" src="_images/islandsLabeled.svg" width="52%" /></a>
+<a class="reference internal image-reference" href="_images/islandsLabeled.svg"><img alt="_images/islandsLabeled.svg" src="_images/islandsLabeled.svg" style="width: 52%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 38 </span><span class="caption-text">A treasure map showing two treasure-bearing islands.</span><a class="headerlink" href="#islandslabeled" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">A treasure map showing two treasure-bearing islands.</span><a class="headerlink" href="#islandslabeled" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>You search an island and find no treasure. Suppose there are two sea currents you can follow:</p>
@@ -638,18 +644,14 @@ Example 3<div class="sd-summary-down docutils">
 <p>Which strategy is best for maximizing the chance of finding treasure on the next island?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Treasure Hunt <div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Treasure Hunt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Listing the ways:</p>
 <p class="sd-card-text">The first island must either be 3, 4, or 5. Following the counter-clockwise current, the next must be either 4, 5, or 1. These contain no treasure, no treasure, and treasure, respectively. That results in a 33% chance of finding treasure on the next island.</p>
 <p class="sd-card-text">If we follow the random current. Each island is equally likely. Two of the five contain treasure, so there is a 40% chance of finding treasure. It’s better to steer into the random current.</p>
 </div>
 </details></section>
 <section id="binomial-formula">
-<h2>Binomial Formula<a class="headerlink" href="#binomial-formula" title="Permalink to this heading">#</a></h2>
+<h2>Binomial Formula<a class="headerlink" href="#binomial-formula" title="Link to this heading">#</a></h2>
 <p>Better than listing the ways and then counting is applying (and ideally understanding) a formula.</p>
 <p>Take the example of coin flipping. How often will three coin flips come up with just one heads? For a fair coin, this will happen with probability <span class="math notranslate nohighlight">\(\frac{3}{8}\)</span>. Why? There are eight outcomes of equal chance and three of those outcomes include just one heads. Before, we arrived at knowing there were three ways to get a sequence of one heads and two tails by simply listing the ways. We can instead use the <strong>binomial coefficient</strong>, sometimes written <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span>.</p>
 <p>The binomial coefficient says how many ways you can choose <span class="math notranslate nohighlight">\(k\)</span> elements from <span class="math notranslate nohighlight">\(n\)</span> choices if the order doesn’t matter.</p>
@@ -663,13 +665,13 @@ Treasure Hunt <div class="sd-summary-down docutils">
 \[\binom{n}{k} = \frac{n!}{k!(n-k)!}.\]</div>
 <p>You can also find it using Pascal’s Triangle. The triangle is arranged in horizontal levels corresponding to <span class="math notranslate nohighlight">\(n\)</span>. Then count over to the <span class="math notranslate nohighlight">\(k^\text{th}\)</span> item in the row. Just remember the row starts at <span class="math notranslate nohighlight">\(k=0\)</span>, because it’s possible to flip <span class="math notranslate nohighlight">\(k=0\)</span> heads out of <span class="math notranslate nohighlight">\(n\)</span> flips.</p>
 <figure class="align-default" id="pascaltri">
-<a class="reference internal image-reference" href="_images/pascaltri.svg"><img alt="_images/pascaltri.svg" src="_images/pascaltri.svg" width="52%" /></a>
+<a class="reference internal image-reference" href="_images/pascaltri.svg"><img alt="_images/pascaltri.svg" src="_images/pascaltri.svg" style="width: 52%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Pascal’s Triangle</span><a class="headerlink" href="#pascaltri" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Pascal’s Triangle</span><a class="headerlink" href="#pascaltri" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="binomial-coefficient-calculator">
-<h3>Binomial Coefficient Calculator<a class="headerlink" href="#binomial-coefficient-calculator" title="Permalink to this heading">#</a></h3>
+<h3>Binomial Coefficient Calculator<a class="headerlink" href="#binomial-coefficient-calculator" title="Link to this heading">#</a></h3>
 <p>For large enough values of <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(k\)</span>, don’t try to be a hero. Just use a calculator.</p>
 <div style="text-align: center;">
     <label for="nValue">n: </label>
@@ -705,11 +707,7 @@ function binomialCoefficient(n, k) {
 <p><strong>Example</strong>: (Simplified from <a class="reference external" href="https://datacolada.org/114">Data Colada 114</a>) It is alleged that the result of a paper is fraudulent. Investigators flag 8 of 101 observations as fishy. An independent firm finds that 8 observations were likely tampered with. If both parties flag the same 8 observations, what is the probability that this would happen by random chance?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Fraud<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Fraud</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[1 / \binom{101}{8}.\]</div>
 <p class="sd-card-text">The denominator is how many ways the investigators could flag eight observations. The numerator shows there is only one way the investigators could identify the same eight.</p>
@@ -717,11 +715,7 @@ Fraud<div class="sd-summary-down docutils">
 </details><p><strong>Harder Example</strong>: (Based on <a class="reference external" href="https://datacolada.org/114">Data Colada 114</a>) It is alleged that the result of a paper is fraudulent. Investigators flag 8 of 101 observations as fishy. An independent firm finds that 11 observations were likely tampered with. If the original 8 are among the 11, what is the probability that this would happen by random chance?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Fraud (harder)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Fraud (harder)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">This is about one in a billion,</p>
 <div class="math notranslate nohighlight">
 \[\binom{11}{8} / \binom{101}{8}.\]</div>
@@ -729,7 +723,7 @@ Fraud (harder)<div class="sd-summary-down docutils">
 </div>
 </details></section>
 <section id="id5">
-<h3>Binomial Formula<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3>Binomial Formula<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>The binomial coefficient is just a preliminary step toward the binomial formula. The <strong>binomial formula</strong> gives the probability that you will flip exactly <span class="math notranslate nohighlight">\(k\)</span> heads in <span class="math notranslate nohighlight">\(n\)</span> independent flips of a coin with a probability <span class="math notranslate nohighlight">\(p\)</span> of a single flip being heads (<span class="math notranslate nohighlight">\(p=0.5\)</span> for a fair coin). The formula is</p>
 <div class="math notranslate nohighlight">
 \[ \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}.\]</div>
@@ -737,22 +731,14 @@ Fraud (harder)<div class="sd-summary-down docutils">
 <p><strong>Example</strong>: A trick coin comes up heads with probability <span class="math notranslate nohighlight">\(p = \frac{2}{3}\)</span>. Out of four flips, what is the probability of two heads?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Two heads<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Two heads</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[ \binom{4}{2} p^2 (1-p)^2 = 6 \cdot \frac{4}{9} \cdot \frac{1}{9} = \frac{24}{81} = \frac{8}{27}\]</div>
 </div>
 </details><p>What is the probability of three or more heads?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Three or four heads<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Three or four heads</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Three and four heads are mutually exclusive events, so we can sum probabilities,</p>
 <div class="math notranslate nohighlight">
 \[ 4 \times p^3 (1-p)^1 +  1 \times p^4\]</div>
@@ -762,17 +748,17 @@ Three or four heads<div class="sd-summary-down docutils">
 </details></section>
 </section>
 <section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
 <div class="exercise admonition" id="battleship">
 
-<p class="admonition-title"><span class="caption-number">Exercise 26 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 27 </span></p>
 <section id="exercise-content">
 <p>Alice is a <a class="reference external" href="https://en.wikipedia.org/wiki/Battleship_(game)">Battleship</a> grandmaster. Her secret is that if she lands a hit on spot B2, she will follow that up with B3 instead of a random spot like E12. Explain why this is a good strategy using the language of independence and dependence.</p>
 </section>
 </div>
 <div class="exercise admonition" id="carnival">
 
-<p class="admonition-title"><span class="caption-number">Exercise 27 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 28 </span></p>
 <section id="exercise-content">
 <p>A carnival game is done according to the rules:</p>
 <ul class="simple">
@@ -781,9 +767,9 @@ Three or four heads<div class="sd-summary-down docutils">
 <li><p>The player can choose if the draws are done with or without replacement.</p></li>
 </ul>
 <figure class="align-default" id="box123">
-<a class="reference internal image-reference" href="_images/box123.svg"><img alt="_images/box123.svg" height="35px" src="_images/box123.svg" /></a>
+<a class="reference internal image-reference" href="_images/box123.svg"><img alt="_images/box123.svg" src="_images/box123.svg" style="height: 35px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 40 </span><span class="caption-text">The carnival box.</span><a class="headerlink" href="#box123" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">The carnival box.</span><a class="headerlink" href="#box123" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple">
@@ -796,7 +782,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="conditional">
 
-<p class="admonition-title"><span class="caption-number">Exercise 28 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 29 </span></p>
 <section id="exercise-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be independent. Which of these sums is equal to one? What if they are not independent?</p>
 <ul class="simple">
@@ -807,7 +793,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="linda">
 
-<p class="admonition-title"><span class="caption-number">Exercise 29 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 30 </span></p>
 <section id="exercise-content">
 <p>(From <span id="id6">[<a class="reference internal" href="bibliography.html#id27" title="Amos Tversky and Daniel Kahneman. Extensional versus intuitive reasoning: the conjunction fallacy in probability judgment. Psychological review, 90(4):293, 1983.">TK83</a>]</span>) Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations. Which is more probable?</p>
 <ul class="simple">
@@ -818,7 +804,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="bday">
 
-<p class="admonition-title"><span class="caption-number">Exercise 30 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 31 </span></p>
 <section id="exercise-content">
 <p>(Use a calculator) Ignore leap day and assume that all birthdays are equally likely and independent. What is the probability that, of 365 people, nobody is born on June 1st?</p>
 <p>(Hard) What is the probability that, of 40 people, no two people share the same birthday?</p>
@@ -826,7 +812,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="glee">
 
-<p class="admonition-title"><span class="caption-number">Exercise 31 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 32 </span></p>
 <section id="exercise-content">
 <p>Which of these is not found with a binomial coefficient <span class="math notranslate nohighlight">\(\binom{3}{2}\)</span>?</p>
 <p>A. The number of ways you can have two co-presidents of a three-person Glee Club?</p>
@@ -835,7 +821,7 @@ Three or four heads<div class="sd-summary-down docutils">
 </div>
 <div class="exercise admonition" id="ncaa">
 
-<p class="admonition-title"><span class="caption-number">Exercise 32 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 33 </span></p>
 <section id="exercise-content">
 <p><em>Skip this question if you’re not familiar with March Madness brackets.</em> The men’s basketball NCAA tournament begins with 64 teams. How many different final fours are possible?</p>
 <p>a.) <span class="math notranslate nohighlight">\(\binom{64}{4}\)</span> <br>
@@ -845,11 +831,11 @@ c.) Less than <span class="math notranslate nohighlight">\(\binom{64}{4}\)</span
 </div>
 <div class="exercise admonition" id="turnout">
 
-<p class="admonition-title"><span class="caption-number">Exercise 33 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 34 </span></p>
 <section id="exercise-content">
 <p>In the USA, there are more registered Democrats than Republicans and Republicans tend to have higher voter turnout rates. Suppose there are just 3 Democrats and 2 Republicans who always vote for their party if they vote. Suppose all turnout decisions are independent.</p>
 <p>a.) Suppose each Democrat votes with a 50% chance. What is the probability that 3 Democrats vote? 2 Democrats? 1 Democrat? 0 Democrats?</p>
-<p>b.) Suppose each Republican votes with a 75% chance and Democrats vote with a 50% chance. What is the probability that the Democrats win?</p>
+<p>b.) Suppose each Republican votes with a 75% chance and Democrats vote with a 50% chance. What is the probability that the Democrats win, excluding ties or tiebreakers?</p>
 <p>c.) Suppose that early voting is introduced. Each person can only vote once but they can vote on day 1 or on day 2. Democrats remember to vote with a 50% chance on each day. Republicans remember to vote with a 75% chance on each day. Someone doesn’t vote if they forget on both days and they vote otherwise. Does the probability that Democrats win increase or decrease?</p>
 <p>d.) Assume both parties only care about winning. Which party would prefer to allow early voting?</p>
 </section>
@@ -884,7 +870,7 @@ c.) Less than <span class="math notranslate nohighlight">\(\binom{64}{4}\)</span
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -913,6 +899,7 @@ c.) Less than <span class="math notranslate nohighlight">\(\binom{64}{4}\)</span
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -964,7 +951,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -988,8 +975,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

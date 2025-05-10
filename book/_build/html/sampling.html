@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Sampling &#8212; Intro Stats</title>
   
@@ -15,49 +14,47 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6cc0049f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-32DRGZQWDG"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -65,16 +62,20 @@
                 gtag('js', new Date());
                 gtag('config', 'G-32DRGZQWDG');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-32DRGZQWDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sampling';</script>
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Confidence Intervals" href="confidenceintervals.html" />
@@ -88,28 +89,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -131,12 +127,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -152,6 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -170,7 +176,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -230,6 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="solutions.html">Selected Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="midterm1.html">Midterms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 
@@ -246,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +273,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -387,10 +405,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -398,14 +416,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -448,10 +466,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sampling">
-<span id="id1"></span><h1>Sampling<a class="headerlink" href="#sampling" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>Sampling<a class="headerlink" href="#sampling" title="Link to this heading">#</a></h1>
 <div class="seealso admonition">
 <p class="admonition-title">Important Readings</p>
 <ul class="simple">
@@ -459,7 +477,7 @@ document.write(`
 </ul>
 </div>
 <section id="sample-surveys">
-<h2>Sample Surveys<a class="headerlink" href="#sample-surveys" title="Permalink to this heading">#</a></h2>
+<h2>Sample Surveys<a class="headerlink" href="#sample-surveys" title="Link to this heading">#</a></h2>
 <p>Researchers are often interested in <strong>populations</strong>. This is the group of individuals to which the research aims to generalize. The numerical facts of interest are called <strong>parameters</strong>. Maybe you want to know the average lifespan of owls. The parameter of interest is the average lifespan. The population of interest is all owls.</p>
 <p>Of course, the leading owl experts don’t study every single owl. Nearly all researchers work with <strong>samples</strong>, or some subset of the larger population. One could estimate the average lifespan of owls from a sample, but this wouldn’t be a parameter. We reserve parameter as a term for populations. Instead the sample average is a <strong>statistic</strong> meant to estimate the population parameter. The statistic will be a good estimate when the sample is representative.</p>
 <p>In practice, finding a good sample statistic is difficult. There are nuances that require domain knowledge. For example, how will you find the owls? In surveys of people, there’s no guarantee that someone will respond and, even if they do, they might not respond truthfully. When using surveys, we can imagine three hurdles:</p>
@@ -473,8 +491,8 @@ document.write(`
 <p>The pollster might have a smarter colleague who assembles a list of names that is truly representative of all voters. The next hurdle is getting responses. If a phone survey is used, there will be many who don’t answer. This is a problem <em>if</em> those who don’t respond are systematically different than those who do respond. In fact, old people are usually more available and willing to answer the phone, potentially leading to bias. A systematic difference between respondents and non-respondents is called <strong>non-response bias</strong>.</p>
 <p>The specific problem of an unrepresentative distribution of ages in a sample can be solved by using <strong>quota sampling</strong>. In quota sampling, the sample is constructed to resemble the population of interest with respect to key characteristics. This can help, but it doesn’t guarantee representativeness because not all important characteristics can be understood.</p>
 <p><strong>Example</strong>: Imagine we want to estimate the public’s satisfaction with the US Postal Service. Opinions differ by age and by their curmudgeonliness. Perhaps older people like USPS more, but curmudgeons will not like USPS regardless of age <em>and</em> curmudgeons will not respond. It’s easy to quota sample based on age, and a quota sample will result in an average satisfaction rating of 9 based on <a class="reference internal" href="#age-curmudg-table"><span class="std std-numref">Table 11</span></a>. This is better than not using quota sampling and constructing a sample that overrepresents older non-curmudgeons. However, the true average rating is 7. Quota sampling can’t give a good estimate of the actual population parameter because quotas for old or young people will systematically exclude curmudgeons.</p>
-<table class="table" id="age-curmudg-table">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">Average USPS Satisfaction by Age and Curmudgeonliness</span><a class="headerlink" href="#age-curmudg-table" title="Permalink to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="age-curmudg-table">
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Average USPS Satisfaction by Age and Curmudgeonliness</span><a class="headerlink" href="#age-curmudg-table" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>Bottom 50% Age</p></th>
@@ -492,13 +510,14 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>The last hurdle in surveying is getting truthful responses. People might provide socially acceptable answers instead of truthful answers, especially when the survey involves talking to an actual person. Answers can be influenced by the wording of questions. These phenomena all fall under the umbrella of <strong>response bias</strong>.</p>
 <p>The Trafalgar Group is an opinion polling company, notable for predicting that Donald Trump would win the 2016 US presidential election while most polls were wrong. One proposed explanation for why so many polls were wrong is the theory of the “shy Trump voter.” A shy Trump voter is someone who voted for Trump but indicated the opposite to pollsters, motivated by fear of social stigma. This is a case of response bias and correcting for it requires some artifice. The Trafalgar group attempted to account for that by asking respondents how they think their neighbors will vote.</p>
 <section id="non-response-in-the-american-time-use-survey">
-<h3>Non-response in the American Time Use Survey<a class="headerlink" href="#non-response-in-the-american-time-use-survey" title="Permalink to this heading">#</a></h3>
+<h3>Non-response in the American Time Use Survey<a class="headerlink" href="#non-response-in-the-american-time-use-survey" title="Link to this heading">#</a></h3>
 <p><span id="id3">[<a class="reference internal" href="bibliography.html#id61" title="Katharine G Abraham, Aaron Maitland, and Suzanne M Bianchi. Nonresponse in the american time use survey: who is missing from the data and how much does it matter? International Journal of Public Opinion Quarterly, 70(5):676–703, 2006.">AMB06</a>]</span> reports different response rates for the American Time Use Survey, partially reproduced in <a class="reference internal" href="#atusresprates"><span class="std std-numref">Table 12</span></a>. The differing response rates present a minefield for researchers.</p>
-<table class="table" id="atusresprates">
-<caption><span class="caption-number">Table 12 </span><span class="caption-text">2004 ATUS Response Rates (Table 2 from [AMB06])</span><a class="headerlink" href="#atusresprates" title="Permalink to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="atusresprates">
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">2004 ATUS Response Rates (Table 2 from [AMB06])</span><a class="headerlink" href="#atusresprates" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Variable</p></th>
 <th class="head"><p>Number in Sample</p></th>
@@ -584,16 +603,17 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>Differing response rates can be accounted for with statistical corrections, but the researcher can’t necessarily be confident in their results just by looking at the data. While different demographic groups can be reweighted when calculating a statistic, the features of non-respondents can never be fully known. The decline in response rates for important household surveys has caused some concern regarding the quality of this data.</p>
 <figure class="align-default" id="household-survey-respons">
-<a class="reference internal image-reference" href="_images/household-survey-respons.svg"><img alt="_images/household-survey-respons.svg" src="_images/household-survey-respons.svg" width="80%" /></a>
+<a class="reference internal image-reference" href="_images/household-survey-respons.svg"><img alt="_images/household-survey-respons.svg" src="_images/household-survey-respons.svg" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Source: <a class="reference external" href="https://www.bls.gov/osmr/response-rates/">Bureau of Labor Statistics</a></span><a class="headerlink" href="#household-survey-respons" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Source: <a class="reference external" href="https://www.bls.gov/osmr/response-rates/">Bureau of Labor Statistics</a></span><a class="headerlink" href="#household-survey-respons" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="probability-methods">
-<h3>Probability Methods<a class="headerlink" href="#probability-methods" title="Permalink to this heading">#</a></h3>
+<h3>Probability Methods<a class="headerlink" href="#probability-methods" title="Link to this heading">#</a></h3>
 <p>A good sample is representative of the population of interest. Like in experiments, the best way to ensure representativeness is to use randomization. A <strong>simple random sample</strong> is one drawn at random without replacement. When feasible, this is a good method. Feasibility requires there’s some big list of names to draw from. For people who will vote in the next election, there is no such list. So, political polling is complicated and the nuts and bolts are beyond our scope.</p>
 <p>Note that probability methods are important regardless of the sample size. An estimate can be decomposed as</p>
 <div class="math notranslate nohighlight">
@@ -602,18 +622,18 @@ document.write(`
 </section>
 </section>
 <section id="chance-errors-in-sampling">
-<h2>Chance Errors in Sampling<a class="headerlink" href="#chance-errors-in-sampling" title="Permalink to this heading">#</a></h2>
+<h2>Chance Errors in Sampling<a class="headerlink" href="#chance-errors-in-sampling" title="Link to this heading">#</a></h2>
 <p>In this section, we put aside most issues of bias and try to understand the chance error for a sample statistic.</p>
 <section id="expected-value-and-se">
-<h3>Expected Value and SE<a class="headerlink" href="#expected-value-and-se" title="Permalink to this heading">#</a></h3>
+<h3>Expected Value and SE<a class="headerlink" href="#expected-value-and-se" title="Link to this heading">#</a></h3>
 <p>Percentages are a focal population parameter and thus a focal sample statistic. What percentage of Columbia students want a TikTok ban? What percentage of Peloton members have an Apple Watch? What percentage of Uber customers also use Lyft? Etc. This sort of question can be answered with a simple random sample. With a simple random sample, the expected value for the sample percentage equals the poulation percentage. This means there is no bias, but it doesn’t rule out chance error.</p>
 <section id="finding-the-right-se">
-<span id="ptonsample"></span><h4>Finding the right SE<a class="headerlink" href="#finding-the-right-se" title="Permalink to this heading">#</a></h4>
+<span id="ptonsample"></span><h4>Finding the right SE<a class="headerlink" href="#finding-the-right-se" title="Link to this heading">#</a></h4>
 <p>Let’s take the example of finding what percentage of Peloton members have an Apple Watch. Before building an app for the watchOS, a smart business will first “size” the opportunity by estimating how many members have a watch.</p>
 <figure class="align-default" id="boxapplewatch">
-<a class="reference internal image-reference" href="_images/boxapplewatch.svg"><img alt="_images/boxapplewatch.svg" src="_images/boxapplewatch.svg" width="61%" /></a>
+<a class="reference internal image-reference" href="_images/boxapplewatch.svg"><img alt="_images/boxapplewatch.svg" src="_images/boxapplewatch.svg" style="width: 61%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 48 </span><span class="caption-text">The box represents a simplification where 40 members of a population of 100 members have an Apple Watch.</span><a class="headerlink" href="#boxapplewatch" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">The box represents a simplification where 40 members of a population of 100 members have an Apple Watch.</span><a class="headerlink" href="#boxapplewatch" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Suppose, as indicated by <a class="reference internal" href="#boxapplewatch"><span class="std std-numref">Fig. 48</span></a>, there are 100 Peloton members and, though Peloton doesn’t know it, 40 of them have an Apple Watch.</p>
@@ -647,10 +667,10 @@ document.write(`
 </section>
 </section>
 <section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
 <div class="exercise admonition" id="incentivesurvey">
 
-<p class="admonition-title"><span class="caption-number">Exercise 41 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 42 </span></p>
 <section id="exercise-content">
 <p>A user researcher at a large ecommerce company wants to have a representative sample of its users take a survey.</p>
 <ol class="arabic simple">
@@ -662,14 +682,14 @@ document.write(`
 </div>
 <div class="exercise admonition" id="netflix">
 
-<p class="admonition-title"><span class="caption-number">Exercise 42 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 43 </span></p>
 <section id="exercise-content">
 <p>Netflix replaced the original 1-5 star moving-rating system with a thumbs up/thumbs down scale. The goal was to have users rate more movies so they could increase the quality of their recommendations. Is this change better explained as an effort to combat selection bias, response bias, or non-response bias?</p>
 </section>
 </div>
 <div class="exercise admonition" id="rivera">
 
-<p class="admonition-title"><span class="caption-number">Exercise 43 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 44 </span></p>
 <section id="exercise-content">
 <p><span id="id4">[<a class="reference internal" href="bibliography.html#id41" title="Lauren A Rivera and András Tilcsik. Scaling down inequality: rating scales, gender bias, and the architecture of evaluation. American Sociological Review, 84(2):248–274, 2019.">RT19</a>]</span> finds that “that the number of scale points used in faculty teaching evaluations—whether instructors were rated on a scale of 6 versus a scale of 10—significantly affected the size of the gender gap in evaluations in the most male-dominated fields.” That is, women receive better ratings relative to men when rated out of 6 instead of out of 10. Is this difference, driven by the scales, better explained by selection bias, response bias, or non-response bias?</p>
 </section>
@@ -704,7 +724,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -733,6 +753,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -777,7 +798,7 @@ By Alexander Clark, Columbia University
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -801,8 +822,8 @@ By Alexander Clark, Columbia University
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
