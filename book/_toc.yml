@@ -54,4 +54,5 @@ parts:
 - caption: Other
   chapters:
     - file: solutions
+    - file: midterm1
     - file: other
