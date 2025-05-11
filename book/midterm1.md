@@ -13,3 +13,17 @@ Download the PDF
        type="application/pdf"
        width="100%" height="900px">
 ```
+
+## Midterm Exam II (Spring 2024)
+
+```{download} _static/exams/midterm2_2024s.pdf
+:class: btn btn-primary
+
+Download the PDF
+```
+
+```{raw} html
+<embed src="_static/exams/midterm2_2024s.pdf"
+       type="application/pdf"
+       width="100%" height="900px">
+```
