@@ -28,6 +28,7 @@ Requirement already satisfied: cffi>=1.15.1 in /opt/hostedtoolcache/Python/3.11.
 Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.11.12/x64/lib/python3.11/site-packages (from rpy2) (3.1.6)
 Requirement already satisfied: tzlocal in /opt/hostedtoolcache/Python/3.11.12/x64/lib/python3.11/site-packages (from rpy2) (5.3.1)
 Requirement already satisfied: pycparser in /opt/hostedtoolcache/Python/3.11.12/x64/lib/python3.11/site-packages (from cffi>=1.15.1->rpy2) (2.22)
+----- stdout -----
 Requirement already satisfied: MarkupSafe>=2.0 in /opt/hostedtoolcache/Python/3.11.12/x64/lib/python3.11/site-packages (from jinja2->rpy2) (3.0.2)
 ----- stderr -----
 Unable to determine R home: [Errno 2] No such file or directory: 'R'
