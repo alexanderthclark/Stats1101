@@ -1,69 +1,19 @@
-
-.ipynb_checkpoints/Untitled-checkpoint.ipynb
-Data/Spotify/.ipynb_checkpoints/spotify-api-checkpoint.ipynb
-book/.ipynb_checkpoints/thehistogram-checkpoint.ipynb
-book/.ipynb_checkpoints/Untitled-checkpoint.ipynb
-Data/DataColada98/.ipynb_checkpoints/Mileage Distributions-checkpoint.ipynb
-Data/DataColada98/.ipynb_checkpoints/MileageDistributions-checkpoint.ipynb
-book/.ipynb_checkpoints/pycalculator-checkpoint.ipynb
-book/.ipynb_checkpoints/pylibs-checkpoint.ipynb
-book/.ipynb_checkpoints/statwrap0-checkpoint.ipynb
+# Ignore log files and LaTeX aux files
 *.log
 *.aux
-book/.ipynb_checkpoints/Rbasics-checkpoint.ipynb
-Data/NOS/.ipynb_checkpoints/NOS-checkpoint.ipynb
-Data/Artists/.ipynb_checkpoints/Artists-checkpoint.ipynb
-Data/covid/.ipynb_checkpoints/StateAgeDemographics-checkpoint.ipynb
+
+# Data file not tracked
 Data/covid/HET_age_and_state_data.csv
-helpers/.ipynb_checkpoints/thehistogramHelper-checkpoint.ipynb
-helpers/.ipynb_checkpoints/centerSpreadHelper-checkpoint.ipynb
+
+# Compressed files
 *.gz
-Data/ATUS/.ipynb_checkpoints/ATUS-activity-summary-checkpoint.ipynb
-book/.ipynb_checkpoints/normalplot-checkpoint.ipynb
-book/.ipynb_checkpoints/plot_applet-checkpoint.ipynb
-book/.ipynb_checkpoints/normal-checkpoint.ipynb
-helpers/.ipynb_checkpoints/normalHelper-checkpoint.ipynb
-helpers/.ipynb_checkpoints/correlationHelper-checkpoint.ipynb
+
+# Temporary file
 book/normal0.md
-book/normal0.md
-book/.ipynb_checkpoints/correlation-checkpoint.ipynb
-helpers/.ipynb_checkpoints/regressionHelper-checkpoint.ipynb
-Data/ATUS/.ipynb_checkpoints/atus looking for high correlation-checkpoint.ipynb
-book/.ipynb_checkpoints/regression-checkpoint.ipynb
-book/.ipynb_checkpoints/correlation-checkpoint.ipynb
-book/.ipynb_checkpoints/correlation-checkpoint.ipynb
-book/.ipynb_checkpoints/correlation-checkpoint.ipynb
-book/.ipynb_checkpoints/statwrapregression-checkpoint.ipynb
-book/.ipynb_checkpoints/Homework5 Complete-checkpoint.ipynb
-book/.ipynb_checkpoints/Homework05lab-checkpoint.ipynb
-book/.ipynb_checkpoints/Homework5-checkpoint.ipynb
-helpers/.ipynb_checkpoints/ATUShelp-checkpoint.ipynb
-helpers/.ipynb_checkpoints/probabilityHelper-checkpoint.ipynb
-book/.ipynb_checkpoints/statwrapregression-checkpoint.ipynb
-Data/.ipynb_checkpoints/Prosocial Friends-checkpoint.ipynb
-Data/.ipynb_checkpoints/SimulatedDataGroupProjectDynamics-checkpoint.ipynb
-Data/.ipynb_checkpoints/SongLyrics-checkpoint.ipynb
-helpers/.ipynb_checkpoints/chancehelper-checkpoint.ipynb
-helpers/.ipynb_checkpoints/confidenceIntervalHelper-checkpoint.ipynb
-helpers/.ipynb_checkpoints/hypothesisTestingHelper-checkpoint.ipynb
-book/.ipynb_checkpoints/hypothesisTestingbeta-checkpoint.ipynb
-book/.ipynb_checkpoints/hypothesisTestingbeta-checkpoint.ipynb
-book/.ipynb_checkpoints/hypothesisTestingbeta-checkpoint.ipynb
-book/.ipynb_checkpoints/hypothesistesting-checkpoint.ipynb
-book/.ipynb_checkpoints/hypothesistesting-checkpoint.ipynb
-book/.ipynb_checkpoints/hypothesistesting-checkpoint.ipynb
-book/.ipynb_checkpoints/chi2-checkpoint.ipynb
-helpers/.ipynb_checkpoints/chi2helper-checkpoint.ipynb
-Data/.ipynb_checkpoints/TSwiftSongsAndLyrics-checkpoint.ipynb
-book/.ipynb_checkpoints/power-checkpoint.ipynb
-helpers/.ipynb_checkpoints/powerHelper-checkpoint.ipynb
-book/.ipynb_checkpoints/more-checkpoint.ipynb
-helpers/.ipynb_checkpoints/moreHelper-checkpoint.ipynb
-book/.ipynb_checkpoints/more-checkpoint.ipynb
-book/.ipynb_checkpoints/correlation-checkpoint.ipynb
+
+# Ignore Jupyter notebook checkpoints
+**/.ipynb_checkpoints/
 
 # Ignore build artefacts & OS cruft
 **/_build/
 .DS_Store
-**/_build/
-**/_build/
