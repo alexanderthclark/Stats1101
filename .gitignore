@@ -17,3 +17,7 @@ book/normal0.md
 # Ignore build artefacts & OS cruft
 **/_build/
 .DS_Store
+
+# System caches and OS files
+**/.DS_Store
+**/.cache
