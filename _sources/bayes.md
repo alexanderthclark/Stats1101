@@ -37,7 +37,7 @@ Trees are especially helpful when the probability of a second event (like the le
 ```
 
 
-What is the probability that a word starts with Qu? Follow the appropriate path in the probability tree and multiply the probabilities as you go. Above, that is $\frac{1}{26}\times 1 = \frac{1}{26}$. What is the probability of a word starting with a letter othan than Q and the second letter being U? The answer is $\frac{25}{26} \times \frac{1}{26} = \frac{25}{676}$. 
+What is the probability that a word starts with Qu? Follow the appropriate path in the probability tree and multiply the probabilities as you go. Above, that is $\frac{1}{26}\times 1 = \frac{1}{26}$. What is the probability of a word starting with a letter other than Q and the second letter being U? The answer is $\frac{25}{26} \times \frac{1}{26} = \frac{25}{676}$.
 
 ## Bayes' Theorem
 
@@ -51,7 +51,7 @@ Isolating the conditional probability on the left, we have **Bayes' Theorem**, i
 
 $$\mathbb{P}(A \mid B) = \frac{\mathbb{P}(B \mid A) \mathbb{P}(A)}{\mathbb{P}(B)}.$$
 
-Note, we could rewrite this by combining the terms in the numerator or by by expanding the denominator. For the latter, the expansion uses the fact that $\mathbb{P}(B) = \mathbb{P}(B\text{ and }A) + \mathbb{P}(B\text{ and not }A)$.
+Note, we could rewrite this by combining the terms in the numerator or by expanding the denominator. For the latter, the expansion uses the fact that $\mathbb{P}(B) = \mathbb{P}(B\text{ and }A) + \mathbb{P}(B\text{ and not }A)$.
 
  $$\mathbb{P}(A \mid B)  = \frac{\mathbb{P}(A\text{ and }B)}{\mathbb{P}(B)} $$
  

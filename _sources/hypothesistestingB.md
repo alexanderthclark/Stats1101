@@ -22,7 +22,7 @@ Hypothesis testing touches on philosophy in at least two points. First, this sor
 
 Second, the practice of hypothesis testing involves favoring the null hypothesis. When we fail to reject a null of $p = 0.5$, it might also be true that we would fail to reject $p=0.51$. The deference to the null might seem arbitrary, but it's not arbitrary when we can choose it according to the *principle of parsimony*. A parsimonious model is one with few complications. Parsimony need not be decisive, but it is generally preferred. You might counter that a flat-earth theory is simpler than a round-earth theory; however, flat-earth theory quickly becomes more complicated than round-earth theory once you have to start explaining satellite images. Similarly, hypothesizing a coin to be fair seems more appropriate than picking a particular bias for heads or tails.
 
-Parsimony also guards against apophenia, or the "human propensity to seek patterns in random information." People claim to see the the Virgin Mary in a piece of toast, etc. You might find this outlandish just as others might find your beliefs outlandish. Your beliefs and faith need not alwyays impose the same constraints, but the more parsimonious view would favor the explanation that does not make supernatural claims.
+Parsimony also guards against apophenia, or the "human propensity to seek patterns in random information." People claim to see the Virgin Mary in a piece of toast, etc. You might find this outlandish just as others might find your beliefs outlandish. Your beliefs and faith need not always impose the same constraints, but the more parsimonious view would favor the explanation that does not make supernatural claims.
 
 
 ## Proportions
@@ -86,7 +86,7 @@ The second lends itself better to a one-sided test because we have reason to thi
 
 Following our textbook, {cite}`freedman2007statistics`, we won't go into the exact procedure for a two-tailed test. A rejection region is the range of test statistic values where the P-value would be low enough so that the null hypothesis is rejected. In the two-tailed case, the rejection region is in two pieces. Using a 95% confidence level, the area over the rejection region is 5% with 2.5% in each piece. 
 
-If we instead used a one-tailed alternative that $p>\frac{1}{3}$, the rejection region would be contained only on the right. That would *not* increase the total rejection region area, but it increase the area on the right side. If the the statistic $z>0$, then we end up rejecting the null more often. For this reason, one-sided tests are often considered to be more liberal ({cite}`abelson2012statistics}`).
+If we instead used a one-tailed alternative that $p>\frac{1}{3}$, the rejection region would be contained only on the right. That would *not* increase the total rejection region area, but it increases the area on the right side. If the statistic $z>0$, then we end up rejecting the null more often. For this reason, one-sided tests are often considered to be more liberal ({cite}`abelson2012statistics}`).
 
 ```{figure} images/twosidedHT.svg
 ---
