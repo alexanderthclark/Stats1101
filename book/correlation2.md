@@ -36,7 +36,7 @@ There is a positive association between a father's height and his son's height. 
 ```
 
 
-The variable on the $x$-axis is thought of as the **independent variable** and the $y$-axis variable is the **dependent variable**. This language suggests that the $x$ variable is the one influencing the $y$, as if there's a direction of causality being hypothesized. In this class, we have learned to be cautious in claiming causality. Go ahead and choose one variable as the independent variable and the other as the dependent without too much angst or hesitation. Just be ready to be humbled if you ultimately find the there is no causal relationship or if you get the direction backwards. 
+The variable on the $x$-axis is thought of as the **independent variable** and the $y$-axis variable is the **dependent variable**. This language suggests that the $x$ variable is the one influencing the $y$, as if there's a direction of causality being hypothesized. In this class, we have learned to be cautious in claiming causality. Go ahead and choose one variable as the independent variable and the other as the dependent without too much angst or hesitation. Just be ready to be humbled if you ultimately find that there is no causal relationship or if you get the direction backwards. 
 
 
 For each of these two pairs, which variable would you choose as the independent variable? 

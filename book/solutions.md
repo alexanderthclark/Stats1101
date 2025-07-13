@@ -261,7 +261,7 @@ $$ \underbrace{\frac{1}{2}}_{a} \cdot \overbrace{1}^{b} + \underbrace{\frac{1}{2
 | Term | Probability of ... given $H$ on first draw               |
 |------|----------------------------------------------------------|
 | $a$  | box with two $H$s                                        |
-| $b$  | $H$ given two two-$H$ box                                |
+| $b$  | $H$ given two-$H$ box                                    |
 | $c$  | box with one $H$ and one $T$                             |
 | $d$  | $H$ given two one-$H$-one-$T$ box                        | 
 
