@@ -21,3 +21,6 @@ book/normal0.md
 # System caches and OS files
 **/.DS_Store
 **/.cache
+helpers/.jupyter/desktop-workspaces/default-37a8.jupyterlab-workspace
+*.jupyterlab-workspace
+book/.DS_Store

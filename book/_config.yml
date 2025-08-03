@@ -3,7 +3,19 @@
 
 title: Intro Stats
 author: Alexander Clark, Columbia University
+copyright: "2025"
+description: "An introduction to statistics course materials covering fundamental concepts, probability, hypothesis testing, and data analysis techniques."
 logo: images/statLogo.svg
+
+# SEO and metadata
+html_meta:
+  "description": "Learn introductory statistics with interactive Jupyter notebooks. Covers probability, hypothesis testing, regression, and statistical analysis with Python and R."
+  "keywords": "statistics, probability, hypothesis testing, data analysis, regression, jupyter book, python, R, columbia university"
+  "author": "Alexander Clark"
+  "og:title": "Intro Stats - Columbia University"
+  "og:description": "An introduction to statistics course materials covering fundamental concepts, probability, hypothesis testing, and data analysis techniques."
+  "og:type": "book"
+  "og:url": "https://alexanderthclark.github.io/Stats1101/"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -31,10 +43,19 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button: true
   theme: sphinx_book_theme
   extra_css: ["_static/custom.css"]
   favicon: ./_static/norm_favicon.ico
-  google_analytics_id: G-32DRGZQWDG
+  baseurl: "https://alexanderthclark.github.io/Stats1101/"
+  extra_footer: |
+    <p>
+    This version: {date}<br>
+    Built with <a href="https://jupyterbook.org">Jupyter Book</a>
+    </p>
+  analytics:
+    google_analytics_id: "G-32DRGZQWDG"
+  home_page_in_navbar: true
 
 
 launch_buttons:
@@ -43,10 +64,15 @@ launch_buttons:
   thebe                  : true
 
 sphinx:
+  config:
+    language: en
+    html_extra_path:
+      - _static
   extra_extensions:
     - sphinx_exercise
     - sphinx_togglebutton
     - sphinxcontrib.bibtex
+    - sphinx_sitemap
 
 thebe:
   repository_url: "https://github.com/alexanderthclark/Stats1101"
