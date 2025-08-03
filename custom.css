@@ -1,0 +1,8 @@
+div.exercise p.admonition-title::before {
+    content: none;
+}
+
+
+.admonition>.admonition-title:after, div.admonition>.admonition-title:after {
+    content: var(--pst-icon-pencil);
+}

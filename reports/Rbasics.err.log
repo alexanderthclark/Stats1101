@@ -30,15 +30,18 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 ------------------
 
 ----- stdout -----
-Requirement already satisfied: rpy2 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (3.6.1)
------ stdout -----
-Requirement already satisfied: rpy2-rinterface>=3.6.1 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from rpy2) (3.6.1)
+Requirement already satisfied: rpy2 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (3.6.2)
+Requirement already satisfied: rpy2-rinterface>=3.6.2 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from rpy2) (3.6.2)
 Requirement already satisfied: rpy2-robjects>=3.6.1 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from rpy2) (3.6.1)
-Requirement already satisfied: cffi>=1.15.1 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from rpy2-rinterface>=3.6.1->rpy2) (1.17.1)
-Requirement already satisfied: pycparser in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from cffi>=1.15.1->rpy2-rinterface>=3.6.1->rpy2) (2.22)
+Requirement already satisfied: cffi>=1.15.1 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from rpy2-rinterface>=3.6.2->rpy2) (1.17.1)
+Requirement already satisfied: pycparser in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from cffi>=1.15.1->rpy2-rinterface>=3.6.2->rpy2) (2.22)
 Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from rpy2-robjects>=3.6.1->rpy2) (3.1.6)
 Requirement already satisfied: tzlocal in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from rpy2-robjects>=3.6.1->rpy2) (5.3.1)
 Requirement already satisfied: MarkupSafe>=2.0 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from jinja2->rpy2-robjects>=3.6.1->rpy2) (3.0.2)
+----- stdout -----
+
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m25.1.1[0m[39;49m -> [0m[32;49m25.2[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
 ----- stderr -----
 Unable to determine R home: [Errno 2] No such file or directory: 'R'
 ----- stderr -----
@@ -123,22 +126,22 @@ Trying to import in ABI mode.
 [32m     14[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mrpy2[39;00m[34;01m.[39;00m[34;01mrinterface_lib[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m ffi_proxy
 [32m     15[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mrpy2[39;00m[34;01m.[39;00m[34;01mrinterface_lib[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m conversion
 
-[36mFile [39m[32m/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/rpy2/rinterface_lib/openrlib.py:83[39m
-[32m     81[39m     rlib = _rinterface_cffi.lib
-[32m     82[39m [38;5;28;01melse[39;00m:
-[32m---> [39m[32m83[39m     rlib = [43m_dlopen_rlib[49m[43m([49m[43mR_HOME[49m[43m)[49m
-[32m     86[39m [38;5;66;03m# R macros and functions[39;00m
-[32m     87[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_get_symbol_or_fallback[39m(symbol: [38;5;28mstr[39m, fallback: typing.Any):
+[36mFile [39m[32m/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/rpy2/rinterface_lib/openrlib.py:93[39m
+[32m     91[39m     rlib = _rinterface_cffi.lib
+[32m     92[39m [38;5;28;01melse[39;00m:
+[32m---> [39m[32m93[39m     rlib = [43m_dlopen_rlib[49m[43m([49m[43mR_HOME[49m[43m)[49m
+[32m     96[39m [38;5;66;03m# R macros and functions[39;00m
+[32m     97[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_get_symbol_or_fallback[39m(symbol: [38;5;28mstr[39m, fallback: typing.Any):
 
-[36mFile [39m[32m/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/rpy2/rinterface_lib/openrlib.py:70[39m, in [36m_dlopen_rlib[39m[34m(r_home)[39m
-[32m     66[39m [38;5;250m[39m[33;03m"""Open R's shared C library.[39;00m
-[32m     67[39m 
-[32m     68[39m [33;03mThis is only relevant in ABI mode."""[39;00m
-[32m     69[39m [38;5;28;01mif[39;00m r_home [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[32m---> [39m[32m70[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m'[39m[33mr_home is None. [39m[33m'[39m
-[32m     71[39m                      [33m'[39m[33mTry python -m rpy2.situation[39m[33m'[39m)
-[32m     72[39m lib_path = rpy2.situation.get_rlib_path(r_home, platform.system())
-[32m     73[39m [38;5;28;01mif[39;00m lib_path [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[36mFile [39m[32m/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/rpy2/rinterface_lib/openrlib.py:80[39m, in [36m_dlopen_rlib[39m[34m(r_home)[39m
+[32m     76[39m [38;5;250m[39m[33;03m"""Open R's shared C library.[39;00m
+[32m     77[39m 
+[32m     78[39m [33;03mThis is only relevant in ABI mode."""[39;00m
+[32m     79[39m [38;5;28;01mif[39;00m r_home [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[32m---> [39m[32m80[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m'[39m[33mr_home is None. [39m[33m'[39m
+[32m     81[39m                      [33m'[39m[33mTry python -m rpy2.situation[39m[33m'[39m)
+[32m     82[39m lib_path = rpy2.situation.get_rlib_path(r_home, platform.system())
+[32m     83[39m [38;5;28;01mif[39;00m lib_path [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
 
 [31mValueError[39m: r_home is None. Try python -m rpy2.situation
 
