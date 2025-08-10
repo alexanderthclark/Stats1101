@@ -44,6 +44,15 @@ Only the last choice fits the definition of an experiment. The first features as
 ```{solution-end}
 ```
 
+```{solution-start} rand
+:class: dropdown
+```
+
+A participant who anticipates high medical spending and more use of services is more likely to drop out if assigned to the less comprehensive plan. This could systematically remove high-use people from the less coverage plan. This will make it appear that the people in the more comprehensive plan use more medical services, but it cannot be attributed only to the insurance plan.
+
+```{solution-end}
+```
+
 ## [Observational Studies](observational_studies)
 
 ```{solution-start} medprog

@@ -24,3 +24,9 @@ book/normal0.md
 helpers/.jupyter/desktop-workspaces/default-37a8.jupyterlab-workspace
 *.jupyterlab-workspace
 book/.DS_Store
+
+# Homework folder
+homework2024s/
+
+# AI Assistant guidelines
+CLAUDE.md
