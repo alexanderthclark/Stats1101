@@ -50,7 +50,6 @@ html:
   baseurl: "https://alexanderthclark.github.io/Stats1101/"
   extra_footer: |
     <p>
-    This version: {date}<br>
     Built with <a href="https://jupyterbook.org">Jupyter Book</a>
     </p>
   analytics:
