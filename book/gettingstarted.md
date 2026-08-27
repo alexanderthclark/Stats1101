@@ -72,9 +72,8 @@ Use the data to develop a statistic that can be used to find the biggest one-hit
 
 Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
 using the identifiers below. Access may require an account or subscription.
-Links marked **spoilers** reveal answers or explanations.
+Explanation links marked **(spoilers)** reveal answers.
 
 - **PT148.S1.Q2** — [7Sage question](https://7sage.com/question/PT148.S1.Q2);
-  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=13115);
-  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-80/logical-reasoning-1/q-2/).
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-80/logical-reasoning-1/q-2/).
 ```

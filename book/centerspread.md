@@ -171,16 +171,12 @@ An illustration of possible networks with three, seven, and twelve members. The 
 
 Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
 using the identifiers below. Access may require an account or subscription.
-Links marked **spoilers** reveal answers or explanations.
+Explanation links marked **(spoilers)** reveal answers.
 
 - **PT155.S4.Q21** — [7Sage question](https://7sage.com/question/PT155.S4.Q21);
-  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=31655);
-  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-155/logical-reasoning-3/q-21/).
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-155/logical-reasoning-3/q-21/).
 - **PT128.S2.Q12** — [7Sage question](https://7sage.com/question/PT128.S2.Q12);
-  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=12880);
-  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-128/logical-reasoning/section-2/q-12/).
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-128/logical-reasoning/section-2/q-12/).
 - **PT119.S3.Q11** — [7Sage question](https://7sage.com/question/PT119.S3.Q11);
-  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=11486);
-  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-46/logical-reasoning-2/q-11/)
-  *(membership required)*.
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-46/logical-reasoning-2/q-11/).
 ```
