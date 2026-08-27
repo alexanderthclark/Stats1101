@@ -612,34 +612,18 @@ A data scientist at Peloton wants to see if a large number of users who are belo
 ```{exercise-end}
 ```
 
-### External statistical reasoning
-
-The following optional questions are hosted outside this book; their text and
-answer choices are not reproduced here. Choose an answer before viewing an
-explanation, then return for the follow-up.
-
-```{admonition} External question: PT121.S4.Q25
+```{admonition} Relevant LSAT Questions
 :class: note external-practice
 
-**Question access:** [PT121.S4.Q25 on 7Sage](https://7sage.com/question/PT121.S4.Q25)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 121, Section 4, Question 25. Access through either service
-may require sign-in and a LawHub Advantage subscription.
+Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
+using the identifiers below. Access may require an account or subscription.
+Links marked **spoilers** reveal answers or explanations.
 
-Identify the unit summarized by the evidence and the unit described by the
-conclusion. Explain what prevalence information or weights would be needed to
-move from one unit of analysis to the other.
-```
-
-```{admonition} External question: PT138.S4.Q9 (formerly PT60.S1.Q9)
-:class: note external-practice
-
-**Question access:** [PT138.S4.Q9 on 7Sage](https://7sage.com/question/PT138.S4.Q9)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 138, Section 4, Question 9. Access through either service
-may require sign-in and a LawHub Advantage subscription.
-
-Identify the classification rule that must remain constant before two reported
-percentages can be compared directly. Suggest one way researchers could check
-that the rule is being applied consistently.
+- **PT121.S4.Q25** — [7Sage question](https://7sage.com/question/PT121.S4.Q25);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=9214);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-48/logical-reasoning-2/q-25/)
+  *(membership required)*.
+- **PT138.S4.Q9** — [7Sage question](https://7sage.com/question/PT138.S4.Q9);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=10895);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-60/logical-reasoning-1/q-9/).
 ```

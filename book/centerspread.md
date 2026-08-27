@@ -166,48 +166,21 @@ An illustration of possible networks with three, seven, and twelve members. The 
 ```{exercise-end}
 ```
 
-### External statistical reasoning
-
-The following optional questions are hosted outside this book; their text and
-answer choices are not reproduced here. Choose an answer before viewing an
-explanation, then return for the follow-up.
-
-```{admonition} External question: PT155.S4.Q21
+```{admonition} Relevant LSAT Questions
 :class: note external-practice
 
-**Question access:** [PT155.S4.Q21 on 7Sage](https://7sage.com/question/PT155.S4.Q21)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 155, Section 4, Question 21. Access through either service
-may require sign-in and a LawHub Advantage subscription.
+Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
+using the identifiers below. Access may require an account or subscription.
+Links marked **spoilers** reveal answers or explanations.
 
-Let $w$ be the proportion of observations in the first group, and let $p_1$ and
-$p_2$ be the percentages in the first and second groups. Write the overall
-percentage as $w p_1 + (1-w)p_2$. Explain why the unreported group percentage
-must lie on a particular side of the overall percentage.
-```
-
-```{admonition} External question: PT128.S2.Q12
-:class: note external-practice
-
-**Question access:** [PT128.S2.Q12 on 7Sage](https://7sage.com/question/PT128.S2.Q12)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 128, Section 2, Question 12. Access through either service
-may require sign-in and a LawHub Advantage subscription.
-
-Construct two short lists with the same average but substantially different
-maximum values. Which summary is more relevant when the concern is crossing a
-dangerous threshold, and why?
-```
-
-```{admonition} External question: PT119.S3.Q11
-:class: note external-practice
-
-**Question access:** [PT119.S3.Q11 on 7Sage](https://7sage.com/question/PT119.S3.Q11)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 119, Section 3, Question 11. Access through either service
-may require sign-in and a LawHub Advantage subscription.
-
-Let $N$ be the number of groups and $r$ the average number of observations per
-group. Express the total number of observations using $N$ and $r$, then use the
-reported direction of change to justify your answer.
+- **PT155.S4.Q21** — [7Sage question](https://7sage.com/question/PT155.S4.Q21);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=31655);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-155/logical-reasoning-3/q-21/).
+- **PT128.S2.Q12** — [7Sage question](https://7sage.com/question/PT128.S2.Q12);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=12880);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-128/logical-reasoning/section-2/q-12/).
+- **PT119.S3.Q11** — [7Sage question](https://7sage.com/question/PT119.S3.Q11);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=11486);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-46/logical-reasoning-2/q-11/)
+  *(membership required)*.
 ```

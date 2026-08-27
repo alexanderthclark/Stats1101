@@ -232,47 +232,21 @@ Netflix replaced the original 1-5 star moving-rating system with a thumbs up/thu
 ```{exercise-end}
 ```
 
-### External statistical reasoning
-
-The following optional questions are hosted outside this book; their text and
-answer choices are not reproduced here. Choose an answer before viewing an
-explanation, then return for the follow-up.
-
-```{admonition} External question: PT131.S2.Q20 (formerly PT59.S2.Q20)
+```{admonition} Relevant LSAT Questions
 :class: note external-practice
 
-**Question access:** [PT131.S2.Q20 on 7Sage](https://7sage.com/question/PT131.S2.Q20)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 131, Section 2, Question 20. Access through either service
-may require sign-in and a LawHub Advantage subscription.
+Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
+using the identifiers below. Access may require an account or subscription.
+Links marked **spoilers** reveal answers or explanations.
 
-Identify the population, the sample, and the mechanism used to select the
-sample. Explain why increasing the size of a sample selected in this way would
-not necessarily remove the problem.
-```
-
-```{admonition} External question: PT154.S2.Q10 (formerly PT88.S2.Q10)
-:class: note external-practice
-
-**Question access:** [PT154.S2.Q10 on 7Sage](https://7sage.com/question/PT154.S2.Q10)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 154, Section 2, Question 10. Access through either service
-may require sign-in and a LawHub Advantage subscription.
-
-Translate the word *most* into a statement about a population proportion.
-Explain why two exceptions cannot logically refute that statement, then
-describe evidence that would be more informative.
-```
-
-```{admonition} External question: PT126.S4.Q12
-:class: note external-practice
-
-**Question access:** [PT126.S4.Q12 on 7Sage](https://7sage.com/question/PT126.S4.Q12)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 126, Section 4, Question 12. Access through either service
-may require sign-in and a LawHub Advantage subscription.
-
-Explain why a handful of selected items cannot determine a basket-wide
-average. Describe, in general terms, what items and weights a defensible index
-would need.
+- **PT131.S2.Q20** — [7Sage question](https://7sage.com/question/PT131.S2.Q20);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=6592);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-59/logical-reasoning-1/q-20/)
+  *(membership required)*.
+- **PT154.S2.Q10** — [7Sage question](https://7sage.com/question/PT154.S2.Q10);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=31335);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-88/logical-reasoning-1/q-10/).
+- **PT126.S4.Q12** — [7Sage question](https://7sage.com/question/PT126.S4.Q12);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=11489);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-42/logical-reasoning-1/q-12/).
 ```

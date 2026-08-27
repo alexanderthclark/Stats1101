@@ -67,22 +67,14 @@ Use the data to develop a statistic that can be used to find the biggest one-hit
 ```{exercise-end}
 ```
 
-### External statistical reasoning
-
-The following optional question is hosted outside this book; its text and
-answer choices are not reproduced here. Choose an answer before viewing an
-explanation, then return for the follow-up.
-
-```{admonition} External question: PT148.S1.Q2
+```{admonition} Relevant LSAT Questions
 :class: note external-practice
 
-**Question access:** [PT148.S1.Q2 on 7Sage](https://7sage.com/question/PT148.S1.Q2)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 148, Section 1, Question 2. Access through either service
-may require sign-in and a LawHub Advantage subscription.
+Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
+using the identifiers below. Access may require an account or subscription.
+Links marked **spoilers** reveal answers or explanations.
 
-Write a general identity connecting a subgroup's share, the total size of the
-population, and the subgroup count. Identify which quantity would have to be
-known before a change in share could establish the same proportional change in
-the count.
+- **PT148.S1.Q2** — [7Sage question](https://7sage.com/question/PT148.S1.Q2);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=13115);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-80/logical-reasoning-1/q-2/).
 ```

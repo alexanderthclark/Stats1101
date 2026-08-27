@@ -466,21 +466,14 @@ d.) Assume both parties only care about winning. Which party would prefer to all
 ```{exercise-end}
 ```
 
-### External statistical reasoning
-
-The following optional question is hosted outside this book; its text and
-answer choices are not reproduced here. Choose an answer before viewing an
-explanation, then return for the follow-up.
-
-```{admonition} External question: PT146.S3.Q5
+```{admonition} Relevant LSAT Questions
 :class: note external-practice
 
-**Question access:** [PT146.S3.Q5 on 7Sage](https://7sage.com/question/PT146.S3.Q5)
-· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
-In LawHub, select PT 146, Section 3, Question 5. Access through either service
-may require sign-in and a LawHub Advantage subscription.
+Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
+using the identifiers below. Access may require an account or subscription.
+Links marked **spoilers** reveal answers or explanations.
 
-Represent the two reported groups as sets $A$ and $B$. Write the general
-addition rule for $P(A \text{ or } B)$ and identify the unstated assumption
-about their overlap.
+- **PT146.S3.Q5** — [7Sage question](https://7sage.com/question/PT146.S3.Q5);
+  [PowerScore explanation — spoilers](https://forum.powerscore.com/viewtopic.php?t=11186);
+  [LSAT Hacks explanation — spoilers](https://lsathacks.com/explanations/lsat-preptest-78/logical-reasoning-2/q-5/).
 ```
