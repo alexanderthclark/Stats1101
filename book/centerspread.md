@@ -171,8 +171,12 @@ An illustration of possible networks with three, seven, and twelve members. The 
 
 Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
 using the identifiers below. Access may require an account or subscription.
-Explanation links marked **(spoilers)** reveal answers.
+These questions are included merely for recreational interest and for those
+already interested in studying for the LSAT. Explanation links marked
+**(spoilers)** reveal answers.
 
+- **PT143.S1.Q19** — [7Sage question](https://7sage.com/question/PT143.S1.Q19);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-75/logical-reasoning-1/q-19/).
 - **PT155.S4.Q21** — [7Sage question](https://7sage.com/question/PT155.S4.Q21);
   [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-155/logical-reasoning-3/q-21/).
 - **PT128.S2.Q12** — [7Sage question](https://7sage.com/question/PT128.S2.Q12);

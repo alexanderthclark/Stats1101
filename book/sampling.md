@@ -237,12 +237,20 @@ Netflix replaced the original 1-5 star moving-rating system with a thumbs up/thu
 
 Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
 using the identifiers below. Access may require an account or subscription.
-Explanation links marked **(spoilers)** reveal answers.
+These questions are included merely for recreational interest and for those
+already interested in studying for the LSAT. Explanation links marked
+**(spoilers)** reveal answers.
 
+- **PT158.S4.Q4** — [7Sage question](https://7sage.com/question/PT158.S4.Q4);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-90/logical-reasoning-2/q-4/).
+- **PT146.S3.Q1** — [7Sage question](https://7sage.com/question/PT146.S3.Q1);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-78/logical-reasoning-2/q-1/).
+- **PT146.S1.Q5** — [7Sage question](https://7sage.com/question/PT146.S1.Q5);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-78/logical-reasoning-1/q-5/).
 - **PT131.S2.Q20** — [7Sage question](https://7sage.com/question/PT131.S2.Q20);
   [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-59/logical-reasoning-1/q-20/).
-- **PT154.S2.Q10** — [7Sage question](https://7sage.com/question/PT154.S2.Q10);
-  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-88/logical-reasoning-1/q-10/).
 - **PT126.S4.Q12** — [7Sage question](https://7sage.com/question/PT126.S4.Q12);
   [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-42/logical-reasoning-1/q-12/).
+- **PT154.S2.Q10** — [7Sage question](https://7sage.com/question/PT154.S2.Q10);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-88/logical-reasoning-1/q-10/).
 ```

@@ -471,7 +471,9 @@ d.) Assume both parties only care about winning. Which party would prefer to all
 
 Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
 using the identifiers below. Access may require an account or subscription.
-Explanation links marked **(spoilers)** reveal answers.
+These questions are included merely for recreational interest and for those
+already interested in studying for the LSAT. Explanation links marked
+**(spoilers)** reveal answers.
 
 - **PT146.S3.Q5** — [7Sage question](https://7sage.com/question/PT146.S3.Q5);
   [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-78/logical-reasoning-2/q-5/).
