@@ -8,11 +8,11 @@ div.exercise p.admonition-title::before {
 }
 
 
-/* Optional exercises that send readers to licensed material hosted elsewhere. */
-div.admonition.lsat-practice {
+/* Optional exercises that send readers to material hosted elsewhere. */
+div.admonition.external-practice {
     border-left-color: #6f42c1;
 }
 
-div.admonition.lsat-practice > .admonition-title {
+div.admonition.external-practice > .admonition-title {
     background-color: rgba(111, 66, 193, 0.12);
 }

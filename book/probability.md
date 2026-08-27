@@ -466,3 +466,21 @@ d.) Assume both parties only care about winning. Which party would prefer to all
 ```{exercise-end}
 ```
 
+### External statistical reasoning
+
+The following optional question is hosted outside this book; its text and
+answer choices are not reproduced here. Choose an answer before viewing an
+explanation, then return for the follow-up.
+
+```{admonition} External question: PT146.S3.Q5
+:class: note external-practice
+
+**Question access:** [PT146.S3.Q5 on 7Sage](https://7sage.com/question/PT146.S3.Q5)
+· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
+In LawHub, select PT 146, Section 3, Question 5. Access through either service
+may require sign-in and a LawHub Advantage subscription.
+
+Represent the two reported groups as sets $A$ and $B$. Write the general
+addition rule for $P(A \text{ or } B)$ and identify the unstated assumption
+about their overlap.
+```

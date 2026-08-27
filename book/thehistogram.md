@@ -612,3 +612,34 @@ A data scientist at Peloton wants to see if a large number of users who are belo
 ```{exercise-end}
 ```
 
+### External statistical reasoning
+
+The following optional questions are hosted outside this book; their text and
+answer choices are not reproduced here. Choose an answer before viewing an
+explanation, then return for the follow-up.
+
+```{admonition} External question: PT121.S4.Q25
+:class: note external-practice
+
+**Question access:** [PT121.S4.Q25 on 7Sage](https://7sage.com/question/PT121.S4.Q25)
+· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
+In LawHub, select PT 121, Section 4, Question 25. Access through either service
+may require sign-in and a LawHub Advantage subscription.
+
+Identify the unit summarized by the evidence and the unit described by the
+conclusion. Explain what prevalence information or weights would be needed to
+move from one unit of analysis to the other.
+```
+
+```{admonition} External question: PT138.S4.Q9 (formerly PT60.S1.Q9)
+:class: note external-practice
+
+**Question access:** [PT138.S4.Q9 on 7Sage](https://7sage.com/question/PT138.S4.Q9)
+· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
+In LawHub, select PT 138, Section 4, Question 9. Access through either service
+may require sign-in and a LawHub Advantage subscription.
+
+Identify the classification rule that must remain constant before two reported
+percentages can be compared directly. Suggest one way researchers could check
+that the rule is being applied consistently.
+```

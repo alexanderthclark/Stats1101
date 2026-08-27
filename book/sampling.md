@@ -231,3 +231,48 @@ Netflix replaced the original 1-5 star moving-rating system with a thumbs up/thu
 
 ```{exercise-end}
 ```
+
+### External statistical reasoning
+
+The following optional questions are hosted outside this book; their text and
+answer choices are not reproduced here. Choose an answer before viewing an
+explanation, then return for the follow-up.
+
+```{admonition} External question: PT131.S2.Q20 (formerly PT59.S2.Q20)
+:class: note external-practice
+
+**Question access:** [PT131.S2.Q20 on 7Sage](https://7sage.com/question/PT131.S2.Q20)
+· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
+In LawHub, select PT 131, Section 2, Question 20. Access through either service
+may require sign-in and a LawHub Advantage subscription.
+
+Identify the population, the sample, and the mechanism used to select the
+sample. Explain why increasing the size of a sample selected in this way would
+not necessarily remove the problem.
+```
+
+```{admonition} External question: PT154.S2.Q10 (formerly PT88.S2.Q10)
+:class: note external-practice
+
+**Question access:** [PT154.S2.Q10 on 7Sage](https://7sage.com/question/PT154.S2.Q10)
+· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
+In LawHub, select PT 154, Section 2, Question 10. Access through either service
+may require sign-in and a LawHub Advantage subscription.
+
+Translate the word *most* into a statement about a population proportion.
+Explain why two exceptions cannot logically refute that statement, then
+describe evidence that would be more informative.
+```
+
+```{admonition} External question: PT126.S4.Q12
+:class: note external-practice
+
+**Question access:** [PT126.S4.Q12 on 7Sage](https://7sage.com/question/PT126.S4.Q12)
+· [LawHub (LSAC's official Prep Library)](https://app.lawhub.org/library/fulltests).
+In LawHub, select PT 126, Section 4, Question 12. Access through either service
+may require sign-in and a LawHub Advantage subscription.
+
+Explain why a handful of selected items cannot determine a basket-wide
+average. Describe, in general terms, what items and weights a defensible index
+would need.
+```

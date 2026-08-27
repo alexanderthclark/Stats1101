@@ -28,12 +28,6 @@ parts:
     - file: power
     - file: bibliography
 
-# These exercises link to licensed question hosts; no LSAT question text is
-# stored in this repository.
-- caption: Applied Statistical Reasoning
-  chapters:
-    - file: lsatpractice
-
 #- caption: Solutions
 #  chapters:
 #    - file: solutions
