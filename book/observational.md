@@ -247,6 +247,8 @@ These questions are included merely for recreational interest and for those
 already interested in studying for the LSAT. Explanation links marked
 **(spoilers)** reveal answers.
 
+- **PT124.S1.Q17** — [7Sage question](https://7sage.com/question/PT124.S1.Q17);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-53/logical-reasoning-1/q-17/).
 - **PT143.S1.Q19** — [7Sage question](https://7sage.com/question/PT143.S1.Q19);
   [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-75/logical-reasoning-1/q-19/).
 - **PT149.S4.Q22** — [7Sage question](https://7sage.com/question/PT149.S4.Q22);
