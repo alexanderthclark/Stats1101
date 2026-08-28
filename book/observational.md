@@ -238,3 +238,21 @@ A standup comedian is trying to improve a joke. Over the course of two sets, he 
 ```{exercise-end}
 ```
 
+```{admonition} Relevant LSAT Questions
+:class: note external-practice
+
+Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
+using the identifiers below. Access may require an account or subscription.
+These questions are included merely for recreational interest and for those
+already interested in studying for the LSAT. Explanation links marked
+**(spoilers)** reveal answers.
+
+- **PT143.S1.Q19** — [7Sage question](https://7sage.com/question/PT143.S1.Q19);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-75/logical-reasoning-1/q-19/).
+- **PT149.S4.Q22** — [7Sage question](https://7sage.com/question/PT149.S4.Q22);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-72/logical-reasoning-2/q-22/).
+- **PT141.S4.Q8** — [7Sage question](https://7sage.com/question/PT141.S4.Q8);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-73/logical-reasoning-2/q-8/).
+- **PT153.S3.Q17** — [7Sage question](https://7sage.com/question/PT153.S3.Q17);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-87/logical-reasoning-2/q-17/).
+```
