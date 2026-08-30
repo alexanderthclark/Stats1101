@@ -95,7 +95,6 @@ In an experiment with a large number of participants, the average income of the 
 ```{exercise-end}
 ```
 
-
 ```{exercise-start}
 :label: exp2
 ```
@@ -122,4 +121,23 @@ Why is it problematic if one group used health care services more intensively th
 Speculate on why a participant might drop out and how this might confound the comparison (there is no single right answer). In your answer, provide a reason for why this would affect the 100\% coverage group more or less than the partial coverage group.
 
 ```{exercise-end}
+```
+
+```{admonition} Relevant LSAT Questions
+:class: note external-practice
+
+Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
+using the identifiers below. Access may require an account or subscription.
+These questions are included merely for recreational interest and for those
+already interested in studying for the LSAT. Explanation links marked
+**(spoilers)** reveal answers.
+
+- **PT128.S2.Q11** — [7Sage question](https://7sage.com/question/PT128.S2.Q11);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-128/logical-reasoning/section-2/q-11/).
+- **PT134.S1.Q4** — [7Sage question](https://7sage.com/question/PT134.S1.Q4);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-64/logical-reasoning-1/q-4/).
+- **PT122.S1.Q12** — [7Sage question](https://7sage.com/question/PT122.S1.Q12);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-41/logical-reasoning-1/q-12/).
+- **PT157.S3.Q25** — [7Sage question](https://7sage.com/question/PT157.S3.Q25);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-157/logical-reasoning-2/q-25/).
 ```

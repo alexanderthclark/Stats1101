@@ -45,10 +45,8 @@
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
@@ -68,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'statwrapregression';</script>
     <link rel="canonical" href="https://alexanderthclark.github.io/Stats1101/statwrapregression.html" />
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Hypothesis Testing" href="pyHypothesisTesting.html" />
@@ -558,12 +556,12 @@ document.write(`
 
 <span class="n">scatter_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlation:&#39;</span><span class="p">,</span> <span class="n">correl</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Correlation:'</span><span class="p">,</span> <span class="n">correl</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c57b296abfee6abaf5991c78b3bdd90325165af1e76bdf8406c61f56df531854.png" src="_images/c57b296abfee6abaf5991c78b3bdd90325165af1e76bdf8406c61f56df531854.png" />
+<img alt="_images/ae665f19582e403ef9b160ba6d27e4e98153e46f67911bcb03c7b8dacc403c3c.png" src="_images/ae665f19582e403ef9b160ba6d27e4e98153e46f67911bcb03c7b8dacc403c3c.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correlation: 0.8999999999999999
 </pre></div>
 </div>
@@ -610,7 +608,7 @@ document.write(`
 <span class="c1"># y_average = intercept + slope*x_average </span>
 <span class="n">intercept</span> <span class="o">=</span> <span class="n">average</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="n">slope</span><span class="o">*</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;predicted Y = </span><span class="si">{</span><span class="n">intercept</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">slope</span><span class="si">}</span><span class="s1">*X&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'predicted Y = </span><span class="si">{</span><span class="n">intercept</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">slope</span><span class="si">}</span><span class="s1">*X'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -626,7 +624,7 @@ document.write(`
 <p>Now we use a package called pandas to import data. Pandas does not have to be explicitly imported because of the <code class="docutils literal notranslate"><span class="pre">%use_all</span></code> command we used earlier. Later, we use a package called matplotlib to plot a regression line. Again, matplotlib doesn’t have to be explicitly imported.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/alexanderthclark/Stats1101/main/Data/FatherSonHeights/pearson.csv&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">'https://raw.githubusercontent.com/alexanderthclark/Stats1101/main/Data/FatherSonHeights/pearson.csv'</span>
 
 <span class="c1"># load a DataFrame</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
@@ -695,14 +693,14 @@ document.write(`
 <span class="n">son</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Son</span>
 
 <span class="n">scatter_plot</span><span class="p">(</span><span class="n">father</span><span class="p">,</span> <span class="n">son</span><span class="p">,</span>
-             <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Father&#39;s Height&quot;</span><span class="p">,</span>
-             <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Son&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">"Father's Height"</span><span class="p">,</span>
+             <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">"Son's Height"</span><span class="p">,</span>
              <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span> <span class="c1"># reduce opacity of points</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c6c21e3c8f2d5fe494fdeeaf972f92f8032651fa790608f5ed6e5d5c24eea156.png" src="_images/c6c21e3c8f2d5fe494fdeeaf972f92f8032651fa790608f5ed6e5d5c24eea156.png" />
+<img alt="_images/91e64763aa2baf41a406cc1a7ccb5511c13197920e6c5eb7d8f04b5ec8fae716.png" src="_images/91e64763aa2baf41a406cc1a7ccb5511c13197920e6c5eb7d8f04b5ec8fae716.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -720,21 +718,21 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scatter_plot</span><span class="p">(</span><span class="n">father</span><span class="p">,</span> <span class="n">son</span><span class="p">,</span>
-             <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Father&#39;s Height&quot;</span><span class="p">,</span>
-             <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Son&#39;s Height&quot;</span><span class="p">,</span>
+             <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">"Father's Height"</span><span class="p">,</span>
+             <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">"Son's Height"</span><span class="p">,</span>
              <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="c1"># reduce opacity of points</span>
              <span class="n">show</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># tell Python to let us add more stuff to the plot</span>
 
 <span class="c1"># Add regression line using matplotlib</span>
 <span class="n">x_range</span> <span class="o">=</span> <span class="n">father</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">father</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 <span class="n">y_predictions</span> <span class="o">=</span> <span class="n">reg_line</span><span class="p">(</span><span class="n">x_range</span><span class="p">)</span> 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_predictions</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_predictions</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'black'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5d3dfd1f97cc69556a159952c316bb5a4f434266fa55738d564983978c783bb5.png" src="_images/5d3dfd1f97cc69556a159952c316bb5a4f434266fa55738d564983978c783bb5.png" />
+<img alt="_images/a12d2a2303a9560de7a9d0996f23d7adfc3ff0e9e9134edb2d9821d83448ed4f.png" src="_images/a12d2a2303a9560de7a9d0996f23d7adfc3ff0e9e9134edb2d9821d83448ed4f.png" />
 </div>
 </div>
 </section>
@@ -787,14 +785,14 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.formula.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">smf</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="n">y</span><span class="p">})</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"x"</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">:</span> <span class="n">y</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_smf</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;y ~ x&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_smf</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">'y ~ x'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 <span class="n">residuals_smf</span> <span class="o">=</span> <span class="n">model_smf</span><span class="o">.</span><span class="n">resid</span>
 <span class="c1">#model_smf.summary()</span>
 </pre></div>
@@ -836,8 +834,8 @@ dtype: float64
 <span class="n">model_sk</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_sk</span><span class="p">,</span> <span class="n">y_sk</span><span class="p">)</span>
 
 <span class="c1"># Get the coefficients</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Slope: </span><span class="si">{</span><span class="n">model_sk</span><span class="o">.</span><span class="n">coef_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Intercept: </span><span class="si">{</span><span class="n">model_sk</span><span class="o">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Slope: </span><span class="si">{</span><span class="n">model_sk</span><span class="o">.</span><span class="n">coef_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Intercept: </span><span class="si">{</span><span class="n">model_sk</span><span class="o">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

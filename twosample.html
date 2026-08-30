@@ -45,10 +45,8 @@
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
@@ -68,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'twosample';</script>
     <link rel="canonical" href="https://alexanderthclark.github.io/Stats1101/twosample.html" />
-    <link rel="shortcut icon" href="_static/norm_favicon.ico"/>
+    <link rel="icon" href="_static/norm_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="The Chi-Square Test" href="chi2.html" />
@@ -668,9 +666,11 @@ SE for difference in proportions<div class="sd-summary-down docutils">
 </ol>
 <p>We should use a two-sample <span class="math notranslate nohighlight">\(z\)</span>-test. There is no pairing and these are separate, independent samples. There are two boxes, a 1990 box and a 2004 box. There are as many tickets as there are 17-year-olds for each population, and 1,000 draws from each. The tickets show test scores. The null hypothesis says the average of the boxes are the same. The alternative says the averages are different. The SE for the difference is 1.37, so <span class="math notranslate nohighlight">\(z = \frac{2}{1.37} \approx 1.46\)</span>. This is below the typical one-tailed threshold of 1.645, for 95% confidence, and could easily be chance variation. We fail to reject the null.</p>
 <hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id4" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
 <p>The size of a vector, <span class="math notranslate nohighlight">\( \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \)</span>, or distance from the point to the origin, is <span class="math notranslate nohighlight">\( \Vert x \Vert = \sqrt{x_1^2 + x_2^2} \)</span>.</p>
+</aside>
 </aside>
 </section>
 </section>

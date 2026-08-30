@@ -1,0 +1,81 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+#!pip install --upgrade statwrap
+import statwrap
+from IPython.display import display, Markdown as md
+%use_all
+
+url = 'https://raw.githubusercontent.com/alexanderthclark/Stats1101/main/Data/FatherSonHeights/pearson.csv'
+# load a DataFrame
+df = pd.read_csv(url)
+
+# Set independent and dependent variables
+y = df['Son'] # Son's heights
+x = df['Father'] # Father's heights
+
+# Run regression
+reg = linest(y, x)
+
+# Show regression line equation in output below
+display(md('Regression line:'), reg)
+
+# Plot data and regression line
+reg.plot(xlabel = 'Father\'s Height',
+         ylabel = "Son's Height",
+         title = 'Regression to Mediocrity')
+
+# Find rmse
+rmse = reg.rms_error
+
+# Make residual plot
+scatter_plot(x, reg.residuals,
+            xlabel = "Father's Height",
+            ylabel = 'Residuals',
+            title = f'Residual Plot\nRMSE={rmse:.1f}',
+            color = 'C1')
+
+
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mSimplePlotError[39m                           Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 21[39m
+[32m     17[39m [38;5;66;03m# Show regression line equation in output below[39;00m
+[32m     18[39m display(md([33m'Regression line:'[39m), reg)
+[32m     19[39m 
+[32m     20[39m [38;5;66;03m# Plot data and regression line[39;00m
+[32m---> [39m[32m21[39m reg.plot(xlabel = 'Father\'s Height',
+[32m     22[39m          ylabel = [33m"Son's Height"[39m,
+[32m     23[39m          title = 'Regression to Mediocrity')
+[32m     24[39m 
+
+[36mFile [39m[32m/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/statwrap/utils.py:389[39m, in [36mRegressionLine.plot[39m[34m(self, ax, show, scatter, **kwargs)[39m
+[32m    386[39m [38;5;250m[39m[33;03m"""Make a plot with regression line. Only works for simple linear regression."""[39;00m
+[32m    388[39m [38;5;28;01mif[39;00m [38;5;28mlen[39m([38;5;28mself[39m.x.columns) != [32m2[39m:
+[32m--> [39m[32m389[39m     [38;5;28;01mraise[39;00m SimplePlotError(
+[32m    390[39m         [33m"[39m[33mplot() only works for simple linear regression with one predictor column[39m[33m"[39m
+[32m    391[39m     )
+[32m    392[39m x = [38;5;28mself[39m.x.iloc[:,[32m1[39m]
+[32m    394[39m [38;5;28;01mif[39;00m ax [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+
+[31mSimplePlotError[39m: plot() only works for simple linear regression with one predictor column
+

@@ -612,3 +612,17 @@ A data scientist at Peloton wants to see if a large number of users who are belo
 ```{exercise-end}
 ```
 
+```{admonition} Relevant LSAT Questions
+:class: note external-practice
+
+Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
+using the identifiers below. Access may require an account or subscription.
+These questions are included merely for recreational interest and for those
+already interested in studying for the LSAT. Explanation links marked
+**(spoilers)** reveal answers.
+
+- **PT138.S4.Q9** — [7Sage question](https://7sage.com/question/PT138.S4.Q9);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-60/logical-reasoning-1/q-9/).
+- **PT121.S4.Q25** — [7Sage question](https://7sage.com/question/PT121.S4.Q25);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-48/logical-reasoning-2/q-25/).
+```
