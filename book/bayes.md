@@ -277,3 +277,17 @@ Take three draws before I turn thee away.*
 
 ```{exercise-end}
 ```
+
+```{admonition} Relevant LSAT Questions
+:class: note external-practice
+
+Find the official questions in [LawHub's LSAT Prep Library](https://app.lawhub.org/library/fulltests)
+using the identifiers below. Access may require an account or subscription.
+These questions are included merely for recreational interest and for those
+already interested in studying for the LSAT. Explanation links marked
+**(spoilers)** reveal answers.
+
+- **PT151.S3.Q13** — [7Sage question](https://7sage.com/question/PT151.S3.Q13).
+- **PT153.S3.Q11** — [7Sage question](https://7sage.com/question/PT153.S3.Q11);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-87/logical-reasoning-2/q-11/).
+```
