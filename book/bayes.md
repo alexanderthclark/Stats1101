@@ -287,13 +287,10 @@ These questions are included merely for recreational interest and for those
 already interested in studying for the LSAT. Explanation links marked
 **(spoilers)** reveal answers.
 
-- **PT130.S3.Q14** — [7Sage question and explanation (spoilers)](https://7sage.com/question/PT130.S3.Q14);
-  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-50/logical-reasoning-2/q-14/).
-  **Course note (spoilers):** This is a case where the LSAT writers failed basic
-  probability: the stimulus treats $P(A \mid B)$ as though it determined
-  $P(B \mid A)$, without the base-rate information Bayes' rule requires. The
-  credited response still parallels that invalid pattern.
 - **PT151.S3.Q13** — [7Sage question](https://7sage.com/question/PT151.S3.Q13).
 - **PT153.S3.Q11** — [7Sage question](https://7sage.com/question/PT153.S3.Q11);
   [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-87/logical-reasoning-2/q-11/).
+- **PT130.S3.Q14** — [7Sage question and explanation (spoilers)](https://7sage.com/question/PT130.S3.Q14);
+  [LSAT Hacks explanation (spoilers)](https://lsathacks.com/explanations/lsat-preptest-50/logical-reasoning-2/q-14/).
+  Note that the LSAT writers erred in supposing this is a valid argument.
 ```
