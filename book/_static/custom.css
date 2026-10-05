@@ -1,12 +1,51 @@
-div.exercise p.admonition-title::before {
+/* Keep callouts flat; their colored borders and titles identify their roles. */
+.bd-content .admonition {
+    /* The theme's shadow is also marked !important. */
+    box-shadow: none !important;
+}
+
+/* A light title band is enough to distinguish an exercise from the main text. */
+.bd-content div.exercise {
+    background-color: var(--pst-color-on-background);
+}
+
+.bd-content div.exercise > .admonition-title {
+    background-color: rgba(68, 138, 255, 0.08);
+}
+
+html[data-theme="dark"] .bd-content div.exercise > .admonition-title {
+    background-color: rgba(68, 138, 255, 0.16);
+}
+
+/* Limit pencil icons to exercises; other callouts keep their theme icons. */
+div.exercise > .admonition-title::before {
     content: none;
 }
 
-
-.admonition>.admonition-title:after, div.admonition>.admonition-title:after {
-    content: var(--pst-icon-pencil);
+div.exercise > .admonition-title::after {
+    content: "\f303";
 }
 
+/* Consistent vertical rhythm without overriding authored figure widths. */
+.bd-content figure {
+    margin-block: 1.5rem;
+}
+
+.bd-content figure > figcaption {
+    margin-top: 0.75rem;
+    color: var(--pst-color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.bd-content figure > figcaption > p {
+    margin-bottom: 0;
+}
+
+/* Avoid extra trailing space when a figure ends a callout. */
+.bd-content .admonition figure:last-child {
+    margin-bottom: 0;
+}
 
 /* Optional exercises that send readers to material hosted elsewhere. */
 div.admonition.external-practice {
