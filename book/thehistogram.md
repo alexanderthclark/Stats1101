@@ -13,6 +13,7 @@ You've probably seen **histograms** before. They are used to summarize data by s
 ```{figure} images/normal_histogram.svg
 :width: 80%
 :name: normalhist
+:alt: Histogram of minutes of television watched, with a roughly symmetric bell shape centered near 60 minutes. No vertical scale is shown.
 
 A histogram showing a symmetric, bell-shaped distribution. 
 ```
@@ -25,6 +26,7 @@ A histogram showing a symmetric, bell-shaped distribution.
 ```{figure} images/skewed_histograms.svg
 :width: 87%
 :name: skewedhist
+:alt: Two histograms of minutes of television watched. The left has most observations near 400 minutes and a long tail to the left; the right has most near zero and a long tail to the right.
 
 Two skewed histograms. The left panel features on a long left tail and the right panel features a long right tail. 
 ```
@@ -64,6 +66,7 @@ Suppose we observed incomes \$0, \$10, \$10, \$20, \$20, \$20, \$30, and \$216. 
 ```{figure} images/income_histograms.svg
 :width: 80%
 :name: incomehist
+:alt: Three histograms of the same eight incomes, using progressively wider class intervals. Widening the intervals lowers the bar heights while preserving their areas; the bottom panel spreads the observation at 216 dollars over a very wide, short bar.
 
 All three histograms show the same data. The blocks have areas 12.5%, 25%, 37.5%, 12.5%, and 12.5% in each histogram.
 ```
@@ -102,6 +105,7 @@ The alleged fraud in this research was uncovered, in part, because of the use of
 ```{figure} images/colada98_implied_hist.svg
 :width: 80%
 :name: impliedhist
+:alt: Histogram of updated minus baseline vehicle mileage. Bars are of similar height from zero to 50,000 miles, with no observations beyond 50,000.
 
 A uniform distribution of miles driven is anomalous because other driving data shows a more bell-shaped distribution.
 ```
@@ -111,6 +115,7 @@ Another tip-off comes when reducing the class intervals to be just one-unit wide
 ```{figure} images/colada98_baseline_hist.svg
 :width: 80%
 :name: baselinehist
+:alt: Histogram of baseline vehicle mileage from 53,000 to 58,000, using one-mile intervals. Tall spikes at multiples of 1,000 show frequent rounding.
 
 Spikes in the histogram show that people are more likely to report round numbers at the nearest 1,000. 
 ```
@@ -121,6 +126,7 @@ Checking the reported updated mileage shows no such rounding.
 ```{figure} images/colada98_update_hist.svg
 :width: 80%
 :name: updateehist
+:alt: Histogram of updated vehicle mileage from 80,000 to 86,000, using one-mile intervals. Small bars are scattered across the range without the regular spikes at multiples of 1,000 seen in the baseline data.
 
 Spikes in the histogram are not predominant at the nearest 1,000. 
 ```
@@ -145,6 +151,7 @@ In the previous example, we were working with a specific **variable**, vehicle m
 ```{figure} images/tikz/typesofvariables.svg
 :width: 68%
 :name: typestree
+:alt: A tree splits variables into qualitative, also called categorical, and quantitative. Quantitative variables split further into discrete and continuous.
 
 Variable taxonomy
 ```
@@ -166,6 +173,7 @@ Unfortunately, this lesson was learned only after a mistake was discovered in {c
 ```{figure} images/nos_histogram.svg
 :width: 72%
 :name: noshist
+:alt: Histogram of reported business revenue in billions. A blue bar contains ordinary nonnegative values; gray bars contain negative flag values and values near 90 to 100 billion used to flag missing responses.
 
 The gray blocks are unusual for containing negative or very high values compared to the rest of the data. These blocks contain flag values. 
 ```
@@ -183,12 +191,14 @@ We can also split histograms for merely descriptive purposes. Below, we show the
 ```{figure} images/picasso_and_cezanne_combined.svg
 :width: 65%
 :name: picasso_cez_combined
+:alt: Histogram combining Picasso's and Cezanne's ages at completion of selected important paintings. Ages range from about 15 to 95, with most paintings completed before age 65.
 
 ```
 
 ```{figure} images/picasso_and_cezanne.svg
 :width: 65%
 :name: picasso_cez
+:alt: Overlaid histograms of age at completion of important paintings. Picasso's solid blue outline is highest at ages 15 to 25; Cezanne's dashed orange outline peaks at ages 35 to 45.
 
 Picasso peaked earlier than Cezanne.
 ```
@@ -536,6 +546,7 @@ These are similar ideas, with negative and positive framing. Like in your prose,
 ```{figure} images/schwabishgray.png
 :width: 410px
 :name: fig:schwabgray
+:alt: A slope chart compares unemployment rates in January 2000 and January 2018. The national rate and selected states are directly labeled and highlighted in color; other states recede into light gray lines.
 
 A good example of pre-attentive processing used to highlight a national trend and the trends for states of note. From {cite}`schwabish2021better`, page 151.
 ```
@@ -543,6 +554,7 @@ A good example of pre-attentive processing used to highlight a national trend an
 ```{figure} images/LI_AI_skills.jpeg
 :width: 410px
 :name: fig:liaiskills
+:alt: A line chart titled AI Skills Index across countries shows many rising colored lines and a long country legend, with no single series emphasized or directly labeled.
 
 A bad example from my former colleagues at LinkedIn, showing a lot of clutter and sparking no joy ([source](https://www.linkedin.com/posts/linkedin_people-worldwide-are-adding-ai-skills-to-activity-7122236926580948992-AqxP?utm_source=share&utm_medium=member_desktop)).
 ```
@@ -552,6 +564,7 @@ In a scatter plot with many overlapping points, reduce the opacity of points to 
 ```{figure} images/sheetsopacity.png
 :width: 98%
 :name: fig:sheetsopacity
+:alt: Google Sheets shows the same scatter plot twice, with opaque points above and translucent points below. The chart editor's Series settings show Fill opacity set to 50 percent, revealing overlap in the lower plot.
 
 In [Google Sheets](https://docs.google.com/spreadsheets/d/1CkrzZAi8d4AkTEGBG6Cb_CRZa6UlT2E1GyopWoVEsUc/edit?usp=sharing), use the chart editor to change the opacity of each point in a scatter plot.
 ```
@@ -578,6 +591,7 @@ Provide two different data sets that could produce the following histogram with 
 ```{figure} images/oneblockhist.svg
 :width: 70%
 :name: oneblockhist
+:alt: Histogram with horizontal axis labeled number of houses owned. Its single rectangular bar runs from 1 to 5 houses and reaches 25 on the vertical scale.
 
 ```
 

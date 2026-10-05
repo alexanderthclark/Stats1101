@@ -1,6 +1,6 @@
 # Welcome to Intro Stats
 
-![Intro Stats](images/stats-wide.png)
+![A William Blake-inspired vision of introductory statistics: overlapping colored distribution curves rise like mountains beneath luminous blue and gold clouds.](images/stats-wide.png)
 
 
 ```{important}
@@ -23,7 +23,7 @@ The provided exercises supplement the exercises in {cite}`freedman2007statistics
 
 We'll argue that statistics is *not* just math, but the imperative from Halmos still applies.
 
-![How Math Works](images/HowMath.png)
+![A mounted knight confronts a dragon covered in mathematical formulas. The cartoon reads: "How to study math. Don't just read it; fight it!" — Paul R. Halmos.](images/HowMath.png)
 
 
 ## More about 1101
